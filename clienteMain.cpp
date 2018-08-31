@@ -19,13 +19,14 @@ using std::vector;
 #define BUTTONWIDTH 90
 #define BUTTONHEIGHT 40
 
-#define IMGFONDOPATH "resources/wallpaper.jpg"
-#define IMGWORM "resources/wairlnk.png"
+#define IMGWORM "/home/tito/Desktop/Tallar/github/resources/wairlnk.png"
+
+
+#define IMGFONDOPATH "/home/tito/Desktop/Tallar/github/resources/wallpaper.jpg"
+
 #define JLISTDELTA 50
 #define JLISTWIDTH 150
 #define JLISTHEIGHT 30
-
-
 
 int main() {
 	

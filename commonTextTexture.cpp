@@ -8,7 +8,7 @@
 TextTexture::TextTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b) 
 : Texture(renderer) {
 	//Initialize
-	mFont = TTF_OpenFont( "resources/ttf/OpenSans/OpenSans-Regular.ttf", 28 );
+	mFont = TTF_OpenFont( "/home/tito/Desktop/Tallar/github/resources/ttf/OpenSans/OpenSans-Regular.ttf", 28 );
 	if( mFont == NULL ){
 		throw SDLTTFError("no se pudo cagar el tipo de texto resources/ttf/OpenSans/OpenSans-Regular.ttf");
 	}
