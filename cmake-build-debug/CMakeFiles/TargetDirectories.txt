@@ -1,0 +1,3 @@
+/home/orlando/Zafiro/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/orlando/Zafiro/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/orlando/Zafiro/cmake-build-debug/CMakeFiles/github.dir
