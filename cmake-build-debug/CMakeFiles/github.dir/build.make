@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/orlando/CLion-2018.2.2/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/orlando/CLion-2018.2.2/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orlando/Zafiro
+CMAKE_SOURCE_DIR = /home/tito/Desktop/Tallar/github
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orlando/Zafiro/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/github.dir/depend.make
@@ -59,185 +59,185 @@ include CMakeFiles/github.dir/flags.make
 
 CMakeFiles/github.dir/clienteMain.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/clienteMain.cpp.o: ../clienteMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/github.dir/clienteMain.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/clienteMain.cpp.o -c /home/orlando/Zafiro/clienteMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/github.dir/clienteMain.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/clienteMain.cpp.o -c /home/tito/Desktop/Tallar/github/clienteMain.cpp
 
 CMakeFiles/github.dir/clienteMain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/clienteMain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/clienteMain.cpp > CMakeFiles/github.dir/clienteMain.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/clienteMain.cpp > CMakeFiles/github.dir/clienteMain.cpp.i
 
 CMakeFiles/github.dir/clienteMain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/clienteMain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/clienteMain.cpp -o CMakeFiles/github.dir/clienteMain.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/clienteMain.cpp -o CMakeFiles/github.dir/clienteMain.cpp.s
 
 CMakeFiles/github.dir/commonButton.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonButton.cpp.o: ../commonButton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/github.dir/commonButton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonButton.cpp.o -c /home/orlando/Zafiro/commonButton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/github.dir/commonButton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonButton.cpp.o -c /home/tito/Desktop/Tallar/github/commonButton.cpp
 
 CMakeFiles/github.dir/commonButton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonButton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonButton.cpp > CMakeFiles/github.dir/commonButton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonButton.cpp > CMakeFiles/github.dir/commonButton.cpp.i
 
 CMakeFiles/github.dir/commonButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonButton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonButton.cpp -o CMakeFiles/github.dir/commonButton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonButton.cpp -o CMakeFiles/github.dir/commonButton.cpp.s
 
 CMakeFiles/github.dir/commonException.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonException.cpp.o: ../commonException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/github.dir/commonException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonException.cpp.o -c /home/orlando/Zafiro/commonException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/github.dir/commonException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonException.cpp.o -c /home/tito/Desktop/Tallar/github/commonException.cpp
 
 CMakeFiles/github.dir/commonException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonException.cpp > CMakeFiles/github.dir/commonException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonException.cpp > CMakeFiles/github.dir/commonException.cpp.i
 
 CMakeFiles/github.dir/commonException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonException.cpp -o CMakeFiles/github.dir/commonException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonException.cpp -o CMakeFiles/github.dir/commonException.cpp.s
 
 CMakeFiles/github.dir/commonImgTexture.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonImgTexture.cpp.o: ../commonImgTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/github.dir/commonImgTexture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonImgTexture.cpp.o -c /home/orlando/Zafiro/commonImgTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/github.dir/commonImgTexture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonImgTexture.cpp.o -c /home/tito/Desktop/Tallar/github/commonImgTexture.cpp
 
 CMakeFiles/github.dir/commonImgTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonImgTexture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonImgTexture.cpp > CMakeFiles/github.dir/commonImgTexture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonImgTexture.cpp > CMakeFiles/github.dir/commonImgTexture.cpp.i
 
 CMakeFiles/github.dir/commonImgTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonImgTexture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonImgTexture.cpp -o CMakeFiles/github.dir/commonImgTexture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonImgTexture.cpp -o CMakeFiles/github.dir/commonImgTexture.cpp.s
 
 CMakeFiles/github.dir/commonSDLException.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSDLException.cpp.o: ../commonSDLException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/github.dir/commonSDLException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLException.cpp.o -c /home/orlando/Zafiro/commonSDLException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/github.dir/commonSDLException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLException.cpp.o -c /home/tito/Desktop/Tallar/github/commonSDLException.cpp
 
 CMakeFiles/github.dir/commonSDLException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSDLException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSDLException.cpp > CMakeFiles/github.dir/commonSDLException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSDLException.cpp > CMakeFiles/github.dir/commonSDLException.cpp.i
 
 CMakeFiles/github.dir/commonSDLException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSDLException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSDLException.cpp -o CMakeFiles/github.dir/commonSDLException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSDLException.cpp -o CMakeFiles/github.dir/commonSDLException.cpp.s
 
 CMakeFiles/github.dir/commonSDLIMGException.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSDLIMGException.cpp.o: ../commonSDLIMGException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/github.dir/commonSDLIMGException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLIMGException.cpp.o -c /home/orlando/Zafiro/commonSDLIMGException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/github.dir/commonSDLIMGException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLIMGException.cpp.o -c /home/tito/Desktop/Tallar/github/commonSDLIMGException.cpp
 
 CMakeFiles/github.dir/commonSDLIMGException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSDLIMGException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSDLIMGException.cpp > CMakeFiles/github.dir/commonSDLIMGException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSDLIMGException.cpp > CMakeFiles/github.dir/commonSDLIMGException.cpp.i
 
 CMakeFiles/github.dir/commonSDLIMGException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSDLIMGException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSDLIMGException.cpp -o CMakeFiles/github.dir/commonSDLIMGException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSDLIMGException.cpp -o CMakeFiles/github.dir/commonSDLIMGException.cpp.s
 
 CMakeFiles/github.dir/commonSdlImgInit.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSdlImgInit.cpp.o: ../commonSdlImgInit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/github.dir/commonSdlImgInit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlImgInit.cpp.o -c /home/orlando/Zafiro/commonSdlImgInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/github.dir/commonSdlImgInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlImgInit.cpp.o -c /home/tito/Desktop/Tallar/github/commonSdlImgInit.cpp
 
 CMakeFiles/github.dir/commonSdlImgInit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSdlImgInit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSdlImgInit.cpp > CMakeFiles/github.dir/commonSdlImgInit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSdlImgInit.cpp > CMakeFiles/github.dir/commonSdlImgInit.cpp.i
 
 CMakeFiles/github.dir/commonSdlImgInit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSdlImgInit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSdlImgInit.cpp -o CMakeFiles/github.dir/commonSdlImgInit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSdlImgInit.cpp -o CMakeFiles/github.dir/commonSdlImgInit.cpp.s
 
 CMakeFiles/github.dir/commonSdlInit.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSdlInit.cpp.o: ../commonSdlInit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/github.dir/commonSdlInit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlInit.cpp.o -c /home/orlando/Zafiro/commonSdlInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/github.dir/commonSdlInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlInit.cpp.o -c /home/tito/Desktop/Tallar/github/commonSdlInit.cpp
 
 CMakeFiles/github.dir/commonSdlInit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSdlInit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSdlInit.cpp > CMakeFiles/github.dir/commonSdlInit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSdlInit.cpp > CMakeFiles/github.dir/commonSdlInit.cpp.i
 
 CMakeFiles/github.dir/commonSdlInit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSdlInit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSdlInit.cpp -o CMakeFiles/github.dir/commonSdlInit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSdlInit.cpp -o CMakeFiles/github.dir/commonSdlInit.cpp.s
 
 CMakeFiles/github.dir/commonSDLTTFException.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSDLTTFException.cpp.o: ../commonSDLTTFException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/github.dir/commonSDLTTFException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLTTFException.cpp.o -c /home/orlando/Zafiro/commonSDLTTFException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/github.dir/commonSDLTTFException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSDLTTFException.cpp.o -c /home/tito/Desktop/Tallar/github/commonSDLTTFException.cpp
 
 CMakeFiles/github.dir/commonSDLTTFException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSDLTTFException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSDLTTFException.cpp > CMakeFiles/github.dir/commonSDLTTFException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSDLTTFException.cpp > CMakeFiles/github.dir/commonSDLTTFException.cpp.i
 
 CMakeFiles/github.dir/commonSDLTTFException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSDLTTFException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSDLTTFException.cpp -o CMakeFiles/github.dir/commonSDLTTFException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSDLTTFException.cpp -o CMakeFiles/github.dir/commonSDLTTFException.cpp.s
 
 CMakeFiles/github.dir/commonSdlTtfInit.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSdlTtfInit.cpp.o: ../commonSdlTtfInit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/github.dir/commonSdlTtfInit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlTtfInit.cpp.o -c /home/orlando/Zafiro/commonSdlTtfInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/github.dir/commonSdlTtfInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSdlTtfInit.cpp.o -c /home/tito/Desktop/Tallar/github/commonSdlTtfInit.cpp
 
 CMakeFiles/github.dir/commonSdlTtfInit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSdlTtfInit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSdlTtfInit.cpp > CMakeFiles/github.dir/commonSdlTtfInit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSdlTtfInit.cpp > CMakeFiles/github.dir/commonSdlTtfInit.cpp.i
 
 CMakeFiles/github.dir/commonSdlTtfInit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSdlTtfInit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSdlTtfInit.cpp -o CMakeFiles/github.dir/commonSdlTtfInit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSdlTtfInit.cpp -o CMakeFiles/github.dir/commonSdlTtfInit.cpp.s
 
 CMakeFiles/github.dir/commonSocket.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonSocket.cpp.o: ../commonSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/github.dir/commonSocket.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSocket.cpp.o -c /home/orlando/Zafiro/commonSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/github.dir/commonSocket.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonSocket.cpp.o -c /home/tito/Desktop/Tallar/github/commonSocket.cpp
 
 CMakeFiles/github.dir/commonSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonSocket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonSocket.cpp > CMakeFiles/github.dir/commonSocket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonSocket.cpp > CMakeFiles/github.dir/commonSocket.cpp.i
 
 CMakeFiles/github.dir/commonSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonSocket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonSocket.cpp -o CMakeFiles/github.dir/commonSocket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonSocket.cpp -o CMakeFiles/github.dir/commonSocket.cpp.s
 
 CMakeFiles/github.dir/commonTextTexture.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonTextTexture.cpp.o: ../commonTextTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/github.dir/commonTextTexture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonTextTexture.cpp.o -c /home/orlando/Zafiro/commonTextTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/github.dir/commonTextTexture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonTextTexture.cpp.o -c /home/tito/Desktop/Tallar/github/commonTextTexture.cpp
 
 CMakeFiles/github.dir/commonTextTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonTextTexture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonTextTexture.cpp > CMakeFiles/github.dir/commonTextTexture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonTextTexture.cpp > CMakeFiles/github.dir/commonTextTexture.cpp.i
 
 CMakeFiles/github.dir/commonTextTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonTextTexture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonTextTexture.cpp -o CMakeFiles/github.dir/commonTextTexture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonTextTexture.cpp -o CMakeFiles/github.dir/commonTextTexture.cpp.s
 
 CMakeFiles/github.dir/commonTexture.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonTexture.cpp.o: ../commonTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/github.dir/commonTexture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonTexture.cpp.o -c /home/orlando/Zafiro/commonTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/github.dir/commonTexture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonTexture.cpp.o -c /home/tito/Desktop/Tallar/github/commonTexture.cpp
 
 CMakeFiles/github.dir/commonTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonTexture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonTexture.cpp > CMakeFiles/github.dir/commonTexture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonTexture.cpp > CMakeFiles/github.dir/commonTexture.cpp.i
 
 CMakeFiles/github.dir/commonTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonTexture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonTexture.cpp -o CMakeFiles/github.dir/commonTexture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonTexture.cpp -o CMakeFiles/github.dir/commonTexture.cpp.s
 
 CMakeFiles/github.dir/commonWindow.cpp.o: CMakeFiles/github.dir/flags.make
 CMakeFiles/github.dir/commonWindow.cpp.o: ../commonWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/github.dir/commonWindow.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonWindow.cpp.o -c /home/orlando/Zafiro/commonWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/github.dir/commonWindow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/github.dir/commonWindow.cpp.o -c /home/tito/Desktop/Tallar/github/commonWindow.cpp
 
 CMakeFiles/github.dir/commonWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/github.dir/commonWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orlando/Zafiro/commonWindow.cpp > CMakeFiles/github.dir/commonWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/commonWindow.cpp > CMakeFiles/github.dir/commonWindow.cpp.i
 
 CMakeFiles/github.dir/commonWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/github.dir/commonWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orlando/Zafiro/commonWindow.cpp -o CMakeFiles/github.dir/commonWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/commonWindow.cpp -o CMakeFiles/github.dir/commonWindow.cpp.s
 
 # Object files for target github
 github_OBJECTS = \
@@ -278,7 +278,7 @@ github: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 github: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 github: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 github: CMakeFiles/github.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orlando/Zafiro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable github"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable github"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/github.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -291,6 +291,6 @@ CMakeFiles/github.dir/clean:
 .PHONY : CMakeFiles/github.dir/clean
 
 CMakeFiles/github.dir/depend:
-	cd /home/orlando/Zafiro/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orlando/Zafiro /home/orlando/Zafiro /home/orlando/Zafiro/cmake-build-debug /home/orlando/Zafiro/cmake-build-debug /home/orlando/Zafiro/cmake-build-debug/CMakeFiles/github.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tito/Desktop/Tallar/github/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tito/Desktop/Tallar/github /home/tito/Desktop/Tallar/github /home/tito/Desktop/Tallar/github/cmake-build-debug /home/tito/Desktop/Tallar/github/cmake-build-debug /home/tito/Desktop/Tallar/github/cmake-build-debug/CMakeFiles/github.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/github.dir/depend
 

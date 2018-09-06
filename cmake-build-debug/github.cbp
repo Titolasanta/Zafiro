@@ -5,181 +5,181 @@
 		<Option title="github"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\SDL2\;CMake Files\cmakeModules\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\cmakeModules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/orlando/Zafiro/cmake-build-debug"/>
+				<Option working_dir="/home/tito/Desktop/Tallar/github/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/orlando/Zafiro/cmake-build-debug"/>
+				<Option working_dir="/home/tito/Desktop/Tallar/github/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/orlando/Zafiro/cmake-build-debug"/>
+				<Option working_dir="/home/tito/Desktop/Tallar/github/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="github">
-				<Option output="/home/orlando/Zafiro/cmake-build-debug/github" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/orlando/Zafiro/cmake-build-debug"/>
+				<Option output="/home/tito/Desktop/Tallar/github/cmake-build-debug/github" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tito/Desktop/Tallar/github/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/orlando/Zafiro/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 github"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 github"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="github/fast">
-				<Option output="/home/orlando/Zafiro/cmake-build-debug/github" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/orlando/Zafiro/cmake-build-debug"/>
+				<Option output="/home/tito/Desktop/Tallar/github/cmake-build-debug/github" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tito/Desktop/Tallar/github/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/orlando/Zafiro/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 github/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/orlando/Zafiro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 github/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/orlando/Zafiro/clienteEstado.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/clienteEstado.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/clienteMain.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/clienteMain.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonButton.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonButton.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonButton.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonButton.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonException.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonException.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonException.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonException.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonImgTexture.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonImgTexture.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonImgTexture.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonImgTexture.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLException.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLException.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLException.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLException.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLIMGException.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLIMGException.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLIMGException.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLIMGException.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLTTFException.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLTTFException.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSDLTTFException.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSDLTTFException.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlImgInit.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlImgInit.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlImgInit.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlImgInit.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlInit.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlInit.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlInit.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlInit.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlTtfInit.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlTtfInit.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSdlTtfInit.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSdlTtfInit.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSocket.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSocket.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonSocket.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonSocket.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonTextTexture.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonTextTexture.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonTextTexture.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonTextTexture.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonTexture.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonTexture.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonTexture.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonTexture.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonWindow.cpp">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonWindow.cpp">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/commonWindow.h">
+		<Unit filename="/home/tito/Desktop/Tallar/github/commonWindow.h">
 			<Option target="github"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/CMakeLists.txt">
+		<Unit filename="/home/tito/Desktop/Tallar/github/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/../../../usr/local/lib/cmake/SDL2/sdl2-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		<Unit filename="/home/tito/Desktop/Tallar/github/../../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/cmakeModules/FindSDL2TTF.cmake">
+		<Unit filename="/home/tito/Desktop/Tallar/github/cmakeModules/FindSDL2TTF.cmake">
 			<Option virtualFolder="CMake Files\cmakeModules\"/>
 		</Unit>
-		<Unit filename="/home/orlando/Zafiro/cmakeModules/FindSDL2_image.cmake">
+		<Unit filename="/home/tito/Desktop/Tallar/github/cmakeModules/FindSDL2_image.cmake">
 			<Option virtualFolder="CMake Files\cmakeModules\"/>
 		</Unit>
 	</Project>

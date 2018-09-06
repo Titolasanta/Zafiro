@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antonella/CLionProjects/TP-Fase1-Test
+CMAKE_SOURCE_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TP-Fase1-Test.dir/depend.make
@@ -57,49 +57,199 @@ include CMakeFiles/TP-Fase1-Test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TP-Fase1-Test.dir/flags.make
 
-CMakeFiles/TP-Fase1-Test.dir/main.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
-CMakeFiles/TP-Fase1-Test.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/main.cpp.o -c /home/antonella/CLionProjects/TP-Fase1-Test/main.cpp
+CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o: ../Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.cpp
 
-CMakeFiles/TP-Fase1-Test.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/CLionProjects/TP-Fase1-Test/main.cpp > CMakeFiles/TP-Fase1-Test.dir/main.cpp.i
+CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.cpp > CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.i
 
-CMakeFiles/TP-Fase1-Test.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/CLionProjects/TP-Fase1-Test/main.cpp -o CMakeFiles/TP-Fase1-Test.dir/main.cpp.s
+CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.cpp -o CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o: ../ImgTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.cpp > CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.cpp -o CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o: ../Personajes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.cpp > CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.cpp -o CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o: ../SDLException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.cpp > CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.cpp -o CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o: ../SDLIMGException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.cpp > CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.cpp -o CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o: ../Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.cpp > CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.cpp -o CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o: ../SdlImgInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.cpp > CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.cpp -o CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o: ../SdlInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.cpp > CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.cpp -o CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o: ../SpriteRojo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.cpp > CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.cpp -o CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o: ../Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o -c /home/antonella/CLionProjects/TP-Fase1-Test/Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/CLionProjects/TP-Fase1-Test/Texture.cpp > CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.cpp > CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/CLionProjects/TP-Fase1-Test/Texture.cpp -o CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.cpp -o CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o: ../Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.cpp > CMakeFiles/TP-Fase1-Test.dir/Window.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.cpp -o CMakeFiles/TP-Fase1-Test.dir/Window.cpp.s
+
+CMakeFiles/TP-Fase1-Test.dir/main.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
+CMakeFiles/TP-Fase1-Test.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/main.cpp.o -c /home/tito/Desktop/Tallar/github/TP-Fase1-Test/main.cpp
+
+CMakeFiles/TP-Fase1-Test.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tito/Desktop/Tallar/github/TP-Fase1-Test/main.cpp > CMakeFiles/TP-Fase1-Test.dir/main.cpp.i
+
+CMakeFiles/TP-Fase1-Test.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tito/Desktop/Tallar/github/TP-Fase1-Test/main.cpp -o CMakeFiles/TP-Fase1-Test.dir/main.cpp.s
 
 # Object files for target TP-Fase1-Test
 TP__Fase1__Test_OBJECTS = \
-"CMakeFiles/TP-Fase1-Test.dir/main.cpp.o" \
-"CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o"
+"CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o" \
+"CMakeFiles/TP-Fase1-Test.dir/main.cpp.o"
 
 # External object files for target TP-Fase1-Test
 TP__Fase1__Test_EXTERNAL_OBJECTS =
 
-TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/main.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o
 TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o
+TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/main.cpp.o
 TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/build.make
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2.so
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TP-Fase1-Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable TP-Fase1-Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP-Fase1-Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -112,6 +262,6 @@ CMakeFiles/TP-Fase1-Test.dir/clean:
 .PHONY : CMakeFiles/TP-Fase1-Test.dir/clean
 
 CMakeFiles/TP-Fase1-Test.dir/depend:
-	cd /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonella/CLionProjects/TP-Fase1-Test /home/antonella/CLionProjects/TP-Fase1-Test /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tito/Desktop/Tallar/github/TP-Fase1-Test /home/tito/Desktop/Tallar/github/TP-Fase1-Test /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TP-Fase1-Test.dir/depend
 

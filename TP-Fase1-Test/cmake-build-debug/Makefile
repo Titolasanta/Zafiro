@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antonella/CLionProjects/TP-Fase1-Test
+CMAKE_SOURCE_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2018.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonella/CLionProjects/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,249 @@ TP-Fase1-Test/fast:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/build
 .PHONY : TP-Fase1-Test/fast
 
+Exception.o: Exception.cpp.o
+
+.PHONY : Exception.o
+
+# target to build an object file
+Exception.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o
+.PHONY : Exception.cpp.o
+
+Exception.i: Exception.cpp.i
+
+.PHONY : Exception.i
+
+# target to preprocess a source file
+Exception.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.i
+.PHONY : Exception.cpp.i
+
+Exception.s: Exception.cpp.s
+
+.PHONY : Exception.s
+
+# target to generate assembly for a file
+Exception.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.s
+.PHONY : Exception.cpp.s
+
+ImgTexture.o: ImgTexture.cpp.o
+
+.PHONY : ImgTexture.o
+
+# target to build an object file
+ImgTexture.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o
+.PHONY : ImgTexture.cpp.o
+
+ImgTexture.i: ImgTexture.cpp.i
+
+.PHONY : ImgTexture.i
+
+# target to preprocess a source file
+ImgTexture.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.i
+.PHONY : ImgTexture.cpp.i
+
+ImgTexture.s: ImgTexture.cpp.s
+
+.PHONY : ImgTexture.s
+
+# target to generate assembly for a file
+ImgTexture.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.s
+.PHONY : ImgTexture.cpp.s
+
+Personajes.o: Personajes.cpp.o
+
+.PHONY : Personajes.o
+
+# target to build an object file
+Personajes.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o
+.PHONY : Personajes.cpp.o
+
+Personajes.i: Personajes.cpp.i
+
+.PHONY : Personajes.i
+
+# target to preprocess a source file
+Personajes.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.i
+.PHONY : Personajes.cpp.i
+
+Personajes.s: Personajes.cpp.s
+
+.PHONY : Personajes.s
+
+# target to generate assembly for a file
+Personajes.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.s
+.PHONY : Personajes.cpp.s
+
+SDLException.o: SDLException.cpp.o
+
+.PHONY : SDLException.o
+
+# target to build an object file
+SDLException.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o
+.PHONY : SDLException.cpp.o
+
+SDLException.i: SDLException.cpp.i
+
+.PHONY : SDLException.i
+
+# target to preprocess a source file
+SDLException.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.i
+.PHONY : SDLException.cpp.i
+
+SDLException.s: SDLException.cpp.s
+
+.PHONY : SDLException.s
+
+# target to generate assembly for a file
+SDLException.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.s
+.PHONY : SDLException.cpp.s
+
+SDLIMGException.o: SDLIMGException.cpp.o
+
+.PHONY : SDLIMGException.o
+
+# target to build an object file
+SDLIMGException.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o
+.PHONY : SDLIMGException.cpp.o
+
+SDLIMGException.i: SDLIMGException.cpp.i
+
+.PHONY : SDLIMGException.i
+
+# target to preprocess a source file
+SDLIMGException.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.i
+.PHONY : SDLIMGException.cpp.i
+
+SDLIMGException.s: SDLIMGException.cpp.s
+
+.PHONY : SDLIMGException.s
+
+# target to generate assembly for a file
+SDLIMGException.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.s
+.PHONY : SDLIMGException.cpp.s
+
+Scene.o: Scene.cpp.o
+
+.PHONY : Scene.o
+
+# target to build an object file
+Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o
+.PHONY : Scene.cpp.o
+
+Scene.i: Scene.cpp.i
+
+.PHONY : Scene.i
+
+# target to preprocess a source file
+Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.i
+.PHONY : Scene.cpp.i
+
+Scene.s: Scene.cpp.s
+
+.PHONY : Scene.s
+
+# target to generate assembly for a file
+Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.s
+.PHONY : Scene.cpp.s
+
+SdlImgInit.o: SdlImgInit.cpp.o
+
+.PHONY : SdlImgInit.o
+
+# target to build an object file
+SdlImgInit.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o
+.PHONY : SdlImgInit.cpp.o
+
+SdlImgInit.i: SdlImgInit.cpp.i
+
+.PHONY : SdlImgInit.i
+
+# target to preprocess a source file
+SdlImgInit.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.i
+.PHONY : SdlImgInit.cpp.i
+
+SdlImgInit.s: SdlImgInit.cpp.s
+
+.PHONY : SdlImgInit.s
+
+# target to generate assembly for a file
+SdlImgInit.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.s
+.PHONY : SdlImgInit.cpp.s
+
+SdlInit.o: SdlInit.cpp.o
+
+.PHONY : SdlInit.o
+
+# target to build an object file
+SdlInit.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o
+.PHONY : SdlInit.cpp.o
+
+SdlInit.i: SdlInit.cpp.i
+
+.PHONY : SdlInit.i
+
+# target to preprocess a source file
+SdlInit.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.i
+.PHONY : SdlInit.cpp.i
+
+SdlInit.s: SdlInit.cpp.s
+
+.PHONY : SdlInit.s
+
+# target to generate assembly for a file
+SdlInit.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.s
+.PHONY : SdlInit.cpp.s
+
+SpriteRojo.o: SpriteRojo.cpp.o
+
+.PHONY : SpriteRojo.o
+
+# target to build an object file
+SpriteRojo.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o
+.PHONY : SpriteRojo.cpp.o
+
+SpriteRojo.i: SpriteRojo.cpp.i
+
+.PHONY : SpriteRojo.i
+
+# target to preprocess a source file
+SpriteRojo.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.i
+.PHONY : SpriteRojo.cpp.i
+
+SpriteRojo.s: SpriteRojo.cpp.s
+
+.PHONY : SpriteRojo.s
+
+# target to generate assembly for a file
+SpriteRojo.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.s
+.PHONY : SpriteRojo.cpp.s
+
 Texture.o: Texture.cpp.o
 
 .PHONY : Texture.o
@@ -149,6 +392,33 @@ Texture.s: Texture.cpp.s
 Texture.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s
 .PHONY : Texture.cpp.s
+
+Window.o: Window.cpp.o
+
+.PHONY : Window.o
+
+# target to build an object file
+Window.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o
+.PHONY : Window.cpp.o
+
+Window.i: Window.cpp.i
+
+.PHONY : Window.i
+
+# target to preprocess a source file
+Window.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.i
+.PHONY : Window.cpp.i
+
+Window.s: Window.cpp.s
+
+.PHONY : Window.s
+
+# target to generate assembly for a file
+Window.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.s
+.PHONY : Window.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +456,39 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TP-Fase1-Test"
+	@echo "... Exception.o"
+	@echo "... Exception.i"
+	@echo "... Exception.s"
+	@echo "... ImgTexture.o"
+	@echo "... ImgTexture.i"
+	@echo "... ImgTexture.s"
+	@echo "... Personajes.o"
+	@echo "... Personajes.i"
+	@echo "... Personajes.s"
+	@echo "... SDLException.o"
+	@echo "... SDLException.i"
+	@echo "... SDLException.s"
+	@echo "... SDLIMGException.o"
+	@echo "... SDLIMGException.i"
+	@echo "... SDLIMGException.s"
+	@echo "... Scene.o"
+	@echo "... Scene.i"
+	@echo "... Scene.s"
+	@echo "... SdlImgInit.o"
+	@echo "... SdlImgInit.i"
+	@echo "... SdlImgInit.s"
+	@echo "... SdlInit.o"
+	@echo "... SdlInit.i"
+	@echo "... SdlInit.s"
+	@echo "... SpriteRojo.o"
+	@echo "... SpriteRojo.i"
+	@echo "... SpriteRojo.s"
 	@echo "... Texture.o"
 	@echo "... Texture.i"
 	@echo "... Texture.s"
+	@echo "... Window.o"
+	@echo "... Window.i"
+	@echo "... Window.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

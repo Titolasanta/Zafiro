@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/tito/Desktop/Tallar/github/TP-Fase1-Test 
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/orlando/Zafiro/. 
+CXX_INCLUDES = -I/home/tito/Desktop/Tallar/github/. 
 
