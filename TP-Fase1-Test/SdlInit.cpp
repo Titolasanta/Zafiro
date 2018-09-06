@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
-#include "commonSDLException.h"
-#include "commonSdlInit.h"
+#include "SDLException.h"
+#include "SdlInit.h"
 
 
 SdlInit::~SdlInit(){

@@ -5,7 +5,15 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${TP-Fase1-Test_SOURCE_DIR}/cmake")
-set(SOURCE_FILES main.cpp Texture.cpp Texture.h)
+
+file(GLOB helloworld_SRC
+        "*.h"
+        "*.cpp"
+        )
+
+set(SOURCE_FILES ${helloworld_SRC} SpriteRojo.cpp SpriteRojo.h Personajes.cpp Personajes.h Scene.cpp Scene.h)
+
+
 
 add_executable(TP-Fase1-Test ${SOURCE_FILES})
 
@@ -16,6 +24,8 @@ find_package(SDL2_ttf REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR}
         ${SDL2_IMAGE_INCLUDE_DIR}
         ${SDL2_TTF_INCLUDE_DIR})
+
+include_directories(${CMAKE_SOURCE_DIR})
 
 target_link_libraries(${PROJECT_NAME}
         ${SDL2_LIBRARY}
