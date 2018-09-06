@@ -69,7 +69,7 @@ int main( int argc, char* args[] )
                 quit = true;
             }
             if(e.type){
-                usleep(100000);
+                //usleep(100000);
             }
 
         }
