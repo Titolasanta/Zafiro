@@ -8,6 +8,8 @@ Scene::Scene(int i) {
 
 }
 
+
+
 int Scene::rojox() {
     return 300;
 }

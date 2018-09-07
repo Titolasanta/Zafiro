@@ -16,8 +16,8 @@ private:
 
 public:
 	Window(std::string& title, int xPos,int yPos,int width, int height);
-	Window(std::string& title,int width, int height);
-	Window(std::string& title);
+	Window(std::string title,int width, int height);
+	explicit Window(std::string& title);
 	~Window();
 
 	//dev por movimiento

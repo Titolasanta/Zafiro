@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include "SDLException.h"
+#include "Exception.h"
 #include "SDLIMGException.h"
 #include "Window.h"
 #include <SDL2/SDL_image.h>
@@ -48,7 +49,7 @@ Window::Window(string& title, int xPos,int yPos,int width, int height){
 	setRender(renderer, window, title);
 }
 
-Window::Window(string& title ,int width, int height){
+Window::Window(string title ,int width, int height){
 	window = SDL_CreateWindow( title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN );
 	if( window == NULL ){
 			throw SDLError( "Window could not be created! SDL_Error: " );
@@ -102,7 +103,7 @@ void Window::surfaceFill(int Color){
 	    	SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0x0, 0xFF, 0xFF ) );
 	      	break;
 	    default	:
-	    	throw string("Color no definido");
+	    	throw OSError("El color: %d no fue definido",Color);
 	   	}
 }
 void Window::redererClear(){

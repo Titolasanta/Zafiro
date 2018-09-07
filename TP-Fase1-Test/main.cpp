@@ -12,6 +12,8 @@
 #include "SdlImgInit.h"
 #include "SpriteRojo.h"
 #include "Personajes.h"
+#include "View.h"
+#include "Model.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 
@@ -27,36 +29,20 @@ bool init();
 
 int main( int argc, char* args[] )
 {
-    SdlInit uno;
-    SdlImgInit dos;
-    bool quit = false;
-    std::string windowName("juego");
-    Window window(windowName,SCREEN_WIDTH,SCREEN_HEIGHT);
-
-//    usleep(100000000);
-
-    //meter en clase
-    Personajes personajes(&window);
-
-
-
-
-    //Escenario escensario(window);
 
     //Xmler xml();
 
 
-    //meter en clase MAP
-
 
     Scene scene(1);
 
+    View view(SCREEN_WIDTH,SCREEN_HEIGHT,scene);
+
+    Model model(scene);
 
     //Event handler
     SDL_Event e;
-
-    int frame = 0;
-
+    bool quit = false;
 
 
     while(!quit) {
@@ -68,20 +54,10 @@ int main( int argc, char* args[] )
             if (e.type == SDL_QUIT) {
                 quit = true;
             }
-            if(e.type){
-                //usleep(100000);
-            }
-
+                model.update(e);
         }
-        window.redererClear();
 
-        //SDL_Rect *currentClip = rojo.mover( DER, frame%ROJO_DER_FRAMES);
-        //personaje.render(posx, posy, currentClip);
-        personajes.render(scene);
-        //escenario.render(scene);
-
-        window.updateRenderer();
-        frame++;
+        view.render();
 
     }
 
