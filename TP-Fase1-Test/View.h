@@ -10,11 +10,13 @@
 #include "Personajes.h"
 #include "SdlImgInit.h"
 #include "SdlInit.h"
+#include "Pasto.h"
+#include "Piedra.h"
 
 class View {
 
 public:
-    View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene scene);
+    View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene& scene);
 
     void render();
 
@@ -24,6 +26,8 @@ private:
     Window window;
     Personajes personajes;
     Scene& scene;
+    Piedra piedra;
+    Pasto pasto;
 };
 
 

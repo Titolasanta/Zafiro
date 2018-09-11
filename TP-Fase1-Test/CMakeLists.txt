@@ -11,7 +11,7 @@ file(GLOB helloworld_SRC
         "*.cpp"
         )
 
-set(SOURCE_FILES ${helloworld_SRC} SpriteRojo.cpp SpriteRojo.h Personajes.cpp Personajes.h Scene.cpp Scene.h)
+set(SOURCE_FILES ${helloworld_SRC} SpriteRojo.cpp SpriteRojo.h Personajes.cpp Personajes.h Scene.cpp Scene.h View.cpp View.h Model.cpp Model.h Pasto.cpp Pasto.h Piedra.cpp Piedra.h Viewable.cpp Viewable.h)
 
 
 

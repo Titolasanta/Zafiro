@@ -10,7 +10,9 @@
 #include "Personajes.h"
 
 
-View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene scene) : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),personajes(&window),scene(scene)
+View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene& scene)
+: window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),personajes(&window),scene(scene),
+piedra(&window),pasto(&window)
 {
 
     std::string windowName("juego");
@@ -20,7 +22,11 @@ View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene scene) : window("juego",SCR
 void View::render() {
 
     window.redererClear();
+
     personajes.render(scene);
+   // piedra.render(scene);
+    //pasto.render(scene);
+
     window.updateRenderer();
 
 }

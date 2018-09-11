@@ -2,6 +2,7 @@
 // Created by tito on 05/09/18.
 //
 
+#include <iostream>
 #include "Personajes.h"
 #include "SpriteRojo.h"
 
@@ -16,7 +17,9 @@ rojo.loadFromFile(SPIRIT_PATH);
 }
 
 void Personajes::render(Scene scene) {
-    frameActualRojo++;
+    if( scene.rojoMove() != 0) {
+        frameActualRojo++;
+    }
     SDL_Rect *currentClip = rojoFrames.mover( DER, frameActualRojo%ROJO_DER_FRAMES);
     rojo.render(scene.rojox(), scene.rojoy(), currentClip);
 

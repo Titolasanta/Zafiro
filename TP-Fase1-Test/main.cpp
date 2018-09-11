@@ -54,9 +54,10 @@ int main( int argc, char* args[] )
             if (e.type == SDL_QUIT) {
                 quit = true;
             }
-                model.update(e);
+            //recibe evento modifica escena acorde
+            model.update(e);
         }
-
+        //renderiza scene
         view.render();
 
     }

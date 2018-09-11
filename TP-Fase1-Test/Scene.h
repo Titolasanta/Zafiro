@@ -14,7 +14,17 @@ public:
 
     int rojox();
 
+    void rojox(int i);
     int rojoy();
+
+    bool rojoMove();
+
+    void rojoNotMove();
+    void rojoMove(int i);
+private:
+    int rojoX = 0;
+    bool rojoM = 0;
+
 };
 
 

@@ -11,7 +11,7 @@
 
 class Model {
 public:
-    Model(Scene scene);
+    Model(Scene &scene);
 
     void update(SDL_Event event);
 
