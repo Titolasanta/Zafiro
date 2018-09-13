@@ -4,26 +4,26 @@
 
 #ifndef TP_FASE1_TEST_SCENE_H
 #define TP_FASE1_TEST_SCENE_H
-
+enum PJSTATE{MOVING,AIR,GROUND};
 
 class Scene {
 public:
     Scene();
 
-    explicit Scene(int i);
-
+    //geter
     int rojox();
 
-    void rojox(int i);
     int rojoy();
 
-    bool rojoMove();
+    int rojoState();
 
+    //seter
     void rojoNotMove();
+
     void rojoMove(int i);
 private:
     int rojoX = 0;
-    bool rojoM = 0;
+    int state = GROUND;
 
 };
 

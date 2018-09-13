@@ -13,7 +13,8 @@
 #include "SpriteRojo.h"
 #include "Personajes.h"
 #include "View.h"
-#include "Model.h"
+#include "../Modelo/dumyModel.h"
+#include "Controler.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 
@@ -34,12 +35,12 @@ int main( int argc, char* args[] )
 
 
 
-    Scene scene(1);
+    View view(SCREEN_WIDTH,SCREEN_HEIGHT);
 
-    View view(SCREEN_WIDTH,SCREEN_HEIGHT,scene);
+    dumyModel model;
 
-    Model model(scene);
 
+    Controler controler(view,model);
     //Event handler
     SDL_Event e;
     bool quit = false;
@@ -55,10 +56,10 @@ int main( int argc, char* args[] )
                 quit = true;
             }
             //recibe evento modifica escena acorde
-            model.update(e);
+            controler.proces_event(e);
         }
         //renderiza scene
-        view.render();
+        controler.show();
 
     }
 

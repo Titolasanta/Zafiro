@@ -15,7 +15,7 @@ class Model {
         Scene& scene;
         int level;
         Character player1;
-        Character player2;
+        //Character player2;
 
     public:
         Model(Scene&);

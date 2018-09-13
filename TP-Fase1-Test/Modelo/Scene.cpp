@@ -5,11 +5,7 @@
 #include <cstdio>
 #include "Scene.h"
 
-Scene::Scene(int i) {
-
-}
-
-
+Scene::Scene() {}
 
 int Scene::rojox() {
     return 300 + rojoX;
@@ -19,20 +15,16 @@ int Scene::rojoy() {
     return 300;
 }
 
-void Scene::rojox(int i) {
-    rojoX += i;
-    rojoM = 1;
-}
-
 void Scene::rojoMove(int i) {
-
+    rojoX +=i;
+    state = MOVING;
 }
 
-bool Scene::rojoMove(){
-    return rojoM;
+int Scene::rojoState(){
+    return state;
 }
-
 void Scene::rojoNotMove() {
-    rojoM = 0;
+    state = GROUND;
 }
+
 

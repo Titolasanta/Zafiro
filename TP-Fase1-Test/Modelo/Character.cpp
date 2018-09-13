@@ -18,7 +18,6 @@ Character::Character(int posX, int posY){
     dead = 0;
     airborne = false;
     if (posY > 100) airborne = true;
-    weapon = Weapon pistol;
     aimDirection = 0;
 
 

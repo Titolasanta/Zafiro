@@ -10,8 +10,8 @@
 #include "Personajes.h"
 
 
-View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene& scene)
-: window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),personajes(&window),scene(scene),
+View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
+: window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),personajes(&window),
 piedra(&window),pasto(&window)
 {
 
@@ -19,7 +19,7 @@ piedra(&window),pasto(&window)
 
 }
 
-void View::render() {
+void View::render(Scene& scene) {
 
     window.redererClear();
 

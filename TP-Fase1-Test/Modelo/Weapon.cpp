@@ -22,3 +22,4 @@ void Weapon::shoot(int positionX, int positionY, bool lookingRight, int directio
         //Hacer algo para que el fireRate afecte la velocidad con la que dispara
     }
 }
+Weapon::~Weapon() {}

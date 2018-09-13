@@ -16,16 +16,16 @@
 class View {
 
 public:
-    View(int SCREEN_WIDTH, int SCREEN_HEIGHT,Scene& scene);
+    View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
 
-    void render();
+    void render(Scene& scene);
 
 private:
     SdlImgInit z;
     SdlInit x;
     Window window;
     Personajes personajes;
-    Scene& scene;
+//Scene& scene;
     Piedra piedra;
     Pasto pasto;
 };

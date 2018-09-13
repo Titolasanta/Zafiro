@@ -22,6 +22,8 @@ class Character {
         bool crouching;
         bool lookingRight;
         bool dead;
+        //si queres que sea polimorifico y pueda tener diferentes
+        // clases hijas de weapon deberia ser un puntero o referencia
         Weapon weapon;
         int aimDirection;
 

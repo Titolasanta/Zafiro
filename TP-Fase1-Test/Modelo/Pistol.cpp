@@ -9,4 +9,4 @@ Pistol::Pistol(){
     currentAmmo = maxAmmo;
 }
 
-Pistol::~Pistol() = default;
+Pistol::~Pistol(){}

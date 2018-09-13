@@ -17,7 +17,7 @@ rojo.loadFromFile(SPIRIT_PATH);
 }
 
 void Personajes::render(Scene scene) {
-    if( scene.rojoMove() != 0) {
+    if(scene.rojoState() != GROUND) {
         frameActualRojo++;
     }
     SDL_Rect *currentClip = rojoFrames.mover( DER, frameActualRojo%ROJO_DER_FRAMES);
