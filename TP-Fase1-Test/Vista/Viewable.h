@@ -3,16 +3,18 @@
 //
 
 #ifndef TP_FASE1_TEST_VIEWABLE_H
+
 #define TP_FASE1_TEST_VIEWABLE_H
 
 
 #include "ImgTexture.h"
 #include "Window.h"
+#include "Scene.h"
 
 class Viewable {
 public:
     Viewable(Window* window,std::string imgpath);
-    void render(int x, int y);
+    void renderList(std::list<std::tuple<int,int>> list);
 protected:
     std::string imgPath;
     ImgTexture texture;

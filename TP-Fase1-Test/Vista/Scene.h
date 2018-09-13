@@ -4,6 +4,11 @@
 
 #ifndef TP_FASE1_TEST_SCENE_H
 #define TP_FASE1_TEST_SCENE_H
+
+#include <tuple>
+
+#include <list>
+
 enum PJSTATE{MOVING,AIR,GROUND};
 
 class Scene {
@@ -17,11 +22,17 @@ public:
 
     int rojoState();
 
+    std::list<std::tuple<int,int>> plataforms();
+
     //seter
     void rojoNotMove();
 
     void rojoMove(int i);
+
+    //drawers
+
 private:
+    std::list<std::tuple<int,int>> lPlataforms;
     int rojoX = 0;
     int state = GROUND;
 

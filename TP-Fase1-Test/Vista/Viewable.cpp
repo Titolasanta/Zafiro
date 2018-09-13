@@ -5,6 +5,9 @@
 #include "Viewable.h"
 #include "Window.h"
 #include "Exception.h"
+#include <list>
+#include <tuple>
+#include "Scene.h"
 
 Viewable::Viewable(Window* window,std::string imgpath) : imgPath(imgpath),texture(std::move(window->createImgTexture(0xFF, 0xFF, 0xFF) ) )
 {
@@ -15,6 +18,9 @@ Viewable::Viewable(Window* window,std::string imgpath) : imgPath(imgpath),textur
 
 }
 
-void Viewable::render(int x, int y) {
-    texture.render(x,y);
+void Viewable::renderList(std::list<std::tuple<int,int>> lista) {
+
+    for (std::list< std::tuple<int,int>>::iterator it = lista.begin(); it != lista.end(); it++)
+        texture.render( std::get<0>(*it), std::get<1>(*it) );
+
 }

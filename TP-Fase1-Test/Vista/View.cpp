@@ -24,8 +24,8 @@ void View::render(Scene& scene) {
     window.redererClear();
 
     personajes.render(scene);
-   // piedra.render(scene);
-    //pasto.render(scene);
+    piedra.render(scene);
+    pasto.render(scene);
 
     window.updateRenderer();
 

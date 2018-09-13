@@ -7,7 +7,7 @@
 
 
 #include "Window.h"
-#include "Modelo/Scene.h"
+#include "Scene.h"
 #include "SpriteRojo.h"
 
 class Personajes {

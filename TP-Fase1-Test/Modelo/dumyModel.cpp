@@ -3,7 +3,7 @@
 //
 
 #include "dumyModel.h"
-#include "Modelo/Scene.h"
+#include "Vista/Scene.h"
 void dumyModel::update(Scene &scene) {
     if(moveX)
         scene.rojoMove(10 * moveX);

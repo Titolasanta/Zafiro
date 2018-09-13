@@ -5,7 +5,9 @@
 #include <cstdio>
 #include "Scene.h"
 
-Scene::Scene() {}
+Scene::Scene() {
+    lPlataforms.push_back(std::move(std::make_tuple<int,int>(500,100)));
+}
 
 int Scene::rojox() {
     return 300 + rojoX;
@@ -27,4 +29,7 @@ void Scene::rojoNotMove() {
     state = GROUND;
 }
 
+std::list<std::tuple<int,int>> Scene::plataforms() {
+    return lPlataforms;
+}
 

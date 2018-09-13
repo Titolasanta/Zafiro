@@ -5,11 +5,12 @@
 #ifndef TP_FASE1_TEST_PASTO_H
 #define TP_FASE1_TEST_PASTO_H
 
-
+#include "Scene.h"
 #include "Viewable.h"
 
 class Pasto : public Viewable{
 public:
+    void render(Scene& scene);
     Pasto(Window* window);
 
 };

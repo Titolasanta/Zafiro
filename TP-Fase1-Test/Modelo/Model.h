@@ -7,7 +7,7 @@
 
 
 #include <SDL_events.h>
-#include "Scene.h"
+#include "Vista/Scene.h"
 #include "Character.h"
 
 class Model {

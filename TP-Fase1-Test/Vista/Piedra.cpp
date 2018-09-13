@@ -4,10 +4,16 @@
 
 #include "Piedra.h"
 
+#include "Viewable.h"
 
 Piedra::Piedra(Window *window) : Viewable(window,"/home/tito/Desktop/Tallar/github/TP-Fase1-Test/escenario/piedra.png"){}
 
 void Piedra::renderHalf(int x, int y) {
 
     texture.render(x,y,0,71,0,34);
+}
+
+
+void Piedra::render(Scene& scene){
+
 }
