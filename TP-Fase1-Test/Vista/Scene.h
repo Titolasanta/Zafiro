@@ -9,7 +9,7 @@
 
 #include <list>
 
-enum PJSTATE{MOVING,AIR,GROUND};
+enum PJSTATE{MOVING_RIGHT,MOVING_LEFT,STANDING_RIGHT,STANDING_LEFT,AIR,GROUND};
 
 class Scene {
 public:
@@ -24,6 +24,12 @@ public:
 
     std::list<std::tuple<int,int>> plataforms();
 
+    void addPlataforms(int,int);
+
+    std::list<std::tuple<int,int>> bulets();
+
+    void addBulets(int,int);
+
     //seter
     void rojoNotMove();
 
@@ -32,9 +38,10 @@ public:
     //drawers
 
 private:
+    std::list<std::tuple<int,int>> lBulets;
     std::list<std::tuple<int,int>> lPlataforms;
     int rojoX = 0;
-    int state = GROUND;
+    int state = STANDING_RIGHT;
 
 };
 

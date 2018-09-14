@@ -53,6 +53,7 @@ void ImgTexture::render(int x, int y, SDL_Rect* rect){
     SDL_RenderCopy( renderer, mTexture, rect,  &renderQuad);
 }
 
+
 void ImgTexture::render( int x, int y, int xInicial, int xFinal, int yInicial, int yFinal, double angle) {
 
 	SDL_Rect renderQuad = { x, y, xFinal - xInicial, yFinal - yInicial };
@@ -63,6 +64,17 @@ void ImgTexture::render( int x, int y, int xInicial, int xFinal, int yInicial, i
 		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle+180, NULL, SDL_FLIP_HORIZONTAL );
 	else
 		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle, NULL, SDL_FLIP_NONE );
+}
+
+void ImgTexture::render( int x, int y,SDL_Rect *rect, double angle) {
+
+	SDL_Rect renderQuad = { x, y, rect->w, rect->h };
+	if(angle >= 90)
+		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad , angle-180, NULL, SDL_FLIP_HORIZONTAL );
+	else if(angle <= -90)
+		SDL_RenderCopyEx( renderer, mTexture,  rect, &renderQuad,  angle+180, NULL, SDL_FLIP_HORIZONTAL );
+	else
+		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad, angle, NULL, SDL_FLIP_NONE );
 }
 
 

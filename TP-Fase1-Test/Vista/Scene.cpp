@@ -6,7 +6,20 @@
 #include "Scene.h"
 
 Scene::Scene() {
-    lPlataforms.push_back(std::move(std::make_tuple<int,int>(500,100)));
+    addPlataforms(400,400);
+    addBulets(300,300);
+}
+
+void Scene::addPlataforms(int x, int y) {
+
+    lPlataforms.push_back(std::move(std::make_tuple(x,y)));
+
+}
+
+void Scene::addBulets(int x,int y) {
+
+    lBulets.push_back(std::move(std::make_tuple(x,y)));
+
 }
 
 int Scene::rojox() {
@@ -19,17 +32,27 @@ int Scene::rojoy() {
 
 void Scene::rojoMove(int i) {
     rojoX +=i;
-    state = MOVING;
+    if(i>0)
+       state = MOVING_RIGHT;
+    else
+        state = MOVING_LEFT;
 }
 
 int Scene::rojoState(){
     return state;
 }
 void Scene::rojoNotMove() {
-    state = GROUND;
+    if(state == MOVING_LEFT)
+        state = STANDING_LEFT;
+    if(state == MOVING_RIGHT)
+        state = STANDING_RIGHT;
 }
 
 std::list<std::tuple<int,int>> Scene::plataforms() {
     return lPlataforms;
+}
+
+std::list<std::tuple<int,int>> Scene::bulets() {
+    return lBulets;
 }
 

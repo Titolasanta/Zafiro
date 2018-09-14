@@ -17,10 +17,29 @@ rojo.loadFromFile(SPIRIT_PATH);
 }
 
 void Personajes::render(Scene scene) {
-    if(scene.rojoState() != GROUND) {
-        frameActualRojo++;
-    }
-    SDL_Rect *currentClip = rojoFrames.mover( DER, frameActualRojo%ROJO_DER_FRAMES);
-    rojo.render(scene.rojox(), scene.rojoy(), currentClip);
 
+    switch ( scene.rojoState() )
+    {
+        case MOVING_RIGHT: {
+            frameActualRojo++;
+            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
+            rojo.render(scene.rojox(), scene.rojoy(), currentClip);
+            break;
+        }case MOVING_LEFT: {
+            frameActualRojo++;
+            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
+            rojo.render(scene.rojox(), scene.rojoy(), currentClip, 180);
+            break;
+        }case STANDING_LEFT: {
+            SDL_Rect *currentClip = rojoFrames.quieto();
+            rojo.render(scene.rojox(), scene.rojoy(), currentClip,180);
+            break;
+        }case STANDING_RIGHT: {
+            SDL_Rect *currentClip = rojoFrames.quieto();
+            rojo.render(scene.rojox(), scene.rojoy(), currentClip);
+            break;
+        }default:
+            break;
+            //error
+    }
 }
