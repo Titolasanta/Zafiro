@@ -18,7 +18,7 @@ public:
     SDL_Rect* mover(int dirreccion, int frame);
     SDL_Rect* quieto();
 private:
-    SDL_Rect frameMoviemiento[1][6];
+    SDL_Rect frameMoviemiento[2][6];
     SDL_Rect parado;
 
 };

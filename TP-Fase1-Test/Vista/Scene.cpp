@@ -33,7 +33,7 @@ int Scene::rojoy() {
 void Scene::rojoMove(int i) {
     rojoX +=i;
     if(i>0)
-       state = MOVING_RIGHT;
+        state = MOVING_RIGHT;
     else
         state = MOVING_LEFT;
 }
@@ -42,9 +42,9 @@ int Scene::rojoState(){
     return state;
 }
 void Scene::rojoNotMove() {
-    if(state == MOVING_LEFT)
+    if(state == MOVING_LEFT ||state ==  AIM_DOWN_L ||state ==  AIM_UP_L)
         state = STANDING_LEFT;
-    if(state == MOVING_RIGHT)
+    if(state == MOVING_RIGHT ||state ==  AIM_DOWN_R ||state ==  AIM_UP_R)
         state = STANDING_RIGHT;
 }
 
