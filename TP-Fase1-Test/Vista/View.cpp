@@ -19,13 +19,15 @@ piedra(&window),pasto(&window)
 
 }
 
+
 void View::render(Scene& scene) {
 
     window.redererClear();
 
-    personajes.render(scene);
     piedra.render(scene);
     pasto.render(scene);
+
+    personajes.render(scene);
 
     window.updateRenderer();
 
