@@ -9,7 +9,9 @@
 class Piedra : public Viewable{
 public:
     Piedra(Window* window);
+
     void renderHalf(int,int);
+    //dibuja desde la lista de plataformas hasta el piso
     void render(Scene& scene);
     
 };

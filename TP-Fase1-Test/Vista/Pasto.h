@@ -10,6 +10,7 @@
 
 class Pasto : public Viewable{
 public:
+    //dibuja la lista de plataformas
     void render(Scene& scene);
     Pasto(Window* window);
 
