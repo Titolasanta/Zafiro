@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test
+CMAKE_SOURCE_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-de
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,329 +123,680 @@ TP-Fase1-Test/fast:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/build
 .PHONY : TP-Fase1-Test/fast
 
-Exception.o: Exception.cpp.o
+Modelo/Character.o: Modelo/Character.cpp.o
 
-.PHONY : Exception.o
-
-# target to build an object file
-Exception.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o
-.PHONY : Exception.cpp.o
-
-Exception.i: Exception.cpp.i
-
-.PHONY : Exception.i
-
-# target to preprocess a source file
-Exception.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.i
-.PHONY : Exception.cpp.i
-
-Exception.s: Exception.cpp.s
-
-.PHONY : Exception.s
-
-# target to generate assembly for a file
-Exception.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.s
-.PHONY : Exception.cpp.s
-
-ImgTexture.o: ImgTexture.cpp.o
-
-.PHONY : ImgTexture.o
+.PHONY : Modelo/Character.o
 
 # target to build an object file
-ImgTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o
-.PHONY : ImgTexture.cpp.o
+Modelo/Character.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o
+.PHONY : Modelo/Character.cpp.o
 
-ImgTexture.i: ImgTexture.cpp.i
+Modelo/Character.i: Modelo/Character.cpp.i
 
-.PHONY : ImgTexture.i
+.PHONY : Modelo/Character.i
 
 # target to preprocess a source file
-ImgTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.i
-.PHONY : ImgTexture.cpp.i
+Modelo/Character.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i
+.PHONY : Modelo/Character.cpp.i
 
-ImgTexture.s: ImgTexture.cpp.s
+Modelo/Character.s: Modelo/Character.cpp.s
 
-.PHONY : ImgTexture.s
+.PHONY : Modelo/Character.s
 
 # target to generate assembly for a file
-ImgTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.s
-.PHONY : ImgTexture.cpp.s
+Modelo/Character.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
+.PHONY : Modelo/Character.cpp.s
 
-Personajes.o: Personajes.cpp.o
+Modelo/Model.o: Modelo/Model.cpp.o
 
-.PHONY : Personajes.o
+.PHONY : Modelo/Model.o
 
 # target to build an object file
-Personajes.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o
-.PHONY : Personajes.cpp.o
+Modelo/Model.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o
+.PHONY : Modelo/Model.cpp.o
 
-Personajes.i: Personajes.cpp.i
+Modelo/Model.i: Modelo/Model.cpp.i
 
-.PHONY : Personajes.i
+.PHONY : Modelo/Model.i
 
 # target to preprocess a source file
-Personajes.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.i
-.PHONY : Personajes.cpp.i
+Modelo/Model.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i
+.PHONY : Modelo/Model.cpp.i
 
-Personajes.s: Personajes.cpp.s
+Modelo/Model.s: Modelo/Model.cpp.s
 
-.PHONY : Personajes.s
+.PHONY : Modelo/Model.s
 
 # target to generate assembly for a file
-Personajes.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.s
-.PHONY : Personajes.cpp.s
+Modelo/Model.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s
+.PHONY : Modelo/Model.cpp.s
 
-SDLException.o: SDLException.cpp.o
+Modelo/Pistol.o: Modelo/Pistol.cpp.o
 
-.PHONY : SDLException.o
+.PHONY : Modelo/Pistol.o
 
 # target to build an object file
-SDLException.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o
-.PHONY : SDLException.cpp.o
+Modelo/Pistol.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o
+.PHONY : Modelo/Pistol.cpp.o
 
-SDLException.i: SDLException.cpp.i
+Modelo/Pistol.i: Modelo/Pistol.cpp.i
 
-.PHONY : SDLException.i
+.PHONY : Modelo/Pistol.i
 
 # target to preprocess a source file
-SDLException.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.i
-.PHONY : SDLException.cpp.i
+Modelo/Pistol.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i
+.PHONY : Modelo/Pistol.cpp.i
 
-SDLException.s: SDLException.cpp.s
+Modelo/Pistol.s: Modelo/Pistol.cpp.s
 
-.PHONY : SDLException.s
+.PHONY : Modelo/Pistol.s
 
 # target to generate assembly for a file
-SDLException.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.s
-.PHONY : SDLException.cpp.s
+Modelo/Pistol.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s
+.PHONY : Modelo/Pistol.cpp.s
 
-SDLIMGException.o: SDLIMGException.cpp.o
+Modelo/Projectile.o: Modelo/Projectile.cpp.o
 
-.PHONY : SDLIMGException.o
+.PHONY : Modelo/Projectile.o
 
 # target to build an object file
-SDLIMGException.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o
-.PHONY : SDLIMGException.cpp.o
+Modelo/Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o
+.PHONY : Modelo/Projectile.cpp.o
 
-SDLIMGException.i: SDLIMGException.cpp.i
+Modelo/Projectile.i: Modelo/Projectile.cpp.i
 
-.PHONY : SDLIMGException.i
+.PHONY : Modelo/Projectile.i
 
 # target to preprocess a source file
-SDLIMGException.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.i
-.PHONY : SDLIMGException.cpp.i
+Modelo/Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i
+.PHONY : Modelo/Projectile.cpp.i
 
-SDLIMGException.s: SDLIMGException.cpp.s
+Modelo/Projectile.s: Modelo/Projectile.cpp.s
 
-.PHONY : SDLIMGException.s
+.PHONY : Modelo/Projectile.s
 
 # target to generate assembly for a file
-SDLIMGException.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.s
-.PHONY : SDLIMGException.cpp.s
+Modelo/Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s
+.PHONY : Modelo/Projectile.cpp.s
 
-Scene.o: Scene.cpp.o
+Modelo/Weapon.o: Modelo/Weapon.cpp.o
 
-.PHONY : Scene.o
+.PHONY : Modelo/Weapon.o
 
 # target to build an object file
-Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o
-.PHONY : Scene.cpp.o
+Modelo/Weapon.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o
+.PHONY : Modelo/Weapon.cpp.o
 
-Scene.i: Scene.cpp.i
+Modelo/Weapon.i: Modelo/Weapon.cpp.i
 
-.PHONY : Scene.i
+.PHONY : Modelo/Weapon.i
 
 # target to preprocess a source file
-Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.i
-.PHONY : Scene.cpp.i
+Modelo/Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i
+.PHONY : Modelo/Weapon.cpp.i
 
-Scene.s: Scene.cpp.s
+Modelo/Weapon.s: Modelo/Weapon.cpp.s
 
-.PHONY : Scene.s
+.PHONY : Modelo/Weapon.s
 
 # target to generate assembly for a file
-Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.s
-.PHONY : Scene.cpp.s
+Modelo/Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s
+.PHONY : Modelo/Weapon.cpp.s
 
-SdlImgInit.o: SdlImgInit.cpp.o
+Modelo/dumyModel.o: Modelo/dumyModel.cpp.o
 
-.PHONY : SdlImgInit.o
+.PHONY : Modelo/dumyModel.o
 
 # target to build an object file
-SdlImgInit.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o
-.PHONY : SdlImgInit.cpp.o
+Modelo/dumyModel.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o
+.PHONY : Modelo/dumyModel.cpp.o
 
-SdlImgInit.i: SdlImgInit.cpp.i
+Modelo/dumyModel.i: Modelo/dumyModel.cpp.i
 
-.PHONY : SdlImgInit.i
+.PHONY : Modelo/dumyModel.i
 
 # target to preprocess a source file
-SdlImgInit.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.i
-.PHONY : SdlImgInit.cpp.i
+Modelo/dumyModel.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i
+.PHONY : Modelo/dumyModel.cpp.i
 
-SdlImgInit.s: SdlImgInit.cpp.s
+Modelo/dumyModel.s: Modelo/dumyModel.cpp.s
 
-.PHONY : SdlImgInit.s
+.PHONY : Modelo/dumyModel.s
 
 # target to generate assembly for a file
-SdlImgInit.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.s
-.PHONY : SdlImgInit.cpp.s
+Modelo/dumyModel.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s
+.PHONY : Modelo/dumyModel.cpp.s
 
-SdlInit.o: SdlInit.cpp.o
+Vista/Controler.o: Vista/Controler.cpp.o
 
-.PHONY : SdlInit.o
+.PHONY : Vista/Controler.o
 
 # target to build an object file
-SdlInit.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o
-.PHONY : SdlInit.cpp.o
+Vista/Controler.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o
+.PHONY : Vista/Controler.cpp.o
 
-SdlInit.i: SdlInit.cpp.i
+Vista/Controler.i: Vista/Controler.cpp.i
 
-.PHONY : SdlInit.i
+.PHONY : Vista/Controler.i
 
 # target to preprocess a source file
-SdlInit.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.i
-.PHONY : SdlInit.cpp.i
+Vista/Controler.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.i
+.PHONY : Vista/Controler.cpp.i
 
-SdlInit.s: SdlInit.cpp.s
+Vista/Controler.s: Vista/Controler.cpp.s
 
-.PHONY : SdlInit.s
+.PHONY : Vista/Controler.s
 
 # target to generate assembly for a file
-SdlInit.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.s
-.PHONY : SdlInit.cpp.s
+Vista/Controler.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.s
+.PHONY : Vista/Controler.cpp.s
 
-SpriteRojo.o: SpriteRojo.cpp.o
+Vista/Exception.o: Vista/Exception.cpp.o
 
-.PHONY : SpriteRojo.o
+.PHONY : Vista/Exception.o
 
 # target to build an object file
-SpriteRojo.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o
-.PHONY : SpriteRojo.cpp.o
+Vista/Exception.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o
+.PHONY : Vista/Exception.cpp.o
 
-SpriteRojo.i: SpriteRojo.cpp.i
+Vista/Exception.i: Vista/Exception.cpp.i
 
-.PHONY : SpriteRojo.i
+.PHONY : Vista/Exception.i
 
 # target to preprocess a source file
-SpriteRojo.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.i
-.PHONY : SpriteRojo.cpp.i
+Vista/Exception.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i
+.PHONY : Vista/Exception.cpp.i
 
-SpriteRojo.s: SpriteRojo.cpp.s
+Vista/Exception.s: Vista/Exception.cpp.s
 
-.PHONY : SpriteRojo.s
+.PHONY : Vista/Exception.s
 
 # target to generate assembly for a file
-SpriteRojo.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.s
-.PHONY : SpriteRojo.cpp.s
+Vista/Exception.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s
+.PHONY : Vista/Exception.cpp.s
 
-Texture.o: Texture.cpp.o
+Vista/ImgTexture.o: Vista/ImgTexture.cpp.o
 
-.PHONY : Texture.o
+.PHONY : Vista/ImgTexture.o
 
 # target to build an object file
-Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o
-.PHONY : Texture.cpp.o
+Vista/ImgTexture.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o
+.PHONY : Vista/ImgTexture.cpp.o
 
-Texture.i: Texture.cpp.i
+Vista/ImgTexture.i: Vista/ImgTexture.cpp.i
 
-.PHONY : Texture.i
+.PHONY : Vista/ImgTexture.i
 
 # target to preprocess a source file
-Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.i
-.PHONY : Texture.cpp.i
+Vista/ImgTexture.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i
+.PHONY : Vista/ImgTexture.cpp.i
 
-Texture.s: Texture.cpp.s
+Vista/ImgTexture.s: Vista/ImgTexture.cpp.s
 
-.PHONY : Texture.s
+.PHONY : Vista/ImgTexture.s
 
 # target to generate assembly for a file
-Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.s
-.PHONY : Texture.cpp.s
+Vista/ImgTexture.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
+.PHONY : Vista/ImgTexture.cpp.s
 
-Window.o: Window.cpp.o
+Vista/Pasto.o: Vista/Pasto.cpp.o
 
-.PHONY : Window.o
+.PHONY : Vista/Pasto.o
 
 # target to build an object file
-Window.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o
-.PHONY : Window.cpp.o
+Vista/Pasto.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o
+.PHONY : Vista/Pasto.cpp.o
 
-Window.i: Window.cpp.i
+Vista/Pasto.i: Vista/Pasto.cpp.i
 
-.PHONY : Window.i
+.PHONY : Vista/Pasto.i
 
 # target to preprocess a source file
-Window.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.i
-.PHONY : Window.cpp.i
+Vista/Pasto.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i
+.PHONY : Vista/Pasto.cpp.i
 
-Window.s: Window.cpp.s
+Vista/Pasto.s: Vista/Pasto.cpp.s
 
-.PHONY : Window.s
+.PHONY : Vista/Pasto.s
 
 # target to generate assembly for a file
-Window.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Window.cpp.s
-.PHONY : Window.cpp.s
+Vista/Pasto.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s
+.PHONY : Vista/Pasto.cpp.s
 
-main.o: main.cpp.o
+Vista/Personajes.o: Vista/Personajes.cpp.o
 
-.PHONY : main.o
+.PHONY : Vista/Personajes.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/main.cpp.o
-.PHONY : main.cpp.o
+Vista/Personajes.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o
+.PHONY : Vista/Personajes.cpp.o
 
-main.i: main.cpp.i
+Vista/Personajes.i: Vista/Personajes.cpp.i
 
-.PHONY : main.i
+.PHONY : Vista/Personajes.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/main.cpp.i
-.PHONY : main.cpp.i
+Vista/Personajes.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i
+.PHONY : Vista/Personajes.cpp.i
 
-main.s: main.cpp.s
+Vista/Personajes.s: Vista/Personajes.cpp.s
 
-.PHONY : main.s
+.PHONY : Vista/Personajes.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/main.cpp.s
-.PHONY : main.cpp.s
+Vista/Personajes.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s
+.PHONY : Vista/Personajes.cpp.s
+
+Vista/Piedra.o: Vista/Piedra.cpp.o
+
+.PHONY : Vista/Piedra.o
+
+# target to build an object file
+Vista/Piedra.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o
+.PHONY : Vista/Piedra.cpp.o
+
+Vista/Piedra.i: Vista/Piedra.cpp.i
+
+.PHONY : Vista/Piedra.i
+
+# target to preprocess a source file
+Vista/Piedra.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i
+.PHONY : Vista/Piedra.cpp.i
+
+Vista/Piedra.s: Vista/Piedra.cpp.s
+
+.PHONY : Vista/Piedra.s
+
+# target to generate assembly for a file
+Vista/Piedra.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s
+.PHONY : Vista/Piedra.cpp.s
+
+Vista/SDLException.o: Vista/SDLException.cpp.o
+
+.PHONY : Vista/SDLException.o
+
+# target to build an object file
+Vista/SDLException.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o
+.PHONY : Vista/SDLException.cpp.o
+
+Vista/SDLException.i: Vista/SDLException.cpp.i
+
+.PHONY : Vista/SDLException.i
+
+# target to preprocess a source file
+Vista/SDLException.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i
+.PHONY : Vista/SDLException.cpp.i
+
+Vista/SDLException.s: Vista/SDLException.cpp.s
+
+.PHONY : Vista/SDLException.s
+
+# target to generate assembly for a file
+Vista/SDLException.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s
+.PHONY : Vista/SDLException.cpp.s
+
+Vista/SDLIMGException.o: Vista/SDLIMGException.cpp.o
+
+.PHONY : Vista/SDLIMGException.o
+
+# target to build an object file
+Vista/SDLIMGException.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o
+.PHONY : Vista/SDLIMGException.cpp.o
+
+Vista/SDLIMGException.i: Vista/SDLIMGException.cpp.i
+
+.PHONY : Vista/SDLIMGException.i
+
+# target to preprocess a source file
+Vista/SDLIMGException.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i
+.PHONY : Vista/SDLIMGException.cpp.i
+
+Vista/SDLIMGException.s: Vista/SDLIMGException.cpp.s
+
+.PHONY : Vista/SDLIMGException.s
+
+# target to generate assembly for a file
+Vista/SDLIMGException.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s
+.PHONY : Vista/SDLIMGException.cpp.s
+
+Vista/Scene.o: Vista/Scene.cpp.o
+
+.PHONY : Vista/Scene.o
+
+# target to build an object file
+Vista/Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o
+.PHONY : Vista/Scene.cpp.o
+
+Vista/Scene.i: Vista/Scene.cpp.i
+
+.PHONY : Vista/Scene.i
+
+# target to preprocess a source file
+Vista/Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i
+.PHONY : Vista/Scene.cpp.i
+
+Vista/Scene.s: Vista/Scene.cpp.s
+
+.PHONY : Vista/Scene.s
+
+# target to generate assembly for a file
+Vista/Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s
+.PHONY : Vista/Scene.cpp.s
+
+Vista/SdlImgInit.o: Vista/SdlImgInit.cpp.o
+
+.PHONY : Vista/SdlImgInit.o
+
+# target to build an object file
+Vista/SdlImgInit.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o
+.PHONY : Vista/SdlImgInit.cpp.o
+
+Vista/SdlImgInit.i: Vista/SdlImgInit.cpp.i
+
+.PHONY : Vista/SdlImgInit.i
+
+# target to preprocess a source file
+Vista/SdlImgInit.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i
+.PHONY : Vista/SdlImgInit.cpp.i
+
+Vista/SdlImgInit.s: Vista/SdlImgInit.cpp.s
+
+.PHONY : Vista/SdlImgInit.s
+
+# target to generate assembly for a file
+Vista/SdlImgInit.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s
+.PHONY : Vista/SdlImgInit.cpp.s
+
+Vista/SdlInit.o: Vista/SdlInit.cpp.o
+
+.PHONY : Vista/SdlInit.o
+
+# target to build an object file
+Vista/SdlInit.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o
+.PHONY : Vista/SdlInit.cpp.o
+
+Vista/SdlInit.i: Vista/SdlInit.cpp.i
+
+.PHONY : Vista/SdlInit.i
+
+# target to preprocess a source file
+Vista/SdlInit.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i
+.PHONY : Vista/SdlInit.cpp.i
+
+Vista/SdlInit.s: Vista/SdlInit.cpp.s
+
+.PHONY : Vista/SdlInit.s
+
+# target to generate assembly for a file
+Vista/SdlInit.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s
+.PHONY : Vista/SdlInit.cpp.s
+
+Vista/SpriteRojo.o: Vista/SpriteRojo.cpp.o
+
+.PHONY : Vista/SpriteRojo.o
+
+# target to build an object file
+Vista/SpriteRojo.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.o
+.PHONY : Vista/SpriteRojo.cpp.o
+
+Vista/SpriteRojo.i: Vista/SpriteRojo.cpp.i
+
+.PHONY : Vista/SpriteRojo.i
+
+# target to preprocess a source file
+Vista/SpriteRojo.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.i
+.PHONY : Vista/SpriteRojo.cpp.i
+
+Vista/SpriteRojo.s: Vista/SpriteRojo.cpp.s
+
+.PHONY : Vista/SpriteRojo.s
+
+# target to generate assembly for a file
+Vista/SpriteRojo.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.s
+.PHONY : Vista/SpriteRojo.cpp.s
+
+Vista/Texture.o: Vista/Texture.cpp.o
+
+.PHONY : Vista/Texture.o
+
+# target to build an object file
+Vista/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o
+.PHONY : Vista/Texture.cpp.o
+
+Vista/Texture.i: Vista/Texture.cpp.i
+
+.PHONY : Vista/Texture.i
+
+# target to preprocess a source file
+Vista/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i
+.PHONY : Vista/Texture.cpp.i
+
+Vista/Texture.s: Vista/Texture.cpp.s
+
+.PHONY : Vista/Texture.s
+
+# target to generate assembly for a file
+Vista/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s
+.PHONY : Vista/Texture.cpp.s
+
+Vista/View.o: Vista/View.cpp.o
+
+.PHONY : Vista/View.o
+
+# target to build an object file
+Vista/View.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o
+.PHONY : Vista/View.cpp.o
+
+Vista/View.i: Vista/View.cpp.i
+
+.PHONY : Vista/View.i
+
+# target to preprocess a source file
+Vista/View.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i
+.PHONY : Vista/View.cpp.i
+
+Vista/View.s: Vista/View.cpp.s
+
+.PHONY : Vista/View.s
+
+# target to generate assembly for a file
+Vista/View.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s
+.PHONY : Vista/View.cpp.s
+
+Vista/Viewable.o: Vista/Viewable.cpp.o
+
+.PHONY : Vista/Viewable.o
+
+# target to build an object file
+Vista/Viewable.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o
+.PHONY : Vista/Viewable.cpp.o
+
+Vista/Viewable.i: Vista/Viewable.cpp.i
+
+.PHONY : Vista/Viewable.i
+
+# target to preprocess a source file
+Vista/Viewable.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i
+.PHONY : Vista/Viewable.cpp.i
+
+Vista/Viewable.s: Vista/Viewable.cpp.s
+
+.PHONY : Vista/Viewable.s
+
+# target to generate assembly for a file
+Vista/Viewable.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s
+.PHONY : Vista/Viewable.cpp.s
+
+Vista/Window.o: Vista/Window.cpp.o
+
+.PHONY : Vista/Window.o
+
+# target to build an object file
+Vista/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o
+.PHONY : Vista/Window.cpp.o
+
+Vista/Window.i: Vista/Window.cpp.i
+
+.PHONY : Vista/Window.i
+
+# target to preprocess a source file
+Vista/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i
+.PHONY : Vista/Window.cpp.i
+
+Vista/Window.s: Vista/Window.cpp.s
+
+.PHONY : Vista/Window.s
+
+# target to generate assembly for a file
+Vista/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s
+.PHONY : Vista/Window.cpp.s
+
+Vista/main.o: Vista/main.cpp.o
+
+.PHONY : Vista/main.o
+
+# target to build an object file
+Vista/main.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o
+.PHONY : Vista/main.cpp.o
+
+Vista/main.i: Vista/main.cpp.i
+
+.PHONY : Vista/main.i
+
+# target to preprocess a source file
+Vista/main.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i
+.PHONY : Vista/main.cpp.i
+
+Vista/main.s: Vista/main.cpp.s
+
+.PHONY : Vista/main.s
+
+# target to generate assembly for a file
+Vista/main.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s
+.PHONY : Vista/main.cpp.s
+
+Vista/pugixml.o: Vista/pugixml.cpp.o
+
+.PHONY : Vista/pugixml.o
+
+# target to build an object file
+Vista/pugixml.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o
+.PHONY : Vista/pugixml.cpp.o
+
+Vista/pugixml.i: Vista/pugixml.cpp.i
+
+.PHONY : Vista/pugixml.i
+
+# target to preprocess a source file
+Vista/pugixml.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i
+.PHONY : Vista/pugixml.cpp.i
+
+Vista/pugixml.s: Vista/pugixml.cpp.s
+
+.PHONY : Vista/pugixml.s
+
+# target to generate assembly for a file
+Vista/pugixml.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s
+.PHONY : Vista/pugixml.cpp.s
+
+Vista/xml.o: Vista/xml.cpp.o
+
+.PHONY : Vista/xml.o
+
+# target to build an object file
+Vista/xml.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o
+.PHONY : Vista/xml.cpp.o
+
+Vista/xml.i: Vista/xml.cpp.i
+
+.PHONY : Vista/xml.i
+
+# target to preprocess a source file
+Vista/xml.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i
+.PHONY : Vista/xml.cpp.i
+
+Vista/xml.s: Vista/xml.cpp.s
+
+.PHONY : Vista/xml.s
+
+# target to generate assembly for a file
+Vista/xml.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s
+.PHONY : Vista/xml.cpp.s
 
 # Help Target
 help:
@@ -456,42 +807,81 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TP-Fase1-Test"
-	@echo "... Exception.o"
-	@echo "... Exception.i"
-	@echo "... Exception.s"
-	@echo "... ImgTexture.o"
-	@echo "... ImgTexture.i"
-	@echo "... ImgTexture.s"
-	@echo "... Personajes.o"
-	@echo "... Personajes.i"
-	@echo "... Personajes.s"
-	@echo "... SDLException.o"
-	@echo "... SDLException.i"
-	@echo "... SDLException.s"
-	@echo "... SDLIMGException.o"
-	@echo "... SDLIMGException.i"
-	@echo "... SDLIMGException.s"
-	@echo "... Scene.o"
-	@echo "... Scene.i"
-	@echo "... Scene.s"
-	@echo "... SdlImgInit.o"
-	@echo "... SdlImgInit.i"
-	@echo "... SdlImgInit.s"
-	@echo "... SdlInit.o"
-	@echo "... SdlInit.i"
-	@echo "... SdlInit.s"
-	@echo "... SpriteRojo.o"
-	@echo "... SpriteRojo.i"
-	@echo "... SpriteRojo.s"
-	@echo "... Texture.o"
-	@echo "... Texture.i"
-	@echo "... Texture.s"
-	@echo "... Window.o"
-	@echo "... Window.i"
-	@echo "... Window.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Modelo/Character.o"
+	@echo "... Modelo/Character.i"
+	@echo "... Modelo/Character.s"
+	@echo "... Modelo/Model.o"
+	@echo "... Modelo/Model.i"
+	@echo "... Modelo/Model.s"
+	@echo "... Modelo/Pistol.o"
+	@echo "... Modelo/Pistol.i"
+	@echo "... Modelo/Pistol.s"
+	@echo "... Modelo/Projectile.o"
+	@echo "... Modelo/Projectile.i"
+	@echo "... Modelo/Projectile.s"
+	@echo "... Modelo/Weapon.o"
+	@echo "... Modelo/Weapon.i"
+	@echo "... Modelo/Weapon.s"
+	@echo "... Modelo/dumyModel.o"
+	@echo "... Modelo/dumyModel.i"
+	@echo "... Modelo/dumyModel.s"
+	@echo "... Vista/Controler.o"
+	@echo "... Vista/Controler.i"
+	@echo "... Vista/Controler.s"
+	@echo "... Vista/Exception.o"
+	@echo "... Vista/Exception.i"
+	@echo "... Vista/Exception.s"
+	@echo "... Vista/ImgTexture.o"
+	@echo "... Vista/ImgTexture.i"
+	@echo "... Vista/ImgTexture.s"
+	@echo "... Vista/Pasto.o"
+	@echo "... Vista/Pasto.i"
+	@echo "... Vista/Pasto.s"
+	@echo "... Vista/Personajes.o"
+	@echo "... Vista/Personajes.i"
+	@echo "... Vista/Personajes.s"
+	@echo "... Vista/Piedra.o"
+	@echo "... Vista/Piedra.i"
+	@echo "... Vista/Piedra.s"
+	@echo "... Vista/SDLException.o"
+	@echo "... Vista/SDLException.i"
+	@echo "... Vista/SDLException.s"
+	@echo "... Vista/SDLIMGException.o"
+	@echo "... Vista/SDLIMGException.i"
+	@echo "... Vista/SDLIMGException.s"
+	@echo "... Vista/Scene.o"
+	@echo "... Vista/Scene.i"
+	@echo "... Vista/Scene.s"
+	@echo "... Vista/SdlImgInit.o"
+	@echo "... Vista/SdlImgInit.i"
+	@echo "... Vista/SdlImgInit.s"
+	@echo "... Vista/SdlInit.o"
+	@echo "... Vista/SdlInit.i"
+	@echo "... Vista/SdlInit.s"
+	@echo "... Vista/SpriteRojo.o"
+	@echo "... Vista/SpriteRojo.i"
+	@echo "... Vista/SpriteRojo.s"
+	@echo "... Vista/Texture.o"
+	@echo "... Vista/Texture.i"
+	@echo "... Vista/Texture.s"
+	@echo "... Vista/View.o"
+	@echo "... Vista/View.i"
+	@echo "... Vista/View.s"
+	@echo "... Vista/Viewable.o"
+	@echo "... Vista/Viewable.i"
+	@echo "... Vista/Viewable.s"
+	@echo "... Vista/Window.o"
+	@echo "... Vista/Window.i"
+	@echo "... Vista/Window.s"
+	@echo "... Vista/main.o"
+	@echo "... Vista/main.i"
+	@echo "... Vista/main.s"
+	@echo "... Vista/pugixml.o"
+	@echo "... Vista/pugixml.i"
+	@echo "... Vista/pugixml.s"
+	@echo "... Vista/xml.o"
+	@echo "... Vista/xml.i"
+	@echo "... Vista/xml.s"
 .PHONY : help
 
 

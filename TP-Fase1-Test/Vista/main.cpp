@@ -15,8 +15,11 @@
 #include "View.h"
 #include "../Modelo/dumyModel.h"
 #include "Controler.h"
+#include "pugixml.hpp"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
+#define PATH_XML_ORIGINAL "pongan el path aca"
+#define PATH_XML_DEFAULT "pongan el otro path aca"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 1024;
@@ -30,8 +33,19 @@ bool init();
 
 int main( int argc, char* args[] )
 {
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
+    if (!result) {
+        // hacer algo con result.description()
+        result = doc.load_file(PATH_XML_DEFAULT);
+        if (!result) {
+            //hacer algo con result.description();
+            return 1;
+        }
+    }
 
-    //Xmler xml();
+    const char* Log_Level =
+    int
 
 
 

@@ -4,23 +4,38 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Exception.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/ImgTexture.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Personajes.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/SDLException.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/SDLIMGException.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Scene.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/SdlImgInit.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/SdlInit.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/SpriteRojo.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Texture.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Window.cpp.o"
-  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/main.cpp" "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/main.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Character.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Model.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controler.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Exception.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Scene.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SpriteRojo.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Texture.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/View.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Window.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/main.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o"
+  "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/xml.cpp" "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "."
+  "/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"
   "/usr/include/SDL2"
   "../"
   )

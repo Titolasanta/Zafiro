@@ -8,165 +8,250 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP-Fase1-Test">
-				<Option output="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
+				<Option output="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP-Fase1-Test/fast">
-				<Option output="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
+				<Option output="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Character.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Exception.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Character.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Model.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/ImgTexture.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Model.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Personajes.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Pistol.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLException.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Projectile.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SDLIMGException.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Weapon.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Scene.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/dumyModel.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controler.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlImgInit.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controler.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Exception.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SdlInit.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Exception.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/SpriteRojo.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Texture.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Pasto.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Window.h">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Personajes.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/main.cpp">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/CMakeLists.txt">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Piedra.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLException.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Scene.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Scene.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlInit.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SpriteRojo.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SpriteRojo.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Texture.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Texture.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/View.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/View.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Viewable.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Window.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Window.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/main.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/xml.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/xml.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2.cmake">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
