@@ -9,7 +9,8 @@
 
 #include <list>
 
-enum PJSTATE{MOVING_RIGHT,MOVING_LEFT,STANDING_RIGHT,STANDING_LEFT,IN_AIR_RIGHT,IN_AIR_LEFT,GROUND,AIM_UP_R,AIM_DOWN_R,AIM_UP_L,AIM_DOWN_L};
+enum PJSTATE{MOVING_RIGHT,MOVING_LEFT,STANDING_RIGHT,STANDING_LEFT,
+        IN_AIR_RIGHT,IN_AIR_LEFT,GROUND,AIM_UP_R,AIM_DOWN_R,AIM_UP_L,AIM_DOWN_L};
 
 class Scene {
 public:
@@ -35,7 +36,11 @@ public:
 
     void rojoMove(int i);
 
-    //drawers
+    //logica
+
+    void time();
+
+    void moveScenario(int i);
 
 private:
     std::list<std::tuple<int,int>> lBulets;
