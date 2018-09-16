@@ -16,6 +16,7 @@
 #include "../Modelo/dumyModel.h"
 #include "Controler.h"
 #include "pugixml.hpp"
+#include "xml.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 #define PATH_XML_ORIGINAL "pongan el path aca"
@@ -43,9 +44,6 @@ int main( int argc, char* args[] )
             return 1;
         }
     }
-
-    const char* Log_Level =
-    int
 
 
 
