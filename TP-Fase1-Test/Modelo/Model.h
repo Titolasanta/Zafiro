@@ -19,10 +19,12 @@ class Model {
     public:
         Model();
         ~Model(){}
-        void processEvent(SDL_Event);
         void update(Scene&);
         void moveRight();
         void moveLeft();
+        void aimDown();
+        void aimStraight();
+        void aimUp();
         void stop();
         void jump();
         void time();

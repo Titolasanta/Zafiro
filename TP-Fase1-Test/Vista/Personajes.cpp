@@ -18,30 +18,31 @@ rojo.loadFromFile(SPIRIT_PATH);
 
 void Personajes::render(Scene scene)
 {
+    if (scene.isP1Walking())
+        frameActualRojo++;
+    else
+        frameActualRojo = 0;
+
+    SDL_Rect *currentClip;
+    int angulo;
+
+    if(scene.isP1LookingRight())
+        angulo = 0;
+    else
+        angulo = 180;
 
 
 
-    if(scene.isP1LookingRight()) {
-        if(scene.isP1Walking()){
-            frameActualRojo++;
-            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
-            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip);
+        if (scene.getP1AimDirection() == -1)
+            currentClip = rojoFrames.mover(1, frameActualRojo % 3);
+        else if (scene.getP1AimDirection() == 1)
+            currentClip = rojoFrames.mover(1, frameActualRojo % 3 + 3);
+        else
+            currentClip = rojoFrames.mover(0, frameActualRojo % ROJO_DER_FRAMES);
+    rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip,angulo);
 
-        } else{
-            SDL_Rect *currentClip = rojoFrames.quieto();
-            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip);
-        }
 
-    } else {
-        if(scene.isP1Walking()){
-            frameActualRojo++;
-            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
-            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, 180);
-        } else {
-            SDL_Rect *currentClip = rojoFrames.quieto();
-            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, 180);
-        }
-    }
+
        /* switch ( scene.rojoState() )
         {
             case MOVING_RIGHT: {

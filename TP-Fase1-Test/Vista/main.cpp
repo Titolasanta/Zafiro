@@ -28,11 +28,11 @@ const int SCREEN_HEIGHT = 600;
 
 //Starts up SDL and creates window
 
-
-
+pugi::xml_document* gXML_doc;
 
 int main( int argc, char* args[] )
 {
+
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
     if (!result) {
@@ -40,10 +40,10 @@ int main( int argc, char* args[] )
         result = doc.load_file(PATH_XML_DEFAULT);
         if (!result) {
             //hacer algo con result.description();
-        //    return 1;
+            //    return 1;
         }
     }
-
+    gXML_doc = &doc;
 
 
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
@@ -52,6 +52,9 @@ int main( int argc, char* args[] )
 
 
     Controler controler(view,model);
+
+
+
     //Event handler
     SDL_Event e;
     bool quit = false;

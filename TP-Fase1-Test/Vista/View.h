@@ -12,6 +12,7 @@
 #include "SdlInit.h"
 #include "Pasto.h"
 #include "Piedra.h"
+#include "Background.h"
 
 class View {
 
@@ -25,6 +26,7 @@ private:
     SdlInit x;
     Window window;
     Personajes personajes;
+    Background background;
 //Scene& scene;
     Piedra piedra;
     Pasto pasto;

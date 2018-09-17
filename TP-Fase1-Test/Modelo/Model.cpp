@@ -5,7 +5,7 @@
 
 #include "Model.h"
 
-Model::Model() : player1(100,100) {
+Model::Model() : player1(100,200) {
     //this->scene = scene;
     level = 1;
 }
@@ -33,6 +33,7 @@ void Model::update(Scene &scene) {
 
     scene.setP1Walking(player1.isWalking());
 
+
 }
 
 void Model::moveRight() {
@@ -44,5 +45,21 @@ void Model::moveLeft() {
 }
 
 void Model::stop() {
-    player1.standStill();
+   // if(!player1.isAirborne())
+        player1.standStill();
+}
+
+void Model::jump() {
+    player1.jump(-20);
+}
+
+void Model::aimDown() {
+    player1.aim(1);
+}
+
+void Model::aimUp() {
+    player1.aim(-1);
+}
+void Model::aimStraight() {
+    player1.aim(0);
 }

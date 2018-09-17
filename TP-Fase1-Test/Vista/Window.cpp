@@ -28,7 +28,9 @@ void static setRender(SDL_Renderer*& renderer, SDL_Window* window, string title)
 
 
 }
-
+void Window::setRenderDrawColor(Uint8 a, Uint8 b, Uint8 c, Uint8 d) {
+	SDL_SetRenderDrawColor(renderer, a, b, c, d);
+}
 
 
 Window::~Window(){
