@@ -22,26 +22,6 @@ void Scene::addBulets(int x,int y) {
 
 }
 
-int Scene::rojox() {
-    return 300 + rojoX;
-}
-
-int Scene::rojoy() {
-    return 300;
-}
-
-void Scene::rojoMove(int i) {
-    rojoX +=i;
-    if(i>0)
-        state = MOVING_RIGHT;
-    else
-        state = MOVING_LEFT;
-}
-
-int Scene::rojoState(){
-    return state;
-}
-
 void Scene::time(){
     for (std::list< std::tuple<int,int>>::iterator it = lBulets.begin(); it != lBulets.end(); it++) {
         std::get<0>(*it) += 5;
@@ -54,12 +34,7 @@ void Scene::moveScenario(int i){
     }
 }
 
-void Scene::rojoNotMove() {
-    if(state == MOVING_LEFT ||state ==  AIM_DOWN_L ||state ==  AIM_UP_L)
-        state = STANDING_LEFT;
-    if(state == MOVING_RIGHT ||state ==  AIM_DOWN_R ||state ==  AIM_UP_R)
-        state = STANDING_RIGHT;
-}
+
 
 std::list<std::tuple<int,int>> Scene::plataforms() {
     return lPlataforms;

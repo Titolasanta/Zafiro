@@ -18,7 +18,31 @@ rojo.loadFromFile(SPIRIT_PATH);
 
 void Personajes::render(Scene scene)
 {
-        switch ( scene.rojoState() )
+
+
+
+    if(scene.isP1LookingRight()) {
+        if(scene.isP1Walking()){
+            frameActualRojo++;
+            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
+            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip);
+
+        } else{
+            SDL_Rect *currentClip = rojoFrames.quieto();
+            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip);
+        }
+
+    } else {
+        if(scene.isP1Walking()){
+            frameActualRojo++;
+            SDL_Rect *currentClip = rojoFrames.mover(DER, frameActualRojo % ROJO_DER_FRAMES);
+            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, 180);
+        } else {
+            SDL_Rect *currentClip = rojoFrames.quieto();
+            rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, 180);
+        }
+    }
+       /* switch ( scene.rojoState() )
         {
             case MOVING_RIGHT: {
                 //if(!scene.rojoInAir())
@@ -70,8 +94,8 @@ void Personajes::render(Scene scene)
             }default:
                 break;
 
-
             //error
         }
+*/
 
     }

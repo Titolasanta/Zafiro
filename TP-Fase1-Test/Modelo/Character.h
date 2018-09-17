@@ -22,7 +22,9 @@ class Character {
         bool crouching;
         bool lookingRight;
         bool dead;
-        //si queres que sea polimorifico y pueda tener diferentes
+
+private:
+    //si queres que sea polimorifico y pueda tener diferentes
         // clases hijas de weapon deberia ser un puntero o referencia
         Weapon weapon;
         int aimDirection;
@@ -38,6 +40,54 @@ class Character {
         void stand();
         void crouch();
         void takeDamage();
+        void time();
+
+
+
+public:
+    int getPositionX() const {
+            return positionX;
+    }
+
+    int getPositionY() const {
+            return positionY;
+    }
+
+    int getVelocityX() const {
+            return velocityX;
+    }
+
+    int getVelocityY() const {
+            return velocityY;
+    }
+
+    int getHitPoints() const {
+            return hitPoints;
+    }
+
+    bool isWalking() const {
+            return walking;
+    }
+
+    bool isAirborne() const {
+            return airborne;
+    }
+
+    bool isCrouching() const {
+            return crouching;
+    }
+
+    bool isLookingRight() const {
+            return lookingRight;
+    }
+
+    bool isDead() const {
+            return dead;
+    }
+
+    int getAimDirection() const {
+            return aimDirection;
+    }
 
 };
 

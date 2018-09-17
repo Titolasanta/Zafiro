@@ -7,13 +7,13 @@
 #include <string>
 #include <sstream>
 #include <zconf.h>
+#include <Model.h>
 #include "Window.h"
 #include "SdlInit.h"
 #include "SdlImgInit.h"
 #include "SpriteRojo.h"
 #include "Personajes.h"
 #include "View.h"
-#include "../Modelo/dumyModel.h"
 #include "Controler.h"
 #include "pugixml.hpp"
 #include "xml.h"
@@ -23,11 +23,10 @@
 #define PATH_XML_DEFAULT "pongan el otro path aca"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 1024;
-const int SCREEN_HEIGHT = 800;
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
 
 //Starts up SDL and creates window
-bool init();
 
 
 
@@ -41,7 +40,7 @@ int main( int argc, char* args[] )
         result = doc.load_file(PATH_XML_DEFAULT);
         if (!result) {
             //hacer algo con result.description();
-            return 1;
+        //    return 1;
         }
     }
 
@@ -49,7 +48,7 @@ int main( int argc, char* args[] )
 
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
 
-    dumyModel model;
+    Model model;
 
 
     Controler controler(view,model);
@@ -68,8 +67,9 @@ int main( int argc, char* args[] )
                 quit = true;
             }
             //recibe evento modifica escena acorde
-            controler.proces_event(e);
+            controler.processEvent(e);
         }
+        usleep(70000);
         //renderiza scene
         controler.show();
 

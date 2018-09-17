@@ -6,21 +6,21 @@
 #define TP_FASE1_TEST_CONTROLER_H
 
 
-#include <dumyModel.h>
+#include <Model.h>
 #include "View.h"
 
 class Controler {
 
 public:
     void show();
-    void proces_event(SDL_Event e);
+    void processEvent(SDL_Event);
 
 
-    Controler(View& view, dumyModel& model);
+    Controler(View& view, Model& model);
 
 private:
     View& view;
-    dumyModel& model;
+    Model& model;
     Scene scene;
 };
 

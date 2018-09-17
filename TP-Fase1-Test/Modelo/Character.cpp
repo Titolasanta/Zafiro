@@ -24,6 +24,12 @@ Character::Character(int posX, int posY){
     //Loggear creacion del personaje
 }
 
+void Character::time(){
+    velocityX += accelerationX;
+
+    positionX += velocityX;
+}
+
 Character::~Character() = default; //Loggear destruccion
 
 
@@ -45,13 +51,13 @@ void Character::move(int velX) {
 
     velocityX = velX;
 
-    velocityX += accelerationX;
 
-    positionX += velocityX;
 
     walking = true;
 
 }
+
+
 
 void Character::jump(int velY){
 

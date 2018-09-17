@@ -12,14 +12,20 @@
 
 class Model {
     private:
-        Scene& scene;
         int level;
         Character player1;
         //Character player2;
 
     public:
-        Model(Scene&);
-        void update(SDL_Event event);
+        Model();
+        ~Model(){}
+        void processEvent(SDL_Event);
+        void update(Scene&);
+        void moveRight();
+        void moveLeft();
+        void stop();
+        void jump();
+        void time();
 
 
 };

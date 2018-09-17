@@ -6,7 +6,7 @@
 
 #include "Viewable.h"
 
-Piedra::Piedra(Window *window) : Viewable(window,"/home/tito/Desktop/Tallar/github/TP-Fase1-Test/escenario/piedra.png"){}
+Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png"){}
 
 void Piedra::renderHalf(int x, int y) {
 

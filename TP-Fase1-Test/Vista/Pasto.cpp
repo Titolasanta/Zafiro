@@ -4,7 +4,7 @@
 
 #include "Pasto.h"
 
-Pasto::Pasto(Window *window) : Viewable(window,"/home/tito/Desktop/Tallar/github/TP-Fase1-Test/escenario/pasto.png") {}
+Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png") {}
 
 void Pasto::render(Scene &scene) {
     this->renderList(scene.plataforms());

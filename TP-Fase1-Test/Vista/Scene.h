@@ -16,12 +16,8 @@ class Scene {
 public:
     Scene();
 
-    //geter
-    int rojox();
 
-    int rojoy();
 
-    int rojoState();
 
     std::list<std::tuple<int,int>> plataforms();
 
@@ -31,11 +27,6 @@ public:
 
     void addBulets(int,int);
 
-    //seter
-    void rojoNotMove();
-
-    void rojoMove(int i);
-
     //logica
 
     void time();
@@ -43,10 +34,115 @@ public:
     void moveScenario(int i);
 
 private:
+
+    int P1PositionX;
+    int P1PositionY;
+    int P1VelocityX;
+    int P1VelocityY;
+//    int P1AccelerationX;
+  //  int P1AccelerationY;
+    int P1HitPoints;
+    bool P1Walking;
+    bool P1Airborne;
+    bool P1Crouching;
+    bool P1LookingRight;
+    bool P1Dead;
+    //Weapon weapon;
+    int P1AimDirection;
+
     std::list<std::tuple<int,int>> lBulets;
     std::list<std::tuple<int,int>> lPlataforms;
-    int rojoX = 0;
-    int state = STANDING_RIGHT;
+    int cameraPos = 0;
+
+
+
+public:
+    int getP1PositionX() const {
+        return P1PositionX;
+    }
+
+    int getP1PositionY() const {
+        return P1PositionY;
+    }
+
+    void setP1PositionY(int P1PositionY) {
+        Scene::P1PositionY = P1PositionY;
+    }
+    void setP1PositionX(int P1PositionX) {
+        Scene::P1PositionX = P1PositionX;
+    }
+
+    int getP1VelocityX() const {
+        return P1VelocityX;
+    }
+
+    void setP1VelocityX(int P1VelocityX) {
+        Scene::P1VelocityX = P1VelocityX;
+    }
+
+    int getP1VelocityY() const {
+        return P1VelocityY;
+    }
+
+    void setP1VelocityY(int P1VelocityY) {
+        Scene::P1VelocityY = P1VelocityY;
+    }
+
+    int getP1HitPoints() const {
+        return P1HitPoints;
+    }
+
+    void setP1HitPoints(int P1HitPoints) {
+        Scene::P1HitPoints = P1HitPoints;
+    }
+
+    bool isP1Walking() const {
+        return P1Walking;
+    }
+
+    void setP1Walking(bool P1Walking) {
+        Scene::P1Walking = P1Walking;
+    }
+
+    bool isP1Airborne() const {
+        return P1Airborne;
+    }
+
+    void setP1Airborne(bool P1Airborne) {
+        Scene::P1Airborne = P1Airborne;
+    }
+
+    bool isP1Crouching() const {
+        return P1Crouching;
+    }
+
+    void setP1Crouching(bool P1Crouching) {
+        Scene::P1Crouching = P1Crouching;
+    }
+
+    bool isP1LookingRight() const {
+        return P1LookingRight;
+    }
+
+    void setP1LookingRight(bool P1LookingRight) {
+        Scene::P1LookingRight = P1LookingRight;
+    }
+
+    bool isP1Dead() const {
+        return P1Dead;
+    }
+
+    void setP1Dead(bool P1Dead) {
+        Scene::P1Dead = P1Dead;
+    }
+
+    int getP1AimDirection() const {
+        return P1AimDirection;
+    }
+
+    void setP1AimDirection(int aimDirection) {
+        Scene::P1AimDirection = aimDirection;
+    }
 
 };
 

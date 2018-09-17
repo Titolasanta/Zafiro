@@ -5,10 +5,7 @@
 #include "dumyModel.h"
 #include "Vista/Scene.h"
 void dumyModel::update(Scene &scene) {
-    if(moveX)
-        scene.rojoMove(10 * moveX);
-    else
-        scene.rojoNotMove();
+
 }
 
 void dumyModel::proces_event(SDL_Event event) {
