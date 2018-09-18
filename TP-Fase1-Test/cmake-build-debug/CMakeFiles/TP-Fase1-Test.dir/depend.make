@@ -49,6 +49,29 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o: ../Vista/Scene.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o: ../Modelo/dumyModel.cpp
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o: ../Modelo/dumyModel.h
 
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Background.cpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Background.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/ImgTexture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Scene.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Texture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Window.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/pugiconfig.hpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/pugixml.hpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/xml.h
+
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Bullet.cpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Bullet.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/ImgTexture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Scene.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Texture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Viewable.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Window.h
+
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: .././Modelo/Character.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: .././Modelo/Weapon.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: .././Modelo/Model.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Scene.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Background.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Controler.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Controler.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/ImgTexture.h
@@ -64,14 +87,27 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/View.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: ../Vista/Window.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_config.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_error.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_events.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_gesture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_joystick.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_keyboard.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_keycode.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_mouse.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_platform.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_quit.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_rect.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_rwops.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_scancode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_stdinc.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_surface.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_touch.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o: /usr/include/SDL2/close_code.h
 
@@ -83,6 +119,9 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: ../Vista/ImgTexture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: ../Vista/SDLException.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: ../Vista/SDLIMGException.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: ../Vista/Texture.h
+
+CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o: ../Vista/Logger.cpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o: ../Vista/Logger.h
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o: ../Vista/ImgTexture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o: ../Vista/Pasto.cpp
@@ -156,6 +195,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o: ../Vista/SDLIMGException.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o: ../Vista/Texture.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o: ../Vista/Texture.h
 
+CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/Background.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/ImgTexture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/Pasto.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/Personajes.h
@@ -170,6 +210,9 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/View.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/View.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/Window.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/pugiconfig.hpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/pugixml.hpp
+CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_config.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_error.h
@@ -197,10 +240,14 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o: ../Vista/Window.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o: ../Vista/Window.h
 
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: .././Modelo/Character.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: .././Modelo/Weapon.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: .././Modelo/Model.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Scene.h
-CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Modelo/dumyModel.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Background.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Controler.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/ImgTexture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Logger.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Pasto.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Personajes.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/Piedra.h
@@ -217,14 +264,27 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/main.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/pugiconfig.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/xml.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_config.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_error.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_events.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_gesture.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_joystick.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_keyboard.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_keycode.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_mouse.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_platform.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_quit.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_rect.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_rwops.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_scancode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_stdinc.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_surface.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_touch.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/close_code.h
 

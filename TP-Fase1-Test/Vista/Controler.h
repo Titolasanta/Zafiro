@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_CONTROLER_H
 
 
-#include <Model.h>
+#include <./Modelo/Model.h>
 #include "View.h"
 
 class Controler {

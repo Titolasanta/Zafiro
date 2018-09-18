@@ -7,7 +7,7 @@
 #include <string>
 #include <sstream>
 #include <zconf.h>
-#include <Model.h>
+#include <./Modelo/Model.h>
 #include "Window.h"
 #include "SdlInit.h"
 #include "SdlImgInit.h"
@@ -17,10 +17,11 @@
 #include "Controler.h"
 #include "pugixml.hpp"
 #include "xml.h"
+#include "Logger.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
-#define PATH_XML_ORIGINAL "pongan el path aca"
-#define PATH_XML_DEFAULT "pongan el otro path aca"
+#define PATH_XML_ORIGINAL "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Archivos/configuracion.xml"
+#define PATH_XML_DEFAULT "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Archivos/default.xml"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 800;
@@ -43,6 +44,9 @@ int main( int argc, char* args[] )
             //    return 1;
         }
     }
+
+    Logger logger(get_log_level(doc));
+
     gXML_doc = &doc;
 
 
@@ -77,6 +81,8 @@ int main( int argc, char* args[] )
         controler.show();
 
     }
+
+    logger.cerrar_archivo();
 
     return 0;
 }

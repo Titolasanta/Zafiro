@@ -285,6 +285,60 @@ Modelo/dumyModel.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s
 .PHONY : Modelo/dumyModel.cpp.s
 
+Vista/Background.o: Vista/Background.cpp.o
+
+.PHONY : Vista/Background.o
+
+# target to build an object file
+Vista/Background.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o
+.PHONY : Vista/Background.cpp.o
+
+Vista/Background.i: Vista/Background.cpp.i
+
+.PHONY : Vista/Background.i
+
+# target to preprocess a source file
+Vista/Background.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i
+.PHONY : Vista/Background.cpp.i
+
+Vista/Background.s: Vista/Background.cpp.s
+
+.PHONY : Vista/Background.s
+
+# target to generate assembly for a file
+Vista/Background.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s
+.PHONY : Vista/Background.cpp.s
+
+Vista/Bullet.o: Vista/Bullet.cpp.o
+
+.PHONY : Vista/Bullet.o
+
+# target to build an object file
+Vista/Bullet.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o
+.PHONY : Vista/Bullet.cpp.o
+
+Vista/Bullet.i: Vista/Bullet.cpp.i
+
+.PHONY : Vista/Bullet.i
+
+# target to preprocess a source file
+Vista/Bullet.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i
+.PHONY : Vista/Bullet.cpp.i
+
+Vista/Bullet.s: Vista/Bullet.cpp.s
+
+.PHONY : Vista/Bullet.s
+
+# target to generate assembly for a file
+Vista/Bullet.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s
+.PHONY : Vista/Bullet.cpp.s
+
 Vista/Controler.o: Vista/Controler.cpp.o
 
 .PHONY : Vista/Controler.o
@@ -365,6 +419,33 @@ Vista/ImgTexture.s: Vista/ImgTexture.cpp.s
 Vista/ImgTexture.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
 .PHONY : Vista/ImgTexture.cpp.s
+
+Vista/Logger.o: Vista/Logger.cpp.o
+
+.PHONY : Vista/Logger.o
+
+# target to build an object file
+Vista/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o
+.PHONY : Vista/Logger.cpp.o
+
+Vista/Logger.i: Vista/Logger.cpp.i
+
+.PHONY : Vista/Logger.i
+
+# target to preprocess a source file
+Vista/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i
+.PHONY : Vista/Logger.cpp.i
+
+Vista/Logger.s: Vista/Logger.cpp.s
+
+.PHONY : Vista/Logger.s
+
+# target to generate assembly for a file
+Vista/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
+.PHONY : Vista/Logger.cpp.s
 
 Vista/Pasto.o: Vista/Pasto.cpp.o
 
@@ -825,6 +906,12 @@ help:
 	@echo "... Modelo/dumyModel.o"
 	@echo "... Modelo/dumyModel.i"
 	@echo "... Modelo/dumyModel.s"
+	@echo "... Vista/Background.o"
+	@echo "... Vista/Background.i"
+	@echo "... Vista/Background.s"
+	@echo "... Vista/Bullet.o"
+	@echo "... Vista/Bullet.i"
+	@echo "... Vista/Bullet.s"
 	@echo "... Vista/Controler.o"
 	@echo "... Vista/Controler.i"
 	@echo "... Vista/Controler.s"
@@ -834,6 +921,9 @@ help:
 	@echo "... Vista/ImgTexture.o"
 	@echo "... Vista/ImgTexture.i"
 	@echo "... Vista/ImgTexture.s"
+	@echo "... Vista/Logger.o"
+	@echo "... Vista/Logger.i"
+	@echo "... Vista/Logger.s"
 	@echo "... Vista/Pasto.o"
 	@echo "... Vista/Pasto.i"
 	@echo "... Vista/Pasto.s"

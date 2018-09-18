@@ -128,6 +128,18 @@
 		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/dumyModel.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Background.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Background.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Bullet.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
 		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controler.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
@@ -144,6 +156,12 @@
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Logger.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Logger.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp">

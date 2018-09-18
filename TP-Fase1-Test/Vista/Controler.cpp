@@ -2,7 +2,7 @@
 // Created by tito on 13/09/18.
 //
 
-#include <Model.h>
+#include <./Modelo/Model.h>
 #include "Controler.h"
 
 Controler::Controler(View &view, Model& model) : view(view),model(model){}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<default>
+    <debug>
+        <level>DEBUG</level>
+    </debug>
+    <escenarios>
+        <nivel1>
+            <height></height>
+            <width></width>
+            <fondo1></fondo1>
+            <fondo2></fondo2>
+            <fondo3></fondo3>
+            <plataforma numero = "1">
+                <tipo></tipo>
+                <xi></xi>
+                <xf></xf>
+                <y></y>
+            </plataforma>
+        </nivel1>
+        <nivel2>
+            <height></height>
+            <width></width>
+            <fondo1></fondo1>
+            <fondo2></fondo2>
+            <fondo3></fondo3>
+            <plataforma numero = "2">
+                <tipo></tipo>
+                <xi></xi>
+                <xf></xf>
+                <y></y>
+            </plataforma>
+        </nivel2>
+        <nivel3>
+            <height></height>
+            <width></width>
+            <fondo1></fondo1>
+            <fondo2></fondo2>
+            <fondo3></fondo3>
+            <plataforma numero = "">
+                <tipo></tipo>
+                <xi></xi>
+                <xf></xf>
+                <y></y>
+            </plataforma>
+        </nivel3>
+    </escenarios>
+</default>
