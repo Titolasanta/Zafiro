@@ -8,6 +8,7 @@
 //#include "commonTextTexture.h"
 //#include "commonButton.h"
 #include "ImgTexture.h"
+#include "Logger.h"
 #include <string>
 using std::string;
 
@@ -15,6 +16,7 @@ using std::string;
 #define SCREEN_WIDTH 500
 #define SCREEN_HEIGHT 400
 
+extern Logger *gplogger;
 
 void static setRender(SDL_Renderer*& renderer, SDL_Window* window, string title) {
 	renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
@@ -29,13 +31,20 @@ void static setRender(SDL_Renderer*& renderer, SDL_Window* window, string title)
 
 }
 void Window::setRenderDrawColor(Uint8 a, Uint8 b, Uint8 c, Uint8 d) {
+
+	gplogger->log(1,"set render draw color de window\n");
 	SDL_SetRenderDrawColor(renderer, a, b, c, d);
 }
 
 
 Window::~Window(){
-	if(window != NULL)
-		SDL_DestroyWindow( window );
+
+	gplogger->log(1,"se intenta destruir Window\n");
+	if(window != NULL) {
+		SDL_DestroyWindow(window);
+	} else
+
+		gplogger->log(1,"no habia Window que destruir\n");
 }
 
 
@@ -49,6 +58,8 @@ Window::Window(string& title, int xPos,int yPos,int width, int height){
 
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
+
+	gplogger->log(1,"se creo window c/5 parametros\n");
 }
 
 Window::Window(string title ,int width, int height){
@@ -61,6 +72,7 @@ Window::Window(string title ,int width, int height){
 
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
+	gplogger->log(1,"se creo window c/3 parametros\n");
 }
 
 Window::Window(string& title){
@@ -74,6 +86,8 @@ Window::Window(string& title){
 
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
+	gplogger->log(1,"se creo window c/1 parametro\n");
+
 }
 
 
@@ -81,10 +95,12 @@ Window::Window(string& title){
 
 
 ImgTexture Window::createImgTexture(){
+	gplogger->log(1,"Window devuelve una imgTexture\n");
 	return std::move(ImgTexture(renderer));
 }
 
 ImgTexture Window::createImgTexture(Uint8 r, Uint8 g, Uint8 b){
+	gplogger->log(1,"Window devuelve una imgTexture\n");
 	return std::move(ImgTexture(renderer, r, g, b));
 }
 /*

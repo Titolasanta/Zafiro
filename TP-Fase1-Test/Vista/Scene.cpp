@@ -4,20 +4,26 @@
 
 #include <cstdio>
 #include "Scene.h"
+#include "Logger.h"
 
+extern Logger *gplogger;
 Scene::Scene() {
     addPlataforms(400,400);
     addBulets(300,300);
+
+    gplogger->log(1,"se crea Escena\n");
 }
 
 void Scene::addPlataforms(int x, int y) {
 
+    gplogger->log(1,"se agrega plataforma\n");
     lPlataforms.push_back(std::move(std::make_tuple(x,y)));
 
 }
 
 void Scene::addBulets(int x,int y) {
 
+    gplogger->log(1,"se agrega bala\n");
     lBulets.push_back(std::move(std::make_tuple(x,y)));
 
 }

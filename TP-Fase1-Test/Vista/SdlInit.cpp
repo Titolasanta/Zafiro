@@ -2,9 +2,13 @@
 #include <stdio.h>
 #include "SDLException.h"
 #include "SdlInit.h"
+#include "Logger.h"
 
+extern Logger *gplogger;
 
 SdlInit::~SdlInit(){
+
+	gplogger->log(1,"se destruye sdlinit\n");
 	SDL_Quit();
 }
 
@@ -20,4 +24,6 @@ SdlInit::SdlInit(){
 	if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) ){
 		throw SDLError("SDL_SetHint fallo");
 	}
+
+	gplogger->log(1,"se crea sdlinit\n");
 }
