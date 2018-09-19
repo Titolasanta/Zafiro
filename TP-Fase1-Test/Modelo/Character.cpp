@@ -17,22 +17,26 @@ Character::Character(int posX, int posY){
     lookingRight = true;
     dead = 0;
     airborne = false;
-    if (posY > 100) airborne = true;
+    //if (posY > 100) airborne = true;
     aimDirection = 0;
 
 
     //Loggear creacion del personaje
+}
+void Character::land() {
+
+    airborne = false;
+    if(getVelocityX() != 0)
+        walking = true;
+    velocityY = 0;
 }
 
 void Character::time(){
 
 
 
-    if (velocityY == 16) {
-        airborne = false;
-        if(getVelocityX() != 0)
-            walking = true;
-        velocityY = 0;
+    if (velocityY == 32) {
+        this->land();
     }
     if(isAirborne())
         velocityY += 4;
@@ -42,13 +46,7 @@ void Character::time(){
 
     velocityX += accelerationX;
     positionX += velocityX;
-    /*
-    for(lista de plataformas)
-    if(positionX between x de plataforma)
 
-    if(positionY < yPlataform  )
-        if(pos)
-        */
     positionY += velocityY;
 }
 
@@ -74,8 +72,8 @@ void Character::move(int velX) {
     velocityX = velX;
 
 
-
-    walking = true;
+    if(!isAirborne())
+        walking = true;
 
 }
 
@@ -87,7 +85,6 @@ void Character::jump(int velY){
              //En algun lado setear varible gravedad = 2 (ver valor)
 
     velocityY = velY;
-
 
     airborne = true;
     walking = false;

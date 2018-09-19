@@ -4,14 +4,20 @@
 
 
 #include "Model.h"
+#include "Colision.h"
 
 Model::Model() : player1(100,200) {
+
+    this->addPlataform(400,150);
+
     //this->scene = scene;
     level = 1;
 }
 
 void Model::time(){
     player1.time();
+
+    Colision(player1,lPlataforms);
 }
 
 void Model::update(Scene &scene) {
@@ -36,6 +42,12 @@ void Model::update(Scene &scene) {
 
 }
 
+void Model::addPlataform(int x, int y) {
+    lPlataforms.push_back(std::move(std::make_tuple(x,y)));
+
+
+}
+
 void Model::moveRight() {
     player1.move(10);
 }
@@ -50,7 +62,7 @@ void Model::stop() {
 }
 
 void Model::jump() {
-    player1.jump(-20);
+    player1.jump(-36);
 }
 
 void Model::aimDown() {

@@ -12,7 +12,10 @@ class Character {
     private:
         int positionX;
         int positionY;
-        int velocityX;
+
+
+private:
+    int velocityX;
         int velocityY;
         int accelerationX;
         int accelerationY;
@@ -41,7 +44,7 @@ private:
         void crouch();
         void takeDamage();
         void time();
-
+        void land();
 
 
 public:
@@ -88,7 +91,18 @@ public:
     int getAimDirection() const {
             return aimDirection;
     }
+public:
+    void setPositionX(int positionX) {
+        Character::positionX = positionX;
+    }
 
+    void setPositionY(int positionY) {
+        Character::positionY = positionY;
+    }
+
+    void setAirborne(bool airborne) {
+        Character::airborne = airborne;
+    }
 };
 
 
