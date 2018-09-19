@@ -10,7 +10,7 @@
 
 Logger::Logger(const char* log_level) : archivo(std::ofstream()){
     std::ofstream archivo_nuevo;
-    archivo_nuevo.open("/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Archivos/log.txt", std::ofstream::app);
+    archivo_nuevo.open("log.txt", std::ofstream::app);
     archivo = std::move(archivo_nuevo);
     time_t now = time(0);
     char* fecha = ctime(&now);

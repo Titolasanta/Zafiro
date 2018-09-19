@@ -30,9 +30,11 @@ const int SCREEN_HEIGHT = 600;
 //Starts up SDL and creates window
 
 pugi::xml_document* gXML_doc;
+Logger *gplogger;
 
 int main( int argc, char* args[] )
 {
+
 
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
@@ -46,6 +48,8 @@ int main( int argc, char* args[] )
     }
 
     Logger logger(get_log_level(doc));
+
+    gplogger = &logger;
 
     gXML_doc = &doc;
 

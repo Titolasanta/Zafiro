@@ -4,6 +4,9 @@
 
 #include <./Modelo/Model.h>
 #include "Controler.h"
+#include "Logger.h"
+
+extern Logger *gplogger;
 
 Controler::Controler(View &view, Model& model) : view(view),model(model){}
 
@@ -43,6 +46,8 @@ void Controler::processEvent(SDL_Event e) {
 }
 
 void Controler::show() {
+
+    gplogger->log(1,"se llama show de controler\n");
     model.update(scene);
     view.render(scene);
 }

@@ -5,15 +5,18 @@
 #include <iostream>
 #include "Personajes.h"
 #include "SpriteRojo.h"
+#include "Logger.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 
+extern Logger *gplogger;
 
 Personajes::Personajes(Window* window)
 : rojo ( std::move(window->createImgTexture(0xFF, 0xFF, 0xFF) ) ),
   frameActualRojo(0)
 {
-rojo.loadFromFile(SPIRIT_PATH);
+    rojo.loadFromFile(SPIRIT_PATH);
+    gplogger->log(1,"se crea Personajes\n");
 }
 
 void Personajes::render(Scene scene)

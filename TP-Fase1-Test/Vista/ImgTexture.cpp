@@ -6,15 +6,22 @@
 #include <iostream>
 #include "SDLException.h"
 #include "SDLIMGException.h"
+#include "Logger.h"
+
 using std::string;
 
+extern Logger *gplogger;
 ImgTexture::ImgTexture( SDL_Renderer* renderer): Texture(renderer){
+
+	gplogger->log(1,"se crea una imgTexture normal\n");
 	trans = false;
 }
 
 
 ImgTexture::ImgTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b) 
 : Texture(renderer) {
+
+	gplogger->log(1,"se crea una imgTexture con rgb\n");
 	trans = true;
 	transColor[0] = r;
 	transColor[1] = g;
@@ -23,6 +30,8 @@ ImgTexture::ImgTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b)
 }
 
 ImgTexture::ImgTexture(ImgTexture&& other) : Texture(std::move(other)) {
+
+	gplogger->log(1,"se crea una imgTexture x movimiento\n");
 	for(int i = 0; i < 3; i++ )
 		this->transColor[i] = other.transColor[i];
 	this->trans = other.trans;
@@ -94,6 +103,7 @@ void ImgTexture::render( int x, int y, double angle) {
 void ImgTexture::loadFromFile( std::string path ){
 	//Get rid of preexisting texture
 	free();
+
 	//Load image at specified path
 	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
 	if( loadedSurface == NULL ){
@@ -115,6 +125,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	//Get rid of old loaded surface
 	SDL_FreeSurface( loadedSurface );
 
+	gplogger->log(1,"se carga file a una imgTexture\n");
 }
 
 void ImgTexture::free(){
@@ -124,6 +135,8 @@ void ImgTexture::free(){
 		mTexture = NULL;
 		mWidth = 0;
 		mHeight = 0;
-	}
+		gplogger->log(1,"se libero una imgTexture\n");
+	} else
+		gplogger->log(1,"se libero una imgTexture ya vacia\n");
 }
 

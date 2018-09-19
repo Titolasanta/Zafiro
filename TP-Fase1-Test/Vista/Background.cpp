@@ -5,9 +5,11 @@
 #include "Background.h"
 #include "pugixml.hpp"
 #include "xml.h"
+#include "Logger.h"
 
 
 extern pugi::xml_document* gXML_doc;
+extern Logger *gplogger;
 
 Background::Background(Window& window, int level) : img1(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) ),
                                                     img2(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) ),
@@ -16,6 +18,8 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
    // img1.loadFromFile(get_level_background_path(gXML_doc, level, 1));
    //img2.loadFromFile(get_level_background_path(gXML_doc, level, 2));
    //img3.loadFromFile(get_level_background_path(gXML_doc, level, 3));
+
+    gplogger->log(1,"se crea Background\n");
 }
 
 void Background::render(Scene& scene){

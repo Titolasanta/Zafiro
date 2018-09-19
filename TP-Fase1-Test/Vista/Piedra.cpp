@@ -5,8 +5,13 @@
 #include "Piedra.h"
 
 #include "Viewable.h"
+#include "Logger.h"
 
-Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png"){}
+extern Logger* gplogger;
+Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png"){
+
+    gplogger->log(1,"se crea piedra de view\n");
+}
 
 void Piedra::renderHalf(int x, int y) {
 
