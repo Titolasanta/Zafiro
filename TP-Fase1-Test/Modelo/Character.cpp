@@ -16,28 +16,34 @@ Character::Character(int posX, int posY){
     walking = false;
     lookingRight = true;
     dead = 0;
-    airborne = false;
+    airborne = true;
     //if (posY > 100) airborne = true;
     aimDirection = 0;
 
 
     //Loggear creacion del personaje
 }
-void Character::land() {
+void Character::land(int x, int y) {
 
     airborne = false;
     if(getVelocityX() != 0)
         walking = true;
     velocityY = 0;
+    currentPlatX = x;
+    currentPlatY = y;
 }
 
 void Character::time(){
 
-
-
-    if (velocityY == 32) {
-        this->land();
+    if(positionY > 1000) {
+        positionY = 0;
+        velocityY = 0;
     }
+
+    if (currentPlatX + largoPlataforma + changui < positionX + velocityX || currentPlatX  > changui + positionX + velocityX)
+        airborne = true;
+
+
     if(isAirborne())
         velocityY += 4;
 

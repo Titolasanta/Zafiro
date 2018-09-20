@@ -6,6 +6,9 @@
 #define TP_FASE1_TEST_CHARACTER_H
 
 
+#define largoPlataforma 70
+#define altoPJ 30
+#define changui 10
 #include "Weapon.h"
 
 class Character {
@@ -25,6 +28,9 @@ private:
         bool crouching;
         bool lookingRight;
         bool dead;
+        int currentPlatX;
+        int currentPlatY;
+        int currentPlatW;
 
 private:
     //si queres que sea polimorifico y pueda tener diferentes
@@ -44,7 +50,7 @@ private:
         void crouch();
         void takeDamage();
         void time();
-        void land();
+        void land(int,int);
 
 
 public:
