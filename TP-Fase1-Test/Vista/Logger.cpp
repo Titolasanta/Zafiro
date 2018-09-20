@@ -13,7 +13,8 @@ Logger::Logger(const char* log_level) : archivo(std::ofstream()){
     archivo_nuevo.open("log.txt", std::ofstream::app);
     archivo = std::move(archivo_nuevo);
     time_t now = time(NULL);
-    char* fecha;
+    char temporal[255];
+    char* fecha = temporal;
     strcpy(fecha, ctime(&now));
     fecha[strlen(fecha)-1] = '\0';
     archivo << "_________________________________________________________________________________________" << std::endl;
@@ -24,7 +25,7 @@ Logger::Logger(const char* log_level) : archivo(std::ofstream()){
     if (strcmp(log_level, "ERROR") == 0 || strcmp(log_level,"error") == 0 || strcmp(log_level, "Error") == 0) nivel = 1;
 }
 
-void Logger::log(int level, char* mensaje){
+void Logger::log(int level, const char* mensaje){
     char* nivel_log;
     if (level == 1) nivel_log =  "<ERROR> ";
     if (level == 2) nivel_log = "<INFO> ";
