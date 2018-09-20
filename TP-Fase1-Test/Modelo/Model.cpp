@@ -8,8 +8,6 @@
 
 Model::Model() : player1(100,200) {
 
-    this->addPlataform(400,150);
-
     //this->scene = scene;
     level = 1;
 }
@@ -42,8 +40,8 @@ void Model::update(Scene &scene) {
 
 }
 
-void Model::addPlataform(int x, int y) {
-    lPlataforms.push_back(std::move(std::make_tuple(x,y)));
+void Model::addPlataform(int xi, int xf, int y) {
+    lPlataforms.push_back(std::move(std::make_tuple(xi,xf,y)));
 
 
 }

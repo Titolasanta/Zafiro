@@ -28,8 +28,8 @@ class Model {
         void stop();
         void jump();
         void time();
-        std::list<std::tuple<int,int>> lPlataforms;
-        void addPlataform(int,int);
+        std::list<std::tuple<int,int,int>> lPlataforms;
+        void addPlataform(int xi,int xf, int y);
 
 };
 

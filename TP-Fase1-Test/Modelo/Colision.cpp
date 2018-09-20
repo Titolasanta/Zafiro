@@ -6,9 +6,9 @@
 
 #define largoPlataforma 70
 #define altoPJ 30
-Colision::Colision(Character &char1, std::list<std::tuple<int, int>>& lPlataforms) {
+Colision::Colision(Character &char1, std::list<std::tuple<int, int, int>>& lPlataforms) {
     if (char1.getVelocityY() > 0) {
-        for (std::list<std::tuple<int, int>>::iterator it = lPlataforms.begin(); it != lPlataforms.end(); it++) {
+        for (std::list<std::tuple<int, int, int>>::iterator it = lPlataforms.begin(); it != lPlataforms.end(); it++) {
             printf("pj: %d,%d, plat: %d,%d\n",char1.getPositionX(),char1.getPositionY(),std::get<0>(*it),std::get<1>(*it));
             if (std::get<0>(*it) < char1.getPositionX() + char1.getVelocityX()
                 && std::get<0>(*it) + largoPlataforma > char1.getPositionX() + char1.getVelocityX() ) {

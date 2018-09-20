@@ -12,7 +12,7 @@
 
 class Colision {
 public:
-    Colision(Character&,    std::list<std::tuple<int,int>>& lPlataforms);
+    Colision(Character&,    std::list<std::tuple<int,int,int>>& lPlataforms);
 };
 
 
