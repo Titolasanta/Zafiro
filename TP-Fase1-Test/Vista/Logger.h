@@ -15,7 +15,7 @@ private:
 
 public:
     Logger(const char* log_level);
-    void log(int level, char* mensaje);
+    void log(int level, const char* mensaje);
     void cerrar_archivo();
 
 };

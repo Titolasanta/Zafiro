@@ -18,28 +18,28 @@ void Controler::processEvent(SDL_Event e) {
             model.jump();
         }
 
-        if (e.key.keysym.sym == SDLK_d) {
+        if (e.key.keysym.sym == SDLK_RIGHT) {
             model.moveRight();
         }
 
-        if (e.key.keysym.sym == SDLK_a) {
+        if (e.key.keysym.sym == SDLK_LEFT) {
             model.moveLeft();
         }
 
-        if (e.key.keysym.sym == SDLK_s) {
+        if (e.key.keysym.sym == SDLK_DOWN) {
             model.aimDown();
         }
-        if (e.key.keysym.sym == SDLK_w) {
+        if (e.key.keysym.sym == SDLK_UP) {
             model.aimUp();
         }
     }
 
 
     if (e.type == SDL_KEYUP){
-        if (e.key.keysym.sym == SDLK_d || e.key.keysym.sym == SDLK_a) {
+        if (e.key.keysym.sym == SDLK_RIGHT || e.key.keysym.sym == SDLK_LEFT) {
             model.stop();
         }
-        if (e.key.keysym.sym == SDLK_s || e.key.keysym.sym == SDLK_w) {
+        if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP) {
             model.aimStraight();
         }
     }

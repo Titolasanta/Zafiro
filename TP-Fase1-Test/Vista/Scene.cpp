@@ -8,8 +8,10 @@
 
 extern Logger *gplogger;
 Scene::Scene() {
-    addPlataforms(400,400);
+    addPlataforms(100,350);
     addBulets(300,300);
+
+    addPlataforms(200,250);
 
     gplogger->log(1,"se crea Escena\n");
 }
