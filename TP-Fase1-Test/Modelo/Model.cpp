@@ -8,7 +8,7 @@
 
 Model::Model() : player1(100,200) {
 
-    this->addPlataform(100,350,100);
+    this->addPlataform(100,350,180);
     this->addPlataform(200,250,100);
 
     //this->scene = scene;
