@@ -13,10 +13,12 @@
 
 class Viewable {
 public:
-    Viewable(Window* window,std::string imgpath);
+    Viewable(Window* window,std::string imgpath,int x,int y,int w,int h);
     void renderList(std::list<std::tuple<int,int>> list);
+    void renderList(std::list<std::tuple<int,int,int>> list);
 protected:
     std::string imgPath;
+    const SDL_Rect clip;
     ImgTexture texture;
 };
 #endif //TP_FASE1_TEST_VIEWABLE_H

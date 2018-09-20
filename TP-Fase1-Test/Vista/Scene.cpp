@@ -8,18 +8,18 @@
 
 extern Logger *gplogger;
 Scene::Scene() {
-    addPlataforms(100,350);
+    addPlataforms(100,350,180);
     addBulets(300,300);
 
-    addPlataforms(200,250);
+    addPlataforms(200,250,100);
 
     gplogger->log(1,"se crea Escena\n");
 }
 
-void Scene::addPlataforms(int x, int y) {
+void Scene::addPlataforms(int x, int y,int width) {
 
     gplogger->log(1,"se agrega plataforma\n");
-    lPlataforms.push_back(std::move(std::make_tuple(x,y)));
+    lPlataforms.push_back(std::move(std::make_tuple(x,y,width)));
 
 }
 
@@ -37,14 +37,14 @@ void Scene::time(){
 }
 
 void Scene::moveScenario(int i){
-    for (std::list< std::tuple<int,int>>::iterator it = lPlataforms.begin(); it != lPlataforms.end(); it++) {
+    for (std::list< std::tuple<int,int,int>>::iterator it = lPlataforms.begin(); it != lPlataforms.end(); it++) {
         std::get<0>(*it) += i;
     }
 }
 
 
 
-std::list<std::tuple<int,int>> Scene::plataforms() {
+std::list<std::tuple<int,int,int>> Scene::plataforms() {
     return lPlataforms;
 }
 

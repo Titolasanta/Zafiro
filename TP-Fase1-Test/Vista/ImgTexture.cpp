@@ -57,7 +57,7 @@ void ImgTexture::render(int x, int y, int xInicial, int xFinal, int yInicial, in
 }
 
 
-void ImgTexture::render(int x, int y, SDL_Rect* rect){
+void ImgTexture::render(int x, int y, const SDL_Rect* rect){
     SDL_Rect renderQuad = { x, y, rect->w, rect->h };
     SDL_RenderCopy( renderer, mTexture, rect,  &renderQuad);
 }

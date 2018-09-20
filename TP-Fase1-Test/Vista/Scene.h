@@ -19,9 +19,9 @@ public:
 
 
 
-    std::list<std::tuple<int,int>> plataforms();
+    std::list<std::tuple<int,int,int>> plataforms();
 
-    void addPlataforms(int,int);
+    void addPlataforms(int x,int y,int width);
 
     std::list<std::tuple<int,int>> bulets();
 
@@ -51,7 +51,7 @@ private:
     int P1AimDirection;
 
     std::list<std::tuple<int,int>> lBulets;
-    std::list<std::tuple<int,int>> lPlataforms;
+    std::list<std::tuple<int,int,int>> lPlataforms;
     int cameraPos = 0;
 
 

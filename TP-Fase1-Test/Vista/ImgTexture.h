@@ -18,7 +18,7 @@ public:
 
 	void render(int x, int y, int xi,int xf,int yi,int yf);
 
-	void render(int x, int y, SDL_Rect* rect);
+	void render(int x, int y, const SDL_Rect* rect);
 
     void render( int x, int y,SDL_Rect *rect, double angle);
 
