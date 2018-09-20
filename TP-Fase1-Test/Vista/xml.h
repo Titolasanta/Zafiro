@@ -5,7 +5,7 @@
 #ifndef TP_FASE1_TEST_XML_H
 #define TP_FASE1_TEST_XML_H
 
-#include "pugixml.hpp";
+#include "pugixml.hpp"
 
 const char* get_log_level(pugi::xml_document &doc);
 int get_level_width(pugi::xml_document &doc, int level);

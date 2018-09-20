@@ -12,20 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" afterDir="false" />
@@ -94,54 +84,56 @@
     <session id="-1828780259">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="18" />
-          <entry key="h" value="8" />
+          <entry key="cpp" value="26" />
+          <entry key="h" value="11" />
           <entry key="hpp" value="2" />
-          <entry key="txt" value="6" />
+          <entry key="txt" value="14" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="28" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="ObjectiveC" value="39" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2102" />
+          <entry key="cpp" value="2792" />
           <entry key="h" value="641" />
-          <entry key="txt" value="53" />
+          <entry key="txt" value="91" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="2743" />
-          <entry key="PLAIN_TEXT" value="53" />
+          <entry key="ObjectiveC" value="3433" />
+          <entry key="PLAIN_TEXT" value="91" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="180">
+              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="73" />
               <folding>
                 <element signature="e#48#69#0" expanded="true" />
                 <element signature="e#140#157#0" expanded="true" />
@@ -151,58 +143,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="300">
+              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
               <folding>
-                <element signature="e#39#58#0" expanded="true" />
+                <element signature="e#39#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/View.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="301">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#40#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="76">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="e#39#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -219,19 +222,21 @@
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/pugixml.hpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/pugiconfig.hpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/pugixml.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" />
         <option value="$PROJECT_DIR$/../sarasa/logger.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/log.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/log.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" />
       </list>
     </option>
   </component>
@@ -256,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,16 +274,10 @@
               <item name="TP-Fase1-Test" type="462c0819:PsiDirectoryNode" />
               <item name="Archivos" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP-Fase1-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="Vista" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +300,24 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/SpriteRojo.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/ImgTexture.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Pasto.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Personajes.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Piedra.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/SdlImgInit.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/SdlInit.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Texture.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/View.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Window.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -308,6 +325,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.h</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -475,7 +494,9 @@
       <workItem from="1537116898666" duration="2693000" />
       <workItem from="1537131618345" duration="2519000" />
       <workItem from="1537294412066" duration="344000" />
-      <workItem from="1537294804724" duration="16292000" />
+      <workItem from="1537294804724" duration="17928000" />
+      <workItem from="1537379015800" duration="8085000" />
+      <workItem from="1537404032518" duration="6036000" />
     </task>
     <task id="LOCAL-00001" summary="agregue un par de funciones para leer el archivo xml">
       <created>1537050934175</created>
@@ -491,31 +512,39 @@
       <option name="project" value="LOCAL" />
       <updated>1537118102691</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="logger + archivos de configuracio xml">
+      <created>1537312584734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537312584734</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30679000" />
+    <option name="totallyTimeSpent" value="46436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25757575" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2659091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32626426" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32626426" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32662192" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.44045678" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.32626426" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3280899" />
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.49924242" weight="0.027732464" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32626426" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924242" weight="0.32626426" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -552,7 +581,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="agregue un par de funciones para leer el archivo xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregue un par de funciones para leer el archivo xml" />
+    <MESSAGE value="logger + archivos de configuracio xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="logger + archivos de configuracio xml" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
@@ -601,13 +631,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.cpp" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.h" />
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -615,24 +638,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Personajes.cpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,40 +658,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.txt" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#39#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,13 +680,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <folding>
+            <element signature="e#39#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78289" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="180">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="73" />
           <folding>
             <element signature="e#48#69#0" expanded="true" />
             <element signature="e#140#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/View.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
