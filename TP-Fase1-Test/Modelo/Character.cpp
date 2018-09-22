@@ -39,8 +39,8 @@ void Character::time() {
         positionX = 5;
         velocityX = 0;
     }
-    if (positionX > 700) {
-        positionX = 700;
+    if (positionX > 3500) {
+        positionX = 3500;
         velocityX = 0;
     }
 

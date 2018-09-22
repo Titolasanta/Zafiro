@@ -22,6 +22,10 @@ public:
 
     void render( int x, int y,SDL_Rect *rect, double angle);
 
+
+	//To render camera section
+	void renderBackground( int x, int y, SDL_Rect* clip = NULL, double angle = 0.0, SDL_Point* center = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
+
 	ImgTexture(ImgTexture&& other);
 	//si pide un giro mayor o menor a 90,-90 rota la img horizontalmente(sirve pa gusano)
 	void render( int x, int y, int xInicial, int xFinal, int yInicial, int yFinal, double angle);

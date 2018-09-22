@@ -13,7 +13,7 @@
 class Personajes {
 public:
     explicit Personajes(Window* window);
-    void render(Scene scene);
+    void render(Scene scene, int cameraX, int cameraY);
 
 private:
     ImgTexture rojo;

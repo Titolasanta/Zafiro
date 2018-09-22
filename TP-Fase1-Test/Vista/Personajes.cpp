@@ -19,7 +19,7 @@ Personajes::Personajes(Window* window)
     gplogger->log(1,"Se crea Personajes\n");
 }
 
-void Personajes::render(Scene scene) {
+void Personajes::render(Scene scene, int cameraX, int cameraY) {
 
     if (scene.isP1Walking())
         frameActualRojo++;
@@ -45,7 +45,7 @@ void Personajes::render(Scene scene) {
     if (scene.isP1Crouching())
         currentClip = rojoFrames.move(1, frameActualRojo % 3 + 3); //PLACEHOLDER
 
-    rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, angle);
+    rojo.render(scene.getP1PositionX() - cameraX, scene.getP1PositionY() - cameraY, currentClip, angle);
 }
        /* switch ( scene.rojoState() )
         {

@@ -4,9 +4,10 @@
         <level>Error</level>
     </debug>
     <escenarios>
+
         <nivel1>
-            <height>1200</height>
-            <width>4200</width>
+            <height>245</height>
+            <width>3456</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>

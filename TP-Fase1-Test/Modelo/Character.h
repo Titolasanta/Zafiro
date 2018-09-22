@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_CHARACTER_H
 
 
-#define largoPlataforma 70
+#define largoPlataforma 3500
 #define characterHeight 30
 #define changui 10
 #include "Weapon.h"

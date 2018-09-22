@@ -8,46 +8,46 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP-Fase1-Test">
-				<Option output="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option output="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test"/>
+					<Add directory="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -58,23 +58,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP-Fase1-Test/fast">
-				<Option output="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option output="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test"/>
+					<Add directory="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -85,203 +85,203 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/santiago/Desktop/Taller\ de\ Programacion\ I/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Character.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Character.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Collision.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Model.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Model.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Pistol.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Projectile.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Weapon.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/dumyModel.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Background.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Background.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Bullet.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Controller.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Controller.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Exception.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Exception.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Logger.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Logger.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Nivel.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Pasto.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Personajes.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Piedra.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLException.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Scene.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Scene.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlInit.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Sprite.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Texture.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Texture.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/View.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/View.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Viewable.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Window.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Window.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/main.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/main.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/xml.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/xml.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/CMakeLists.txt">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake/FindSDL2.cmake">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake/FindSDL2.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>

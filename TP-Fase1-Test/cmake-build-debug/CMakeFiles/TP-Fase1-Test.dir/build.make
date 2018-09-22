@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/CLion-2018.2.3/clion-2018.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/CLion-2018.2.3/clion-2018.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test"
+CMAKE_SOURCE_DIR = /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TP-Fase1-Test.dir/depend.make
@@ -59,393 +59,393 @@ include CMakeFiles/TP-Fase1-Test.dir/flags.make
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: ../Modelo/Character.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Character.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Character.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Character.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o: ../Modelo/Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Modelo/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Model.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Model.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Model.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: ../Modelo/Pistol.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: ../Modelo/Projectile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: ../Modelo/Weapon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o: ../Modelo/dumyModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp" > CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp > CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp -o CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/Background.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Background.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Background.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Background.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: ../Vista/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Controller.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Controller.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Controller.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o: ../Vista/Exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Exception.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Exception.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Exception.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o: ../Vista/ImgTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o: ../Vista/Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Logger.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Logger.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Logger.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o: ../Vista/Nivel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o: ../Vista/Pasto.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: ../Vista/Personajes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: ../Vista/Piedra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o: ../Vista/SDLException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o: ../Vista/SDLIMGException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: ../Vista/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Scene.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Scene.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Scene.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o: ../Vista/SdlImgInit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o: ../Vista/SdlInit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: ../Vista/Sprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o: ../Vista/Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Texture.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Texture.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Texture.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/View.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/View.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/View.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/View.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: ../Vista/Viewable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o: ../Vista/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Window.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Window.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/Window.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/main.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/main.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/main.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/main.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/main.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o: ../Vista/pugixml.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: CMakeFiles/TP-Fase1-Test.dir/flags.make
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: ../Vista/xml.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o -c "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/xml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o -c /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.cpp
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/xml.cpp" > CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.cpp > CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i
 
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/Vista/xml.cpp" -o CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.cpp -o CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s
 
 # Object files for target TP-Fase1-Test
 TP__Fase1__Test_OBJECTS = \
@@ -519,7 +519,7 @@ TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2.so
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 TP-Fase1-Test: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 TP-Fase1-Test: CMakeFiles/TP-Fase1-Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable TP-Fase1-Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable TP-Fase1-Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP-Fase1-Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -532,6 +532,6 @@ CMakeFiles/TP-Fase1-Test.dir/clean:
 .PHONY : CMakeFiles/TP-Fase1-Test.dir/clean
 
 CMakeFiles/TP-Fase1-Test.dir/depend:
-	cd "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TP-Fase1-Test.dir/depend
 

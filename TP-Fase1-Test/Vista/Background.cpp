@@ -15,7 +15,7 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
                                                     img2(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) ),
                                                     img3(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) )
 {
-    //img1.loadFromFile("../escenario/NES - Contra - Level 1.png");
+    img1.loadFromFile("../escenario/NES - Contra - Level 1.png");
    //img1.loadFromFile(get_level_background_path(gXML_doc, level, 1));
    //img2.loadFromFile(get_level_background_path(gXML_doc, level, 2));
    //img3.loadFromFile(get_level_background_path(gXML_doc, level, 3));
@@ -24,5 +24,10 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
 }
 
 void Background::render(Scene& scene){
-    img1.render(0,0,0,800,0,600);
+    img1.renderBackground( 0, 0, &camera );
 }
+
+SDL_Rect *Background::getCamera(){
+    return &camera;
+}
+
