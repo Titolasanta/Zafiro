@@ -28,8 +28,15 @@ SpriteRojo::SpriteRojo()
                       {38,151,20,33},
                       {1,221,20,35}, //apuntando hacia abajo
                       {22,221,21,35}, // (septima linea sprite sheet)
-                      {44,223,21,33} }
+                      {44,223,21,33} },
+
+                     {{117,52,16,20}, //secuencia de salto
+                      {135,44,20,16},
+                      {157,52,6,20},
+                      {157,54,20,16}},
+
 
                       },
-parado{0,8,23,34}
+parado{0,8,23,34},
+faceDown{79,25,32,16}
                  {}
