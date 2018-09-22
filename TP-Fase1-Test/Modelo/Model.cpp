@@ -6,13 +6,10 @@
 #include "Model.h"
 #include "Colision.h"
 
-Model::Model() : player1(100,200) {
+Model::Model(Nivel &initialLevel) : player1(100,0), level(initialLevel) {
 
-    this->addPlataform(100,350,180);
-    this->addPlataform(200,250,100);
 
     //this->scene = scene;
-    level = 1;
 }
 
 void Model::time(){
@@ -50,11 +47,13 @@ void Model::addPlataform(int xi, int xf, int y) {
 }
 
 void Model::moveRight() {
-    player1.move(10);
+    if (player1.getPositionX() < level.getWidth() - 3) player1.move(10);
+    else this->stop();
 }
 
 void Model::moveLeft() {
-    player1.move(-10);
+    if (player1.getPositionX() > 3) player1.move(-10);
+    else this->stop();
 }
 
 void Model::stop() {
@@ -75,4 +74,7 @@ void Model::aimUp() {
 }
 void Model::aimStraight() {
     player1.aim(0);
+}
+void Model::changeLevel(Nivel &nivel) {
+    level = nivel;
 }

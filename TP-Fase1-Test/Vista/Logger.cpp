@@ -20,12 +20,20 @@ Logger::Logger(const char* log_level) : archivo(std::ofstream()){
     archivo << "_________________________________________________________________________________________" << std::endl;
     archivo << "[" << fecha << "]\n\n>NUEVO JUEGO INICIADO" << std::endl;
     archivo << "MODO " << log_level << "\n" << std::endl;
-    if (strcmp(log_level, "DEBUG") == 0 || strcmp(log_level,"debug") == 0 || strcmp(log_level, "Debug") == 0) nivel = 3;
-    if (strcmp(log_level, "INFO") == 0 || strcmp(log_level,"info") == 0 || strcmp(log_level, "Info") == 0) nivel = 2;
-    if (strcmp(log_level, "ERROR") == 0 || strcmp(log_level,"error") == 0 || strcmp(log_level, "Error") == 0) nivel = 1;
+    this->set_level(log_level);
 }
 
-void Logger::log(int level, const char* mensaje){
+void Logger::set_level(const char *level) {
+    if (strcmp(level, "DEBUG") == 0 || strcmp(level,"debug") == 0 || strcmp(level, "Debug") == 0) nivel = 3;
+    if (strcmp(level, "INFO") == 0 || strcmp(level,"info") == 0 || strcmp(level, "Info") == 0) nivel = 2;
+    if (strcmp(level, "ERROR") == 0 || strcmp(level,"error") == 0 || strcmp(level, "Error") == 0) nivel = 1;
+}
+
+void Logger::cerrar_archivo(){
+    archivo.close();
+}
+
+void Logger::log(int level, const char* mensaje) {
     char* nivel_log;
     if (level == 1) nivel_log =  "<ERROR> ";
     if (level == 2) nivel_log = "<INFO> ";
@@ -39,6 +47,3 @@ void Logger::log(int level, const char* mensaje){
     }
 }
 
-void Logger::cerrar_archivo(){
-    archivo.close();
-}

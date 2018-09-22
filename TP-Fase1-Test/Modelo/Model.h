@@ -7,17 +7,18 @@
 
 
 #include <SDL_events.h>
+#include <Vista/Nivel.h>
 #include "Vista/Scene.h"
 #include "Character.h"
 
 class Model {
     private:
-        int level;
+        Nivel level;
         Character player1;
         //Character player2;
 
     public:
-        Model();
+        Model(Nivel &initialLevel);
         ~Model(){}
         void update(Scene&);
         void moveRight();
@@ -30,6 +31,7 @@ class Model {
         void time();
         std::list<std::tuple<int,int,int>> lPlataforms;
         void addPlataform(int xi,int xf, int y);
+        void changeLevel(Nivel &nivel);
 
 };
 

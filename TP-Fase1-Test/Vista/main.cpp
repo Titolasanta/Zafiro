@@ -32,12 +32,12 @@ const int SCREEN_HEIGHT = 600;
 pugi::xml_document* gXML_doc;
 Logger *gplogger;
 
-int main( int argc, char* args[] )
+int main( int argc, char* argv[] )
 {
-
-
     pugi::xml_document doc;
+    pugi::xml_document doc_default;
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
+    pugi::xml_parse_result result_default = doc_default.load_file(PATH_XML_DEFAULT);
     if (!result) {
         // hacer algo con result.description()
         result = doc.load_file(PATH_XML_DEFAULT);
@@ -47,7 +47,12 @@ int main( int argc, char* args[] )
         }
     }
 
-    Logger logger(get_log_level(doc));
+    const char* log = get_log_level(doc);
+    if (!log) log = get_log_level(doc_default);
+    Logger logger(log);
+    if (argc > 1 && (strcmp(argv[1], "debug") == 0 || (strcmp(argv[1], "info") == 0) || (strcmp(argv[1], "error") == 0))){
+        logger.set_level(argv[1]);
+    }
 
     gplogger = &logger;
 
@@ -56,8 +61,11 @@ int main( int argc, char* args[] )
 
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
 
-    Model model;
+    Nivel nivel1(1, get_level_height(doc, 1), get_level_width(doc, 1));
 
+    Model model(nivel1);
+
+    cargar_plataformas(doc, model, 1);
 
     Controler controler(view,model);
 

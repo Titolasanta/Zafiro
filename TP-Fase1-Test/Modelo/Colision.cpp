@@ -4,7 +4,6 @@
 
 #include "Colision.h"
 
-#define largoPlataforma 70
 #define altoPJ 30
 Colision::Colision(Character &char1, std::list<std::tuple<int, int,int>>& lPlataforms) {
     if (char1.getVelocityY() > 0) {
