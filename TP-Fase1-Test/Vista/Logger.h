@@ -14,8 +14,8 @@ private:
     std::ofstream archivo;
 
 public:
-    explicit Logger(const char* log_level);
-    void set_level(const char* level);
+    explicit Logger(const char* log_level, const char* level_default);
+    void set_level(const char* level, const char* ldefault);
     void log(int level, const char* mensaje);
     void cerrar_archivo();
 

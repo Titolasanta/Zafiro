@@ -34,6 +34,8 @@ class Model {
         void changeLevel(Nivel &nivel);
         void crouch();
         void stand();
+        int getLevelWidth();
+        int getLevelHeight();
 };
 
 

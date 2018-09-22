@@ -2,10 +2,15 @@
 // Created by tito on 07/09/18.
 //
 
+#include <Vista/Logger.h>
 #include "Model.h"
 #include "Collision.h"
 
-Model::Model(Nivel &initialLevel) : player1(100,0), level(initialLevel) {}
+extern Logger *gplogger;
+
+Model::Model(Nivel &initialLevel) : player1(100,0), level(initialLevel) {
+    gplogger->log(3, "Se creó el Modelo");
+}
 
 void Model::time(){
 
@@ -38,6 +43,7 @@ void Model::update(Scene &scene) {
 
 void Model::addPlataform(int xi, int xf, int y) {
     lPlataforms.push_back(std::move(std::make_tuple(xi,xf,y)));
+    gplogger->log(2, "Se agregó una plataforma");
 }
 
 void Model::moveRight() {
@@ -54,9 +60,15 @@ void Model::stop() { player1.standStill(); }
 
 void Model::jump() { player1.jump(-36); }
 
-void Model::aimDown() { player1.aim(1); }
+void Model::aimDown() {
+    player1.aim(1);
+    gplogger->log(3, "El personaje apunta hacia abajo");
+}
 
-void Model::aimUp() { player1.aim(-1); }
+void Model::aimUp() {
+    player1.aim(-1);
+    gplogger->log(3, "El personaje apunta hacia arriba");
+}
 
 void Model::aimStraight() { player1.aim(0); }
 
@@ -67,3 +79,7 @@ void Model::stand() { player1.stand(); }
 void Model::changeLevel(Nivel &nivel) {
     level = nivel;
 }
+
+int Model::getLevelWidth() { return level.getWidth(); }
+
+int Model::getLevelHeight() { return level.getHeight(); }
