@@ -38,20 +38,13 @@ int main( int argc, char* argv[] )
     pugi::xml_document doc_default;
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
     pugi::xml_parse_result result_default = doc_default.load_file(PATH_XML_DEFAULT);
-    if (!result) {
-        // hacer algo con result.description()
-        result = doc.load_file(PATH_XML_DEFAULT);
-        if (!result) {
-            //hacer algo con result.description();
-            //    return 1;
-        }
+    if (!(result || result_default)) {
+        std::cout << "Error al cargar el archivo de configuración por defecto: " << result_default.description() << std::endl;
     }
 
-    const char* log = get_log_level(doc);
-    if (!log) log = get_log_level(doc_default);
-    Logger logger(log);
-    if (argc > 1 && (strcmp(argv[1], "debug") == 0 || (strcmp(argv[1], "info") == 0) || (strcmp(argv[1], "error") == 0))){
-        logger.set_level(argv[1]);
+    Logger logger(get_log_level(doc),get_log_level(doc_default));
+    if (argc > 1 ){
+        logger.set_level(argv[1], get_log_level(doc_default));
     }
 
     gplogger = &logger;
@@ -61,11 +54,12 @@ int main( int argc, char* argv[] )
 
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
 
-    Nivel nivel1(1, get_level_height(doc, 1), get_level_width(doc, 1));
+    Nivel nivel1(1, get_level_height(doc, doc_default, 1), get_level_width(doc, doc_default, 1));
 
     Model model(nivel1);
 
-    cargar_plataformas(doc, model, 1);
+    if (doc) cargar_plataformas(doc, model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
+    else cargar_plataformas(doc_default, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
 
     Controller controler(view,model);
 

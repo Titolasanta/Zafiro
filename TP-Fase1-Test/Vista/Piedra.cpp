@@ -25,7 +25,6 @@ void Piedra::render(Scene& scene){
     int y;
     int w;
     auto lista = scene.plataforms();
-    printf("\nun ciclo");
     for (std::list< std::tuple<int,int,int>>::iterator it = lista.begin(); it != lista.end(); it++) {
         y = std::get<1>(*it);
         y += 34;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuracion>
     <debug>
-        <level>Error</level>
+        <level>DEBUG</level>
     </debug>
     <escenarios>
         <nivel1>
