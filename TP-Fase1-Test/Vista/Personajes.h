@@ -8,7 +8,7 @@
 
 #include "Window.h"
 #include "Scene.h"
-#include "SpriteRojo.h"
+#include "Sprite.h"
 
 class Personajes {
 public:
@@ -17,7 +17,7 @@ public:
 
 private:
     ImgTexture rojo;
-    SpriteRojo rojoFrames;
+    Sprite rojoFrames;
     int frameActualRojo;
 
 };

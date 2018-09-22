@@ -14,15 +14,15 @@ extern Logger *gplogger;
 Background::Background(Window& window, int level) : img1(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) ),
                                                     img2(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) ),
                                                     img3(std::move(window.createImgTexture(0xFF, 0xFF, 0xFF) ) )
-{   //img1.loadFromFile("../escenario/NES - Contra - Level 1.png");
-   // img1.loadFromFile(get_level_background_path(gXML_doc, level, 1));
+{
+    //img1.loadFromFile("../escenario/NES - Contra - Level 1.png");
+   //img1.loadFromFile(get_level_background_path(gXML_doc, level, 1));
    //img2.loadFromFile(get_level_background_path(gXML_doc, level, 2));
    //img3.loadFromFile(get_level_background_path(gXML_doc, level, 3));
 
-    gplogger->log(1,"se crea Background\n");
+    gplogger->log(1,"Se crea Background\n");
 }
 
 void Background::render(Scene& scene){
-
     img1.render(0,0,0,800,0,600);
 }

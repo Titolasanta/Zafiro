@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "Personajes.h"
-#include "SpriteRojo.h"
+#include "Sprite.h"
 #include "Logger.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
@@ -16,36 +16,37 @@ Personajes::Personajes(Window* window)
   frameActualRojo(0)
 {
     rojo.loadFromFile(SPIRIT_PATH);
-    gplogger->log(1,"se crea Personajes\n");
+    gplogger->log(1,"Se crea Personajes\n");
 }
 
-void Personajes::render(Scene scene)
-{
+void Personajes::render(Scene scene) {
+
     if (scene.isP1Walking())
         frameActualRojo++;
     else
         frameActualRojo = 0;
 
     SDL_Rect *currentClip;
-    int angulo;
+    int angle;
 
-    if(scene.isP1LookingRight())
-        angulo = 0;
+    if (scene.isP1LookingRight())
+        angle = 0;
     else
-        angulo = 180;
+        angle = 180;
 
 
+    if (scene.getP1AimDirection() == -1)
+        currentClip = rojoFrames.move(1, frameActualRojo % 3);
+    else if (scene.getP1AimDirection() == 1)
+        currentClip = rojoFrames.move(1, frameActualRojo % 3 + 3);
+    else
+        currentClip = rojoFrames.move(0, frameActualRojo % ROJO_DER_FRAMES);
 
-        if (scene.getP1AimDirection() == -1)
-            currentClip = rojoFrames.mover(1, frameActualRojo % 3);
-        else if (scene.getP1AimDirection() == 1)
-            currentClip = rojoFrames.mover(1, frameActualRojo % 3 + 3);
-        else
-            currentClip = rojoFrames.mover(0, frameActualRojo % ROJO_DER_FRAMES);
-    rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip,angulo);
+    if (scene.isP1Crouching())
+        currentClip = rojoFrames.move(1, frameActualRojo % 3 + 3); //PLACEHOLDER
 
-
-
+    rojo.render(scene.getP1PositionX(), scene.getP1PositionY(), currentClip, angle);
+}
        /* switch ( scene.rojoState() )
         {
             case MOVING_RIGHT: {
@@ -92,7 +93,7 @@ void Personajes::render(Scene scene)
                 break;
             }case AIM_DOWN_L: {
                 frameActualRojo++;
-                SDL_Rect *currentClip = rojoFrames.mover(1,frameActualRojo % 3 + 3);
+                SDL_Rect *currentClip = rojoFrames.move(1,frameActualRojo % 3 + 3);
                 rojo.render(scene.rojox(), scene.rojoy(), currentClip,180);
                 break;
             }default:
@@ -101,5 +102,3 @@ void Personajes::render(Scene scene)
             //error
         }
 */
-
-    }

@@ -3,20 +3,17 @@
 //
 
 #include <iostream>
-#include "SpriteRojo.h"
+#include "Sprite.h"
 
-SDL_Rect* SpriteRojo::mover(int dirreccion, int frame){
-
+SDL_Rect* Sprite::move(int dirreccion, int frame) {
     return &frameMoviemiento[dirreccion][frame];
-
-    }
-    SDL_Rect* SpriteRojo::quieto(){
-
-        return &parado;
 }
 
-    
-SpriteRojo::SpriteRojo()
+SDL_Rect* Sprite::quieto() {
+    return &parado;
+}
+
+Sprite::Sprite()
 : frameMoviemiento { {{1,43,16,35}, //Corriendo hacia adelante
                       {18,43,19,35}, //(segunda linea sprite sheet)
                       {38,47,20,31},

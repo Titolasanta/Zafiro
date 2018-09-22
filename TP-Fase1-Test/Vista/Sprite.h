@@ -12,10 +12,10 @@
 
 #include <SDL_rect.h>
 
-class SpriteRojo {
+class Sprite {
 public:
-    SpriteRojo();
-    SDL_Rect* mover(int dirreccion, int frame);
+    Sprite();
+    SDL_Rect* move(int direction, int frame);
     SDL_Rect* quieto();
 private:
     SDL_Rect frameMoviemiento[3][6];

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test
+CMAKE_SOURCE_DIR = "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-deb
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/santiago/Documents/clion-2018.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/santiago/Desktop/Taller de Programacion I/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ Modelo/Character.s: Modelo/Character.cpp.s
 Modelo/Character.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
 .PHONY : Modelo/Character.cpp.s
+
+Modelo/Collision.o: Modelo/Collision.cpp.o
+
+.PHONY : Modelo/Collision.o
+
+# target to build an object file
+Modelo/Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o
+.PHONY : Modelo/Collision.cpp.o
+
+Modelo/Collision.i: Modelo/Collision.cpp.i
+
+.PHONY : Modelo/Collision.i
+
+# target to preprocess a source file
+Modelo/Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i
+.PHONY : Modelo/Collision.cpp.i
+
+Modelo/Collision.s: Modelo/Collision.cpp.s
+
+.PHONY : Modelo/Collision.s
+
+# target to generate assembly for a file
+Modelo/Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s
+.PHONY : Modelo/Collision.cpp.s
 
 Modelo/Model.o: Modelo/Model.cpp.o
 
@@ -339,32 +366,32 @@ Vista/Bullet.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s
 .PHONY : Vista/Bullet.cpp.s
 
-Vista/Controler.o: Vista/Controler.cpp.o
+Vista/Controller.o: Vista/Controller.cpp.o
 
-.PHONY : Vista/Controler.o
+.PHONY : Vista/Controller.o
 
 # target to build an object file
-Vista/Controler.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.o
-.PHONY : Vista/Controler.cpp.o
+Vista/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o
+.PHONY : Vista/Controller.cpp.o
 
-Vista/Controler.i: Vista/Controler.cpp.i
+Vista/Controller.i: Vista/Controller.cpp.i
 
-.PHONY : Vista/Controler.i
+.PHONY : Vista/Controller.i
 
 # target to preprocess a source file
-Vista/Controler.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.i
-.PHONY : Vista/Controler.cpp.i
+Vista/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i
+.PHONY : Vista/Controller.cpp.i
 
-Vista/Controler.s: Vista/Controler.cpp.s
+Vista/Controller.s: Vista/Controller.cpp.s
 
-.PHONY : Vista/Controler.s
+.PHONY : Vista/Controller.s
 
 # target to generate assembly for a file
-Vista/Controler.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controler.cpp.s
-.PHONY : Vista/Controler.cpp.s
+Vista/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s
+.PHONY : Vista/Controller.cpp.s
 
 Vista/Exception.o: Vista/Exception.cpp.o
 
@@ -446,6 +473,33 @@ Vista/Logger.s: Vista/Logger.cpp.s
 Vista/Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
 .PHONY : Vista/Logger.cpp.s
+
+Vista/Nivel.o: Vista/Nivel.cpp.o
+
+.PHONY : Vista/Nivel.o
+
+# target to build an object file
+Vista/Nivel.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o
+.PHONY : Vista/Nivel.cpp.o
+
+Vista/Nivel.i: Vista/Nivel.cpp.i
+
+.PHONY : Vista/Nivel.i
+
+# target to preprocess a source file
+Vista/Nivel.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i
+.PHONY : Vista/Nivel.cpp.i
+
+Vista/Nivel.s: Vista/Nivel.cpp.s
+
+.PHONY : Vista/Nivel.s
+
+# target to generate assembly for a file
+Vista/Nivel.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s
+.PHONY : Vista/Nivel.cpp.s
 
 Vista/Pasto.o: Vista/Pasto.cpp.o
 
@@ -663,32 +717,32 @@ Vista/SdlInit.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s
 .PHONY : Vista/SdlInit.cpp.s
 
-Vista/SpriteRojo.o: Vista/SpriteRojo.cpp.o
+Vista/Sprite.o: Vista/Sprite.cpp.o
 
-.PHONY : Vista/SpriteRojo.o
+.PHONY : Vista/Sprite.o
 
 # target to build an object file
-Vista/SpriteRojo.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.o
-.PHONY : Vista/SpriteRojo.cpp.o
+Vista/Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o
+.PHONY : Vista/Sprite.cpp.o
 
-Vista/SpriteRojo.i: Vista/SpriteRojo.cpp.i
+Vista/Sprite.i: Vista/Sprite.cpp.i
 
-.PHONY : Vista/SpriteRojo.i
+.PHONY : Vista/Sprite.i
 
 # target to preprocess a source file
-Vista/SpriteRojo.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.i
-.PHONY : Vista/SpriteRojo.cpp.i
+Vista/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i
+.PHONY : Vista/Sprite.cpp.i
 
-Vista/SpriteRojo.s: Vista/SpriteRojo.cpp.s
+Vista/Sprite.s: Vista/Sprite.cpp.s
 
-.PHONY : Vista/SpriteRojo.s
+.PHONY : Vista/Sprite.s
 
 # target to generate assembly for a file
-Vista/SpriteRojo.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SpriteRojo.cpp.s
-.PHONY : Vista/SpriteRojo.cpp.s
+Vista/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s
+.PHONY : Vista/Sprite.cpp.s
 
 Vista/Texture.o: Vista/Texture.cpp.o
 
@@ -891,6 +945,9 @@ help:
 	@echo "... Modelo/Character.o"
 	@echo "... Modelo/Character.i"
 	@echo "... Modelo/Character.s"
+	@echo "... Modelo/Collision.o"
+	@echo "... Modelo/Collision.i"
+	@echo "... Modelo/Collision.s"
 	@echo "... Modelo/Model.o"
 	@echo "... Modelo/Model.i"
 	@echo "... Modelo/Model.s"
@@ -912,9 +969,9 @@ help:
 	@echo "... Vista/Bullet.o"
 	@echo "... Vista/Bullet.i"
 	@echo "... Vista/Bullet.s"
-	@echo "... Vista/Controler.o"
-	@echo "... Vista/Controler.i"
-	@echo "... Vista/Controler.s"
+	@echo "... Vista/Controller.o"
+	@echo "... Vista/Controller.i"
+	@echo "... Vista/Controller.s"
 	@echo "... Vista/Exception.o"
 	@echo "... Vista/Exception.i"
 	@echo "... Vista/Exception.s"
@@ -924,6 +981,9 @@ help:
 	@echo "... Vista/Logger.o"
 	@echo "... Vista/Logger.i"
 	@echo "... Vista/Logger.s"
+	@echo "... Vista/Nivel.o"
+	@echo "... Vista/Nivel.i"
+	@echo "... Vista/Nivel.s"
 	@echo "... Vista/Pasto.o"
 	@echo "... Vista/Pasto.i"
 	@echo "... Vista/Pasto.s"
@@ -948,9 +1008,9 @@ help:
 	@echo "... Vista/SdlInit.o"
 	@echo "... Vista/SdlInit.i"
 	@echo "... Vista/SdlInit.s"
-	@echo "... Vista/SpriteRojo.o"
-	@echo "... Vista/SpriteRojo.i"
-	@echo "... Vista/SpriteRojo.s"
+	@echo "... Vista/Sprite.o"
+	@echo "... Vista/Sprite.i"
+	@echo "... Vista/Sprite.s"
 	@echo "... Vista/Texture.o"
 	@echo "... Vista/Texture.i"
 	@echo "... Vista/Texture.s"

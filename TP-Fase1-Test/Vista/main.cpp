@@ -11,17 +11,17 @@
 #include "Window.h"
 #include "SdlInit.h"
 #include "SdlImgInit.h"
-#include "SpriteRojo.h"
+#include "Sprite.h"
 #include "Personajes.h"
 #include "View.h"
-#include "Controler.h"
+#include "Controller.h"
 #include "pugixml.hpp"
 #include "xml.h"
 #include "Logger.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
-#define PATH_XML_ORIGINAL "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Archivos/configuracion.xml"
-#define PATH_XML_DEFAULT "/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Archivos/default.xml"
+#define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
+#define PATH_XML_DEFAULT "../Archivos/default.xml"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 800;
@@ -67,7 +67,7 @@ int main( int argc, char* argv[] )
 
     cargar_plataformas(doc, model, 1);
 
-    Controler controler(view,model);
+    Controller controler(view,model);
 
 
 

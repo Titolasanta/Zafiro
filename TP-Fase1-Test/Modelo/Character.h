@@ -7,7 +7,7 @@
 
 
 #define largoPlataforma 70
-#define altoPJ 30
+#define characterHeight 30
 #define changui 10
 #include "Weapon.h"
 

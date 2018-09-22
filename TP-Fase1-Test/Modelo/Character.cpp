@@ -4,7 +4,7 @@
 
 #include "Character.h"
 
-Character::Character(int posX, int posY){
+Character::Character(int posX, int posY) {
     // XML deberia chequear que las posiciones esten
     // en el rango valido de la ventana
     positionX = posX;
@@ -15,9 +15,9 @@ Character::Character(int posX, int posY){
     accelerationY = 0;
     walking = false;
     lookingRight = true;
-    dead = 0;
+    crouching = false;
+    dead = false;
     airborne = true;
-    //if (posY > 100) airborne = true;
     aimDirection = 0;
 
 
@@ -33,9 +33,18 @@ void Character::land(int x, int y) {
     currentPlatY = y;
 }
 
-void Character::time(){
+void Character::time() {
 
-    if(positionY > 1000) {
+    if (positionX < 5) {
+        positionX = 5;
+        velocityX = 0;
+    }
+    if (positionX > 700) {
+        positionX = 700;
+        velocityX = 0;
+    }
+
+    if(positionY > 600) {
         positionY = 0;
         velocityY = 0;
     }
@@ -44,7 +53,7 @@ void Character::time(){
         airborne = true;
 
 
-    if(isAirborne())
+    if(airborne)
         velocityY += 4;
 
 
@@ -58,66 +67,62 @@ void Character::time(){
 
 Character::~Character() = default; //Loggear destruccion
 
-
 void Character::move(int velX) {
 
- //No se donde poner esto
-
-    if (velX > 0) {              //Si me muevo hacia la derecha
+    if (velX > 0) {
         if (!lookingRight) {
             positionX += 3;
             lookingRight = true;
-        }                        //Miro a la derecha si estaba mirando para la izq
+        }
     }
-    else {                       //Si me muevo hacia la izq
+    else {
         if (lookingRight){
             positionX -= 3;
             lookingRight = false;}
-    }                            //Miro a la izq si estaba mirado para la derecha
+    }
+
+    if (crouching) return;
 
     velocityX = velX;
 
-
-    if(!isAirborne())
+    if(!airborne)
         walking = true;
-
 }
 
 
 
-void Character::jump(int velY){
+void Character::jump(int velY) {
 
     if (airborne) return;
-             //En algun lado setear varible gravedad = 2 (ver valor)
 
     velocityY = velY;
 
     airborne = true;
     walking = false;
-
 }
 
-void Character::standStill(){
+void Character::standStill() {
     velocityX = 0;
     walking = false;
 }
 
-void Character::aim(int direction){
+void Character::aim(int direction) {
     aimDirection = direction;
 }
 
-void Character::shoot(){
+void Character::shoot() {
     weapon.shoot(positionX, positionY, lookingRight, aimDirection);
 }
 
-void Character::stand(){
-    if (crouching) positionY += 5; //Ver cuanto agacharse
+void Character::stand() {
+    if (crouching) positionY -= 5;
     crouching = false;
 }
 
-void Character::crouch(){
+void Character::crouch() {
     if (airborne||crouching) return;
-    positionY -= 5;             //Ver cuanto agacharse
+    this->standStill();
+    positionY += 5;
     crouching = true;
 }
 
@@ -126,4 +131,3 @@ void Character::takeDamage() {
     else dead = true;
     //RIP Destruirlo o algo
 }
-
