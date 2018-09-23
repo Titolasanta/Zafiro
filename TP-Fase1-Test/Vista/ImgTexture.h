@@ -37,6 +37,7 @@ protected:
 	//Image dimensions
 	int mWidth;
 	int mHeight;
+	//SDL_Texture* mTexture;
 };
 
 #endif 

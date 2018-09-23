@@ -2,10 +2,7 @@
 // Created by fede on 06/09/18.
 //
 
-#include <Vista/Logger.h>
 #include "Character.h"
-
-extern Logger *gplogger;
 
 Character::Character(int posX, int posY) {
     // XML deberia chequear que las posiciones esten
@@ -24,7 +21,7 @@ Character::Character(int posX, int posY) {
     aimDirection = 0;
 
 
-    gplogger->log(2, "Se creó el personaje");
+    //Loggear creacion del personaje
 }
 void Character::land(int x, int y) {
 
@@ -34,17 +31,14 @@ void Character::land(int x, int y) {
     velocityY = 0;
     currentPlatX = x;
     currentPlatY = y;
-
-    gplogger->log(3, "El personaje aterriza");
 }
 
 void Character::time() {
 
-    if (positionX < 3) {
-        positionX = 1;
+    if (positionX < 5) {
+        positionX = 5;
         velocityX = 0;
     }
-
     if (positionX > 3500) {
         positionX = 3500;
         velocityX = 0;
@@ -79,22 +73,17 @@ void Character::move(int velX) {
         if (!lookingRight) {
             positionX += 3;
             lookingRight = true;
-            gplogger->log(3, "El personaje mira hacia la derecha");
         }
     }
     else {
         if (lookingRight){
             positionX -= 3;
-            lookingRight = false;
-            gplogger->log(3, "El personaje mira hacia la izquierda");
-        }
+            lookingRight = false;}
     }
 
     if (crouching) return;
 
     velocityX = velX;
-
-    gplogger->log(3, "El personaje se mueve");
 
     if(!airborne)
         walking = true;
@@ -110,15 +99,11 @@ void Character::jump(int velY) {
 
     airborne = true;
     walking = false;
-
-    gplogger->log(3, "El personaje salta");
 }
 
 void Character::standStill() {
     velocityX = 0;
     walking = false;
-
-    gplogger->log(3, "El personaje salta");
 }
 
 void Character::aim(int direction) {
@@ -127,15 +112,11 @@ void Character::aim(int direction) {
 
 void Character::shoot() {
     weapon.shoot(positionX, positionY, lookingRight, aimDirection);
-
-    gplogger->log(3, "El personaje dispara");
 }
 
 void Character::stand() {
     if (crouching) positionY -= 5;
     crouching = false;
-
-    gplogger->log(3, "El personaje se para");
 }
 
 void Character::crouch() {
@@ -143,8 +124,6 @@ void Character::crouch() {
     this->standStill();
     positionY += 5;
     crouching = true;
-
-    gplogger->log(3, "El personaje se agacha");
 }
 
 void Character::takeDamage() {

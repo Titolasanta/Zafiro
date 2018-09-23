@@ -10,6 +10,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o: ../Modelo/Collision.cpp
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o: ../Modelo/Collision.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o: ../Modelo/Weapon.h
 
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Vista/Logger.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Vista/Nivel.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Vista/Scene.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Modelo/Character.h

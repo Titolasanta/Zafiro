@@ -21,7 +21,7 @@ Personajes::Personajes(Window* window)
 
 void Personajes::render(Scene scene, int cameraX, int cameraY) {
 
-    if (scene.isP1Walking())
+    if (scene.isP1Walking() || scene.isP1Airborne())
         frameActualRojo++;
     else
         frameActualRojo = 0;
@@ -42,9 +42,13 @@ void Personajes::render(Scene scene, int cameraX, int cameraY) {
     else
         currentClip = rojoFrames.move(0, frameActualRojo % ROJO_DER_FRAMES);
 
-    if (scene.isP1Crouching())
+    if (scene.isP1Crouching()) {
         currentClip = rojoFrames.move(1, frameActualRojo % 3 + 3); //PLACEHOLDER
+    }
 
+    if (scene.isP1Airborne()){
+        currentClip = rojoFrames.move(2, frameActualRojo % 3 + 3);
+    }
     rojo.render(scene.getP1PositionX() - cameraX, scene.getP1PositionY() - cameraY, currentClip, angle);
 }
        /* switch ( scene.rojoState() )

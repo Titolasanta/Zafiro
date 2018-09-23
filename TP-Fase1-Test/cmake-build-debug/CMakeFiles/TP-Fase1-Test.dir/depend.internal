@@ -11,6 +11,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o
  /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.h
  /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o
+ ..//Vista/Logger.h
  ..//Vista/Nivel.h
  ..//Vista/Scene.h
  /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h
