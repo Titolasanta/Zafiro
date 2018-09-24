@@ -4,9 +4,8 @@
         <level>DEBUG</level>
     </debug>
     <escenarios>
-
         <nivel1>
-            <height>600</height>
+            <height>2000</height>
             <width>3456</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
@@ -37,29 +36,65 @@
             </plataforma>
         </nivel1>
         <nivel2>
-            <height></height>
-            <width></width>
+            <height>2000</height>
+            <width>3456</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
-            <plataforma numero = "2">
-                <tipo></tipo>
-                <xi></xi>
-                <xf></xf>
-                <y></y>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>0</xi>
+                <xf>150</xf>
+                <y>450</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>140</xi>
+                <xf>250</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>220</xi>
+                <xf>300</xf>
+                <y>290</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>290</xi>
+                <xf>400</xf>
+                <y>400</y>
             </plataforma>
         </nivel2>
         <nivel3>
-            <height></height>
-            <width></width>
+            <height>600</height>
+            <width>3456</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
-            <plataforma numero = "">
-                <tipo></tipo>
-                <xi></xi>
-                <xf></xf>
-                <y></y>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>0</xi>
+                <xf>150</xf>
+                <y>450</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>140</xi>
+                <xf>250</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>220</xi>
+                <xf>300</xf>
+                <y>290</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>290</xi>
+                <xf>400</xf>
+                <y>400</y>
             </plataforma>
         </nivel3>
     </escenarios>

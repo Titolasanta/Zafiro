@@ -27,3 +27,35 @@ void Projectile::move() {   //No se si anda
         positionY += velocityY;
     }
 }
+
+int Projectile::getPositionX() const {
+    return positionX;
+}
+
+void Projectile::setPositionX(int positionX) {
+    Projectile::positionX = positionX;
+}
+
+int Projectile::getPositionY() const {
+    return positionY;
+}
+
+void Projectile::setPositionY(int positionY) {
+    Projectile::positionY = positionY;
+}
+
+int Projectile::getVelocityX() const {
+    return velocityX;
+}
+
+void Projectile::setVelocityX(int velocityX) {
+    Projectile::velocityX = velocityX;
+}
+
+int Projectile::getVelocityY() const {
+    return velocityY;
+}
+
+void Projectile::setVelocityY(int velocityY) {
+    Projectile::velocityY = velocityY;
+}

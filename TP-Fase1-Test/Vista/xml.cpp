@@ -34,7 +34,8 @@ const char* get_level_background_path(pugi::xml_document* doc, pugi::xml_documen
     if (original) return original;
     else return doc_default->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
 }
-void cargar_plataformas(pugi::xml_document &doc, Model &modelo, int level, int limite_vertical, int limite_horizontal){
+
+void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int level, int limite_vertical, int limite_horizontal){
     std::string nivel = "nivel";
     nivel.append(std::to_string(level));
     pugi::xml_node config = doc.first_child().child("escenarios").child(nivel.c_str());
@@ -43,8 +44,12 @@ void cargar_plataformas(pugi::xml_document &doc, Model &modelo, int level, int l
         int xf = plataforma.child("xf").first_child().text().as_int();
         int y = plataforma.child("y").first_child().text().as_int();
         if (xi >= 0 && xf >=  0 && y >= 0 && xi < xf && xi < limite_horizontal && xf < limite_horizontal && y < limite_vertical) {
-            modelo.addPlataform(xi, xf, y);
+            modelo.addPlataform(xi,y,xf-xi);
+            scene.addPlataform(xi,y,xf-xi);
         }
+
     }
+    modelo.addPlataform(0,300,get_level_width(doc,doc,level));
+    scene.addPlataform(0,300,get_level_width(doc,doc,level));
 
 }

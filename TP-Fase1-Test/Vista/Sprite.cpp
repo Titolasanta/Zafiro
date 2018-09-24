@@ -13,6 +13,10 @@ SDL_Rect* Sprite::quieto() {
     return &parado;
 }
 
+SDL_Rect* Sprite::getFaceDown() {
+    return &faceDown;
+}
+
 Sprite::Sprite()
 : frameMoviemiento { {{1,43,16,35}, //Corriendo hacia adelante
                       {18,43,19,35}, //(segunda linea sprite sheet)
@@ -27,10 +31,12 @@ Sprite::Sprite()
                       {22,221,21,35}, // (septima linea sprite sheet)
                       {44,223,21,33} },
 
-                     {{117,52,16,20}, //secuencia de salto
-                      {135,44,20,16},
-                      {157,52,6,20},
-                      {157,54,20,16}},
+                     {{117,52,16,20},//secuencia de salto
+                      {135,44,20,26},
+                      {157,52,16,20},
+                      {157,54,17,16},
+                      {0,0,0,0},
+                      {0,0,0,0}}
                       },
 parado{0,8,23,34},
 faceDown{79,25,32,16}

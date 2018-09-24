@@ -11,7 +11,7 @@
 class Pasto : public Viewable{
 public:
     //dibuja la lista de plataformas
-    void render(Scene& scene);
+    void render(Scene& scene,SDL_Rect* camera);
     Pasto(Window* window);
 
 };

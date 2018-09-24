@@ -11,6 +11,6 @@ Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png",0,0,69,3
     gplogger->log(1,"se crea Pasto\n");
 }
 
-void Pasto::render(Scene &scene) {
-    this->renderList(scene.plataforms());
+void Pasto::render(Scene &scene,SDL_Rect* camera) {
+    this->renderList(scene.plataforms(),camera);
 }

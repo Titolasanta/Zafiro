@@ -30,7 +30,10 @@ private:
 //Scene& scene;
     Piedra piedra;
     Pasto pasto;
+    SDL_Rect* camera = NULL;
+
 };
+
 
 
 #endif //TP_FASE1_TEST_VIEW_H

@@ -13,7 +13,7 @@ file(GLOB helloworld_SRC
         "Modelo/*.cpp"
         )
 
-set(SOURCE_FILES ${helloworld_SRC} Vista/Sprite.cpp Vista/Sprite.h Vista/Personajes.cpp Vista/Personajes.h  Vista/View.cpp Vista/View.h  Vista/Pasto.cpp Vista/Pasto.h Vista/Piedra.cpp Vista/Piedra.h Vista/Viewable.cpp Vista/Viewable.h Vista/Controller.cpp Vista/Controller.h Vista/xml.h Vista/xml.cpp Vista/pugixml.hpp Vista/pugiconfig.hpp Vista/pugixml.cpp Vista/Bullet.cpp Vista/Bullet.h Vista/Background.cpp Vista/Background.h Vista/Logger.cpp Vista/Logger.h Vista/Nivel.cpp Vista/Nivel.h Modelo/Collision.cpp Modelo/Collision.h)
+set(SOURCE_FILES ${helloworld_SRC} Vista/Sprite.cpp Vista/Sprite.h Vista/Personajes.cpp Vista/Personajes.h  Vista/View.cpp Vista/View.h  Vista/Pasto.cpp Vista/Pasto.h Vista/Piedra.cpp Vista/Piedra.h Vista/Viewable.cpp Vista/Viewable.h Vista/Controller.cpp Vista/Controller.h Vista/xml.h Vista/xml.cpp Vista/pugixml.hpp Vista/pugiconfig.hpp Vista/pugixml.cpp Vista/Bullet.cpp Vista/Bullet.h Vista/Background.cpp Vista/Background.h Vista/Logger.cpp Vista/Logger.h Vista/Level.cpp Vista/Level.h Modelo/Collision.cpp Modelo/Collision.h)
 
 
 

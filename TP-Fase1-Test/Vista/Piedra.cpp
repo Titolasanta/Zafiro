@@ -20,7 +20,7 @@ void Piedra::renderHalf(int x, int y) {
 }
 
 
-void Piedra::render(Scene& scene){
+void Piedra::render(Scene& scene,SDL_Rect* camera){
     int x;
     int y;
     int w;
@@ -32,13 +32,13 @@ void Piedra::render(Scene& scene){
             w = std::get<2>(*it);
             x = std::get<0>(*it);
             while(w > clip.w){
-                texture.render(x, y,&clip);
+                texture.render(x-camera->x, y-camera->y,&clip);
                 x += clip.w;
                 w -= clip.w;
             }
             SDL_Rect clipTemp = clip;
             clipTemp.w = w;
-            texture.render(x, y,&clipTemp);
+            texture.render(x-camera->x, y-camera->y,&clipTemp);
             y += 68;
         }
     }

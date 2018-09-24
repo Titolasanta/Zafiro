@@ -7,18 +7,20 @@
 
 
 #include <SDL_events.h>
-#include <Vista/Nivel.h>
+#include <Vista/Level.h>
 #include "Vista/Scene.h"
 #include "Character.h"
+#include "Projectile.h"
 
 class Model {
     private:
-        Nivel level;
+        Level level;
         Character player1;
+        std::list<Projectile> lBullets;
         //Character player2;
 
     public:
-        explicit Model(Nivel &initialLevel);
+        explicit Model(int initialLevel);
         ~Model() = default;
         void update(Scene&);
         void moveRight();
@@ -29,13 +31,15 @@ class Model {
         void stop();
         void jump();
         void time();
+        bool endOfLevel(Scene&);
         std::list<std::tuple<int,int,int>> lPlataforms;
-        void addPlataform(int xi,int xf, int y);
-        void changeLevel(Nivel &nivel);
+        void addPlataform(int x, int y, int w);
+        void changeLevel(Level,Scene&);
         void crouch();
         void stand();
         int getLevelWidth();
         int getLevelHeight();
+        void shoot();
 };
 
 

@@ -29,7 +29,7 @@ const int SCREEN_HEIGHT = 600;
 
 //Starts up SDL and creates window
 
-pugi::xml_document* gXML_doc;
+pugi::xml_document* gXML_doc[2];
 Logger *gplogger;
 
 int main( int argc, char* argv[] )
@@ -38,28 +38,30 @@ int main( int argc, char* argv[] )
     pugi::xml_document doc_default;
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
     pugi::xml_parse_result result_default = doc_default.load_file(PATH_XML_DEFAULT);
+
     if (!(result || result_default)) {
         std::cout << "Error al cargar el archivo de configuración por defecto: " << result_default.description() << std::endl;
     }
+    const char* modo;
+    if (argc > 1 ) {
+        modo = argv[1];
+    } else
+        modo = get_log_level(doc);
+    Logger logger(modo,get_log_level(doc_default));
 
-    Logger logger(get_log_level(doc),get_log_level(doc_default));
-    if (argc > 1 ){
-        logger.set_level(argv[1], get_log_level(doc_default));
-    }
 
     gplogger = &logger;
 
-    gXML_doc = &doc;
+    gXML_doc[0] = &doc;
+    gXML_doc[1] = &doc_default;
+
 
 
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
 
-    Nivel nivel1(1, get_level_height(doc, doc_default, 1), get_level_width(doc, doc_default, 1));
 
-    Model model(nivel1);
+    Model model(1);
 
-    if (doc) cargar_plataformas(doc, model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
-    else cargar_plataformas(doc_default, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
 
     Controller controler(view,model);
 

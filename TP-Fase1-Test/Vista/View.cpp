@@ -12,8 +12,11 @@
 #include "xml.h"
 #include "Logger.h"
 #include <iostream>
+#define MARGENX (800/2)
+#define MARGENY (600/3)
 
 extern Logger* gplogger;
+extern pugi::xml_document *gXML_doc[2];
 
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
@@ -26,50 +29,37 @@ personajes(&window),piedra(&window),pasto(&window),background(window,1)
 
 }
 
-
 void View::render(Scene& scene) {
 
-    gplogger->log(1,"comienza renderear view\n");
+    camera = scene.getCamera();
+
+    gplogger->log(1, "comienza renderear view\n");
 
     window.redererClear();
 
-   //background.render(scene);
-    piedra.render(scene);
-    pasto.render(scene);
+    //background.render(scene);
 
-    SDL_Rect* camera = background.getCamera();
 
     //Center the camera over the player
-    camera->x = ( scene.getP1PositionX() ) - 800 / 2;
-    camera->y = ( scene.getP1PositionY() ) - 600 / 2;
-
-
-    std::cout << "pos player" << scene.getP1PositionX() << ".\n";
-    std::cout << camera->x << ".\n";
-    std::cout << camera->y << ".\n";
-
-    //Keep the camera in bounds
-    if( camera->x < 0 )
-    {
-        camera->x = 0;
-    }
-    if( camera->y < 0 )
-    {
-        camera->y = 0;
-    }
-    if( camera->x > LEVEL_WIDTH - camera->w )
-    {
-        camera->x = LEVEL_WIDTH - camera->w;
-    }
-    if( camera->y > LEVEL_HEIGHT - camera->h )
-    {
-        camera->y = LEVEL_HEIGHT - camera->h;
+    if (scene.getLevel() != 2){
+        if (scene.getP1PositionX() > MARGENX + camera->x)
+            camera->x = scene.getP1PositionX() - MARGENX;
+    }else {
+        if (scene.getP1PositionY() < MARGENY + camera->y)
+            if(scene.getP1PositionY() - MARGENY < 0)
+                camera->y = scene.getP1PositionY() - MARGENY;
     }
 
-    background.render(scene);
+    background.render(scene,*camera);
+
+
+
+    piedra.render(scene,camera);
+    pasto.render(scene,camera);
     personajes.render(scene,camera->x, camera->y);
-
     window.updateRenderer();
 
     gplogger->log(1,"finaliza renderear view\n");
+
+
 }

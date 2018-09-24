@@ -3,6 +3,7 @@
 //
 
 #include "Character.h"
+#include "Projectile.h"
 
 Character::Character(int posX, int posY) {
     // XML deberia chequear que las posiciones esten
@@ -20,40 +21,28 @@ Character::Character(int posX, int posY) {
     airborne = true;
     aimDirection = 0;
 
-
     //Loggear creacion del personaje
 }
-void Character::land(int x, int y) {
+void Character::land(int x, int y,int w) {
 
     airborne = false;
     if(getVelocityX() != 0)
         walking = true;
     velocityY = 0;
     currentPlatX = x;
+    currentPlatW = w;
     currentPlatY = y;
 }
 
 void Character::time() {
 
-    if (positionX < 5) {
-        positionX = 5;
-        velocityX = 0;
-    }
-    if (positionX > 3500) {
-        positionX = 3500;
-        velocityX = 0;
-    }
 
-    if(positionY > 600) {
-        positionY = 0;
-        velocityY = 0;
-    }
 
-    if (currentPlatX + largoPlataforma + changui < positionX + velocityX || currentPlatX  > changui + positionX + velocityX)
+    if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX)
         airborne = true;
 
 
-    if(airborne)
+   if(airborne)
         velocityY += 4;
 
 
@@ -110,19 +99,29 @@ void Character::aim(int direction) {
     aimDirection = direction;
 }
 
-void Character::shoot() {
-    weapon.shoot(positionX, positionY, lookingRight, aimDirection);
+Projectile Character::shoot() {
+    try {
+        return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
+    } catch(...){
+        changeWeapon(Weapon());
+    }
+
+    return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
+}
+void Character::changeWeapon(Weapon weapon){
+    weapon = weapon;
 }
 
+
 void Character::stand() {
-    if (crouching) positionY -= 5;
+    if (crouching) positionY -= 20;
     crouching = false;
 }
 
 void Character::crouch() {
     if (airborne||crouching) return;
     this->standStill();
-    positionY += 5;
+    positionY += 20;
     crouching = true;
 }
 
@@ -130,4 +129,40 @@ void Character::takeDamage() {
     if (hitPoints > 0) hitPoints--;
     else dead = true;
     //RIP Destruirlo o algo
+}
+
+void Character::goThroughPlatform(){
+    positionY += 55;
+    airborne = true;
+    crouching = false;
+}
+
+void Character::spawn() {
+
+    positionY = 200;
+    positionX = 200;
+    velocityY = 0;
+    velocityX = 0;
+    airborne = false;
+    walking = false;
+    currentPlatW = 0;
+    currentPlatX = 0;
+    currentPlatY = 0;
+    crouching = false;
+    lookingRight = true;
+    dead = false;
+    aimDirection = 0;
+
+}
+
+void Character::nextLevel() {
+    level += 1;
+}
+
+void Character::setVelocityX(int velocityX) {
+    Character::velocityX = velocityX;
+}
+
+void Character::setVelocityY(int velocityY) {
+    Character::velocityY = velocityY;
 }

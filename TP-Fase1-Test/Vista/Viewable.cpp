@@ -22,21 +22,21 @@ Viewable::Viewable(Window* window,std::string imgpath,int x,int y,int w,int h) :
 
 void Viewable::renderList(std::list<std::tuple<int,int>> lista) {
 
-    for (std::list< std::tuple<int,int>>::iterator it = lista.begin(); it != lista.end(); it++) {
+    for (auto it = lista.begin(); it != lista.end(); it++) {
         texture.render(std::get<0>(*it), std::get<1>(*it));
     }
 }
 
-void Viewable::renderList(std::list<std::tuple<int,int,int>> lista) {
+void Viewable::renderList(std::list<std::tuple<int,int,int>> lista,SDL_Rect* camera) {
 
-    for (std::list< std::tuple<int,int,int>>::iterator it = lista.begin(); it != lista.end(); it++) {
+    for (auto it = lista.begin(); it != lista.end(); it++) {
         int i = 0;
         while(std::get<2>(*it) - i * clip.w  > clip.w){
-            texture.render(std::get<0>(*it) + clip.w * i, std::get<1>(*it),&clip);
+            texture.render(std::get<0>(*it) + clip.w * i-camera->x, std::get<1>(*it)-camera->y,&clip);
             i++;
         }
         SDL_Rect clipTemp = clip;
         clipTemp.w = std::get<2>(*it) - i * clip.w;
-        texture.render(std::get<0>(*it)+ clip.w * i, std::get<1>(*it),&clipTemp);
+        texture.render(std::get<0>(*it)+ clip.w * i-camera->x, std::get<1>(*it)-camera->y,&clipTemp);
     }
 }

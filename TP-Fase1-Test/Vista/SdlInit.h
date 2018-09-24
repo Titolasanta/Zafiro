@@ -11,6 +11,7 @@ class SdlInit {
 public:
 	SdlInit();
 	void delay(size_t milisec);
+
 	~SdlInit();
 };
 

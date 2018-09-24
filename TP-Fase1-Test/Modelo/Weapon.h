@@ -6,6 +6,8 @@
 #define TP_FASE1_TEST_WEAPON_H
 
 
+#include "Projectile.h"
+
 class Weapon {
 
     protected:
@@ -16,7 +18,7 @@ class Weapon {
     public:
         Weapon(){};
         ~Weapon();
-        void shoot(int, int, bool, int);
+        Projectile shoot(int, int, bool, int);
 };
 
 

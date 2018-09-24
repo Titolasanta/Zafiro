@@ -5,10 +5,17 @@
 #include <./Modelo/Model.h>
 #include "Controller.h"
 #include "Logger.h"
+#include "pugixml.hpp"
+#include "xml.h"
 
 extern Logger *gplogger;
+extern pugi::xml_document*gXML_doc[2];
 
-Controller::Controller(View &view, Model& model) : view(view),model(model){}
+Controller::Controller(View &view, Model& model) : view(view),model(model){
+    if (*gXML_doc[0]) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
+    else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
+
+}
 
 void Controller::processEvent(SDL_Event e) {
 
@@ -19,6 +26,7 @@ void Controller::processEvent(SDL_Event e) {
         if (e.key.keysym.sym == SDLK_DOWN) model.aimDown();
         if (e.key.keysym.sym == SDLK_UP) model.aimUp();
         if (e.key.keysym.sym == SDLK_LCTRL) model.crouch();
+        if (e.key.keysym.sym == SDLK_x) model.shoot();
     }
 
     if (e.type == SDL_KEYUP) {

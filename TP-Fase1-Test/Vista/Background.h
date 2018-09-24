@@ -15,7 +15,7 @@ const int LEVEL_HEIGHT = 245;
 class Background  {
 public:
     Background(Window&,int);
-    void render(Scene&);
+    void render(Scene&,SDL_Rect&);
 
     SDL_Rect *getCamera();
 

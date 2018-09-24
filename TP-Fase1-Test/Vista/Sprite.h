@@ -17,6 +17,8 @@ public:
     Sprite();
     SDL_Rect* move(int direction, int frame);
     SDL_Rect* quieto();
+    SDL_Rect* getFaceDown();
+
 private:
     SDL_Rect frameMoviemiento[3][6];
     SDL_Rect parado;

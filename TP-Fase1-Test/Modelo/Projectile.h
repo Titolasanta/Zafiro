@@ -11,7 +11,26 @@ class Projectile {
     private:
         int positionX;
         int positionY;
-        int velocityX;
+public:
+    int getVelocityX() const;
+
+    void setVelocityX(int velocityX);
+
+    int getVelocityY() const;
+
+    void setVelocityY(int velocityY);
+
+public:
+    int getPositionX() const;
+
+    void setPositionX(int positionX);
+
+    int getPositionY() const;
+
+    void setPositionY(int positionY);
+
+private:
+    int velocityX;
         int velocityY;
         int accelerationX;
         int accelerationY;

@@ -23,11 +23,8 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
     gplogger->log(1,"Se crea Background\n");
 }
 
-void Background::render(Scene& scene){
+void Background::render(Scene& scene,SDL_Rect& camera){
     img1.renderBackground( 0, 0, &camera );
 }
 
-SDL_Rect *Background::getCamera(){
-    return &camera;
-}
 

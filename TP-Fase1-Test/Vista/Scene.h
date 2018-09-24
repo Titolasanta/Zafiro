@@ -8,6 +8,7 @@
 #include <tuple>
 
 #include <list>
+#include <SDL_rect.h>
 
 enum PJSTATE{MOVING_RIGHT,MOVING_LEFT,STANDING_RIGHT,STANDING_LEFT,
         IN_AIR_RIGHT,IN_AIR_LEFT,GROUND,AIM_UP_R,AIM_DOWN_R,AIM_UP_L,AIM_DOWN_L};
@@ -21,11 +22,11 @@ public:
 
     std::list<std::tuple<int,int,int>> plataforms();
 
-    void addPlataforms(int x,int y,int width);
+    void addPlataform(int x, int y, int width);
 
-    std::list<std::tuple<int,int>> bulets();
+    std::list<std::tuple<int,int>> lBullets;
 
-    void addBulets(int,int);
+    void setBullets(std::list<std::tuple<int,int>>);
 
     //logica
 
@@ -49,14 +50,25 @@ private:
     bool P1Dead;
     //Weapon weapon;
     int P1AimDirection;
-
-    std::list<std::tuple<int,int>> lBulets;
+    std::list<std::tuple<int,int,int>> lBulets;
     std::list<std::tuple<int,int,int>> lPlataforms;
-    int cameraPos = 0;
 
-
+    SDL_Rect camera = { 0, 0, 800, 600 };
+    int level = 1;
 
 public:
+    int getLevel() const {
+        return level;
+    }
+
+
+    SDL_Rect *getCamera();
+
+    void setLevel(int level) {
+        Scene::level = level;
+    }
+
+
     int getP1PositionX() const {
         return P1PositionX;
     }
