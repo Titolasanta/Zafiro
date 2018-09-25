@@ -8,9 +8,11 @@
 #include <fstream>
 #include <iostream>
 
+#define LOG_PATH "../Archivos/log.txt"
+
 Logger::Logger(const char* log_level, const char* level_default) : archivo(std::ofstream()){
     std::ofstream archivo_nuevo;
-    archivo_nuevo.open("log.txt", std::ofstream::app);
+    archivo_nuevo.open(LOG_PATH, std::ofstream::app);
     archivo = std::move(archivo_nuevo);
     time_t now = time(NULL);
     char temporal[255];
@@ -19,8 +21,12 @@ Logger::Logger(const char* log_level, const char* level_default) : archivo(std::
     fecha[strlen(fecha)-1] = '\0';
     archivo << "_________________________________________________________________________________________" << std::endl;
     archivo << "[" << fecha << "]\n\n>NUEVO JUEGO INICIADO" << std::endl;
-    archivo << "MODO " << log_level << "\n" << std::endl;
     this->set_level(log_level, level_default);
+    std::string level_string;
+    if (nivel == 1) level_string = "ERROR";
+    else if (nivel == 2) level_string = "INFO";
+    else level_string = "DEBUG";
+    archivo << "MODO " << level_string << "\n" << std::endl;
 }
 
 void Logger::set_level(const char *level, const char* ldefault) {
@@ -48,7 +54,7 @@ void Logger::log(int level, const char* mensaje) {
         struct tm* info;
         info = localtime(&now);
         archivo << "[" << info->tm_hour << ":" << info->tm_min << ":" << info->tm_sec << "] ";
-        archivo << nivel_log << mensaje << std::endl;
+        archivo << nivel_log << mensaje << std::endl << std::endl;
     }
 }
 

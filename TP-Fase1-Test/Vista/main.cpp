@@ -31,6 +31,7 @@ const int SCREEN_HEIGHT = 600;
 
 pugi::xml_document* gXML_doc[2];
 Logger *gplogger;
+pugi::xml_parse_result *gXML_parse_result;
 
 int main( int argc, char* argv[] )
 {
@@ -42,6 +43,7 @@ int main( int argc, char* argv[] )
     if (!(result || result_default)) {
         std::cout << "Error al cargar el archivo de configuración por defecto: " << result_default.description() << std::endl;
     }
+    if (!result) std::cout << "No cargo un joraca" << std::endl;
     const char* modo;
     if (argc > 1 ) {
         modo = argv[1];
@@ -54,6 +56,7 @@ int main( int argc, char* argv[] )
 
     gXML_doc[0] = &doc;
     gXML_doc[1] = &doc_default;
+    gXML_parse_result = &result;
 
 
 

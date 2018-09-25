@@ -5,42 +5,42 @@
     </debug>
     <escenarios>
         <nivel1>
-            <height></height>
-            <width></width>
+            <height>600</height>
+            <width>3000</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
-            <plataforma numero = "1">
+            <plataforma>
                 <tipo></tipo>
-                <xi></xi>
-                <xf></xf>
-                <y></y>
+                <xi>0</xi>
+                <xf>200</xf>
+                <y>450</y>
             </plataforma>
         </nivel1>
         <nivel2>
-            <height></height>
-            <width></width>
+            <height>1000</height>
+            <width>800</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
-            <plataforma numero = "2">
+            <plataforma>
                 <tipo></tipo>
-                <xi></xi>
-                <xf></xf>
-                <y></y>
+                <xi>0</xi>
+                <xf>800</xf>
+                <y>200</y>
             </plataforma>
         </nivel2>
         <nivel3>
-            <height></height>
-            <width></width>
+            <height>600</height>
+            <width>2000</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
-            <plataforma numero = "">
-                <tipo></tipo>
-                <xi></xi>
-                <xf></xf>
-                <y></y>
+            <plataforma>
+                <tipo>sdj</tipo>
+                <xi>0</xi>
+                <xf>2000</xf>
+                <y>400</y>
             </plataforma>
         </nivel3>
     </escenarios>

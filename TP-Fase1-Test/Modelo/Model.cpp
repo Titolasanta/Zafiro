@@ -20,6 +20,7 @@
 extern Logger *gplogger;
 
 extern pugi::xml_document*gXML_doc[2];
+extern pugi::xml_parse_result *gXML_parse_result;
 
 
 bool Model::endOfLevel(Scene& scene){
@@ -162,8 +163,10 @@ void Model::stand() { player1.stand(); }
 
 void Model::changeLevel(Level level,Scene& scene) {
     this->level = level;
+    this->lPlataforms.clear();
+    scene.clearPlatforms();
 
-    if (*gXML_doc[0]) cargar_plataformas(*gXML_doc[0], scene,*this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth());     //No tenia idea de como hacer este
+    if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,*this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth());     //No tenia idea de como hacer este
     else cargar_plataformas(*gXML_doc[1],scene, *this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth()); //chequeo de otra manera
 
 
@@ -173,6 +176,8 @@ void Model::changeLevel(Level level,Scene& scene) {
     scene.getCamera()->y = 0;
     player1.spawn();
     player1.nextLevel();
+
+    gplogger->log(2, "Se cambió de nivel\n");
 }
 
 int Model::getLevelWidth() { return level.getWidth(); }

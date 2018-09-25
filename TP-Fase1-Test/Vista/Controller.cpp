@@ -10,9 +10,10 @@
 
 extern Logger *gplogger;
 extern pugi::xml_document*gXML_doc[2];
+extern pugi::xml_parse_result *gXML_parse_result;
 
 Controller::Controller(View &view, Model& model) : view(view),model(model){
-    if (*gXML_doc[0]) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
+    if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
     else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
 
 }
@@ -38,7 +39,7 @@ void Controller::processEvent(SDL_Event e) {
 
 void Controller::show() {
 
-    gplogger->log(1,"se llama show de controler\n");
+    gplogger->log(3,"Se llama al metodo show de controler\n");
     model.update(scene);
     view.render(scene);
 }

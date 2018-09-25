@@ -33,6 +33,7 @@ public:
     void time();
 
     void moveScenario(int i);
+    void clearPlatforms();
 
 private:
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuracion>
     <debug>
-        <level>DEBUG</level>
+        <level>INFO</level>
     </debug>
     <escenarios>
         <nivel1>
@@ -13,57 +13,141 @@
             <plataforma>
                 <tipo>piedra</tipo>
                 <xi>0</xi>
-                <xf>150</xf>
-                <y>450</y>
+                <xf>700</xf>
+                <y>250</y>
             </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
-                <xi>140</xi>
-                <xf>250</xf>
+                <xi>650</xi>
+                <xf>1000</xf>
                 <y>400</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
-                <xi>220</xi>
-                <xf>300</xf>
+                <xi>910</xi>
+                <xf>1325</xf>
                 <y>290</y>
             </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
-                <xi>290</xi>
-                <xf>400</xf>
+                <xi>1200</xi>
+                <xf>2000</xf>
                 <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>1900</xi>
+                <xf>3000</xf>
+                <y>300</y>
             </plataforma>
         </nivel1>
         <nivel2>
-            <height>2000</height>
-            <width>3456</width>
+            <height>1000</height>
+            <width>800</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
             <plataforma>
                 <tipo>piedra</tipo>
                 <xi>0</xi>
-                <xf>150</xf>
-                <y>450</y>
-            </plataforma>
-            <plataforma>
-                <tipo>piedra</tipo>
-                <xi>140</xi>
                 <xf>250</xf>
                 <y>400</y>
             </plataforma>
             <plataforma>
+                <tipo>piedra</tipo>
+                <xi>265</xi>
+                <xf>400</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
                 <tipo>pasto</tipo>
-                <xi>220</xi>
-                <xf>300</xf>
-                <y>290</y>
+                <xi>350</xi>
+                <xf>500</xf>
+                <y>200</y>
             </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
-                <xi>290</xi>
-                <xf>400</xf>
-                <y>400</y>
+                <xi>510</xi>
+                <xf>700</xf>
+                <y>100</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>400</xi>
+                <xf>500</xf>
+                <y>0</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-100</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-500</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-600</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-700</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-800</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-900</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-1000</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-1100</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>356</xi>
+                <xf>492</xf>
+                <y>-1200</y>
             </plataforma>
         </nivel2>
         <nivel3>
@@ -75,13 +159,13 @@
             <plataforma>
                 <tipo>piedra</tipo>
                 <xi>0</xi>
-                <xf>150</xf>
+                <xf>450</xf>
                 <y>450</y>
             </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
-                <xi>140</xi>
-                <xf>250</xf>
+                <xi>420</xi>
+                <xf>650</xf>
                 <y>400</y>
             </plataforma>
             <plataforma>

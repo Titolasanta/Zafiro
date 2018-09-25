@@ -7,11 +7,12 @@
 #include "xml.h"
 
 extern pugi::xml_document* gXML_doc[2];
+extern pugi::xml_parse_result* gXML_parse_result;
 Level::Level(int n){
 
     level = n;
-    height = get_level_height(*gXML_doc[0], *gXML_doc[1], n);
-    width = get_level_width(*gXML_doc[0], *gXML_doc[1],n);
+    height = get_level_height(*gXML_doc[0], *gXML_doc[1], n, *gXML_parse_result);
+    width = get_level_width(*gXML_doc[0], *gXML_doc[1], n, *gXML_parse_result);
 }
 
 int Level::getHeight(){

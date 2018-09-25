@@ -3,9 +3,12 @@
 //
 
 #include <iostream>
+#include <Vista/Logger.h>
 #include "Character.h"
 #include "Projectile.h"
 #include "Pistol.h"
+
+extern Logger *gplogger;
 
 Character::Character(int posX, int posY) : weapon(Pistol()) {
     // XML deberia chequear que las posiciones esten
@@ -23,7 +26,7 @@ Character::Character(int posX, int posY) : weapon(Pistol()) {
     airborne = true;
     aimDirection = 0;
 
-    //Loggear creacion del personaje
+    gplogger->log(2, "Se creó el personaje");
 }
 void Character::land(int x, int y,int w) {
 
@@ -34,6 +37,8 @@ void Character::land(int x, int y,int w) {
     currentPlatX = x;
     currentPlatW = w;
     currentPlatY = y;
+
+    gplogger->log(3, "El personaje aterriza");
 }
 
 void Character::time() {
@@ -67,12 +72,15 @@ void Character::move(int velX) {
         if (!lookingRight) {
             positionX += 3;
             lookingRight = true;
+            gplogger->log(3, "El personaje mira hacia la derecha");
         }
     }
     else {
         if (lookingRight){
             positionX -= 3;
-            lookingRight = false;}
+            lookingRight = false;
+            gplogger->log(3, "El personaje mira hacia la izquierda");
+        }
     }
 
     if (crouching) return;
@@ -93,11 +101,15 @@ void Character::jump(int velY) {
 
     airborne = true;
     walking = false;
+
+    gplogger->log(3, "El personaje salta");
 }
 
 void Character::standStill() {
     velocityX = 0;
     walking = false;
+
+    gplogger->log(3, "El personaje se detiene");
 }
 
 void Character::aim(int direction) {
@@ -121,12 +133,16 @@ Projectile Character::shoot() {
 }
 void Character::changeWeapon(Weapon weapon){
     weapon = weapon;
+
+    gplogger->log(3, "El personaje cambia de arma");
 }
 
 
 void Character::stand() {
     if (crouching) positionY -= 40;
     crouching = false;
+
+    gplogger->log(3, "El personaje se levanta");
 }
 
 void Character::crouch() {
@@ -134,6 +150,8 @@ void Character::crouch() {
     this->standStill();
     positionY += 40;
     crouching = true;
+
+    gplogger->log(3, "El personaje se agacha");
 }
 
 void Character::takeDamage() {
@@ -146,6 +164,8 @@ void Character::goThroughPlatform(){
     positionY += 55;
     airborne = true;
     crouching = false;
+
+    gplogger->log(3, "El personaje atraviesa una plataforma");
 }
 
 void Character::spawn() {

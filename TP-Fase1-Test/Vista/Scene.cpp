@@ -13,7 +13,7 @@ Scene::Scene() {
 }
 
 void Scene::addPlataform(int x, int y, int width) {
-    gplogger->log(1,"se agrega plataforma\n");
+
     lPlataforms.push_back(std::move(std::make_tuple(x,y,width)));
 }
 
@@ -27,7 +27,9 @@ SDL_Rect *Scene::getCamera(){
 
 
 
-
+void Scene::clearPlatforms(){
+    lPlataforms.clear();
+}
 
 
 std::list<std::tuple<int,int,int>>& Scene::plataforms() {

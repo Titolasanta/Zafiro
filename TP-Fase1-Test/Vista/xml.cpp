@@ -10,29 +10,39 @@
 const char* get_log_level(pugi::xml_document &doc){
     return doc.first_child().child("debug").first_child().child_value();
 }
-int get_level_width(pugi::xml_document &doc, pugi::xml_document &doc_default, int level){
+int get_level_width(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result){
     std::string nivel = "nivel";
     nivel.append(std::to_string(level));
-    int original = doc.first_child().child("escenarios").child(nivel.c_str()).child("width").first_child().text().as_int();
-    if (original) return original;
-    else return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("width").first_child().text().as_int();
+    int original;
+    if (result) {
+        original = doc.first_child().child("escenarios").child(nivel.c_str()).child(
+                "width").first_child().text().as_int();
+        if (original) return original;
+    }
+    return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("width").first_child().text().as_int();
 }
-int get_level_height(pugi::xml_document &doc, pugi::xml_document &doc_default, int level){
+int get_level_height(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result){
     std::string nivel = "nivel";
     nivel.append(std::to_string(level));
-    int original = doc.first_child().child("escenarios").child(nivel.c_str()).child("height").first_child().text().as_int();
-    if (original) return original;
-    else return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("height").first_child().text().as_int();
+    int original;
+    if (result) {
+        original = doc.first_child().child("escenarios").child(nivel.c_str()).child("height").first_child().text().as_int();
+        if (original) return original;
+    }
+    return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("height").first_child().text().as_int();
 
 }
-const char* get_level_background_path(pugi::xml_document* doc, pugi::xml_document* doc_default, int level, int numero_de_fondo){
+const char* get_level_background_path(pugi::xml_document* doc, pugi::xml_document* doc_default, int level, int numero_de_fondo, pugi::xml_parse_result result){
     std::string nivel = "nivel";
     std::string fondo = "fondo";
     nivel.append(std::to_string(level));
     fondo.append(std::to_string(numero_de_fondo));
-    const char* original = doc->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
-    if (original) return original;
-    else return doc_default->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
+    const char* original;
+    if (result) {
+        original = doc->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
+        if (original) return original;
+    }
+    return doc_default->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
 }
 
 void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int level, int limite_vertical, int limite_horizontal){
@@ -43,13 +53,13 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
         int xi = plataforma.child("xi").first_child().text().as_int();
         int xf = plataforma.child("xf").first_child().text().as_int();
         int y = plataforma.child("y").first_child().text().as_int();
-        if (xi >= 0 && xf >=  0 && y >= 0 && xi < xf && xi < limite_horizontal && xf < limite_horizontal && y < limite_vertical) {
+        if (xi >= 0 && xf >=  0 && y >= -(limite_vertical - 600) && xi < xf && xi <= limite_horizontal && xf <= limite_horizontal && y <= 600) {
             modelo.addPlataform(xi,y,xf-xi);
             scene.addPlataform(xi,y,xf-xi);
         }
 
     }
-    modelo.addPlataform(0,300,get_level_width(doc,doc,level));
-    scene.addPlataform(0,300,get_level_width(doc,doc,level));
+    modelo.addPlataform(0,550,limite_horizontal);
+    scene.addPlataform(0,550,limite_horizontal);
 
 }

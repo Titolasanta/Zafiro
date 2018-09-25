@@ -14,30 +14,79 @@
     <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Level.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Level.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Piedra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Piedra.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CompilerIdCXX/a.out" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/log.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/" />
@@ -46,6 +95,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FUSProjectUsageTrigger">
@@ -95,46 +158,50 @@
     <session id="-1828780259">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="2" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="40" />
-          <entry key="h" value="27" />
+          <entry key="cpp" value="56" />
+          <entry key="h" value="33" />
           <entry key="hpp" value="2" />
-          <entry key="txt" value="17" />
-          <entry key="xml" value="6" />
+          <entry key="png" value="1" />
+          <entry key="txt" value="19" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="69" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="XML" value="6" />
+          <entry key="Image" value="1" />
+          <entry key="ObjectiveC" value="91" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="5281" />
-          <entry key="h" value="1148" />
+          <entry key="cpp" value="6802" />
+          <entry key="h" value="1213" />
           <entry key="txt" value="225" />
-          <entry key="xml" value="113" />
+          <entry key="xml" value="470" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="6429" />
+          <entry key="ObjectiveC" value="8015" />
           <entry key="PLAIN_TEXT" value="225" />
-          <entry key="XML" value="113" />
+          <entry key="XML" value="470" />
         </counts>
       </usages-collector>
     </session>
@@ -144,8 +211,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="61" column="120" selection-start-line="61" selection-start-column="120" selection-end-line="61" selection-end-column="120" />
+            <state relative-caret-position="360">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
               <folding>
                 <element signature="e#48#69#0" expanded="true" />
                 <element signature="e#140#157#0" expanded="true" />
@@ -154,11 +221,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+            <state relative-caret-position="337">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#39#55#0" expanded="true" />
               </folding>
@@ -166,37 +233,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="117" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
-              <folding>
-                <element signature="e#96#121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+            <state relative-caret-position="-133">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
               <folding>
                 <element signature="e#39#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-              <folding>
-                <element signature="e#101#124#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,29 +248,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="145" column="47" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
-              <folding>
-                <element signature="e#39#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+            <state relative-caret-position="-74">
+              <caret line="167" column="62" selection-start-line="167" selection-start-column="62" selection-end-line="167" selection-end-column="62" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
               </folding>
@@ -236,10 +258,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.cpp">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+              <folding>
+                <element signature="e#39#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -261,23 +286,26 @@
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/log.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Piedra.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Level.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.h" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Controller.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp" />
       </list>
     </option>
   </component>
@@ -302,7 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +356,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,6 +364,127 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sarasa/configuracion.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Collision.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Modelo/Weapon.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Personajes.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/Sprite.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Vista/View.cpp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/escenario/level1-background1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/escenario/level1-mountains-transparent.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/escenario/level2-background1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/escenario/level3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/spirites/NES-Contra-BillRizerLanceBeanmod.png</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -422,6 +571,9 @@
       <workItem from="1537464113688" duration="7363000" />
       <workItem from="1537552215485" duration="16042000" />
       <workItem from="1537645103430" duration="6920000" />
+      <workItem from="1537722257830" duration="2717000" />
+      <workItem from="1537832386352" duration="3700000" />
+      <workItem from="1537894509737" duration="13108000" />
     </task>
     <task id="LOCAL-00001" summary="agregue un par de funciones para leer el archivo xml">
       <created>1537050934175</created>
@@ -462,19 +614,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77109000" />
+    <option name="totallyTimeSpent" value="96634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23257576" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2439394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32626426" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32626426" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.70146817" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,7 +639,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,13 +702,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.cpp" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.h" />
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -568,29 +713,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.txt" />
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.h" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Window.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
+        <state relative-caret-position="-225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Personajes.cpp">
@@ -604,43 +730,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Colision.cpp" />
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.h" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.h" />
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#39#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controler.cpp" />
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/log.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="145" column="47" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
-          <folding>
-            <element signature="e#39#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Piedra.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -649,36 +743,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="117" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
-          <folding>
-            <element signature="e#96#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
+        <state relative-caret-position="331">
           <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding>
             <element signature="e#101#124#0" expanded="true" />
@@ -686,20 +753,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp">
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Background.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+        <state relative-caret-position="165">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Collision.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Nivel.cpp" />
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Weapon.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/spirites/NES - Contra - Bill Rizer &amp; Lance Bean.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/PlataformaBlanda.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-            <element signature="e#39#64#0" expanded="true" />
+            <element signature="e#96#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Level.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_list.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="732" selection-start-line="732" selection-end-line="732" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Scene.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="61" column="120" selection-start-line="61" selection-start-column="120" selection-end-line="61" selection-end-column="120" />
+        <state relative-caret-position="360">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
           <folding>
             <element signature="e#48#69#0" expanded="true" />
             <element signature="e#140#157#0" expanded="true" />
@@ -707,19 +850,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Controller.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="212">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+          <folding>
+            <element signature="e#39#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        <state relative-caret-position="337">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#39#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/Logger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Character.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="167" column="62" selection-start-line="167" selection-start-column="62" selection-end-line="167" selection-end-column="62" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Modelo/Model.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+          <folding>
+            <element signature="e#39#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
