@@ -5,7 +5,7 @@
 #include "Pistol.h"
 
 Pistol::Pistol(){
-    maxAmmo = 99999;     //Como digo infinito?
+    maxAmmo = 999999;     //Como digo infinito?
     currentAmmo = maxAmmo;
 }
 

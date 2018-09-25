@@ -2,10 +2,12 @@
 // Created by fede on 06/09/18.
 //
 
+#include <iostream>
 #include "Character.h"
 #include "Projectile.h"
+#include "Pistol.h"
 
-Character::Character(int posX, int posY) {
+Character::Character(int posX, int posY) : weapon(Pistol()) {
     // XML deberia chequear que las posiciones esten
     // en el rango valido de la ventana
     positionX = posX;
@@ -37,6 +39,9 @@ void Character::land(int x, int y,int w) {
 void Character::time() {
 
 
+    if(timeTillNextShoot > 0){
+        timeTillNextShoot--;
+    }
 
     if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX)
         airborne = true;
@@ -100,12 +105,17 @@ void Character::aim(int direction) {
 }
 
 Projectile Character::shoot() {
+    if (timeTillNextShoot != 0){
+        throw 1; //no recargo el arma
+    }
+
+    timeTillNextShoot = weapon.getFireRate();
+
     try {
         return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
     } catch(...){
-        changeWeapon(Weapon());
+        changeWeapon(Pistol());
     }
-
     return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
 }
 void Character::changeWeapon(Weapon weapon){

@@ -7,6 +7,7 @@
 #include "Exception.h"
 #include <list>
 #include <tuple>
+#include <iostream>
 #include "Scene.h"
 
 Viewable::Viewable(Window* window,std::string imgpath,int x,int y,int w,int h) : imgPath(imgpath),clip{x,y,w,h},texture(std::move(window->createImgTexture(0xFF, 0xFF, 0xFF) ) )
@@ -20,10 +21,10 @@ Viewable::Viewable(Window* window,std::string imgpath,int x,int y,int w,int h) :
 
 }
 
-void Viewable::renderList(std::list<std::tuple<int,int>> lista) {
+void Viewable::renderList(std::list<std::tuple<int,int>> lista,SDL_Rect* camera) {
 
     for (auto it = lista.begin(); it != lista.end(); it++) {
-        texture.render(std::get<0>(*it), std::get<1>(*it));
+        texture.render(std::get<0>(*it)-camera->x, std::get<1>(*it)-camera->y,&clip);
     }
 }
 

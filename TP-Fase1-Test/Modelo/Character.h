@@ -37,6 +37,7 @@ private:
         int currentPlatX;
         int currentPlatY;
         int currentPlatW;
+        int timeTillNextShoot = 0;
 
 private:
     //si queres que sea polimorifico y pueda tener diferentes

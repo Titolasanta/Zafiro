@@ -9,8 +9,9 @@
 #include "Viewable.h"
 
 class Bullet : public Viewable {
-    Bullet(Window window);
-    void render(Scene scene);
+public:
+    Bullet(Window *window);
+    void render(Scene &scene,SDL_Rect* camera);
 };
 
 

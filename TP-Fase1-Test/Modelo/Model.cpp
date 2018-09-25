@@ -72,10 +72,19 @@ void Model::update(Scene &scene) {
     }
     std::list<std::tuple<int,int>> lTemp;
 
-    for (auto it = lBullets.begin(); it != lBullets.end(); it++) {
+    for(auto it = lBullets.begin(); it != lBullets.end();)
+    {
         it->move();
-        lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
+        if(!(it->inSight(scene))) {
+            std::cout << "model delet bullet\n";
+            it=lBullets.erase(it);
+        }
+        else {
+            lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
+            ++it;
+        }
     }
+
     scene.setBullets(std::move(lTemp));
 
     scene.setP1PositionX(player1.getPositionX());
@@ -159,5 +168,9 @@ int Model::getLevelWidth() { return level.getWidth(); }
 int Model::getLevelHeight() { return level.getHeight(); }
 
 void Model::shoot(){
-    lBullets.push_back(player1.shoot());
+    try {
+
+        lBullets.push_back(std::move(player1.shoot()));
+    } catch(int e) { //no recargo el arma
+    }
 }

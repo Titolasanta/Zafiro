@@ -6,6 +6,8 @@
 #define TP_FASE1_TEST_PROJECTILE_H
 
 
+#include <Vista/Scene.h>
+
 class Projectile {
 
     private:
@@ -40,6 +42,7 @@ private:
         Projectile(int, int, int, int);
         ~Projectile() = default;
         void move();
+        bool inSight(Scene& scene);
 };
 
 

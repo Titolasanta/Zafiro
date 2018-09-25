@@ -13,12 +13,14 @@ class Weapon {
     protected:
         int maxAmmo;
         int currentAmmo = maxAmmo;
-        int fireRate;
+        int fireRate = 5;
+public:
+    int getFireRate() const;
 
-    public:
-        Weapon(){};
-        ~Weapon();
-        Projectile shoot(int, int, bool, int);
+    void setFireRate(int fireRate);
+
+    ~Weapon();
+    Projectile shoot(int, int, bool, int);
 };
 
 

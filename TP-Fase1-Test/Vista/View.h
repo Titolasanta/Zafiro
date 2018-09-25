@@ -10,9 +10,10 @@
 #include "Personajes.h"
 #include "SdlImgInit.h"
 #include "SdlInit.h"
-#include "Pasto.h"
+#include "PlataformaBlanda.h"
 #include "Piedra.h"
 #include "Background.h"
+#include "Bullet.h"
 
 class View {
 
@@ -30,6 +31,7 @@ private:
 //Scene& scene;
     Piedra piedra;
     Pasto pasto;
+    Bullet bullet;
     SDL_Rect* camera = NULL;
 
 };

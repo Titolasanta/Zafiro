@@ -30,8 +30,12 @@ SDL_Rect *Scene::getCamera(){
 
 
 
-std::list<std::tuple<int,int,int>> Scene::plataforms() {
+std::list<std::tuple<int,int,int>>& Scene::plataforms() {
     return lPlataforms;
+}
+
+std::list<std::tuple<int,int>>& Scene::Bullets() {
+    return lBullets;
 }
 
 

@@ -20,7 +20,7 @@ extern pugi::xml_document *gXML_doc[2];
 
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
-personajes(&window),piedra(&window),pasto(&window),background(window,1)
+personajes(&window),piedra(&window),pasto(&window),bullet(&window),background(window,1)
 {
    // window.setRenderDrawColor(0x10  ,0x10,0xFF,0x120);
     std::string windowName("juego");
@@ -56,6 +56,7 @@ void View::render(Scene& scene) {
 
     piedra.render(scene,camera);
     pasto.render(scene,camera);
+    bullet.render(scene,camera);
     personajes.render(scene,camera->x, camera->y);
     window.updateRenderer();
 
