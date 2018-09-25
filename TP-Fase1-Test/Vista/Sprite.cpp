@@ -18,26 +18,26 @@ SDL_Rect* Sprite::getFaceDown() {
 }
 
 Sprite::Sprite()
-: frameMoviemiento { {{1,43,16,35}, //Corriendo hacia adelante
-                      {18,43,19,35}, //(segunda linea sprite sheet)
-                      {38,47,20,31},
-                      {59,44,16,34},
-                      {76,44,18,34},
-                      {95,47,20,31} },
-                     {{1,149,16,35}, //apuntando hacia arriba
-                      {18,149,19,35}, // (quinta linea sprite sheet)
-                      {38,151,20,33},
-                      {1,221,20,35}, //apuntando hacia abajo
-                      {22,221,21,35}, // (septima linea sprite sheet)
-                      {44,223,21,33} },
+: frameMoviemiento { {{1*2,43*2,16*2,35*2}, //Corriendo hacia adelante
+                      {18*2,43*2,19*2,35*2}, //(segunda linea sprite sheet)
+                      {38*2,47*2,20*2,31*2},
+                      {59*2,44*2,16*2,34*2},
+                      {76*2,44*2,18*2,34*2},
+                      {95*2,47*2,20*2,31*2} },
+                     {{1*2,149*2,16*2,35*2}, //apuntando hacia arriba
+                      {18*2,149*2,19*2,35*2}, // (quinta linea sprite sheet)
+                      {38*2,151*2,20*2,33*2},
+                      {1*2,221*2,20*2,35*2}, //apuntando hacia abajo
+                      {22*2,221*2,21*2,35*2}, // (septima linea sprite sheet)
+                      {44*2,223*2,21*2,33*2} },
 
-                     {{117,52,16,20},//secuencia de salto
-                      {135,44,20,26},
-                      {157,52,16,20},
-                      {157,54,17,16},
+                     {{117*2,52*2,16*2,20*2},//secuencia de salto
+                      {135*2,44*2,20*2,26*2},
+                      {157*2,52*2,16*2,20*2},
+                      {157*2,54*2,17*2,16*2},
                       {0,0,0,0},
                       {0,0,0,0}}
                       },
-parado{0,8,23,34},
-faceDown{79,25,32,16}
+parado{0*2,8*2,23*2,34*2},
+faceDown{79*2,25*2,32*2,16*2}
                  {}

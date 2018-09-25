@@ -125,14 +125,14 @@ void Character::changeWeapon(Weapon weapon){
 
 
 void Character::stand() {
-    if (crouching) positionY -= 20;
+    if (crouching) positionY -= 40;
     crouching = false;
 }
 
 void Character::crouch() {
     if (airborne||crouching) return;
     this->standStill();
-    positionY += 20;
+    positionY += 40;
     crouching = true;
 }
 

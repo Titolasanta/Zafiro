@@ -7,7 +7,7 @@
 #include "Sprite.h"
 #include "Logger.h"
 
-#define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
+#define SPIRIT_PATH "../spirites/NES-Contra-BillRizerLanceBeanmod.png"
 
 #define characterWidth 20
 

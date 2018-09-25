@@ -4,7 +4,7 @@
 
 #include "Collision.h"
 
-#define characterHeight 30
+#define characterHeight 60
 Collision::Collision(Character &char1, std::list<std::tuple<int, int,int>>& platformList) {
     if (char1.getVelocityY() > 0) {
         for(auto it = platformList.begin(); it != platformList.end(); it++) {

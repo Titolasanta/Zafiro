@@ -24,7 +24,7 @@ Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int di
         currentAmmo--;
 
         //el +10 en y es para matchear la altura del arma
-        return Projectile(positionX, positionY + 10, velX,  velY);
+        return Projectile(positionX, positionY + 20, velX,  velY);
     }
     throw Projectile(0,0,0,0);
 }
