@@ -32,8 +32,10 @@ class Model {
         void jump();
         void time();
         bool endOfLevel(Scene&);
-        std::list<std::tuple<int,int,int>> lPlataforms;
-        void addPlataform(int x, int y, int w);
+        std::list<std::tuple<int,int,int>> lPlataformsSoft;
+        std::list<std::tuple<int,int,int>> lPlataformsHard;
+        void addPlataformSoft(int x, int y, int w);
+        void addPlataformHard(int x, int y, int w);
         void changeLevel(Level,Scene&);
         void crouch();
         void stand();

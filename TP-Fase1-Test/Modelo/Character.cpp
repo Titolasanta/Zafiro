@@ -28,12 +28,13 @@ Character::Character(int posX, int posY) : weapon(Pistol()) {
 
     gplogger->log(2, "Se creó el personaje");
 }
-void Character::land(int x, int y,int w) {
+void Character::land(int x, int y,int w,bool hard) {
 
     airborne = false;
     if(getVelocityX() != 0)
         walking = true;
     velocityY = 0;
+    currentPlatHard = hard;
     currentPlatX = x;
     currentPlatW = w;
     currentPlatY = y;
@@ -50,7 +51,6 @@ void Character::time() {
 
     if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX)
         airborne = true;
-
 
    if(airborne)
         velocityY += 4;
@@ -161,7 +161,7 @@ void Character::takeDamage() {
 }
 
 void Character::goThroughPlatform(){
-    positionY += 55;
+    positionY += 10;
     airborne = true;
     crouching = false;
 
@@ -196,4 +196,10 @@ void Character::setVelocityX(int velocityX) {
 
 void Character::setVelocityY(int velocityY) {
     Character::velocityY = velocityY;
+}
+
+bool Character::canGoThrough() {
+    if(!(currentPlatHard))
+        return true;
+    return false;
 }

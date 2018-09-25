@@ -7,7 +7,7 @@
 
 
 #define largoPlataforma 3500
-#define characterHeight 30
+#define characterHeight 60
 #include "Weapon.h"
 #include "Projectile.h"
 
@@ -15,7 +15,6 @@ class Character {
     private:
         int positionX;
         int positionY;
-
 
 private:
     int velocityX;
@@ -37,6 +36,7 @@ private:
         int currentPlatX;
         int currentPlatY;
         int currentPlatW;
+        bool currentPlatHard;
         int timeTillNextShoot = 0;
 
 private:
@@ -57,7 +57,7 @@ private:
         void crouch();
         void takeDamage();
         void time();
-        void land(int,int,int);
+        void land(int,int,int,bool);
         void goThroughPlatform();
         int level = 1;
         void changeWeapon(Weapon);
@@ -119,10 +119,14 @@ public:
     void setAirborne(bool airborne) {
         Character::airborne = airborne;
     }
-
+    void setWalking(bool walking){
+        this->walking = walking;
+    }
     void spawn();
 
     void nextLevel();
+
+    bool canGoThrough();
 };
 
 

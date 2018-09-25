@@ -10,9 +10,9 @@
 #include <tuple>
 #include "Character.h"
 
-class Collision {
+class CollisionSoft {
 public:
-    Collision(Character&,std::list<std::tuple<int,int,int>>& platformList);
+    CollisionSoft(Character&,std::list<std::tuple<int,int,int>>& platformList);
 };
 
 

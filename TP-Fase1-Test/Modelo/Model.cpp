@@ -11,7 +11,8 @@
 
 #include <list>
 #include "Model.h"
-#include "Collision.h"
+#include "CollisionSoft.h"
+#include "CollisionHard.h"
 
 
 #define MARGENX (800/2)
@@ -42,8 +43,8 @@ void Model::time(){
 
     player1.time();
 
-
-    Collision(player1,lPlataforms);
+    CollisionHard(player1,lPlataformsHard);
+    CollisionSoft(player1,lPlataformsSoft);
 }
 
 void Model::update(Scene &scene) {
@@ -123,9 +124,14 @@ void Model::update(Scene &scene) {
 }
 
 
-void Model::addPlataform(int x, int y, int w) {
-    lPlataforms.push_back(std::move(std::make_tuple(x,y,w)));
-    gplogger->log(2, "Se agregó una plataforma");
+void Model::addPlataformSoft(int x, int y, int w) {
+    lPlataformsSoft.push_back(std::move(std::make_tuple(x,y,w)));
+    gplogger->log(2, "Se agregó una plataforma blanda");
+}
+
+void Model::addPlataformHard(int x, int y, int w) {
+    lPlataformsHard.push_back(std::move(std::make_tuple(x,y,w)));
+    gplogger->log(2, "Se agregó una plataforma dura");
 }
 
 void Model::moveRight() {
@@ -141,8 +147,9 @@ void Model::moveLeft() {
 void Model::stop() { player1.standStill(); }
 
 void Model::jump() {
-    if (!player1.isCrouching()) player1.jump(-1000);
-    else player1.goThroughPlatform();
+    if (!player1.isCrouching()) player1.jump(-40);
+    else if(player1.canGoThrough())
+        player1.goThroughPlatform();
 }
 
 void Model::aimDown() {
@@ -163,8 +170,10 @@ void Model::stand() { player1.stand(); }
 
 void Model::changeLevel(Level level,Scene& scene) {
     this->level = level;
-    this->lPlataforms.clear();
-    scene.clearPlatforms();
+    this->lPlataformsSoft.clear();
+    this->lPlataformsHard.clear();
+    scene.clearPlatformsHard();
+    scene.clearPlatformsSoft();
 
     if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,*this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth());     //No tenia idea de como hacer este
     else cargar_plataformas(*gXML_doc[1],scene, *this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth()); //chequeo de otra manera

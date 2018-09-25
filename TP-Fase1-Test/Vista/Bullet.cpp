@@ -13,5 +13,5 @@ Bullet::Bullet(Window *window) : Viewable(window,"../spirites/Bullet.png",25,9,6
 }
 
 void Bullet::render(Scene &scene,SDL_Rect* camera) {
-    this->renderList(scene.Bullets(),camera);
+    this->renderList(scene.getLBullets(),camera);
 }

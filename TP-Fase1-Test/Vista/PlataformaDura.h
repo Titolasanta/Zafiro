@@ -6,8 +6,14 @@
 #define TP_FASE1_TEST_PLATAFORMADURA_H
 
 
-class PlataformaDura {
+#include "Scene.h"
+#include "Window.h"
+#include "Viewable.h"
 
+class PlataformaDura : public Viewable{
+public:
+    void render(Scene& scene,SDL_Rect* camera);
+    PlataformaDura(Window* window);
 };
 
 

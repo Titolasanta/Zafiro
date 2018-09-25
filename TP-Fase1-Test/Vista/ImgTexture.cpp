@@ -123,7 +123,8 @@ void ImgTexture::loadFromFile( std::string path ){
 	//Load image at specified path
 	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
 	if( loadedSurface == NULL ){
-		throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
+		loadedSurface = IMG_Load( "../escenario/negro.png" );
+		//throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
 	}
 	//Color key image
 	if(trans){
@@ -141,7 +142,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	//Get rid of old loaded surface
 	SDL_FreeSurface( loadedSurface );
 
-	gplogger->log(1,"se carga file a una imgTexture\n");
+	gplogger->log(2,"se carga file a una imgTexture\n");
 }
 
 void ImgTexture::free(){

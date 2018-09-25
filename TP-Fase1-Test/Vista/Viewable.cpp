@@ -12,7 +12,6 @@
 
 Viewable::Viewable(Window* window,std::string imgpath,int x,int y,int w,int h) : imgPath(imgpath),clip{x,y,w,h},texture(std::move(window->createImgTexture(0xFF, 0xFF, 0xFF) ) )
 {
-    printf("%d\n",clip.w);
 
     if(this->imgPath.empty())
         throw OSError("no se setea el imgPath de Viewable");

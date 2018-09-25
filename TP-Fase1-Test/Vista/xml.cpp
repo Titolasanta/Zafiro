@@ -54,12 +54,12 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
         int xf = plataforma.child("xf").first_child().text().as_int();
         int y = plataforma.child("y").first_child().text().as_int();
         if (xi >= 0 && xf >=  0 && y >= -(limite_vertical - 600) && xi < xf && xi <= limite_horizontal && xf <= limite_horizontal && y <= 600) {
-            modelo.addPlataform(xi,y,xf-xi);
-            scene.addPlataform(xi,y,xf-xi);
+            modelo.addPlataformSoft(xi, y, xf - xi);
+            scene.addPlataformSoft(xi,y,xf-xi);
         }
 
     }
-    modelo.addPlataform(0,550,limite_horizontal);
-    scene.addPlataform(0,550,limite_horizontal);
+    modelo.addPlataformHard(0, 550, limite_horizontal);
+    scene.addPlataformHard(0,550,limite_horizontal);
 
 }

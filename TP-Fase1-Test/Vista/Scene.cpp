@@ -12,9 +12,13 @@ Scene::Scene() {
     gplogger->log(1,"se crea Escena\n");
 }
 
-void Scene::addPlataform(int x, int y, int width) {
 
-    lPlataforms.push_back(std::move(std::make_tuple(x,y,width)));
+void Scene::clearPlatformsSoft(){
+    lPlataformsSoft.clear();
+}
+
+void Scene::clearPlatformsHard(){
+    lPlataformsHard.clear();
 }
 
 void Scene::setBullets(std::list<std::tuple<int,int>> l){
@@ -27,17 +31,27 @@ SDL_Rect *Scene::getCamera(){
 
 
 
-void Scene::clearPlatforms(){
-    lPlataforms.clear();
+
+
+
+std::list<std::tuple<int,int,int>>& Scene::getLPlataformSoft() {
+    return lPlataformsSoft;
 }
 
-
-std::list<std::tuple<int,int,int>>& Scene::plataforms() {
-    return lPlataforms;
+std::list<std::tuple<int,int,int>>& Scene::getLPlataformHard() {
+    return lPlataformsHard;
 }
 
-std::list<std::tuple<int,int>>& Scene::Bullets() {
+std::list<std::tuple<int,int>>& Scene::getLBullets() {
     return lBullets;
+}
+
+void Scene::addPlataformSoft(int x, int y, int width) {
+    lPlataformsSoft.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
+}
+
+void Scene::addPlataformHard(int x, int y, int width) {
+    lPlataformsHard.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
 
