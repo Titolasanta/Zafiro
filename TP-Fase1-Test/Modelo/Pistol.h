@@ -10,9 +10,6 @@
 
 class Pistol : public Weapon{
 
-    private:
-        int fireRate = 1;
-
     public:
         Pistol();
         ~Pistol();

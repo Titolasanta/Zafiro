@@ -14,7 +14,7 @@
 class Viewable {
 public:
     Viewable(Window* window,std::string imgpath,int x,int y,int w,int h);
-    void renderList(std::list<std::tuple<int,int>> list);
+    void renderList(std::list<std::tuple<int,int>> list,SDL_Rect*);
     void renderList(std::list<std::tuple<int,int,int>> list,SDL_Rect* camera);
 protected:
     std::string imgPath;

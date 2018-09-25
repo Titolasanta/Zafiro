@@ -20,11 +20,11 @@ public:
 
 
 
-    std::list<std::tuple<int,int,int>> plataforms();
+    std::list<std::tuple<int,int,int>>& plataforms();
+    std::list<std::tuple<int,int>>& Bullets();
 
     void addPlataform(int x, int y, int width);
 
-    std::list<std::tuple<int,int>> lBullets;
 
     void setBullets(std::list<std::tuple<int,int>>);
 
@@ -36,6 +36,7 @@ public:
 
 private:
 
+    std::list<std::tuple<int,int>> lBullets;
     int P1PositionX;
     int P1PositionY;
     int P1VelocityX;
@@ -50,7 +51,6 @@ private:
     bool P1Dead;
     //Weapon weapon;
     int P1AimDirection;
-    std::list<std::tuple<int,int,int>> lBulets;
     std::list<std::tuple<int,int,int>> lPlataforms;
 
     SDL_Rect camera = { 0, 0, 800, 600 };
