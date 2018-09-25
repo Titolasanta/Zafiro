@@ -101,7 +101,8 @@ void Character::standStill() {
 }
 
 void Character::aim(int direction) {
-    aimDirection = direction;
+    if (!crouching) aimDirection = direction;
+    else aimDirection = 0;
 }
 
 Projectile Character::shoot() {
