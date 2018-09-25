@@ -22,7 +22,10 @@ void Controller::processEvent(SDL_Event e) {
 
     if (e.type == SDL_KEYDOWN) {
         if (e.key.keysym.sym == SDLK_SPACE) model.jump();
-        if (e.key.keysym.sym == SDLK_RIGHT) model.moveRight();
+        if (e.key.keysym.sym == SDLK_RIGHT) {
+            model.moveRight();
+            view.moveBackgroundRight();
+        }
         if (e.key.keysym.sym == SDLK_LEFT) model.moveLeft();
         if (e.key.keysym.sym == SDLK_DOWN) model.aimDown();
         if (e.key.keysym.sym == SDLK_UP) model.aimUp();

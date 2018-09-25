@@ -8,14 +8,10 @@
 #include "Window.h"
 #include "Scene.h"
 
-//The dimensions of the level
-const int LEVEL_WIDTH = 3456;
-const int LEVEL_HEIGHT = 245;
-
 class Background  {
 public:
     Background(Window&,int);
-    void render(Scene&,SDL_Rect&);
+    void render(Scene&,SDL_Rect&,int scrollingOffset);
 
     SDL_Rect *getCamera();
 
@@ -25,6 +21,13 @@ private:
     ImgTexture img1;
     ImgTexture img2;
     ImgTexture img3;
+    int scrollingOffset=0;
+public:
+    ImgTexture &getImg1();
+    int getScrollingOffset();
+    void setScrollingOffset(int scrollingOffset);
+
+private:
     //The camera area, area to be rendered
     SDL_Rect camera = { 0, 0, 800, 600 };
 };

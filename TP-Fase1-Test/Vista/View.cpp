@@ -40,7 +40,7 @@ void View::render(Scene& scene) {
 
 
 
-    background.render(scene,*camera);
+    background.render(scene,*camera, background.getScrollingOffset());
 
 
 
@@ -55,4 +55,13 @@ void View::render(Scene& scene) {
     gplogger->log(1,"finaliza renderear view\n");
 
 
+}
+
+void View::moveBackgroundRight(){
+    int newOffset= background.getScrollingOffset();
+    --newOffset;
+    if (newOffset < -background.getImg1().getWidth() ) {
+        newOffset = 0;
+    }
+    background.setScrollingOffset(newOffset);
 }

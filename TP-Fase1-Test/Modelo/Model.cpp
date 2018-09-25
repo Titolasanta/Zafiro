@@ -130,7 +130,7 @@ void Model::addPlataform(int x, int y, int w) {
 
 void Model::moveRight() {
     if (player1.getPositionX() > 3500) this->stop();
-    else player1.move(100);
+    else player1.move(10);
 }
 
 void Model::moveLeft() {

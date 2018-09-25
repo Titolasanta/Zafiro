@@ -21,6 +21,7 @@ public:
     View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
 
     void render(Scene& scene);
+    void moveBackgroundRight();
 
 private:
     SdlImgInit z;
