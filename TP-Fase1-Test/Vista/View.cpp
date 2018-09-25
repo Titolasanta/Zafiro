@@ -12,8 +12,6 @@
 #include "xml.h"
 #include "Logger.h"
 #include <iostream>
-#define MARGENX (800/2)
-#define MARGENY (600/3)
 
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
@@ -40,15 +38,7 @@ void View::render(Scene& scene) {
     //background.render(scene);
 
 
-    //Center the camera over the player
-    if (scene.getLevel() != 2){
-        if (scene.getP1PositionX() > MARGENX + camera->x)
-            camera->x = scene.getP1PositionX() - MARGENX;
-    }else {
-        if (scene.getP1PositionY() < MARGENY + camera->y)
-            if(scene.getP1PositionY() - MARGENY < 0)
-                camera->y = scene.getP1PositionY() - MARGENY;
-    }
+
 
     background.render(scene,*camera);
 
@@ -59,6 +49,8 @@ void View::render(Scene& scene) {
     bullet.render(scene,camera);
     personajes.render(scene,camera->x, camera->y);
     window.updateRenderer();
+
+    //Center the camera over the player
 
     gplogger->log(1,"finaliza renderear view\n");
 

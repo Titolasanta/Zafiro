@@ -13,6 +13,10 @@
 #include "Model.h"
 #include "Collision.h"
 
+
+#define MARGENX (800/2)
+#define MARGENY (600/3)
+
 extern Logger *gplogger;
 
 extern pugi::xml_document*gXML_doc[2];
@@ -46,13 +50,13 @@ void Model::update(Scene &scene) {
 
     this->time();
 
-    SDL_Rect cam = *scene.getCamera();
-    if (player1.getPositionX() < 5 + cam.x) {
-        player1.setPositionX( 5 + cam.x);
+    SDL_Rect* cam = scene.getCamera();
+    if (player1.getPositionX() < 5 + cam->x) {
+        player1.setPositionX( 5 + cam->x);
         player1.setVelocityX(0);
     }
 
-    if(player1.getPositionY() > 600 + cam.y) {
+    if(player1.getPositionY() > 600 + cam->y) {
         player1.spawn();
         scene.getCamera()->x = 0;
         scene.getCamera()->y = 0;
@@ -60,13 +64,13 @@ void Model::update(Scene &scene) {
 
 
     if(level.getLevel() != 2){
-        if (player1.getPositionY() < -5 + cam.y) {
-            player1.setPositionY(-5 +  cam.y);
+        if (player1.getPositionY() < -5 + cam->y) {
+            player1.setPositionY(-5 +  cam->y);
             player1.setVelocityY(0);
         }
     }else{
-        if (player1.getPositionX() > 770 + cam.x) {
-            player1.setPositionX(770 + cam.x);
+        if (player1.getPositionX() > 770 + cam->x) {
+            player1.setPositionX(770 + cam->x);
             player1.setVelocityX(0);
         }
     }
@@ -103,10 +107,18 @@ void Model::update(Scene &scene) {
 
     scene.setP1Walking(player1.isWalking());
 
+    if (scene.getLevel() != 2){
+        if (scene.getP1PositionX() > MARGENX + cam->x)
+            cam->x = scene.getP1PositionX() - MARGENX;
+    }else {
+        if (scene.getP1PositionY() < MARGENY + cam->y)
+            if(scene.getP1PositionY() - MARGENY < 0)
+                cam->y = scene.getP1PositionY() - MARGENY;
+    }
+
 
     if(endOfLevel(scene))
         this->changeLevel(level.next(),scene);
-
 }
 
 
@@ -128,7 +140,7 @@ void Model::moveLeft() {
 void Model::stop() { player1.standStill(); }
 
 void Model::jump() {
-    if (!player1.isCrouching()) player1.jump(-100);
+    if (!player1.isCrouching()) player1.jump(-1000);
     else player1.goThroughPlatform();
 }
 
