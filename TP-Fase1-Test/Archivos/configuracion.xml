@@ -5,11 +5,113 @@
     </debug>
     <escenarios>
         <nivel1>
-            <height>2000</height>
-            <width>3456</width>
+            <height>600</height>
+            <width>8500</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>2500</xi>
+                <xf>3500</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>3200</xi>
+                <xf>3900</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>3100</xi>
+                <xf>4200</xf>
+                <y>475</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4300</xi>
+                <xf>4500</xf>
+                <y>375</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>4500</xi>
+                <xf>4900</xf>
+                <y>475</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4000</xi>
+                <xf>5000</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4800</xi>
+                <xf>5200</xf>
+                <y>250</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5100</xi>
+                <xf>5500</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5500</xi>
+                <xf>6000</xf>
+                <y>350</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5200</xi>
+                <xf>5300</xf>
+                <y>150</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5900</xi>
+                <xf>6600</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6450</xi>
+                <xf>6550</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6400</xi>
+                <xf>7000</xf>
+                <y>200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6800</xi>
+                <xf>7000</xf>
+                <y>450</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6900</xi>
+                <xf>7300</xf>
+                <y>350</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>7400</xi>
+                <xf>7800</xf>
+                <y>500</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>7700</xi>
+                <xf>8500</xf>
+                <y>400</y>
+            </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
                 <xi>0</xi>
@@ -42,143 +144,383 @@
             </plataforma>
         </nivel1>
         <nivel2>
-            <height>1000</height>
+            <height>4000</height>
             <width>800</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
             <plataforma>
-                <tipo>piedra</tipo>
+                <tipo>pasto</tipo>
                 <xi>0</xi>
-                <xf>250</xf>
+                <xf>300</xf>
                 <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>piedra</tipo>
-                <xi>265</xi>
-                <xf>400</xf>
-                <y>300</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>350</xi>
-                <xf>500</xf>
+                <xf>600</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
                 <y>200</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>510</xi>
-                <xf>700</xf>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
                 <y>100</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>400</xi>
-                <xf>500</xf>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
                 <y>0</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
                 <y>-100</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
                 <y>-200</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
                 <y>-300</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
                 <y>-400</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
                 <y>-500</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
                 <y>-600</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
                 <y>-700</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
                 <y>-800</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
                 <y>-900</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
                 <y>-1000</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
                 <y>-1100</y>
             </plataforma>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>356</xi>
-                <xf>492</xf>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
                 <y>-1200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-1300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-1400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-1500</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-1600</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-1700</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-1800</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-1900</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-2000</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-2100</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-2200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-2300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-2400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-2500</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-2600</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-2700</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-2800</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-2900</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-3000</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-3100</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>300</xf>
+                <y>-3200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>350</xi>
+                <xf>600</xf>
+                <y>-3300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>200</xi>
+                <xf>800</xf>
+                <y>-3300</y>
             </plataforma>
         </nivel2>
         <nivel3>
             <height>600</height>
-            <width>3456</width>
+            <width>8500</width>
             <fondo1></fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
             <plataforma>
-                <tipo>piedra</tipo>
-                <xi>0</xi>
-                <xf>450</xf>
-                <y>450</y>
-            </plataforma>
-            <plataforma>
-                <tipo>piedra</tipo>
-                <xi>420</xi>
-                <xf>650</xf>
+                <tipo>pasto</tipo>
+                <xi>2500</xi>
+                <xf>3500</xf>
                 <y>400</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
-                <xi>220</xi>
-                <xf>300</xf>
+                <xi>3200</xi>
+                <xf>3900</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>3100</xi>
+                <xf>4200</xf>
+                <y>475</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4300</xi>
+                <xf>4500</xf>
+                <y>375</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>4500</xi>
+                <xf>4900</xf>
+                <y>475</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4000</xi>
+                <xf>5000</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>4800</xi>
+                <xf>5200</xf>
+                <y>250</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5100</xi>
+                <xf>5500</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5500</xi>
+                <xf>6000</xf>
+                <y>350</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5200</xi>
+                <xf>5300</xf>
+                <y>150</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>5900</xi>
+                <xf>6600</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6450</xi>
+                <xf>6550</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6400</xi>
+                <xf>7000</xf>
+                <y>200</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6800</xi>
+                <xf>7000</xf>
+                <y>450</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>6900</xi>
+                <xf>7300</xf>
+                <y>350</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>7400</xi>
+                <xf>7800</xf>
+                <y>500</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>7700</xi>
+                <xf>8500</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>0</xi>
+                <xf>700</xf>
+                <y>250</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>650</xi>
+                <xf>1000</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>910</xi>
+                <xf>1325</xf>
                 <y>290</y>
             </plataforma>
             <plataforma>
                 <tipo>piedra</tipo>
-                <xi>290</xi>
-                <xf>400</xf>
+                <xi>1200</xi>
+                <xf>2000</xf>
                 <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>piedra</tipo>
+                <xi>1900</xi>
+                <xf>3000</xf>
+                <y>300</y>
             </plataforma>
         </nivel3>
     </escenarios>
