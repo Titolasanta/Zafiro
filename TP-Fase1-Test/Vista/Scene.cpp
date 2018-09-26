@@ -13,13 +13,12 @@ Scene::Scene() {
 }
 
 
-void Scene::clearPlatformsSoft(){
+void Scene::clearPlatform(){
     lPlataformsSoft.clear();
-}
-
-void Scene::clearPlatformsHard(){
+    lPlataformsHielo.clear();
     lPlataformsHard.clear();
 }
+
 
 void Scene::setBullets(std::list<std::tuple<int,int>> l){
     lBullets = std::move(l);
@@ -38,6 +37,10 @@ std::list<std::tuple<int,int,int>>& Scene::getLPlataformSoft() {
     return lPlataformsSoft;
 }
 
+std::list<std::tuple<int,int,int>>& Scene::getLPlataformHielo() {
+    return lPlataformsHielo;
+}
+
 std::list<std::tuple<int,int,int>>& Scene::getLPlataformHard() {
     return lPlataformsHard;
 }
@@ -48,6 +51,10 @@ std::list<std::tuple<int,int>>& Scene::getLBullets() {
 
 void Scene::addPlataformSoft(int x, int y, int width) {
     lPlataformsSoft.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
+}
+
+void Scene::addPlataformHielo(int x, int y, int width) {
+    lPlataformsHielo.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
 void Scene::addPlataformHard(int x, int y, int width) {

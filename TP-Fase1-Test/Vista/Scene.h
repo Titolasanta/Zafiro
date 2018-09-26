@@ -20,6 +20,7 @@ public:
 
 
     std::list<std::tuple<int,int,int>>& getLPlataformHard();
+    std::list<std::tuple<int,int,int>>& getLPlataformHielo();
     std::list<std::tuple<int,int,int>>& getLPlataformSoft();
     std::list<std::tuple<int,int>>& getLBullets();
 
@@ -27,6 +28,7 @@ public:
     void addPlataformSoft(int x, int y, int width);
 
     void addPlataformHard(int x, int y, int width);
+    void addPlataformHielo(int x, int y, int width);
 
 
     void setBullets(std::list<std::tuple<int,int>>);
@@ -36,8 +38,7 @@ public:
     void time();
 
     void moveScenario(int i);
-    void clearPlatformsSoft();
-    void clearPlatformsHard();
+    void clearPlatform();
 
 private:
 
@@ -58,7 +59,7 @@ private:
     int P1AimDirection;
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
     std::list<std::tuple<int,int,int>> lPlataformsHard;
-
+    std::list<std::tuple<int,int,int>> lPlataformsHielo;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
 

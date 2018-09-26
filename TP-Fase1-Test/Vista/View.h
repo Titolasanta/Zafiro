@@ -15,6 +15,7 @@
 #include "Background.h"
 #include "Bullet.h"
 #include "PlataformaDura.h"
+#include "Hielo.h"
 
 class View {
 
@@ -35,6 +36,7 @@ private:
     Pasto pasto;
     PlataformaDura plataformaDura;
     Bullet bullet;
+    Hielo hielo;
     SDL_Rect* camera = NULL;
 
 };

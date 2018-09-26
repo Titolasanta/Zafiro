@@ -172,8 +172,7 @@ void Model::changeLevel(Level level,Scene& scene) {
     this->level = level;
     this->lPlataformsSoft.clear();
     this->lPlataformsHard.clear();
-    scene.clearPlatformsHard();
-    scene.clearPlatformsSoft();
+    scene.clearPlatform();
 
     if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,*this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth());     //No tenia idea de como hacer este
     else cargar_plataformas(*gXML_doc[1],scene, *this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth()); //chequeo de otra manera
