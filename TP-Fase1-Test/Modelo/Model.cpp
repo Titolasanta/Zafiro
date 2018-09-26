@@ -135,13 +135,11 @@ void Model::addPlataformHard(int x, int y, int w) {
 }
 
 void Model::moveRight() {
-    if (player1.getPositionX() > 3500) this->stop();
-    else player1.move(10);
+    player1.move(20);
 }
 
 void Model::moveLeft() {
-    if (player1.getPositionX() < 10) this->stop();
-    else player1.move(-10);
+    player1.move(-20);
 }
 
 void Model::stop() { player1.standStill(); }
