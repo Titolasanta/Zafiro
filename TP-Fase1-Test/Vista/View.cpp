@@ -42,7 +42,7 @@ void View::render(Scene& scene) {
 
 
     hielo.render(scene,camera);
-    piedra.render(scene,camera);
+//    piedra.render(scene,camera);
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
     bullet.render(scene,camera);
