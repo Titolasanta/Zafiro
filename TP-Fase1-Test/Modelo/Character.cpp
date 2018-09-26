@@ -205,3 +205,5 @@ bool Character::canGoThrough() {
         return true;
     return false;
 }
+
+

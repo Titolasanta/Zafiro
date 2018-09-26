@@ -25,7 +25,7 @@ void Controller::processEvent(SDL_Event e) {
         if (e.key.keysym.sym == SDLK_SPACE) model.jump();
         if (e.key.keysym.sym == SDLK_RIGHT) {
             model.moveRight();
-            view.moveBackgroundRight();
+           // view.moveBackground();
         }
         if (e.key.keysym.sym == SDLK_LEFT) model.moveLeft();
         if (e.key.keysym.sym == SDLK_DOWN) model.aimDown();

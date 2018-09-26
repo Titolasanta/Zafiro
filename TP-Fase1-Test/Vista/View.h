@@ -21,9 +21,9 @@ class View {
 
 public:
     View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
-
+    void changeLevel();
     void render(Scene& scene);
-    void moveBackgroundRight();
+    void moveBackground(int dir);
 
 private:
     SdlImgInit z;
@@ -37,6 +37,7 @@ private:
     PlataformaDura plataformaDura;
     Bullet bullet;
     Hielo hielo;
+    int level=1;
     SDL_Rect* camera = NULL;
 
 };

@@ -32,17 +32,17 @@ int get_level_height(pugi::xml_document &doc, pugi::xml_document &doc_default, i
     return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("height").first_child().text().as_int();
 
 }
-const char* get_level_background_path(pugi::xml_document* doc, pugi::xml_document* doc_default, int level, int numero_de_fondo, pugi::xml_parse_result result){
+const char* get_level_background_path(pugi::xml_document& doc, pugi::xml_document& doc_default, int level, int numero_de_fondo, pugi::xml_parse_result result){
     std::string nivel = "nivel";
     std::string fondo = "fondo";
     nivel.append(std::to_string(level));
     fondo.append(std::to_string(numero_de_fondo));
     const char* original;
     if (result) {
-        original = doc->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
+        original = doc.first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
         if (original) return original;
     }
-    return doc_default->first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
+    return doc_default.first_child().child("escenarios").child(nivel.c_str()).child(fondo.c_str()).first_child().text().as_string();
 }
 
 void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int level, int limite_vertical, int limite_horizontal){

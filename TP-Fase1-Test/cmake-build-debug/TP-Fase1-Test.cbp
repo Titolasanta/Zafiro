@@ -98,10 +98,16 @@
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.cpp">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Collision.h">
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp">
@@ -128,12 +134,6 @@
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.cpp">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/dumyModel.h">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
@@ -158,28 +158,28 @@
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Level.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Level.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.cpp">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Nivel.h">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.cpp">
-			<Option target="TP-Fase1-Test"/>
-		</Unit>
-		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Pasto.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp">
@@ -192,6 +192,18 @@
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.cpp">
+			<Option target="TP-Fase1-Test"/>
+		</Unit>
+		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h">
 			<Option target="TP-Fase1-Test"/>
 		</Unit>
 		<Unit filename="/home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp">

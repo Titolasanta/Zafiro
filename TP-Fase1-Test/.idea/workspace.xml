@@ -11,23 +11,43 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6a92e57-c230-4f0f-8131-a1052502615b" name="Default Changelist" comment="">
+    <list default="true" id="d6a92e57-c230-4f0f-8131-a1052502615b" name="Default Changelist" comment="parallax">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Archivos/configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/configuracion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos/default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos/default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modelo/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modelo/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vista/ImgTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/ImgTexture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelo/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modelo/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelo/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modelo/Model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelo/dumyModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelo/dumyModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/Background.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Background.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/Background.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Background.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/ImgTexture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/ImgTexture.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vista/Personajes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Personajes.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vista/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Sprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Archivos/configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Archivos/configuracion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/Scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/Scene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/View.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/View.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/View.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/View.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/xml.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/xml.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/xml.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/xml.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o" afterDir="false" />
@@ -36,14 +56,20 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP-Fase1-Test" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP-Fase1-Test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP-Fase1-Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP-Fase1-Test.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,36 +165,43 @@
     <session id="1361186482">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="16" />
-          <entry key="h" value="10" />
-          <entry key="txt" value="1" />
-          <entry key="xml" value="10" />
+          <entry key="cpp" value="31" />
+          <entry key="h" value="21" />
+          <entry key="png" value="31" />
+          <entry key="txt" value="2" />
+          <entry key="xml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="26" />
-          <entry key="XML" value="10" />
+          <entry key="CMakeLists.txt" value="2" />
+          <entry key="Image" value="31" />
+          <entry key="ObjectiveC" value="52" />
+          <entry key="XML" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="935" />
-          <entry key="h" value="196" />
-          <entry key="xml" value="18" />
+          <entry key="cpp" value="1807" />
+          <entry key="h" value="339" />
+          <entry key="mm" value="3" />
+          <entry key="txt" value="10" />
+          <entry key="xml" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1131" />
-          <entry key="XML" value="18" />
+          <entry key="ObjectiveC" value="2149" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="XML" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -180,88 +213,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Sprite.h">
+        <entry file="file://$PROJECT_DIR$/Vista/Background.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Sprite.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modelo/Model.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+            <state relative-caret-position="330">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding>
-                <element signature="e#39#64#0" expanded="true" />
+                <element signature="e#39#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Modelo/Character.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-802">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Background.cpp">
+        <entry file="file://$PROJECT_DIR$/Vista/View.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Texture.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Texture.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/Background.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <element signature="e#100#119#0" expanded="true" />
+                <element signature="e#39#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vista/ImgTexture.h">
+        <entry file="file://$PROJECT_DIR$/escenario/background3.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/escenario/background5.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vista/View.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="450">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/escenario/level2-background1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/escenario/level1-mountains-transparent.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vista/Scene.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="94" column="14" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/escenario/level3.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vista/Controller.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -272,8 +294,18 @@
     <findStrings>
       <find>spri</find>
       <find>LTexture</find>
-      <find>load</find>
       <find>mtexture</find>
+      <find>isSho</find>
+      <find>load</find>
+      <find>escenar</find>
+      <find>render</find>
+      <find>renderBack</find>
+      <find>getw</find>
+      <find>get</find>
+      <find>mWidth</find>
+      <find>getP1V</find>
+      <find>velo</find>
+      <find>bac</find>
     </findStrings>
     <replaceStrings>
       <replace>Texture</replace>
@@ -290,18 +322,25 @@
         <option value="$PROJECT_DIR$/Texture.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Vista/Personajes.h" />
-        <option value="$PROJECT_DIR$/Vista/Background.cpp" />
-        <option value="$PROJECT_DIR$/Vista/View.cpp" />
-        <option value="$PROJECT_DIR$/Modelo/Model.cpp" />
         <option value="$PROJECT_DIR$/Vista/main.cpp" />
+        <option value="$PROJECT_DIR$/Vista/Sprite.cpp" />
+        <option value="$PROJECT_DIR$/Vista/ImgTexture.h" />
+        <option value="$PROJECT_DIR$/Vista/Scene.cpp" />
         <option value="$PROJECT_DIR$/Modelo/Character.cpp" />
         <option value="$PROJECT_DIR$/Modelo/Character.h" />
         <option value="$PROJECT_DIR$/Vista/Personajes.cpp" />
-        <option value="$PROJECT_DIR$/Vista/Sprite.cpp" />
+        <option value="$PROJECT_DIR$/Vista/Scene.h" />
+        <option value="$PROJECT_DIR$/Vista/xml.h" />
+        <option value="$PROJECT_DIR$/Archivos/default.xml" />
+        <option value="$PROJECT_DIR$/Vista/xml.cpp" />
+        <option value="$PROJECT_DIR$/Vista/ImgTexture.cpp" />
+        <option value="$PROJECT_DIR$/Vista/Controller.cpp" />
+        <option value="$PROJECT_DIR$/Modelo/Model.cpp" />
+        <option value="$PROJECT_DIR$/Vista/View.h" />
         <option value="$PROJECT_DIR$/Archivos/configuracion.xml" />
         <option value="$PROJECT_DIR$/Vista/Background.h" />
-        <option value="$PROJECT_DIR$/Vista/ImgTexture.h" />
-        <option value="$PROJECT_DIR$/Vista/ImgTexture.cpp" />
+        <option value="$PROJECT_DIR$/Vista/Background.cpp" />
+        <option value="$PROJECT_DIR$/Vista/View.cpp" />
       </list>
     </option>
   </component>
@@ -313,10 +352,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="77" />
+    <option name="y" value="47" />
+    <option name="width" value="835" />
+    <option name="height" value="486" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -345,11 +384,6 @@
             <path>
               <item name="TP-Fase1-Test" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP-Fase1-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="Modelo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Fase1-Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP-Fase1-Test" type="462c0819:PsiDirectoryNode" />
               <item name="spirites" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -368,6 +402,117 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
     <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/30_scrolling/30_scrolling.cpp" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Archivos/default.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vista/View.cpp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -412,11 +557,20 @@
       <workItem from="1535901796826" duration="6742000" />
       <workItem from="1535997443319" duration="12480000" />
       <workItem from="1536015649111" duration="6307000" />
+      <workItem from="1537986879464" duration="6211000" />
     </task>
+    <task id="LOCAL-00001" summary="parallax">
+      <created>1537992900564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537992900564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45631000" />
+    <option name="totallyTimeSpent" value="53816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,12 +585,12 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.23187603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.25124517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50132626" side_tool="true" weight="0.1936912" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18594594" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18594594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39891893" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -481,28 +635,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="parallax" />
+    <option name="LAST_COMMIT_MESSAGE" value="parallax" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1883">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../07_texture_loading_and_rendering/07_texture_loading_and_rendering.cpp" />
-    <entry file="file://$USER_HOME$/Downloads/14_animated_sprites_and_vsync/14_animated_sprites_and_vsync.cpp" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.cpp" />
-    <entry file="file://$PROJECT_DIR$/Texture.h" />
-    <entry file="file://$USER_HOME$/Downloads/24_calculating_frame_rate/24_calculating_frame_rate.cpp" />
     <entry file="file://$PROJECT_DIR$/Texture.cpp" />
     <entry file="file://$PROJECT_DIR$/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/Vista/Scene.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vista/Personajes.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -510,74 +649,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Scene.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Nivel.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Nivel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Nivel.cpp" />
+    <entry file="file://$PROJECT_DIR$/Vista/Nivel.h" />
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Archivos/configuracion.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Archivos/default.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modelo/Character.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-967">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#140#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/View.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding>
-            <element signature="e#39#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modelo/Model.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Personajes.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -588,69 +668,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Archivos/configuracion.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/CLionProjects/30_scrolling/30_scrolling.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="797">
           <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Texture.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Texture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/ImgTexture.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/ImgTexture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1072">
-          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Background.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vista/Background.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="e#100#119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,20 +682,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modelo/Model.cpp">
+    <entry file="file://$PROJECT_DIR$/Vista/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="1305">
+          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
           <folding>
-            <element signature="e#39#64#0" expanded="true" />
+            <element signature="e#140#157#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Modelo/Character.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#165#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modelo/Weapon.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Modelo/Character.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-802">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="1133">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Personajes.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/xml.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="108" selection-start-line="11" selection-start-column="108" selection-end-line="11" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Level.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/pugixml.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="5617" selection-start-line="5617" selection-end-line="5617" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Archivos/default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/xml.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/background1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/background2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/hielo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/1-2-transparent.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/1-2-transparent-test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/1-3-transparent.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Texture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/ImgTexture.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Texture.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Scene.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modelo/Model.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/level1-background1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/negro.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/NES - Contra - Level 1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/pasto.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Archivos/configuracion.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="150" column="55" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/ImgTexture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Background.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="e#100#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/View.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/background3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/background5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/level2-background1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/level1-mountains-transparent.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escenario/level3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Scene.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="94" column="14" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/Background.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista/View.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#39#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

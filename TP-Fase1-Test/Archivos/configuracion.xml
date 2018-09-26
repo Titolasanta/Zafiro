@@ -7,9 +7,9 @@
         <nivel1>
             <height>600</height>
             <width>8500</width>
-            <fondo1></fondo1>
-            <fondo2></fondo2>
-            <fondo3></fondo3>
+            <fondo1>../escenario/level1-background1.png</fondo1>
+            <fondo2>../escenario/1-2-transparent-test.png</fondo2>
+            <fondo3>../escenario/1-3-transparent.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>2500</xi>
@@ -146,9 +146,9 @@
         <nivel2>
             <height>4000</height>
             <width>800</width>
-            <fondo1></fondo1>
-            <fondo2></fondo2>
-            <fondo3></fondo3>
+            <fondo1>../escenario/level1-background1.png</fondo1>
+            <fondo2>../escenario/level2-background1.png</fondo2>
+            <fondo3>../escenario/level2-background1.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>0</xi>

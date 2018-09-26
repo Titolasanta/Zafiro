@@ -17,11 +17,14 @@ public:
 
     void setCamera(SDL_Rect *camera);
 
+    void changeLevel(int);
+
 private:
     ImgTexture img1;
     ImgTexture img2;
     ImgTexture img3;
     int scrollingOffset=0;
+    bool scrollVertical = false;
 public:
     ImgTexture &getImg1();
     int getScrollingOffset();

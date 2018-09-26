@@ -55,6 +55,7 @@ private:
     bool P1Crouching;
     bool P1LookingRight;
     bool P1Dead;
+
     //Weapon weapon;
     int P1AimDirection;
     std::list<std::tuple<int,int,int>> lPlataformsSoft;

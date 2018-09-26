@@ -150,32 +150,59 @@ Modelo/Character.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
 .PHONY : Modelo/Character.cpp.s
 
-Modelo/Collision.o: Modelo/Collision.cpp.o
+Modelo/CollisionHard.o: Modelo/CollisionHard.cpp.o
 
-.PHONY : Modelo/Collision.o
+.PHONY : Modelo/CollisionHard.o
 
 # target to build an object file
-Modelo/Collision.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.o
-.PHONY : Modelo/Collision.cpp.o
+Modelo/CollisionHard.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o
+.PHONY : Modelo/CollisionHard.cpp.o
 
-Modelo/Collision.i: Modelo/Collision.cpp.i
+Modelo/CollisionHard.i: Modelo/CollisionHard.cpp.i
 
-.PHONY : Modelo/Collision.i
+.PHONY : Modelo/CollisionHard.i
 
 # target to preprocess a source file
-Modelo/Collision.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.i
-.PHONY : Modelo/Collision.cpp.i
+Modelo/CollisionHard.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.i
+.PHONY : Modelo/CollisionHard.cpp.i
 
-Modelo/Collision.s: Modelo/Collision.cpp.s
+Modelo/CollisionHard.s: Modelo/CollisionHard.cpp.s
 
-.PHONY : Modelo/Collision.s
+.PHONY : Modelo/CollisionHard.s
 
 # target to generate assembly for a file
-Modelo/Collision.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Collision.cpp.s
-.PHONY : Modelo/Collision.cpp.s
+Modelo/CollisionHard.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.s
+.PHONY : Modelo/CollisionHard.cpp.s
+
+Modelo/CollisionSoft.o: Modelo/CollisionSoft.cpp.o
+
+.PHONY : Modelo/CollisionSoft.o
+
+# target to build an object file
+Modelo/CollisionSoft.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o
+.PHONY : Modelo/CollisionSoft.cpp.o
+
+Modelo/CollisionSoft.i: Modelo/CollisionSoft.cpp.i
+
+.PHONY : Modelo/CollisionSoft.i
+
+# target to preprocess a source file
+Modelo/CollisionSoft.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.i
+.PHONY : Modelo/CollisionSoft.cpp.i
+
+Modelo/CollisionSoft.s: Modelo/CollisionSoft.cpp.s
+
+.PHONY : Modelo/CollisionSoft.s
+
+# target to generate assembly for a file
+Modelo/CollisionSoft.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.s
+.PHONY : Modelo/CollisionSoft.cpp.s
 
 Modelo/Model.o: Modelo/Model.cpp.o
 
@@ -285,33 +312,6 @@ Modelo/Weapon.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s
 .PHONY : Modelo/Weapon.cpp.s
 
-Modelo/dumyModel.o: Modelo/dumyModel.cpp.o
-
-.PHONY : Modelo/dumyModel.o
-
-# target to build an object file
-Modelo/dumyModel.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.o
-.PHONY : Modelo/dumyModel.cpp.o
-
-Modelo/dumyModel.i: Modelo/dumyModel.cpp.i
-
-.PHONY : Modelo/dumyModel.i
-
-# target to preprocess a source file
-Modelo/dumyModel.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.i
-.PHONY : Modelo/dumyModel.cpp.i
-
-Modelo/dumyModel.s: Modelo/dumyModel.cpp.s
-
-.PHONY : Modelo/dumyModel.s
-
-# target to generate assembly for a file
-Modelo/dumyModel.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/dumyModel.cpp.s
-.PHONY : Modelo/dumyModel.cpp.s
-
 Vista/Background.o: Vista/Background.cpp.o
 
 .PHONY : Vista/Background.o
@@ -420,6 +420,33 @@ Vista/Exception.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s
 .PHONY : Vista/Exception.cpp.s
 
+Vista/Hielo.o: Vista/Hielo.cpp.o
+
+.PHONY : Vista/Hielo.o
+
+# target to build an object file
+Vista/Hielo.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o
+.PHONY : Vista/Hielo.cpp.o
+
+Vista/Hielo.i: Vista/Hielo.cpp.i
+
+.PHONY : Vista/Hielo.i
+
+# target to preprocess a source file
+Vista/Hielo.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.i
+.PHONY : Vista/Hielo.cpp.i
+
+Vista/Hielo.s: Vista/Hielo.cpp.s
+
+.PHONY : Vista/Hielo.s
+
+# target to generate assembly for a file
+Vista/Hielo.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.s
+.PHONY : Vista/Hielo.cpp.s
+
 Vista/ImgTexture.o: Vista/ImgTexture.cpp.o
 
 .PHONY : Vista/ImgTexture.o
@@ -447,6 +474,33 @@ Vista/ImgTexture.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
 .PHONY : Vista/ImgTexture.cpp.s
 
+Vista/Level.o: Vista/Level.cpp.o
+
+.PHONY : Vista/Level.o
+
+# target to build an object file
+Vista/Level.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o
+.PHONY : Vista/Level.cpp.o
+
+Vista/Level.i: Vista/Level.cpp.i
+
+.PHONY : Vista/Level.i
+
+# target to preprocess a source file
+Vista/Level.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.i
+.PHONY : Vista/Level.cpp.i
+
+Vista/Level.s: Vista/Level.cpp.s
+
+.PHONY : Vista/Level.s
+
+# target to generate assembly for a file
+Vista/Level.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.s
+.PHONY : Vista/Level.cpp.s
+
 Vista/Logger.o: Vista/Logger.cpp.o
 
 .PHONY : Vista/Logger.o
@@ -473,60 +527,6 @@ Vista/Logger.s: Vista/Logger.cpp.s
 Vista/Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
 .PHONY : Vista/Logger.cpp.s
-
-Vista/Nivel.o: Vista/Nivel.cpp.o
-
-.PHONY : Vista/Nivel.o
-
-# target to build an object file
-Vista/Nivel.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.o
-.PHONY : Vista/Nivel.cpp.o
-
-Vista/Nivel.i: Vista/Nivel.cpp.i
-
-.PHONY : Vista/Nivel.i
-
-# target to preprocess a source file
-Vista/Nivel.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.i
-.PHONY : Vista/Nivel.cpp.i
-
-Vista/Nivel.s: Vista/Nivel.cpp.s
-
-.PHONY : Vista/Nivel.s
-
-# target to generate assembly for a file
-Vista/Nivel.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Nivel.cpp.s
-.PHONY : Vista/Nivel.cpp.s
-
-Vista/Pasto.o: Vista/Pasto.cpp.o
-
-.PHONY : Vista/Pasto.o
-
-# target to build an object file
-Vista/Pasto.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.o
-.PHONY : Vista/Pasto.cpp.o
-
-Vista/Pasto.i: Vista/Pasto.cpp.i
-
-.PHONY : Vista/Pasto.i
-
-# target to preprocess a source file
-Vista/Pasto.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.i
-.PHONY : Vista/Pasto.cpp.i
-
-Vista/Pasto.s: Vista/Pasto.cpp.s
-
-.PHONY : Vista/Pasto.s
-
-# target to generate assembly for a file
-Vista/Pasto.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Pasto.cpp.s
-.PHONY : Vista/Pasto.cpp.s
 
 Vista/Personajes.o: Vista/Personajes.cpp.o
 
@@ -581,6 +581,60 @@ Vista/Piedra.s: Vista/Piedra.cpp.s
 Vista/Piedra.cpp.s:
 	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s
 .PHONY : Vista/Piedra.cpp.s
+
+Vista/PlataformaBlanda.o: Vista/PlataformaBlanda.cpp.o
+
+.PHONY : Vista/PlataformaBlanda.o
+
+# target to build an object file
+Vista/PlataformaBlanda.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o
+.PHONY : Vista/PlataformaBlanda.cpp.o
+
+Vista/PlataformaBlanda.i: Vista/PlataformaBlanda.cpp.i
+
+.PHONY : Vista/PlataformaBlanda.i
+
+# target to preprocess a source file
+Vista/PlataformaBlanda.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.i
+.PHONY : Vista/PlataformaBlanda.cpp.i
+
+Vista/PlataformaBlanda.s: Vista/PlataformaBlanda.cpp.s
+
+.PHONY : Vista/PlataformaBlanda.s
+
+# target to generate assembly for a file
+Vista/PlataformaBlanda.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.s
+.PHONY : Vista/PlataformaBlanda.cpp.s
+
+Vista/PlataformaDura.o: Vista/PlataformaDura.cpp.o
+
+.PHONY : Vista/PlataformaDura.o
+
+# target to build an object file
+Vista/PlataformaDura.cpp.o:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o
+.PHONY : Vista/PlataformaDura.cpp.o
+
+Vista/PlataformaDura.i: Vista/PlataformaDura.cpp.i
+
+.PHONY : Vista/PlataformaDura.i
+
+# target to preprocess a source file
+Vista/PlataformaDura.cpp.i:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.i
+.PHONY : Vista/PlataformaDura.cpp.i
+
+Vista/PlataformaDura.s: Vista/PlataformaDura.cpp.s
+
+.PHONY : Vista/PlataformaDura.s
+
+# target to generate assembly for a file
+Vista/PlataformaDura.cpp.s:
+	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.s
+.PHONY : Vista/PlataformaDura.cpp.s
 
 Vista/SDLException.o: Vista/SDLException.cpp.o
 
@@ -945,9 +999,12 @@ help:
 	@echo "... Modelo/Character.o"
 	@echo "... Modelo/Character.i"
 	@echo "... Modelo/Character.s"
-	@echo "... Modelo/Collision.o"
-	@echo "... Modelo/Collision.i"
-	@echo "... Modelo/Collision.s"
+	@echo "... Modelo/CollisionHard.o"
+	@echo "... Modelo/CollisionHard.i"
+	@echo "... Modelo/CollisionHard.s"
+	@echo "... Modelo/CollisionSoft.o"
+	@echo "... Modelo/CollisionSoft.i"
+	@echo "... Modelo/CollisionSoft.s"
 	@echo "... Modelo/Model.o"
 	@echo "... Modelo/Model.i"
 	@echo "... Modelo/Model.s"
@@ -960,9 +1017,6 @@ help:
 	@echo "... Modelo/Weapon.o"
 	@echo "... Modelo/Weapon.i"
 	@echo "... Modelo/Weapon.s"
-	@echo "... Modelo/dumyModel.o"
-	@echo "... Modelo/dumyModel.i"
-	@echo "... Modelo/dumyModel.s"
 	@echo "... Vista/Background.o"
 	@echo "... Vista/Background.i"
 	@echo "... Vista/Background.s"
@@ -975,24 +1029,30 @@ help:
 	@echo "... Vista/Exception.o"
 	@echo "... Vista/Exception.i"
 	@echo "... Vista/Exception.s"
+	@echo "... Vista/Hielo.o"
+	@echo "... Vista/Hielo.i"
+	@echo "... Vista/Hielo.s"
 	@echo "... Vista/ImgTexture.o"
 	@echo "... Vista/ImgTexture.i"
 	@echo "... Vista/ImgTexture.s"
+	@echo "... Vista/Level.o"
+	@echo "... Vista/Level.i"
+	@echo "... Vista/Level.s"
 	@echo "... Vista/Logger.o"
 	@echo "... Vista/Logger.i"
 	@echo "... Vista/Logger.s"
-	@echo "... Vista/Nivel.o"
-	@echo "... Vista/Nivel.i"
-	@echo "... Vista/Nivel.s"
-	@echo "... Vista/Pasto.o"
-	@echo "... Vista/Pasto.i"
-	@echo "... Vista/Pasto.s"
 	@echo "... Vista/Personajes.o"
 	@echo "... Vista/Personajes.i"
 	@echo "... Vista/Personajes.s"
 	@echo "... Vista/Piedra.o"
 	@echo "... Vista/Piedra.i"
 	@echo "... Vista/Piedra.s"
+	@echo "... Vista/PlataformaBlanda.o"
+	@echo "... Vista/PlataformaBlanda.i"
+	@echo "... Vista/PlataformaBlanda.s"
+	@echo "... Vista/PlataformaDura.o"
+	@echo "... Vista/PlataformaDura.i"
+	@echo "... Vista/PlataformaDura.s"
 	@echo "... Vista/SDLException.o"
 	@echo "... Vista/SDLException.i"
 	@echo "... Vista/SDLException.s"

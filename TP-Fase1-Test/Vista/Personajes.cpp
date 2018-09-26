@@ -53,5 +53,6 @@ void Personajes::render(Scene scene, int cameraX, int cameraY) {
     if (scene.isP1Airborne()){
         currentClip = rojoFrames.move(2,   frameActualRojo % 4  );
     }
+
     rojo.render(scene.getP1PositionX() - cameraX -characterWidth/2, scene.getP1PositionY() - cameraY, currentClip, angle);
 }

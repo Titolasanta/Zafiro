@@ -7,7 +7,7 @@
         <nivel1>
             <height>600</height>
             <width>8500</width>
-            <fondo1></fondo1>
+            <fondo1>../escenario/level1-background1.png</fondo1>
             <fondo2></fondo2>
             <fondo3></fondo3>
             <plataforma>

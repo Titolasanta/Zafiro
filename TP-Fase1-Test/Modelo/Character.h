@@ -38,7 +38,6 @@ private:
         int currentPlatW;
         bool currentPlatHard;
         int timeTillNextShoot = 0;
-
 private:
     //si queres que sea polimorifico y pueda tener diferentes
         // clases hijas de weapon deberia ser un puntero o referencia
@@ -107,7 +106,7 @@ public:
     int getAimDirection() const {
             return aimDirection;
     }
-public:
+
     void setPositionX(int positionX) {
         Character::positionX = positionX;
     }
@@ -127,7 +126,10 @@ public:
     void nextLevel();
 
     bool canGoThrough();
+
 };
+
+
 
 
 #endif //TP_FASE1_TEST_CHARACTER_H

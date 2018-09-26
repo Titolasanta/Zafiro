@@ -82,7 +82,6 @@ void Model::update(Scene &scene) {
     {
         it->move();
         if(!(it->inSight(scene))) {
-            std::cout << "model delet bullet\n";
             it=lBullets.erase(it);
         }
         else {
@@ -94,6 +93,8 @@ void Model::update(Scene &scene) {
     scene.setBullets(std::move(lTemp));
 
     scene.setP1PositionX(player1.getPositionX());
+    scene.setP1VelocityX(player1.getVelocityX());
+    scene.setP1VelocityY(player1.getVelocityY());
 
     scene.setP1PositionY(player1.getPositionY());
 
@@ -183,7 +184,7 @@ void Model::changeLevel(Level level,Scene& scene) {
     player1.spawn();
     player1.nextLevel();
 
-    gplogger->log(2, "Se cambió de nivel\n");
+    gplogger->log(2, "Se cambió de nivel");
 }
 
 int Model::getLevelWidth() { return level.getWidth(); }
