@@ -392,6 +392,12 @@
             <fondo3></fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
+                <xi>100</xi>
+                <xf>300</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
                 <xi>2500</xi>
                 <xf>3500</xf>
                 <y>400</y>
