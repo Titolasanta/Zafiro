@@ -62,6 +62,8 @@ void Character::time() {
     positionX += velocityX;
 
     positionY += velocityY;
+    
+    if (crouching) aimDirection = 0;
 }
 
 Character::~Character() = default; //Loggear destruccion
