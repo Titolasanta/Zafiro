@@ -16,6 +16,7 @@ Controller::Controller(View &view, Model& model) : view(view),model(model){
     if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
     else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
 
+    gplogger->log(3, "Se crea el controlador");
 }
 
 void Controller::processEvent(SDL_Event e) {
@@ -42,7 +43,7 @@ void Controller::processEvent(SDL_Event e) {
 
 void Controller::show() {
 
-    gplogger->log(3,"Se llama al metodo show de controler\n");
+    gplogger->log(3,"Se llama al metodo show de controler");
     model.update(scene);
     view.render(scene);
 }

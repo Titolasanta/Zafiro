@@ -11,7 +11,7 @@
 extern Logger* gplogger;
 Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png",0,0,71,68){
 
-    gplogger->log(1,"se crea piedra de view\n");
+    gplogger->log(3,"Se crea Piedra de view");
 }
 
 void Piedra::renderHalf(int x, int y) {

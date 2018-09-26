@@ -11,7 +11,7 @@ extern Logger *gplogger;
 
 Texture::Texture( SDL_Renderer* renderer): renderer(renderer){
 	//Initialize
-	gplogger->log(1,"se crea Textura\n");
+	gplogger->log(3,"Se crea Textura");
 	mTexture = NULL;
 	mWidth = 0;
 	mHeight = 0;
@@ -19,14 +19,14 @@ Texture::Texture( SDL_Renderer* renderer): renderer(renderer){
 
 Texture::~Texture(){
 
-	gplogger->log(1,"se destruye Textura\n");
+	gplogger->log(3,"Se destruye Textura");
 	//Deallocate
 
 }
 
 Texture::Texture(Texture&& other) noexcept: renderer(other.renderer)  {
 
-	gplogger->log(1,"se construye Textura por movimiento\n");
+	gplogger->log(3,"Se construye Textura por movimiento");
 	 mTexture = other.mTexture;
 	 other.mTexture = NULL; 
 }

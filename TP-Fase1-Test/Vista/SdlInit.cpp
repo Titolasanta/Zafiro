@@ -8,7 +8,7 @@ extern Logger *gplogger;
 
 SdlInit::~SdlInit(){
 
-	gplogger->log(1,"se destruye sdlinit\n");
+	gplogger->log(3,"Se destruye SdlInit");
 	SDL_Quit();
 }
 
@@ -25,5 +25,5 @@ SdlInit::SdlInit(){
 		throw SDLError("SDL_SetHint fallo");
 	}
 
-	gplogger->log(1,"se crea sdlinit\n");
+	gplogger->log(3,"Se crea SdlInit");
 }

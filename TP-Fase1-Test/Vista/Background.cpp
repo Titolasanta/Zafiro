@@ -22,7 +22,7 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
    //img2.loadFromFile(get_level_background_path(gXML_doc, level, 2));
    //img3.loadFromFile(get_level_background_path(gXML_doc, level, 3));
 
-    gplogger->log(1,"Se crea Background\n");
+    gplogger->log(3,"Se crea Background");
 }
 
 void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset){

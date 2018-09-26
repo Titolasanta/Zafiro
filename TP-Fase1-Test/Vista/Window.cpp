@@ -32,19 +32,19 @@ void static setRender(SDL_Renderer*& renderer, SDL_Window* window, string title)
 }
 void Window::setRenderDrawColor(Uint8 a, Uint8 b, Uint8 c, Uint8 d) {
 
-	gplogger->log(1,"set render draw color de window\n");
+	gplogger->log(3,"Se setea render draw color de window");
 	SDL_SetRenderDrawColor(renderer, a, b, c, d);
 }
 
 
 Window::~Window(){
 
-	gplogger->log(1,"se intenta destruir Window\n");
+	gplogger->log(3,"Se intenta destruir Window");
 	if(window != NULL) {
 		SDL_DestroyWindow(window);
 	} else
 
-		gplogger->log(1,"no habia Window que destruir\n");
+		gplogger->log(3,"No habia Window que destruir");
 }
 
 
@@ -59,7 +59,7 @@ Window::Window(string& title, int xPos,int yPos,int width, int height){
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
 
-	gplogger->log(1,"se creo window c/5 parametros\n");
+	gplogger->log(3,"Se creo window con 5 parametros");
 }
 
 Window::Window(string title ,int width, int height){
@@ -72,7 +72,7 @@ Window::Window(string title ,int width, int height){
 
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
-	gplogger->log(1,"se creo window c/3 parametros\n");
+	gplogger->log(3,"Se creo window con 3 parametros");
 }
 
 Window::Window(string& title){
@@ -86,7 +86,7 @@ Window::Window(string& title){
 
 	//creo un renderer de la vetana
 	setRender(renderer, window, title);
-	gplogger->log(1,"se creo window c/1 parametro\n");
+	gplogger->log(3,"Se creo window con 1 parametro");
 
 }
 
@@ -95,12 +95,12 @@ Window::Window(string& title){
 
 
 ImgTexture Window::createImgTexture(){
-	gplogger->log(1,"Window devuelve una imgTexture\n");
+	gplogger->log(3,"Window devuelve una imgTexture");
 	return std::move(ImgTexture(renderer));
 }
 
 ImgTexture Window::createImgTexture(Uint8 r, Uint8 g, Uint8 b){
-	gplogger->log(1,"Window devuelve una imgTexture\n");
+	gplogger->log(3,"Window devuelve una imgTexture");
 	return std::move(ImgTexture(renderer, r, g, b));
 }
 /*

@@ -23,7 +23,7 @@ personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),pasto
    // window.setRenderDrawColor(0x10  ,0x10,0xFF,0x120);
     std::string windowName("juego");
 
-    gplogger->log(1,"se crea un View\n");
+    gplogger->log(3,"Se crea un View");
 
 }
 
@@ -31,7 +31,7 @@ void View::render(Scene& scene) {
 
     camera = scene.getCamera();
 
-    gplogger->log(1, "comienza renderear view\n");
+    gplogger->log(3, "Comienza a renderizar view");
 
     window.redererClear();
 
@@ -53,7 +53,7 @@ void View::render(Scene& scene) {
 
     //Center the camera over the player
 
-    gplogger->log(1,"finaliza renderear view\n");
+    gplogger->log(3,"Finaliza de renderizar view");
 
 
 }

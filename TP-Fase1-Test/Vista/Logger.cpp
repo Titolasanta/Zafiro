@@ -31,12 +31,12 @@ Logger::Logger(const char* log_level, const char* level_default) : archivo(std::
 
 void Logger::set_level(const char *level, const char* ldefault) {
     if (strcmp(level, "DEBUG") == 0 || strcmp(level,"debug") == 0 || strcmp(level, "Debug") == 0) nivel = 3;
-    if (strcmp(level, "INFO") == 0 || strcmp(level,"info") == 0 || strcmp(level, "Info") == 0) nivel = 2;
-    if (strcmp(level, "ERROR") == 0 || strcmp(level,"error") == 0 || strcmp(level, "Error") == 0) nivel = 1;
+    else if (strcmp(level, "INFO") == 0 || strcmp(level,"info") == 0 || strcmp(level, "Info") == 0) nivel = 2;
+    else if (strcmp(level, "ERROR") == 0 || strcmp(level,"error") == 0 || strcmp(level, "Error") == 0) nivel = 1;
     else{
         if (strcmp(ldefault, "DEBUG") == 0 || strcmp(ldefault,"debug") == 0 || strcmp(ldefault, "Debug") == 0) nivel = 3;
-        if (strcmp(ldefault, "INFO") == 0 || strcmp(ldefault,"info") == 0 || strcmp(ldefault, "Info") == 0) nivel = 2;
-        if (strcmp(ldefault, "ERROR") == 0 || strcmp(ldefault,"error") == 0 || strcmp(ldefault, "Error") == 0) nivel = 1;
+        else if (strcmp(ldefault, "INFO") == 0 || strcmp(ldefault,"info") == 0 || strcmp(ldefault, "Info") == 0) nivel = 2;
+        else if (strcmp(ldefault, "ERROR") == 0 || strcmp(ldefault,"error") == 0 || strcmp(ldefault, "Error") == 0) nivel = 1;
     }
 }
 

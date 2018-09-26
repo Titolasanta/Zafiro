@@ -13,7 +13,7 @@ using std::string;
 extern Logger *gplogger;
 ImgTexture::ImgTexture( SDL_Renderer* renderer): Texture(renderer){
 
-	gplogger->log(1,"se crea una imgTexture normal\n");
+	gplogger->log(3,"Se crea una ImgTexture normal");
 	trans = false;
 }
 
@@ -21,7 +21,7 @@ ImgTexture::ImgTexture( SDL_Renderer* renderer): Texture(renderer){
 ImgTexture::ImgTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b) 
 : Texture(renderer) {
 
-	gplogger->log(1,"se crea una imgTexture con rgb\n");
+	gplogger->log(3,"Se crea una ImgTexture con rgb");
 	trans = true;
 	transColor[0] = r;
 	transColor[1] = g;
@@ -31,7 +31,7 @@ ImgTexture::ImgTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b)
 
 ImgTexture::ImgTexture(ImgTexture&& other) : Texture(std::move(other)) {
 
-	gplogger->log(1,"se crea una imgTexture x movimiento\n");
+	gplogger->log(3,"Se crea una ImgTexture por movimiento");
 	for(int i = 0; i < 3; i++ )
 		this->transColor[i] = other.transColor[i];
 	this->trans = other.trans;
@@ -142,7 +142,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	//Get rid of old loaded surface
 	SDL_FreeSurface( loadedSurface );
 
-	gplogger->log(2,"se carga file a una imgTexture\n");
+	gplogger->log(3,"Se carga file a una ImgTexture");
 }
 
 void ImgTexture::free(){
@@ -152,8 +152,8 @@ void ImgTexture::free(){
 		mTexture = NULL;
 		mWidth = 0;
 		mHeight = 0;
-		gplogger->log(1,"se libero una imgTexture\n");
+		gplogger->log(3,"Se libero una ImgTexture");
 	} else
-		gplogger->log(1,"se libero una imgTexture ya vacia\n");
+		gplogger->log(3,"Se libero una ImgTexture ya vacia");
 }
 

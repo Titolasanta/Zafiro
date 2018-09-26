@@ -8,7 +8,7 @@ extern Logger* gplogger;
 SdlImgInit::~SdlImgInit(){
 	IMG_Quit();
 
-	gplogger->log(1,"se destruye sdlimginit\n");
+	gplogger->log(3,"Se destruye SdlImgInit");
 }
 
 
@@ -18,5 +18,5 @@ SdlImgInit::SdlImgInit(){
 		throw SDLIMGError("No se pudo iniciar SDL_IMG");
 	}
 
-	gplogger->log(1,"se crea sdlimginit\n");
+	gplogger->log(3,"Se crea SdlImgInit");
 }

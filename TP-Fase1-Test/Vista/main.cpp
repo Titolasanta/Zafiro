@@ -43,12 +43,12 @@ int main( int argc, char* argv[] )
     if (!(result || result_default)) {
         std::cout << "Error al cargar el archivo de configuración por defecto: " << result_default.description() << std::endl;
     }
-    if (!result) std::cout << "No cargo un joraca" << std::endl;
+
     const char* modo;
     if (argc > 1 ) {
         modo = argv[1];
-    } else
-        modo = get_log_level(doc);
+    }
+    else modo = get_log_level(doc);
     Logger logger(modo,get_log_level(doc_default));
 
 
@@ -92,6 +92,8 @@ int main( int argc, char* argv[] )
         controler.show();
 
     }
+
+    logger.log(2, "Se cerró el juego");
 
     logger.cerrar_archivo();
 

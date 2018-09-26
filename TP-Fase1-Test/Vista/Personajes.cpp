@@ -18,7 +18,7 @@ Personajes::Personajes(Window* window)
   frameActualRojo(0)
 {
     rojo.loadFromFile(SPIRIT_PATH);
-    gplogger->log(1,"Se crea Personajes\n");
+    gplogger->log(3,"Se crea Personajes de la vista");
 }
 
 void Personajes::render(Scene scene, int cameraX, int cameraY) {

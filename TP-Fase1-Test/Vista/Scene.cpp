@@ -9,7 +9,7 @@
 extern Logger *gplogger;
 Scene::Scene() {
 
-    gplogger->log(1,"se crea Escena\n");
+    gplogger->log(3,"Se crea una Escena");
 }
 
 

@@ -8,7 +8,7 @@
 extern Logger *gplogger;
 Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png",0,0,69,36) {
 
-    gplogger->log(2,"se crea Pasto\n");
+    gplogger->log(3,"Se crea una plataforma blanda");
 }
 
 void Pasto::render(Scene &scene,SDL_Rect* camera) {
