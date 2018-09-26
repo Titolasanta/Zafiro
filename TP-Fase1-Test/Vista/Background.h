@@ -11,7 +11,7 @@
 class Background  {
 public:
     Background(Window&,int);
-    void render(Scene&,SDL_Rect&,int scrollingOffset);
+    void render(Scene&,SDL_Rect&,int scrollingOffset,int);
 
     SDL_Rect *getCamera();
 

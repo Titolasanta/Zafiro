@@ -34,8 +34,6 @@ public:
 	void surfaceFill(int Color);
 	void updateRenderer();
 	void updateSurface();
-	//necesario liberar imagen luego.Por ahora leakea
-	void loadImageToSurface(std::string& path);
 	//no implementado
 	void setRenderDrawColor( Uint8,Uint8,Uint8,Uint8);
 

@@ -15,6 +15,7 @@ SdlImgInit::~SdlImgInit(){
 SdlImgInit::SdlImgInit(){
 	int imgFlags = IMG_INIT_PNG;
 	if( !( IMG_Init( imgFlags ) & imgFlags ) ){
+		gplogger->log(1,"no se inicia sdlimg");
 		throw SDLIMGError("No se pudo iniciar SDL_IMG");
 	}
 

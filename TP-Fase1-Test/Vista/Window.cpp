@@ -21,6 +21,7 @@ extern Logger *gplogger;
 void static setRender(SDL_Renderer*& renderer, SDL_Window* window, string title) {
 	renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 	if( renderer == NULL ){
+		gplogger->log(1,"no se crea render de ventana");
 		throw SDLError("No se pudo crear el renderer de la ventana %s",title.c_str());
 	}
 
@@ -51,6 +52,7 @@ Window::~Window(){
 Window::Window(string& title, int xPos,int yPos,int width, int height){
 	window = SDL_CreateWindow( title.c_str(), xPos, yPos, width, height, SDL_WINDOW_SHOWN );
 	if( window == NULL ){
+		gplogger->log(1,"no se crea ventana");
 		throw SDLError( "Window could not be created! SDL_Error: " );
 	}	
 	//guardo copia de la superficie, probablemnte prefiero el renderer
@@ -65,7 +67,8 @@ Window::Window(string& title, int xPos,int yPos,int width, int height){
 Window::Window(string title ,int width, int height){
 	window = SDL_CreateWindow( title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN );
 	if( window == NULL ){
-			throw SDLError( "Window could not be created! SDL_Error: " );
+		gplogger->log(1,"no se crea ventana");
+		throw SDLError( "Window could not be created! SDL_Error: " );
 	}			
 	//guardo copia de la superficie, probablemnte prefiero el renderer
 	screenSurface = SDL_GetWindowSurface( window );
@@ -79,6 +82,7 @@ Window::Window(string& title){
 	window = SDL_CreateWindow( title.c_str(), SDL_WINDOWPOS_UNDEFINED,
 	 SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
 	if( window == NULL ){
+		gplogger->log(1,"no se crea ventana");
 		throw SDLError( "Window could not be created! " );
 	}		
 	//guardo copia de la superficie, probablemnte prefiero el renderer
@@ -121,7 +125,8 @@ void Window::surfaceFill(int Color){
 	    	SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0x0, 0xFF, 0xFF ) );
 	      	break;
 	    default	:
-	    	throw OSError("El color: %d no fue definido",Color);
+			gplogger->log(1,"se pide un colo indefinido para rellenar la ventana");
+			throw OSError("El color: %d no fue definido",Color);
 	   	}
 }
 void Window::redererClear(){
@@ -137,30 +142,16 @@ void Window::updateRenderer(){
 }
 
 
-//leaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaak
-void Window::loadImageToSurface(string& path){
-    //Load splash image
-	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
-	if(loadedSurface  == NULL) {
-        throw SDLIMGError("Unable to load image %s!", path.c_str() );
-    }
 
-
-	SDL_Surface* optimizedSurface = SDL_ConvertSurface( loadedSurface, screenSurface->format, 0 );
-	if( optimizedSurface == NULL ){
-        throw SDLIMGError( "Unable to optimize image %s!", path.c_str() );
-    }
-	SDL_FreeSurface( loadedSurface );    
-	SDL_BlitSurface( optimizedSurface, NULL, screenSurface, NULL );
-	//update
-}
 
 void Window::createRectangle( int xi,int xf,int yi,int yf) {
 	xf = (xf - xi);
 	yf = (yf - yi);
 	SDL_Rect segment = {xi, yi, xf, yf};
-	if(SDL_RenderFillRect(renderer, &segment) ) 
+	if(SDL_RenderFillRect(renderer, &segment) ){
+		gplogger->log(1,"no se dibuja un rectangulo de ventana");
 		throw SDLError("no se pudo dibujar un rectangulo en window");
+	}
 }
 /*
 Button Window::createButton(Estado* e, int xi, int xf, int yi, int yf){

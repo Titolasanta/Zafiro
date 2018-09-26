@@ -146,7 +146,7 @@ void Model::moveLeft() {
 void Model::stop() { player1.standStill(); }
 
 void Model::jump() {
-    if (!player1.isCrouching()) player1.jump(-40);
+    if (!player1.isCrouching()) player1.jump(-44);
     else if(player1.canGoThrough())
         player1.goThroughPlatform();
 }
@@ -168,6 +168,7 @@ void Model::crouch() { player1.crouch(); }
 void Model::stand() { player1.stand(); }
 
 void Model::changeLevel(Level level,Scene& scene) {
+
     this->level = level;
     this->lPlataformsSoft.clear();
     this->lPlataformsHard.clear();

@@ -28,16 +28,22 @@ Background::Background(Window& window, int level) : img1(std::move(window.create
     gplogger->log(3,"Se crea Background");
 }
 
-void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset){
-    if(scrollVertical) {
-        img1.renderBackground(0, scrollingOffset);
-        img2.renderBackground(0, scrollingOffset * 5);
-        img3.renderBackground(0, scrollingOffset * 10);
-    } else {
-
+void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset,int level){
+    if(level == 1) {
         img1.renderBackground(scrollingOffset, 0);
         img2.renderBackground(scrollingOffset * 5, 0);
-        img3.renderBackground(scrollingOffset * 10, 0);
+        img3.renderBackground(scrollingOffset * 10, 50);
+
+    } if(level == 2){
+
+        img1.renderBackground(0, scrollingOffset);
+        img2.renderBackground(0, scrollingOffset*5 );
+        img3.renderBackground(0, scrollingOffset *10);
+
+    } if(level == 3) {
+        img1.renderBackground(scrollingOffset, 0);
+        img2.renderBackground(scrollingOffset * 5, 200);
+        img3.renderBackground(scrollingOffset * 10, 450);
     }
 }
 

@@ -125,7 +125,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	if( loadedSurface == NULL ){
 		loadedSurface = IMG_Load( "../escenario/negro.png" );
 		gplogger->log(1,"no se encontro una imagen");
-		throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
+		//throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
 	}
 	//Color key image
 	if(trans){
@@ -134,6 +134,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	//Create texture from surface pixels
     mTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
 	if( mTexture == NULL ){
+		gplogger->log(1,"no abri textura");
 		throw SDLError("Fallo crear textura apartir de %s",path.c_str());
 	}
 	//Get image dimensions

@@ -12,7 +12,6 @@
 #include "xml.h"
 #include "Logger.h"
 #include <iostream>
-git
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
 
@@ -35,6 +34,8 @@ void View::render(Scene& scene) {
             moveBackground(-1);
     }else
         moveBackground(scene.getP1VelocityX());
+    if(scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200)
+        background.setScrollingOffset(0);
     camera = scene.getCamera();
 
     window.redererClear();
@@ -43,11 +44,14 @@ void View::render(Scene& scene) {
 
 
 
-    background.render(scene,*camera, background.getScrollingOffset());
+    background.render(scene,*camera, background.getScrollingOffset(),level);
 
+
+    if(level == 1)
+        piedra.render(scene,camera);
 
     hielo.render(scene,camera);
-//    piedra.render(scene,camera);
+
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
     bullet.render(scene,camera);
@@ -73,7 +77,7 @@ void View::moveBackground(int dir) {
         ++newOffset;
 
     if (newOffset < -3000 || newOffset > 0 ) {
-        newOffset = 0;
+        newOffset = -100;
     }
 
 
