@@ -13,10 +13,10 @@ Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int di
         int velX;
         int velY;
 
-        if(lookingRight) velX = 10;
-        else velX = -10;
+        if(lookingRight) velX = 35;
+        else velX = -35;
 
-        velY = (direction*10);
+        velY = (direction*35);
 
         positionX += velX;
         positionY += velY;
