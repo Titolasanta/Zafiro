@@ -54,7 +54,7 @@ void Logger::log(int level, const char* mensaje) {
         struct tm* info;
         info = localtime(&now);
         archivo << "[" << info->tm_hour << ":" << info->tm_min << ":" << info->tm_sec << "] ";
-        archivo << nivel_log << mensaje << std::endl << std::endl;
+        archivo << nivel_log << mensaje << std::endl    ;
     }
 }
 

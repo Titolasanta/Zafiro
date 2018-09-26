@@ -31,8 +31,6 @@ void View::render(Scene& scene) {
 
     camera = scene.getCamera();
 
-    gplogger->log(3, "Comienza a renderizar view");
-
     window.redererClear();
 
     //background.render(scene);
@@ -53,7 +51,6 @@ void View::render(Scene& scene) {
 
     //Center the camera over the player
 
-    gplogger->log(3,"Finaliza de renderizar view");
 
 
 }
