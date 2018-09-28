@@ -7,9 +7,9 @@
         <nivel1>
             <height>600</height>
             <width>8500</width>
-            <fondo1>../escenario/level1-background1.png</fondo1>
-            <fondo2>../escenario/1-2-transparent-test.png</fondo2>
-            <fondo3>../escenario/1-2-transparent-test.png</fondo3>
+            <fondo1>../escenario/fondo1.png</fondo1>
+            <fondo2>../escenario/mountains1.png</fondo2>
+            <fondo3>../escenario/arbolitos1.2.png</fondo3>
             <plataforma>
                 <tipo>hierro</tipo>
                 <xi>2500</xi>
@@ -20,9 +20,8 @@
                 <tipo>pasto</tipo>
                 <xi>3200</xi>
                 <xf>3900</xf>
-                <y>300</y>
+                <y>350</y>
             </plataforma>
-
             <plataforma>
                 <tipo>hielo</tipo>
                 <xi>4300</xi>
@@ -45,7 +44,7 @@
                 <tipo>pasto</tipo>
                 <xi>4800</xi>
                 <xf>5200</xf>
-                <y>250</y>
+                <y>450</y>
             </plataforma>
             <plataforma>
                 <tipo>hierro</tipo>
@@ -63,7 +62,7 @@
                 <tipo>hielo</tipo>
                 <xi>5200</xi>
                 <xf>5300</xf>
-                <y>150</y>
+                <y>350</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -81,7 +80,7 @@
                 <tipo>pasto</tipo>
                 <xi>6400</xi>
                 <xf>7000</xf>
-                <y>200</y>
+                <y>400</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -111,7 +110,7 @@
                 <tipo>hierro</tipo>
                 <xi>0</xi>
                 <xf>700</xf>
-                <y>450</y>
+                <y>500</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -123,7 +122,7 @@
                 <tipo>pasto</tipo>
                 <xi>910</xi>
                 <xf>1325</xf>
-                <y>290</y>
+                <y>390</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -135,14 +134,14 @@
                 <tipo>pasto</tipo>
                 <xi>1900</xi>
                 <xf>3000</xf>
-                <y>300</y>
+                <y>400</y>
             </plataforma>
         </nivel1>
         <nivel2>
             <height>4000</height>
             <width>800</width>
-            <fondo1>../escenario/level1-background1.png</fondo1>
-            <fondo2>../escenario/level2-background1.png</fondo2>
+            <fondo1>../escenario/nubes2.png</fondo1>
+            <fondo2>../escenario/arbolitos2.png</fondo2>
             <fondo3>../escenario/level2-background1.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -382,9 +381,9 @@
         <nivel3>
             <height>600</height>
             <width>8500</width>
-            <fondo1>../escenario/level1-background1.png</fondo1>
-            <fondo2>../escenario/montanitas.png</fondo2>
-            <fondo3>../escenario/arbolitos_level3.png</fondo3>
+            <fondo1>../escenario/fondo3.png</fondo1>
+            <fondo2>../escenario/mountains3.png</fondo2>
+            <fondo3>../escenario/arbolitos3.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>100</xi>

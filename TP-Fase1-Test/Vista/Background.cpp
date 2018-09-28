@@ -32,7 +32,7 @@ void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset,int l
     if(level == 1) {
         img1.renderBackground(scrollingOffset, 0);
         img2.renderBackground(scrollingOffset * 5, 0);
-        img3.renderBackground(scrollingOffset * 10, 50);
+        img3.renderBackground(scrollingOffset * 10, 0);
 
     } if(level == 2){
 
@@ -42,8 +42,8 @@ void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset,int l
 
     } if(level == 3) {
         img1.renderBackground(scrollingOffset, 0);
-        img2.renderBackground(scrollingOffset * 5, 200);
-        img3.renderBackground(scrollingOffset * 10, 450);
+        img2.renderBackground(scrollingOffset * 5, 0);
+        img3.renderBackground(scrollingOffset * 10, 0   );
     }
 }
 

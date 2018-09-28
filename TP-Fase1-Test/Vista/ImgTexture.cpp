@@ -124,17 +124,17 @@ void ImgTexture::loadFromFile( std::string path ){
 	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
 	if( loadedSurface == NULL ){
 		loadedSurface = IMG_Load( "../escenario/negro.png" );
-		gplogger->log(1,"no se encontro una imagen");
+		gplogger->log(1,"No se encontro una imagen, se cargó una imagen por defecto");
 		//throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
 	}
 	//Color key image
 	if(trans){
-		SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, transColor[0], transColor[1], transColor[2] ) );
+	//	SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, transColor[0], transColor[1], transColor[2] ) );
 	}
 	//Create texture from surface pixels
     mTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
 	if( mTexture == NULL ){
-		gplogger->log(1,"no abri textura");
+		gplogger->log(1,"No se abrió una textura");
 		throw SDLError("Fallo crear textura apartir de %s",path.c_str());
 	}
 	//Get image dimensions
