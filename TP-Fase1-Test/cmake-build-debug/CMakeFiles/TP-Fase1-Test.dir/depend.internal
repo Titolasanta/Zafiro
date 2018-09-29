@@ -4,13 +4,12 @@
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o
  ..//Vista/Logger.h
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Character.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Character.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Pistol.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -21,13 +20,12 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Character.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionHard.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionHard.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -38,13 +36,12 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Character.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionSoft.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionSoft.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -62,16 +59,15 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o
  ..//Vista/xml.h
  ../Vista/pugiconfig.hpp
  ../Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Character.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Model.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Character.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionHard.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/CollisionSoft.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Model.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Model.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -93,19 +89,39 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Pistol.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ ..//Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Pistol.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Pistol.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
+ /usr/include/SDL2/SDL_config.h
+ /usr/include/SDL2/SDL_error.h
+ /usr/include/SDL2/SDL_pixels.h
+ /usr/include/SDL2/SDL_platform.h
+ /usr/include/SDL2/SDL_rect.h
+ /usr/include/SDL2/SDL_rwops.h
+ /usr/include/SDL2/SDL_stdinc.h
+ /usr/include/SDL2/begin_code.h
+ /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
+ ..//Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /usr/include/SDL2/SDL_config.h
+ /usr/include/SDL2/SDL_error.h
+ /usr/include/SDL2/SDL_pixels.h
+ /usr/include/SDL2/SDL_platform.h
+ /usr/include/SDL2/SDL_rect.h
+ /usr/include/SDL2/SDL_rwops.h
+ /usr/include/SDL2/SDL_stdinc.h
+ /usr/include/SDL2/begin_code.h
+ /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Projectile.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Modelo/Weapon.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Projectile.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo/Weapon.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -121,19 +137,18 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o
  ../Modelo/Character.h
  ../Modelo/Projectile.h
  ../Modelo/Weapon.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Background.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Background.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -155,16 +170,15 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Bullet.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Bullet.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -181,32 +195,31 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o
  ..//Modelo/Model.h
  ..//Vista/Level.h
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Background.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Bullet.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Controller.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Controller.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Hielo.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Personajes.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Piedra.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaBlanda.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaDura.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlImgInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/View.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -228,19 +241,18 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Exception.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Exception.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Hielo.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Hielo.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -250,12 +262,12 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o
  ..//Modelo/Model.h
  ..//Vista/Level.h
@@ -263,14 +275,14 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o
  ../Modelo/Character.h
  ../Modelo/Projectile.h
  ../Modelo/Weapon.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Level.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Level.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Level.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Level.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -292,19 +304,18 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Personajes.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Personajes.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -314,16 +325,15 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Piedra.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Piedra.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -333,16 +343,15 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaBlanda.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaBlanda.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -352,16 +361,15 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaDura.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaDura.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -371,17 +379,16 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -391,23 +398,22 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlImgInit.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlImgInit.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlInit.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -417,11 +423,11 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o
  ..//Modelo/Model.h
  ..//Vista/Level.h
@@ -429,31 +435,30 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o
  ../Modelo/Character.h
  ../Modelo/Projectile.h
  ../Modelo/Weapon.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Background.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Bullet.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Hielo.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Personajes.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Piedra.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaBlanda.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaDura.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlImgInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/View.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/View.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -475,15 +480,14 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Exception.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_pixels.h
  /usr/include/SDL2/SDL_platform.h
@@ -493,14 +497,14 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Exception.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Exception.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLIMGException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o
  .././Modelo/Character.h
  .././Modelo/Projectile.h
@@ -509,32 +513,31 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o
  ..//Modelo/Model.h
  ..//Vista/Level.h
  ..//Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Background.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Bullet.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Controller.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Hielo.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Logger.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Personajes.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Piedra.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SDLException.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Scene.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/SdlInit.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Sprite.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Texture.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/View.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Viewable.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/Window.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/main.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Background.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Bullet.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Controller.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Hielo.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/ImgTexture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Personajes.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Piedra.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaBlanda.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/PlataformaDura.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SDLException.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Scene.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlImgInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/SdlInit.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Sprite.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Texture.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/View.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Viewable.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Window.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/main.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
@@ -556,9 +559,9 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o
  ..//Modelo/Model.h
  ..//Vista/Level.h
@@ -566,13 +569,13 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o
  ../Modelo/Character.h
  ../Modelo/Projectile.h
  ../Modelo/Weapon.h
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.cpp
- /home/antonella/Documents/FIUBA/Taller/Zafiro/TP-Fase1-Test/Vista/xml.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/Logger.h
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugiconfig.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/pugixml.hpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.cpp
+ /home/tito/Desktop/Tallar/github/TP-Fase1-Test/Vista/xml.h
  /usr/include/SDL2/SDL_blendmode.h
  /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_endian.h
  /usr/include/SDL2/SDL_error.h
  /usr/include/SDL2/SDL_events.h
  /usr/include/SDL2/SDL_gamecontroller.h
