@@ -142,7 +142,7 @@
             <width>800</width>
             <fondo1>../escenario/nubes2.png</fondo1>
             <fondo2>../escenario/arbolitos2.png</fondo2>
-            <fondo3>../escenario/level2-background1.png</fondo3>
+            <fondo3>../escenario/arbolitos2.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>0</xi>
