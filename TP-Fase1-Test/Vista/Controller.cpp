@@ -32,6 +32,7 @@ void Controller::processEvent(SDL_Event e) {
         if (e.key.keysym.sym == SDLK_UP) model.aimUp();
         if (e.key.keysym.sym == SDLK_LCTRL) model.crouch();
         if (e.key.keysym.sym == SDLK_x) model.shoot();
+        if (e.key.keysym.sym == SDLK_l){ model.changeLevel(model.getLevel().next(),scene); }
     }
 
     if (e.type == SDL_KEYUP) {

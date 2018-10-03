@@ -15,7 +15,11 @@
 class Model {
     private:
         Level level;
-        Character player1;
+public:
+    const Level &getLevel() const;
+
+private:
+    Character player1;
         std::list<Projectile> lBullets;
         //Character player2;
 

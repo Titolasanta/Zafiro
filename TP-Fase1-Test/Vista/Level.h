@@ -18,7 +18,7 @@ public:
 
     int getLevel();
 
-    Level next();
+    Level next() const;
 };
 
 

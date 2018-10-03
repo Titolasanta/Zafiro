@@ -10,7 +10,7 @@
             <fondo1>../escenario/fondo1.png</fondo1>
             <fondo2>../escenario/mountains1.png</fondo2>
             <fondo3>../escenario/arbolitos1.2.png</fondo3>
-            <<<<r7f<plataforma>
+            <plataforma>
                 <tipo>pasto</tipo>
                 <xi>100</xi>
                 <xf>300</xf>
@@ -152,7 +152,7 @@
         <nivel2>
             <height>4000</height>
             <width>800</width>
-            <fondo1>../escenario/nubes2.png</fondo1>
+            <fondo1>../escenario/level2-background1.png</fondo1>
             <fondo2>../escenario/arbolitos2.png</fondo2>
             <fondo3>../escenario/arbolitos2.png</fondo3>
             <plataforma>

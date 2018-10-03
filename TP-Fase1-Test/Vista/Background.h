@@ -25,6 +25,7 @@ private:
     ImgTexture img3;
     int scrollingOffset=0;
     bool scrollVertical = false;
+    int scrollingCatarata = -2900;
 public:
     ImgTexture &getImg1();
     int getScrollingOffset();

@@ -68,6 +68,7 @@ void Model::update(Scene &scene) {
     if(level.getLevel() != 2){
         if (player1.getPositionY() < -5 + cam->y) {
             player1.setPositionY(-5 +  cam->y);
+            player1.setPositionY(-5 +  cam->y);
             player1.setVelocityY(0);
         }
     }else{
@@ -203,4 +204,8 @@ void Model::shoot(){
         lBullets.push_back(std::move(player1.shoot()));
     } catch(int e) { //no recargo el arma
     }
+}
+
+const Level &Model::getLevel() const {
+    return level;
 }

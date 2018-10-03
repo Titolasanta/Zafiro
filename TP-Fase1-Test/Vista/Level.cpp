@@ -31,7 +31,7 @@ int Level::getLevel() {
     return level;
 }
 
-Level Level::next() {
+Level Level::next() const {
     if(level == 3)
         throw "fin del juego\n";
     return std::move(Level(level+1));
