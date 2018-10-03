@@ -61,4 +61,12 @@ void Scene::addPlataformHard(int x, int y, int width) {
     lPlataformsHard.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
+bool Scene::isP1Shooting() const {
+    return P1Shooting;
+}
+
+void Scene::setP1Shooting(bool P1Shooting) {
+    Scene::P1Shooting = P1Shooting;
+}
+
 

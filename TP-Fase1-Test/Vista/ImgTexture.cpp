@@ -124,7 +124,10 @@ void ImgTexture::loadFromFile( std::string path ){
 	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
 	if( loadedSurface == NULL ){
 		loadedSurface = IMG_Load( "../escenario/negro.png" );
-		gplogger->log(1,"No se encontro una imagen, se cargó una imagen por defecto");
+		std::string mensaje("No se encontro la imagen: ");
+		mensaje.append(path);
+		mensaje.append(". Se cargó una imagen por defecto");
+		gplogger->log(1, mensaje.c_str());
 		//throw SDLIMGError("Carga de imagen %s fallo",path.c_str());
 	}
 	//Color key image

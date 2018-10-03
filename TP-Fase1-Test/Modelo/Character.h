@@ -33,7 +33,14 @@ private:
         bool crouching;
         bool lookingRight;
         bool dead;
-        int currentPlatX;
+        bool shooting = false;
+public:
+    bool isShooting() const;
+
+    void setShooting(bool shooting);
+
+private:
+    int currentPlatX;
         int currentPlatY;
         int currentPlatW;
         bool currentPlatHard;
@@ -127,6 +134,7 @@ public:
 
     bool canGoThrough();
 
+    void stopShoot();
 };
 
 

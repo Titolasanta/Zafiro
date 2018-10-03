@@ -110,6 +110,8 @@ void Model::update(Scene &scene) {
 
     scene.setP1Walking(player1.isWalking());
 
+    scene.setP1Shooting(player1.isShooting());
+
     if (scene.getLevel() != 2){
         if (scene.getP1PositionX() > MARGENX + cam->x)
             cam->x = scene.getP1PositionX() - MARGENX;
@@ -124,6 +126,9 @@ void Model::update(Scene &scene) {
         this->changeLevel(level.next(),scene);
 }
 
+void Model::stopShoot(){
+    player1.stopShoot();
+}
 
 void Model::addPlataformSoft(int x, int y, int w) {
     lPlataformsSoft.push_back(std::move(std::make_tuple(x,y,w)));

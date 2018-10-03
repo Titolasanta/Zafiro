@@ -7,6 +7,7 @@
 #include "Character.h"
 #include "Projectile.h"
 #include "Pistol.h"
+#include "CollisionHard.h"
 
 extern Logger *gplogger;
 
@@ -44,14 +45,15 @@ void Character::land(int x, int y,int w,bool hard) {
 
 void Character::time() {
 
-
-    if(timeTillNextShoot > 0){
-        timeTillNextShoot--;
+    timeTillNextShoot--;
+    if(timeTillNextShoot < 0){
+        timeTillNextShoot = 0;
+        setShooting(false);
     }
 
-    if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX)
+    if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX) {
         airborne = true;
-
+    }
    if(airborne)
         velocityY += 4;
 
@@ -123,7 +125,7 @@ Projectile Character::shoot() {
     if (timeTillNextShoot != 0){
         throw 1; //no recargo el arma
     }
-
+    setShooting(true);
     timeTillNextShoot = weapon.getFireRate();
 
     try {
@@ -204,6 +206,19 @@ bool Character::canGoThrough() {
     if(!(currentPlatHard))
         return true;
     return false;
+}
+
+bool Character::isShooting() const {
+    return shooting;
+}
+
+void Character::setShooting(bool shooting) {
+    Character::shooting = shooting;
+}
+
+void Character::stopShoot() {
+//    setShooting(false);
+
 }
 
 

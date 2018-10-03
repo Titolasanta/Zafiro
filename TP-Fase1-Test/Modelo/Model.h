@@ -42,6 +42,7 @@ class Model {
         int getLevelWidth();
         int getLevelHeight();
         void shoot();
+        void stopShoot();
 };
 
 

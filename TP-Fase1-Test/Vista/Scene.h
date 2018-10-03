@@ -55,6 +55,13 @@ private:
     bool P1Crouching;
     bool P1LookingRight;
     bool P1Dead;
+    bool P1Shooting = false;
+public:
+    bool isP1Shooting() const;
+
+    void setP1Shooting(bool P1Shooting);
+
+private:
 
     //Weapon weapon;
     int P1AimDirection;

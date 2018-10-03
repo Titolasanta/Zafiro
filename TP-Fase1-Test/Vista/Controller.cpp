@@ -38,12 +38,11 @@ void Controller::processEvent(SDL_Event e) {
         if (e.key.keysym.sym == SDLK_RIGHT || e.key.keysym.sym == SDLK_LEFT) model.stop();
         if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP)  model.aimStraight();
         if (e.key.keysym.sym == SDLK_LCTRL) model.stand();
+        if (e.key.keysym.sym == SDLK_x) model.stopShoot();
     }
 }
 
 void Controller::show() {
-
-    gplogger->log(3,"Se llama al metodo show de controler");
     model.update(scene);
     view.render(scene);
 }

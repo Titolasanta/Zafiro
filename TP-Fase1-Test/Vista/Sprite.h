@@ -20,7 +20,7 @@ public:
     SDL_Rect* getFaceDown();
 
 private:
-    SDL_Rect frameMoviemiento[3][6];
+    SDL_Rect frameMoviemiento[4][6];
     SDL_Rect parado;
     SDL_Rect faceDown;
 

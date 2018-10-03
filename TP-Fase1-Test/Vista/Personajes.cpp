@@ -50,6 +50,10 @@ void Personajes::render(Scene scene, int cameraX, int cameraY) {
         currentClip = rojoFrames.getFaceDown();
     }
 
+    if (scene.isP1Shooting()){
+        currentClip = rojoFrames.move(3,   frameActualRojo % 3  );
+    }
+
     if (scene.isP1Airborne()){
         currentClip = rojoFrames.move(2,   frameActualRojo % 4  );
     }
