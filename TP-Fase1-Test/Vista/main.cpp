@@ -40,16 +40,26 @@ int main( int argc, char* argv[] )
     pugi::xml_parse_result result = doc.load_file(PATH_XML_ORIGINAL);
     pugi::xml_parse_result result_default = doc_default.load_file(PATH_XML_DEFAULT);
 
-    if (!(result || result_default)) {
-        std::cout << "Error al cargar el archivo de configuración por defecto: " << result_default.description() << std::endl;
-    }
-
     const char* modo;
     if (argc > 1 ) {
         modo = argv[1];
     }
-    else modo = get_log_level(doc);
-    Logger logger(modo,get_log_level(doc_default));
+    else if (!(result || result_default)) modo = "DEBUG";
+    else modo = get_log_level(doc, result);
+    Logger logger(modo,get_log_level(doc_default, result_default));
+
+    if (!(result)) {
+        std::string mensaje = get_error_message("Error al cargar el archivo XML: ", PATH_XML_ORIGINAL, result.offset, result.description());
+        logger.log(1, mensaje.c_str());
+        if (!result_default) {
+            mensaje = get_error_message("Error al cargar el archivo XML por defecto: ", PATH_XML_DEFAULT, result_default.offset, result_default.description());
+            logger.log(1, mensaje.c_str());
+            return 0;
+        }
+        logger.log(1, "Se cargó un archivo por defecto");
+    }
+
+
 
 
     gplogger = &logger;

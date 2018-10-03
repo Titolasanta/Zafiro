@@ -10,8 +10,9 @@
 
 extern Logger *gplogger;
 
-const char* get_log_level(pugi::xml_document &doc){
-    return doc.first_child().child("debug").first_child().child_value();
+const char* get_log_level(pugi::xml_document &doc, pugi::xml_parse_result result){
+    if (result) return doc.first_child().child("debug").first_child().child_value();
+    return "FALOPA";
 }
 
 int get_level_width(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result){
@@ -80,9 +81,35 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
                 }
             }
         }
+        else gplogger->log(1, "Error al cargar una plataforma, el formato no era válido");
 
     }
    // modelo.addPlataformHard(0, 550, limite_horizontal);
     //scene.addPlataformHard(0,550,limite_horizontal);
 
+}
+
+std::string get_error_message(const char* message, const char* path, int pos, const char* description){
+    std::string mensaje(message);
+    mensaje.append(path);
+    mensaje.append("[at line:");
+    std::ifstream archivo(path);
+    int lineNumber = 0;
+    char c;
+    for (int i = 0; i < pos; ++i){
+        c = archivo.get();
+        if (c == '\n') lineNumber++;
+    }
+    archivo.seekg(0);
+    char linea[500];
+    for (int i = 0; i < lineNumber +1; ++i) {
+        archivo.getline(linea, 255);
+    }
+    mensaje.append(std::to_string(lineNumber));
+    mensaje.append("] ");
+    mensaje.append(description);
+    mensaje.append(": ");
+    mensaje.append(linea);
+    archivo.close();
+    return std::move(mensaje);
 }
