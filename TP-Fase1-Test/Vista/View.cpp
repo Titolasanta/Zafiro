@@ -31,11 +31,12 @@ void View::render(Scene& scene) {
     if(level != scene.getLevel())
         changeLevel();
     if(level == 2) {
-            moveBackground(-1);
-    }else
+        moveBackground(scene.getP1VelocityY());
+        if (scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200) background.setScrollingOffset(-200);
+    }else {
         moveBackground(scene.getP1VelocityX());
-    if(scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200)
-        background.setScrollingOffset(0);
+        if (scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200) background.setScrollingOffset(0);
+    }
     camera = scene.getCamera();
 
     window.redererClear();
@@ -71,14 +72,11 @@ void View::changeLevel() {
 
 void View::moveBackground(int dir) {
     int newOffset= background.getScrollingOffset();
-    if(dir > 0)
-        --newOffset;
-    if(dir < 0)
-        ++newOffset;
+    if(dir > 0) --newOffset;
+    if(dir < 0) ++newOffset;
 
-    if (newOffset < -3000 || newOffset > 0 ) {
-        newOffset = -100;
-    }
+    if (newOffset > 0) newOffset = 0;
+    //if (newOffset < -3000) newOffset = -100;
 
 
     background.setScrollingOffset(newOffset);

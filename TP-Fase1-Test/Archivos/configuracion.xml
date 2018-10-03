@@ -32,7 +32,7 @@
                 <tipo>pasto</tipo>
                 <xi>4500</xi>
                 <xf>4900</xf>
-                <y>475</y>
+                <y>400</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -113,19 +113,19 @@
                 <y>500</y>
             </plataforma>
             <plataforma>
+                <tipo>hierro</tipo>
+                <xi>0</xi>
+                <xf>500</xf>
+                <y>300</y>
+            </plataforma>
+            <plataforma>
                 <tipo>pasto</tipo>
                 <xi>650</xi>
-                <xf>1000</xf>
+                <xf>1325</xf>
                 <y>400</y>
             </plataforma>
             <plataforma>
-                <tipo>pasto</tipo>
-                <xi>910</xi>
-                <xf>1325</xf>
-                <y>390</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
+                <tipo>hierro</tipo>
                 <xi>1200</xi>
                 <xf>2000</xf>
                 <y>400</y>
@@ -142,7 +142,7 @@
             <width>800</width>
             <fondo1>../escenario/nubes2.png</fondo1>
             <fondo2>../escenario/arbolitos2.png</fondo2>
-            <fondo3>../escenario/level2-background1.png</fondo3>
+            <fondo3>../escenario/arbolitos2.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
                 <xi>0</xi>
