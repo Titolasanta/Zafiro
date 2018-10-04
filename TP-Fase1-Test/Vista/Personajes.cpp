@@ -36,23 +36,20 @@ void Personajes::render(Scene scene, int cameraX, int cameraY) {
     else
         angle = 180;
 
-
     if (scene.getP1AimDirection() == -1)
         currentClip = rojoFrames.move(1, frameActualRojo % 3);
     else if (scene.getP1AimDirection() == 1)
         currentClip = rojoFrames.move(1, frameActualRojo % 3 + 3);
-    else
-        if(!scene.isP1Walking())
+    else {
+        if (!scene.isP1Walking())
             currentClip = rojoFrames.quieto();
         else
             currentClip = rojoFrames.move(0, frameActualRojo % 6);
-    if (scene.isP1Crouching()) {
+        if (scene.isP1Shooting() && !scene.isP1Crouching())
+            currentClip = rojoFrames.move(3, frameActualRojo % 3);
+    }
+    if (scene.isP1Crouching())
         currentClip = rojoFrames.getFaceDown();
-    }
-
-    if (scene.isP1Shooting()&&!scene.isP1Crouching()){
-        currentClip = rojoFrames.move(3,   frameActualRojo % 3  );
-    }
 
     if (scene.isP1Airborne()){
         currentClip = rojoFrames.move(2,   frameActualRojo % 4  );
