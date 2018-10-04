@@ -50,7 +50,7 @@ void Personajes::render(Scene scene, int cameraX, int cameraY) {
         currentClip = rojoFrames.getFaceDown();
     }
 
-    if (scene.isP1Shooting()){
+    if (scene.isP1Shooting()&&!scene.isP1Crouching()){
         currentClip = rojoFrames.move(3,   frameActualRojo % 3  );
     }
 
