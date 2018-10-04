@@ -6,7 +6,7 @@
 #include "Logger.h"
 
 extern Logger *gplogger;
-Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png",0,0,69,36) {
+Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png",0,0,64,61) {
 
     gplogger->log(3,"Se crea una plataforma blanda");
 }

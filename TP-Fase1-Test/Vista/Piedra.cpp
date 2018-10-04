@@ -9,7 +9,7 @@
 #include "Logger.h"
 
 extern Logger* gplogger;
-Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png",0,0,71,68){
+Piedra::Piedra(Window *window) : Viewable(window,"../escenario/piedra.png",0,0,64,64){
 
     gplogger->log(3,"Se crea Piedra de view");
 }
@@ -25,9 +25,9 @@ void Piedra::render(Scene& scene,SDL_Rect* camera){
     int y;
     int w;
     auto lista = scene.getLPlataformSoft();
-    for (std::list< std::tuple<int,int,int>>::iterator it = lista.begin(); it != lista.end(); it++) {
+    for (auto it = lista.begin(); it != lista.end(); it++) {
         y = std::get<1>(*it);
-        y += 34;
+        y += 4;
         while(y < 1500) {
             w = std::get<2>(*it);
             x = std::get<0>(*it);
@@ -39,7 +39,7 @@ void Piedra::render(Scene& scene,SDL_Rect* camera){
             SDL_Rect clipTemp = clip;
             clipTemp.w = w;
             texture.render(x-camera->x, y-camera->y,&clipTemp);
-            y += 68;
+            y += 64;
         }
     }
 }

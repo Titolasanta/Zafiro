@@ -92,7 +92,9 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
 std::string get_error_message(const char* message, const char* path, int pos, const char* description){
     std::string mensaje(message);
     mensaje.append(path);
-    mensaje.append("[at line:");
+    mensaje.append(": ");
+    mensaje.append(description);
+    mensaje.append("\n\t\t   [line:");
     std::ifstream archivo(path);
     int lineNumber = 0;
     char c;
@@ -105,10 +107,8 @@ std::string get_error_message(const char* message, const char* path, int pos, co
     for (int i = 0; i < lineNumber +1; ++i) {
         archivo.getline(linea, 255);
     }
-    mensaje.append(std::to_string(lineNumber));
-    mensaje.append("] ");
-    mensaje.append(description);
-    mensaje.append(": ");
+    mensaje.append(std::to_string(lineNumber +1));
+    mensaje.append("]: ");
     mensaje.append(linea);
     archivo.close();
     return std::move(mensaje);

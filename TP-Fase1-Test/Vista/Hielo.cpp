@@ -6,7 +6,7 @@
 #include "Logger.h"
 
 extern Logger *gplogger;
-Hielo::Hielo(Window *window) : Viewable(window,"../escenario/hielo.png",0,0,79,29) {
+Hielo::Hielo(Window *window) : Viewable(window,"../escenario/hielo.png",0,0,78,100) {
 
     gplogger->log(3,"Se crea Hielo de View");
 }
