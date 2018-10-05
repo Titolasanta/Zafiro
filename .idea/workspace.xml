@@ -13,10 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeCCompiler.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/3.12.1/CMakeCXXCompiler.cmake" beforeDir="false" />
@@ -141,7 +137,7 @@
     <session id="-1828780259">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -164,7 +160,7 @@
           <entry key="hpp" value="2" />
           <entry key="istream" value="1" />
           <entry key="png" value="1" />
-          <entry key="txt" value="42" />
+          <entry key="txt" value="43" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
@@ -172,7 +168,7 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="ObjectiveC" value="130" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="PLAIN_TEXT" value="43" />
           <entry key="XML" value="11" />
         </counts>
       </usages-collector>
@@ -180,15 +176,15 @@
         <counts>
           <entry key="cpp" value="8844" />
           <entry key="h" value="1267" />
-          <entry key="txt" value="434" />
-          <entry key="xml" value="695" />
+          <entry key="txt" value="464" />
+          <entry key="xml" value="696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="ObjectiveC" value="10111" />
-          <entry key="PLAIN_TEXT" value="434" />
-          <entry key="XML" value="695" />
+          <entry key="PLAIN_TEXT" value="464" />
+          <entry key="XML" value="696" />
         </counts>
       </usages-collector>
     </session>
@@ -235,7 +231,7 @@
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -291,8 +287,8 @@
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/Vista/xml.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
       </list>
     </option>
   </component>
@@ -555,7 +551,7 @@
       <workItem from="1538241552052" duration="205000" />
       <workItem from="1538255477814" duration="835000" />
       <workItem from="1538501114754" duration="11000" />
-      <workItem from="1538587066666" duration="11882000" />
+      <workItem from="1538587066666" duration="11987000" />
     </task>
     <task id="LOCAL-00001" summary="agregue un par de funciones para leer el archivo xml">
       <created>1537050934175</created>
@@ -620,11 +616,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538181367052</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Logs del XML y otros errores">
+      <created>1538599033272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1538599033272</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131429000" />
+    <option name="totallyTimeSpent" value="131534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
@@ -635,7 +638,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.32626426" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.32626426" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.70146817" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -659,6 +662,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="agregue un par de funciones para leer el archivo xml" />
     <MESSAGE value="logger + archivos de configuracio xml" />
     <MESSAGE value="mejora logger - no pude hacer que se cree en la carpeta Archivos." />
@@ -667,7 +671,8 @@
     <MESSAGE value="logger y logs varios arreglados" />
     <MESSAGE value="imagenes del fondo, falta arreglar el parallax del 2do nivel" />
     <MESSAGE value="imagenes fondos" />
-    <option name="LAST_COMMIT_MESSAGE" value="imagenes fondos" />
+    <MESSAGE value="Logs del XML y otros errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logs del XML y otros errores" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/log.txt" />
@@ -926,24 +931,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt">
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-813">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="181">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Vista/main.cpp">
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+        <state relative-caret-position="15">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>

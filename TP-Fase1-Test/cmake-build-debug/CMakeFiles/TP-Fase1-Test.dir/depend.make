@@ -9,6 +9,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: ../Modelo/Pistol.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -25,6 +26,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: ../Modelo/CollisionHard
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -41,6 +43,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: ../Modelo/CollisionSoft
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -67,6 +70,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -94,6 +98,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: ../Modelo/Pistol.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -107,6 +112,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: ../Vista/Scene.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: ../Modelo/Projectile.cpp
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -121,6 +127,7 @@ CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: ../Modelo/Projectile.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: ../Modelo/Weapon.cpp
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: ../Modelo/Weapon.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -148,6 +155,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -178,6 +186,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -219,6 +228,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -252,6 +262,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -282,6 +293,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -315,6 +327,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: ../Vista/Sprite.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -333,6 +346,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -351,6 +365,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -369,6 +384,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: ../Vista/Texture.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -388,6 +404,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: ../Vista/Logger.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: ../Vista/Scene.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: ../Vista/Scene.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -413,6 +430,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: ../Vista/Sprite.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: ../Vista/Sprite.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -458,6 +476,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -487,6 +506,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: ../Vista/Viewable.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: ../Vista/Viewable.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: ../Vista/Window.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: /usr/include/SDL2/SDL_pixels.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o: /usr/include/SDL2/SDL_platform.h
@@ -537,6 +557,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/pugixml.hpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
@@ -575,6 +596,7 @@ CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: ../Vista/xml.cpp
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: ../Vista/xml.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_blendmode.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_endian.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_error.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_events.h
 CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
