@@ -11,7 +11,7 @@
             <fondo2>../escenario/mountains1.png</fondo2>
             <fondo3>../escenario/arbolitos1.2.png</fondo3>
             <plataforma>
-                <tipo>pasto</tipo>
+                <tipo>hierro</tipo>
                 <xi>100</xi>
                 <xf>300</xf>
                 <y>400</y>
@@ -119,7 +119,7 @@
                 <y>400</y>
             </plataforma>
             <plataforma>
-                <tipo>pasto</tipo>
+                <tipo>hierro</tipo>
                 <xi>0</xi>
                 <xf>700</xf>
                 <y>250</y>
