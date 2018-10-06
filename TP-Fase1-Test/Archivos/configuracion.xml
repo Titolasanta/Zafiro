@@ -47,7 +47,7 @@
                 <y>475</y>
             </plataforma>
             <plataforma>
-                <tipo>pasto</tipo>
+                <tipo>hierro</tipo>
                 <xi>4000</xi>
                 <xf>5000</xf>
                 <y>300</y>
@@ -119,7 +119,7 @@
                 <y>400</y>
             </plataforma>
             <plataforma>
-                <tipo>hierro</tipo>
+                <tipo>pasto</tipo>
                 <xi>0</xi>
                 <xf>700</xf>
                 <y>250</y>
