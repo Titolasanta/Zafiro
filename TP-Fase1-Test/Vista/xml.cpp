@@ -113,3 +113,12 @@ std::string get_error_message(const char* message, const char* path, int pos, co
     archivo.close();
     return std::move(mensaje);
 }
+
+int get_cantidad_jugadores(pugi::xml_document &doc, pugi::xml_document doc_default, pugi::xml_parse_result result){
+    int original;
+    if (result){
+        original = doc.first_child().child("cantidad_jugadores").first_child().text().as_int();
+        if (original) return original;
+    }
+    return doc_default.first_child().child("cantidad_jugadores").first_child().text().as_int();
+}

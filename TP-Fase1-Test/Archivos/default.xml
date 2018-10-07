@@ -3,6 +3,7 @@
     <debug>
         <level>INFO</level>
     </debug>
+    <cantidad_jugadores>4</cantidad_jugadores>
     <escenarios>
         <nivel1>
             <height>600</height>
