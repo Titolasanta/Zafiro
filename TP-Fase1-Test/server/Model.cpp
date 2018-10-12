@@ -13,6 +13,7 @@
 #include "../common/Logger.h"
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
+#include "xmlServer.h"
 
 
 #define MARGENX (800/2)

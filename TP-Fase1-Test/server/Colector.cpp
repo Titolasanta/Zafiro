@@ -1,6 +1,7 @@
 
 #include "Thread.h"
 #include <list>
+#include <zconf.h>
 #include "Colector.h"
 #include "Joiner.h"
 #include "../common/Socket.h"
@@ -17,10 +18,11 @@ void Colector::run() {
             id++;
 			Socket skt2 = socket.accept_connection(); //const con mov
             ModelProtocol protocol(skt2,queue,id,mutex);
+            protocol.start();
+            usleep(300000);
 			list.push_back(std::move(protocol));
-			protocol.start();
 			//sockets.push_back(std::move(skt2));
-		}
+        }
     }catch( accept_fail& e){}
 
 }

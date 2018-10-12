@@ -1,10 +1,9 @@
 
 #include <list>
-#include "Comandos.h"
 #include "Joiner.h"
 
 #include <unistd.h>
-
+/*
 
 	Joiner::Joiner(std::list<command*>& l) : list(l) {}
 		
@@ -31,3 +30,4 @@
 			it = list.begin();		
 		}	
 	}
+*/

@@ -13,9 +13,14 @@
 class ModelProtocol : public Thread {
 public:
     ModelProtocol(Socket& ,std::queue<char>& ,char id, std::mutex& mutex);
-    virtual void run();
+    void run() override;
     void end();
     void send(Scene& scene);
+
+    ModelProtocol(ModelProtocol&& other);
+
+    ModelProtocol& operator=(ModelProtocol&& other) = delete;
+
 private:
     Socket skt;
     char id;

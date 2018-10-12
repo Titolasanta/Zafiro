@@ -6,18 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${TP-Fase1-Test_SOURCE_DIR}/cmake")
 
-file(GLOB helloworld_SRC
-        "Vista/*.h"
-        "Vista/*.cpp"
-        "Modelo/*.h"
-        "Modelo/*.cpp"
-        )
 
-set(SOURCE_FILES ${helloworld_SRC} Vista/Sprite.cpp Vista/Sprite.h Vista/Personajes.cpp Vista/Personajes.h  Vista/View.cpp Vista/View.h Vista/PlataformaBlanda.cpp Vista/PlataformaBlanda.h Vista/Piedra.cpp Vista/Piedra.h Vista/Viewable.cpp Vista/Viewable.h Vista/Controller.cpp Vista/Controller.h Vista/xml.h Vista/xml.cpp Vista/pugixml.hpp Vista/pugiconfig.hpp Vista/pugixml.cpp Vista/Bullet.cpp Vista/Bullet.h Vista/Background.cpp Vista/Background.h Vista/Logger.cpp Vista/Logger.h Vista/Level.cpp Vista/Level.h Modelo/CollisionSoft.cpp Modelo/CollisionSoft.h Vista/PlataformaDura.cpp Vista/PlataformaDura.h Modelo/CollisionHard.cpp Modelo/CollisionHard.h Vista/Hielo.cpp Vista/Hielo.h)
-
-
-
-add_executable(TP-Fase1-Test ${SOURCE_FILES})
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_image REQUIRED)
@@ -31,10 +20,34 @@ include_directories(
         ${SDL2_IMAGE_INCLUDE_DIR}
         ${SDL2_TTF_INCLUDE_DIR})
 
-include_directories(${CMAKE_SOURCE_DIR} )
 
-target_link_libraries(${PROJECT_NAME}
+file(GLOB tserver_SRC
+        "server/*"
+        "common/*"
+        )
+
+file(GLOB tclient_SRC
+        "client/*"
+        "common/*"
+        )
+
+set(tSOURCE_FILES_S ${tserver_SRC} server/Interpreter.cpp server/Interpreter.h server/Sender.cpp server/Sender.h server/xmlServer.cpp server/xmlServer.h)
+set(tSOURCE_FILES_C ${tclient_SRC} )
+
+
+add_executable(tServer ${tSOURCE_FILES_S})
+
+add_executable(tClient ${tSOURCE_FILES_C})
+
+
+target_link_libraries(tClient
         ${SDL2_LIBRARY}
         ${SDL2_IMAGE_LIBRARIES}
+        ${pthread}
         ${SDL2_TTF_LIBRARIES})
 
+target_link_libraries(tServer
+        ${SDL2_LIBRARY}
+        ${SDL2_IMAGE_LIBRARIES}
+        ${pthread}
+        ${SDL2_TTF_LIBRARIES})

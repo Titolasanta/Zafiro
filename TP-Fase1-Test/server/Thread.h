@@ -5,7 +5,7 @@
 
 
 class Thread {
-    private:
+    protected:
         std::thread thread;
  
     public:

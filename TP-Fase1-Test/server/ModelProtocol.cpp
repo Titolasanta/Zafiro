@@ -21,7 +21,7 @@ void sendValue(Socket& skt, int value){
     skt.send_all(msgNumero,4);
 }
 
-void ModelProtocol::run(){
+void ModelProtocol::run() {
     char msg[3];
     while(!quit){
         msg[0] = id;
@@ -37,6 +37,12 @@ void ModelProtocol::run(){
 void ModelProtocol::end(){
     quit = true;
 }
+
+
+ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex) {
+    this->thread = std::move(other.thread);
+}
+
 
 void ModelProtocol::send(Scene& scene){
     //std::list<std::tuple<int,int>> lBullets;

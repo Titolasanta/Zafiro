@@ -4,7 +4,7 @@
 
 #include <list>
 #include "Thread.h"
-
+/*
 class Joiner {
 	public:
 	explicit Joiner(std::list<command*>& l);
@@ -16,5 +16,5 @@ class Joiner {
 	std::list<command*>& list;
 	bool must_continue = true;	
 };
-
+*/
 #endif
