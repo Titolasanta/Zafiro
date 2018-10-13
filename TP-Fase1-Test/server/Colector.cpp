@@ -19,7 +19,7 @@ void Colector::run() {
 			Socket skt2 = socket.accept_connection(); //const con mov
             ModelProtocol protocol(skt2,queue,id,mutex);
             protocol.start();
-            usleep(300000);
+            usleep(30000);
 			list.push_back(std::move(protocol));
 			//sockets.push_back(std::move(skt2));
         }

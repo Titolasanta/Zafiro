@@ -67,26 +67,34 @@ int receiveNumber(Socket& skt){
 
     unsigned int numeroRecibido;
     char recibido[4];
-
+    
     skt.receive_all(recibido,4);
 
     unsigned int temp = *(unsigned int*)recibido;
     numeroRecibido = ntohl(temp);
-    return numeroRecibido;
+    printf("%d\n",(int)numeroRecibido);
+    return (int)numeroRecibido;
 }
 
 void ViewProtocol::update(Scene& scene){
 
     //scene.setBullets(std::move(lTemp));
     scene.setP1PositionX(receiveNumber(socket));
+    scene.setP1PositionY(receiveNumber(socket));
     scene.setP1VelocityX(receiveNumber(socket));
     scene.setP1VelocityY(receiveNumber(socket));
-    scene.setP1PositionY(receiveNumber(socket));
+    scene.setP1HitPoints(receiveNumber(socket));
+    scene.setP1Walking(receiveNumber(socket));
     scene.setP1Airborne(receiveNumber(socket));
-    scene.setP1AimDirection(receiveNumber(socket));
-    scene.setP1Dead(receiveNumber(socket));
     scene.setP1Crouching(receiveNumber(socket));
     scene.setP1LookingRight(receiveNumber(socket));
-    scene.setP1Walking(receiveNumber(socket));
+    scene.setP1Dead(receiveNumber(socket));
     scene.setP1Shooting(receiveNumber(socket));
+    scene.setP1AimDirection(receiveNumber(socket));
+    
+    scene.setCameraX(receiveNumber(socket));
+    scene.setCameraY(receiveNumber(socket));
+    scene.setLevel(receiveNumber(socket));
+    scene.setP1AimDirection(receiveNumber(socket));
+
 }

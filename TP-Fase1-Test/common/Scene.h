@@ -43,28 +43,31 @@ public:
 private:
 
     std::list<std::tuple<int,int>> lBullets;
-    int P1PositionX;
-    int P1PositionY;
-    int P1VelocityX;
-    int P1VelocityY;
+    int P1PositionX = 100;
+    int P1PositionY = 300;
+    int P1VelocityX = 0;
+    int P1VelocityY = 0;
 //    int P1AccelerationX;
   //  int P1AccelerationY;
-    int P1HitPoints;
-    bool P1Walking;
+    int P1HitPoints = 0;
+    bool P1Walking = 0;
 public:
     void setLBullets(const std::list<std::tuple<int, int>> &lBullets) {
         Scene::lBullets = lBullets;
     }
 
-    void setCamera(const SDL_Rect &camera) {
-        Scene::camera = camera;
+    void setCameraX(int x) {
+        Scene::camera.x = x;
+    }
+    void setCameraY(int y) {
+        Scene::camera.y = y;
     }
 
 private:
-    bool P1Airborne;
-    bool P1Crouching;
-    bool P1LookingRight;
-    bool P1Dead;
+    bool P1Airborne = 1;
+    bool P1Crouching = 0;
+    bool P1LookingRight = 1;
+    bool P1Dead = 0;
     bool P1Shooting = false;
 public:
     bool isP1Shooting() const;
@@ -74,7 +77,7 @@ public:
 private:
 
     //Weapon weapon;
-    int P1AimDirection;
+    int P1AimDirection = 0;
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
     std::list<std::tuple<int,int,int>> lPlataformsHard;
     std::list<std::tuple<int,int,int>> lPlataformsHielo;

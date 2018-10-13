@@ -32,6 +32,7 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "as")) model.aimStraight();
            else if (!strcmp(&msg[1], "sd")) model.stand();
            else if (!strcmp(&msg[1], "ss")) model.stopShooting();
+           model.update(scene);
        }
     }
 }

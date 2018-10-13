@@ -13,12 +13,13 @@ ModelProtocol::ModelProtocol(Socket &skt,std::queue<char>& queue,char id,std::mu
 :skt(std::move(skt)),queue(queue),id(id),mutex(mutex){}
 
 void sendValue(Socket& skt, int value){
-    int to_send = value;
-    int temp = htonl(to_send);
+    unsigned int to_send = value;
+    unsigned int temp = htonl(to_send);
     char msgNumero[4];
     memcpy(msgNumero,&temp,4);
 
     skt.send_all(msgNumero,4);
+    printf("%d\n",(int)value);
 }
 
 void ModelProtocol::run() {
@@ -61,4 +62,6 @@ void ModelProtocol::send(Scene& scene){
     sendValue(skt,scene.getCamera()->x);
     sendValue(skt,scene.getCamera()->y);
     sendValue(skt,scene.getLevel());
+
+    sendValue(skt,scene.getP1AimDirection());
 }
