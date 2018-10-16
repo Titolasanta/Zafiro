@@ -46,6 +46,7 @@ ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),
 
 
 void ModelProtocol::send(Scene& scene){
+    mutex.lock();
     //std::list<std::tuple<int,int>> lBullets;
     sendValue(skt,scene.getP1PositionX());
     sendValue(skt,scene.getP1PositionY());
@@ -64,4 +65,5 @@ void ModelProtocol::send(Scene& scene){
     sendValue(skt,scene.getLevel());
 
     sendValue(skt,scene.getP1AimDirection());
+    mutex.unlock();
 }
