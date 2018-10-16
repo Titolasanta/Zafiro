@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 	    list<ModelProtocol> pList;
 
     	Colector colector(skt,pList,queue,mutex);
-    	Interpreter interpreter(pList,queue,mutex,model);
+    	Interpreter interpreter(pList,queue,mutex,model,scene);
     	Sender sender(pList,scene);
 
     	colector.start();
