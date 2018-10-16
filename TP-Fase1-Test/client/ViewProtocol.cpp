@@ -90,7 +90,6 @@ void ViewProtocol::update(Scene& scene){
     scene.setP1LookingRight(receiveNumber(socket));
     scene.setP1Dead(receiveNumber(socket));
     scene.setP1Shooting(receiveNumber(socket));
-    scene.setP1AimDirection(receiveNumber(socket));
     
     scene.setCameraX(receiveNumber(socket));
     scene.setCameraY(receiveNumber(socket));
