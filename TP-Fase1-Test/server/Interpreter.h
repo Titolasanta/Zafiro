@@ -14,11 +14,11 @@
 class Interpreter : public Thread {
 
 public:
-    Interpreter(std::list<ModelProtocol> &protocolList,std::queue<char> &queue,std::mutex &mutex,Model &model);
+    Interpreter(std::list<ModelProtocol> &protocolList,std::queue<char> &queue,std::mutex &mutex,Model &model,Scene &scene);
     virtual void run();
     void end();
 private:
-    Scene scene;
+    Scene &scene;
     std::list<ModelProtocol>& protocolList;
     std::queue<char>& queue;
     std::mutex &mutex;
