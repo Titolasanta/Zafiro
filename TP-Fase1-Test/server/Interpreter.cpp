@@ -4,8 +4,8 @@
 
 #include "Interpreter.h"
 
-Interpreter::Interpreter(std::list<ModelProtocol> &protocolList, std::queue<char> &queue, std::mutex &mutex, Model &model)
-    : protocolList(protocolList),queue(queue),mutex(mutex),model(model){
+Interpreter::Interpreter(std::list<ModelProtocol> &protocolList, std::queue<char> &queue, std::mutex &mutex, Model &model, Scene &scene)
+    : protocolList(protocolList),queue(queue),mutex(mutex),model(model),scene(scene){
 
 }
 void Interpreter::run(){
@@ -20,6 +20,7 @@ void Interpreter::run(){
            msg[2] = queue.front();
            queue.pop();
            msg[3] = '\0';
+           mutex.unlock();
 
            if (!strcmp(&msg[1], "jp")) model.jump();
            else if (!strcmp(&msg[1], "mr")) model.moveRight();
@@ -32,8 +33,10 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "as")) model.aimStraight();
            else if (!strcmp(&msg[1], "sd")) model.stand();
            else if (!strcmp(&msg[1], "ss")) model.stopShooting();
-           model.update(scene);
        }
+    mutex.lock();
+    model.update(scene);
+    mutex.lock();
     }
 }
 
