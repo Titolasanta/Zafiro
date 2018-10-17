@@ -36,7 +36,7 @@ void Interpreter::run(){
        }
     mutex.lock();
     model.update(scene);
-    mutex.lock();
+    mutex.unlock();
     }
 }
 
