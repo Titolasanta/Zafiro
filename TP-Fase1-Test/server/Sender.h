@@ -8,15 +8,17 @@
 
 #include "Thread.h"
 #include "ModelProtocol.h"
+#include "Model.h"
 
 class Sender : public Thread {
 public:
     virtual void run();
-    explicit Sender(std::list<ModelProtocol>& l,Scene& scene);
+    explicit Sender(std::list<ModelProtocol>& l,Scene& scene,Model& model);
     void end();
 private:
     std::list<ModelProtocol>& pList;
     bool quit = false;
+    Model& model;
     Scene &scene;
 };
 

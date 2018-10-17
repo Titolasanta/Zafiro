@@ -5,12 +5,13 @@
 #include <zconf.h>
 #include "Sender.h"
 
-Sender::Sender(std::list<ModelProtocol> &l,Scene &scene) : pList(l),scene(scene){}
+Sender::Sender(std::list<ModelProtocol> &l,Scene &scene,Model& model) : pList(l),scene(scene),model(model){}
 
 void Sender::run(){
     while(!quit){
-        usleep(50000);
+        usleep(100000);
         for (auto it = pList.begin(); it != pList.end(); it++) {
+            model.update(scene);
             it->send(scene);
         }
     }

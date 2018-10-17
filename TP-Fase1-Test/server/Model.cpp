@@ -25,7 +25,7 @@ extern pugi::xml_document*gXML_doc[2];
 extern pugi::xml_parse_result *gXML_parse_result;
 
 
-bool Model::endOfLevel(Scene& scene){
+bool Model::endOfLevel(Scene& scene){    
     if(level.getLevel() != 2) {
         if(scene.getP1PositionX() > level.getWidth() )
             return true;
@@ -49,6 +49,8 @@ void Model::time(){
 }
 
 void Model::update(Scene &scene) {
+
+    std::lock_guard<std::mutex> mute(mutex);
 
 
     this->time();
@@ -121,6 +123,8 @@ void Model::update(Scene &scene) {
 }
 
 void Model::stopShooting(){
+
+    std::lock_guard<std::mutex> mute(mutex);
     player1.stopShoot();
 }
 
@@ -135,36 +139,56 @@ void Model::addPlataformHard(int x, int y, int w) {
 }
 
 void Model::moveRight() {
+
+    std::lock_guard<std::mutex> mute(mutex);
     player1.move(20);
 }
 
 void Model::moveLeft() {
+
+    std::lock_guard<std::mutex> mute(mutex);
     player1.move(-20);
 }
 
-void Model::stop() { player1.standStill(); }
+void Model::stop() {
+    std::lock_guard<std::mutex> mute(mutex);
+    player1.standStill();
+}
 
 void Model::jump() {
+
+    std::lock_guard<std::mutex> mute(mutex);
     if (!player1.isCrouching()) player1.jump(-44);
     else if(player1.canGoThrough())
         player1.goThroughPlatform();
 }
 
 void Model::aimDown() {
+    std::lock_guard<std::mutex> mute(mutex);
     player1.aim(1);
     gplogger->log(3, "El personaje apunta hacia abajo");
 }
 
 void Model::aimUp() {
+    std::lock_guard<std::mutex> mute(mutex);
     player1.aim(-1);
     gplogger->log(3, "El personaje apunta hacia arriba");
 }
 
-void Model::aimStraight() { player1.aim(0); }
+void Model::aimStraight() {
+    std::lock_guard<std::mutex> mute(mutex);
+    player1.aim(0); 
+}
 
-void Model::crouch() { player1.crouch(); }
+void Model::crouch() {
+    std::lock_guard<std::mutex> mute(mutex);
+    player1.crouch();
+}
 
-void Model::stand() { player1.stand(); }
+void Model::stand() {
+    std::lock_guard<std::mutex> mute(mutex);
+    player1.stand(); 
+}
 
 void Model::changeLevel(Level level,Scene& scene) {
 
@@ -192,13 +216,16 @@ int Model::getLevelWidth() { return level.getWidth(); }
 int Model::getLevelHeight() { return level.getHeight(); }
 
 void Model::shoot(){
+
+    std::lock_guard<std::mutex> mute(mutex);
     try {
 
         lBullets.push_back(std::move(player1.shoot()));
     } catch(int e) { //no recargo el arma
     }
 }
-
+/*
 const Level &Model::getLevel() const {
     return level;
 }
+*/

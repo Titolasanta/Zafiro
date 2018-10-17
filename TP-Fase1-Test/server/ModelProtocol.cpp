@@ -19,12 +19,12 @@ void sendValue(Socket& skt, int value){
     memcpy(msgNumero,&temp,4);
 
     skt.send_all(msgNumero,4);
-    printf("%d\n",(int)value);
 }
 
 void ModelProtocol::run() {
     char msg[3];
     while(!quit){
+        printf("informacion relevante\n");
         msg[0] = id;
         skt.receive_all(&(msg[1]),2);
         mutex.lock();
@@ -40,7 +40,7 @@ void ModelProtocol::end(){
 }
 
 
-ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex) {
+ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue) {
     this->thread = std::move(other.thread);
 }
 

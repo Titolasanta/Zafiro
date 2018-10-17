@@ -7,6 +7,7 @@
 
 
 #include <SDL_events.h>
+#include <mutex>
 #include "Character.h"
 #include "Projectile.h"
 #include "../common/Level.h"
@@ -21,6 +22,7 @@ private:
     Character player1;
         std::list<Projectile> lBullets;
         //Character player2;
+        std::mutex mutex;
 
     public:
         explicit Model(int initialLevel);

@@ -34,6 +34,7 @@ void Controller::processEvent(SDL_Event e) {
         if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
         if (e.key.keysym.sym == SDLK_x) protocol.shoot();
         //if (e.key.keysym.sym == SDLK_l){ protocol.changeLevel(protocol.getLevel().next(),scene); }
+
     }
 
     if (e.type == SDL_KEYUP) {

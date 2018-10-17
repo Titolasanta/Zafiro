@@ -17,6 +17,7 @@ void ViewProtocol::jump() {
 void ViewProtocol::moveRight() {
     char msg[3] = "mr";
     socket.send_all(msg,2);
+
 }
 
 void ViewProtocol::moveLeft() {
@@ -47,6 +48,7 @@ void ViewProtocol::shoot() {
 void ViewProtocol::stop() {
     char msg[3] = "st";
     socket.send_all(msg,2);
+
 }
 
 void ViewProtocol::aimStraight() {
@@ -72,7 +74,6 @@ int receiveNumber(Socket& skt){
 
     unsigned int temp = *(unsigned int*)recibido;
     numeroRecibido = ntohl(temp);
-    printf("%d\n",(int)numeroRecibido);
     return (int)numeroRecibido;
 }
 
@@ -95,5 +96,5 @@ void ViewProtocol::update(Scene& scene){
     scene.setCameraY(receiveNumber(socket));
     scene.setLevel(receiveNumber(socket));
     scene.setP1AimDirection(receiveNumber(socket));
-
+    
 }

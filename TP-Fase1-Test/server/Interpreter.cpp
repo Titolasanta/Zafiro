@@ -27,17 +27,17 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "ml")) model.moveLeft();
            else if (!strcmp(&msg[1], "ad")) model.aimDown();
            else if (!strcmp(&msg[1], "au")) model.aimUp();
-           else if (!strcmp(&msg[1], "ch")) model.crouch();
-           else if (!strcmp(&msg[1], "st")) model.shoot();
+           else if (!strcmp(&msg[1], "cr")) model.crouch();
+           else if (!strcmp(&msg[1], "sh")) model.shoot();
            else if (!strcmp(&msg[1], "st")) model.stop();
            else if (!strcmp(&msg[1], "as")) model.aimStraight();
            else if (!strcmp(&msg[1], "sd")) model.stand();
            else if (!strcmp(&msg[1], "ss")) model.stopShooting();
        }
-    mutex.lock();
+  /*  mutex.lock();
     model.update(scene);
     mutex.unlock();
-    }
+    */}
 }
 
 void Interpreter::end(){

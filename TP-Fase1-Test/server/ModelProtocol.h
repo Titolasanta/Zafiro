@@ -25,7 +25,7 @@ private:
     Socket skt;
     char id;
     bool quit = false;
-    std::queue<char> queue;
+    std::queue<char>& queue;
     std::mutex& mutex;
 };
 
