@@ -12,5 +12,5 @@ PlataformaDura::PlataformaDura(Window *window) : Viewable(window,"../escenario/h
 }
 
 void PlataformaDura::render(Scene &scene,SDL_Rect* camera) {
-    this->renderList(scene.getLPlataformHard(),camera);
+    this->renderList(scene.getLPlatformMetal(),camera);
 }

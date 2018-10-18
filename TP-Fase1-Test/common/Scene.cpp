@@ -34,15 +34,15 @@ SDL_Rect *Scene::getCamera() {
 
 
 
-std::list<std::tuple<int,int,int>>& Scene::getLPlataformSoft() {
+std::list<std::tuple<int,int,int>>& Scene::getLPlatformGrass() {
     return lPlataformsSoft;
 }
 
-std::list<std::tuple<int,int,int>>& Scene::getLPlataformHielo() {
+std::list<std::tuple<int,int,int>>& Scene::getLPlatformIce() {
     return lPlataformsHielo;
 }
 
-std::list<std::tuple<int,int,int>>& Scene::getLPlataformHard() {
+std::list<std::tuple<int,int,int>>& Scene::getLPlatformMetal() {
     return lPlataformsHard;
 }
 
@@ -50,24 +50,17 @@ std::list<std::tuple<int,int>>& Scene::getLBullets() {
     return lBullets;
 }
 
-void Scene::addPlataformSoft(int x, int y, int width) {
+void Scene::addPlatformGrass(int x, int y, int width) {
     lPlataformsSoft.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
-void Scene::addPlataformHielo(int x, int y, int width) {
+void Scene::addPlatformIce(int x, int y, int width) {
     lPlataformsHielo.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
-void Scene::addPlataformHard(int x, int y, int width) {
+void Scene::addPlatformMetal(int x, int y, int width) {
     lPlataformsHard.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
-bool Scene::isP1Shooting() const {
-    return P1Shooting;
-}
-
-void Scene::setP1Shooting(bool P1Shooting) {
-    Scene::P1Shooting = P1Shooting;
-}
 
 

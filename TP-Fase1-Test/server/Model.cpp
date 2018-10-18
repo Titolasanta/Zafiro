@@ -25,7 +25,7 @@ extern pugi::xml_document*gXML_doc[2];
 extern pugi::xml_parse_result *gXML_parse_result;
 
 
-bool Model::endOfLevel(Scene& scene){    
+bool Model::endOfLevel(Scene& scene){
     if(level.getLevel() != 2) {
         if(scene.getP1PositionX() > level.getWidth() )
             return true;
@@ -36,16 +36,35 @@ bool Model::endOfLevel(Scene& scene){
     return false;
 }
 
-Model::Model(int initialLevel) : player1(100,0), level(initialLevel) {
+Model::Model(int initialLevel) : level(initialLevel) {
+    maxPlayers = get_cantidad_jugadores(*gXML_doc[0],*gXML_doc[1],*gXML_parse_result);
     gplogger->log(3, "Se creó el server");
+}
+
+void Model::createCharacter(){
+    switch (currentPlayers){
+        case 0: players[currentPlayers] = &player1; break;
+        case 1: players[currentPlayers] = &player2; break;
+        case 2: players[currentPlayers] = &player3; break;
+        case 3: players[currentPlayers] = &player4; break;
+    }
+    currentPlayers++;
+}
+
+int Model::getMaxPlayers(){
+    return maxPlayers;
+}
+
+int Model::getCurrentPlayers(){
+    return currentPlayers;
 }
 
 void Model::time(){
 
-    player1.time();
+    players[0]->time();
 
-    CollisionHard(player1,lPlataformsHard);
-    CollisionSoft(player1,lPlataformsSoft);
+    CollisionHard(*players[0],lPlataformsHard);
+    CollisionSoft(*players[0],lPlataformsSoft);
 }
 
 void Model::update(Scene &scene) {
@@ -56,28 +75,28 @@ void Model::update(Scene &scene) {
     this->time();
 
     SDL_Rect* cam = scene.getCamera();
-    if (player1.getPositionX() < 5 + cam->x) {
-        player1.setPositionX( 5 + cam->x);
-        player1.setVelocityX(0);
+    if (players[0]->getPositionX() < 5 + cam->x) {
+        players[0]->setPositionX( 5 + cam->x);
+        players[0]->setVelocityX(0);
     }
 
-    if(player1.getPositionY() > 600 + cam->y) {
-        player1.spawn();
+    if(players[0]->getPositionY() > 600 + cam->y) {
+        players[0]->spawn();
         scene.getCamera()->x = 0;
         scene.getCamera()->y = 0;
     }
 
 
     if(level.getLevel() != 2){
-        if (player1.getPositionY() < -5 + cam->y) {
-            player1.setPositionY(-5 +  cam->y);
-            player1.setPositionY(-5 +  cam->y);
-            player1.setVelocityY(0);
+        if (players[0]->getPositionY() < -5 + cam->y) {
+            players[0]->setPositionY(-5 +  cam->y);
+            players[0]->setPositionY(-5 +  cam->y);
+            players[0]->setVelocityY(0);
         }
     }else{
-        if (player1.getPositionX() > 770 + cam->x) {
-            player1.setPositionX(770 + cam->x);
-            player1.setVelocityX(0);
+        if (players[0]->getPositionX() > 770 + cam->x) {
+            players[0]->setPositionX(770 + cam->x);
+            players[0]->setVelocityX(0);
         }
     }
     std::list<std::tuple<int,int>> lTemp;
@@ -96,17 +115,17 @@ void Model::update(Scene &scene) {
 
     scene.setBullets(std::move(lTemp));
 
-    scene.setP1PositionX(player1.getPositionX());
-    scene.setP1VelocityX(player1.getVelocityX());
-    scene.setP1VelocityY(player1.getVelocityY());
-    scene.setP1PositionY(player1.getPositionY());
-    scene.setP1Airborne(player1.isAirborne());
-    scene.setP1AimDirection(player1.getAimDirection());
-    scene.setP1Dead(player1.isDead());
-    scene.setP1Crouching(player1.isCrouching());
-    scene.setP1LookingRight(player1.isLookingRight());
-    scene.setP1Walking(player1.isWalking());
-    scene.setP1Shooting(player1.isShooting());
+    scene.setP1PositionX(players[0]->getPositionX());
+    scene.setP1VelocityX(players[0]->getVelocityX());
+    scene.setP1VelocityY(players[0]->getVelocityY());
+    scene.setP1PositionY(players[0]->getPositionY());
+    scene.setP1Airborne(players[0]->isAirborne());
+    scene.setP1AimDirection(players[0]->getAimDirection());
+    scene.setP1Dead(players[0]->isDead());
+    scene.setP1Crouching(players[0]->isCrouching());
+    scene.setP1LookingRight(players[0]->isLookingRight());
+    scene.setP1Walking(players[0]->isWalking());
+    scene.setP1Shooting(players[0]->isShooting());
 
     if (scene.getLevel() != 2){
         if (scene.getP1PositionX() > MARGENX + cam->x)
@@ -122,10 +141,10 @@ void Model::update(Scene &scene) {
         this->changeLevel(level.next(),scene);
 }
 
-void Model::stopShooting(){
+void Model::stopShooting(int p){
 
     std::lock_guard<std::mutex> mute(mutex);
-    player1.stopShoot();
+    players[p-1]->stopShoot();
 }
 
 void Model::addPlataformSoft(int x, int y, int w) {
@@ -138,56 +157,56 @@ void Model::addPlataformHard(int x, int y, int w) {
     gplogger->log(2, "Se agregó una plataforma dura");
 }
 
-void Model::moveRight() {
+void Model::moveRight(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    player1.move(20);
+    players[p-1]->move(20);
 }
 
-void Model::moveLeft() {
+void Model::moveLeft(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    player1.move(-20);
+    players[p-1]->move(-20);
 }
 
-void Model::stop() {
+void Model::stop(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.standStill();
+    players[p-1]->standStill();
 }
 
-void Model::jump() {
+void Model::jump(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    if (!player1.isCrouching()) player1.jump(-44);
-    else if(player1.canGoThrough())
-        player1.goThroughPlatform();
+    if (!players[p-1]->isCrouching()) players[p-1]->jump(-44);
+    else if(players[p-1]->canGoThrough())
+        players[p-1]->goThroughPlatform();
 }
 
-void Model::aimDown() {
+void Model::aimDown(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.aim(1);
+    players[p-1]->aim(1);
     gplogger->log(3, "El personaje apunta hacia abajo");
 }
 
-void Model::aimUp() {
+void Model::aimUp(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.aim(-1);
+    players[p-1]->aim(-1);
     gplogger->log(3, "El personaje apunta hacia arriba");
 }
 
-void Model::aimStraight() {
+void Model::aimStraight(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.aim(0); 
+    players[p-1]->aim(0);
 }
 
-void Model::crouch() {
+void Model::crouch(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.crouch();
+    players[p-1]->crouch();
 }
 
-void Model::stand() {
+void Model::stand(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    player1.stand(); 
+    players[p-1]->stand();
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
@@ -201,12 +220,12 @@ void Model::changeLevel(Level level,Scene& scene) {
     else cargar_plataformas(*gXML_doc[1],scene, *this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth()); //chequeo de otra manera
 
 
-    update(scene);
+    //update(scene);
     scene.setLevel(level.getLevel());
     scene.getCamera()->x = 0;
     scene.getCamera()->y = 0;
-    player1.spawn();
-    player1.nextLevel();
+    players[0]->spawn();
+    players[0]->nextLevel();
 
     gplogger->log(2, "Se cambió de nivel");
 }
@@ -215,12 +234,12 @@ int Model::getLevelWidth() { return level.getWidth(); }
 
 int Model::getLevelHeight() { return level.getHeight(); }
 
-void Model::shoot(){
+void Model::shoot(int p){
 
     std::lock_guard<std::mutex> mute(mutex);
     try {
 
-        lBullets.push_back(std::move(player1.shoot()));
+        lBullets.push_back(std::move(players[p-1]->shoot()));
     } catch(int e) { //no recargo el arma
     }
 }

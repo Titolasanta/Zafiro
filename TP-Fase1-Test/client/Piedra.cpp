@@ -24,7 +24,7 @@ void Piedra::render(Scene& scene,SDL_Rect* camera){
     int x;
     int y;
     int w;
-    auto lista = scene.getLPlataformSoft();
+    auto lista = scene.getLPlatformGrass();
     for (auto it = lista.begin(); it != lista.end(); it++) {
         y = std::get<1>(*it);
         y += 4;

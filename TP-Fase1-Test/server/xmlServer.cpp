@@ -20,13 +20,13 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
         if (xi >= 0 && xf >=  0 && y >= -(limite_vertical - 600) && xi < xf && xi <= limite_horizontal && xf <= limite_horizontal && y <= 600) {
             if(!strcmp(tipo,"hierro")) {
                 modelo.addPlataformHard(xi, y, xf - xi);
-                scene.addPlataformHard(xi, y, xf - xi);
+                scene.addPlatformMetal(xi, y, xf - xi);
             }else {
                 if(!strcmp(tipo,"pasto")) {
-                    scene.addPlataformSoft(xi, y, xf - xi);
+                    scene.addPlatformGrass(xi, y, xf - xi);
                     modelo.addPlataformSoft(xi, y, xf - xi);
                 } else if(!strcmp(tipo,"hielo")){
-                    scene.addPlataformHielo(xi,y,xf-xi);
+                    scene.addPlatformIce(xi, y, xf - xi);
                     modelo.addPlataformSoft(xi, y, xf - xi);
                 }
             }
@@ -34,7 +34,7 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
         else gplogger->log(1, "Error al cargar una plataforma, el formato no era válido");
 
     }
-    // modelo.addPlataformHard(0, 550, limite_horizontal);
-    //scene.addPlataformHard(0,550,limite_horizontal);
+    // modelo.addPlatformMetal(0, 550, limite_horizontal);
+    //scene.addPlatformMetal(0,550,limite_horizontal);
 
 }

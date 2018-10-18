@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 	gXML_doc[1] = &doc_default;
 	gXML_parse_result = &result;
 
-	
+
 
 	try {
 	    char port[5] = "8081";
@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
 
 		Scene scene;
         Model model(1);
-        
+
 		if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
 		else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
 
 	    list<ModelProtocol> pList;
 
-    	Colector colector(skt,pList,queue,mutex);
+    	Colector colector(skt,pList,queue,mutex,model);
     	Interpreter interpreter(pList,queue,mutex,model,scene);
     	Sender sender(pList,scene,model);
 

@@ -12,11 +12,11 @@
 
 extern Logger *gplogger;
 
-Character::Character(int posX, int posY) : weapon(Pistol()) {
+Character::Character() : weapon(Pistol()) {
     // XML deberia chequear que las posiciones esten
     // en el rango valido de la ventana
-    positionX = posX;
-    positionY = posY;
+    positionX = 100;
+    positionY = 0;
     velocityX = 0;
     velocityY = 0;
     accelerationX = 0;

@@ -10,16 +10,16 @@
 #include "Sprite.h"
 #include "../common/Scene.h"
 
-class Personajes {
+class SpriteHandler {
+
 public:
-    explicit Personajes(Window* window);
-    void render(Scene scene, int cameraX, int cameraY);
+    explicit SpriteHandler(Window* window);
+    void render(Scene &scene, int cameraX, int cameraY);
 
 private:
-    ImgTexture rojo;
-    Sprite rojoFrames;
-    int frameActualRojo;
-
+    ImgTexture spriteTexture;
+    Sprite spritePositionHandler;
+    int currentFrame[4];
 };
 
 

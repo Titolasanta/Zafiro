@@ -7,7 +7,7 @@
 
 
 #include "Window.h"
-#include "Personajes.h"
+#include "SpriteHandler.h"
 #include "SdlImgInit.h"
 #include "SdlInit.h"
 #include "PlataformaBlanda.h"
@@ -15,7 +15,7 @@
 #include "Background.h"
 #include "Bullet.h"
 #include "PlataformaDura.h"
-#include "Hielo.h"
+#include "Ice.h"
 
 class View {
 
@@ -29,14 +29,14 @@ private:
     SdlImgInit z;
     SdlInit x;
     Window window;
-    Personajes personajes;
+    SpriteHandler personajes;
     Background background;
 //Scene& scene;
     Piedra piedra;
     Pasto pasto;
     PlataformaDura plataformaDura;
     Bullet bullet;
-    Hielo hielo;
+    Ice hielo;
     int level=1;
     SDL_Rect * camera = NULL;
 

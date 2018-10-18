@@ -9,9 +9,9 @@
 #include <SDL_rect.h>
 #include "Viewable.h"
 
-class Hielo : public Viewable {
+class Ice : public Viewable {
 public:
-    Hielo(Window* window);
+    Ice(Window* window);
     void render(Scene& scene,SDL_Rect* cam);
 };
 

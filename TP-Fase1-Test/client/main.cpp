@@ -11,7 +11,7 @@
 #include "SdlInit.h"
 #include "SdlImgInit.h"
 #include "Sprite.h"
-#include "Personajes.h"
+#include "SpriteHandler.h"
 #include "View.h"
 #include "Controller.h"
 #include "../common/pugixml.hpp"
@@ -25,8 +25,6 @@
 //Screen dimension constants
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
-
-//Starts up SDL and creates window
 
 pugi::xml_document* gXML_doc[2];
 Logger *gplogger;
@@ -58,54 +56,34 @@ int main( int argc, char* argv[] )
         logger.log(1, "Se cargó un archivo por defecto");
     }
 
-
-
-
+    
     gplogger = &logger;
 
     gXML_doc[0] = &doc;
     gXML_doc[1] = &doc_default;
     gXML_parse_result = &result;
 
-
-
+    
     View view(SCREEN_WIDTH,SCREEN_HEIGHT);
-
-
-//    Model model(1);
-
 
     char port[5] = "8081";
     Socket skt(port,"127.0.0.1");
-    Controller controler(view,skt);
-
-
-
-    //Event handler
+    Controller controller(view,skt);
+    
     SDL_Event e;
     bool quit = false;
-
-
+    
     while(!quit) {
-
-        //Handle events queue
+        
         while (SDL_PollEvent(&e) != 0) {
-
-            //User wants to quit
-            if (e.type == SDL_QUIT) {
-                quit = true;
-            }
-            //recibe evento modifica escena acorde
-            controler.processEvent(e);
+            if (e.type == SDL_QUIT) { quit = true; }
+            controller.processEvent(e);
         }
         usleep(70000);
-        //renderiza scene
-        controler.show();
-
+        controller.show();
     }
 
     logger.log(2, "Se cerró el juego");
-
     logger.cerrar_archivo();
 
     return 0;

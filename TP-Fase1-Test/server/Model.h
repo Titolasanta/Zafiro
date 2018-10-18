@@ -19,22 +19,30 @@ public:
     const Level &getLevel() const;
 
 private:
-    Character player1;
+        Character *players[4];
         std::list<Projectile> lBullets;
-        //Character player2;
+        Character player1;
+        Character player2;
+        Character player3;
+        Character player4;
+        int currentPlayers = 0;
+        int maxPlayers;
         std::mutex mutex;
 
     public:
         explicit Model(int initialLevel);
         ~Model() = default;
+        void createCharacter();
+        int getMaxPlayers();
+        int getCurrentPlayers();
         void update(Scene&);
-        void moveRight();
-        void moveLeft();
-        void aimDown();
-        void aimStraight();
-        void aimUp();
-        void stop();
-        void jump();
+        void moveRight(int);
+        void moveLeft(int);
+        void aimDown(int);
+        void aimStraight(int);
+        void aimUp(int);
+        void stop(int);
+        void jump(int);
         void time();
         bool endOfLevel(Scene&);
         std::list<std::tuple<int,int,int>> lPlataformsSoft;
@@ -42,12 +50,12 @@ private:
         void addPlataformSoft(int x, int y, int w);
         void addPlataformHard(int x, int y, int w);
         void changeLevel(Level,Scene&);
-        void crouch();
-        void stand();
+        void crouch(int);
+        void stand(int);
         int getLevelWidth();
         int getLevelHeight();
-        void shoot();
-        void stopShooting();
+        void shoot(int);
+        void stopShooting(int);
 };
 
 

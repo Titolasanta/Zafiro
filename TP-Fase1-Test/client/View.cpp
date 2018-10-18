@@ -7,7 +7,7 @@
 #include "View.h"
 #include "SdlInit.h"
 #include "SdlImgInit.h"
-#include "Personajes.h"
+#include "SpriteHandler.h"
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "../common/Logger.h"

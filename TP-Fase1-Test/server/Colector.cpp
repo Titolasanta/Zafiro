@@ -7,21 +7,25 @@
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
 #include "../common/Exception.h"
+#include "Model.h"
 
 
-Colector::Colector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex){}
+Colector::Colector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex),model(model){}
 
 void Colector::run() {
     int id = 0;
     try {
         while(must_continue) {
-            id++;
-			Socket skt2 = socket.accept_connection(); //const con mov
-            ModelProtocol protocol(skt2,queue,id,mutex);
-            protocol.start();
-            usleep(30000);
-			list.push_back(std::move(protocol));
-			//sockets.push_back(std::move(skt2));
+            if (model.getCurrentPlayers() < model.getMaxPlayers()) {
+                id++;
+                Socket skt2 = socket.accept_connection(); //const con mov
+                ModelProtocol protocol(skt2, queue, id, mutex);
+                model.createCharacter();
+                list.push_back(std::move(protocol));
+                list.back().start();
+                //sockets.push_back(std::move(skt2));
+            }
+            if (model.getCurrentPlayers() == model.getMaxPlayers()) {}
         }
     }catch( accept_fail& e){}
 

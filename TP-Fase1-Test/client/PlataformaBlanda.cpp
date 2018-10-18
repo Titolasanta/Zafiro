@@ -12,5 +12,5 @@ Pasto::Pasto(Window *window) : Viewable(window,"../escenario/pasto.png",0,0,64,6
 }
 
 void Pasto::render(Scene &scene,SDL_Rect* camera) {
-    this->renderList(scene.getLPlataformSoft(),camera);
+    this->renderList(scene.getLPlatformGrass(),camera);
 }

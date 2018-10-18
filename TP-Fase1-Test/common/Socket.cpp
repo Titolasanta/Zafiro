@@ -144,8 +144,7 @@ ssize_t Socket::receive_all(char* msg, int len) {
 	ssize_t temp = 1;
 	ssize_t amount_received = 0;
 	while (valid_socket && amount_received < len) { 
-		temp = recv(skt_id, &msg[amount_received],
-			 len-amount_received, MSG_NOSIGNAL);
+		temp = recv(skt_id, &msg[amount_received], len-amount_received, MSG_NOSIGNAL);
 		if (temp <= 0) 	
 			valid_socket = false;
 		else

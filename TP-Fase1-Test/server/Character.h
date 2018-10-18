@@ -52,7 +52,7 @@ private:
         int aimDirection;
 
     public:
-        Character(int, int);
+        Character();
         ~Character();
         void move(int);
         void jump(int);

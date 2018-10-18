@@ -71,20 +71,20 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, int level, int lim
         const char* tipo = plataforma.child("tipo").first_child().text().as_string();
         if (xi >= 0 && xf >=  0 && y >= -(limite_vertical - 600) && xi < xf && xi <= limite_horizontal && xf <= limite_horizontal && y <= 600) {
             if(!strcmp(tipo,"hierro")) {
-                scene.addPlataformHard(xi, y, xf - xi);
+                scene.addPlatformMetal(xi, y, xf - xi);
             }else {
                 if(!strcmp(tipo,"pasto")) {
-                    scene.addPlataformSoft(xi, y, xf - xi);
+                    scene.addPlatformGrass(xi, y, xf - xi);
                 } else if(!strcmp(tipo,"hielo")){
-                    scene.addPlataformHielo(xi,y,xf-xi);
+                    scene.addPlatformIce(xi, y, xf - xi);
                 }
             }
         }
         else gplogger->log(1, "Error al cargar una plataforma, el formato no era válido");
 
     }
-    // modelo.addPlataformHard(0, 550, limite_horizontal);
-    //scene.addPlataformHard(0,550,limite_horizontal);
+    // modelo.addPlatformMetal(0, 550, limite_horizontal);
+    //scene.addPlatformMetal(0,550,limite_horizontal);
 
 }
 
@@ -114,7 +114,7 @@ std::string get_error_message(const char* message, const char* path, int pos, co
     return std::move(mensaje);
 }
 
-int get_cantidad_jugadores(pugi::xml_document &doc, pugi::xml_document doc_default, pugi::xml_parse_result result){
+int get_cantidad_jugadores(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result){
     int original;
     if (result){
         original = doc.first_child().child("cantidad_jugadores").first_child().text().as_int();
