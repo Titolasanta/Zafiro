@@ -63,10 +63,11 @@ int Model::getCurrentPlayers(){
 
 void Model::time(){
 
-    players[0]->time();
-
-    CollisionHard(*players[0],lPlataformsHard);
-    CollisionSoft(*players[0],lPlataformsSoft);
+    for (int i = 0; i < currentPlayers; i++) {
+        players[i]->time();
+        CollisionHard(*players[i],lPlataformsHard);
+        CollisionSoft(*players[i],lPlataformsSoft);
+    }
 }
 
 void Model::update(Scene &scene) {
@@ -147,7 +148,7 @@ void Model::update(Scene &scene) {
 void Model::stopShooting(int p){
 
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->stopShoot();
+    players[p-1]->stopShoot();
 }
 
 void Model::addPlataformSoft(int x, int y, int w) {
@@ -163,53 +164,53 @@ void Model::addPlataformHard(int x, int y, int w) {
 void Model::moveRight(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->move(20);
+    players[p-1]->move(20);
 }
 
 void Model::moveLeft(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->move(-20);
+    players[p-1]->move(-20);
 }
 
 void Model::stop(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->standStill();
+    players[p-1]->standStill();
 }
 
 void Model::jump(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    if (!players[p]->isCrouching()) players[p]->jump(-44);
-    else if(players[p]->canGoThrough())
-        players[p]->goThroughPlatform();
+    if (!players[p-1]->isCrouching()) players[p-1]->jump(-44);
+    else if(players[p-1]->canGoThrough())
+        players[p-1]->goThroughPlatform();
 }
 
 void Model::aimDown(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->aim(1);
+    players[p-1]->aim(1);
     gplogger->log(3, "El personaje apunta hacia abajo");
 }
 
 void Model::aimUp(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->aim(-1);
+    players[p-1]->aim(-1);
     gplogger->log(3, "El personaje apunta hacia arriba");
 }
 
 void Model::aimStraight(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->aim(0);
+    players[p-1]->aim(0);
 }
 
 void Model::crouch(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->crouch();
+    players[p-1]->crouch();
 }
 
 void Model::stand(int p) {
     std::lock_guard<std::mutex> mute(mutex);
-    players[p]->stand();
+    players[p-1]->stand();
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
@@ -242,7 +243,7 @@ void Model::shoot(int p){
     std::lock_guard<std::mutex> mute(mutex);
     try {
 
-        lBullets.push_back(std::move(players[p]->shoot()));
+        lBullets.push_back(std::move(players[p-1]->shoot()));
     } catch(int e) { //no recargo el arma
     }
 }

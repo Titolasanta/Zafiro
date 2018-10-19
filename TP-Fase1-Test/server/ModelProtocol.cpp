@@ -44,6 +44,7 @@ void ModelProtocol::end(){
 ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue) {
     printf("lo hice 1 vaez\n");
     this->thread = std::move(other.thread);
+    this->id = other.id;
 }
 
 

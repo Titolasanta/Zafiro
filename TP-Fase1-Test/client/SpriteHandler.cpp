@@ -40,7 +40,7 @@ void SpriteHandler::render(Scene &scene, int cameraX, int cameraY) {
             currentClip = spritePositionHandler.move(1, currentFrame[i] % 3 + 3);
         else {
             if (!scene.isWalking(i))
-                currentClip = spritePositionHandler.quieto();
+                currentClip = spritePositionHandler.move(3, currentFrame[i] % 3);
             else
                 currentClip = spritePositionHandler.move(0, currentFrame[i] % 6);
             if (scene.isShooting(i) && !scene.isCrouching(i))
