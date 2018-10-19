@@ -82,7 +82,6 @@ int main( int argc, char* argv[] )
             if (e.type == SDL_QUIT) { quit = true; }
             controller.processEvent(e);
         }
-        usleep(70000);
         controller.show();
     }
 

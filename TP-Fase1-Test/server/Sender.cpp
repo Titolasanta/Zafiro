@@ -12,7 +12,11 @@ void Sender::run(){
         usleep(100000);
         for (auto it = pList.begin(); it != pList.end(); it++) {
             model.update(scene);
-            it->send(scene);
+            try {
+                it->send(scene);
+            }catch(...){
+                pList.erase(it);
+            }
         }
     }
 }

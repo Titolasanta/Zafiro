@@ -50,6 +50,11 @@ ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),
 void ModelProtocol::send(Scene& scene){
     int p = scene.getCurrentPlayers();
     mutex.lock();
+    for(auto it = scene.getLBullets().begin() ; it != scene.getLBullets().end() ; ++it){
+        sendValue(skt, std::get<0>(*it));
+        sendValue(skt, std::get<1>(*it));
+    }
+    sendValue(skt, -1);
         for (int i = 0; i < p; i++) {
             //std::list<std::tuple<int,int>> lBullets;
             sendValue(skt, scene.getPositionX(i + 1));
@@ -63,12 +68,13 @@ void ModelProtocol::send(Scene& scene){
             sendValue(skt, scene.isLookingRight(i + 1));
             sendValue(skt, scene.isDead(i + 1));
             sendValue(skt, scene.isShooting(i + 1));
+            sendValue(skt, scene.getAimDirection(i + 1));
 
+        }
             sendValue(skt, scene.getCamera()->x);
             sendValue(skt, scene.getCamera()->y);
             sendValue(skt, scene.getLevel());
+        
 
-            sendValue(skt, scene.getAimDirection(i + 1));
-        }
     mutex.unlock();
 }
