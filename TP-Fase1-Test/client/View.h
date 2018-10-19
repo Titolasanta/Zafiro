@@ -20,12 +20,13 @@
 class View {
 
 public:
-    View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+    View(int SCREEN_WIDTH, int SCREEN_HEIGHT, int id);
     void changeLevel();
     void render(Scene& scene);
     void moveBackground(int dir);
 
 private:
+    int id;
     SdlImgInit z;
     SdlInit x;
     Window window;

@@ -15,9 +15,10 @@
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
 
-View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
+View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT, int id)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
-personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),pasto(&window),bullet(&window),background(window,1)
+personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
+pasto(&window),bullet(&window),background(window,1), id(id)
 {
    // window.setRenderDrawColor(0x10  ,0x10,0xFF,0x120);
     std::string windowName("juego");
@@ -30,12 +31,13 @@ void View::render(Scene& scene) {
 
     if(level != scene.getLevel())
         changeLevel();
+
     if(level == 2) {
-        moveBackground(scene.getP1VelocityY());
-        if (scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200) background.setScrollingOffset(-200);
+        moveBackground(scene.getVelocityY(id));
+        if (scene.getPositionY(id) == 200 && scene.getPositionX(id) == 200) background.setScrollingOffset(-200);
     }else {
-        moveBackground(scene.getP1VelocityX());
-        if (scene.getP1PositionY() == 200 && scene.getP1PositionX() == 200) background.setScrollingOffset(0);
+        moveBackground(scene.getVelocityX(id));
+        if (scene.getPositionY(id) == 200 && scene.getPositionX(id) == 200) background.setScrollingOffset(0);
     }
     camera = scene.getCamera();
 

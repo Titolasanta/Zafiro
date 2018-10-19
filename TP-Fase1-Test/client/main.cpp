@@ -64,10 +64,13 @@ int main( int argc, char* argv[] )
     gXML_parse_result = &result;
 
     
-    View view(SCREEN_WIDTH,SCREEN_HEIGHT);
-
+    std::string id;
     char port[5] = "8081";
     Socket skt(port,"127.0.0.1");
+    skt.receive_all(id, 1);
+
+    View view(SCREEN_WIDTH,SCREEN_HEIGHT, std::stoi(id));
+
     Controller controller(view,skt);
     
     SDL_Event e;

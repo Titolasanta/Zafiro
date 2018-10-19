@@ -48,25 +48,27 @@ ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),
 
 
 void ModelProtocol::send(Scene& scene){
+    int p = scene.getCurrentPlayers();
     mutex.lock();
-    //std::list<std::tuple<int,int>> lBullets;
-        sendValue(skt, scene.getP1PositionX());
-        sendValue(skt, scene.getP1PositionY());
-        sendValue(skt, scene.getP1VelocityX());
-        sendValue(skt, scene.getP1VelocityY());
-        sendValue(skt, scene.getP1HitPoints());
-        sendValue(skt, scene.isP1Walking());
-        sendValue(skt, scene.isP1Airborne());
-        sendValue(skt, scene.isP1Crouching());
-        sendValue(skt, scene.isP1LookingRight());
-        sendValue(skt, scene.isP1Dead());
-        sendValue(skt, scene.isP1Shooting());
+        for (int i = 0; i < p; i++) {
+            //std::list<std::tuple<int,int>> lBullets;
+            sendValue(skt, scene.getPositionX(i + 1));
+            sendValue(skt, scene.getPositionY(i + 1));
+            sendValue(skt, scene.getVelocityX(i + 1));
+            sendValue(skt, scene.getVelocityY(i + 1));
+            sendValue(skt, scene.getHitPoints(i + 1));
+            sendValue(skt, scene.isWalking(i + 1));
+            sendValue(skt, scene.isAirborne(i + 1));
+            sendValue(skt, scene.isCrouching(i + 1));
+            sendValue(skt, scene.isLookingRight(i + 1));
+            sendValue(skt, scene.isDead(i + 1));
+            sendValue(skt, scene.isShooting(i + 1));
 
-        sendValue(skt, scene.getCamera()->x);
-        sendValue(skt, scene.getCamera()->y);
-        sendValue(skt, scene.getLevel());
+            sendValue(skt, scene.getCamera()->x);
+            sendValue(skt, scene.getCamera()->y);
+            sendValue(skt, scene.getLevel());
 
-        sendValue(skt, scene.getP1AimDirection());
-
+            sendValue(skt, scene.getAimDirection(i + 1));
+        }
     mutex.unlock();
 }

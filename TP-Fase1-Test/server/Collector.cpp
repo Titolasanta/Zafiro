@@ -2,7 +2,7 @@
 #include "Thread.h"
 #include <list>
 #include <zconf.h>
-#include "Colector.h"
+#include "Collector.h"
 #include "Joiner.h"
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
@@ -10,15 +10,19 @@
 #include "Model.h"
 
 
-Colector::Colector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex),model(model){}
+Collector::Collector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex),model(model){}
 
-void Colector::run() {
+void Collector::run() {
+    std::string aux;
     int id = 0;
     try {
         while(must_continue) {
             if (model.getCurrentPlayers() < model.getMaxPlayers()) {
                 id++;
                 Socket skt2 = socket.accept_connection(); //const con mov
+                aux = std::to_string(id);
+                const char* clientId = aux.c_str();
+                skt2.send_all(clientId, 1);
                 ModelProtocol protocol(skt2, queue, id, mutex);
                 model.createCharacter();
                 list.push_back(std::move(protocol));
@@ -31,10 +35,10 @@ void Colector::run() {
 
 }
 
-void Colector::end() {
+void Collector::end() {
     socket.manual_close();
     must_continue = false;
 }
 
-Colector::~Colector(){}
+Collector::~Collector(){}
 

@@ -8,7 +8,8 @@
 #include "Logger.h"
 
 extern Logger *gplogger;
-Scene::Scene() {
+Scene::Scene(int numberOfPlayers) {
+    players = numberOfPlayers;
 
     gplogger->log(3,"Se crea una Escena");
 }

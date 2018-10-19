@@ -19,7 +19,7 @@ public:
 private:
     ImgTexture spriteTexture;
     Sprite spritePositionHandler;
-    int currentFrame[4];
+    int currentFrame[4] = {0, 0, 0, 0};
 };
 
 

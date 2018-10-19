@@ -7,20 +7,20 @@
 #include "Sprite.h"
 #include "../common/Logger.h"
 
-#define SPIRIT_PATH "../spirites/sprites.png"
+#define SPRITE_PATH "../spirites/sprites.png"
 
 #define characterWidth 20
 
 extern Logger *gplogger;
 
-SpriteHandler::SpriteHandler(Window* window) : spriteTexture(std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))), currentFrame(0) {
-    spriteTexture.loadFromFile(SPIRIT_PATH);
+SpriteHandler::SpriteHandler(Window* window) : spriteTexture(std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))){
+    spriteTexture.loadFromFile(SPRITE_PATH);
     gplogger->log(3,"Se crea SpriteHandler de la vista");
 }
 
 void SpriteHandler::render(Scene &scene, int cameraX, int cameraY) {
 
-    for (int i = 0; i < scene.currentPlayers(); i++) {
+    for (int i = 0; i < scene.getCurrentPlayers(); i++) {
         if (scene.isWalking(i) || scene.isAirborne(i))
             currentFrame[i]++;
         else

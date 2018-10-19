@@ -14,7 +14,7 @@
 class Scene {
 
 public:
-    Scene();
+    Scene(int);
     std::list<std::tuple<int,int,int>>& getLPlatformGrass();
     std::list<std::tuple<int,int,int>>& getLPlatformMetal();
     std::list<std::tuple<int,int,int>>& getLPlatformIce();
@@ -35,6 +35,7 @@ private:
     std::list<std::tuple<int,int>> lBullets;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
+    int players;
 
     int positionX[4];
     int positionY[4];
@@ -79,6 +80,8 @@ public:
 
     int getLevel() const { return level; }
     void setLevel(int l) { level = l; }
+
+    int getCurrentPlayers() const { return players; }
 
     int getPositionX(int p) const { return positionX[p-1]; }
     void setPositionX(int posX, int p) { positionX[p-1] = posX; }

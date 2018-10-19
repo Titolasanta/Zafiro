@@ -1,11 +1,9 @@
-
-
 #include <stdio.h>
 #include <string>
 #include <list>
 #include "Thread.h"
 #include <iostream>
-#include "Colector.h"
+#include "Collector.h"
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
 #include "Sender.h"
@@ -71,7 +69,7 @@ int main(int argc, char *argv[]) {
 		Socket skt(port, 0);
 		skt.start_to_listen();
 
-		Scene scene;
+		Scene scene(get_cantidad_jugadores(doc, doc_default, result));
         Model model(1);
 
 		if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
@@ -82,7 +80,7 @@ int main(int argc, char *argv[]) {
 
 	    list<ModelProtocol> pList;
 
-    	Colector colector(skt,pList,queue,mutex,model);
+    	Collector colector(skt,pList,queue,mutex,model);
     	Interpreter interpreter(pList,queue,mutex,model,scene);
     	Sender sender(pList,scene,model);
 

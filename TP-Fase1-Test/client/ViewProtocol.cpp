@@ -79,22 +79,24 @@ int receiveNumber(Socket& skt){
 
 void ViewProtocol::update(Scene& scene){
 
-    //scene.setBullets(std::move(lTemp));
-    scene.setP1PositionX(receiveNumber(socket));
-    scene.setP1PositionY(receiveNumber(socket));
-    scene.setP1VelocityX(receiveNumber(socket));
-    scene.setP1VelocityY(receiveNumber(socket));
-    scene.setP1HitPoints(receiveNumber(socket));
-    scene.setP1Walking(receiveNumber(socket));
-    scene.setP1Airborne(receiveNumber(socket));
-    scene.setP1Crouching(receiveNumber(socket));
-    scene.setP1LookingRight(receiveNumber(socket));
-    scene.setP1Dead(receiveNumber(socket));
-    scene.setP1Shooting(receiveNumber(socket));
-    
-    scene.setCameraX(receiveNumber(socket));
-    scene.setCameraY(receiveNumber(socket));
-    scene.setLevel(receiveNumber(socket));
-    scene.setP1AimDirection(receiveNumber(socket));
-    
+    int p = scene.getCurrentPlayers();
+    for (int i = 0; i < p; i++) {
+        //scene.setBullets(std::move(lTemp));
+        scene.setPositionX(receiveNumber(socket), i + 1);
+        scene.setPositionY(receiveNumber(socket), i + 1);
+        scene.setVelocityX(receiveNumber(socket), i + 1);
+        scene.setVelocityY(receiveNumber(socket), i + 1);
+        scene.setHitPoints(receiveNumber(socket), i + 1);
+        scene.setWalking(receiveNumber(socket), i + 1);
+        scene.setAirborne(receiveNumber(socket), i + 1);
+        scene.setCrouching(receiveNumber(socket), i + 1);
+        scene.setLookingRight(receiveNumber(socket), i + 1);
+        scene.setDead(receiveNumber(socket), i + 1);
+        scene.setShooting(receiveNumber(socket), i + 1);
+
+        scene.setCameraX(receiveNumber(socket));
+        scene.setCameraY(receiveNumber(socket));
+        scene.setLevel(receiveNumber(socket));
+        scene.setAimDirection(receiveNumber(socket), i + 1);
+    }
 }

@@ -7,11 +7,11 @@
 #include "Model.h"
 #include <list>
 
-class Colector : public Thread {
+class Collector : public Thread {
 public:
-	Colector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model);
+	Collector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model);
 	virtual void run();
-	~Colector();
+	~Collector();
 	void end();	
 
 private:

@@ -26,12 +26,14 @@ extern pugi::xml_parse_result *gXML_parse_result;
 
 
 bool Model::endOfLevel(Scene& scene){
-    if(level.getLevel() != 2) {
-        if(scene.getP1PositionX() > level.getWidth() )
-            return true;
-    }else {
-        if (level.getHeight() + scene.getP1PositionY() - 600 < 0)
-            return true;
+    for (int i = 0; i < currentPlayers; i++) {
+        if (level.getLevel() != 2) {
+            if (scene.getPositionX(i + 1) > level.getWidth())
+                return true;
+        } else {
+            if (level.getHeight() + scene.getPositionY(i + 1) - 600 < 0)
+                return true;
+        }
     }
     return false;
 }
@@ -115,27 +117,28 @@ void Model::update(Scene &scene) {
 
     scene.setBullets(std::move(lTemp));
 
-    scene.setP1PositionX(players[0]->getPositionX());
-    scene.setP1VelocityX(players[0]->getVelocityX());
-    scene.setP1VelocityY(players[0]->getVelocityY());
-    scene.setP1PositionY(players[0]->getPositionY());
-    scene.setP1Airborne(players[0]->isAirborne());
-    scene.setP1AimDirection(players[0]->getAimDirection());
-    scene.setP1Dead(players[0]->isDead());
-    scene.setP1Crouching(players[0]->isCrouching());
-    scene.setP1LookingRight(players[0]->isLookingRight());
-    scene.setP1Walking(players[0]->isWalking());
-    scene.setP1Shooting(players[0]->isShooting());
+    for (int i = 0; i < currentPlayers; i++) {
+        scene.setPositionX(players[i]->getPositionX(), i + 1);
+        scene.setVelocityX(players[i]->getVelocityX(), i + 1);
+        scene.setVelocityY(players[i]->getVelocityY(), i + 1);
+        scene.setPositionY(players[i]->getPositionY(), i + 1);
+        scene.setAirborne(players[i]->isAirborne(), i + 1);
+        scene.setAimDirection(players[i]->getAimDirection(), i + 1);
+        scene.setDead(players[i]->isDead(), i + 1);
+        scene.setCrouching(players[i]->isCrouching(), i + 1);
+        scene.setLookingRight(players[i]->isLookingRight(), i + 1);
+        scene.setWalking(players[i]->isWalking(), i + 1);
+        scene.setShooting(players[i]->isShooting(), i + 1);
 
-    if (scene.getLevel() != 2){
-        if (scene.getP1PositionX() > MARGENX + cam->x)
-            cam->x = scene.getP1PositionX() - MARGENX;
-    }else {
-        if (scene.getP1PositionY() < MARGENY + cam->y)
-            if(scene.getP1PositionY() - MARGENY < 0)
-                cam->y = scene.getP1PositionY() - MARGENY;
+        if (scene.getLevel() != 2) {
+            if (scene.getPositionX(i + 1) > MARGENX + cam->x)
+                cam->x = scene.getPositionX(i + 1) - MARGENX;
+        } else {
+            if (scene.getPositionY(i + 1) < MARGENY + cam->y)
+                if (scene.getPositionY(i + 1) - MARGENY < 0)
+                    cam->y = scene.getPositionY( i + 1) - MARGENY;
+        }
     }
-
 
     if(endOfLevel(scene))
         this->changeLevel(level.next(),scene);
