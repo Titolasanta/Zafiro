@@ -49,6 +49,7 @@ void Model::createCharacter(){
         case 1: players[currentPlayers] = &player2; break;
         case 2: players[currentPlayers] = &player3; break;
         case 3: players[currentPlayers] = &player4; break;
+        default: currentPlayers--;
     }
     currentPlayers++;
 }
@@ -69,40 +70,91 @@ void Model::time(){
         CollisionSoft(*players[i],lPlataformsSoft);
     }
 }
+int XMasChico(Scene scene,Character** lp){
+    int min = 100000;
+    for(int i = 0; i < scene.getCurrentPlayers() ; i++){
+        if(min > lp[i]->getPositionX())
+            min = lp[i]->getPositionX();
+    }
+    return min;
+} 
+int YMasChico(Scene scene,Character** lp){
+    int min = 100000;
+    for(int i = 0; i < scene.getCurrentPlayers() ; i++){
+        if(min > lp[i]->getPositionX())
+            min = lp[i]->getPositionX();
+    }
+    return min;
+}
+
 
 void Model::update(Scene &scene) {
 
     std::lock_guard<std::mutex> mute(mutex);
-
-
+    
+    
     this->time();
 
     SDL_Rect* cam = scene.getCamera();
-    if (players[0]->getPositionX() < 5 + cam->x) {
-        players[0]->setPositionX( 5 + cam->x);
-        players[0]->setVelocityX(0);
-    }
 
-    if(players[0]->getPositionY() > 600 + cam->y) {
-        players[0]->spawn();
-        scene.getCamera()->x = 0;
-        scene.getCamera()->y = 0;
-    }
-
-
-    if(level.getLevel() != 2){
-        if (players[0]->getPositionY() < -5 + cam->y) {
-            players[0]->setPositionY(-5 +  cam->y);
-            players[0]->setPositionY(-5 +  cam->y);
-            players[0]->setVelocityY(0);
-        }
-    }else{
-        if (players[0]->getPositionX() > 770 + cam->x) {
-            players[0]->setPositionX(770 + cam->x);
-            players[0]->setVelocityX(0);
-        }
-    }
     std::list<std::tuple<int,int>> lTemp;
+
+    int moveCam = 0;
+    
+    for (int i = 0; i < currentPlayers; i++) {
+
+        if (players[i]->getPositionX() < 5 + cam->x) {
+            players[i]->setPositionX( 5 + cam->x);
+            players[i]->setVelocityX(0);
+        }
+
+        if(players[i]->getPositionY() > 600 + cam->y) {
+            players[i]->spawn();
+            scene.getCamera()->x = 0;
+            scene.getCamera()->y = 0;
+        }
+
+
+        if(level.getLevel() != 2){
+            if (players[i]->getPositionY() < -5 + cam->y) {
+                players[i]->setPositionY(-5 +  cam->y);
+                players[i]->setPositionY(-5 +  cam->y);
+                players[i]->setVelocityY(0);
+            }
+        }else{
+            if (players[i]->getPositionX() > 770 + cam->x) {
+                players[i]->setPositionX(770 + cam->x);
+                players[i]->setVelocityX(0);
+            }
+        }
+
+        scene.setPositionX(players[i]->getPositionX(), i + 1);
+        scene.setVelocityX(players[i]->getVelocityX(), i + 1);
+        scene.setVelocityY(players[i]->getVelocityY(), i + 1);
+        scene.setPositionY(players[i]->getPositionY(), i + 1);
+        scene.setAirborne(players[i]->isAirborne(), i + 1);
+        scene.setAimDirection(players[i]->getAimDirection(), i + 1);
+        scene.setDead(players[i]->isDead(), i + 1);
+        scene.setCrouching(players[i]->isCrouching(), i + 1);
+        scene.setLookingRight(players[i]->isLookingRight(), i + 1);
+        scene.setWalking(players[i]->isWalking(), i + 1);
+        scene.setShooting(players[i]->isShooting(), i + 1);
+        scene.setCurrentPlayers(currentPlayers);
+        
+        if (scene.getLevel() != 2) {
+            if (scene.getPositionX(i + 1) > MARGENX + cam->x)
+                moveCam++;
+        } else {
+            if (scene.getPositionY(i + 1) < MARGENY + cam->y)
+                if (scene.getPositionY(i + 1) - MARGENY < 0)
+                    moveCam++;
+        }
+    }
+    if(moveCam == scene.getCurrentPlayers())
+        if (scene.getLevel() != 2)
+            cam->x = XMasChico(scene,players) - MARGENX;
+        else
+            cam->y = YMasChico(scene,players) - MARGENY;
 
     for(auto it = lBullets.begin(); it != lBullets.end();)
     {
@@ -117,29 +169,6 @@ void Model::update(Scene &scene) {
     }
 
     scene.setBullets(std::move(lTemp));
-
-    for (int i = 0; i < currentPlayers; i++) {
-        scene.setPositionX(players[i]->getPositionX(), i + 1);
-        scene.setVelocityX(players[i]->getVelocityX(), i + 1);
-        scene.setVelocityY(players[i]->getVelocityY(), i + 1);
-        scene.setPositionY(players[i]->getPositionY(), i + 1);
-        scene.setAirborne(players[i]->isAirborne(), i + 1);
-        scene.setAimDirection(players[i]->getAimDirection(), i + 1);
-        scene.setDead(players[i]->isDead(), i + 1);
-        scene.setCrouching(players[i]->isCrouching(), i + 1);
-        scene.setLookingRight(players[i]->isLookingRight(), i + 1);
-        scene.setWalking(players[i]->isWalking(), i + 1);
-        scene.setShooting(players[i]->isShooting(), i + 1);
-
-        if (scene.getLevel() != 2) {
-            if (scene.getPositionX(i + 1) > MARGENX + cam->x)
-                cam->x = scene.getPositionX(i + 1) - MARGENX;
-        } else {
-            if (scene.getPositionY(i + 1) < MARGENY + cam->y)
-                if (scene.getPositionY(i + 1) - MARGENY < 0)
-                    cam->y = scene.getPositionY( i + 1) - MARGENY;
-        }
-    }
 
     if(endOfLevel(scene))
         this->changeLevel(level.next(),scene);

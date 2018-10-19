@@ -9,8 +9,7 @@
 
 extern Logger *gplogger;
 Scene::Scene(int numberOfPlayers) {
-    players = numberOfPlayers;
-
+    MaxPlayers = numberOfPlayers;
     gplogger->log(3,"Se crea una Escena");
 }
 

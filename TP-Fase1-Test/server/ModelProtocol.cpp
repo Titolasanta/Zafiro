@@ -26,8 +26,11 @@ void ModelProtocol::run() {
     while(!quit){
         printf("informacion relevante\n");
         msg[0] = id;
-        skt.receive_all(&(msg[1]),2);
-
+        try {
+            skt.receive_all(&(msg[1]), 2);
+        }catch(...){
+            break;
+        }
         mutex.lock();
         queue.push(msg[0]);
         queue.push(msg[1]);
@@ -45,17 +48,19 @@ ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),
     printf("lo hice 1 vaez\n");
     this->thread = std::move(other.thread);
     this->id = other.id;
+    other.valid = false;
 }
 
 
 void ModelProtocol::send(Scene& scene){
-    int p = scene.getCurrentPlayers();
-    mutex.lock();
-    for(auto it = scene.getLBullets().begin() ; it != scene.getLBullets().end() ; ++it){
-        sendValue(skt, std::get<0>(*it));
-        sendValue(skt, std::get<1>(*it));
-    }
-    sendValue(skt, -1);
+    int p = scene.getMaxPlayers();
+    std::lock_guard<std::mutex> lg(mutex);
+
+        for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
+            sendValue(skt, std::get<0>(*it));
+            sendValue(skt, std::get<1>(*it));
+        }
+        sendValue(skt, -1);
         for (int i = 0; i < p; i++) {
             //std::list<std::tuple<int,int>> lBullets;
             sendValue(skt, scene.getPositionX(i + 1));
@@ -72,10 +77,13 @@ void ModelProtocol::send(Scene& scene){
             sendValue(skt, scene.getAimDirection(i + 1));
 
         }
-            sendValue(skt, scene.getCamera()->x);
-            sendValue(skt, scene.getCamera()->y);
-            sendValue(skt, scene.getLevel());
-        
+        sendValue(skt, scene.getCamera()->x);
+        sendValue(skt, scene.getCamera()->y);
+        sendValue(skt, scene.getLevel());
 
-    mutex.unlock();
+}
+
+ModelProtocol::~ModelProtocol(){
+    if(valid)
+        join();
 }

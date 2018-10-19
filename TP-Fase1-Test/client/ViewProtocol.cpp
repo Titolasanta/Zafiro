@@ -89,9 +89,8 @@ void ViewProtocol::update(Scene& scene){
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
-
-    int p = scene.getCurrentPlayers();
-   for (int i = 0; i < p; i++) {
+    int p = scene.getMaxPlayers();
+    for (int i = 0; i < p; i++) {
        //scene.setBullets(std::move(lTemp));
        scene.setPositionX(receiveNumber(socket), i + 1);
        scene.setPositionY(receiveNumber(socket), i + 1);
@@ -109,5 +108,5 @@ void ViewProtocol::update(Scene& scene){
         scene.setCameraX(receiveNumber(socket));
         scene.setCameraY(receiveNumber(socket));
         scene.setLevel(receiveNumber(socket));
-    
+
 }

@@ -103,6 +103,7 @@ void Socket::manual_close() {
 }
 
 Socket::~Socket() {
+	printf("llamado\n");
 	if(is_valid) {
 		shutdown(skt_id, SHUT_RDWR);
 		close(skt_id);

@@ -4,6 +4,7 @@
 
 #include <zconf.h>
 #include "Sender.h"
+#include "../common/Exception.h"
 
 Sender::Sender(std::list<ModelProtocol> &l,Scene &scene,Model& model) : pList(l),scene(scene),model(model){}
 
@@ -15,7 +16,7 @@ void Sender::run(){
             try {
                 it->send(scene);
             }catch(...){
-                pList.erase(it);
+                it = pList.erase(it);
             }
         }
     }

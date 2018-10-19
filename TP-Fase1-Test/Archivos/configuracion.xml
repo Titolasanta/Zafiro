@@ -3,7 +3,7 @@
     <debug>
         <level>Error</level>
     </debug>
-    <cantidad_jugadores>4</cantidad_jugadores>
+    <cantidad_jugadores>2</cantidad_jugadores>
     <escenarios>
         <nivel1>
             <height>600</height>

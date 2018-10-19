@@ -35,7 +35,8 @@ private:
     std::list<std::tuple<int,int>> lBullets;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
-    int players;
+    int players = 0;
+    int MaxPlayers;
 
     int positionX[4];
     int positionY[4];
@@ -81,7 +82,6 @@ public:
     int getLevel() const { return level; }
     void setLevel(int l) { level = l; }
 
-    int getCurrentPlayers() const { return players; }
 
     int getPositionX(int p) const { return positionX[p-1]; }
     void setPositionX(int posX, int p) { positionX[p-1] = posX; }
@@ -118,6 +118,11 @@ public:
 
     int isShooting(int p) const { return shooting[p-1]; }
     void setShooting(int s, int p) { shooting[p-1] = s; }
+
+    int getCurrentPlayers() const { return players; }
+    void setCurrentPlayers(int p){ players = p;}
+    
+    int getMaxPlayers(){ return MaxPlayers;}
 
 };
 

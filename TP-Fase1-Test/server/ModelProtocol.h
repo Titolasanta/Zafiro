@@ -20,11 +20,12 @@ public:
     ModelProtocol(ModelProtocol&& other);
 
     ModelProtocol& operator=(ModelProtocol&& other) = delete;
-
+    ~ModelProtocol();
 private:
     Socket skt;
     char id;
     bool quit = false;
+    bool valid = true;
     std::queue<char>& queue;
     std::mutex& mutex;
 };
