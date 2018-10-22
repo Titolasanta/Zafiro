@@ -17,7 +17,7 @@
 
 
 #define MARGENX (800/2)
-#define MARGENY (600/3)
+#define MARGENY 400
 
 extern Logger *gplogger;
 
@@ -43,15 +43,33 @@ Model::Model(int initialLevel) : level(initialLevel) {
     gplogger->log(3, "Se creó el server");
 }
 
-void Model::createCharacter(){
-    switch (currentPlayers){
-        case 0: players[currentPlayers] = &player1; break;
-        case 1: players[currentPlayers] = &player2; break;
-        case 2: players[currentPlayers] = &player3; break;
-        case 3: players[currentPlayers] = &player4; break;
-        default: currentPlayers--;
+void Model::rejoinCharacter(int id){
+    jugadorLiseado[id-1] = false;
+}
+
+void Model::createCharacter(int id){
+    switch (currentPlayers) {
+        case 0:
+            players[currentPlayers] = &player1;
+            jugadorLiseado[currentPlayers] = false;
+            break;
+        case 1:
+            players[currentPlayers] = &player2;
+            jugadorLiseado[currentPlayers] = false;
+            break;
+        case 2:
+            players[currentPlayers] = &player3;
+            jugadorLiseado[currentPlayers] = false;
+            break;
+        case 3:
+            players[currentPlayers] = &player4;
+            jugadorLiseado[currentPlayers] = false;
+            break;
+        default:
+            currentPlayers--;
     }
     currentPlayers++;
+    if (currentPlayers == maxPlayers) maxPlayersReached = true;
 }
 
 int Model::getMaxPlayers(){
@@ -63,13 +81,19 @@ int Model::getCurrentPlayers(){
 }
 
 void Model::time(){
-
+    int velocidad = maxPlayers;
+    for(int i = 0; i < maxPlayers; i++)
+        velocidad -= jugadorLiseado[i];
     for (int i = 0; i < currentPlayers; i++) {
-        players[i]->time();
-        CollisionHard(*players[i],lPlataformsHard);
-        CollisionSoft(*players[i],lPlataformsSoft);
+        if (!jugadorLiseado[i]) {
+            players[i]->time(velocidad);
+            CollisionHard(*players[i], lPlataformsHard);
+            CollisionSoft(*players[i], lPlataformsSoft);
+        } else{}
+      //      players[i]->freeze();
     }
 }
+
 int XMasChico(Scene scene,Character** lp){
     int min = 100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
@@ -77,12 +101,13 @@ int XMasChico(Scene scene,Character** lp){
             min = lp[i]->getPositionX();
     }
     return min;
-} 
-int YMasChico(Scene scene,Character** lp){
-    int min = 100000;
+}
+
+int YMasGrande(Scene scene,Character** lp){
+    int min = -1000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if(min > lp[i]->getPositionX())
-            min = lp[i]->getPositionX();
+        if(min < lp[i]->getPositionY())
+            min = lp[i]->getPositionY();
     }
     return min;
 }
@@ -99,7 +124,8 @@ void Model::update(Scene &scene) {
 
     std::list<std::tuple<int,int>> lTemp;
 
-    int moveCam = 0;
+    int moveCamAtras = 0;
+    int moveCamAdelante = 0;
     
     for (int i = 0; i < currentPlayers; i++) {
 
@@ -109,15 +135,12 @@ void Model::update(Scene &scene) {
         }
 
         if(players[i]->getPositionY() > 600 + cam->y) {
-            players[i]->spawn();
-            scene.getCamera()->x = 0;
-            scene.getCamera()->y = 0;
+            players[i]->spawn(*cam);
         }
 
 
         if(level.getLevel() != 2){
             if (players[i]->getPositionY() < -5 + cam->y) {
-                players[i]->setPositionY(-5 +  cam->y);
                 players[i]->setPositionY(-5 +  cam->y);
                 players[i]->setVelocityY(0);
             }
@@ -140,25 +163,36 @@ void Model::update(Scene &scene) {
         scene.setWalking(players[i]->isWalking(), i + 1);
         scene.setShooting(players[i]->isShooting(), i + 1);
         scene.setCurrentPlayers(currentPlayers);
-        
+
         if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
-                moveCam++;
+                moveCamAdelante++;
         } else {
             if (scene.getPositionY(i + 1) < MARGENY + cam->y)
                 if (scene.getPositionY(i + 1) - MARGENY < 0)
-                    moveCam++;
+                    moveCamAdelante++;
+        }
+        if (scene.getLevel() != 2) {
+            if (scene.getPositionX(i + 1) < MARGENX/2 + cam->x)
+                moveCamAtras++;
+        } else {
+            if (scene.getPositionY(i + 1) > MARGENY/2 + cam->y)
+                //if (scene.getPositionY(i + 1) - MARGENY < 0)
+                    moveCamAtras++;
         }
     }
-    if(moveCam == scene.getCurrentPlayers())
+    if(moveCamAdelante && !(moveCamAtras)) {
         if (scene.getLevel() != 2)
-            cam->x = XMasChico(scene,players) - MARGENX;
+            cam->x = XMasChico(scene, players) - MARGENX/3;
         else
-            cam->y = YMasChico(scene,players) - MARGENY;
-
+            cam->y = YMasGrande(scene, players)- MARGENY/3;
+    }
+    int velocidad = maxPlayers;
+    for(int i = 0; i < maxPlayers; i++)
+        velocidad -= jugadorLiseado[i];
     for(auto it = lBullets.begin(); it != lBullets.end();)
     {
-        it->move();
+        it->move(velocidad);
         if(!(it->inSight(scene))) {
             it=lBullets.erase(it);
         }
@@ -193,7 +227,7 @@ void Model::addPlataformHard(int x, int y, int w) {
 void Model::moveRight(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    players[p-1]->move(20);
+    players[p-1]->move(200);
 }
 
 void Model::moveLeft(int p) {
@@ -257,9 +291,11 @@ void Model::changeLevel(Level level,Scene& scene) {
     scene.setLevel(level.getLevel());
     scene.getCamera()->x = 0;
     scene.getCamera()->y = 0;
-    players[0]->spawn();
-    players[0]->nextLevel();
 
+    for (int i = 0; i < currentPlayers; i++) {
+        players[i]->spawn(*scene.getCamera());
+        players[i]->nextLevel();
+    }
     gplogger->log(2, "Se cambió de nivel");
 }
 
@@ -277,11 +313,20 @@ void Model::shoot(int p){
     }
 }
 
-void Model::bajaJugador(int currentPlayers) {
-    Model::currentPlayers = currentPlayers;
+void Model::bajaJugador(int p) {
+    //currentPlayers--;
+    jugadorLiseado[p-1] = true;
 }
 /*
 const Level &Model::getLevel() const {
     return level;
 }
 */
+
+bool Model::getMaxPlayersReached(){
+    return maxPlayersReached;
+}
+
+const bool *Model::getJugadorLiseado() const {
+    return jugadorLiseado;
+}

@@ -44,7 +44,7 @@ void Character::land(int x, int y,int w,bool hard) {
     gplogger->log(3, "El personaje aterriza");
 }
 
-void Character::time() {
+void Character::time(int currentPlayers) {
 
     timeTillNextShoot--;
     if(timeTillNextShoot < 0){
@@ -55,16 +55,14 @@ void Character::time() {
     if (currentPlatX + currentPlatW  < positionX + velocityX || currentPlatX  >  positionX + velocityX) {
         airborne = true;
     }
-   if(airborne)
-        velocityY += 4;
 
+   if(airborne) velocityY += 4/currentPlayers;
 
-    velocityY += accelerationY;
+    //velocityY += accelerationY;
+    //velocityX += accelerationX;
 
-    velocityX += accelerationX;
-    positionX += velocityX;
-
-    positionY += velocityY;
+    positionX += velocityX/currentPlayers;
+    positionY += velocityY/currentPlayers;
     
     if (crouching) aimDirection = 0;
 }
@@ -173,10 +171,10 @@ void Character::goThroughPlatform(){
     gplogger->log(3, "El personaje atraviesa una plataforma");
 }
 
-void Character::spawn() {
+void Character::spawn(SDL_Rect cam) {
 
-    positionY = 200;
-    positionX = 200;
+    positionY = cam.y -300;
+    positionX = cam.x;
     velocityY = 0;
     velocityX = 0;
     airborne = false;

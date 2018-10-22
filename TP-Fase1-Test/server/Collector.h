@@ -6,6 +6,7 @@
 #include "ModelProtocol.h"
 #include "Model.h"
 #include <list>
+#include <map>
 
 class Collector : public Thread {
 public:
@@ -15,6 +16,7 @@ public:
 	void end();	
 
 private:
+    std::map<std::string,char> hash;
 	Socket socket;
 	std::queue<char> &queue;
 	std::mutex &mutex;

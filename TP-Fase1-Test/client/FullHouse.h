@@ -8,8 +8,9 @@
 
 #include <exception>
 
-class ClienteLLeno : public std::exception {
-
+class FullHouse : public std::exception {
+public:
+    FullHouse() = default;
 };
 
 

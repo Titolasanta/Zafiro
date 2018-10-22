@@ -18,12 +18,16 @@ public:
     void send(Scene& scene);
 
     ModelProtocol(ModelProtocol&& other);
-
+    
     ModelProtocol& operator=(ModelProtocol&& other) = delete;
     ~ModelProtocol();
 private:
     Socket skt;
     char id;
+public:
+    char getId() const;
+
+private:
     bool quit = false;
     bool valid = true;
     std::queue<char>& queue;

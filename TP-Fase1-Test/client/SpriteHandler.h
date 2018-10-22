@@ -17,9 +17,14 @@ public:
     void render(Scene &scene, int cameraX, int cameraY);
 
 private:
-    ImgTexture spriteTexture;
+    ImgTexture *spriteTexture[4];
+    ImgTexture spriteTexture0;
+    ImgTexture spriteTexture1;
+    ImgTexture spriteTexture2;
+    ImgTexture spriteTexture3;
+
     Sprite spritePositionHandler;
-    int currentFrame[4] = {0, 0, 0, 0};
+    int currentFrame[5] = {0, 0, 0, 0, 0};
 };
 
 

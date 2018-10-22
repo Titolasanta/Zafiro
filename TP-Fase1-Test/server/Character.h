@@ -44,7 +44,7 @@ private:
         int currentPlatY;
         int currentPlatW;
         bool currentPlatHard;
-        int timeTillNextShoot = 0;
+        float timeTillNextShoot = 0;
 private:
     //si queres que sea polimorifico y pueda tener diferentes
         // clases hijas de weapon deberia ser un puntero o referencia
@@ -62,7 +62,7 @@ private:
         void stand();
         void crouch();
         void takeDamage();
-        void time();
+        void time(int);
         void land(int,int,int,bool);
         void goThroughPlatform();
         int level = 1;
@@ -128,7 +128,7 @@ public:
     void setWalking(bool walking){
         this->walking = walking;
     }
-    void spawn();
+    void spawn(SDL_Rect cam);
 
     void nextLevel();
 

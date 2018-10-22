@@ -18,7 +18,10 @@
 #include "../common/xml.h"
 #include "../common/Logger.h"
 #include "../common/Exception.h"
-#include "ClienteLLeno.h"
+#include "FullHouse.h"
+#include "Verifier.h"
+#include "InvalidLogin.h"
+#include "Quit.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 #define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
@@ -71,16 +74,27 @@ int main( int argc, char* argv[] )
 
     try {
         Socket skt(port, "127.0.0.1");
-        skt.receive_all(&id, 1);
 
-        if(-1 == id) throw ClienteLLeno();
+        Verifier verifier(view,skt);
+        SDL_Event e;
+
+        bool quit = false;
+        while (!quit) {
+            while (SDL_PollEvent(&e) != 0) {
+                quit = verifier.processEvent(e);
+                if (e.type == SDL_QUIT) { throw Quit(); }
+            }
+            verifier.show();
+        }
+
+
+
+        skt.receive_all(&id, 1);
 
         view.setId(id);
         Controller controller(view, skt);
 
-
-        SDL_Event e;
-        bool quit = false;
+        quit = false;
         while (!quit) {
 
             while (SDL_PollEvent(&e) != 0) {
@@ -93,13 +107,18 @@ int main( int argc, char* argv[] )
         view.conexionFail();
         logger.log(2, "Se cayo la coneccion");
         return 0;
-    }catch(ClienteLLeno){
+    }catch(FullHouse){
         view.fullHouseMesage();
         logger.log(2, "Cliente leyo que esta lleno el server");
-    }catch(...){
+    }catch(InvalidLogin){
+        view.invalidLoginMesage();
+        logger.log(2, "Error al loggear al juego");
+    }catch(Quit){
+        logger.log(2, "Usuario cerro el juego");
+    }/*catch(...){
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
-    }
+    }*/
 
     logger.log(2, "Se cerró el juego");
     logger.cerrar_archivo();

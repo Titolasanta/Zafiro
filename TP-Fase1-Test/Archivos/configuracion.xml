@@ -24,6 +24,12 @@
                 <y>400</y>
             </plataforma>
             <plataforma>
+            <tipo>pasto</tipo>
+            <xi>10</xi>
+            <xf>7000</xf>
+            <y>375</y>
+        </plataforma>
+            <plataforma>
                 <tipo>hielo</tipo>
                 <xi>3200</xi>
                 <xf>3900</xf>

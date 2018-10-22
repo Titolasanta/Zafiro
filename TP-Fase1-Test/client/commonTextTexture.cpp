@@ -12,7 +12,7 @@ TextTexture::TextTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b)
 	if( mFont == NULL ){
 		throw SDLTTFError("no se pudo cagar el tipo de texto resources/ttf/OpenSans/OpenSans-Regular.ttf");
 	}
-	mFontColor = {r,g,b,120};
+	mFontColor = {r,g,b};
 }
 
 void TextTexture::free(){

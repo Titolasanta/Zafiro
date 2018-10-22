@@ -14,6 +14,7 @@
 #include <iostream>
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
+extern pugi::xml_parse_result *gXML_parse_result;
 
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
@@ -47,7 +48,7 @@ void View::setId(int recid) {
 void View::render(Scene& scene) {
 
     if(level != scene.getLevel())
-        changeLevel();
+        changeLevel(scene);
 
     if(level == 2) {
         moveBackground(scene.getVelocityY(id));
@@ -84,9 +85,14 @@ void View::render(Scene& scene) {
 
 }
 
-void View::changeLevel() {
+void View::changeLevel(Scene& scene) {
     ++level;
     background.changeLevel(level);
+    scene.clearPlatform();
+    int lh = get_level_height( *gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
+    int lw = get_level_width( *gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
+    if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, level, lh, lw);
+    else cargar_plataformas(*gXML_doc[1],scene, level, lh, lw);
 }
 
 void View::moveBackground(int dir) {
@@ -127,6 +133,16 @@ void View::fullHouseMesage() {
     window.createRectangle(0,1000,0,800);
 
     std::string msg("El servidor no tiene mas cupos.");
+    txt.loadFromRenderedText(msg);
+    txt.render(200, 250);
+    window.updateRenderer();
+    usleep(4000000);
+}
+
+void View::invalidLoginMesage() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("Error al loggear al juego.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();

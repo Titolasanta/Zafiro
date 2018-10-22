@@ -28,12 +28,17 @@ private:
         int currentPlayers = 0;
         int maxPlayers;
         std::mutex mutex;
-        bool jugadorLiseado[4] = {false,false,false,false};
+        bool jugadorLiseado[4] = {true,true,true,true};
+public:
+    const bool *getJugadorLiseado() const;
+
+private:
+    bool maxPlayersReached = false;
 
     public:
         explicit Model(int initialLevel);
         ~Model() = default;
-        void createCharacter();
+        void createCharacter(int);
         int getMaxPlayers();
         int getCurrentPlayers();
         void update(Scene&);
@@ -58,6 +63,8 @@ private:
         void shoot(int);
         void stopShooting(int);
         void bajaJugador(int currentPlayers);
+        bool getMaxPlayersReached();
+        void rejoinCharacter(int id);
 };
 
 

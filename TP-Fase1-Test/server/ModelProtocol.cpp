@@ -88,3 +88,7 @@ ModelProtocol::~ModelProtocol(){
     if(valid)
         join();
 }
+
+char ModelProtocol::getId() const {
+    return id;
+}

@@ -41,7 +41,7 @@ private:
     public:
         Projectile(int, int, int, int);
         ~Projectile() = default;
-        void move();
+        void move(int);
         bool inSight(Scene& scene);
 };
 

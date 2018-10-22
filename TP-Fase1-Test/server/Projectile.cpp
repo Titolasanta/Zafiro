@@ -26,13 +26,13 @@ bool Projectile::inSight(Scene& scene) {
 
 }
 
-void Projectile::move() {   //No se si anda
+void Projectile::move(int vel) {   //No se si anda
 
         velocityX += accelerationX;
         velocityY += accelerationY;
 
-        positionX += velocityX;
-        positionY += velocityY;
+        positionX += velocityX/vel;
+        positionY += velocityY/vel;
     }
 
 
