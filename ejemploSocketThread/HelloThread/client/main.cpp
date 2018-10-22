@@ -7,7 +7,7 @@
 #include <cstring>
 #include <netinet/in.h>
 #include <zconf.h>
-#include "HelloThread/common/Socket.h"
+#include "../../../TP-Fase1-Test/common/Socket.h"
 
 int main(int argc, char *argv[]){
 
