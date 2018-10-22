@@ -12,7 +12,7 @@
 class ViewProtocol {
 public:
     explicit ViewProtocol(Socket &skt);
-
+    bool validate(std::string toVal);
     void update(Scene& scene);
     void jump();
     void moveRight();

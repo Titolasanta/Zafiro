@@ -2,6 +2,7 @@
 #define SDLWINDOW_H
 #include <string>
 #include "ImgTexture.h"
+#include "commonTextTexture.h"
 //#include "commonTextTexture.h"
 
 //#include "commonButton.h"
@@ -24,7 +25,7 @@ public:
 	ImgTexture createImgTexture();
 	//el color intorducido se vuelve transparente
 	ImgTexture createImgTexture(Uint8, Uint8, Uint8);
-	//TextTexture createTextTexture();
+	TextTexture createTextTexture();
 
 
 	void createRectangle(int xi, int xf, int yi, int yf);

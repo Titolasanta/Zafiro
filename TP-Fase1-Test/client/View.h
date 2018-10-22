@@ -16,6 +16,8 @@
 #include "Bullet.h"
 #include "PlataformaDura.h"
 #include "Ice.h"
+#include "commonTextTexture.h"
+#include "commonSdlTtfInit.h"
 
 class View {
 
@@ -24,11 +26,13 @@ public:
     void changeLevel();
     void render(Scene& scene);
     void moveBackground(int dir);
+    void renderValidationScreen(std::string&,std::string&);
 
 private:
     int id;
     SdlImgInit z;
     SdlInit x;
+    SdlTtfInit y;
     Window window;
     SpriteHandler personajes;
     Background background;
@@ -38,6 +42,12 @@ private:
     PlataformaDura plataformaDura;
     Bullet bullet;
     Ice hielo;
+    TextTexture txt;
+    TextTexture insert1;
+    TextTexture insert2;
+    TextTexture usr;
+    TextTexture pass;
+
     int level=1;
     SDL_Rect * camera = NULL;
 

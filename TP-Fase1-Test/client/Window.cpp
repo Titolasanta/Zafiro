@@ -107,11 +107,11 @@ ImgTexture Window::createImgTexture(Uint8 r, Uint8 g, Uint8 b){
 	gplogger->log(3,"Window devuelve una imgTexture");
 	return std::move(ImgTexture(renderer, r, g, b));
 }
-/*
+
 TextTexture Window::createTextTexture(){
-	return std::move(TextTexture(renderer));
+	return std::move(TextTexture(renderer,120,120,120));
 }
-*/
+
 void Window::surfaceFill(int Color){
 	if( window == NULL || screenSurface == NULL ){
 		throw SDLError( "initialize window" );

@@ -12,10 +12,7 @@ public:
 	virtual ~Texture();
 
 	//Deallocates texture
-	virtual void free() {
-		//significa un error
-		throw Texture(renderer);
-	}
+	virtual void free() = 0;
 
 	//Gets image dimensions
 	int getWidth();
