@@ -22,12 +22,15 @@
 class View {
 
 public:
-    View(int SCREEN_WIDTH, int SCREEN_HEIGHT, int id);
+    View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+    void setId(int id);
     void changeLevel();
     void render(Scene& scene);
     void moveBackground(int dir);
     void renderValidationScreen(std::string&,std::string&);
-
+    void fullHouseMesage();
+    void conexionFail();
+    void conexionDown();
 private:
     int id;
     SdlImgInit z;

@@ -276,6 +276,10 @@ void Model::shoot(int p){
     } catch(int e) { //no recargo el arma
     }
 }
+
+void Model::bajaJugador(int currentPlayers) {
+    Model::currentPlayers = currentPlayers;
+}
 /*
 const Level &Model::getLevel() const {
     return level;

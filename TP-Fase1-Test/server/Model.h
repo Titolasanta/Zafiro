@@ -28,6 +28,7 @@ private:
         int currentPlayers = 0;
         int maxPlayers;
         std::mutex mutex;
+        bool jugadorLiseado[4] = {false,false,false,false};
 
     public:
         explicit Model(int initialLevel);
@@ -56,6 +57,7 @@ private:
         int getLevelHeight();
         void shoot(int);
         void stopShooting(int);
+        void bajaJugador(int currentPlayers);
 };
 
 

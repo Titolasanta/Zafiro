@@ -17,6 +17,8 @@
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "../common/Logger.h"
+#include "../common/Exception.h"
+#include "ClienteLLeno.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 #define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
@@ -63,26 +65,40 @@ int main( int argc, char* argv[] )
     gXML_doc[1] = &doc_default;
     gXML_parse_result = &result;
 
-    
-    std::string id;
+    char id = 0;
     char port[5] = "8081";
-    Socket skt(port,"127.0.0.1");
-    skt.receive_all(id, 1);
+    View view(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-    View view(SCREEN_WIDTH,SCREEN_HEIGHT, std::stoi(id));
+    try {
+        Socket skt(port, "127.0.0.1");
+        skt.receive_all(&id, 1);
 
-    Controller controller(view,skt);
-    
-    SDL_Event e;
-    bool quit = false;
-    
-    while(!quit) {
-        
-        while (SDL_PollEvent(&e) != 0) {
-            if (e.type == SDL_QUIT) { quit = true; }
-            controller.processEvent(e);
+        if(-1 == id) throw ClienteLLeno();
+
+        view.setId(id);
+        Controller controller(view, skt);
+
+
+        SDL_Event e;
+        bool quit = false;
+        while (!quit) {
+
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) { quit = true; }
+                controller.processEvent(e);
+            }
+            controller.show();
         }
-        controller.show();
+    }catch(Finalizo_conexion){
+        view.conexionFail();
+        logger.log(2, "Se cayo la coneccion");
+        return 0;
+    }catch(ClienteLLeno){
+        view.fullHouseMesage();
+        logger.log(2, "Cliente leyo que esta lleno el server");
+    }catch(...){
+        view.conexionDown();
+        logger.log(2, "Server no encontrado.");
     }
 
     logger.log(2, "Se cerró el juego");

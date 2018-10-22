@@ -10,13 +10,16 @@ Sender::Sender(std::list<ModelProtocol> &l,Scene &scene,Model& model) : pList(l)
 
 void Sender::run(){
     while(!quit){
-        usleep(100000);
+        usleep(70000);
+        int i = 0;
         for (auto it = pList.begin(); it != pList.end(); it++) {
+            i++;
             model.update(scene);
             try {
                 it->send(scene);
             }catch(...){
                 it = pList.erase(it);
+                model.bajaJugador(i);
             }
         }
     }

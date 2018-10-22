@@ -109,8 +109,10 @@ void ViewProtocol::update(Scene& scene){
        scene.setShooting(receiveNumber(socket), i + 1);
        scene.setAimDirection(receiveNumber(socket), i + 1);
    }
-        scene.setCameraX(receiveNumber(socket));
-        scene.setCameraY(receiveNumber(socket));
-        scene.setLevel(receiveNumber(socket));
+    scene.setCameraX(receiveNumber(socket));
+    scene.setCameraY(receiveNumber(socket));
+    scene.setLevel(receiveNumber(socket));
+    scene.setCurrentPlayers(receiveNumber(socket));
+
 
 }

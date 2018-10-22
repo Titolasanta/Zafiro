@@ -15,10 +15,10 @@
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
 
-View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT, int id)
+View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
-pasto(&window),bullet(&window),background(window,1), id(id),txt(std::move(window.createTextTexture())),
+pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
 {
@@ -38,6 +38,10 @@ pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTextu
     std::string windowName("juego");
     gplogger->log(3,"Se crea un View");
 
+}
+
+void View::setId(int recid) {
+    this->id = recid;
 }
 
 void View::render(Scene& scene) {
@@ -117,4 +121,34 @@ void View::renderValidationScreen(std::string& Uinserted,std::string& Pinserted)
         txt.render(100, 280);
     }
     window.updateRenderer();
+}
+
+void View::fullHouseMesage() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("El servidor no tiene mas cupos.");
+    txt.loadFromRenderedText(msg);
+    txt.render(200, 250);
+    window.updateRenderer();
+    usleep(4000000);
+}
+
+void View::conexionFail() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("El servidor se callo.");
+    txt.loadFromRenderedText(msg);
+    txt.render(200, 250);
+    window.updateRenderer();
+    usleep(4000000);
+}
+
+void View::conexionDown() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("El servidor no se encontro.");
+    txt.loadFromRenderedText(msg);
+    txt.render(200, 250);
+    window.updateRenderer();
+    usleep(4000000);
 }
