@@ -42,7 +42,7 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
 void cargar_users(pugi::xml_document &doc, std::list<std::string> lista){
     gplogger->log(3, "Se cargan los datos de usuario y contraseña del xml");
     pugi::xml_node usuarios = doc.first_child().child("usuarios");
-    for(pugi::xml_node usuario = usuarios.child("usuario"); usuario; usuario.next_sibling("usuario")){
+    for(pugi::xml_node usuario = usuarios.child("usuario"); usuario; usuario = usuario.next_sibling("usuario")){
         std::string aux(usuario.child("nombre").first_child().text().as_string());
         aux.append("\n");
         aux.append(usuario.child("password").first_child().text().as_string());
