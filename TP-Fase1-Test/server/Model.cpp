@@ -231,7 +231,7 @@ void Model::addPlataformHard(int x, int y, int w) {
 void Model::moveRight(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    players[p-1]->move(200);
+    players[p-1]->move(20);
 }
 
 void Model::moveLeft(int p) {
