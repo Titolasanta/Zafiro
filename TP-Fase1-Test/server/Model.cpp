@@ -341,6 +341,7 @@ void Model::placeCamera(Scene &scene){
     int minY = YMasGrande(scene,players);
 
     for (int i = 0; i < currentPlayers; i++) {
+        //if (jugadorLiseado[i]) continue;
 
         if (scene.getLevel() != 2) {
             int playerPosX = players[i]->getPositionX();
