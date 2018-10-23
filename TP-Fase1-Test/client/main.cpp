@@ -90,19 +90,11 @@ int main( int argc, char* argv[] )
 
 
         skt.receive_all(&id, 1);
-
         view.setId(id);
         Controller controller(view, skt);
 
-        quit = false;
-        while (!quit) {
-
-            while (SDL_PollEvent(&e) != 0) {
-                if (e.type == SDL_QUIT) { quit = true; }
-                controller.processEvent(e);
-            }
-            controller.show();
-        }
+        controller.startGame();
+        
     }catch(Finalizo_conexion){
         view.conexionFail();
         logger.log(2, "Se cayo la coneccion");
