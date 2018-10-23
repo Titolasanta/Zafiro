@@ -23,6 +23,19 @@ Controller::Controller(View &view, Socket& skt) : view(view),protocol(skt), scen
 
     gplogger->log(3, "Se crea el controlador");
 }
+
+void Controller::startGame(){
+    SDL_Event e;
+    bool quit = false;
+    while (!quit) {
+        while (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) { quit = true; }
+            processEvent(e);
+        }
+        show();
+    }
+}
+
 void Controller::processEvent(SDL_Event e) {
 
     if (e.type == SDL_KEYDOWN) {
