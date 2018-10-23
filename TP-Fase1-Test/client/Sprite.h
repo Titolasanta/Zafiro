@@ -18,11 +18,13 @@ public:
     SDL_Rect* move(int direction, int frame);
     SDL_Rect* quieto();
     SDL_Rect* getFaceDown();
+    SDL_Rect* getGrisado();
 
 private:
     SDL_Rect frameMoviemiento[4][6];
     SDL_Rect parado;
     SDL_Rect faceDown;
+    SDL_Rect grisado;
 
 };
 

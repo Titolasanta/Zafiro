@@ -4,6 +4,8 @@
         <level>Error</level>
     </debug>
     <cantidad_jugadores>4</cantidad_jugadores>
+    <ip></ip>
+    <port>8081</port>
     <escenarios>
         <nivel1>
             <height>600</height>
