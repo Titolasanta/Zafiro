@@ -65,6 +65,7 @@ private:
         void bajaJugador(int currentPlayers);
         bool getMaxPlayersReached();
         void rejoinCharacter(int id);
+        void placeCamera(Scene&);
 };
 
 
