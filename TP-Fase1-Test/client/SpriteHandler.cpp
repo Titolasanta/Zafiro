@@ -67,7 +67,7 @@ void SpriteHandler::render(Scene &scene, int cameraX, int cameraY) {
             currentClip = spritePositionHandler.move(2, currentFrame[i+1] % 4);
         }
        // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
-        spriteTexture[i+1]->render(scene.getPositionX(i+1) - cameraX - characterWidth / 2, scene.getPositionY(i+1) - cameraY,
+        spriteTexture[i]->render(scene.getPositionX(i+1) - cameraX - characterWidth / 2, scene.getPositionY(i+1) - cameraY,
                              currentClip, angle);
     }
 }
