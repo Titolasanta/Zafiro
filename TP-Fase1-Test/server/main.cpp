@@ -72,17 +72,18 @@ int main(int argc, char *argv[]) {
 		Scene scene(get_cantidad_jugadores(doc, doc_default, result));
         Model model(1);
 
-		if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());     //No tenia idea de como hacer este
-		else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth()); //chequeo de otra manera
+
+		if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());
+		else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth());
 
         std::queue<char> queue;
         std::mutex mutex;
 
 	    list<ModelProtocol> pList;
 
-    	Collector colector(skt,pList,queue,mutex,model);
-    	Interpreter interpreter(pList,queue,mutex,model,scene);
-    	Sender sender(pList,scene,model);
+    	Collector colector(skt, pList, queue, mutex, model);
+    	Interpreter interpreter(pList, queue, mutex, model, scene);
+    	Sender sender(pList, scene, model);
 
     	colector.start();
     	interpreter.start();

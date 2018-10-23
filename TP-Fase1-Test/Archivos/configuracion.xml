@@ -3,7 +3,7 @@
     <debug>
         <level>Error</level>
     </debug>
-    <cantidad_jugadores>0</cantidad_jugadores>
+    <cantidad_jugadores>4</cantidad_jugadores>
     <escenarios>
         <nivel1>
             <height>600</height>
@@ -543,4 +543,26 @@
             </plataforma>
         </nivel3>
     </escenarios>
+    <usuarios>
+        <usuario>
+            <nombre>pepe</nombre>
+            <password>pepe</password>
+        </usuario>
+        <usuario>
+            <nombre>sarasa</nombre>
+            <password>sarasa</password>
+        </usuario>
+        <usuario>
+            <nombre>falopa</nombre>
+            <password>falopa</password>
+        </usuario>
+        <usuario>
+            <nombre>fafaa</nombre>
+            <password>fafaa</password>
+        </usuario>
+        <usuario>
+            <nombre>contra</nombre>
+            <password>contra</password>
+        </usuario>
+    </usuarios>
 </configuracion>

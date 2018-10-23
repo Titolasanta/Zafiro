@@ -18,8 +18,8 @@ SDL_Rect* Sprite::getFaceDown() {
 }
 
 Sprite::Sprite()
-: frameMoviemiento { {{1*2,43*2,16*2,35*2}, //Corriendo hacia adelante
-                      {18*2,43*2,19*2,35*2}, //(segunda linea sprite sheet)
+: frameMoviemiento { {{2,86,32,70}, //Corriendo hacia adelante
+                      {36,86,38,35*2}, //(segunda linea sprite sheet)
                       {38*2,47*2,20*2,31*2},
                       {59*2,44*2,16*2,34*2},
                       {76*2,44*2,18*2,34*2},

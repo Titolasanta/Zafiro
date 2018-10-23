@@ -8,9 +8,19 @@
 #include "ModelProtocol.h"
 #include "../common/Exception.h"
 #include "Model.h"
+#include "../common/pugixml.hpp"
+#include "../common/Logger.h"
+#include "xmlServer.h"
+
+extern Logger *gplogger;
+extern pugi::xml_document*gXML_doc[2];
+extern pugi::xml_parse_result *gXML_parse_result;
 
 
-Collector::Collector(Socket &skt,std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex),model(model){}
+Collector::Collector(Socket &skt, std::list<ModelProtocol>& list,std::queue<char> &queue,std::mutex &mutex, Model &model) : socket(std::move(skt)),list(list),queue(queue),mutex(mutex),model(model){
+    if (*gXML_parse_result)	cargar_users(*gXML_doc[0], UPlist);
+    else cargar_users(*gXML_doc[1], UPlist);
+}
 
 void Collector::run() {
     std::string aux;

@@ -537,4 +537,26 @@
             </plataforma>
         </nivel3>
     </escenarios>
+    <usuarios>
+        <usuario>
+            <nombre>pepe</nombre>
+            <password>pepe</password>
+        </usuario>
+        <usuario>
+            <nombre>sarasa</nombre>
+            <password>sarasa</password>
+        </usuario>
+        <usuario>
+            <nombre>falopa</nombre>
+            <password>falopa</password>
+        </usuario>
+        <usuario>
+            <nombre>fafaa</nombre>
+            <password>fafaa</password>
+        </usuario>
+        <usuario>
+            <nombre>contra</nombre>
+            <password>contra</password>
+        </usuario>
+    </usuarios>
 </configuracion>

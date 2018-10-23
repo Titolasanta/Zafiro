@@ -12,5 +12,6 @@
 
 void cargar_plataformas(pugi::xml_document &doc, Scene& scene, Model &modelo, int level, int limite_vertical, int limite_horizontal);
 
+void cargar_users(pugi::xml_document &doc, std::list<std::string>);
 
 #endif //TP_FASE1_TEST_XMLSERVER_H

@@ -7,7 +7,10 @@
 #include "Sprite.h"
 #include "../common/Logger.h"
 
-#define SPRITE_PATH "../spirites/sprites.png"
+#define SPRITE_PATH_AZUL "../spirites/spriteazul.png"
+#define SPRITE_PATH_ROJO "../spirites/spriterojo.png"
+#define SPRITE_PATH_VERDE "../spirites/spriteverde.png"
+#define SPRITE_PATH_AMARILLO "../spirites/spriteamarillo.png"
 
 #define characterWidth 20
 
@@ -22,10 +25,10 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     spriteTexture[1] = &spriteTexture1;
     spriteTexture[2] = &spriteTexture2;
     spriteTexture[3] = &spriteTexture3;
-    spriteTexture0.loadFromFile(SPRITE_PATH);
-    spriteTexture1.loadFromFile(SPRITE_PATH);
-    spriteTexture2.loadFromFile(SPRITE_PATH);
-    spriteTexture3.loadFromFile(SPRITE_PATH);
+    spriteTexture0.loadFromFile(SPRITE_PATH_AZUL);
+    spriteTexture1.loadFromFile(SPRITE_PATH_ROJO);
+    spriteTexture2.loadFromFile(SPRITE_PATH_VERDE);
+    spriteTexture3.loadFromFile(SPRITE_PATH_AMARILLO);
     gplogger->log(3,"Se crea SpriteHandler de la vista");
 }
 
