@@ -164,7 +164,7 @@ void Model::update(Scene &scene) {
         scene.setShooting(players[i]->isShooting(), i + 1);
         scene.setCurrentPlayers(currentPlayers);
 
-        if (scene.getLevel() != 2) {
+        /*if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
                 moveCamAdelante++;
         } else {
@@ -186,7 +186,11 @@ void Model::update(Scene &scene) {
             cam->x = XMasChico(scene, players) - MARGENX/3;
         else
             cam->y = YMasGrande(scene, players)- MARGENY/3;
+    }*/
     }
+    
+    placeCamera(scene);
+    
     int velocidad = maxPlayers;
     for(int i = 0; i < maxPlayers; i++)
         velocidad -= jugadorLiseado[i];
@@ -329,4 +333,41 @@ bool Model::getMaxPlayersReached(){
 
 const bool *Model::getJugadorLiseado() const {
     return jugadorLiseado;
+}
+
+void Model::placeCamera(Scene &scene){
+    SDL_Rect* cam = scene.getCamera();
+    int minX = XMasChico(scene,players);
+    int minY = YMasGrande(scene,players);
+
+    for (int i = 0; i < currentPlayers; i++) {
+
+        if (scene.getLevel() != 2) {
+            int playerPosX = players[i]->getPositionX();
+            if (playerPosX > cam->x + MARGENX) {
+                if (minX > cam->x + 50) {
+                    scene.setCameraX(cam->x + 20);
+                } else {
+                    if (players[i]->getPositionX() > 770 + cam->x) {
+                        players[i]->setPositionX(770 + cam->x);
+                        players[i]->setVelocityX(0);
+                    }
+
+
+                }
+            }
+        }else {
+            int playerPosY = players[i]->getPositionY();
+            if (playerPosY < cam->y + 100) {
+                if (minY < cam->y + 550) {
+                    scene.setCameraY(cam->y - 20);
+                } else {
+                    if (players[i]->getPositionY() < cam->y + 50) {
+                        players[i]->setPositionY(cam->y + 50);
+                        players[i]->setVelocityY(0);
+                    }
+                }
+            }
+        }
+    }
 }
