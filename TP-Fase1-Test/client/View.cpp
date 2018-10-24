@@ -33,10 +33,10 @@ pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTextu
     msg = "Ingrese sus datos";
     insert1.loadFromRenderedText(msg);
 
-    msg = "esc para resetear los datos ingresados";
+    msg = "Pulse esc para resetear los datos ingresados";
     insert2.loadFromRenderedText(msg);
 
-    std::string windowName("juego");
+    std::string windowName("Contra");
     gplogger->log(3,"Se crea un View");
 
 }
@@ -142,7 +142,7 @@ void View::fullHouseMesage() {
 void View::invalidLoginMesage() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("Error al loggear al juego.");
+    std::string msg("Error al conectarse al juego.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();
@@ -152,7 +152,7 @@ void View::invalidLoginMesage() {
 void View::conexionFail() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("El servidor se callo.");
+    std::string msg("El servidor se cayó.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();
@@ -162,7 +162,7 @@ void View::conexionFail() {
 void View::conexionDown() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("El servidor no se encontro.");
+    std::string msg("No se encontró el servidor.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();

@@ -15,5 +15,7 @@ const char* get_level_background_path(pugi::xml_document& doc, pugi::xml_documen
 std::string get_error_message(const char*, const char* path, int pos, const char* description);
 int get_cantidad_jugadores(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result);
 void cargar_plataformas(pugi::xml_document &doc,Scene& scene, int level, int limite_vertical, int limite_horizontal);
+const char* get_port(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result);
+const char* get_ip(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result);
 
 #endif //TP_FASE1_TEST_XML_H

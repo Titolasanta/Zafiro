@@ -69,7 +69,7 @@ int main( int argc, char* argv[] )
     gXML_parse_result = &result;
 
     char id = 0;
-    char port[5] = "8081";
+    const char* port = get_port(doc, doc_default, result);
     View view(SCREEN_WIDTH, SCREEN_HEIGHT);
 
     try {

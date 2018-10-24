@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 
 
 	try {
-	    char port[5] = "8081";
+	    const char* port = get_port(doc, doc_default, result);
 		Socket skt(port, 0);
 		skt.start_to_listen();
 

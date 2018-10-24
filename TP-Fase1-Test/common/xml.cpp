@@ -122,3 +122,21 @@ int get_cantidad_jugadores(pugi::xml_document &doc, pugi::xml_document &doc_defa
     }
     return doc_default.first_child().child("cantidad_jugadores").first_child().text().as_int();
 }
+
+const char* get_port(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result){
+    const char* original;
+    if (result){
+        original = doc.first_child().child("port").first_child().text().as_string();
+        if(original) return original;
+    }
+    return doc_default.first_child().child("port").first_child().text().as_string();
+}
+
+const char* get_ip(pugi::xml_document &doc, pugi::xml_document &doc_default, pugi::xml_parse_result result){
+    const char* original;
+    if (result){
+        original = doc.first_child().child("ip").first_child().text().as_string();
+        if(original) return original;
+    }
+    return doc_default.first_child().child("ip").first_child().text().as_string();
+}
