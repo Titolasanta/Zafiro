@@ -66,6 +66,11 @@ void SpriteHandler::render(Scene &scene, int cameraX, int cameraY) {
         if (scene.isAirborne(i+1)) {
             currentClip = spritePositionHandler.move(2, currentFrame[i+1] % 4);
         }
+        
+        if (scene.isJugadorLiseado(i + 1)){
+            currentClip = spritePositionHandler.getGrisado();
+        }
+        
        // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
         spriteTexture[i]->render(scene.getPositionX(i+1) - cameraX - characterWidth / 2, scene.getPositionY(i+1) - cameraY,
                              currentClip, angle);

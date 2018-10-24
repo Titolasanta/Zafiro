@@ -108,6 +108,7 @@ void ViewProtocol::update(Scene& scene){
        scene.setDead(receiveNumber(socket), i + 1);
        scene.setShooting(receiveNumber(socket), i + 1);
        scene.setAimDirection(receiveNumber(socket), i + 1);
+       scene.setJugadorLiseado((bool)receiveNumber(socket), i + 1);
    }
     scene.setCameraX(receiveNumber(socket));
     scene.setCameraY(receiveNumber(socket));

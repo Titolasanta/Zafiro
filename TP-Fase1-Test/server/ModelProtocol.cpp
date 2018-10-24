@@ -75,6 +75,7 @@ void ModelProtocol::send(Scene& scene){
             sendValue(skt, scene.isDead(i + 1));
             sendValue(skt, scene.isShooting(i + 1));
             sendValue(skt, scene.getAimDirection(i + 1));
+            sendValue(skt, scene.isJugadorLiseado(i + 1));
 
         }
         sendValue(skt, scene.getCamera()->x);

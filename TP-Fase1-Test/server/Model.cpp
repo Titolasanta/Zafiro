@@ -44,7 +44,6 @@ Model::Model(int initialLevel) : level(initialLevel) {
 }
 
 void Model::rejoinCharacter(int id){
-    players[id-1]->jump(1);
     jugadorLiseado[id-1] = false;
 }
 
@@ -81,7 +80,7 @@ int Model::getCurrentPlayers(){
     return currentPlayers;
 }
 
-void Model::time(Scene& scene){
+void Model::time(){
     int velocidad = maxPlayers;
     for(int i = 0; i < maxPlayers; i++)
         velocidad -= jugadorLiseado[i];
@@ -90,29 +89,29 @@ void Model::time(Scene& scene){
             players[i]->time(velocidad);
             CollisionHard(*players[i], lPlataformsHard);
             CollisionSoft(*players[i], lPlataformsSoft);
-        } else{
-            SDL_Rect *cam = scene.getCamera();
-            players[i]->setPositionX(cam->x + 50);
-            players[i]->setPositionY((cam->y)+500);
-        }
+        } else{}
       //      players[i]->freeze();
     }
 }
 
-int XMasChico(Scene scene,Character** lp, const bool* const liseados){
+int Model::XMasChico(Scene &scene){
     int min = 100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if(min > lp[i]->getPositionX() && !liseados[i])
-            min = lp[i]->getPositionX();
+        if (!jugadorLiseado[i]) {
+            if (min > players[i]->getPositionX())
+                min = players[i]->getPositionX();
+        }
     }
     return min;
 }
 
-int YMasGrande(Scene scene,Character** lp,const bool* const liseados){
+int Model::YMasGrande(Scene &scene){
     int min = -1000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if(min < lp[i]->getPositionY() && !liseados[i])
-            min = lp[i]->getPositionY();
+        if (!jugadorLiseado[i]){
+            if (min < players[i]->getPositionY())
+                min = players[i]->getPositionY();
+        }
     }
     return min;
 }
@@ -123,14 +122,14 @@ void Model::update(Scene &scene) {
     std::lock_guard<std::mutex> mute(mutex);
     
     
-    this->time(scene);
+    this->time();
 
     SDL_Rect* cam = scene.getCamera();
 
     std::list<std::tuple<int,int>> lTemp;
 
-    int moveCamAtras = 0;
-    int moveCamAdelante = 0;
+    //int moveCamAtras = 0;
+    //int moveCamAdelante = 0;
     
     for (int i = 0; i < currentPlayers; i++) {
 
@@ -142,7 +141,6 @@ void Model::update(Scene &scene) {
         if(players[i]->getPositionY() > 600 + cam->y) {
             players[i]->spawn(*cam);
         }
-
 
         if(level.getLevel() != 2){
             if (players[i]->getPositionY() < -5 + cam->y) {
@@ -168,6 +166,7 @@ void Model::update(Scene &scene) {
         scene.setWalking(players[i]->isWalking(), i + 1);
         scene.setShooting(players[i]->isShooting(), i + 1);
         scene.setCurrentPlayers(currentPlayers);
+        scene.setJugadorLiseado(jugadorLiseado[i],i + 1);
 
         /*if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
@@ -193,8 +192,9 @@ void Model::update(Scene &scene) {
             cam->y = YMasGrande(scene, players)- MARGENY/3;
     }*/
     }
+    
     placeCamera(scene);
-
+    
     int velocidad = maxPlayers;
     for(int i = 0; i < maxPlayers; i++)
         velocidad -= jugadorLiseado[i];
@@ -341,35 +341,35 @@ const bool *Model::getJugadorLiseado() const {
 
 void Model::placeCamera(Scene &scene){
     SDL_Rect* cam = scene.getCamera();
-    int minX = XMasChico(scene,players, jugadorLiseado);
-    int minY = YMasGrande(scene,players, jugadorLiseado);
+    int minX = XMasChico(scene);
+    int minY = YMasGrande(scene);
 
     for (int i = 0; i < currentPlayers; i++) {
-        if (!jugadorLiseado[i]) {
-            if (scene.getLevel() != 2) {
-                int playerPosX = players[i]->getPositionX();
-                if (playerPosX > cam->x + MARGENX) {
-                    if (minX > cam->x + 50 && maxPlayers == currentPlayers) {
-                        scene.setCameraX(cam->x + 20);
-                    } else {
-                        if (players[i]->getPositionX() > 770 + cam->x) {
-                            players[i]->setPositionX(770 + cam->x);
-                            players[i]->setVelocityX(0);
-                        }
+        if (jugadorLiseado[i]) continue;
 
-
+        if (scene.getLevel() != 2) {
+            int playerPosX = players[i]->getPositionX();
+            if (playerPosX > cam->x + MARGENX) {
+                if (minX > cam->x + 50) {
+                    scene.setCameraX(cam->x + 20);
+                } else {
+                    if (players[i]->getPositionX() > 770 + cam->x) {
+                        players[i]->setPositionX(770 + cam->x);
+                        players[i]->setVelocityX(0);
                     }
+
+
                 }
-            } else {
-                int playerPosY = players[i]->getPositionY();
-                if (playerPosY < cam->y + 100) {
-                    if (minY < cam->y + 550 && maxPlayers == currentPlayers) {
-                        scene.setCameraY(cam->y - 20);
-                    } else {
-                        if (players[i]->getPositionY() < cam->y + 50) {
-                            players[i]->setPositionY(cam->y + 50);
-                            players[i]->setVelocityY(0);
-                        }
+            }
+        }else {
+            int playerPosY = players[i]->getPositionY();
+            if (playerPosY < cam->y + 100) {
+                if (minY < cam->y + 550) {
+                    scene.setCameraY(cam->y - 20);
+                } else {
+                    if (players[i]->getPositionY() < cam->y + 50) {
+                        players[i]->setPositionY(cam->y + 50);
+                        players[i]->setVelocityY(0);
                     }
                 }
             }
