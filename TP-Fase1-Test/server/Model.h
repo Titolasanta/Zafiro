@@ -66,6 +66,8 @@ private:
         bool getMaxPlayersReached();
         void rejoinCharacter(int id);
         void placeCamera(Scene&);
+        int XMasChico(Scene&);
+        int YMasGrande(Scene&);
 };
 
 

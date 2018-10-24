@@ -94,20 +94,24 @@ void Model::time(){
     }
 }
 
-int XMasChico(Scene scene,Character** lp){
+int Model::XMasChico(Scene &scene){
     int min = 100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if(min > lp[i]->getPositionX())
-            min = lp[i]->getPositionX();
+        if (!jugadorLiseado[i]) {
+            if (min > players[i]->getPositionX())
+                min = players[i]->getPositionX();
+        }
     }
     return min;
 }
 
-int YMasGrande(Scene scene,Character** lp){
+int Model::YMasGrande(Scene &scene){
     int min = -1000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if(min < lp[i]->getPositionY())
-            min = lp[i]->getPositionY();
+        if (!jugadorLiseado[i]){
+            if (min < players[i]->getPositionY())
+                min = players[i]->getPositionY();
+        }
     }
     return min;
 }
@@ -124,8 +128,8 @@ void Model::update(Scene &scene) {
 
     std::list<std::tuple<int,int>> lTemp;
 
-    int moveCamAtras = 0;
-    int moveCamAdelante = 0;
+    //int moveCamAtras = 0;
+    //int moveCamAdelante = 0;
     
     for (int i = 0; i < currentPlayers; i++) {
 
@@ -137,7 +141,6 @@ void Model::update(Scene &scene) {
         if(players[i]->getPositionY() > 600 + cam->y) {
             players[i]->spawn(*cam);
         }
-
 
         if(level.getLevel() != 2){
             if (players[i]->getPositionY() < -5 + cam->y) {
@@ -337,11 +340,11 @@ const bool *Model::getJugadorLiseado() const {
 
 void Model::placeCamera(Scene &scene){
     SDL_Rect* cam = scene.getCamera();
-    int minX = XMasChico(scene,players);
-    int minY = YMasGrande(scene,players);
+    int minX = XMasChico(scene);
+    int minY = YMasGrande(scene);
 
     for (int i = 0; i < currentPlayers; i++) {
-        //if (jugadorLiseado[i]) continue;
+        if (jugadorLiseado[i]) continue;
 
         if (scene.getLevel() != 2) {
             int playerPosX = players[i]->getPositionX();
