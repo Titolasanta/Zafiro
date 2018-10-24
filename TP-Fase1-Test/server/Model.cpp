@@ -106,7 +106,7 @@ int Model::XMasChico(Scene &scene){
 }
 
 int Model::YMasGrande(Scene &scene){
-    int min = -1000;
+    int min = -100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
         if (!jugadorLiseado[i]){
             if (min < players[i]->getPositionY())
@@ -350,7 +350,7 @@ void Model::placeCamera(Scene &scene){
         if (scene.getLevel() != 2) {
             int playerPosX = players[i]->getPositionX();
             if (playerPosX > cam->x + MARGENX) {
-                if (minX > cam->x + 50) {
+                if (minX > cam->x + 50 && currentPlayers == maxPlayers) {
                     scene.setCameraX(cam->x + 20);
                 } else {
                     if (players[i]->getPositionX() > 770 + cam->x) {
@@ -363,8 +363,8 @@ void Model::placeCamera(Scene &scene){
             }
         }else {
             int playerPosY = players[i]->getPositionY();
-            if (playerPosY < cam->y + 100) {
-                if (minY < cam->y + 550) {
+            if (playerPosY < cam->y + 300) {
+                if (minY < cam->y + 550 && currentPlayers == maxPlayers) {
                     scene.setCameraY(cam->y - 20);
                 } else {
                     if (players[i]->getPositionY() < cam->y + 50) {

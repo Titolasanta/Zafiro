@@ -3,7 +3,7 @@
     <debug>
         <level>INFO</level>
     </debug>
-    <cantidad_jugadores>3</cantidad_jugadores>
+    <cantidad_jugadores>1</cantidad_jugadores>
     <ip></ip>
     <port>8081</port>
     <escenarios>
