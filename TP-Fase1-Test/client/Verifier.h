@@ -17,7 +17,7 @@ public:
     void show();
     bool processEvent(SDL_Event);
     Verifier(View& view, Socket& skt);
-
+    bool resetData();
     bool readChar(SDL_Event);
     bool nextValidation();
     void unsuccessfulValidation();

@@ -65,6 +65,7 @@ char identifyChar(SDL_Event e){
     if (e.key.keysym.sym == SDLK_x) return 'x';
     if (e.key.keysym.sym == SDLK_y) return 'y';
     if (e.key.keysym.sym == SDLK_z) return 'z';
+    if (e.key.keysym.sym == SDLK_ESCAPE) return '?';
     if (e.key.keysym.sym == SDLK_RETURN) return '\n';
     return 0;
 }
@@ -80,9 +81,19 @@ bool Verifier::nextValidation() {
     }
 }
 
+bool Verifier::resetData() {
+    UvalidationData.clear();
+    PvalidationData.clear();
+    onPass = false;
+    return false;
+}
+
 bool Verifier::readChar(SDL_Event e) {
     char c = identifyChar(e);
     if(c != 0){
+        if(c == '?'){
+            return this->resetData();
+        }
         if(c == '\n') {
             return this->nextValidation();
         }

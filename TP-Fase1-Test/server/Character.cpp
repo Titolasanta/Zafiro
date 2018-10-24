@@ -173,7 +173,7 @@ void Character::goThroughPlatform(){
 
 void Character::spawn(SDL_Rect cam) {
 
-    positionY = cam.y + 300;
+    positionY = cam.y + 310;
     positionX = cam.x + 200;
     velocityY = 0;
     velocityX = 0;
