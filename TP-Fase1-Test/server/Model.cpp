@@ -166,6 +166,7 @@ void Model::update(Scene &scene) {
         scene.setWalking(players[i]->isWalking(), i + 1);
         scene.setShooting(players[i]->isShooting(), i + 1);
         scene.setCurrentPlayers(currentPlayers);
+        scene.setJugadorLiseado(jugadorLiseado[i],i + 1);
 
         /*if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
