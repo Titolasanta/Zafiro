@@ -142,9 +142,9 @@ void View::fullHouseMesage() {
 void View::invalidLoginMesage() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("Error al conectarse al juego.");
+    std::string msg("Error, su usuario es invalido o ya esta en uso.");
     txt.loadFromRenderedText(msg);
-    txt.render(200, 250);
+    txt.render(100, 250);
     window.updateRenderer();
     usleep(4000000);
 }
@@ -167,4 +167,12 @@ void View::conexionDown() {
     txt.render(200, 250);
     window.updateRenderer();
     usleep(4000000);
+}
+void View::waiting() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("El servidor esta ocupado, aguarde su turno.");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
 }

@@ -32,6 +32,7 @@ public:
     void invalidLoginMesage();
     void conexionFail();
     void conexionDown();
+    void waiting();
 private:
     int id;
     SdlImgInit z;

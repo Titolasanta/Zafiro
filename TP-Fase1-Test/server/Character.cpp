@@ -46,7 +46,7 @@ void Character::land(int x, int y,int w,bool hard) {
 
 void Character::time(int currentPlayers) {
 
-    timeTillNextShoot--;
+    timeTillNextShoot-=(12/currentPlayers);
     if(timeTillNextShoot < 0){
         timeTillNextShoot = 0;
         setShooting(false);
@@ -173,7 +173,7 @@ void Character::goThroughPlatform(){
 
 void Character::spawn(SDL_Rect cam) {
 
-    positionY = cam.y -300;
+    positionY = cam.y + 300;
     positionX = cam.x;
     velocityY = 0;
     velocityX = 0;

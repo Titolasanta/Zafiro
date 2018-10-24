@@ -2,6 +2,7 @@
 #include "Thread.h"
 #include <list>
 #include <zconf.h>
+#include <iostream>
 #include "Collector.h"
 #include "Joiner.h"
 #include "../common/Socket.h"
@@ -28,17 +29,23 @@ void Collector::run() {
     char id = 0;
     try {
         while(must_continue) {
-            Socket skt2 = socket.accept_connection();
 
+            Socket skt2 = socket.accept_connection();
+            skt2.send_all(&id,1); //ignorar, solo sirve pa q no empiezen 2 clientes a la vez
             char c;
+            bool validUP = false;
             skt2.receive_all(&c,1);
             std::string msg;
             skt2.receive_all(msg,c);
-
+            for(auto it = UPlist.begin(); it != UPlist.end();it++){
+                if(*it == msg){
+                    validUP = true;
+                }
+            }
             auto it = hash.find(msg);
-            if(it != hash.end()){ //check esta?
+            if(it != hash.end() || !validUP){ //check esta?
                 id = it->second;
-                if(!model.getJugadorLiseado()[id-1]){ //esta conectado?
+                if(!model.getJugadorLiseado()[id-1] || !validUP){ //esta conectado?
                     c = 1;
                     skt2.send_all(&c, 1);
                     usleep(60000);

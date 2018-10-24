@@ -2,6 +2,7 @@
 // Created by tito on 11/10/18.
 //
 
+#include <iostream>
 #include "xmlServer.h"
 #include "../common/Logger.h"
 
@@ -39,7 +40,7 @@ void cargar_plataformas(pugi::xml_document &doc,Scene& scene, Model &modelo, int
 
 }
 
-void cargar_users(pugi::xml_document &doc, std::list<std::string> lista){
+void cargar_users(pugi::xml_document &doc, std::list<std::string> &lista){
     gplogger->log(3, "Se cargan los datos de usuario y contraseña del xml");
     pugi::xml_node usuarios = doc.first_child().child("usuarios");
     for(pugi::xml_node usuario = usuarios.child("usuario"); usuario; usuario = usuario.next_sibling("usuario")){
@@ -47,5 +48,6 @@ void cargar_users(pugi::xml_document &doc, std::list<std::string> lista){
         aux.append("\n");
         aux.append(usuario.child("password").first_child().text().as_string());
         lista.push_back(std::move(aux));
+
     }
 }

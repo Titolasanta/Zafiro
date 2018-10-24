@@ -75,9 +75,18 @@ int main( int argc, char* argv[] )
     try {
         Socket skt(port, "127.0.0.1");
 
+        view.waiting();
+        
+        skt.receive_all(&id, 1); //verifica que el server le de bola
+        
         Verifier verifier(view,skt);
         SDL_Event e;
-
+        
+        //limpio eventos de mientras esperaba q me d bola el server
+        while (SDL_PollEvent(&e) != 0){
+            if (e.type == SDL_QUIT) { throw Quit(); }
+        }
+        
         bool quit = false;
         while (!quit) {
             while (SDL_PollEvent(&e) != 0) {

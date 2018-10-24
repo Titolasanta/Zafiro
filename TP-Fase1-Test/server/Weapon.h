@@ -13,7 +13,7 @@ class Weapon {
     protected:
         int maxAmmo;
         int currentAmmo = maxAmmo;
-        int fireRate = 5;
+        int fireRate = 5 * 12;
 public:
     int getFireRate() const;
 

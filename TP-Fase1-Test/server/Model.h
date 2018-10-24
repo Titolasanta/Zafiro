@@ -49,7 +49,7 @@ private:
         void aimUp(int);
         void stop(int);
         void jump(int);
-        void time();
+        void time(Scene &scene);
         bool endOfLevel(Scene&);
         std::list<std::tuple<int,int,int>> lPlataformsSoft;
         std::list<std::tuple<int,int,int>> lPlataformsHard;
