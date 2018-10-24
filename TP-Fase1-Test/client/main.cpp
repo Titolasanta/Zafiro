@@ -74,6 +74,7 @@ int main( int argc, char* argv[] )
 
     try {
         Socket skt(port, get_ip(doc, doc_default, result));
+        Socket sktAux(port, get_ip(doc, doc_default, result));
 
         view.waiting();
         
@@ -100,7 +101,7 @@ int main( int argc, char* argv[] )
 
         skt.receive_all(&id, 1);
         view.setId(id);
-        Controller controller(view, skt);
+        Controller controller(view, skt,sktAux);
 
         controller.startGame();
         

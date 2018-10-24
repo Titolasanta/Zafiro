@@ -15,7 +15,7 @@ extern pugi::xml_document*gXML_doc[2];
 extern pugi::xml_parse_result *gXML_parse_result;
 
 
-Controller::Controller(View &view, Socket& skt) : view(view),protocol(skt), scene(get_cantidad_jugadores(*gXML_doc[0], *gXML_doc[1], *gXML_parse_result)){
+Controller::Controller(View &view, Socket& skt,Socket& sktAux) : sktAux(std::move(sktAux)),view(view),protocol(skt), scene(get_cantidad_jugadores(*gXML_doc[0], *gXML_doc[1], *gXML_parse_result)){
     int lh = get_level_height( *gXML_doc[0], *gXML_doc[1], 1, *gXML_parse_result);
     int lw = get_level_width( *gXML_doc[0], *gXML_doc[1], 1, *gXML_parse_result);
     if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, 1, lh, lw);
@@ -58,6 +58,7 @@ void Controller::processEvent(SDL_Event e) {
 }
 
 void Controller::show() {
+    sktAux.send_all("1",1);
     protocol.update(scene);
     view.render(scene);
 }

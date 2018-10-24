@@ -12,7 +12,7 @@
 
 class ModelProtocol : public Thread {
 public:
-    ModelProtocol(Socket& ,std::queue<char>& ,char id, std::mutex& mutex);
+    ModelProtocol(Socket& ,Socket& ,std::queue<char>& ,char id, std::mutex& mutex);
     void run() override;
     void end();
     void send(Scene& scene);
@@ -23,6 +23,7 @@ public:
     ~ModelProtocol();
 private:
     Socket skt;
+    Socket sktAux;
     char id;
 public:
     char getId() const;

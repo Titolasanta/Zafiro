@@ -10,8 +10,8 @@
 #include "ModelProtocol.h"
 #include "../common/Exception.h"
 
-ModelProtocol::ModelProtocol(Socket &skt,std::queue<char>& queue,char id,std::mutex& mutex)
-:skt(std::move(skt)),queue(queue),id(id),mutex(mutex){}
+ModelProtocol::ModelProtocol(Socket &skt,Socket &sktAux, std::queue<char>& queue,char id,std::mutex& mutex)
+:skt(std::move(skt)),sktAux(std::move(sktAux)),queue(queue),id(id),mutex(mutex){}
 
 void sendValue(Socket& skt, int value){
     unsigned int to_send = value;
@@ -44,7 +44,7 @@ void ModelProtocol::end(){
 }
 
 
-ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue) {
+ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),sktAux(std::move(other.sktAux)),mutex(other.mutex),queue(other.queue) {
     printf("lo hice 1 vaez\n");
     this->thread = std::move(other.thread);
     this->id = other.id;
@@ -62,6 +62,7 @@ void ModelProtocol::send(Scene& scene){
         }
         sendValue(skt, -1);
         for (int i = 0; i < p; i++) {
+            sktAux.send_all("1",1);
             //std::list<std::tuple<int,int>> lBullets;
             sendValue(skt, scene.getPositionX(i + 1));
             sendValue(skt, scene.getPositionY(i + 1));

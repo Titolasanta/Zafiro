@@ -285,7 +285,7 @@ void Model::stand(int p) {
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
-    if(level.getLevel() > 2){
+    if(level.getLevel() > 3){
         scene.setVictory(true);
     }else{
         this->level = level;
