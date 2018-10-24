@@ -4,7 +4,7 @@
 #include <list>
 #include "CommandFactory.h"
 #include "Colector.h"
-#include "HelloThread/common/Exception.h"
+#include "../../../TP-Fase1-Test/common/Exception.h"
 #include "Joiner.h"
 #include "Monitor.h"
 

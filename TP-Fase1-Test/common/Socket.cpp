@@ -15,6 +15,7 @@
 #include <utility>
 #include <iostream>
 #define SIZE_ARBITRARIO 255
+#include <netinet/tcp.h>
 
 using std::string;
 static int connect_socket(int skt, struct addrinfo* ptr) {
@@ -73,8 +74,12 @@ Socket::Socket(const char* port, const char* ip) {
 				in_connection = (error != -1);
 			} else {
 				val = 1;
-				s = setsockopt(skt, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
-				if (s == -1) {
+                s = setsockopt(skt, SOL_SOCKET, SO_KEEPALIVE, &val, sizeof(val));
+                s = setsockopt(skt, SOL_SOCKET, TCP_KEEPIDLE, &val, sizeof(val));
+                s = setsockopt(skt, SOL_SOCKET, TCP_KEEPINTVL, &val, sizeof(val));
+                s = setsockopt(skt, SOL_SOCKET, TCP_KEEPCNT, &val, sizeof(val));
+                s = setsockopt(skt, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
+                if (s == -1) {
 					freeaddrinfo(received);
 					close(skt);
 					throw OSError("Error al intentar setear el socket:");
@@ -166,7 +171,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 
 	bool valid_socket = true;	
 	while (size_sent < len && valid_socket) {
-		temp = send(skt_id, &msg[size_sent], len - size_sent, 0);
+		temp = send(skt_id, &msg[size_sent], len - size_sent, MSG_NOSIGNAL);
 		if (temp <= 0)
 			valid_socket = false;		
 		else
@@ -205,7 +210,7 @@ ssize_t Socket::receive_all(string& str, size_t len){
 
 void Socket::flush(){
 	char aux[1000];
-	recv(skt_id, aux, 1000, 0);
+	recv(skt_id, aux, 1000, MSG_DONTWAIT);
 }
 
 

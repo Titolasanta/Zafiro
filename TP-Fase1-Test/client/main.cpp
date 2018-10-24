@@ -74,10 +74,10 @@ int main( int argc, char* argv[] )
 
     try {
         Socket skt(port, get_ip(doc, doc_default, result));
-
-        Socket sktAux(port, get_ip(doc, doc_default, result));
-        lifeSupport ls(sktAux);
-        ls.start();
+        bool quit = false;
+       // Socket sktAux(port, get_ip(doc, doc_default, result));
+        //lifeSupport ls(sktAux,quit);
+        //ls.start();
 
         view.waiting();
         
@@ -90,8 +90,7 @@ int main( int argc, char* argv[] )
         while (SDL_PollEvent(&e) != 0){
             if (e.type == SDL_QUIT) { throw Quit(); }
         }
-        
-        bool quit = false;
+
         while (!quit) {
             while (SDL_PollEvent(&e) != 0) {
                 quit = verifier.processEvent(e);

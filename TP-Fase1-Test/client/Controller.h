@@ -14,7 +14,7 @@ class Controller {
 public:
     void show();
     void processEvent(SDL_Event);
-    Controller(View& view, Socket& skt,Socket& sktAux);
+    Controller(View& view, Socket& skt);
     void startGame();
 
     void readChar(SDL_Event);
@@ -23,7 +23,6 @@ public:
 
 private:
     View& view;
-    Socket sktAux;
     ViewProtocol protocol;
     Scene scene;
     bool validated = false;

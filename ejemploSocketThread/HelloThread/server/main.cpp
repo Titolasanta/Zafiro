@@ -2,7 +2,7 @@
 
 #include "HelloSocket/common/Socket.h"
 #include <stdio.h>
-#include "HelloThread/common/Exception.h"
+#include "../../../TP-Fase1-Test/common/Exception.h"
 #include "Comandos.h"
 #include <string>
 #include "CommandFactory.h"

@@ -11,10 +11,11 @@
 
 class lifeSupport : public Thread{
 public:
-    lifeSupport(Socket& skt);
+    lifeSupport(Socket& skt,bool& quit);
     virtual void run();
 private:
     Socket skt;
+    bool& quit;
 };
 
 
