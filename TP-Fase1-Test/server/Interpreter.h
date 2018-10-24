@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_INTERPRETER_H
 
 
-#include "Thread.h"
+#include "../common/Thread.h"
 #include "../common/Scene.h"
 #include "Model.h"
 #include "ModelProtocol.h"

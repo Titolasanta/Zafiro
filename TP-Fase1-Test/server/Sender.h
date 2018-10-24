@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_SENDER_H
 
 
-#include "Thread.h"
+#include "../common/Thread.h"
 #include "ModelProtocol.h"
 #include "Model.h"
 

@@ -32,7 +32,7 @@ file(GLOB tclient_SRC
         )
 
 set(tSOURCE_FILES_S ${tserver_SRC} server/Interpreter.cpp server/Interpreter.h server/Sender.cpp server/Sender.h server/xmlServer.cpp server/xmlServer.h)
-set(tSOURCE_FILES_C ${tclient_SRC} client/FullHouse.cpp client/FullHouse.h client/Verifier.cpp client/Verifier.h client/InvalidLogin.cpp client/InvalidLogin.h client/Quit.cpp client/Quit.h)
+set(tSOURCE_FILES_C ${tclient_SRC} client/FullHouse.cpp client/FullHouse.h client/Verifier.cpp client/Verifier.h client/InvalidLogin.cpp client/InvalidLogin.h client/Quit.cpp client/Quit.h client/lifeSupport.cpp client/lifeSupport.h)
 
 
 add_executable(tServer ${tSOURCE_FILES_S})

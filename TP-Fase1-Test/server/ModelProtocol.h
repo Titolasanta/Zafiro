@@ -7,7 +7,7 @@
 #include <queue>
 #include "../common/Socket.h"
 #include <mutex>
-#include "Thread.h"
+#include "../common/Thread.h"
 #include "../common/Scene.h"
 
 class ModelProtocol : public Thread {

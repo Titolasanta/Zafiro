@@ -22,8 +22,8 @@
 #include "Verifier.h"
 #include "InvalidLogin.h"
 #include "Quit.h"
+#include "lifeSupport.h"
 
-#define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 #define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
 #define PATH_XML_DEFAULT "../Archivos/default.xml"
 
@@ -74,7 +74,10 @@ int main( int argc, char* argv[] )
 
     try {
         Socket skt(port, get_ip(doc, doc_default, result));
+
         Socket sktAux(port, get_ip(doc, doc_default, result));
+        lifeSupport ls(sktAux);
+        ls.start();
 
         view.waiting();
         

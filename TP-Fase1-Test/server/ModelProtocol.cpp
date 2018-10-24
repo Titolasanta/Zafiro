@@ -62,6 +62,7 @@ void ModelProtocol::send(Scene& scene){
         }
         sendValue(skt, -1);
         for (int i = 0; i < p; i++) {
+            sktAux.flush();
             sktAux.send_all("1",1);
             //std::list<std::tuple<int,int>> lBullets;
             sendValue(skt, scene.getPositionX(i + 1));

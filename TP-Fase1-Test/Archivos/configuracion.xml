@@ -4,7 +4,7 @@
         <level>Error</level>
     </debug>
     <cantidad_jugadores>2</cantidad_jugadores>
-    <ip>127.0.0.1</ip>
+    <ip>10.42.0.65</ip>
     <port>8081</port>
     <escenarios>
         <nivel1>

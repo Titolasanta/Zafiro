@@ -145,7 +145,7 @@ ssize_t Socket::receive_all(char* msg, int len) {
 	ssize_t temp = 1;
 	ssize_t amount_received = 0;
 	while (valid_socket && amount_received < len) { 
-		temp = recv(skt_id, &msg[amount_received], len-amount_received, MSG_NOSIGNAL);
+		temp = recv(skt_id, &msg[amount_received], len-amount_received, 0);
 		if (temp <= 0) 	
 			valid_socket = false;
 		else
@@ -166,7 +166,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 
 	bool valid_socket = true;	
 	while (size_sent < len && valid_socket) {
-		temp = send(skt_id, &msg[size_sent], len - size_sent, MSG_NOSIGNAL);
+		temp = send(skt_id, &msg[size_sent], len - size_sent, 0);
 		if (temp <= 0)
 			valid_socket = false;		
 		else
@@ -203,6 +203,10 @@ ssize_t Socket::receive_all(string& str, size_t len){
 	return leidoTotal;
 }
 
+void Socket::flush(){
+	char aux[1000];
+	recv(skt_id, aux, 1000, 0);
+}
 
 
 

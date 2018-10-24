@@ -1,5 +1,5 @@
 
-#include "Thread.h"
+#include "../common/Thread.h"
 #include <list>
 #include <zconf.h>
 #include <iostream>

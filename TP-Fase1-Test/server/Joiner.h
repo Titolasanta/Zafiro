@@ -3,7 +3,7 @@
 #define SERVER_JOINER
 
 #include <list>
-#include "Thread.h"
+#include "../common/Thread.h"
 /*
 class Joiner {
 	public:

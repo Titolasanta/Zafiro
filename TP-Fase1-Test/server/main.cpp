@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string>
 #include <list>
-#include "Thread.h"
+#include "../common/Thread.h"
 #include <iostream>
 #include "Collector.h"
 #include "../common/Socket.h"

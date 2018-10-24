@@ -1,7 +1,7 @@
 #ifndef SERVER_COLECTOR
 #define SERVER_COLECTOR
 
-#include "Thread.h"
+#include "../common/Thread.h"
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
 #include "Model.h"
