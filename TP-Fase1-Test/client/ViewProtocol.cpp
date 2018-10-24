@@ -114,6 +114,7 @@ void ViewProtocol::update(Scene& scene){
     scene.setCameraY(receiveNumber(socket));
     scene.setLevel(receiveNumber(socket));
     scene.setCurrentPlayers(receiveNumber(socket));
+    scene.setVictory(receiveNumber(socket));
 
 
 }

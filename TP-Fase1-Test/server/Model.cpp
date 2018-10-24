@@ -285,26 +285,33 @@ void Model::stand(int p) {
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
+    if(level.getLevel() > 2){
+        scene.setVictory(true);
+    }else{
+        this->level = level;
+        this->lPlataformsSoft.clear();
+        this->lPlataformsHard.clear();
+        scene.clearPlatform();
 
-    this->level = level;
-    this->lPlataformsSoft.clear();
-    this->lPlataformsHard.clear();
-    scene.clearPlatform();
+        if (*gXML_parse_result)
+            cargar_plataformas(*gXML_doc[0], scene, *this, level.getLevel(), this->getLevelHeight(),
+                               this->getLevelWidth());     //No tenia idea de como hacer este
+        else
+            cargar_plataformas(*gXML_doc[1], scene, *this, level.getLevel(), this->getLevelHeight(),
+                               this->getLevelWidth()); //chequeo de otra manera
 
-    if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,*this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth());     //No tenia idea de como hacer este
-    else cargar_plataformas(*gXML_doc[1],scene, *this, level.getLevel(), this->getLevelHeight(), this->getLevelWidth()); //chequeo de otra manera
 
+        //update(scene);
+        scene.setLevel(level.getLevel());
+        scene.getCamera()->x = 0;
+        scene.getCamera()->y = 0;
 
-    //update(scene);
-    scene.setLevel(level.getLevel());
-    scene.getCamera()->x = 0;
-    scene.getCamera()->y = 0;
-
-    for (int i = 0; i < currentPlayers; i++) {
-        players[i]->spawn(*scene.getCamera());
-        players[i]->nextLevel();
+        for (int i = 0; i < currentPlayers; i++) {
+            players[i]->spawn(*scene.getCamera());
+            players[i]->nextLevel();
+        }
+        gplogger->log(2, "Se cambió de nivel");
     }
-    gplogger->log(2, "Se cambió de nivel");
 }
 
 int Model::getLevelWidth() { return level.getWidth(); }

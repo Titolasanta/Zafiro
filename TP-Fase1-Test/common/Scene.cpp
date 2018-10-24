@@ -62,5 +62,13 @@ void Scene::addPlatformMetal(int x, int y, int width) {
     lPlataformsHard.push_back(std::move(std::tuple<int,int,int>(x,y,width)));
 }
 
+bool Scene::isVictory() const {
+    return victory;
+}
+
+void Scene::setVictory(bool victory) {
+    Scene::victory = victory;
+}
+
 
 

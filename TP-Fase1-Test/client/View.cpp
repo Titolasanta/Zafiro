@@ -152,7 +152,7 @@ void View::invalidLoginMesage() {
 void View::conexionFail() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("El servidor se cayó.");
+    std::string msg("El servidor se cayo.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();

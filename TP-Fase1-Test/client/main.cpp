@@ -73,7 +73,7 @@ int main( int argc, char* argv[] )
     View view(SCREEN_WIDTH, SCREEN_HEIGHT);
 
     try {
-        Socket skt(port, "127.0.0.1");
+        Socket skt(port, get_ip(doc, doc_default, result));
 
         view.waiting();
         
@@ -116,10 +116,10 @@ int main( int argc, char* argv[] )
         logger.log(2, "Error al loggear al juego");
     }catch(Quit){
         logger.log(2, "Usuario cerro el juego");
-    }/*catch(...){
+    }catch(...){
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
-    }*/
+    }
 
     logger.log(2, "Se cerró el juego");
     logger.cerrar_archivo();

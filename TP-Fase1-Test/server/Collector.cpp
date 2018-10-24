@@ -34,7 +34,9 @@ void Collector::run() {
             skt2.send_all(&id,1); //ignorar, solo sirve pa q no empiezen 2 clientes a la vez
             char c;
             bool validUP = false;
-            skt2.receive_all(&c,1);
+            try {
+                skt2.receive_all(&c, 1);
+            }catch (Finalizo_conexion){continue;}
             std::string msg;
             skt2.receive_all(msg,c);
             for(auto it = UPlist.begin(); it != UPlist.end();it++){
@@ -48,7 +50,7 @@ void Collector::run() {
                 if(!model.getJugadorLiseado()[id-1] || !validUP){ //esta conectado?
                     c = 1;
                     skt2.send_all(&c, 1);
-                    usleep(60000);
+                    usleep(600000);
                 } else{ //reconectar
                     c = 2;
                     skt2.send_all(&c, 1);
@@ -74,7 +76,7 @@ void Collector::run() {
                 } else {
                     c = 0;
                     skt2.send_all(&c, 1);
-                    usleep(60000);
+                    usleep(600000);
                 }
             }
         }

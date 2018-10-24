@@ -82,6 +82,7 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, scene.getCamera()->y);
         sendValue(skt, scene.getLevel());
         sendValue(skt,scene.getCurrentPlayers());
+        sendValue(skt,scene.isVictory());
 
 }
 

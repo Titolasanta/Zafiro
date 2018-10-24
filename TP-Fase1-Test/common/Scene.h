@@ -42,6 +42,13 @@ private:
     int positionY[4];
     int velocityX[4];
     int velocityY[4];
+    bool victory = false;
+public:
+    bool isVictory() const;
+
+    void setVictory(bool victory);
+
+private:
 //  int accelerationX[4];
 //  int accelerationY[4];
     int hitPoints[4];
