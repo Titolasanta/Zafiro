@@ -142,7 +142,7 @@ void View::fullHouseMesage() {
 void View::invalidLoginMesage() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("Error, su usuario es invalido o ya esta en uso.");
+    std::string msg("El usuario ingresado es invalido o ya esta en uso.");
     txt.loadFromRenderedText(msg);
     txt.render(100, 250);
     window.updateRenderer();
@@ -162,7 +162,7 @@ void View::conexionFail() {
 void View::conexionDown() {
     window.createRectangle(0,1000,0,800);
 
-    std::string msg("No se encontró el servidor.");
+    std::string msg("No se encontro el servidor.");
     txt.loadFromRenderedText(msg);
     txt.render(200, 250);
     window.updateRenderer();

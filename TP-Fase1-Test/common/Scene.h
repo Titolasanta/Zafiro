@@ -59,7 +59,7 @@ private:
     int dead[4];
     int shooting[4];
     int aimDirection[4];
-    bool jugadorLiseado[4];
+    bool jugadorGrisado[4];
 
 /*
     int P1PositionX = 100;
@@ -132,8 +132,8 @@ public:
     
     int getMaxPlayers(){ return MaxPlayers;}
     
-    bool isJugadorLiseado(int p) const { return jugadorLiseado[p-1]; }
-    void setJugadorGrisado(bool b, int p) { jugadorLiseado[p-1] = b; }
+    bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
+    void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
 
 };
 
