@@ -31,7 +31,7 @@ void Collector::run() {
         while(must_continue) {
 
             Socket skt2 = socket.accept_connection();
-            Socket skt3 = socket.accept_connection();
+            //Socket skt3 = socket.accept_connection();
             skt2.send_all(&id,1); //ignorar, solo sirve pa q no empiezen 2 clientes a la vez
             char c;
             bool validUP = false;
@@ -56,7 +56,7 @@ void Collector::run() {
                     c = 2;
                     skt2.send_all(&c, 1);
                     skt2.send_all(&id, 1);
-                    ModelProtocol protocol(skt2,skt3, queue, id, mutex);
+                    ModelProtocol protocol(skt2, queue, id, mutex);
                     model.rejoinCharacter(id);
                     list.push_back(std::move(protocol));
                     list.back().start();
@@ -70,7 +70,7 @@ void Collector::run() {
                     skt2.send_all(&c, 1);
 
                     skt2.send_all(&id, 1);
-                    ModelProtocol protocol(skt2,skt3, queue, id, mutex);
+                    ModelProtocol protocol(skt2, queue, id, mutex);
                     model.createCharacter(id);
                     list.push_back(std::move(protocol));
                     list.back().start();

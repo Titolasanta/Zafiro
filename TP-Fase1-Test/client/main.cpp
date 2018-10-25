@@ -75,7 +75,7 @@ int main( int argc, char* argv[] )
     try {
         Socket skt(port, get_ip(doc, doc_default, result));
         bool quit = false;
-       // Socket sktAux(port, get_ip(doc, doc_default, result));
+        //Socket sktAux(port, get_ip(doc, doc_default, result));
         //lifeSupport ls(sktAux,quit);
         //ls.start();
 
@@ -103,7 +103,7 @@ int main( int argc, char* argv[] )
 
         skt.receive_all(&id, 1);
         view.setId(id);
-        Controller controller(view, skt,sktAux);
+        Controller controller(view, skt);
 
         controller.startGame();
         
@@ -123,7 +123,6 @@ int main( int argc, char* argv[] )
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
     }
-
     logger.log(2, "Se cerró el juego");
     logger.cerrar_archivo();
 

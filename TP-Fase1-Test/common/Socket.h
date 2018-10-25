@@ -26,6 +26,7 @@ class Socket {
 	ssize_t receive_all(std::string&, size_t);
 	ssize_t send_all(const char* msg, int len);
 	ssize_t receive_all(char* msg, int len);
+	bool isValid();
 	void flush();
 };
 

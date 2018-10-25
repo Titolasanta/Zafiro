@@ -3,8 +3,8 @@
     <debug>
         <level>Error</level>
     </debug>
-    <cantidad_jugadores>2</cantidad_jugadores>
-    <ip>10.42.0.65</ip>
+    <cantidad_jugadores>3</cantidad_jugadores>
+    <ip>127.0.0.1</ip>
     <port>8081</port>
     <escenarios>
         <nivel1>
@@ -25,12 +25,7 @@
                 <xf>3500</xf>
                 <y>400</y>
             </plataforma>
-            <plataforma>
-            <tipo>pasto</tipo>
-            <xi>10</xi>
-            <xf>7000</xf>
-            <y>375</y>
-        </plataforma>
+
             <plataforma>
                 <tipo>hielo</tipo>
                 <xi>3200</xi>
