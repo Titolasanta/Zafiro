@@ -48,24 +48,13 @@ RM = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test
+CMAKE_SOURCE_DIR = /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,881 +111,1404 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TP-Fase1-Test
+# Target rules for targets named tClient
 
 # Build rule for target.
-TP-Fase1-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP-Fase1-Test
-.PHONY : TP-Fase1-Test
+tClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tClient
+.PHONY : tClient
 
 # fast build rule for target.
-TP-Fase1-Test/fast:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/build
-.PHONY : TP-Fase1-Test/fast
+tClient/fast:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/build
+.PHONY : tClient/fast
 
-Modelo/Character.o: Modelo/Character.cpp.o
+#=============================================================================
+# Target rules for targets named tServer
 
-.PHONY : Modelo/Character.o
+# Build rule for target.
+tServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tServer
+.PHONY : tServer
 
-# target to build an object file
-Modelo/Character.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o
-.PHONY : Modelo/Character.cpp.o
+# fast build rule for target.
+tServer/fast:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/build
+.PHONY : tServer/fast
 
-Modelo/Character.i: Modelo/Character.cpp.i
+client/Background.o: client/Background.cpp.o
 
-.PHONY : Modelo/Character.i
-
-# target to preprocess a source file
-Modelo/Character.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.i
-.PHONY : Modelo/Character.cpp.i
-
-Modelo/Character.s: Modelo/Character.cpp.s
-
-.PHONY : Modelo/Character.s
-
-# target to generate assembly for a file
-Modelo/Character.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.s
-.PHONY : Modelo/Character.cpp.s
-
-Modelo/CollisionHard.o: Modelo/CollisionHard.cpp.o
-
-.PHONY : Modelo/CollisionHard.o
+.PHONY : client/Background.o
 
 # target to build an object file
-Modelo/CollisionHard.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.o
-.PHONY : Modelo/CollisionHard.cpp.o
+client/Background.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Background.cpp.o
+.PHONY : client/Background.cpp.o
 
-Modelo/CollisionHard.i: Modelo/CollisionHard.cpp.i
+client/Background.i: client/Background.cpp.i
 
-.PHONY : Modelo/CollisionHard.i
+.PHONY : client/Background.i
 
 # target to preprocess a source file
-Modelo/CollisionHard.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.i
-.PHONY : Modelo/CollisionHard.cpp.i
+client/Background.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Background.cpp.i
+.PHONY : client/Background.cpp.i
 
-Modelo/CollisionHard.s: Modelo/CollisionHard.cpp.s
+client/Background.s: client/Background.cpp.s
 
-.PHONY : Modelo/CollisionHard.s
+.PHONY : client/Background.s
 
 # target to generate assembly for a file
-Modelo/CollisionHard.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionHard.cpp.s
-.PHONY : Modelo/CollisionHard.cpp.s
+client/Background.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Background.cpp.s
+.PHONY : client/Background.cpp.s
 
-Modelo/CollisionSoft.o: Modelo/CollisionSoft.cpp.o
+client/Bullet.o: client/Bullet.cpp.o
 
-.PHONY : Modelo/CollisionSoft.o
+.PHONY : client/Bullet.o
 
 # target to build an object file
-Modelo/CollisionSoft.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.o
-.PHONY : Modelo/CollisionSoft.cpp.o
+client/Bullet.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Bullet.cpp.o
+.PHONY : client/Bullet.cpp.o
 
-Modelo/CollisionSoft.i: Modelo/CollisionSoft.cpp.i
+client/Bullet.i: client/Bullet.cpp.i
 
-.PHONY : Modelo/CollisionSoft.i
+.PHONY : client/Bullet.i
 
 # target to preprocess a source file
-Modelo/CollisionSoft.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.i
-.PHONY : Modelo/CollisionSoft.cpp.i
+client/Bullet.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Bullet.cpp.i
+.PHONY : client/Bullet.cpp.i
 
-Modelo/CollisionSoft.s: Modelo/CollisionSoft.cpp.s
+client/Bullet.s: client/Bullet.cpp.s
 
-.PHONY : Modelo/CollisionSoft.s
+.PHONY : client/Bullet.s
 
 # target to generate assembly for a file
-Modelo/CollisionSoft.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/CollisionSoft.cpp.s
-.PHONY : Modelo/CollisionSoft.cpp.s
+client/Bullet.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Bullet.cpp.s
+.PHONY : client/Bullet.cpp.s
 
-Modelo/Model.o: Modelo/Model.cpp.o
+client/Controller.o: client/Controller.cpp.o
 
-.PHONY : Modelo/Model.o
+.PHONY : client/Controller.o
 
 # target to build an object file
-Modelo/Model.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o
-.PHONY : Modelo/Model.cpp.o
+client/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Controller.cpp.o
+.PHONY : client/Controller.cpp.o
 
-Modelo/Model.i: Modelo/Model.cpp.i
+client/Controller.i: client/Controller.cpp.i
 
-.PHONY : Modelo/Model.i
+.PHONY : client/Controller.i
 
 # target to preprocess a source file
-Modelo/Model.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.i
-.PHONY : Modelo/Model.cpp.i
+client/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Controller.cpp.i
+.PHONY : client/Controller.cpp.i
 
-Modelo/Model.s: Modelo/Model.cpp.s
+client/Controller.s: client/Controller.cpp.s
 
-.PHONY : Modelo/Model.s
+.PHONY : client/Controller.s
 
 # target to generate assembly for a file
-Modelo/Model.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.s
-.PHONY : Modelo/Model.cpp.s
+client/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Controller.cpp.s
+.PHONY : client/Controller.cpp.s
 
-Modelo/Pistol.o: Modelo/Pistol.cpp.o
+client/FullHouse.o: client/FullHouse.cpp.o
 
-.PHONY : Modelo/Pistol.o
+.PHONY : client/FullHouse.o
 
 # target to build an object file
-Modelo/Pistol.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.o
-.PHONY : Modelo/Pistol.cpp.o
+client/FullHouse.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/FullHouse.cpp.o
+.PHONY : client/FullHouse.cpp.o
 
-Modelo/Pistol.i: Modelo/Pistol.cpp.i
+client/FullHouse.i: client/FullHouse.cpp.i
 
-.PHONY : Modelo/Pistol.i
+.PHONY : client/FullHouse.i
 
 # target to preprocess a source file
-Modelo/Pistol.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.i
-.PHONY : Modelo/Pistol.cpp.i
+client/FullHouse.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/FullHouse.cpp.i
+.PHONY : client/FullHouse.cpp.i
 
-Modelo/Pistol.s: Modelo/Pistol.cpp.s
+client/FullHouse.s: client/FullHouse.cpp.s
 
-.PHONY : Modelo/Pistol.s
+.PHONY : client/FullHouse.s
 
 # target to generate assembly for a file
-Modelo/Pistol.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Pistol.cpp.s
-.PHONY : Modelo/Pistol.cpp.s
+client/FullHouse.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/FullHouse.cpp.s
+.PHONY : client/FullHouse.cpp.s
 
-Modelo/Projectile.o: Modelo/Projectile.cpp.o
+client/Ice.o: client/Ice.cpp.o
 
-.PHONY : Modelo/Projectile.o
+.PHONY : client/Ice.o
 
 # target to build an object file
-Modelo/Projectile.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.o
-.PHONY : Modelo/Projectile.cpp.o
+client/Ice.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Ice.cpp.o
+.PHONY : client/Ice.cpp.o
 
-Modelo/Projectile.i: Modelo/Projectile.cpp.i
+client/Ice.i: client/Ice.cpp.i
 
-.PHONY : Modelo/Projectile.i
+.PHONY : client/Ice.i
 
 # target to preprocess a source file
-Modelo/Projectile.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.i
-.PHONY : Modelo/Projectile.cpp.i
+client/Ice.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Ice.cpp.i
+.PHONY : client/Ice.cpp.i
 
-Modelo/Projectile.s: Modelo/Projectile.cpp.s
+client/Ice.s: client/Ice.cpp.s
 
-.PHONY : Modelo/Projectile.s
+.PHONY : client/Ice.s
 
 # target to generate assembly for a file
-Modelo/Projectile.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Projectile.cpp.s
-.PHONY : Modelo/Projectile.cpp.s
+client/Ice.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Ice.cpp.s
+.PHONY : client/Ice.cpp.s
 
-Modelo/Weapon.o: Modelo/Weapon.cpp.o
+client/ImgTexture.o: client/ImgTexture.cpp.o
 
-.PHONY : Modelo/Weapon.o
+.PHONY : client/ImgTexture.o
 
 # target to build an object file
-Modelo/Weapon.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.o
-.PHONY : Modelo/Weapon.cpp.o
+client/ImgTexture.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ImgTexture.cpp.o
+.PHONY : client/ImgTexture.cpp.o
 
-Modelo/Weapon.i: Modelo/Weapon.cpp.i
+client/ImgTexture.i: client/ImgTexture.cpp.i
 
-.PHONY : Modelo/Weapon.i
+.PHONY : client/ImgTexture.i
 
 # target to preprocess a source file
-Modelo/Weapon.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.i
-.PHONY : Modelo/Weapon.cpp.i
+client/ImgTexture.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ImgTexture.cpp.i
+.PHONY : client/ImgTexture.cpp.i
 
-Modelo/Weapon.s: Modelo/Weapon.cpp.s
+client/ImgTexture.s: client/ImgTexture.cpp.s
 
-.PHONY : Modelo/Weapon.s
+.PHONY : client/ImgTexture.s
 
 # target to generate assembly for a file
-Modelo/Weapon.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Modelo/Weapon.cpp.s
-.PHONY : Modelo/Weapon.cpp.s
+client/ImgTexture.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ImgTexture.cpp.s
+.PHONY : client/ImgTexture.cpp.s
 
-Vista/Background.o: Vista/Background.cpp.o
+client/InvalidLogin.o: client/InvalidLogin.cpp.o
 
-.PHONY : Vista/Background.o
+.PHONY : client/InvalidLogin.o
 
 # target to build an object file
-Vista/Background.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.o
-.PHONY : Vista/Background.cpp.o
+client/InvalidLogin.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/InvalidLogin.cpp.o
+.PHONY : client/InvalidLogin.cpp.o
 
-Vista/Background.i: Vista/Background.cpp.i
+client/InvalidLogin.i: client/InvalidLogin.cpp.i
 
-.PHONY : Vista/Background.i
+.PHONY : client/InvalidLogin.i
 
 # target to preprocess a source file
-Vista/Background.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.i
-.PHONY : Vista/Background.cpp.i
+client/InvalidLogin.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/InvalidLogin.cpp.i
+.PHONY : client/InvalidLogin.cpp.i
 
-Vista/Background.s: Vista/Background.cpp.s
+client/InvalidLogin.s: client/InvalidLogin.cpp.s
 
-.PHONY : Vista/Background.s
+.PHONY : client/InvalidLogin.s
 
 # target to generate assembly for a file
-Vista/Background.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Background.cpp.s
-.PHONY : Vista/Background.cpp.s
+client/InvalidLogin.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/InvalidLogin.cpp.s
+.PHONY : client/InvalidLogin.cpp.s
 
-Vista/Bullet.o: Vista/Bullet.cpp.o
+client/Piedra.o: client/Piedra.cpp.o
 
-.PHONY : Vista/Bullet.o
+.PHONY : client/Piedra.o
 
 # target to build an object file
-Vista/Bullet.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.o
-.PHONY : Vista/Bullet.cpp.o
+client/Piedra.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Piedra.cpp.o
+.PHONY : client/Piedra.cpp.o
 
-Vista/Bullet.i: Vista/Bullet.cpp.i
+client/Piedra.i: client/Piedra.cpp.i
 
-.PHONY : Vista/Bullet.i
+.PHONY : client/Piedra.i
 
 # target to preprocess a source file
-Vista/Bullet.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.i
-.PHONY : Vista/Bullet.cpp.i
+client/Piedra.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Piedra.cpp.i
+.PHONY : client/Piedra.cpp.i
 
-Vista/Bullet.s: Vista/Bullet.cpp.s
+client/Piedra.s: client/Piedra.cpp.s
 
-.PHONY : Vista/Bullet.s
+.PHONY : client/Piedra.s
 
 # target to generate assembly for a file
-Vista/Bullet.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Bullet.cpp.s
-.PHONY : Vista/Bullet.cpp.s
+client/Piedra.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Piedra.cpp.s
+.PHONY : client/Piedra.cpp.s
 
-Vista/Controller.o: Vista/Controller.cpp.o
+client/PlataformaBlanda.o: client/PlataformaBlanda.cpp.o
 
-.PHONY : Vista/Controller.o
+.PHONY : client/PlataformaBlanda.o
 
 # target to build an object file
-Vista/Controller.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.o
-.PHONY : Vista/Controller.cpp.o
+client/PlataformaBlanda.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaBlanda.cpp.o
+.PHONY : client/PlataformaBlanda.cpp.o
 
-Vista/Controller.i: Vista/Controller.cpp.i
+client/PlataformaBlanda.i: client/PlataformaBlanda.cpp.i
 
-.PHONY : Vista/Controller.i
+.PHONY : client/PlataformaBlanda.i
 
 # target to preprocess a source file
-Vista/Controller.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.i
-.PHONY : Vista/Controller.cpp.i
+client/PlataformaBlanda.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaBlanda.cpp.i
+.PHONY : client/PlataformaBlanda.cpp.i
 
-Vista/Controller.s: Vista/Controller.cpp.s
+client/PlataformaBlanda.s: client/PlataformaBlanda.cpp.s
 
-.PHONY : Vista/Controller.s
+.PHONY : client/PlataformaBlanda.s
 
 # target to generate assembly for a file
-Vista/Controller.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Controller.cpp.s
-.PHONY : Vista/Controller.cpp.s
+client/PlataformaBlanda.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaBlanda.cpp.s
+.PHONY : client/PlataformaBlanda.cpp.s
 
-Vista/Exception.o: Vista/Exception.cpp.o
+client/PlataformaDura.o: client/PlataformaDura.cpp.o
 
-.PHONY : Vista/Exception.o
+.PHONY : client/PlataformaDura.o
 
 # target to build an object file
-Vista/Exception.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o
-.PHONY : Vista/Exception.cpp.o
+client/PlataformaDura.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaDura.cpp.o
+.PHONY : client/PlataformaDura.cpp.o
 
-Vista/Exception.i: Vista/Exception.cpp.i
+client/PlataformaDura.i: client/PlataformaDura.cpp.i
 
-.PHONY : Vista/Exception.i
+.PHONY : client/PlataformaDura.i
 
 # target to preprocess a source file
-Vista/Exception.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.i
-.PHONY : Vista/Exception.cpp.i
+client/PlataformaDura.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaDura.cpp.i
+.PHONY : client/PlataformaDura.cpp.i
 
-Vista/Exception.s: Vista/Exception.cpp.s
+client/PlataformaDura.s: client/PlataformaDura.cpp.s
 
-.PHONY : Vista/Exception.s
+.PHONY : client/PlataformaDura.s
 
 # target to generate assembly for a file
-Vista/Exception.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.s
-.PHONY : Vista/Exception.cpp.s
+client/PlataformaDura.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/PlataformaDura.cpp.s
+.PHONY : client/PlataformaDura.cpp.s
 
-Vista/Hielo.o: Vista/Hielo.cpp.o
+client/Quit.o: client/Quit.cpp.o
 
-.PHONY : Vista/Hielo.o
+.PHONY : client/Quit.o
 
 # target to build an object file
-Vista/Hielo.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.o
-.PHONY : Vista/Hielo.cpp.o
+client/Quit.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Quit.cpp.o
+.PHONY : client/Quit.cpp.o
 
-Vista/Hielo.i: Vista/Hielo.cpp.i
+client/Quit.i: client/Quit.cpp.i
 
-.PHONY : Vista/Hielo.i
+.PHONY : client/Quit.i
 
 # target to preprocess a source file
-Vista/Hielo.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.i
-.PHONY : Vista/Hielo.cpp.i
+client/Quit.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Quit.cpp.i
+.PHONY : client/Quit.cpp.i
 
-Vista/Hielo.s: Vista/Hielo.cpp.s
+client/Quit.s: client/Quit.cpp.s
 
-.PHONY : Vista/Hielo.s
+.PHONY : client/Quit.s
 
 # target to generate assembly for a file
-Vista/Hielo.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Hielo.cpp.s
-.PHONY : Vista/Hielo.cpp.s
+client/Quit.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Quit.cpp.s
+.PHONY : client/Quit.cpp.s
 
-Vista/ImgTexture.o: Vista/ImgTexture.cpp.o
+client/SDLException.o: client/SDLException.cpp.o
 
-.PHONY : Vista/ImgTexture.o
+.PHONY : client/SDLException.o
 
 # target to build an object file
-Vista/ImgTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o
-.PHONY : Vista/ImgTexture.cpp.o
+client/SDLException.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLException.cpp.o
+.PHONY : client/SDLException.cpp.o
 
-Vista/ImgTexture.i: Vista/ImgTexture.cpp.i
+client/SDLException.i: client/SDLException.cpp.i
 
-.PHONY : Vista/ImgTexture.i
+.PHONY : client/SDLException.i
 
 # target to preprocess a source file
-Vista/ImgTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.i
-.PHONY : Vista/ImgTexture.cpp.i
+client/SDLException.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLException.cpp.i
+.PHONY : client/SDLException.cpp.i
 
-Vista/ImgTexture.s: Vista/ImgTexture.cpp.s
+client/SDLException.s: client/SDLException.cpp.s
 
-.PHONY : Vista/ImgTexture.s
+.PHONY : client/SDLException.s
 
 # target to generate assembly for a file
-Vista/ImgTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.s
-.PHONY : Vista/ImgTexture.cpp.s
+client/SDLException.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLException.cpp.s
+.PHONY : client/SDLException.cpp.s
 
-Vista/Level.o: Vista/Level.cpp.o
+client/SDLIMGException.o: client/SDLIMGException.cpp.o
 
-.PHONY : Vista/Level.o
+.PHONY : client/SDLIMGException.o
 
 # target to build an object file
-Vista/Level.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.o
-.PHONY : Vista/Level.cpp.o
+client/SDLIMGException.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLIMGException.cpp.o
+.PHONY : client/SDLIMGException.cpp.o
 
-Vista/Level.i: Vista/Level.cpp.i
+client/SDLIMGException.i: client/SDLIMGException.cpp.i
 
-.PHONY : Vista/Level.i
+.PHONY : client/SDLIMGException.i
 
 # target to preprocess a source file
-Vista/Level.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.i
-.PHONY : Vista/Level.cpp.i
+client/SDLIMGException.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLIMGException.cpp.i
+.PHONY : client/SDLIMGException.cpp.i
 
-Vista/Level.s: Vista/Level.cpp.s
+client/SDLIMGException.s: client/SDLIMGException.cpp.s
 
-.PHONY : Vista/Level.s
+.PHONY : client/SDLIMGException.s
 
 # target to generate assembly for a file
-Vista/Level.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Level.cpp.s
-.PHONY : Vista/Level.cpp.s
+client/SDLIMGException.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SDLIMGException.cpp.s
+.PHONY : client/SDLIMGException.cpp.s
 
-Vista/Logger.o: Vista/Logger.cpp.o
+client/SdlImgInit.o: client/SdlImgInit.cpp.o
 
-.PHONY : Vista/Logger.o
+.PHONY : client/SdlImgInit.o
 
 # target to build an object file
-Vista/Logger.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o
-.PHONY : Vista/Logger.cpp.o
+client/SdlImgInit.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlImgInit.cpp.o
+.PHONY : client/SdlImgInit.cpp.o
 
-Vista/Logger.i: Vista/Logger.cpp.i
+client/SdlImgInit.i: client/SdlImgInit.cpp.i
 
-.PHONY : Vista/Logger.i
+.PHONY : client/SdlImgInit.i
 
 # target to preprocess a source file
-Vista/Logger.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.i
-.PHONY : Vista/Logger.cpp.i
+client/SdlImgInit.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlImgInit.cpp.i
+.PHONY : client/SdlImgInit.cpp.i
 
-Vista/Logger.s: Vista/Logger.cpp.s
+client/SdlImgInit.s: client/SdlImgInit.cpp.s
 
-.PHONY : Vista/Logger.s
+.PHONY : client/SdlImgInit.s
 
 # target to generate assembly for a file
-Vista/Logger.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.s
-.PHONY : Vista/Logger.cpp.s
+client/SdlImgInit.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlImgInit.cpp.s
+.PHONY : client/SdlImgInit.cpp.s
 
-Vista/Personajes.o: Vista/Personajes.cpp.o
+client/SdlInit.o: client/SdlInit.cpp.o
 
-.PHONY : Vista/Personajes.o
+.PHONY : client/SdlInit.o
 
 # target to build an object file
-Vista/Personajes.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.o
-.PHONY : Vista/Personajes.cpp.o
+client/SdlInit.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlInit.cpp.o
+.PHONY : client/SdlInit.cpp.o
 
-Vista/Personajes.i: Vista/Personajes.cpp.i
+client/SdlInit.i: client/SdlInit.cpp.i
 
-.PHONY : Vista/Personajes.i
+.PHONY : client/SdlInit.i
 
 # target to preprocess a source file
-Vista/Personajes.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.i
-.PHONY : Vista/Personajes.cpp.i
+client/SdlInit.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlInit.cpp.i
+.PHONY : client/SdlInit.cpp.i
 
-Vista/Personajes.s: Vista/Personajes.cpp.s
+client/SdlInit.s: client/SdlInit.cpp.s
 
-.PHONY : Vista/Personajes.s
+.PHONY : client/SdlInit.s
 
 # target to generate assembly for a file
-Vista/Personajes.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Personajes.cpp.s
-.PHONY : Vista/Personajes.cpp.s
+client/SdlInit.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlInit.cpp.s
+.PHONY : client/SdlInit.cpp.s
 
-Vista/Piedra.o: Vista/Piedra.cpp.o
+client/Sprite.o: client/Sprite.cpp.o
 
-.PHONY : Vista/Piedra.o
+.PHONY : client/Sprite.o
 
 # target to build an object file
-Vista/Piedra.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.o
-.PHONY : Vista/Piedra.cpp.o
+client/Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sprite.cpp.o
+.PHONY : client/Sprite.cpp.o
 
-Vista/Piedra.i: Vista/Piedra.cpp.i
+client/Sprite.i: client/Sprite.cpp.i
 
-.PHONY : Vista/Piedra.i
+.PHONY : client/Sprite.i
 
 # target to preprocess a source file
-Vista/Piedra.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.i
-.PHONY : Vista/Piedra.cpp.i
+client/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sprite.cpp.i
+.PHONY : client/Sprite.cpp.i
 
-Vista/Piedra.s: Vista/Piedra.cpp.s
+client/Sprite.s: client/Sprite.cpp.s
 
-.PHONY : Vista/Piedra.s
+.PHONY : client/Sprite.s
 
 # target to generate assembly for a file
-Vista/Piedra.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Piedra.cpp.s
-.PHONY : Vista/Piedra.cpp.s
+client/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sprite.cpp.s
+.PHONY : client/Sprite.cpp.s
 
-Vista/PlataformaBlanda.o: Vista/PlataformaBlanda.cpp.o
+client/SpriteHandler.o: client/SpriteHandler.cpp.o
 
-.PHONY : Vista/PlataformaBlanda.o
+.PHONY : client/SpriteHandler.o
 
 # target to build an object file
-Vista/PlataformaBlanda.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.o
-.PHONY : Vista/PlataformaBlanda.cpp.o
+client/SpriteHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SpriteHandler.cpp.o
+.PHONY : client/SpriteHandler.cpp.o
 
-Vista/PlataformaBlanda.i: Vista/PlataformaBlanda.cpp.i
+client/SpriteHandler.i: client/SpriteHandler.cpp.i
 
-.PHONY : Vista/PlataformaBlanda.i
+.PHONY : client/SpriteHandler.i
 
 # target to preprocess a source file
-Vista/PlataformaBlanda.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.i
-.PHONY : Vista/PlataformaBlanda.cpp.i
+client/SpriteHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SpriteHandler.cpp.i
+.PHONY : client/SpriteHandler.cpp.i
 
-Vista/PlataformaBlanda.s: Vista/PlataformaBlanda.cpp.s
+client/SpriteHandler.s: client/SpriteHandler.cpp.s
 
-.PHONY : Vista/PlataformaBlanda.s
+.PHONY : client/SpriteHandler.s
 
 # target to generate assembly for a file
-Vista/PlataformaBlanda.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaBlanda.cpp.s
-.PHONY : Vista/PlataformaBlanda.cpp.s
+client/SpriteHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SpriteHandler.cpp.s
+.PHONY : client/SpriteHandler.cpp.s
 
-Vista/PlataformaDura.o: Vista/PlataformaDura.cpp.o
+client/Texture.o: client/Texture.cpp.o
 
-.PHONY : Vista/PlataformaDura.o
+.PHONY : client/Texture.o
 
 # target to build an object file
-Vista/PlataformaDura.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.o
-.PHONY : Vista/PlataformaDura.cpp.o
+client/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Texture.cpp.o
+.PHONY : client/Texture.cpp.o
 
-Vista/PlataformaDura.i: Vista/PlataformaDura.cpp.i
+client/Texture.i: client/Texture.cpp.i
 
-.PHONY : Vista/PlataformaDura.i
+.PHONY : client/Texture.i
 
 # target to preprocess a source file
-Vista/PlataformaDura.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.i
-.PHONY : Vista/PlataformaDura.cpp.i
+client/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Texture.cpp.i
+.PHONY : client/Texture.cpp.i
 
-Vista/PlataformaDura.s: Vista/PlataformaDura.cpp.s
+client/Texture.s: client/Texture.cpp.s
 
-.PHONY : Vista/PlataformaDura.s
+.PHONY : client/Texture.s
 
 # target to generate assembly for a file
-Vista/PlataformaDura.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/PlataformaDura.cpp.s
-.PHONY : Vista/PlataformaDura.cpp.s
+client/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Texture.cpp.s
+.PHONY : client/Texture.cpp.s
 
-Vista/SDLException.o: Vista/SDLException.cpp.o
+client/Verifier.o: client/Verifier.cpp.o
 
-.PHONY : Vista/SDLException.o
+.PHONY : client/Verifier.o
 
 # target to build an object file
-Vista/SDLException.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o
-.PHONY : Vista/SDLException.cpp.o
+client/Verifier.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Verifier.cpp.o
+.PHONY : client/Verifier.cpp.o
 
-Vista/SDLException.i: Vista/SDLException.cpp.i
+client/Verifier.i: client/Verifier.cpp.i
 
-.PHONY : Vista/SDLException.i
+.PHONY : client/Verifier.i
 
 # target to preprocess a source file
-Vista/SDLException.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.i
-.PHONY : Vista/SDLException.cpp.i
+client/Verifier.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Verifier.cpp.i
+.PHONY : client/Verifier.cpp.i
 
-Vista/SDLException.s: Vista/SDLException.cpp.s
+client/Verifier.s: client/Verifier.cpp.s
 
-.PHONY : Vista/SDLException.s
+.PHONY : client/Verifier.s
 
 # target to generate assembly for a file
-Vista/SDLException.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.s
-.PHONY : Vista/SDLException.cpp.s
+client/Verifier.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Verifier.cpp.s
+.PHONY : client/Verifier.cpp.s
 
-Vista/SDLIMGException.o: Vista/SDLIMGException.cpp.o
+client/View.o: client/View.cpp.o
 
-.PHONY : Vista/SDLIMGException.o
+.PHONY : client/View.o
 
 # target to build an object file
-Vista/SDLIMGException.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o
-.PHONY : Vista/SDLIMGException.cpp.o
+client/View.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/View.cpp.o
+.PHONY : client/View.cpp.o
 
-Vista/SDLIMGException.i: Vista/SDLIMGException.cpp.i
+client/View.i: client/View.cpp.i
 
-.PHONY : Vista/SDLIMGException.i
+.PHONY : client/View.i
 
 # target to preprocess a source file
-Vista/SDLIMGException.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.i
-.PHONY : Vista/SDLIMGException.cpp.i
+client/View.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/View.cpp.i
+.PHONY : client/View.cpp.i
 
-Vista/SDLIMGException.s: Vista/SDLIMGException.cpp.s
+client/View.s: client/View.cpp.s
 
-.PHONY : Vista/SDLIMGException.s
+.PHONY : client/View.s
 
 # target to generate assembly for a file
-Vista/SDLIMGException.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.s
-.PHONY : Vista/SDLIMGException.cpp.s
+client/View.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/View.cpp.s
+.PHONY : client/View.cpp.s
 
-Vista/Scene.o: Vista/Scene.cpp.o
+client/ViewProtocol.o: client/ViewProtocol.cpp.o
 
-.PHONY : Vista/Scene.o
+.PHONY : client/ViewProtocol.o
 
 # target to build an object file
-Vista/Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.o
-.PHONY : Vista/Scene.cpp.o
+client/ViewProtocol.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ViewProtocol.cpp.o
+.PHONY : client/ViewProtocol.cpp.o
 
-Vista/Scene.i: Vista/Scene.cpp.i
+client/ViewProtocol.i: client/ViewProtocol.cpp.i
 
-.PHONY : Vista/Scene.i
+.PHONY : client/ViewProtocol.i
 
 # target to preprocess a source file
-Vista/Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.i
-.PHONY : Vista/Scene.cpp.i
+client/ViewProtocol.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ViewProtocol.cpp.i
+.PHONY : client/ViewProtocol.cpp.i
 
-Vista/Scene.s: Vista/Scene.cpp.s
+client/ViewProtocol.s: client/ViewProtocol.cpp.s
 
-.PHONY : Vista/Scene.s
+.PHONY : client/ViewProtocol.s
 
 # target to generate assembly for a file
-Vista/Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Scene.cpp.s
-.PHONY : Vista/Scene.cpp.s
+client/ViewProtocol.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/ViewProtocol.cpp.s
+.PHONY : client/ViewProtocol.cpp.s
 
-Vista/SdlImgInit.o: Vista/SdlImgInit.cpp.o
+client/Viewable.o: client/Viewable.cpp.o
 
-.PHONY : Vista/SdlImgInit.o
+.PHONY : client/Viewable.o
 
 # target to build an object file
-Vista/SdlImgInit.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o
-.PHONY : Vista/SdlImgInit.cpp.o
+client/Viewable.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Viewable.cpp.o
+.PHONY : client/Viewable.cpp.o
 
-Vista/SdlImgInit.i: Vista/SdlImgInit.cpp.i
+client/Viewable.i: client/Viewable.cpp.i
 
-.PHONY : Vista/SdlImgInit.i
+.PHONY : client/Viewable.i
 
 # target to preprocess a source file
-Vista/SdlImgInit.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.i
-.PHONY : Vista/SdlImgInit.cpp.i
+client/Viewable.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Viewable.cpp.i
+.PHONY : client/Viewable.cpp.i
 
-Vista/SdlImgInit.s: Vista/SdlImgInit.cpp.s
+client/Viewable.s: client/Viewable.cpp.s
 
-.PHONY : Vista/SdlImgInit.s
+.PHONY : client/Viewable.s
 
 # target to generate assembly for a file
-Vista/SdlImgInit.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.s
-.PHONY : Vista/SdlImgInit.cpp.s
+client/Viewable.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Viewable.cpp.s
+.PHONY : client/Viewable.cpp.s
 
-Vista/SdlInit.o: Vista/SdlInit.cpp.o
+client/Window.o: client/Window.cpp.o
 
-.PHONY : Vista/SdlInit.o
+.PHONY : client/Window.o
 
 # target to build an object file
-Vista/SdlInit.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o
-.PHONY : Vista/SdlInit.cpp.o
+client/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Window.cpp.o
+.PHONY : client/Window.cpp.o
 
-Vista/SdlInit.i: Vista/SdlInit.cpp.i
+client/Window.i: client/Window.cpp.i
 
-.PHONY : Vista/SdlInit.i
+.PHONY : client/Window.i
 
 # target to preprocess a source file
-Vista/SdlInit.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.i
-.PHONY : Vista/SdlInit.cpp.i
+client/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Window.cpp.i
+.PHONY : client/Window.cpp.i
 
-Vista/SdlInit.s: Vista/SdlInit.cpp.s
+client/Window.s: client/Window.cpp.s
 
-.PHONY : Vista/SdlInit.s
+.PHONY : client/Window.s
 
 # target to generate assembly for a file
-Vista/SdlInit.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.s
-.PHONY : Vista/SdlInit.cpp.s
+client/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Window.cpp.s
+.PHONY : client/Window.cpp.s
 
-Vista/Sprite.o: Vista/Sprite.cpp.o
+client/commonSDLTTFException.o: client/commonSDLTTFException.cpp.o
 
-.PHONY : Vista/Sprite.o
+.PHONY : client/commonSDLTTFException.o
 
 # target to build an object file
-Vista/Sprite.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o
-.PHONY : Vista/Sprite.cpp.o
+client/commonSDLTTFException.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSDLTTFException.cpp.o
+.PHONY : client/commonSDLTTFException.cpp.o
 
-Vista/Sprite.i: Vista/Sprite.cpp.i
+client/commonSDLTTFException.i: client/commonSDLTTFException.cpp.i
 
-.PHONY : Vista/Sprite.i
+.PHONY : client/commonSDLTTFException.i
 
 # target to preprocess a source file
-Vista/Sprite.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.i
-.PHONY : Vista/Sprite.cpp.i
+client/commonSDLTTFException.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSDLTTFException.cpp.i
+.PHONY : client/commonSDLTTFException.cpp.i
 
-Vista/Sprite.s: Vista/Sprite.cpp.s
+client/commonSDLTTFException.s: client/commonSDLTTFException.cpp.s
 
-.PHONY : Vista/Sprite.s
+.PHONY : client/commonSDLTTFException.s
 
 # target to generate assembly for a file
-Vista/Sprite.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.s
-.PHONY : Vista/Sprite.cpp.s
+client/commonSDLTTFException.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSDLTTFException.cpp.s
+.PHONY : client/commonSDLTTFException.cpp.s
 
-Vista/Texture.o: Vista/Texture.cpp.o
+client/commonSdlTtfInit.o: client/commonSdlTtfInit.cpp.o
 
-.PHONY : Vista/Texture.o
+.PHONY : client/commonSdlTtfInit.o
 
 # target to build an object file
-Vista/Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o
-.PHONY : Vista/Texture.cpp.o
+client/commonSdlTtfInit.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSdlTtfInit.cpp.o
+.PHONY : client/commonSdlTtfInit.cpp.o
 
-Vista/Texture.i: Vista/Texture.cpp.i
+client/commonSdlTtfInit.i: client/commonSdlTtfInit.cpp.i
 
-.PHONY : Vista/Texture.i
+.PHONY : client/commonSdlTtfInit.i
 
 # target to preprocess a source file
-Vista/Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.i
-.PHONY : Vista/Texture.cpp.i
+client/commonSdlTtfInit.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSdlTtfInit.cpp.i
+.PHONY : client/commonSdlTtfInit.cpp.i
 
-Vista/Texture.s: Vista/Texture.cpp.s
+client/commonSdlTtfInit.s: client/commonSdlTtfInit.cpp.s
 
-.PHONY : Vista/Texture.s
+.PHONY : client/commonSdlTtfInit.s
 
 # target to generate assembly for a file
-Vista/Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.s
-.PHONY : Vista/Texture.cpp.s
+client/commonSdlTtfInit.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonSdlTtfInit.cpp.s
+.PHONY : client/commonSdlTtfInit.cpp.s
 
-Vista/View.o: Vista/View.cpp.o
+client/commonTextTexture.o: client/commonTextTexture.cpp.o
 
-.PHONY : Vista/View.o
+.PHONY : client/commonTextTexture.o
 
 # target to build an object file
-Vista/View.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.o
-.PHONY : Vista/View.cpp.o
+client/commonTextTexture.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonTextTexture.cpp.o
+.PHONY : client/commonTextTexture.cpp.o
 
-Vista/View.i: Vista/View.cpp.i
+client/commonTextTexture.i: client/commonTextTexture.cpp.i
 
-.PHONY : Vista/View.i
+.PHONY : client/commonTextTexture.i
 
 # target to preprocess a source file
-Vista/View.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.i
-.PHONY : Vista/View.cpp.i
+client/commonTextTexture.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonTextTexture.cpp.i
+.PHONY : client/commonTextTexture.cpp.i
 
-Vista/View.s: Vista/View.cpp.s
+client/commonTextTexture.s: client/commonTextTexture.cpp.s
 
-.PHONY : Vista/View.s
+.PHONY : client/commonTextTexture.s
 
 # target to generate assembly for a file
-Vista/View.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/View.cpp.s
-.PHONY : Vista/View.cpp.s
+client/commonTextTexture.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/commonTextTexture.cpp.s
+.PHONY : client/commonTextTexture.cpp.s
 
-Vista/Viewable.o: Vista/Viewable.cpp.o
+client/lifeSupport.o: client/lifeSupport.cpp.o
 
-.PHONY : Vista/Viewable.o
+.PHONY : client/lifeSupport.o
 
 # target to build an object file
-Vista/Viewable.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.o
-.PHONY : Vista/Viewable.cpp.o
+client/lifeSupport.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/lifeSupport.cpp.o
+.PHONY : client/lifeSupport.cpp.o
 
-Vista/Viewable.i: Vista/Viewable.cpp.i
+client/lifeSupport.i: client/lifeSupport.cpp.i
 
-.PHONY : Vista/Viewable.i
+.PHONY : client/lifeSupport.i
 
 # target to preprocess a source file
-Vista/Viewable.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.i
-.PHONY : Vista/Viewable.cpp.i
+client/lifeSupport.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/lifeSupport.cpp.i
+.PHONY : client/lifeSupport.cpp.i
 
-Vista/Viewable.s: Vista/Viewable.cpp.s
+client/lifeSupport.s: client/lifeSupport.cpp.s
 
-.PHONY : Vista/Viewable.s
+.PHONY : client/lifeSupport.s
 
 # target to generate assembly for a file
-Vista/Viewable.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Viewable.cpp.s
-.PHONY : Vista/Viewable.cpp.s
+client/lifeSupport.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/lifeSupport.cpp.s
+.PHONY : client/lifeSupport.cpp.s
 
-Vista/Window.o: Vista/Window.cpp.o
+client/main.o: client/main.cpp.o
 
-.PHONY : Vista/Window.o
+.PHONY : client/main.o
 
 # target to build an object file
-Vista/Window.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o
-.PHONY : Vista/Window.cpp.o
+client/main.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/main.cpp.o
+.PHONY : client/main.cpp.o
 
-Vista/Window.i: Vista/Window.cpp.i
+client/main.i: client/main.cpp.i
 
-.PHONY : Vista/Window.i
+.PHONY : client/main.i
 
 # target to preprocess a source file
-Vista/Window.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.i
-.PHONY : Vista/Window.cpp.i
+client/main.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/main.cpp.i
+.PHONY : client/main.cpp.i
 
-Vista/Window.s: Vista/Window.cpp.s
+client/main.s: client/main.cpp.s
 
-.PHONY : Vista/Window.s
+.PHONY : client/main.s
 
 # target to generate assembly for a file
-Vista/Window.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.s
-.PHONY : Vista/Window.cpp.s
+client/main.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/main.cpp.s
+.PHONY : client/main.cpp.s
 
-Vista/main.o: Vista/main.cpp.o
+common/Exception.o: common/Exception.cpp.o
 
-.PHONY : Vista/main.o
+.PHONY : common/Exception.o
 
 # target to build an object file
-Vista/main.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.o
-.PHONY : Vista/main.cpp.o
+common/Exception.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Exception.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Exception.cpp.o
+.PHONY : common/Exception.cpp.o
 
-Vista/main.i: Vista/main.cpp.i
+common/Exception.i: common/Exception.cpp.i
 
-.PHONY : Vista/main.i
+.PHONY : common/Exception.i
 
 # target to preprocess a source file
-Vista/main.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.i
-.PHONY : Vista/main.cpp.i
+common/Exception.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Exception.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Exception.cpp.i
+.PHONY : common/Exception.cpp.i
 
-Vista/main.s: Vista/main.cpp.s
+common/Exception.s: common/Exception.cpp.s
 
-.PHONY : Vista/main.s
+.PHONY : common/Exception.s
 
 # target to generate assembly for a file
-Vista/main.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/main.cpp.s
-.PHONY : Vista/main.cpp.s
+common/Exception.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Exception.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Exception.cpp.s
+.PHONY : common/Exception.cpp.s
 
-Vista/pugixml.o: Vista/pugixml.cpp.o
+common/Level.o: common/Level.cpp.o
 
-.PHONY : Vista/pugixml.o
+.PHONY : common/Level.o
 
 # target to build an object file
-Vista/pugixml.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o
-.PHONY : Vista/pugixml.cpp.o
+common/Level.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Level.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Level.cpp.o
+.PHONY : common/Level.cpp.o
 
-Vista/pugixml.i: Vista/pugixml.cpp.i
+common/Level.i: common/Level.cpp.i
 
-.PHONY : Vista/pugixml.i
+.PHONY : common/Level.i
 
 # target to preprocess a source file
-Vista/pugixml.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.i
-.PHONY : Vista/pugixml.cpp.i
+common/Level.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Level.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Level.cpp.i
+.PHONY : common/Level.cpp.i
 
-Vista/pugixml.s: Vista/pugixml.cpp.s
+common/Level.s: common/Level.cpp.s
 
-.PHONY : Vista/pugixml.s
+.PHONY : common/Level.s
 
 # target to generate assembly for a file
-Vista/pugixml.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.s
-.PHONY : Vista/pugixml.cpp.s
+common/Level.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Level.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Level.cpp.s
+.PHONY : common/Level.cpp.s
 
-Vista/xml.o: Vista/xml.cpp.o
+common/Logger.o: common/Logger.cpp.o
 
-.PHONY : Vista/xml.o
+.PHONY : common/Logger.o
 
 # target to build an object file
-Vista/xml.cpp.o:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.o
-.PHONY : Vista/xml.cpp.o
+common/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Logger.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Logger.cpp.o
+.PHONY : common/Logger.cpp.o
 
-Vista/xml.i: Vista/xml.cpp.i
+common/Logger.i: common/Logger.cpp.i
 
-.PHONY : Vista/xml.i
+.PHONY : common/Logger.i
 
 # target to preprocess a source file
-Vista/xml.cpp.i:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.i
-.PHONY : Vista/xml.cpp.i
+common/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Logger.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Logger.cpp.i
+.PHONY : common/Logger.cpp.i
 
-Vista/xml.s: Vista/xml.cpp.s
+common/Logger.s: common/Logger.cpp.s
 
-.PHONY : Vista/xml.s
+.PHONY : common/Logger.s
 
 # target to generate assembly for a file
-Vista/xml.cpp.s:
-	$(MAKE) -f CMakeFiles/TP-Fase1-Test.dir/build.make CMakeFiles/TP-Fase1-Test.dir/Vista/xml.cpp.s
-.PHONY : Vista/xml.cpp.s
+common/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Logger.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Logger.cpp.s
+.PHONY : common/Logger.cpp.s
+
+common/Scene.o: common/Scene.cpp.o
+
+.PHONY : common/Scene.o
+
+# target to build an object file
+common/Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Scene.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Scene.cpp.o
+.PHONY : common/Scene.cpp.o
+
+common/Scene.i: common/Scene.cpp.i
+
+.PHONY : common/Scene.i
+
+# target to preprocess a source file
+common/Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Scene.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Scene.cpp.i
+.PHONY : common/Scene.cpp.i
+
+common/Scene.s: common/Scene.cpp.s
+
+.PHONY : common/Scene.s
+
+# target to generate assembly for a file
+common/Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Scene.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Scene.cpp.s
+.PHONY : common/Scene.cpp.s
+
+common/Socket.o: common/Socket.cpp.o
+
+.PHONY : common/Socket.o
+
+# target to build an object file
+common/Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Socket.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Socket.cpp.o
+.PHONY : common/Socket.cpp.o
+
+common/Socket.i: common/Socket.cpp.i
+
+.PHONY : common/Socket.i
+
+# target to preprocess a source file
+common/Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Socket.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Socket.cpp.i
+.PHONY : common/Socket.cpp.i
+
+common/Socket.s: common/Socket.cpp.s
+
+.PHONY : common/Socket.s
+
+# target to generate assembly for a file
+common/Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Socket.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Socket.cpp.s
+.PHONY : common/Socket.cpp.s
+
+common/Thread.o: common/Thread.cpp.o
+
+.PHONY : common/Thread.o
+
+# target to build an object file
+common/Thread.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Thread.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Thread.cpp.o
+.PHONY : common/Thread.cpp.o
+
+common/Thread.i: common/Thread.cpp.i
+
+.PHONY : common/Thread.i
+
+# target to preprocess a source file
+common/Thread.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Thread.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Thread.cpp.i
+.PHONY : common/Thread.cpp.i
+
+common/Thread.s: common/Thread.cpp.s
+
+.PHONY : common/Thread.s
+
+# target to generate assembly for a file
+common/Thread.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Thread.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Thread.cpp.s
+.PHONY : common/Thread.cpp.s
+
+common/pugixml.o: common/pugixml.cpp.o
+
+.PHONY : common/pugixml.o
+
+# target to build an object file
+common/pugixml.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/pugixml.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/pugixml.cpp.o
+.PHONY : common/pugixml.cpp.o
+
+common/pugixml.i: common/pugixml.cpp.i
+
+.PHONY : common/pugixml.i
+
+# target to preprocess a source file
+common/pugixml.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/pugixml.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/pugixml.cpp.i
+.PHONY : common/pugixml.cpp.i
+
+common/pugixml.s: common/pugixml.cpp.s
+
+.PHONY : common/pugixml.s
+
+# target to generate assembly for a file
+common/pugixml.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/pugixml.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/pugixml.cpp.s
+.PHONY : common/pugixml.cpp.s
+
+common/xml.o: common/xml.cpp.o
+
+.PHONY : common/xml.o
+
+# target to build an object file
+common/xml.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/xml.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/xml.cpp.o
+.PHONY : common/xml.cpp.o
+
+common/xml.i: common/xml.cpp.i
+
+.PHONY : common/xml.i
+
+# target to preprocess a source file
+common/xml.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/xml.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/xml.cpp.i
+.PHONY : common/xml.cpp.i
+
+common/xml.s: common/xml.cpp.s
+
+.PHONY : common/xml.s
+
+# target to generate assembly for a file
+common/xml.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/xml.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/xml.cpp.s
+.PHONY : common/xml.cpp.s
+
+server/Character.o: server/Character.cpp.o
+
+.PHONY : server/Character.o
+
+# target to build an object file
+server/Character.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Character.cpp.o
+.PHONY : server/Character.cpp.o
+
+server/Character.i: server/Character.cpp.i
+
+.PHONY : server/Character.i
+
+# target to preprocess a source file
+server/Character.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Character.cpp.i
+.PHONY : server/Character.cpp.i
+
+server/Character.s: server/Character.cpp.s
+
+.PHONY : server/Character.s
+
+# target to generate assembly for a file
+server/Character.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Character.cpp.s
+.PHONY : server/Character.cpp.s
+
+server/Collector.o: server/Collector.cpp.o
+
+.PHONY : server/Collector.o
+
+# target to build an object file
+server/Collector.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Collector.cpp.o
+.PHONY : server/Collector.cpp.o
+
+server/Collector.i: server/Collector.cpp.i
+
+.PHONY : server/Collector.i
+
+# target to preprocess a source file
+server/Collector.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Collector.cpp.i
+.PHONY : server/Collector.cpp.i
+
+server/Collector.s: server/Collector.cpp.s
+
+.PHONY : server/Collector.s
+
+# target to generate assembly for a file
+server/Collector.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Collector.cpp.s
+.PHONY : server/Collector.cpp.s
+
+server/CollisionHard.o: server/CollisionHard.cpp.o
+
+.PHONY : server/CollisionHard.o
+
+# target to build an object file
+server/CollisionHard.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionHard.cpp.o
+.PHONY : server/CollisionHard.cpp.o
+
+server/CollisionHard.i: server/CollisionHard.cpp.i
+
+.PHONY : server/CollisionHard.i
+
+# target to preprocess a source file
+server/CollisionHard.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionHard.cpp.i
+.PHONY : server/CollisionHard.cpp.i
+
+server/CollisionHard.s: server/CollisionHard.cpp.s
+
+.PHONY : server/CollisionHard.s
+
+# target to generate assembly for a file
+server/CollisionHard.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionHard.cpp.s
+.PHONY : server/CollisionHard.cpp.s
+
+server/CollisionSoft.o: server/CollisionSoft.cpp.o
+
+.PHONY : server/CollisionSoft.o
+
+# target to build an object file
+server/CollisionSoft.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionSoft.cpp.o
+.PHONY : server/CollisionSoft.cpp.o
+
+server/CollisionSoft.i: server/CollisionSoft.cpp.i
+
+.PHONY : server/CollisionSoft.i
+
+# target to preprocess a source file
+server/CollisionSoft.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionSoft.cpp.i
+.PHONY : server/CollisionSoft.cpp.i
+
+server/CollisionSoft.s: server/CollisionSoft.cpp.s
+
+.PHONY : server/CollisionSoft.s
+
+# target to generate assembly for a file
+server/CollisionSoft.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/CollisionSoft.cpp.s
+.PHONY : server/CollisionSoft.cpp.s
+
+server/Interpreter.o: server/Interpreter.cpp.o
+
+.PHONY : server/Interpreter.o
+
+# target to build an object file
+server/Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Interpreter.cpp.o
+.PHONY : server/Interpreter.cpp.o
+
+server/Interpreter.i: server/Interpreter.cpp.i
+
+.PHONY : server/Interpreter.i
+
+# target to preprocess a source file
+server/Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Interpreter.cpp.i
+.PHONY : server/Interpreter.cpp.i
+
+server/Interpreter.s: server/Interpreter.cpp.s
+
+.PHONY : server/Interpreter.s
+
+# target to generate assembly for a file
+server/Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Interpreter.cpp.s
+.PHONY : server/Interpreter.cpp.s
+
+server/Joiner.o: server/Joiner.cpp.o
+
+.PHONY : server/Joiner.o
+
+# target to build an object file
+server/Joiner.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Joiner.cpp.o
+.PHONY : server/Joiner.cpp.o
+
+server/Joiner.i: server/Joiner.cpp.i
+
+.PHONY : server/Joiner.i
+
+# target to preprocess a source file
+server/Joiner.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Joiner.cpp.i
+.PHONY : server/Joiner.cpp.i
+
+server/Joiner.s: server/Joiner.cpp.s
+
+.PHONY : server/Joiner.s
+
+# target to generate assembly for a file
+server/Joiner.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Joiner.cpp.s
+.PHONY : server/Joiner.cpp.s
+
+server/Model.o: server/Model.cpp.o
+
+.PHONY : server/Model.o
+
+# target to build an object file
+server/Model.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Model.cpp.o
+.PHONY : server/Model.cpp.o
+
+server/Model.i: server/Model.cpp.i
+
+.PHONY : server/Model.i
+
+# target to preprocess a source file
+server/Model.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Model.cpp.i
+.PHONY : server/Model.cpp.i
+
+server/Model.s: server/Model.cpp.s
+
+.PHONY : server/Model.s
+
+# target to generate assembly for a file
+server/Model.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Model.cpp.s
+.PHONY : server/Model.cpp.s
+
+server/ModelProtocol.o: server/ModelProtocol.cpp.o
+
+.PHONY : server/ModelProtocol.o
+
+# target to build an object file
+server/ModelProtocol.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/ModelProtocol.cpp.o
+.PHONY : server/ModelProtocol.cpp.o
+
+server/ModelProtocol.i: server/ModelProtocol.cpp.i
+
+.PHONY : server/ModelProtocol.i
+
+# target to preprocess a source file
+server/ModelProtocol.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/ModelProtocol.cpp.i
+.PHONY : server/ModelProtocol.cpp.i
+
+server/ModelProtocol.s: server/ModelProtocol.cpp.s
+
+.PHONY : server/ModelProtocol.s
+
+# target to generate assembly for a file
+server/ModelProtocol.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/ModelProtocol.cpp.s
+.PHONY : server/ModelProtocol.cpp.s
+
+server/Pistol.o: server/Pistol.cpp.o
+
+.PHONY : server/Pistol.o
+
+# target to build an object file
+server/Pistol.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Pistol.cpp.o
+.PHONY : server/Pistol.cpp.o
+
+server/Pistol.i: server/Pistol.cpp.i
+
+.PHONY : server/Pistol.i
+
+# target to preprocess a source file
+server/Pistol.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Pistol.cpp.i
+.PHONY : server/Pistol.cpp.i
+
+server/Pistol.s: server/Pistol.cpp.s
+
+.PHONY : server/Pistol.s
+
+# target to generate assembly for a file
+server/Pistol.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Pistol.cpp.s
+.PHONY : server/Pistol.cpp.s
+
+server/Projectile.o: server/Projectile.cpp.o
+
+.PHONY : server/Projectile.o
+
+# target to build an object file
+server/Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.o
+.PHONY : server/Projectile.cpp.o
+
+server/Projectile.i: server/Projectile.cpp.i
+
+.PHONY : server/Projectile.i
+
+# target to preprocess a source file
+server/Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.i
+.PHONY : server/Projectile.cpp.i
+
+server/Projectile.s: server/Projectile.cpp.s
+
+.PHONY : server/Projectile.s
+
+# target to generate assembly for a file
+server/Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.s
+.PHONY : server/Projectile.cpp.s
+
+server/Sender.o: server/Sender.cpp.o
+
+.PHONY : server/Sender.o
+
+# target to build an object file
+server/Sender.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Sender.cpp.o
+.PHONY : server/Sender.cpp.o
+
+server/Sender.i: server/Sender.cpp.i
+
+.PHONY : server/Sender.i
+
+# target to preprocess a source file
+server/Sender.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Sender.cpp.i
+.PHONY : server/Sender.cpp.i
+
+server/Sender.s: server/Sender.cpp.s
+
+.PHONY : server/Sender.s
+
+# target to generate assembly for a file
+server/Sender.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Sender.cpp.s
+.PHONY : server/Sender.cpp.s
+
+server/Weapon.o: server/Weapon.cpp.o
+
+.PHONY : server/Weapon.o
+
+# target to build an object file
+server/Weapon.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Weapon.cpp.o
+.PHONY : server/Weapon.cpp.o
+
+server/Weapon.i: server/Weapon.cpp.i
+
+.PHONY : server/Weapon.i
+
+# target to preprocess a source file
+server/Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Weapon.cpp.i
+.PHONY : server/Weapon.cpp.i
+
+server/Weapon.s: server/Weapon.cpp.s
+
+.PHONY : server/Weapon.s
+
+# target to generate assembly for a file
+server/Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Weapon.cpp.s
+.PHONY : server/Weapon.cpp.s
+
+server/main.o: server/main.cpp.o
+
+.PHONY : server/main.o
+
+# target to build an object file
+server/main.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/main.cpp.o
+.PHONY : server/main.cpp.o
+
+server/main.i: server/main.cpp.i
+
+.PHONY : server/main.i
+
+# target to preprocess a source file
+server/main.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/main.cpp.i
+.PHONY : server/main.cpp.i
+
+server/main.s: server/main.cpp.s
+
+.PHONY : server/main.s
+
+# target to generate assembly for a file
+server/main.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/main.cpp.s
+.PHONY : server/main.cpp.s
+
+server/xmlServer.o: server/xmlServer.cpp.o
+
+.PHONY : server/xmlServer.o
+
+# target to build an object file
+server/xmlServer.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/xmlServer.cpp.o
+.PHONY : server/xmlServer.cpp.o
+
+server/xmlServer.i: server/xmlServer.cpp.i
+
+.PHONY : server/xmlServer.i
+
+# target to preprocess a source file
+server/xmlServer.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/xmlServer.cpp.i
+.PHONY : server/xmlServer.cpp.i
+
+server/xmlServer.s: server/xmlServer.cpp.s
+
+.PHONY : server/xmlServer.s
+
+# target to generate assembly for a file
+server/xmlServer.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/xmlServer.cpp.s
+.PHONY : server/xmlServer.cpp.s
 
 # Help Target
 help:
@@ -993,105 +1516,160 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... TP-Fase1-Test"
-	@echo "... Modelo/Character.o"
-	@echo "... Modelo/Character.i"
-	@echo "... Modelo/Character.s"
-	@echo "... Modelo/CollisionHard.o"
-	@echo "... Modelo/CollisionHard.i"
-	@echo "... Modelo/CollisionHard.s"
-	@echo "... Modelo/CollisionSoft.o"
-	@echo "... Modelo/CollisionSoft.i"
-	@echo "... Modelo/CollisionSoft.s"
-	@echo "... Modelo/Model.o"
-	@echo "... Modelo/Model.i"
-	@echo "... Modelo/Model.s"
-	@echo "... Modelo/Pistol.o"
-	@echo "... Modelo/Pistol.i"
-	@echo "... Modelo/Pistol.s"
-	@echo "... Modelo/Projectile.o"
-	@echo "... Modelo/Projectile.i"
-	@echo "... Modelo/Projectile.s"
-	@echo "... Modelo/Weapon.o"
-	@echo "... Modelo/Weapon.i"
-	@echo "... Modelo/Weapon.s"
-	@echo "... Vista/Background.o"
-	@echo "... Vista/Background.i"
-	@echo "... Vista/Background.s"
-	@echo "... Vista/Bullet.o"
-	@echo "... Vista/Bullet.i"
-	@echo "... Vista/Bullet.s"
-	@echo "... Vista/Controller.o"
-	@echo "... Vista/Controller.i"
-	@echo "... Vista/Controller.s"
-	@echo "... Vista/Exception.o"
-	@echo "... Vista/Exception.i"
-	@echo "... Vista/Exception.s"
-	@echo "... Vista/Hielo.o"
-	@echo "... Vista/Hielo.i"
-	@echo "... Vista/Hielo.s"
-	@echo "... Vista/ImgTexture.o"
-	@echo "... Vista/ImgTexture.i"
-	@echo "... Vista/ImgTexture.s"
-	@echo "... Vista/Level.o"
-	@echo "... Vista/Level.i"
-	@echo "... Vista/Level.s"
-	@echo "... Vista/Logger.o"
-	@echo "... Vista/Logger.i"
-	@echo "... Vista/Logger.s"
-	@echo "... Vista/Personajes.o"
-	@echo "... Vista/Personajes.i"
-	@echo "... Vista/Personajes.s"
-	@echo "... Vista/Piedra.o"
-	@echo "... Vista/Piedra.i"
-	@echo "... Vista/Piedra.s"
-	@echo "... Vista/PlataformaBlanda.o"
-	@echo "... Vista/PlataformaBlanda.i"
-	@echo "... Vista/PlataformaBlanda.s"
-	@echo "... Vista/PlataformaDura.o"
-	@echo "... Vista/PlataformaDura.i"
-	@echo "... Vista/PlataformaDura.s"
-	@echo "... Vista/SDLException.o"
-	@echo "... Vista/SDLException.i"
-	@echo "... Vista/SDLException.s"
-	@echo "... Vista/SDLIMGException.o"
-	@echo "... Vista/SDLIMGException.i"
-	@echo "... Vista/SDLIMGException.s"
-	@echo "... Vista/Scene.o"
-	@echo "... Vista/Scene.i"
-	@echo "... Vista/Scene.s"
-	@echo "... Vista/SdlImgInit.o"
-	@echo "... Vista/SdlImgInit.i"
-	@echo "... Vista/SdlImgInit.s"
-	@echo "... Vista/SdlInit.o"
-	@echo "... Vista/SdlInit.i"
-	@echo "... Vista/SdlInit.s"
-	@echo "... Vista/Sprite.o"
-	@echo "... Vista/Sprite.i"
-	@echo "... Vista/Sprite.s"
-	@echo "... Vista/Texture.o"
-	@echo "... Vista/Texture.i"
-	@echo "... Vista/Texture.s"
-	@echo "... Vista/View.o"
-	@echo "... Vista/View.i"
-	@echo "... Vista/View.s"
-	@echo "... Vista/Viewable.o"
-	@echo "... Vista/Viewable.i"
-	@echo "... Vista/Viewable.s"
-	@echo "... Vista/Window.o"
-	@echo "... Vista/Window.i"
-	@echo "... Vista/Window.s"
-	@echo "... Vista/main.o"
-	@echo "... Vista/main.i"
-	@echo "... Vista/main.s"
-	@echo "... Vista/pugixml.o"
-	@echo "... Vista/pugixml.i"
-	@echo "... Vista/pugixml.s"
-	@echo "... Vista/xml.o"
-	@echo "... Vista/xml.i"
-	@echo "... Vista/xml.s"
+	@echo "... rebuild_cache"
+	@echo "... tClient"
+	@echo "... tServer"
+	@echo "... client/Background.o"
+	@echo "... client/Background.i"
+	@echo "... client/Background.s"
+	@echo "... client/Bullet.o"
+	@echo "... client/Bullet.i"
+	@echo "... client/Bullet.s"
+	@echo "... client/Controller.o"
+	@echo "... client/Controller.i"
+	@echo "... client/Controller.s"
+	@echo "... client/FullHouse.o"
+	@echo "... client/FullHouse.i"
+	@echo "... client/FullHouse.s"
+	@echo "... client/Ice.o"
+	@echo "... client/Ice.i"
+	@echo "... client/Ice.s"
+	@echo "... client/ImgTexture.o"
+	@echo "... client/ImgTexture.i"
+	@echo "... client/ImgTexture.s"
+	@echo "... client/InvalidLogin.o"
+	@echo "... client/InvalidLogin.i"
+	@echo "... client/InvalidLogin.s"
+	@echo "... client/Piedra.o"
+	@echo "... client/Piedra.i"
+	@echo "... client/Piedra.s"
+	@echo "... client/PlataformaBlanda.o"
+	@echo "... client/PlataformaBlanda.i"
+	@echo "... client/PlataformaBlanda.s"
+	@echo "... client/PlataformaDura.o"
+	@echo "... client/PlataformaDura.i"
+	@echo "... client/PlataformaDura.s"
+	@echo "... client/Quit.o"
+	@echo "... client/Quit.i"
+	@echo "... client/Quit.s"
+	@echo "... client/SDLException.o"
+	@echo "... client/SDLException.i"
+	@echo "... client/SDLException.s"
+	@echo "... client/SDLIMGException.o"
+	@echo "... client/SDLIMGException.i"
+	@echo "... client/SDLIMGException.s"
+	@echo "... client/SdlImgInit.o"
+	@echo "... client/SdlImgInit.i"
+	@echo "... client/SdlImgInit.s"
+	@echo "... client/SdlInit.o"
+	@echo "... client/SdlInit.i"
+	@echo "... client/SdlInit.s"
+	@echo "... client/Sprite.o"
+	@echo "... client/Sprite.i"
+	@echo "... client/Sprite.s"
+	@echo "... client/SpriteHandler.o"
+	@echo "... client/SpriteHandler.i"
+	@echo "... client/SpriteHandler.s"
+	@echo "... client/Texture.o"
+	@echo "... client/Texture.i"
+	@echo "... client/Texture.s"
+	@echo "... client/Verifier.o"
+	@echo "... client/Verifier.i"
+	@echo "... client/Verifier.s"
+	@echo "... client/View.o"
+	@echo "... client/View.i"
+	@echo "... client/View.s"
+	@echo "... client/ViewProtocol.o"
+	@echo "... client/ViewProtocol.i"
+	@echo "... client/ViewProtocol.s"
+	@echo "... client/Viewable.o"
+	@echo "... client/Viewable.i"
+	@echo "... client/Viewable.s"
+	@echo "... client/Window.o"
+	@echo "... client/Window.i"
+	@echo "... client/Window.s"
+	@echo "... client/commonSDLTTFException.o"
+	@echo "... client/commonSDLTTFException.i"
+	@echo "... client/commonSDLTTFException.s"
+	@echo "... client/commonSdlTtfInit.o"
+	@echo "... client/commonSdlTtfInit.i"
+	@echo "... client/commonSdlTtfInit.s"
+	@echo "... client/commonTextTexture.o"
+	@echo "... client/commonTextTexture.i"
+	@echo "... client/commonTextTexture.s"
+	@echo "... client/lifeSupport.o"
+	@echo "... client/lifeSupport.i"
+	@echo "... client/lifeSupport.s"
+	@echo "... client/main.o"
+	@echo "... client/main.i"
+	@echo "... client/main.s"
+	@echo "... common/Exception.o"
+	@echo "... common/Exception.i"
+	@echo "... common/Exception.s"
+	@echo "... common/Level.o"
+	@echo "... common/Level.i"
+	@echo "... common/Level.s"
+	@echo "... common/Logger.o"
+	@echo "... common/Logger.i"
+	@echo "... common/Logger.s"
+	@echo "... common/Scene.o"
+	@echo "... common/Scene.i"
+	@echo "... common/Scene.s"
+	@echo "... common/Socket.o"
+	@echo "... common/Socket.i"
+	@echo "... common/Socket.s"
+	@echo "... common/Thread.o"
+	@echo "... common/Thread.i"
+	@echo "... common/Thread.s"
+	@echo "... common/pugixml.o"
+	@echo "... common/pugixml.i"
+	@echo "... common/pugixml.s"
+	@echo "... common/xml.o"
+	@echo "... common/xml.i"
+	@echo "... common/xml.s"
+	@echo "... server/Character.o"
+	@echo "... server/Character.i"
+	@echo "... server/Character.s"
+	@echo "... server/Collector.o"
+	@echo "... server/Collector.i"
+	@echo "... server/Collector.s"
+	@echo "... server/CollisionHard.o"
+	@echo "... server/CollisionHard.i"
+	@echo "... server/CollisionHard.s"
+	@echo "... server/CollisionSoft.o"
+	@echo "... server/CollisionSoft.i"
+	@echo "... server/CollisionSoft.s"
+	@echo "... server/Interpreter.o"
+	@echo "... server/Interpreter.i"
+	@echo "... server/Interpreter.s"
+	@echo "... server/Joiner.o"
+	@echo "... server/Joiner.i"
+	@echo "... server/Joiner.s"
+	@echo "... server/Model.o"
+	@echo "... server/Model.i"
+	@echo "... server/Model.s"
+	@echo "... server/ModelProtocol.o"
+	@echo "... server/ModelProtocol.i"
+	@echo "... server/ModelProtocol.s"
+	@echo "... server/Pistol.o"
+	@echo "... server/Pistol.i"
+	@echo "... server/Pistol.s"
+	@echo "... server/Projectile.o"
+	@echo "... server/Projectile.i"
+	@echo "... server/Projectile.s"
+	@echo "... server/Sender.o"
+	@echo "... server/Sender.i"
+	@echo "... server/Sender.s"
+	@echo "... server/Weapon.o"
+	@echo "... server/Weapon.i"
+	@echo "... server/Weapon.s"
+	@echo "... server/main.o"
+	@echo "... server/main.i"
+	@echo "... server/main.s"
+	@echo "... server/xmlServer.o"
+	@echo "... server/xmlServer.i"
+	@echo "... server/xmlServer.s"
 .PHONY : help
 
 

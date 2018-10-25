@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "CMakeFiles/3.12.2/CMakeCCompiler.cmake"
-  "CMakeFiles/3.12.2/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.12.2/CMakeSystem.cmake"
+  "CMakeFiles/3.12.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.12.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.12.3/CMakeSystem.cmake"
   "../cmake/FindSDL2.cmake"
   "../cmake/FindSDL2_image.cmake"
   "../cmake/FindSDL2_ttf.cmake"
@@ -55,5 +55,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake"
+  "CMakeFiles/tClient.dir/DependInfo.cmake"
+  "CMakeFiles/tServer.dir/DependInfo.cmake"
   )

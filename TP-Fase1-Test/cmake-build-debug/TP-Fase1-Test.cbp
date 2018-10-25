@@ -8,46 +8,45 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TP-Fase1-Test">
-				<Option output="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tClient">
+				<Option output="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/tClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -58,23 +57,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 tClient"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TP-Fase1-Test/fast">
-				<Option output="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+			<Target title="tClient/fast">
+				<Option output="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/tClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
 					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
 					<Add directory="/usr/include/SDL2"/>
-					<Add directory="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -85,215 +83,392 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP-Fase1-Test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 tClient/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tServer">
+				<Option output="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/tServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 tServer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tServer/fast">
+				<Option output="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/tServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug"/>
+					<Add directory="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 tServer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Character.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Background.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Character.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Background.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Bullet.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/CollisionHard.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Bullet.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Controller.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/CollisionSoft.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Controller.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Model.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/FullHouse.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Model.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/FullHouse.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Pistol.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Ice.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Pistol.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Ice.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Projectile.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/ImgTexture.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Projectile.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/ImgTexture.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Weapon.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/InvalidLogin.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Modelo/Weapon.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/InvalidLogin.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Background.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Piedra.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Background.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Piedra.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Bullet.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/PlataformaBlanda.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Bullet.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/PlataformaBlanda.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controller.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/PlataformaDura.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Controller.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/PlataformaDura.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Exception.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Quit.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Exception.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Quit.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Hielo.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SDLException.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Hielo.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SDLException.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SDLIMGException.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/ImgTexture.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SDLIMGException.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Level.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SdlImgInit.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Level.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SdlImgInit.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Logger.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SdlInit.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Logger.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SdlInit.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Personajes.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Sprite.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Personajes.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Sprite.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Piedra.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SpriteHandler.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Piedra.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/SpriteHandler.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Texture.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/PlataformaBlanda.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Texture.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Verifier.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/PlataformaDura.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Verifier.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLException.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/View.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLException.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/View.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/ViewProtocol.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SDLIMGException.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/ViewProtocol.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Scene.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Viewable.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Scene.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Viewable.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Window.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlImgInit.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/Window.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlInit.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonSDLTTFException.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/SdlInit.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonSDLTTFException.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Sprite.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonSdlTtfInit.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Sprite.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonSdlTtfInit.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Texture.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonTextTexture.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Texture.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/commonTextTexture.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/View.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/lifeSupport.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/View.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/lifeSupport.h">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Viewable.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/main.cpp">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Viewable.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/client/todolist">
+			<Option target="tClient"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Window.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Exception.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/Window.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Exception.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/main.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Level.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugiconfig.hpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Level.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugixml.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Logger.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/pugixml.hpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Logger.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/xml.cpp">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Scene.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/Vista/xml.h">
-			<Option target="TP-Fase1-Test"/>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Scene.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/CMakeLists.txt">
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Socket.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Socket.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Thread.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/Thread.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/pugiconfig.hpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/pugixml.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/pugixml.hpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/xml.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/common/xml.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Character.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Character.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Collector.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Collector.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/CollisionHard.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/CollisionHard.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/CollisionSoft.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/CollisionSoft.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Interpreter.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Interpreter.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Joiner.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Joiner.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Model.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Model.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/ModelProtocol.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/ModelProtocol.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Pistol.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Pistol.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Projectile.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Projectile.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Sender.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Sender.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Weapon.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/Weapon.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/main.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/xmlServer.cpp">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/server/xmlServer.h">
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2.cmake">
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
+		<Unit filename="/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>

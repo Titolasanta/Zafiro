@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fede/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug -I/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo -I/usr/include/SDL2 -I/home/fede/CLionProjects/Zafiro/TP-Fase1-Test 
+CXX_INCLUDES = -I/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug -I/home/tito/Desktop/Tallar/github/TP-Fase1-Test/Modelo -I/usr/include/SDL2 -I/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test 
 
