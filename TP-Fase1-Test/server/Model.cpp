@@ -44,26 +44,26 @@ Model::Model(int initialLevel) : level(initialLevel) {
 }
 
 void Model::rejoinCharacter(int id){
-    jugadorLiseado[id-1] = false;
+    jugadorGrisado[id-1] = false;
 }
 
 void Model::createCharacter(int id){
     switch (currentPlayers) {
         case 0:
             players[currentPlayers] = &player1;
-            jugadorLiseado[currentPlayers] = false;
+            jugadorGrisado[currentPlayers] = false;
             break;
         case 1:
             players[currentPlayers] = &player2;
-            jugadorLiseado[currentPlayers] = false;
+            jugadorGrisado[currentPlayers] = false;
             break;
         case 2:
             players[currentPlayers] = &player3;
-            jugadorLiseado[currentPlayers] = false;
+            jugadorGrisado[currentPlayers] = false;
             break;
         case 3:
             players[currentPlayers] = &player4;
-            jugadorLiseado[currentPlayers] = false;
+            jugadorGrisado[currentPlayers] = false;
             break;
         default:
             currentPlayers--;
@@ -83,9 +83,9 @@ int Model::getCurrentPlayers(){
 void Model::time(){
     int velocidad = maxPlayers;
     for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorLiseado[i];
+        velocidad -= jugadorGrisado[i];
     for (int i = 0; i < currentPlayers; i++) {
-        if (!jugadorLiseado[i]) {
+        if (!jugadorGrisado[i]) {
             players[i]->time(velocidad);
             CollisionHard(*players[i], lPlataformsHard);
             CollisionSoft(*players[i], lPlataformsSoft);
@@ -97,7 +97,7 @@ void Model::time(){
 int Model::XMasChico(Scene &scene){
     int min = 100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if (!jugadorLiseado[i]) {
+        if (!jugadorGrisado[i]) {
             if (min > players[i]->getPositionX())
                 min = players[i]->getPositionX();
         }
@@ -108,7 +108,7 @@ int Model::XMasChico(Scene &scene){
 int Model::YMasGrande(Scene &scene){
     int min = -100000;
     for(int i = 0; i < scene.getCurrentPlayers() ; i++){
-        if (!jugadorLiseado[i]){
+        if (!jugadorGrisado[i]){
             if (min < players[i]->getPositionY())
                 min = players[i]->getPositionY();
         }
@@ -166,7 +166,7 @@ void Model::update(Scene &scene) {
         scene.setWalking(players[i]->isWalking(), i + 1);
         scene.setShooting(players[i]->isShooting(), i + 1);
         scene.setCurrentPlayers(currentPlayers);
-        scene.setJugadorLiseado(jugadorLiseado[i],i + 1);
+        scene.setJugadorGrisado(jugadorGrisado[i], i + 1);
 
         /*if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
@@ -197,7 +197,7 @@ void Model::update(Scene &scene) {
     
     int velocidad = maxPlayers;
     for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorLiseado[i];
+        velocidad -= jugadorGrisado[i];
     for(auto it = lBullets.begin(); it != lBullets.end();)
     {
         it->move(velocidad);
@@ -330,7 +330,7 @@ void Model::shoot(int p){
 
 void Model::bajaJugador(int p) {
     //currentPlayers--;
-    jugadorLiseado[p-1] = true;
+    jugadorGrisado[p-1] = true;
 }
 /*
 const Level &Model::getLevel() const {
@@ -342,8 +342,8 @@ bool Model::getMaxPlayersReached(){
     return maxPlayersReached;
 }
 
-const bool *Model::getJugadorLiseado() const {
-    return jugadorLiseado;
+const bool *Model::getJugadorGrisado() const {
+    return jugadorGrisado;
 }
 
 void Model::placeCamera(Scene &scene){
@@ -352,7 +352,7 @@ void Model::placeCamera(Scene &scene){
     int minY = YMasGrande(scene);
 
     for (int i = 0; i < currentPlayers; i++) {
-        if (jugadorLiseado[i]) continue;
+        if (jugadorGrisado[i]) continue;
 
         if (scene.getLevel() != 2) {
             int playerPosX = players[i]->getPositionX();

@@ -76,7 +76,7 @@ void View::render(Scene& scene) {
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
     bullet.render(scene,camera);
-    personajes.render(scene,camera->x, camera->y);
+    personajes.render(scene, id, camera->x, camera->y);
     window.updateRenderer();
 
     //Center the camera over the player

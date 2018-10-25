@@ -28,9 +28,9 @@ private:
         int currentPlayers = 0;
         int maxPlayers;
         std::mutex mutex;
-        bool jugadorLiseado[4] = {true,true,true,true};
+        bool jugadorGrisado[4] = {true,true,true,true};
 public:
-    const bool *getJugadorLiseado() const;
+    const bool *getJugadorGrisado() const;
 
 private:
     bool maxPlayersReached = false;

@@ -14,7 +14,8 @@ class SpriteHandler {
 
 public:
     explicit SpriteHandler(Window* window);
-    void render(Scene &scene, int cameraX, int cameraY);
+    void render(Scene &scene, int id, int cameraX, int cameraY);
+    void renderSprite(Scene &scene, int i, int cameraX, int cameraY);
 
 private:
     ImgTexture *spriteTexture[4];

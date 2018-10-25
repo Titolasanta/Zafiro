@@ -133,7 +133,7 @@ public:
     int getMaxPlayers(){ return MaxPlayers;}
     
     bool isJugadorLiseado(int p) const { return jugadorLiseado[p-1]; }
-    void setJugadorLiseado(bool b, int p) { jugadorLiseado[p-1] = b; }
+    void setJugadorGrisado(bool b, int p) { jugadorLiseado[p-1] = b; }
 
 };
 

@@ -48,7 +48,7 @@ void Collector::run() {
             auto it = hash.find(msg);
             if(it != hash.end() || !validUP){ //check esta?
                 id = it->second;
-                if(!model.getJugadorLiseado()[id-1] || !validUP){ //esta conectado?
+                if(!model.getJugadorGrisado()[id-1] || !validUP){ //esta conectado?
                     c = 1;
                     skt2.send_all(&c, 1);
                     usleep(600000);
