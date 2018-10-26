@@ -134,6 +134,7 @@ public:
     
     bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
+    bool readyToPlay();
 
 };
 

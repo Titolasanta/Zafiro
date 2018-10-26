@@ -59,5 +59,12 @@ void Controller::processEvent(SDL_Event e) {
 
 void Controller::show() {
     protocol.update(scene);
+    //lobby, espera del resto de los jugadores
+/*    bool ready_to_play = scene.readyToPlay();
+    while(!ready_to_play){
+        view.waiting_for_players();
+        ready_to_play = scene.readyToPlay();
+    }*/
     view.render(scene);
 }
+

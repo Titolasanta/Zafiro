@@ -68,6 +68,7 @@ int main(int argc, char *argv[]) {
 	    const char* port = get_port(doc, doc_default, result);
 		Socket skt(port, 0);
 		skt.start_to_listen();
+		cout << "Listening on port: " << port << "\n";
 
 		Scene scene(get_cantidad_jugadores(doc, doc_default, result));
         Model model(1);

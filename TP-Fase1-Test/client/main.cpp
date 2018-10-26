@@ -104,9 +104,8 @@ int main( int argc, char* argv[] )
         skt.receive_all(&id, 1);
         view.setId(id);
         Controller controller(view, skt);
-
         controller.startGame();
-        
+
     }catch(Finalizo_conexion){
         view.conexionFail();
         logger.log(2, "Se cayo la coneccion");

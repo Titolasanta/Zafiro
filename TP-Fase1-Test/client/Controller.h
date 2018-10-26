@@ -21,6 +21,7 @@ public:
     void nextValidation();
     void unsuccesfullValidation();
 
+
 private:
     View& view;
     ViewProtocol protocol;

@@ -4,6 +4,8 @@
 
 
 #include <cstdio>
+#include <stdio.h>
+#include <iostream>
 #include "Scene.h"
 #include "Logger.h"
 
@@ -70,5 +72,10 @@ void Scene::setVictory(bool victory) {
     Scene::victory = victory;
 }
 
-
+bool Scene::readyToPlay(){
+    if (getCurrentPlayers() < getMaxPlayers()){
+        return false;
+    }
+    return true;
+}
 

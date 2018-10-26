@@ -33,6 +33,9 @@ public:
     void conexionFail();
     void conexionDown();
     void waiting();
+    void waiting_for_players();
+    void levelSummary();
+    void endOfGameScreen();
 private:
     int id;
     SdlImgInit z;

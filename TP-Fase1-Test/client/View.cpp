@@ -86,15 +86,19 @@ void View::render(Scene& scene) {
 }
 
 void View::changeLevel(Scene& scene) {
+    levelSummary();
     ++level;
-    background.changeLevel(level);
-    scene.clearPlatform();
-    int lh = get_level_height( *gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
-    int lw = get_level_width( *gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
-    if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, level, lh, lw);
-    else cargar_plataformas(*gXML_doc[1],scene, level, lh, lw);
+    if (level < 4) {
+        background.changeLevel(level);
+        scene.clearPlatform();
+        int lh = get_level_height(*gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
+        int lw = get_level_width(*gXML_doc[0], *gXML_doc[1], level, *gXML_parse_result);
+        if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, level, lh, lw);
+        else cargar_plataformas(*gXML_doc[1], scene, level, lh, lw);
+    }else{
+        endOfGameScreen();
+    }
 }
-
 void View::moveBackground(int dir) {
     int newOffset= background.getScrollingOffset();
     if(dir > 0) --newOffset;
@@ -175,4 +179,31 @@ void View::waiting() {
     txt.loadFromRenderedText(msg);
     txt.render(100, 250);
     window.updateRenderer();
+}
+
+void View::waiting_for_players() {
+    window.createRectangle(0,1000,0,800);
+
+    std::string msg("Esperando al resto de los jugadores");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
+}
+
+void View::levelSummary() {
+    window.createRectangle(0,1000,0,800);
+    std::string msg("Fin del nivel");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
+    usleep(3000000);
+}
+
+void View::endOfGameScreen() {
+    window.createRectangle(0,1000,0,800);
+    std::string msg("Fin del juego");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
+    usleep(4000000);
 }
