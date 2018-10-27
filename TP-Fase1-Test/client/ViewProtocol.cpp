@@ -5,9 +5,8 @@
 #include <netinet/in.h>
 #include "ViewProtocol.h"
 #include "../common/Socket.h"
-#include "../common/Scene.h"
 
-ViewProtocol::ViewProtocol(Socket &skt) : socket(std::move(skt)) {}
+ViewProtocol::ViewProtocol(Socket &skt) : socket(skt) {}
 
 bool ViewProtocol::validate(std::string toVal) {
     return true;

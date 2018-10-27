@@ -59,6 +59,7 @@ private:
 
     int level=1;
     SDL_Rect * camera = NULL;
+    int inLevelSummary = 0;
 
 };
 

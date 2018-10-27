@@ -35,6 +35,7 @@ public:
 private:
     bool maxPlayersReached = false;
 
+
     public:
         explicit Model(int initialLevel);
         ~Model() = default;

@@ -68,6 +68,7 @@ bool Scene::isVictory() const {
     return victory;
 }
 
+
 void Scene::setVictory(bool victory) {
     Scene::victory = victory;
 }

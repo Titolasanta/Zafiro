@@ -26,7 +26,7 @@ public:
     void stand();
     void stopShooting();
 private:
-    Socket socket;
+    Socket& socket;
 
 };
 

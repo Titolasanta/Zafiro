@@ -9,6 +9,7 @@
 #include <string>
 #include "View.h"
 #include "../common/Socket.h"
+#include "lifeSupport.h"
 
 class Verifier {
 
@@ -16,7 +17,7 @@ class Verifier {
 public:
     void show();
     bool processEvent(SDL_Event);
-    Verifier(View& view, Socket& skt);
+    Verifier(View& view, Socket& skt,lifeSupport& ls);
     bool resetData();
     bool readChar(SDL_Event);
     bool nextValidation();
@@ -24,8 +25,9 @@ public:
     void verify();
 
 private:
+    lifeSupport &ls;
     View& view;
-    Socket socket;
+    Socket& socket;
     bool validated = false;
     bool onPass = false;
     std::string UvalidationData;

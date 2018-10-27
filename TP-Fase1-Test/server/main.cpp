@@ -14,6 +14,8 @@
 #include "../common/Logger.h"
 #include "../common/xml.h"
 #include "../server/xmlServer.h"
+#include "SignalReceiver.h"
+#include "SignalChecker.h"
 
 #define SPIRIT_PATH "sprites/NES - Contra - Bill Rizer & Lance Bean.png"
 #define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
@@ -85,10 +87,14 @@ int main(int argc, char *argv[]) {
     	Collector colector(skt, pList, queue, mutex, model);
     	Interpreter interpreter(pList, queue, mutex, model, scene);
     	Sender sender(pList, scene, model);
+    	SignalReceiver signalReceiver(pList);
+    	SignalChecker signalChecker(signalReceiver);
 
     	colector.start();
     	interpreter.start();
     	sender.start();
+    	signalChecker.start();
+    	signalReceiver.start();
 
     	while(true) {
 	    	if('q' == getchar())
@@ -99,7 +105,11 @@ int main(int argc, char *argv[]) {
         sender.end();
 	    colector.join();
         interpreter.join();
-        sender.join();       
+        sender.join();
+        signalReceiver.join();
+        signalReceiver.end();
+        signalChecker.join();
+        signalChecker.end();
         for (auto it = pList.begin(); it != pList.end(); it++) {
             it->end();
             it->join();

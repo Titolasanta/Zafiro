@@ -5,12 +5,31 @@
 #include <zconf.h>
 #include "lifeSupport.h"
 
-lifeSupport::lifeSupport(Socket &skt,bool& quit) : skt(std::move(skt)),quit(quit) {}
+lifeSupport::lifeSupport(){}
+void lifeSupport::controlSocket(Socket* sktRec){
+    skt = sktRec;
+}
+
+void lifeSupport::end(){
+    quit = true;
+}
+
+void lifeSupport::report() {
+    std::lock_guard<std::mutex> lock(mutex);
+    this->onCheck = true;
+}
 
 void lifeSupport::run() {
-    while(!quit) {
-        usleep(100000);
-        if(!skt.isValid())
+    while(!quit){
+        usleep(3000000); //3 seg
+        std::lock_guard<std::mutex> lock(mutex);
+        if(!this->onCheck){
+            skt->manual_close();
             quit = true;
+        }else{
+            this->onCheck = false;
+        }
     }
+    int i;
 }
+

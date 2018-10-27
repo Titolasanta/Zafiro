@@ -11,11 +11,19 @@
 
 class lifeSupport : public Thread{
 public:
-    lifeSupport(Socket& skt,bool& quit);
+    lifeSupport();
     virtual void run();
+    void controlSocket(Socket*);
+    void end();
+    void report();
+    ~lifeSupport(){    
+        join();
+    }
 private:
-    Socket skt;
-    bool& quit;
+    Socket* skt;
+    std::mutex mutex;
+    bool quit = false;
+    bool onCheck = true;
 };
 
 

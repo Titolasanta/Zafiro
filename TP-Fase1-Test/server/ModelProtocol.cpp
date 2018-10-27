@@ -10,8 +10,8 @@
 #include "ModelProtocol.h"
 #include "../common/Exception.h"
 
-ModelProtocol::ModelProtocol(Socket &skt, std::queue<char>& queue,char id,std::mutex& mutex)
-:skt(std::move(skt)),queue(queue),id(id),mutex(mutex){}
+ModelProtocol::ModelProtocol(Socket &skt, std::queue<char>& queue,char id,std::mutex& mutex,Socket& sktAux)
+:skt(std::move(skt)),queue(queue),id(id),mutex(mutex),sktSignal(std::move(sktAux)){}
 
 void sendValue(Socket& skt, int value){
     unsigned int to_send = value;
@@ -28,6 +28,11 @@ void ModelProtocol::run() {
         msg[0] = id;
         try {
             skt.receive_all(&(msg[1]), 2);
+        }catch(Finalizo_conexion){
+            msg[1] = 'f';
+            msg[2] = 'c';
+            printf("mensaje en model protocol run a borrara\n");
+            quit = true;
         }catch(...){
             break;
         }
@@ -40,11 +45,14 @@ void ModelProtocol::run() {
 }
 
 void ModelProtocol::end(){
+    skt.manual_close();
+    sktSignal.manual_close();
     quit = true;
 }
 
 
-ModelProtocol::ModelProtocol(ModelProtocol&& other) : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue) {
+ModelProtocol::ModelProtocol(ModelProtocol&& other)
+: skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue),sktSignal(std::move(other.sktSignal)) {
     printf("lo hice 1 vaez\n");
     this->thread = std::move(other.thread);
     this->id = other.id;
@@ -95,4 +103,9 @@ ModelProtocol::~ModelProtocol(){
 
 char ModelProtocol::getId() const {
     return id;
+}
+
+void ModelProtocol::receiveLatency(){
+    char msg;
+    sktSignal.receive_all(&msg,1);
 }

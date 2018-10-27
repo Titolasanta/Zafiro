@@ -33,6 +33,13 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "as")) model.aimStraight(msg[0]);
            else if (!strcmp(&msg[1], "sd")) model.stand(msg[0]);
            else if (!strcmp(&msg[1], "ss")) model.stopShooting(msg[0]);
+           else if (!strcmp(&msg[1], "fc")){
+               model.bajaJugador(msg[0]);
+               for (auto it = protocolList.begin(); it != protocolList.end(); it++) {
+                   if (msg[0] == it->getId())
+                       it = protocolList.erase(it); //falta un mutex, pero meh
+               }
+           } 
        }
   /*  mutex.lock();
     model.update(scene);

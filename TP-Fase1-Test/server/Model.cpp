@@ -116,7 +116,6 @@ int Model::YMasGrande(Scene &scene){
     return min;
 }
 
-
 void Model::update(Scene &scene) {
 
     std::lock_guard<std::mutex> mute(mutex);
@@ -368,8 +367,6 @@ void Model::placeCamera(Scene &scene){
                         players[i]->setPositionX(770 + cam->x);
                         players[i]->setVelocityX(0);
                     }
-
-
                 }
             }
         }else {

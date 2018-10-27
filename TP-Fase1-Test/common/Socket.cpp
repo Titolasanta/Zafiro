@@ -18,6 +18,27 @@
 #include <netinet/tcp.h>
 
 using std::string;
+
+bool isclosed (int sock) {
+    char x;
+    interrupted:
+    ssize_t r = ::recv(sock, &x, 1, MSG_DONTWAIT|MSG_PEEK);
+    if (r < 0) {
+        switch (errno) {
+            case EINTR:     goto interrupted;
+            case EAGAIN:    break; /* empty rx queue */
+            case ETIMEDOUT: break; /* recv timeout */
+            case ENOTCONN:  break; /* not connected yet */
+            default:        break; throw(errno);
+        }
+    }
+    return r == 0;
+}
+
+
+
+
+
 static int connect_socket(int skt, struct addrinfo* ptr) {
 	int error;
 	error = connect(skt, ptr->ai_addr, ptr->ai_addrlen);
@@ -72,11 +93,6 @@ Socket::Socket(const char* port, const char* ip) {
 			if (ip) {
 				error = connect_socket(skt, ptr);
 				in_connection = (error != -1);
-                int s = setsockopt(skt_id, SOL_SOCKET, SO_KEEPALIVE, &val, sizeof(val));
-                s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPIDLE, &val, sizeof(val));
-                s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPINTVL, &val, sizeof(val));
-                val = 3;
-                s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPCNT, &val, sizeof(val));
 			} else {
 
                 val = 1;
@@ -143,13 +159,7 @@ Socket Socket::accept_connection() {
 		throw accept_fail();
 	}	
 	Socket skt_a_devolver(skt_id_nuevo);
-    int val = 1;
-    int s = setsockopt(skt_id, SOL_SOCKET, SO_KEEPALIVE, &val, sizeof(val));
-    s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPIDLE, &val, sizeof(val));
-    s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPINTVL, &val, sizeof(val));
-    val = 3;
-    s = setsockopt(skt_id, IPPROTO_TCP, TCP_KEEPCNT, &val, sizeof(val));
-	return std::move(skt_a_devolver);
+    return std::move(skt_a_devolver);
 }
 
 
@@ -157,12 +167,12 @@ ssize_t Socket::receive_all(char* msg, int len) {
 	bool valid_socket = true;
 	ssize_t temp = 1;
 	ssize_t amount_received = 0;
-	while (valid_socket && amount_received < len) { 
-		temp = recv(skt_id, &msg[amount_received], len-amount_received, 0);
+	while (valid_socket && amount_received < len) {
+	    temp = recv(skt_id, &msg[amount_received], len-amount_received, 0);
 		if (temp <= 0)
 			valid_socket = false;
 		else
-			amount_received += temp;	
+			amount_received += temp;
 	}
 	msg[amount_received] = 0;
 
@@ -171,7 +181,7 @@ ssize_t Socket::receive_all(char* msg, int len) {
 	else if (temp < 0 )
 		throw OSError("problema inesperado al recibir mensage:");
 	return amount_received;
-}	
+}
 
 ssize_t Socket::send_all(const char* msg, int len) {
 	ssize_t size_sent = 0;
@@ -179,7 +189,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 
 	bool valid_socket = true;	
 	while (size_sent < len && valid_socket) {
-		temp = send(skt_id, &msg[size_sent], len - size_sent, MSG_DONTWAIT);
+		temp = send(skt_id, &msg[size_sent], len - size_sent, 0);
 		if (temp <= 0)
 			valid_socket = false;		
 		else
@@ -216,20 +226,13 @@ ssize_t Socket::receive_all(string& str, size_t len){
 	return leidoTotal;
 }
 
-void Socket::flush(){
-	char aux[1000];
-	recv(skt_id, aux, 1000, MSG_DONTWAIT);
+void Socket::makeNonBlocking() {
+
+    struct timeval tv;
+    tv.tv_sec = 1;
+    tv.tv_usec = 0;
+    setsockopt(skt_id, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
 }
-
-
-bool Socket::isValid() {
-    return is_valid;
-}
-
-
-
-
-
 
 
 

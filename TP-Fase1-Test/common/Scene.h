@@ -33,6 +33,7 @@ public:
     void setVictory(bool victory);
 
 
+
 private:
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
     std::list<std::tuple<int,int,int>> lPlataformsHard;

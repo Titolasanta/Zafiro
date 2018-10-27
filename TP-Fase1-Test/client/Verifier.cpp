@@ -9,7 +9,7 @@
 
 extern Logger *gplogger;
 
-Verifier::Verifier(View &view, Socket &skt) : view(view),socket(std::move(skt)) {
+Verifier::Verifier(View &view, Socket &skt, lifeSupport& ls) : view(view),socket(skt),ls(ls) {
     UvalidationData = "";
     PvalidationData = "";
     gplogger->log(3, "Se crea el Verificador");
@@ -113,4 +113,5 @@ bool Verifier::processEvent(SDL_Event e) {
 
 void Verifier::show() {
     view.renderValidationScreen(UvalidationData,PvalidationData);
+    ls.report();
 }

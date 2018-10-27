@@ -12,18 +12,18 @@
 
 class ModelProtocol : public Thread {
 public:
-    ModelProtocol(Socket&  ,std::queue<char>& ,char id, std::mutex& mutex);
+    ModelProtocol(Socket&  ,std::queue<char>& ,char id, std::mutex& mutex,Socket&);
     void run() override;
     void end();
     void send(Scene& scene);
-
+    void receiveLatency();
     ModelProtocol(ModelProtocol&& other);
     
     ModelProtocol& operator=(ModelProtocol&& other) = delete;
     ~ModelProtocol();
 private:
     Socket skt;
-    //Socket sktAux;
+    Socket sktSignal;
     char id;
 public:
     char getId() const;

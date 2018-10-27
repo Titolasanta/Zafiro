@@ -71,21 +71,22 @@ int main( int argc, char* argv[] )
     char id = 0;
     const char* port = get_port(doc, doc_default, result);
     View view(SCREEN_WIDTH, SCREEN_HEIGHT);
+    lifeSupport ls;
 
     try {
-        Socket skt(port, get_ip(doc, doc_default, result));
         bool quit = false;
-        //Socket sktAux(port, get_ip(doc, doc_default, result));
-        //lifeSupport ls(sktAux,quit);
-        //ls.start();
+        Socket skt(port, get_ip(doc, doc_default, result));
+        Socket sktLatido(port, get_ip(doc, doc_default, result));
+
+        ls.controlSocket(&skt);
 
         view.waiting();
         
         skt.receive_all(&id, 1); //verifica que el server le de bola
         
-        Verifier verifier(view,skt);
+        Verifier verifier(view,skt,ls);
         SDL_Event e;
-        
+        ls.start();
         //limpio eventos de mientras esperaba q me d bola el server
         while (SDL_PollEvent(&e) != 0){
             if (e.type == SDL_QUIT) { throw Quit(); }
@@ -96,6 +97,7 @@ int main( int argc, char* argv[] )
                 quit = verifier.processEvent(e);
                 if (e.type == SDL_QUIT) { throw Quit(); }
             }
+            sktLatido.send_all("1",1);
             verifier.show();
         }
 
@@ -103,7 +105,7 @@ int main( int argc, char* argv[] )
 
         skt.receive_all(&id, 1);
         view.setId(id);
-        Controller controller(view, skt);
+        Controller controller(view, skt,ls,sktLatido);
         controller.startGame();
 
     }catch(Finalizo_conexion){
@@ -118,10 +120,12 @@ int main( int argc, char* argv[] )
         logger.log(2, "Error al loggear al juego");
     }catch(Quit){
         logger.log(2, "Usuario cerro el juego");
-    }catch(...){
+    }/*catch(...){
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
-    }
+    }*/
+    ls.end();
+    ls.join();
     logger.log(2, "Se cerró el juego");
     logger.cerrar_archivo();
 

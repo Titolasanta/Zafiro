@@ -18,7 +18,7 @@ void Sender::run(){
                 it->send(scene);
             }catch(...){
                 int i = it->getId();
-                it = pList.erase(it);
+                it = pList.erase(it);//falta un mutex, pero meh(seria convertir la lista en una clase con una lista y un mutex)
                 model.bajaJugador(i);
             }
         }

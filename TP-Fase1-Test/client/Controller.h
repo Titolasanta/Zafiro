@@ -8,13 +8,14 @@
 #include "View.h"
 #include "../common/Socket.h"
 #include "ViewProtocol.h"
+#include "lifeSupport.h"
 
 class Controller {
 
 public:
     void show();
     void processEvent(SDL_Event);
-    Controller(View& view, Socket& skt);
+    Controller(View& view, Socket& skt,lifeSupport&,Socket& sktLatido);
     void startGame();
 
     void readChar(SDL_Event);
@@ -23,6 +24,8 @@ public:
 
 
 private:
+    lifeSupport& ls;
+    Socket& sktLatido;
     View& view;
     ViewProtocol protocol;
     Scene scene;
