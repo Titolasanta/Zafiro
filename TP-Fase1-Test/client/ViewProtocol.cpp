@@ -115,6 +115,10 @@ void ViewProtocol::update(Scene& scene){
     scene.setLevel(receiveNumber(socket));
     scene.setCurrentPlayers(receiveNumber(socket));
     scene.setVictory(receiveNumber(socket));
+    if (scene.getCurrentPlayers() == scene.getMaxPlayers()) {
+        scene.setAllPlayersConnected(true);
+    }
+
 
 
 }

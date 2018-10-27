@@ -168,6 +168,10 @@ void Model::update(Scene &scene) {
         scene.setCurrentPlayers(currentPlayers);
         scene.setJugadorGrisado(jugadorGrisado[i], i + 1);
 
+        if (getCurrentPlayers() == getMaxPlayers()) {
+            scene.setAllPlayersConnected(true);
+        }
+
         /*if (scene.getLevel() != 2) {
             if (scene.getPositionX(i + 1) > MARGENX + cam->x)
                 moveCamAdelante++;
@@ -383,3 +387,4 @@ void Model::placeCamera(Scene &scene){
         }
     }
 }
+
