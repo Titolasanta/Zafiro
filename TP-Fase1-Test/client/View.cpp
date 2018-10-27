@@ -17,12 +17,22 @@ extern pugi::xml_document *gXML_doc[2];
 extern pugi::xml_parse_result *gXML_parse_result;
 
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
-: window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
+: window("Contra",SCREEN_WIDTH,SCREEN_HEIGHT),
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
-,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
+,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())),
+loginImages{
+    (std::move(window.createImgTexture(0xFF, 0xFF, 0xFF))),
+    (std::move(window.createImgTexture(0xFF, 0xFF, 0xFF))),
+    (std::move(window.createImgTexture(0xFF, 0xFF, 0xFF))),
+    (std::move(window.createImgTexture(0xFF, 0xFF, 0xFF)))
+}
 {
+    loginImages[0].loadFromFile("../escenario/gif1.png");
+    loginImages[1].loadFromFile("../escenario/gif2.png");
+    loginImages[2].loadFromFile("../escenario/gif3.png");
+    loginImages[3].loadFromFile("../escenario/gif4.png");
    // window.setRenderDrawColor(0x10  ,0x10,0xFF,0x120);
     std::string msg("Clave:");
     pass.loadFromRenderedText(msg);
@@ -113,72 +123,96 @@ void View::moveBackground(int dir) {
 
 
 void View::renderValidationScreen(std::string& Uinserted,std::string& Pinserted) {
-
     window.createRectangle(0,1000,0,800);
 
-    insert1.render(100,70);
-    insert2.render(100,100);
+    for (int i = 0; i < 4; i++) {
+        loginImages[i].render(0, 0);
+        insert1.render(25, 220);
+        insert2.render(25, 250);
 
-    usr.render(100,150);
+        usr.render(25, 300);
 
-    if(!Uinserted.empty()) {
-        txt.loadFromRenderedText(Uinserted);
-        txt.render(100, 180);
+        if (!Uinserted.empty()) {
+            txt.loadFromRenderedText(Uinserted);
+            txt.render(25, 330);
+        }
+        pass.render(25, 400);
+        if (!Pinserted.empty()) {
+            txt.loadFromRenderedText(Pinserted);
+            txt.render(25, 430);
+        }
+        window.updateRenderer();
+       // usleep(200000);  // si pongo esta linea se rompe toodo
     }
-    pass.render(100,250);
-    if(!Pinserted.empty()) {
-        txt.loadFromRenderedText(Pinserted);
-        txt.render(100, 280);
-    }
-    window.updateRenderer();
 }
 
 void View::fullHouseMesage() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("El servidor no tiene mas cupos.");
-    txt.loadFromRenderedText(msg);
-    txt.render(200, 250);
-    window.updateRenderer();
-    usleep(4000000);
+    int img;
+    for (int i = 0; i < 24; i++){
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("El servidor no tiene mas cupos.");
+        txt.loadFromRenderedText(msg);
+        txt.render(200, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 
 void View::invalidLoginMesage() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("El usuario ingresado es invalido o ya esta en uso.");
-    txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
-    window.updateRenderer();
-    usleep(4000000);
+    int img;
+    for (int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("El usuario ingresado es invalido o ya esta en uso.");
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 
 void View::conexionFail() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("El servidor se cayo.");
-    txt.loadFromRenderedText(msg);
-    txt.render(200, 250);
-    window.updateRenderer();
-    usleep(4000000);
+    int img;
+    for (int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("El servidor se cayo.");
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 
 void View::conexionDown() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("No se encontro el servidor.");
-    txt.loadFromRenderedText(msg);
-    txt.render(200, 250);
-    window.updateRenderer();
-    usleep(4000000);
+    int img;
+    for (int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("No se encontro el servidor.");
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 void View::waiting() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("El servidor esta ocupado, aguarde su turno.");
-    txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
-    window.updateRenderer();
+    int img;
+    for (int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("El servidor esta ocupado, aguarde su turno.");
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 
 void View::waiting_for_players() {
@@ -192,11 +226,16 @@ void View::waiting_for_players() {
 
 void View::levelSummary() {
     window.createRectangle(0,1000,0,800);
-    std::string msg("Fin del nivel");
-    txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
-    window.updateRenderer();
-    usleep(3000000);
+    int img;
+    for (int i = 0; i < 12; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("Fin del nivel");
+        txt.loadFromRenderedText(msg);
+        txt.render(100, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 
 void View::endOfGameScreen() {

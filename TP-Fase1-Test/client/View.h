@@ -55,6 +55,7 @@ private:
     TextTexture insert2;
     TextTexture usr;
     TextTexture pass;
+    ImgTexture loginImages[4];
 
     int level=1;
     SDL_Rect * camera = NULL;
