@@ -27,6 +27,11 @@ public:
     void setBullets(std::list<std::tuple<int,int>>);
 
     void clearPlatform();
+    bool isAllPlayersConnected() const;
+    void setAllPlayersConnected(bool allPlayersConnected);
+    bool isVictory() const;
+    void setVictory(bool victory);
+
 
 private:
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
@@ -43,10 +48,7 @@ private:
     int velocityX[4];
     int velocityY[4];
     bool victory = false;
-public:
-    bool isVictory() const;
-
-    void setVictory(bool victory);
+    bool allPlayersConnected = false;
 
 private:
 //  int accelerationX[4];
@@ -134,7 +136,6 @@ public:
     
     bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
-    bool readyToPlay();
 
 };
 

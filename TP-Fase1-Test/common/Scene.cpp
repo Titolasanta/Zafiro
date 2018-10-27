@@ -72,10 +72,11 @@ void Scene::setVictory(bool victory) {
     Scene::victory = victory;
 }
 
-bool Scene::readyToPlay(){
-    if (getCurrentPlayers() < getMaxPlayers()){
-        return false;
-    }
-    return true;
+bool Scene::isAllPlayersConnected() const {
+    return allPlayersConnected;
+}
+
+void Scene::setAllPlayersConnected(bool allPlayersConnected) {
+    Scene::allPlayersConnected = allPlayersConnected;
 }
 

@@ -1,7 +1,7 @@
 //
 // Created by tito on 13/09/18.
 //
-
+#include <iostream>
 #include "Controller.h"
 #include "../common/Logger.h"
 #include "../common/pugixml.hpp"
@@ -60,11 +60,10 @@ void Controller::processEvent(SDL_Event e) {
 void Controller::show() {
     protocol.update(scene);
     //lobby, espera del resto de los jugadores
-/*    bool ready_to_play = scene.readyToPlay();
-    while(!ready_to_play){
+    if (!scene.isAllPlayersConnected()) {
         view.waiting_for_players();
-        ready_to_play = scene.readyToPlay();
-    }*/
-    view.render(scene);
+    } else{
+        view.render(scene);
+    }
 }
 
