@@ -217,7 +217,7 @@ void View::waiting() {
 
 void View::waiting_for_players() {
     window.createRectangle(0,1000,0,800);
-
+    window.setRenderDrawColor( 0,0,0,0);
     std::string msg("Esperando al resto de los jugadores");
     txt.loadFromRenderedText(msg);
     txt.render(100, 250);

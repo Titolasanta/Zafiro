@@ -8,7 +8,8 @@
 TextTexture::TextTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b)
 : Texture(renderer) {
 	//Initialize
-	mFont = TTF_OpenFont( "../txt/OpenSans-Regular.ttf", 28 );
+	mFont = TTF_OpenFont( "../txt/emulogic.ttf", 18 );
+   // mFont = TTF_OpenFont( "../txt/OpenSans-Regular.ttf", 28 );
 	if( mFont == NULL ){
 		throw SDLTTFError("no se pudo cargar el tipo de texto resources/ttf/OpenSans/OpenSans-Regular.ttf");
 	}
@@ -27,7 +28,7 @@ void TextTexture::free(){
 
 
 TextTexture::TextTexture(TextTexture&& other) : Texture(std::move(other) ){
-	mFont = TTF_OpenFont( "../txt/OpenSans-Regular.ttf", 28 );
+    mFont = TTF_OpenFont( "../txt/emulogic.ttf", 18 );
 	mFontColor = other.mFontColor;
 	other.mFont = NULL;
 	other.free();
