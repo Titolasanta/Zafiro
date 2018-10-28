@@ -171,10 +171,7 @@ void Character::goThroughPlatform(){
     gplogger->log(3, "El personaje atraviesa una plataforma");
 }
 
-void Character::spawn(SDL_Rect cam) {
-
-    positionY = cam.y + 310;
-    positionX = cam.x + 200;
+void Character::spawn() {
     velocityY = 0;
     velocityX = 0;
     airborne = false;
@@ -186,7 +183,6 @@ void Character::spawn(SDL_Rect cam) {
     lookingRight = true;
     dead = false;
     aimDirection = 0;
-
 }
 
 void Character::nextLevel() {
@@ -202,9 +198,7 @@ void Character::setVelocityY(int velocityY) {
 }
 
 bool Character::canGoThrough() {
-    if(!(currentPlatHard))
-        return true;
-    return false;
+    return !currentPlatHard;
 }
 
 bool Character::isShooting() const {
@@ -217,7 +211,22 @@ void Character::setShooting(bool shooting) {
 
 void Character::stopShoot() {
 //    setShooting(false);
-
 }
 
-
+void Character::respawn(Scene& scene, SDL_Rect cam, Character *players[]){
+    int connectedPlayers = 0;
+    for (int i = 1; i <= scene.getMaxPlayers(); i++) connectedPlayers += !scene.isJugadorGrisado(i);
+    if (connectedPlayers == 1){
+        positionY = cam.y + 310;
+        positionX = cam.x + 200;
+        spawn();
+    } else {
+        for (int i = 1; i <= scene.getMaxPlayers(); i++){
+            if ((scene.isJugadorGrisado(i)) || (players[i-1]->getPositionY() == positionY)) continue;
+            positionX = players[i-1]->getPositionX();
+            positionY = players[i-1]->getPositionY() - 50;
+            spawn();
+            break;
+        }
+    }
+}
