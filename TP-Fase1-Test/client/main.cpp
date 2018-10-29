@@ -109,7 +109,8 @@ int main( int argc, char* argv[] )
         controller.startGame();
 
     }catch(Finalizo_conexion){
-        view.conexionFail();
+        if(view.getLevel() == 3) view.endOfGameScreen();
+        else view.conexionFail();
         logger.log(2, "Se cayo la coneccion");
         return 0;
     }catch(FullHouse){

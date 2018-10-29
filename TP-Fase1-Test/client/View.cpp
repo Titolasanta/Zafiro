@@ -156,7 +156,7 @@ void View::renderValidationScreen(std::string& Uinserted,std::string& Pinserted)
 void View::fullHouseMesage() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("El servidor no tiene mas cupos.");
@@ -187,28 +187,28 @@ void View::invalidLoginMesage() {
 void View::conexionFail() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("El servidor se cayo.");
         txt.loadFromRenderedText(msg);
         txt.render(50, 250);
         window.updateRenderer();
-        usleep(250000);
+        usleep(75000);
     }
 }
 
 void View::conexionDown() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("No se encontro el servidor.");
         txt.loadFromRenderedText(msg);
         txt.render(50, 250);
         window.updateRenderer();
-        usleep(250000);
+        usleep(75000);
     }
 }
 void View::waiting() {
@@ -239,27 +239,26 @@ void View::waiting_for_players() {
 
 void View::levelSummary() {
     window.createRectangle(0,1000,0,800);
-    int img;
-    for (int i = 0; i < 12; i++) {
-        img = i % 4;
-        loginImages[img].render(0, 0);
-        std::string msg("Fin del nivel");
-        txt.loadFromRenderedText(msg);
-        txt.render(100, 250);
-        window.updateRenderer();
-    }
+    loginImages[currentImage % 4].render(0, 0);
+    currentImage++;
+    std::string msg("Fin del nivel");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
 }
 
 void View::endOfGameScreen() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("Fin del juego");
         txt.loadFromRenderedText(msg);
         txt.render(100, 250);
         window.updateRenderer();
-        usleep(250000);
+        usleep(75000);
     }
 }
+
+int View::getLevel(){ return level; }

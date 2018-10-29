@@ -36,6 +36,7 @@ public:
     void waiting_for_players();
     void levelSummary();
     void endOfGameScreen();
+    int getLevel();
 private:
     int id;
     int currentImage = 0;
