@@ -119,5 +119,5 @@ void ViewProtocol::update(Scene& scene){
         scene.setAllPlayersConnected(true);
     }
     std::string aux;
-    socket.receive_all(aux,1);
+    //socket.receive_all(aux,1);
 }
