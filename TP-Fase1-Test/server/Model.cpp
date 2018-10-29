@@ -363,7 +363,7 @@ void Model::placeCamera(Scene &scene){
             int playerPosX = players[i]->getPositionX();
             if (playerPosX > cam->x + MARGENX) {
                 if (minX > cam->x + 50 && currentPlayers == maxPlayers) {
-                    scene.setCameraX(cam->x + 20);
+                    scene.setCameraX(cam->x + 21);
                 } else {
                     if (players[i]->getPositionX() > 770 + cam->x) {
                         players[i]->setPositionX(770 + cam->x);

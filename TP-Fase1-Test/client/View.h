@@ -38,6 +38,7 @@ public:
     void levelSummary();
     void endOfGameScreen();
     int isInLevelSummary();
+    int getLevel();
 private:
     int id;
     int currentImage = 0;

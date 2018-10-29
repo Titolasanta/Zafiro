@@ -100,7 +100,9 @@ int main( int argc, char* argv[] )
             sktLatido.send_all("1",1);
             verifier.show();
         }
-        
+
+
+
         skt.receive_all(&id, 1);
         view.setId(id);
         Controller controller(view, skt,ls,sktLatido);
@@ -108,7 +110,8 @@ int main( int argc, char* argv[] )
 
     }catch(Finalizo_conexion) {
         if (!cutedConnection){
-            view.conexionFail();
+            if(view.getLevel() == 3) view.endOfGameScreen();
+            else view.conexionFail();
             logger.log(2, "Se cayo la coneccion");
             return 0;
         }else {
