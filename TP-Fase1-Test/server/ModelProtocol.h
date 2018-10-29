@@ -16,6 +16,7 @@ public:
     void run() override;
     void end();
     void send(Scene& scene);
+    void sendGo();
     void receiveLatency();
     ModelProtocol(ModelProtocol&& other);
     

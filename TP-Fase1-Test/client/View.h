@@ -31,11 +31,13 @@ public:
     void fullHouseMesage();
     void invalidLoginMesage();
     void conexionFail();
+    void conexionFail2();
     void conexionDown();
     void waiting();
     void waiting_for_players();
     void levelSummary();
     void endOfGameScreen();
+    int isInLevelSummary();
 private:
     int id;
     int currentImage = 0;

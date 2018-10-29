@@ -71,8 +71,8 @@ int main( int argc, char* argv[] )
     char id = 0;
     const char* port = get_port(doc, doc_default, result);
     View view(SCREEN_WIDTH, SCREEN_HEIGHT);
-    lifeSupport ls;
-
+    bool cutedConnection = false;
+    lifeSupport ls(cutedConnection);
     try {
         bool quit = false;
         Socket skt(port, get_ip(doc, doc_default, result));
@@ -100,18 +100,22 @@ int main( int argc, char* argv[] )
             sktLatido.send_all("1",1);
             verifier.show();
         }
-
-
-
+        
         skt.receive_all(&id, 1);
         view.setId(id);
         Controller controller(view, skt,ls,sktLatido);
         controller.startGame();
 
-    }catch(Finalizo_conexion){
-        view.conexionFail();
-        logger.log(2, "Se cayo la coneccion");
-        return 0;
+    }catch(Finalizo_conexion) {
+        if (!cutedConnection){
+            view.conexionFail();
+            logger.log(2, "Se cayo la coneccion");
+            return 0;
+        }else {
+            view.conexionFail2();
+            logger.log(2, "Se cayo la coneccion");
+            return 0;
+        }
     }catch(FullHouse){
         view.fullHouseMesage();
         logger.log(2, "Cliente leyo que esta lleno el server");
@@ -120,10 +124,10 @@ int main( int argc, char* argv[] )
         logger.log(2, "Error al loggear al juego");
     }catch(Quit){
         logger.log(2, "Usuario cerro el juego");
-    }/*catch(...){
+    }catch(...){
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
-    }*/
+    }
     ls.end();
     ls.join();
     logger.log(2, "Se cerró el juego");

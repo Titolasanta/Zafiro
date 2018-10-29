@@ -3,6 +3,7 @@
 //
 
 #include <netinet/in.h>
+#include <zconf.h>
 #include "ViewProtocol.h"
 #include "../common/Socket.h"
 
@@ -117,7 +118,6 @@ void ViewProtocol::update(Scene& scene){
     if (scene.getCurrentPlayers() == scene.getMaxPlayers()) {
         scene.setAllPlayersConnected(true);
     }
-
-
-
+    std::string aux;
+    socket.receive_all(aux,1);
 }

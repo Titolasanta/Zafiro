@@ -1,4 +1,4 @@
-/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/tClient.dir
-/home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/tServer.dir
+/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/tClient.dir
+/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/tServer.dir

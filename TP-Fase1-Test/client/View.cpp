@@ -21,11 +21,11 @@ View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
-,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())), insert2bis(std::move(window.createTextTexture())),
-loginImages{std::move(window.createImgTexture()),
-            std::move(window.createImgTexture()),
-            std::move(window.createImgTexture()),
-            std::move(window.createImgTexture())}
+,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())),
+  loginImages{std::move(window.createImgTexture()),
+              std::move(window.createImgTexture()),
+              std::move(window.createImgTexture()),
+              std::move(window.createImgTexture())}
 {
     loginImages[0].loadFromFile("../escenario/gif1.png");
     loginImages[1].loadFromFile("../escenario/gif2.png");
@@ -54,6 +54,10 @@ loginImages{std::move(window.createImgTexture()),
 
 void View::setId(int recid) {
     this->id = recid;
+}
+
+int View::isInLevelSummary(){
+    return inLevelSummary;
 }
 
 void View::render(Scene& scene) {
@@ -140,7 +144,7 @@ void View::renderValidationScreen(std::string& Uinserted,std::string& Pinserted)
 
     usr.render(50, 370);
 
-    if (!Uinserted.empty()) {
+    if(!Uinserted.empty()) {
         txt.loadFromRenderedText(Uinserted);
         txt.render(50, 400);
     }
@@ -192,7 +196,21 @@ void View::conexionFail() {
         loginImages[img].render(0, 0);
         std::string msg("El servidor se cayo.");
         txt.loadFromRenderedText(msg);
-        txt.render(50, 250);
+        txt.render(200, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
+}
+
+void View::conexionFail2() {
+    window.createRectangle(0,1000,0,800);
+    int img;
+    for(int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("Se perdio senial al servidor.");
+        txt.loadFromRenderedText(msg);
+        txt.render(200, 250);
         window.updateRenderer();
         usleep(250000);
     }
@@ -239,15 +257,13 @@ void View::waiting_for_players() {
 
 void View::levelSummary() {
     window.createRectangle(0,1000,0,800);
-    int img;
-    for (int i = 0; i < 12; i++) {
-        img = i % 4;
-        loginImages[img].render(0, 0);
-        std::string msg("Fin del nivel");
-        txt.loadFromRenderedText(msg);
-        txt.render(100, 250);
-        window.updateRenderer();
-    }
+    currentImage++;
+    loginImages[currentImage%4].render(0, 0);
+    std::string msg("Fin del nivel");
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 250);
+    window.updateRenderer();
+
 }
 
 void View::endOfGameScreen() {

@@ -12,7 +12,7 @@ void SignalChecker::run(){
         if(signalReceiver.running){
             signalReceiver.running = false;
             signalReceiver.mutex.unlock();
-            usleep(1000000);
+            usleep(4000000);
         }else{
             signalReceiver.closeCurrent();
             signalReceiver.mutex.unlock();

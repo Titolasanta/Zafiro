@@ -64,36 +64,40 @@ void ModelProtocol::send(Scene& scene){
     int p = scene.getMaxPlayers();
     std::lock_guard<std::mutex> lg(mutex);
 
-        for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
-            sendValue(skt, std::get<0>(*it));
-            sendValue(skt, std::get<1>(*it));
-        }
-        sendValue(skt, -1);
-        for (int i = 0; i < p; i++) {
-            //sktAux.flush();
-            //sktAux.send_all("1",1);
-            //std::list<std::tuple<int,int>> lBullets;
-            sendValue(skt, scene.getPositionX(i + 1));
-            sendValue(skt, scene.getPositionY(i + 1));
-            sendValue(skt, scene.getVelocityX(i + 1));
-            sendValue(skt, scene.getVelocityY(i + 1));
-            sendValue(skt, scene.getHitPoints(i + 1));
-            sendValue(skt, scene.isWalking(i + 1));
-            sendValue(skt, scene.isAirborne(i + 1));
-            sendValue(skt, scene.isCrouching(i + 1));
-            sendValue(skt, scene.isLookingRight(i + 1));
-            sendValue(skt, scene.isDead(i + 1));
-            sendValue(skt, scene.isShooting(i + 1));
-            sendValue(skt, scene.getAimDirection(i + 1));
-            sendValue(skt, scene.isJugadorGrisado(i + 1));
+    for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
+        sendValue(skt, std::get<0>(*it));
+        sendValue(skt, std::get<1>(*it));
+    }
+    sendValue(skt, -1);
+    for (int i = 0; i < p; i++) {
+        //sktAux.flush();
+        //sktAux.send_all("1",1);
+        //std::list<std::tuple<int,int>> lBullets;
+        sendValue(skt, scene.getPositionX(i + 1));
+        sendValue(skt, scene.getPositionY(i + 1));
+        sendValue(skt, scene.getVelocityX(i + 1));
+        sendValue(skt, scene.getVelocityY(i + 1));
+        sendValue(skt, scene.getHitPoints(i + 1));
+        sendValue(skt, scene.isWalking(i + 1));
+        sendValue(skt, scene.isAirborne(i + 1));
+        sendValue(skt, scene.isCrouching(i + 1));
+        sendValue(skt, scene.isLookingRight(i + 1));
+        sendValue(skt, scene.isDead(i + 1));
+        sendValue(skt, scene.isShooting(i + 1));
+        sendValue(skt, scene.getAimDirection(i + 1));
+        sendValue(skt, scene.isJugadorGrisado(i + 1));
 
-        }
-        sendValue(skt, scene.getCamera()->x);
-        sendValue(skt, scene.getCamera()->y);
-        sendValue(skt, scene.getLevel());
-        sendValue(skt,scene.getCurrentPlayers());
-        sendValue(skt,scene.isVictory());
+    }
+    sendValue(skt, scene.getCamera()->x);
+    sendValue(skt, scene.getCamera()->y);
+    sendValue(skt, scene.getLevel());
+    sendValue(skt,scene.getCurrentPlayers());
+    sendValue(skt,scene.isVictory());
 
+}
+
+void ModelProtocol::sendGo(){
+    skt.send_all("1",1); 
 }
 
 ModelProtocol::~ModelProtocol(){

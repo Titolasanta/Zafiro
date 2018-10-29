@@ -5,7 +5,8 @@
 #include <zconf.h>
 #include "lifeSupport.h"
 
-lifeSupport::lifeSupport(){}
+lifeSupport::lifeSupport(bool& cutedConnection) : cutedConnection(cutedConnection){}
+
 void lifeSupport::controlSocket(Socket* sktRec){
     skt = sktRec;
 }
@@ -26,10 +27,10 @@ void lifeSupport::run() {
         if(!this->onCheck){
             skt->manual_close();
             quit = true;
+            cutedConnection = true;
         }else{
             this->onCheck = false;
         }
     }
-    int i;
 }
 

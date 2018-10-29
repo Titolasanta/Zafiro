@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <zconf.h>
 #include "SpriteHandler.h"
 #include "Sprite.h"
 #include "../common/Logger.h"
@@ -33,7 +34,6 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 }
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
-
     for (int i = 0; i-1 <  scene.getCurrentPlayers(); i++) {
         if (i == id - 1) continue;
         renderSprite(scene, i, cameraX, cameraY);

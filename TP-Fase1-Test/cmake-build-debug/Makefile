@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test
+CMAKE_SOURCE_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-b
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/fede/Downloads/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fede/Desktop/CLionProjects/Zafiro/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1429,6 +1429,60 @@ server/Sender.cpp.s:
 	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Sender.cpp.s
 .PHONY : server/Sender.cpp.s
 
+server/SignalChecker.o: server/SignalChecker.cpp.o
+
+.PHONY : server/SignalChecker.o
+
+# target to build an object file
+server/SignalChecker.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalChecker.cpp.o
+.PHONY : server/SignalChecker.cpp.o
+
+server/SignalChecker.i: server/SignalChecker.cpp.i
+
+.PHONY : server/SignalChecker.i
+
+# target to preprocess a source file
+server/SignalChecker.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalChecker.cpp.i
+.PHONY : server/SignalChecker.cpp.i
+
+server/SignalChecker.s: server/SignalChecker.cpp.s
+
+.PHONY : server/SignalChecker.s
+
+# target to generate assembly for a file
+server/SignalChecker.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalChecker.cpp.s
+.PHONY : server/SignalChecker.cpp.s
+
+server/SignalReceiver.o: server/SignalReceiver.cpp.o
+
+.PHONY : server/SignalReceiver.o
+
+# target to build an object file
+server/SignalReceiver.cpp.o:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalReceiver.cpp.o
+.PHONY : server/SignalReceiver.cpp.o
+
+server/SignalReceiver.i: server/SignalReceiver.cpp.i
+
+.PHONY : server/SignalReceiver.i
+
+# target to preprocess a source file
+server/SignalReceiver.cpp.i:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalReceiver.cpp.i
+.PHONY : server/SignalReceiver.cpp.i
+
+server/SignalReceiver.s: server/SignalReceiver.cpp.s
+
+.PHONY : server/SignalReceiver.s
+
+# target to generate assembly for a file
+server/SignalReceiver.cpp.s:
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/SignalReceiver.cpp.s
+.PHONY : server/SignalReceiver.cpp.s
+
 server/Weapon.o: server/Weapon.cpp.o
 
 .PHONY : server/Weapon.o
@@ -1661,6 +1715,12 @@ help:
 	@echo "... server/Sender.o"
 	@echo "... server/Sender.i"
 	@echo "... server/Sender.s"
+	@echo "... server/SignalChecker.o"
+	@echo "... server/SignalChecker.i"
+	@echo "... server/SignalChecker.s"
+	@echo "... server/SignalReceiver.o"
+	@echo "... server/SignalReceiver.i"
+	@echo "... server/SignalReceiver.s"
 	@echo "... server/Weapon.o"
 	@echo "... server/Weapon.i"
 	@echo "... server/Weapon.s"

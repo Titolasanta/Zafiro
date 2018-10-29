@@ -11,15 +11,15 @@
 
 class lifeSupport : public Thread{
 public:
-    lifeSupport();
+    lifeSupport(bool&);
     virtual void run();
     void controlSocket(Socket*);
     void end();
     void report();
-    ~lifeSupport(){    
-        join();
-    }
+    ~lifeSupport(){}
+    
 private:
+    bool& cutedConnection;
     Socket* skt;
     std::mutex mutex;
     bool quit = false;
