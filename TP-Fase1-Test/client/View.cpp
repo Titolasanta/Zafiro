@@ -21,7 +21,7 @@ View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
-,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())),
+,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())), insert2bis(std::move(window.createTextTexture())),
 loginImages{std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
@@ -41,8 +41,11 @@ loginImages{std::move(window.createImgTexture()),
     msg = "Ingrese sus datos";
     insert1.loadFromRenderedText(msg);
 
-    msg = "Pulse esc para resetear los datos ingresados";
+    msg = "Pulse esc para resetear ";
     insert2.loadFromRenderedText(msg);
+
+    msg = "los datos ingresados";
+    insert2bis.loadFromRenderedText(msg);
 
     std::string windowName("Contra");
     gplogger->log(3,"Se crea un View");
@@ -129,21 +132,22 @@ void View::renderValidationScreen(std::string& Uinserted,std::string& Pinserted)
 
     window.createRectangle(0,1000,0,800);
     loginImages[currentImage % 4].render(0, 0);
-  //  usleep(150000);
+    usleep(60000);
     currentImage++;
-    insert1.render(100, 70);
-    insert2.render(100, 100);
+    insert1.render(50, 200);
+    insert2.render(50, 250);
+    insert2bis.render(50, 280);
 
-    usr.render(100, 150);
+    usr.render(50, 370);
 
     if (!Uinserted.empty()) {
         txt.loadFromRenderedText(Uinserted);
-        txt.render(100, 180);
+        txt.render(50, 400);
     }
-    pass.render(100, 250);
+    pass.render(50, 450);
     if (!Pinserted.empty()) {
         txt.loadFromRenderedText(Pinserted);
-        txt.render(100, 280);
+        txt.render(50, 480);
     }
     window.updateRenderer();
 
@@ -157,23 +161,26 @@ void View::fullHouseMesage() {
         loginImages[img].render(0, 0);
         std::string msg("El servidor no tiene mas cupos.");
         txt.loadFromRenderedText(msg);
-        txt.render(200, 250);
+        txt.render(50, 250);
         window.updateRenderer();
-        usleep(250000);
+        usleep(75000);
     }
 }
 
 void View::invalidLoginMesage() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
-        std::string msg("El usuario ingresado es invalido o ya esta en uso.");
-        txt.loadFromRenderedText(msg);
-        txt.render(100, 250);
+        std::string msg1("El usuario ingresado es");
+        std::string msg2("invalido o ya esta en uso.");
+        txt.loadFromRenderedText(msg1);
+        txt.render(50, 250);
+        txt.loadFromRenderedText(msg2);
+        txt.render(50, 300);
         window.updateRenderer();
-        usleep(250000);
+        usleep(75000);
     }
 }
 
@@ -185,7 +192,7 @@ void View::conexionFail() {
         loginImages[img].render(0, 0);
         std::string msg("El servidor se cayo.");
         txt.loadFromRenderedText(msg);
-        txt.render(200, 250);
+        txt.render(50, 250);
         window.updateRenderer();
         usleep(250000);
     }
@@ -193,28 +200,40 @@ void View::conexionFail() {
 
 void View::conexionDown() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("No se encontro el servidor.");
-    txt.loadFromRenderedText(msg);
-    txt.render(200, 250);
-    window.updateRenderer();
-    usleep(4000000);
+    int img;
+    for(int i = 0; i < 24; i++) {
+        img = i % 4;
+        loginImages[img].render(0, 0);
+        std::string msg("No se encontro el servidor.");
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 250);
+        window.updateRenderer();
+        usleep(250000);
+    }
 }
 void View::waiting() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("El servidor esta ocupado, aguarde su turno.");
-    txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
+    loginImages[currentImage % 4].render(0, 0);
+    currentImage++;
+    std::string msg1("El servidor esta ocupado, ");
+    std::string msg2("por favor aguarde su turno.");
+    txt.loadFromRenderedText(msg1);
+    txt.render(50, 250);
+    txt.loadFromRenderedText(msg2);
+    txt.render(50, 300);
     window.updateRenderer();
 }
 
 void View::waiting_for_players() {
     window.createRectangle(0,1000,0,800);
-
-    std::string msg("Esperando al resto de los jugadores");
+    loginImages[currentImage % 4].render(0, 0);
+    currentImage++;
+    std::string msg("Esperando al resto ");
     txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
+    txt.render(50, 250);
+    msg = "de los jugadores";
+    txt.loadFromRenderedText(msg);
+    txt.render(50, 300);
     window.updateRenderer();
 }
 

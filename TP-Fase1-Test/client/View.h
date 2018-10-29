@@ -54,6 +54,7 @@ private:
     TextTexture txt;
     TextTexture insert1;
     TextTexture insert2;
+    TextTexture insert2bis;
     TextTexture usr;
     TextTexture pass;
     ImgTexture loginImages[4];
