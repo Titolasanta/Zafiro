@@ -13,55 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo">
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Character.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Modelo/Model.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Exception.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/ImgTexture.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Logger.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLException.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SDLIMGException.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlImgInit.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/SdlInit.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Sprite.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Texture.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/Window.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/Vista/pugixml.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/SpriteHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/SpriteHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/View.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/View.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TP-Fase1-Test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/common/Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/common/Socket.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Sender.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Sender.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/SignalChecker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/SignalChecker.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/SignalReceiver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/SignalReceiver.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/" />
@@ -127,38 +81,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3986" />
+          <entry key="cpp" value="4002" />
           <entry key="h" value="1051" />
           <entry key="tClient (disassembly)" value="1" />
           <entry key="txt" value="6" />
-          <entry key="xml" value="145" />
+          <entry key="xml" value="146" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Disassembly" value="1" />
-          <entry key="ObjectiveC" value="5037" />
+          <entry key="ObjectiveC" value="5053" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="XML" value="145" />
+          <entry key="XML" value="146" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="155" />
+          <entry key="cpp" value="156" />
           <entry key="functional" value="4" />
           <entry key="h" value="72" />
           <entry key="mutex" value="1" />
           <entry key="tClient (disassembly)" value="55" />
           <entry key="tServer (disassembly)" value="45" />
           <entry key="thread" value="9" />
-          <entry key="xml" value="13" />
+          <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Disassembly" value="100" />
-          <entry key="ObjectiveC" value="241" />
-          <entry key="XML" value="13" />
+          <entry key="ObjectiveC" value="242" />
+          <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -316,14 +270,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/server/SignalReceiver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+            <state relative-caret-position="244">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="e#39#66#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -333,15 +314,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/server/Collector.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -431,15 +403,15 @@
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/SpriteHandler.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/Controller.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/View.h" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.h" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/lifeSupport.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/common/Socket.cpp" />
-        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/client/main.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/server/Sender.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/server/SignalReceiver.cpp" />
         <option value="$PROJECT_DIR$/TP-Fase1-Test/server/SignalChecker.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" />
+        <option value="$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml" />
       </list>
     </option>
   </component>
@@ -524,9 +496,11 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/client/View.h</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/server/Sender.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/client/main.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/TP-Fase1-Test/server/Model.cpp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -746,7 +720,7 @@
       <workItem from="1540658721798" duration="10856000" />
       <workItem from="1540671227834" duration="7871000" />
       <workItem from="1540679253218" duration="146000" />
-      <workItem from="1540832449922" duration="8056000" />
+      <workItem from="1540832449922" duration="8956000" />
     </task>
     <task id="LOCAL-00001" summary="agregue un par de funciones para leer el archivo xml">
       <created>1537050934175</created>
@@ -941,7 +915,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237535000" />
+    <option name="totallyTimeSpent" value="238435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="-11" width="1307" height="780" extended-state="6" />
@@ -1038,13 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="1349" selection-start-line="1349" selection-end-line="1349" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1296,20 +1263,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="219" column="19" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/client/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1395,11 +1348,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/server/SignalReceiver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        <state relative-caret-position="244">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="e#39#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/Archivos/configuracion.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
