@@ -38,6 +38,7 @@ public:
     void endOfGameScreen();
 private:
     int id;
+    int currentImage = 0;
     SdlImgInit z;
     SdlInit x;
     SdlTtfInit y;
