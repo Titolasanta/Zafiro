@@ -171,7 +171,9 @@ void Character::goThroughPlatform(){
     gplogger->log(3, "El personaje atraviesa una plataforma");
 }
 
-void Character::spawn() {
+void Character::spawn(SDL_Rect cam) {
+    positionX = cam.x + 310;
+    positionY = cam.y + 200;
     velocityY = 0;
     velocityX = 0;
     airborne = false;
@@ -213,7 +215,7 @@ void Character::stopShoot() {
 //    setShooting(false);
 }
 
-void Character::respawn(Scene& scene, SDL_Rect cam, Character *players[]){
+/*void Character::respawn(Scene& scene, SDL_Rect cam, Character *players[]){
     int connectedPlayers = 0;
     for (int i = 1; i <= scene.getMaxPlayers(); i++) connectedPlayers += !scene.isJugadorGrisado(i);
     if (connectedPlayers == 1){
@@ -229,4 +231,4 @@ void Character::respawn(Scene& scene, SDL_Rect cam, Character *players[]){
             break;
         }
     }
-}
+}*/

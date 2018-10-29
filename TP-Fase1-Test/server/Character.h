@@ -67,7 +67,7 @@ private:
         void goThroughPlatform();
         int level = 1;
         void changeWeapon(Weapon);
-        void respawn(Scene&,SDL_Rect,Character*[]);
+        //void respawn(Scene&,SDL_Rect,Character*[]);
 
 
 public:
@@ -129,7 +129,7 @@ public:
     void setWalking(bool walking){
         this->walking = walking;
     }
-    void spawn();
+    void spawn(SDL_Rect);
 
     void nextLevel();
 

@@ -108,13 +108,13 @@ void ViewProtocol::update(Scene& scene){
        scene.setDead(receiveNumber(socket), i + 1);
        scene.setShooting(receiveNumber(socket), i + 1);
        scene.setAimDirection(receiveNumber(socket), i + 1);
-        scene.setJugadorGrisado((bool) receiveNumber(socket), i + 1);
+       scene.setJugadorGrisado((bool) receiveNumber(socket), i + 1);
    }
     scene.setCameraX(receiveNumber(socket));
     scene.setCameraY(receiveNumber(socket));
     scene.setLevel(receiveNumber(socket));
     scene.setCurrentPlayers(receiveNumber(socket));
-    scene.setVictory(receiveNumber(socket));
+    scene.setVictory((bool)receiveNumber(socket));
     if (scene.getCurrentPlayers() == scene.getMaxPlayers()) {
         scene.setAllPlayersConnected(true);
     }

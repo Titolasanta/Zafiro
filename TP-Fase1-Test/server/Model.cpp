@@ -138,7 +138,7 @@ void Model::update(Scene &scene) {
         }
 
         if(players[i]->getPositionY() > 600 + cam->y) {
-            players[i]->respawn(scene,*cam,players);
+            players[i]->spawn(*cam);
         }
 
         if(level.getLevel() != 2){
@@ -310,9 +310,7 @@ void Model::changeLevel(Level level,Scene& scene) {
         scene.getCamera()->y = 0;
 
         for (int i = 0; i < currentPlayers; i++) {
-            players[i]->setPositionX((*scene.getCamera()).x + 310);
-            players[i]->setPositionY((*scene.getCamera()).y + 200);
-            players[i]->spawn();
+            players[i]->spawn(*scene.getCamera());
             players[i]->nextLevel();
         }
         gplogger->log(2, "Se cambió de nivel");
