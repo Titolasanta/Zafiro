@@ -143,12 +143,11 @@ void Model::update(Scene &scene) {
     for (int i = 0; i < currentPlayers; i++) {
 
         if (players[i]->getPositionX() < 5 + cam->x) {
-            players[i]->setPositionX( 5 + cam->x);
+            players[i]->setPositionX( 20 + cam->x);
             players[i]->setVelocityX(0);
         }
 
         if(players[i]->getPositionY() > 600 + cam->y) {
-
             respawn(i,cam);
         }
 
@@ -366,6 +365,10 @@ void Model::placeCamera(Scene &scene){
                         players[i]->setPositionY(cam->y + 50);
                         players[i]->setVelocityY(0);
                     }
+                }
+            }else{
+                if (playerPosY > cam->y + 500) {
+                    respawn(i,cam);
                 }
             }
         }

@@ -17,9 +17,9 @@ class Model {
         Level level;
 public:
     const Level &getLevel() const;
+    void respawn(int,SDL_Rect*);
 
 private:
-        void respawn(int,SDL_Rect*);
         Character *players[4];
         std::list<Projectile> lBullets;
         Character player1;
