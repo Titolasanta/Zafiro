@@ -19,6 +19,7 @@ public:
     const Level &getLevel() const;
 
 private:
+        void respawn(int,SDL_Rect*);
         Character *players[4];
         std::list<Projectile> lBullets;
         Character player1;

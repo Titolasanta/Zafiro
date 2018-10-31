@@ -16,7 +16,9 @@ public:
     void controlSocket(Socket*);
     void end();
     void report();
-    ~lifeSupport(){}
+    ~lifeSupport(){
+        join();
+    }
     
 private:
     bool& cutedConnection;

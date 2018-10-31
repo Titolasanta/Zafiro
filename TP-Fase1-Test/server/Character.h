@@ -130,6 +130,7 @@ public:
         this->walking = walking;
     }
     void spawn(SDL_Rect);
+    void spawn(int x,int y);
 
     void nextLevel();
 

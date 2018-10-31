@@ -116,6 +116,16 @@ int Model::YMasGrande(Scene &scene){
     return min;
 }
 
+void Model::respawn(int toRespawn,SDL_Rect* cam){
+    for(int i = 0; i < maxPlayers; i++){
+        if(i != toRespawn && !players[i]->isAirborne() && !jugadorGrisado[i]){
+            players[toRespawn]->spawn(players[i]->getPositionX(),players[i]->getPositionY() - 50);
+            return;
+        }
+    }
+    players[toRespawn]->spawn(*cam);
+}
+
 void Model::update(Scene &scene) {
 
     std::lock_guard<std::mutex> mute(mutex);
@@ -138,7 +148,8 @@ void Model::update(Scene &scene) {
         }
 
         if(players[i]->getPositionY() > 600 + cam->y) {
-            players[i]->spawn(*cam);
+
+            respawn(i,cam);
         }
 
         if(level.getLevel() != 2){
@@ -170,30 +181,6 @@ void Model::update(Scene &scene) {
         if (getCurrentPlayers() == getMaxPlayers()) {
             scene.setAllPlayersConnected(true);
         }
-
-        /*if (scene.getLevel() != 2) {
-            if (scene.getPositionX(i + 1) > MARGENX + cam->x)
-                moveCamAdelante++;
-        } else {
-            if (scene.getPositionY(i + 1) < MARGENY + cam->y)
-                if (scene.getPositionY(i + 1) - MARGENY < 0)
-                    moveCamAdelante++;
-        }
-        if (scene.getLevel() != 2) {
-            if (scene.getPositionX(i + 1) < MARGENX/2 + cam->x)
-                moveCamAtras++;
-        } else {
-            if (scene.getPositionY(i + 1) > MARGENY/2 + cam->y)
-                //if (scene.getPositionY(i + 1) - MARGENY < 0)
-                    moveCamAtras++;
-        }
-    }
-    if(moveCamAdelante && !(moveCamAtras)) {
-        if (scene.getLevel() != 2)
-            cam->x = XMasChico(scene, players) - MARGENX/3;
-        else
-            cam->y = YMasGrande(scene, players)- MARGENY/3;
-    }*/
     }
     
     placeCamera(scene);

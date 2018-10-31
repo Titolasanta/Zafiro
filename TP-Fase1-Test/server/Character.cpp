@@ -172,8 +172,29 @@ void Character::goThroughPlatform(){
 }
 
 void Character::spawn(SDL_Rect cam) {
-    positionX = cam.x + 310;
-    positionY = cam.y + 200;
+    if(this->level == 2){
+        positionX = cam.x + 400;
+        positionY = cam.y + 250;
+    } else{
+        positionX = cam.x + 150;
+        positionY = cam.y + 100;
+    }
+    velocityY = 0;
+    velocityX = 0;
+    airborne = false;
+    walking = false;
+    currentPlatW = 0;
+    currentPlatX = 0;
+    currentPlatY = 0;
+    crouching = false;
+    lookingRight = true;
+    dead = false;
+    aimDirection = 0;
+}
+
+void Character::spawn(int x, int y) {
+    positionX = x;
+    positionY = y;
     velocityY = 0;
     velocityX = 0;
     airborne = false;
