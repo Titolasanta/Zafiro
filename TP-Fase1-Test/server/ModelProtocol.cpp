@@ -24,14 +24,12 @@ void sendValue(Socket& skt, int value){
 void ModelProtocol::run() {
     char msg[4];
     while(!quit){
-        printf("informacion relevante\n");
         msg[0] = id;
         try {
             skt.receive_all(&(msg[1]), 2);
         }catch(Finalizo_conexion){
             msg[1] = 'f';
             msg[2] = 'c';
-            printf("mensaje en model protocol run a borrara\n");
             quit = true;
         }catch(...){
             break;
@@ -53,7 +51,6 @@ void ModelProtocol::end(){
 
 ModelProtocol::ModelProtocol(ModelProtocol&& other)
 : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue),sktSignal(std::move(other.sktSignal)) {
-    printf("lo hice 1 vaez\n");
     this->thread = std::move(other.thread);
     this->id = other.id;
     other.valid = false;

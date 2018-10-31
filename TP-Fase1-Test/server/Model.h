@@ -30,6 +30,7 @@ private:
         int maxPlayers;
         std::mutex mutex;
         bool jugadorGrisado[4] = {true,true,true,true};
+        bool jugadorReconectado[4] = {false, false, false, false};
 public:
     const bool *getJugadorGrisado() const;
 

@@ -45,6 +45,7 @@ Model::Model(int initialLevel) : level(initialLevel) {
 
 void Model::rejoinCharacter(int id){
     jugadorGrisado[id-1] = false;
+    jugadorReconectado[id - 1] = true;
 }
 
 void Model::createCharacter(int id){
@@ -141,7 +142,11 @@ void Model::update(Scene &scene) {
     //int moveCamAdelante = 0;
     
     for (int i = 0; i < currentPlayers; i++) {
-
+        
+        if (jugadorReconectado[i]){
+            jugadorReconectado[i] = false;
+            respawn(i, cam);
+        }
         if (players[i]->getPositionX() < 5 + cam->x) {
             players[i]->setPositionX( 20 + cam->x);
             players[i]->setVelocityX(0);

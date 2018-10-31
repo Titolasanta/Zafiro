@@ -207,9 +207,12 @@ void View::conexionFail2() {
     for(int i = 0; i < 60; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
-        std::string msg("Se perdio senial al servidor.");
+        std::string msg("Se perdio conexion al servidor.");
         txt.loadFromRenderedText(msg);
         txt.render(50, 250);
+        msg = "Intente conectarse nuevamamente.";
+        txt.loadFromRenderedText(msg);
+        txt.render(50, 300);
         window.updateRenderer();
         usleep(75000);
     }
