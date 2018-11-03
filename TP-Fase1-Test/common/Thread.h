@@ -8,7 +8,7 @@ class Thread {
     protected:
         std::thread thread;
     public:
-        bool joinable = true;
+        bool joinable = false;
 
         Thread() {}
 

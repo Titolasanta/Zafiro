@@ -21,15 +21,7 @@ void Sender::run(){
                 it = pList.erase(it);//falta un mutex, pero meh(seria convertir la lista en una clase con una lista y un mutex)
                 model.bajaJugador(i);
             }
-        }/*for (auto it = pList.begin(); it != pList.end(); it++) {
-                try {
-                    it->sendGo();
-                }catch(...){
-                    int i = it->getId();
-                    it = pList.erase(it);//falta un mutex, pero meh(seria convertir la lista en una clase con una lista y un mutex)
-                    model.bajaJugador(i);
-                }
-        }*/
+        }
     }
 }
 

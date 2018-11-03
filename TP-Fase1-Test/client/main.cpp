@@ -127,10 +127,10 @@ int main( int argc, char* argv[] )
         logger.log(2, "Error al loggear al juego");
     }catch(Quit){
         logger.log(2, "Usuario cerro el juego");
-    }catch(...){
+    }/*catch(...){
         view.conexionDown();
         logger.log(2, "Server no encontrado.");
-    }
+    }*/
     ls.end();
     ls.join();
     logger.log(2, "Se cerró el juego");

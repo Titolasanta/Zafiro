@@ -4,7 +4,7 @@
         <level>Error</level>
     </debug>
     <cantidad_jugadores>2</cantidad_jugadores>
-    <ip>127.0.0.1</ip>
+    <ip>17.0.0.1</ip>
     <port>8081</port>
     <escenarios>
         <nivel1>
@@ -25,7 +25,6 @@
                 <xf>3500</xf>
                 <y>400</y>
             </plataforma>
-
             <plataforma>
                 <tipo>hielo</tipo>
                 <xi>3200</xi>

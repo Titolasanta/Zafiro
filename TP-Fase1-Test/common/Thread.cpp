@@ -4,6 +4,7 @@
 
 
 	void Thread::start() {
+	joinable = true;
 		thread = std::thread(&Thread::run, this);
 	}
 

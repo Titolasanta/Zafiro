@@ -16,6 +16,7 @@
 #include <iostream>
 #define SIZE_ARBITRARIO 255
 #include <netinet/tcp.h>
+#include <fcntl.h>
 
 using std::string;
 
@@ -91,7 +92,7 @@ Socket::Socket(const char* port, const char* ip) {
 			throw OSError("Error al intentar crear el socket:");
 		} else {
 			if (ip) {
-				error = connect_socket(skt, ptr);
+			     error = connect_socket(skt, ptr);
 				in_connection = (error != -1);
 			} else {
 

@@ -118,7 +118,7 @@ int Model::YMasGrande(Scene &scene){
 }
 
 void Model::respawn(int toRespawn,SDL_Rect* cam){
-    for(int i = 0; i < maxPlayers; i++){
+    for(int i = 0; i < currentPlayers; i++){
         if(i != toRespawn && !players[i]->isAirborne() && !jugadorGrisado[i]){
             players[toRespawn]->spawn(players[i]->getPositionX(),players[i]->getPositionY() - 50);
             return;
@@ -362,7 +362,7 @@ void Model::placeCamera(Scene &scene){
             }
         }else {
             int playerPosY = players[i]->getPositionY();
-            if (playerPosY < cam->y + 300) {
+            if (playerPosY < cam->y + 100) {
                 if (minY < cam->y + 550 && currentPlayers == maxPlayers) {
                     scene.setCameraY(cam->y - 20);
                 } else {
@@ -372,7 +372,7 @@ void Model::placeCamera(Scene &scene){
                     }
                 }
             }else{
-                if (playerPosY > cam->y + 500) {
+                if (playerPosY > cam->y + 550) {
                     respawn(i,cam);
                 }
             }
