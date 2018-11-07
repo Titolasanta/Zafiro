@@ -10,6 +10,12 @@ Enemy::Enemy(int x,int y,int px, int pw) : currentPlatX(px),currentPlatW(pw) {
     posY = y;
 }
 
+Enemy::Enemy(int x,int y) {
+    posX = x;
+    posY = y;
+}
+
+
 int Enemy::getPosX() const {
     return posX;
 }
@@ -63,10 +69,14 @@ void Enemy::time(int max) {
 
     if(airborne) velY += 4/max;
 
-    //velocityY += accelerationY;
-    //velocityX += accelerationX;
+    posY += velY/max;
 
-    positionY += velocityY/currentPlayers;
+}
 
-    if (crouching) aimDirection = 0;
+void Enemy::land(int x, int y, int w) {
+
+    airborne = false;
+    velY = 0;
+    currentPlatX = x;
+    currentPlatW = w;
 }

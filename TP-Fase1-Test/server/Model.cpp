@@ -425,13 +425,13 @@ void Model::moveEnemies(Scene &scene) {
                 it->setPosX(it->getPosX() + velx);
             else
                 it->setPosX(it->getPosX() - velx);
-        } else if(r < 95){
-            it->setVelY(it->getVelY() - 20);
+        } else if(r < 95 && !it->isAirborne()){
+            it->setVelY(it->getVelY() - 40);
             it->setAirborne(true);
         }else{
             it->setLookingRight(!it->isLookingRight());
         }
-        this->enemyCollision(*it);
+        this->enemyCollision(*it,scene);
     }
 }
 

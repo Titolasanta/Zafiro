@@ -64,4 +64,3 @@ int get_cant_enemigos(pugi::xml_document &doc, pugi::xml_document &doc_default, 
     }
     return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("cantidad_enemigos").first_child().text().as_int();
 }
-}
