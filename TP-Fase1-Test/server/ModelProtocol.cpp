@@ -66,6 +66,12 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, std::get<1>(*it));
     }
     sendValue(skt, -1);
+    
+    for (auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
+        sendValue(skt, it->getPosX());
+        sendValue(skt, it->getPosY());
+    }
+    sendValue(skt, -1);
     for (int i = 0; i < p; i++) {
         sendValue(skt, scene.getPositionX(i + 1));
         sendValue(skt, scene.getPositionY(i + 1));

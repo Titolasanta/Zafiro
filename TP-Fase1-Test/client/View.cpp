@@ -11,6 +11,7 @@
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "../common/Logger.h"
+#include "StaticEnemyImg.h"
 #include <iostream>
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
@@ -21,7 +22,8 @@ View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
-,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture())), insert2bis(std::move(window.createTextTexture())),
+,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
+,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)),
 loginImages{std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
@@ -96,8 +98,11 @@ void View::render(Scene& scene) {
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
     bullet.render(scene,camera);
+    staticEnemyImg.render(scene,camera);
     personajes.render(scene, id, camera->x, camera->y);
+    
     window.updateRenderer();
+    
 
     //Center the camera over the player
 

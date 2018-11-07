@@ -10,6 +10,7 @@
 #include "Logger.h"
 
 extern Logger *gplogger;
+
 Scene::Scene(int numberOfPlayers) {
     MaxPlayers = numberOfPlayers;
     gplogger->log(3,"Se crea una Escena");
@@ -79,5 +80,17 @@ bool Scene::isAllPlayersConnected() const {
 
 void Scene::setAllPlayersConnected(bool allPlayersConnected) {
     Scene::allPlayersConnected = allPlayersConnected;
+}
+
+void Scene::addEnemy(Enemy &&enemy) {
+    Enemies.push_back(enemy);
+}
+
+const std::list<Enemy> &Scene::getEnemies() const {
+    return Enemies;
+}
+
+void Scene::setEnemies(const std::list<Enemy> &Enemies) {
+    Scene::Enemies = std::move(Enemies);
 }
 

@@ -75,10 +75,11 @@ int main(int argc, char *argv[]) {
 		Scene scene(get_cantidad_jugadores(doc, doc_default, result));
         Model model(1);
 
-
 		if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene,model, 1, model.getLevelHeight(), model.getLevelWidth());
 		else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth());
-
+		
+		model.setEnemies(scene);
+		
         std::queue<char> queue;
         std::mutex mutex;
 

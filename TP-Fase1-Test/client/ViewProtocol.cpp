@@ -93,6 +93,14 @@ void ViewProtocol::update(Scene& scene){
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
+    std::list<Enemy> le;
+    recvx = receiveNumber(socket);
+    while(recvx != -1){
+        recvy = receiveNumber(socket);
+        le.push_back(std::move(Enemy(recvx,recvy)));
+        recvx = receiveNumber(socket);
+    }
+    scene.setEnemies(le);
     int p = scene.getMaxPlayers();
     for (int i = 0; i < p; i++) {
        //scene.setBullets(std::move(lTemp));

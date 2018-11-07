@@ -40,3 +40,8 @@ void Viewable::renderList(std::list<std::tuple<int,int,int>> lista,SDL_Rect* cam
         texture.render(std::get<0>(*it)+ clip.w * i-camera->x, std::get<1>(*it)-camera->y,&clipTemp);
     }
 }
+void Viewable::renderList(std::list<Enemy> lista,SDL_Rect* camera) {
+    for (auto it = lista.begin(); it != lista.end(); it++) {
+        texture.render(it->getPosX() - camera->x, it->getPosY() - camera->y-64, &clip);
+    }
+}

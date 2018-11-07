@@ -18,6 +18,7 @@
 #include "Ice.h"
 #include "commonTextTexture.h"
 #include "commonSdlTtfInit.h"
+#include "StaticEnemyImg.h"
 
 class View {
 
@@ -61,6 +62,7 @@ private:
     TextTexture usr;
     TextTexture pass;
     ImgTexture loginImages[4];
+    StaticEnemyImg staticEnemyImg;
 
     int level=1;
     SDL_Rect * camera = NULL;

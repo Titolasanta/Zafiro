@@ -8,6 +8,7 @@
 #include <tuple>
 
 #include <list>
+#include "Enemy.h"
 #include <SDL_rect.h>
 
 
@@ -63,23 +64,13 @@ private:
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
+    std::list<Enemy> Enemies;
+public:
+    void setEnemies(const std::list<Enemy> &Enemies);
 
-/*
-    int P1PositionX = 100;
-    int P1PositionY = 300;
-    int P1VelocityX = 0;
-    int P1VelocityY = 0;
-//  int P1AccelerationX;
-//  int P1AccelerationY;
-    int P1HitPoints = 0;
-    bool P1Walking = 0;
-    bool P1Airborne = 1;
-    bool P1Crouching = 0;
-    bool P1LookingRight = 1;
-    bool P1Dead = 0;
-    bool P1Shooting = false;
-    int P1AimDirection = 0;
-*/
+public:
+    const std::list<Enemy> &getEnemies() const;
+
 
 public:
 
@@ -138,6 +129,8 @@ public:
     bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
 
+
+    void addEnemy(Enemy &&enemy);
 };
 
 

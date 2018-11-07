@@ -14,7 +14,7 @@
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "xmlServer.h"
-
+#include <random>
 
 #define MARGENX (800/2)
 #define MARGENY 400
@@ -377,6 +377,37 @@ void Model::placeCamera(Scene &scene){
                 }
             }
         }
+    }
+}
+
+void Model::setEnemies(Scene& scene) {
+    std::random_device                  rand_dev;
+    std::default_random_engine generator(rand_dev());
+    std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
+    int enemiesToPlaceInSoft = 20;
+    for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
+        int random = distribution(generator);
+        std::cout << random << " ";
+        auto it = lPlataformsSoft.begin();
+        for (;random > 0 ; random-- ){
+            it++;
+        };
+        if(scene.getLevel() != 2) {
+            if (std::get<0>(*it) < 600) {
+                i--;
+                continue;
+            }
+        }else{
+            if (std::get<1>(*it) < 600) {
+                i--;
+                continue;
+            }
+        }
+        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
+        int x = distribution(generator) + std::get<0>(*it);
+        std::cout << x << "\n";
+        Enemy enemy(x, std::get<1>(*it));
+        scene.addEnemy(std::move(enemy));
     }
 }
 

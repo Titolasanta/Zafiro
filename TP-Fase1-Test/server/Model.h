@@ -71,6 +71,8 @@ private:
         void placeCamera(Scene&);
         int XMasChico(Scene&);
         int YMasGrande(Scene&);
+
+    void setEnemies(Scene& scene);
 };
 
 
