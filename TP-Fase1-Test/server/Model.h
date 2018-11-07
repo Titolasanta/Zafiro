@@ -73,6 +73,10 @@ private:
         int YMasGrande(Scene&);
 
     void setEnemies(Scene& scene);
+
+    void moveEnemies(Scene &scene);
+
+    void enemyCollision(Enemy &enemy,Scene& scene);
 };
 
 

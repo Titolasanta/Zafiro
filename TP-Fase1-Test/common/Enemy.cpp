@@ -3,8 +3,9 @@
 //
 
 #include "Enemy.h"
+#include "../server/CollisionSoft.h"
 
-Enemy::Enemy(int x,int y) {
+Enemy::Enemy(int x,int y,int px, int pw) : currentPlatX(px),currentPlatW(pw) {
     posX = x;
     posY = y;
 }
@@ -23,4 +24,49 @@ int Enemy::getPosY() const {
 
 void Enemy::setPosY(int posY) {
     Enemy::posY = posY;
+}
+
+bool Enemy::isLookingRight() const {
+    return lookingRight;
+}
+
+void Enemy::setLookingRight(bool lookingRight) {
+    Enemy::lookingRight = lookingRight;
+}
+
+int Enemy::getVelY() const {
+    return velY;
+}
+
+void Enemy::setVelY(int velY) {
+    Enemy::velY = velY;
+}
+
+bool Enemy::isAirborne() const {
+    return airborne;
+}
+
+void Enemy::setAirborne(bool airborne) {
+    Enemy::airborne = airborne;
+}
+
+void Enemy::time(int max) {
+    timeTillNextShoot-=(12/max);
+    
+    if(timeTillNextShoot < 0){
+        timeTillNextShoot = 0;
+    }
+
+    if (currentPlatX + currentPlatW  < posX || currentPlatX  >  posX) {
+        airborne = true;
+    }
+
+    if(airborne) velY += 4/max;
+
+    //velocityY += accelerationY;
+    //velocityX += accelerationX;
+
+    positionY += velocityY/currentPlayers;
+
+    if (crouching) aimDirection = 0;
 }

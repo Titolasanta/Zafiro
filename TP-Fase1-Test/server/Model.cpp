@@ -203,6 +203,7 @@ void Model::update(Scene &scene) {
             ++it;
         }
     }
+    this->moveEnemies(scene);
 
     scene.setBullets(std::move(lTemp));
 
@@ -279,6 +280,7 @@ void Model::stand(int p) {
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
+    scene.getEnemies().clear();
     if(level.getLevel() > 3){
         scene.setVictory(true);
     }else{
@@ -384,7 +386,7 @@ void Model::setEnemies(Scene& scene) {
     std::random_device                  rand_dev;
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
-    int enemiesToPlaceInSoft = 20;
+    int enemiesToPlaceInSoft = get_cant_enemigos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
         int random = distribution(generator);
         std::cout << random << " ";
@@ -406,8 +408,36 @@ void Model::setEnemies(Scene& scene) {
         std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
         int x = distribution(generator) + std::get<0>(*it);
         std::cout << x << "\n";
-        Enemy enemy(x, std::get<1>(*it));
+        Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it));
         scene.addEnemy(std::move(enemy));
     }
+}
+
+void Model::moveEnemies(Scene &scene) {
+    std::random_device rand_dev;
+    std::default_random_engine generator(rand_dev());
+    std::uniform_int_distribution<int> distribution(0,100);
+    int velx = 5;
+    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
+        int r = distribution(generator);
+        if(r < 90){
+            if(it->isLookingRight())
+                it->setPosX(it->getPosX() + velx);
+            else
+                it->setPosX(it->getPosX() - velx);
+        } else if(r < 95){
+            it->setVelY(it->getVelY() - 20);
+            it->setAirborne(true);
+        }else{
+            it->setLookingRight(!it->isLookingRight());
+        }
+        this->enemyCollision(*it);
+    }
+}
+
+void Model::enemyCollision(Enemy &enemy,Scene& scene) {
+
+    CollisionSoft c(enemy,lPlataformsSoft);
+    enemy.time(scene.getCurrentPlayers());
 }
 

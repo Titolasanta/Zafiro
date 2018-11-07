@@ -13,6 +13,7 @@
 class CollisionSoft {
 public:
     CollisionSoft(Character&,std::list<std::tuple<int,int,int>>& platformList);
+    CollisionSoft(Enemy&,std::list<std::tuple<int,int,int>>& platformList);
 };
 
 

@@ -8,8 +8,8 @@
 #include <tuple>
 
 #include <list>
-#include "Enemy.h"
 #include <SDL_rect.h>
+#include "Enemy.h"
 
 
 class Scene {
@@ -69,7 +69,7 @@ public:
     void setEnemies(const std::list<Enemy> &Enemies);
 
 public:
-    const std::list<Enemy> &getEnemies() const;
+    std::list<Enemy> &getEnemies();
 
 
 public:

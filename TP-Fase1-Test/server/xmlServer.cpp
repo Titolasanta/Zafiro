@@ -51,3 +51,17 @@ void cargar_users(pugi::xml_document &doc, std::list<std::string> &lista){
 
     }
 }
+
+int get_cant_enemigos(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result){
+    gplogger->log(3,"se pregunta cantidad de enemigos del nivel al xml");
+    std::string nivel = "nivel";
+    nivel.append(std::to_string(level));
+    int original;
+    if (result) {
+        original = doc.first_child().child("escenarios").child(nivel.c_str()).child(
+                "cantidad_enemigos").first_child().text().as_int();
+        if (original) return original;
+    }
+    return doc_default.first_child().child("escenarios").child(nivel.c_str()).child("cantidad_enemigos").first_child().text().as_int();
+}
+}
