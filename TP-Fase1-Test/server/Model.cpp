@@ -420,12 +420,16 @@ void Model::moveEnemies(Scene &scene) {
     int velx = 5;
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
         int r = distribution(generator);
+        int x = it->getPosX();
+        int px = it->getCurrentPlatX();
+        int pw = it->getCurrentPlatW();
         if(r < 90){
-            if(it->isLookingRight())
-                it->setPosX(it->getPosX() + velx);
-            else
+            if(it->isLookingRight() && px + pw > x + velx)
+                it->setPosX(x + velx);
+            else if( px < x - velx )
                 it->setPosX(it->getPosX() - velx);
-        } else if(r < 95 && !it->isAirborne()){
+        } else if(r < 95 ){
+            if(it->isAirborne()) continue;
             it->setVelY(it->getVelY() - 40);
             it->setAirborne(true);
         }else{
@@ -436,7 +440,6 @@ void Model::moveEnemies(Scene &scene) {
 }
 
 void Model::enemyCollision(Enemy &enemy,Scene& scene) {
-
     CollisionSoft c(enemy,lPlataformsSoft);
     enemy.time(scene.getCurrentPlayers());
 }

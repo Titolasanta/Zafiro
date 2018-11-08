@@ -93,3 +93,19 @@ void Enemy::setCurrentFrame(int frame){
 int Enemy::getCurrentFrame() const {
     return currentFrame;
 }
+
+int Enemy::getCurrentPlatX() const {
+    return currentPlatX;
+}
+
+void Enemy::setCurrentPlatX(int currentPlatX) {
+    Enemy::currentPlatX = currentPlatX;
+}
+
+int Enemy::getCurrentPlatW() const {
+    return currentPlatW;
+}
+
+void Enemy::setCurrentPlatW(int currentPlatW) {
+    Enemy::currentPlatW = currentPlatW;
+}

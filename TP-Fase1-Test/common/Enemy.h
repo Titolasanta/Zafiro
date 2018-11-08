@@ -19,6 +19,16 @@ private:
     bool lookingRight = true;
     int velY = 0;
     int currentPlatX = 0;
+public:
+    int getCurrentPlatX() const;
+
+    void setCurrentPlatX(int currentPlatX);
+
+    int getCurrentPlatW() const;
+
+    void setCurrentPlatW(int currentPlatW);
+
+private:
     int currentPlatW = 0;
     int timeTillNextShoot = 0;
     bool airborne = false;
