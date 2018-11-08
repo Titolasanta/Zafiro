@@ -80,3 +80,12 @@ void Enemy::land(int x, int y, int w) {
     currentPlatX = x;
     currentPlatW = w;
 }
+
+
+void Enemy::incrementCurrentFrame(){
+    currentFrame++;
+}
+
+void Enemy::setCurrentFrame(int frame){
+    currentFrame = frame;
+}

@@ -22,6 +22,8 @@ private:
     int currentPlatW = 0;
     int timeTillNextShoot = 0;
     bool airborne = false;
+    int aimDirrection = 0;
+
 public:
     bool isAirborne() const;
     void time(int max);
@@ -39,8 +41,6 @@ public:
 
     void setLookingRight(bool lookingRight);
 
-private:
-    int aimDirrection = 0;
 public:
     int getPosX() const;
 
@@ -50,8 +50,8 @@ public:
 
     void setPosY(int posY);
 
-private:
-    bool alive = true;
+    void incrementCurrentFrame();
+    void setCurrentFrame(int);
 };
 
 
