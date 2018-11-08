@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_PROJECTILE_H
 
 
-#include "../common/Scene.h"
+#include <SDL_rect.h>
 
 class Projectile {
 
@@ -42,7 +42,7 @@ private:
         Projectile(int, int, int, int);
         ~Projectile() = default;
         void move(int);
-        bool inSight(Scene& scene);
+        bool inSight(SDL_Rect *cam);
 };
 
 

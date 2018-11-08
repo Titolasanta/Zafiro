@@ -6,6 +6,8 @@
 #define TP_FASE1_TEST_ENEMY_H
 
 
+#include <list>
+#include "Projectile.h"
 
 class Enemy {
 public:
@@ -36,7 +38,7 @@ private:
 
 public:
     bool isAirborne() const;
-    void time(int max);
+    void time(int max, std::list<Projectile> &lBullets);
     void land(int x, int y, int w);
 
     void setAirborne(bool airborne);
@@ -64,6 +66,8 @@ public:
 
     void incrementCurrentFrame();
     void setCurrentFrame(int);
+
+    void shoot(std::list<Projectile> &list);
 };
 
 

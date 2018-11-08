@@ -9,8 +9,9 @@
 #include <SDL_events.h>
 #include <mutex>
 #include "Character.h"
-#include "Projectile.h"
+#include "../common/Projectile.h"
 #include "../common/Level.h"
+#include "../common/Scene.h"
 
 class Model {
     private:

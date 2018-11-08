@@ -18,10 +18,10 @@ Projectile::Projectile(int posX, int posY, int velX, int velY) {
 
 }
 
-bool Projectile::inSight(Scene& scene) {
+bool Projectile::inSight(SDL_Rect *cam) {
 
-    int camX = scene.getCamera()->x;
-    int camY = scene.getCamera()->y;
+    int camX = cam->x;
+    int camY = cam->y;
     return ((0 + camX < positionX )&&(positionX  < 800 + camX )&&(0 + camY < positionY)&&(positionY < 600+ camY));
 
 }

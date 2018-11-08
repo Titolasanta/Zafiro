@@ -9,6 +9,7 @@
 #include <list>
 #include <tuple>
 #include "Character.h"
+#include "../common/Enemy.h"
 
 class CollisionSoft {
 public:

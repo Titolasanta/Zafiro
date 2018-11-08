@@ -56,11 +56,12 @@ void Enemy::setAirborne(bool airborne) {
     Enemy::airborne = airborne;
 }
 
-void Enemy::time(int max) {
+void Enemy::time(int max, std::list<Projectile>& lBullets) {
     timeTillNextShoot-=(12/max);
     
     if(timeTillNextShoot < 0){
-        timeTillNextShoot = 0;
+        timeTillNextShoot = 120;
+        this->shoot(lBullets);
     }
 
     if (currentPlatX + currentPlatW  < posX || currentPlatX  >  posX) {
@@ -108,4 +109,20 @@ int Enemy::getCurrentPlatW() const {
 
 void Enemy::setCurrentPlatW(int currentPlatW) {
     Enemy::currentPlatW = currentPlatW;
+}
+
+void Enemy::shoot(std::list<Projectile>& list) {
+    int EnemyHight = 45;
+    int EnemyWidth = 50;
+    int bx,by,bv;
+    by = posY + EnemyHight/2;
+    if(lookingRight){
+            bx = posX + EnemyWidth;
+            bv = 10;
+    } else{
+            bx = posX;
+            bv = -10;
+    }
+    Projectile p(bx,by,bv,0);
+    list.push_back(std::move(p));
 }

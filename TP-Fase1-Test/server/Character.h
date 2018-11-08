@@ -9,7 +9,7 @@
 #define largoPlataforma 3500
 #define characterHeight 60
 #include "Weapon.h"
-#include "Projectile.h"
+#include "../common/Projectile.h"
 
 class Character {
     private:

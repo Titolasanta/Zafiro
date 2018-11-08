@@ -195,7 +195,7 @@ void Model::update(Scene &scene) {
     for(auto it = lBullets.begin(); it != lBullets.end();)
     {
         it->move(velocidad);
-        if(!(it->inSight(scene))) {
+        if(!(it->inSight(scene.getCamera()))) {
             it=lBullets.erase(it);
         }
         else {
@@ -418,15 +418,17 @@ void Model::moveEnemies(Scene &scene) {
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,100);
     int velx = 5;
+    int largoEnemigo = 50;
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
         int r = distribution(generator);
         int x = it->getPosX();
         int px = it->getCurrentPlatX();
         int pw = it->getCurrentPlatW();
         if(r < 90){
-            if(it->isLookingRight() && px + pw > x + velx)
-                it->setPosX(x + velx);
-            else if( px < x - velx )
+            if(it->isLookingRight() ) {
+                if (px + pw > x + velx + largoEnemigo)
+                    it->setPosX(x + velx);
+            }else if( px < x - velx )
                 it->setPosX(it->getPosX() - velx);
         } else if(r < 95 ){
             if(it->isAirborne()) continue;
@@ -440,7 +442,10 @@ void Model::moveEnemies(Scene &scene) {
 }
 
 void Model::enemyCollision(Enemy &enemy,Scene& scene) {
-    CollisionSoft c(enemy,lPlataformsSoft);
-    enemy.time(scene.getCurrentPlayers());
+    enemy.time(scene.getCurrentPlayers(),lBullets);
+    if (enemy.isAirborne()) {
+        CollisionSoft c(enemy, lPlataformsSoft);
+        CollisionSoft h(enemy, lPlataformsHard);
+    }
 }
 

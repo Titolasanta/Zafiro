@@ -3,7 +3,7 @@
 //
 
 #include "Weapon.h"
-#include "Projectile.h"
+#include "../common/Projectile.h"
 
 
 Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int direction) {

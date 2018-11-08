@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_WEAPON_H
 
 
-#include "Projectile.h"
+#include "../common/Projectile.h"
 
 class Weapon {
 

@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "Character.h"
-#include "Projectile.h"
+#include "../common/Projectile.h"
 #include "Pistol.h"
 #include "CollisionHard.h"
 #include "../common/Logger.h"
