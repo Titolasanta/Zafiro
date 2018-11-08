@@ -89,3 +89,7 @@ void Enemy::incrementCurrentFrame(){
 void Enemy::setCurrentFrame(int frame){
     currentFrame = frame;
 }
+
+int Enemy::getCurrentFrame() const {
+    return currentFrame;
+}

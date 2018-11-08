@@ -21,7 +21,8 @@ extern Logger *gplogger;
 SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
-                                               spriteTexture3(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
+                                               spriteTexture3(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               enemySpriteTexture(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 {
     spriteTexture[0] = &spriteTexture0;
     spriteTexture[1] = &spriteTexture1;
@@ -90,12 +91,15 @@ void SpriteHandler::renderEnemySprite(Enemy e, int cameraX, int cameraY){
     //else if (scene.getAimDirection(i+1) == 1) currentClip = spritePositionHandler.move(1, currentFrame[i+1] % 3 + 3);
     //else {
     //if (!scene.isWalking(i+1)) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
-    /*else*/ currentClip = spritePositionHandler.move(0, currentFrame[i+1] % 6);
+    /*else*/ currentClip = spritePositionHandler.move(0, e.getCurrentFrame() % 6);
 
     //if (e.isShooting() ) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
     //}
     //if (scene.isCrouching(i+1))currentClip = spritePositionHandler.getFaceDown();
-    if (e.isAirborne() currentClip = spritePositionHandler.move(2, currentFrame[i+1] % 4);
+    if (e.isAirborne() ){
+        e.incrementCurrentFrame();
+        currentClip = spritePositionHandler.move(2, e.getCurrentFrame()% 4);
+    }
     //if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
 
     // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));

@@ -46,6 +46,8 @@ public:
 
     void setPosX(int posX);
 
+    int getCurrentFrame() const;
+
     int getPosY() const;
 
     void setPosY(int posY);
