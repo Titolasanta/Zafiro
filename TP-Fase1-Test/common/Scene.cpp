@@ -16,13 +16,11 @@ Scene::Scene(int numberOfPlayers) {
     gplogger->log(3,"Se crea una Escena");
 }
 
-
 void Scene::clearPlatform(){
     lPlataformsSoft.clear();
     lPlataformsHielo.clear();
     lPlataformsHard.clear();
 }
-
 
 void Scene::setBullets(std::list<std::tuple<int,int>> l){
     lBullets = std::move(l);
@@ -31,11 +29,6 @@ void Scene::setBullets(std::list<std::tuple<int,int>> l){
 SDL_Rect *Scene::getCamera() {
     return &camera;
 }
-
-
-
-
-
 
 std::list<std::tuple<int,int,int>>& Scene::getLPlatformGrass() {
     return lPlataformsSoft;
@@ -68,7 +61,6 @@ void Scene::addPlatformMetal(int x, int y, int width) {
 bool Scene::isVictory() const {
     return victory;
 }
-
 
 void Scene::setVictory(bool victory) {
     Scene::victory = victory;

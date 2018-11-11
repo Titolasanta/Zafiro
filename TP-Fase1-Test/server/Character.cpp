@@ -13,29 +13,34 @@
 extern Logger *gplogger;
 
 Character::Character() : weapon(Pistol()) {
-    // XML deberia chequear que las posiciones esten
-    // en el rango valido de la ventana
+    
     positionX = 100;
     positionY = 0;
     velocityX = 0;
     velocityY = 0;
-    accelerationX = 0;
-    accelerationY = 0;
+    //accelerationX = 0;
+    //accelerationY = 0;
+    
+    hitPoints = 2;
     walking = false;
     lookingRight = true;
     crouching = false;
     dead = false;
     airborne = true;
     aimDirection = 0;
+    shooting = false;
+    
+    immortal = false;
 
     gplogger->log(2, "Se creó el personaje");
 }
 void Character::land(int x, int y,int w,bool hard) {
 
     airborne = false;
-    if(getVelocityX() != 0)
-        walking = true;
+    
+    if(velocityX != 0) walking = true;
     velocityY = 0;
+    
     currentPlatHard = hard;
     currentPlatX = x;
     currentPlatW = w;
@@ -67,7 +72,7 @@ void Character::time(int currentPlayers) {
     if (crouching) aimDirection = 0;
 }
 
-Character::~Character() = default; //Loggear destruccion
+Character::~Character() = default;
 
 void Character::move(int velX) {
 
@@ -90,14 +95,11 @@ void Character::move(int velX) {
 
     velocityX = velX;
 
-    if(!airborne)
-        walking = true;
+    if(!airborne) walking = true;
 }
 
-
-
 void Character::jump(int velY) {
-
+    
     if (airborne) return;
 
     velocityY = velY;
@@ -134,9 +136,8 @@ Projectile Character::shoot() {
     }
     return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
 }
-void Character::changeWeapon(Weapon weapon){
-    weapon = weapon;
-
+void Character::changeWeapon(Weapon w){
+    weapon = w;
     gplogger->log(3, "El personaje cambia de arma");
 }
 
@@ -150,7 +151,7 @@ void Character::stand() {
 
 void Character::crouch() {
     if (airborne||crouching) return;
-    this->standStill();
+    standStill();
     positionY += 40;
     crouching = true;
 
@@ -158,9 +159,11 @@ void Character::crouch() {
 }
 
 void Character::takeDamage() {
-    if (hitPoints > 0) hitPoints--;
-    else dead = true;
-    //RIP Destruirlo o algo
+    if (!immortal){
+        if (hitPoints > 0) hitPoints--;
+        else dead = true;
+        //RIP Destruirlo o algo
+    }
 }
 
 void Character::goThroughPlatform(){
@@ -172,13 +175,15 @@ void Character::goThroughPlatform(){
 }
 
 void Character::spawn(SDL_Rect cam) {
-    if(this->level == 2){
+    
+    if(level == 2){
         positionX = cam.x + 400;
         positionY = cam.y + 250;
-    } else{
+    } else {
         positionX = cam.x + 150;
         positionY = cam.y + 100;
     }
+    
     velocityY = 0;
     velocityX = 0;
     airborne = false;
@@ -193,8 +198,10 @@ void Character::spawn(SDL_Rect cam) {
 }
 
 void Character::spawn(int x, int y) {
+    
     positionX = x;
     positionY = y;
+    
     velocityY = 0;
     velocityX = 0;
     airborne = false;
@@ -207,49 +214,3 @@ void Character::spawn(int x, int y) {
     dead = false;
     aimDirection = 0;
 }
-
-void Character::nextLevel() {
-    level += 1;
-}
-
-void Character::setVelocityX(int velocityX) {
-    Character::velocityX = velocityX;
-}
-
-void Character::setVelocityY(int velocityY) {
-    Character::velocityY = velocityY;
-}
-
-bool Character::canGoThrough() {
-    return !currentPlatHard;
-}
-
-bool Character::isShooting() const {
-    return shooting;
-}
-
-void Character::setShooting(bool shooting) {
-    Character::shooting = shooting;
-}
-
-void Character::stopShoot() {
-//    setShooting(false);
-}
-
-/*void Character::respawn(Scene& scene, SDL_Rect cam, Character *players[]){
-    int connectedPlayers = 0;
-    for (int i = 1; i <= scene.getMaxPlayers(); i++) connectedPlayers += !scene.isJugadorGrisado(i);
-    if (connectedPlayers == 1){
-        positionY = cam.y + 310;
-        positionX = cam.x + 200;
-        spawn();
-    } else {
-        for (int i = 1; i <= scene.getMaxPlayers(); i++){
-            if ((scene.isJugadorGrisado(i)) || (players[i-1]->getPositionY() == positionY)) continue;
-            positionX = players[i-1]->getPositionX();
-            positionY = players[i-1]->getPositionY() - 50;
-            spawn();
-            break;
-        }
-    }
-}*/
