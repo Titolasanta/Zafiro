@@ -22,7 +22,7 @@ public:
     SDL_Rect* getMuerto();
 
 private:
-    SDL_Rect frameMoviemiento[4][6];
+    SDL_Rect frameMoviemiento[5][6];
     SDL_Rect parado;
     SDL_Rect faceDown;
     SDL_Rect grisado;
