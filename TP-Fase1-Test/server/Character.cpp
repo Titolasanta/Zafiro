@@ -62,8 +62,8 @@ void Character::time(int currentPlayers) {
         airborne = true;
     }
 
-   if(airborne) velocityY += 4/currentPlayers;
-
+    if(airborne) velocityY += 4/currentPlayers;
+    if(dead) velocityX = 0;
     //velocityY += accelerationY;
     //velocityX += accelerationX;
 
@@ -76,7 +76,7 @@ void Character::time(int currentPlayers) {
 Character::~Character() = default;
 
 void Character::move(int velX) {
-
+    if (dead) return;
     if (velX > 0) {
         if (!lookingRight) {
             positionX += 3;
@@ -101,7 +101,7 @@ void Character::move(int velX) {
 
 void Character::jump(int velY) {
     
-    if (airborne) return;
+    if (airborne || dead) return;
 
     velocityY = velY;
 
@@ -112,6 +112,7 @@ void Character::jump(int velY) {
 }
 
 void Character::standStill() {
+    if (dead) return;
     velocityX = 0;
     walking = false;
 
@@ -119,11 +120,13 @@ void Character::standStill() {
 }
 
 void Character::aim(int direction) {
+    if (dead) return;
     if (!crouching) aimDirection = direction;
     else aimDirection = 0;
 }
 
 Projectile Character::shoot() {
+
     if (timeTillNextShoot != 0){
         throw 1; //no recargo el arma
     }
@@ -139,12 +142,14 @@ Projectile Character::shoot() {
     return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
 }
 void Character::changeWeapon(Weapon w){
+    if (dead) return;
     weapon = w;
     gplogger->log(3, "El personaje cambia de arma");
 }
 
 
 void Character::stand() {
+    if (dead) return;
     if (crouching) positionY -= 40;
     crouching = false;
 
@@ -152,7 +157,7 @@ void Character::stand() {
 }
 
 void Character::crouch() {
-    if (airborne||crouching) return;
+    if (airborne||crouching||dead) return;
     standStill();
     positionY += 40;
     crouching = true;
@@ -164,7 +169,8 @@ void Character::takeDamage() {
     if (!immortal && !dead){
         hitPoints--;
         if (hitPoints <= 0) {
-            positionY += 40;
+            positionY-=10;
+            airborne = true;
             dead = true;
         }
         //RIP Destruirlo o algo
@@ -172,6 +178,7 @@ void Character::takeDamage() {
 }
 
 void Character::goThroughPlatform(){
+    if (dead) return;
     positionY += 10;
     airborne = true;
     crouching = false;

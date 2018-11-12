@@ -548,20 +548,20 @@
             <password>pepe</password>
         </usuario>
         <usuario>
-            <nombre>mario</nombre>
-            <password>mario</password>
+            <nombre>a</nombre>
+            <password>a</password>
         </usuario>
         <usuario>
-            <nombre>sonic</nombre>
-            <password>sonic</password>
+            <nombre>q</nombre>
+            <password>q</password>
         </usuario>
         <usuario>
-            <nombre>megaman</nombre>
-            <password>megaman</password>
+            <nombre>w</nombre>
+            <password>w</password>
         </usuario>
         <usuario>
-            <nombre>contra</nombre>
-            <password>contra</password>
+            <nombre>e</nombre>
+            <password>e</password>
         </usuario>
     </usuarios>
 </configuracion>

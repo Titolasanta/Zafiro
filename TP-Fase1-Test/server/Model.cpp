@@ -20,7 +20,7 @@
 #define MARGENY 400
 #define CHARACTERHEIGHT 60
 #define CHARACTERWIDTH 25
-#define ENEMYHEIGHT 45
+#define ENEMYHEIGHT 55
 #define ENEMYWIDTH 25
 #define ENEMYID -1
 
@@ -97,14 +97,9 @@ void Model::time(){
         velocidad -= jugadorGrisado[i];
     
     for (int i = 0; i < currentPlayers; i++) {
-        if (!players[i]->isDead()) {
-            if (!jugadorGrisado[i]) {
-                players[i]->time(velocidad);
-                CollisionHard(*players[i], lPlataformsHard);
-                CollisionSoft(*players[i], lPlataformsSoft);
-            } else {}
-            //      players[i]->freeze(); // ???
-        }
+        players[i]->time(velocidad);
+        CollisionHard(*players[i], lPlataformsHard);
+        CollisionSoft(*players[i], lPlataformsSoft);
     }
 }
 
@@ -152,7 +147,6 @@ void Model::update(Scene &scene) {
     SDL_Rect* cam = scene.getCamera();
 
     for (int i = 0; i < currentPlayers; i++) {
-        std::cout << "player: "<< i<< "|dead: " << players[i]->isDead() << std::endl;
         if (!players[i]->isDead()){
             
             if (jugadorReconectado[i]){
@@ -179,11 +173,6 @@ void Model::update(Scene &scene) {
                     players[i]->setVelocityX(0);
                 }
             }
-    
-            scene.setPositionX(players[i]->getPositionX(), i + 1);
-            scene.setVelocityX(players[i]->getVelocityX(), i + 1);
-            scene.setVelocityY(players[i]->getVelocityY(), i + 1);
-            scene.setPositionY(players[i]->getPositionY(), i + 1);
             scene.setAirborne(players[i]->isAirborne(), i + 1);
             scene.setAimDirection(players[i]->getAimDirection(), i + 1);
             scene.setDead(players[i]->isDead(), i + 1);
@@ -199,6 +188,10 @@ void Model::update(Scene &scene) {
             }
         }
         else scene.setDead(players[i]->isDead(), i + 1);
+        scene.setPositionX(players[i]->getPositionX(), i + 1);
+        scene.setVelocityX(players[i]->getVelocityX(), i + 1);
+        scene.setVelocityY(players[i]->getVelocityY(), i + 1);
+        scene.setPositionY(players[i]->getPositionY(), i + 1);
     }
     
     placeCamera(scene);
@@ -390,7 +383,6 @@ void Model::setEnemies(Scene& scene) {
     int enemiesToPlaceInSoft = get_cant_enemigos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
         int random = distribution(generator);
-        //std::cout << random << " ";
         auto it = lPlataformsSoft.begin();
         for (;random > 0 ; random-- ){
             it++;
@@ -408,7 +400,6 @@ void Model::setEnemies(Scene& scene) {
         }
         std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
         int x = distribution(generator) + std::get<0>(*it);
-        //std::cout << x << "\n";
         Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it));
         scene.addEnemy(std::move(enemy));
     }
