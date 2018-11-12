@@ -21,6 +21,10 @@ SDL_Rect* Sprite::getGrisado(){
     return &grisado;
 }
 
+SDL_Rect* Sprite::getMuerto() {
+    return &muerto;
+}
+
 Sprite::Sprite()
 : frameMoviemiento { {{2,86,32,70}, //Corriendo hacia adelante
                       {36,86,38,35*2}, //(segunda linea sprite sheet)
@@ -51,5 +55,6 @@ Sprite::Sprite()
                       },
 parado{0*2,8*2,23*2,34*2},
 faceDown{79*2,25*2,32*2,16*2},
-grisado{2, 592, 46, 68}
+grisado{2, 592, 46, 68},
+muerto{336, 206, 64, 20}
                  {}

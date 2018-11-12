@@ -60,7 +60,7 @@ void Enemy::time(int max, std::list<Projectile>& lBullets) {
     timeTillNextShoot-=(12/max);
     
     if(timeTillNextShoot < 0){
-        timeTillNextShoot = 120;
+        timeTillNextShoot = 360;
         this->shoot(lBullets);
     }
 

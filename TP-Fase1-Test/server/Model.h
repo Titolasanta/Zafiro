@@ -70,6 +70,7 @@ public:
     void respawn(int,SDL_Rect*);
     const bool *getJugadorGrisado() const;
     void handleBullet(Scene& scene);
+    bool isBetween(int bulletX, int bulletY, int posX, int posY, int width, int height);
 };
 
 

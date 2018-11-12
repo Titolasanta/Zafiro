@@ -10,40 +10,35 @@
 
 class Projectile {
 
-    private:
-        int positionX;
-        int positionY;
-        int dueno;
+private:
+    int positionX;
+    int positionY;
+    int ownerId;
+    int velocityX;
+    int velocityY;
+    int damage;
+
 public:
     int getVelocityX() const;
-
     void setVelocityX(int velocityX);
 
     int getVelocityY() const;
-
     void setVelocityY(int velocityY);
-
-public:
+    
     int getPositionX() const;
-
     void setPositionX(int positionX);
 
     int getPositionY() const;
-
     void setPositionY(int positionY);
 
-private:
-    int velocityX;
-        int velocityY;
-        int accelerationX;
-        int accelerationY;
-        int damage;
+    int getOwnerId();
 
-    public:
-        Projectile(int px, int py, int vx, int vy, int dueno);
-        ~Projectile() = default;
-        void move(int);
-        bool inSight(SDL_Rect *cam);
+    Projectile(int px, int py, int vx, int vy, int ownerId);
+
+    ~Projectile() = default;
+    void move(int);
+
+    bool inSight(SDL_Rect *cam);
 };
 
 

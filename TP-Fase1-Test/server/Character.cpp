@@ -21,7 +21,7 @@ Character::Character() : weapon(Pistol()) {
     //accelerationX = 0;
     //accelerationY = 0;
     
-    hitPoints = 2;
+    hitPoints = 3;
     walking = false;
     lookingRight = true;
     crouching = false;
@@ -161,9 +161,12 @@ void Character::crouch() {
 }
 
 void Character::takeDamage() {
-    if (!immortal){
-        if (hitPoints > 0) hitPoints--;
-        else dead = true;
+    if (!immortal && !dead){
+        hitPoints--;
+        if (hitPoints <= 0) {
+            positionY += 40;
+            dead = true;
+        }
         //RIP Destruirlo o algo
     }
 }

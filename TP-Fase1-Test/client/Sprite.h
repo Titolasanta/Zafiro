@@ -19,12 +19,14 @@ public:
     SDL_Rect* quieto();
     SDL_Rect* getFaceDown();
     SDL_Rect* getGrisado();
+    SDL_Rect* getMuerto();
 
 private:
     SDL_Rect frameMoviemiento[4][6];
     SDL_Rect parado;
     SDL_Rect faceDown;
     SDL_Rect grisado;
+    SDL_Rect muerto;
 
 };
 
