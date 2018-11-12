@@ -69,6 +69,7 @@ public:
     //const Level &getLevel() const;
     void respawn(int,SDL_Rect*);
     const bool *getJugadorGrisado() const;
+    void handleBullet(Scene& scene);
 };
 
 

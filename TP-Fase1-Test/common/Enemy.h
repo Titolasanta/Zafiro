@@ -30,6 +30,9 @@ public:
 
     void setCurrentPlatW(int currentPlatW);
 
+    void time(int max, std::list<Projectile> &lBullets);
+    void land(int x, int y, int w);
+    void move(int randm);
 private:
     int currentPlatW = 0;
     int timeTillNextShoot = 0;
@@ -38,22 +41,17 @@ private:
 
 public:
     bool isAirborne() const;
-    void time(int max, std::list<Projectile> &lBullets);
-    void land(int x, int y, int w);
 
     void setAirborne(bool airborne);
 
-public:
     int getVelY() const;
 
     void setVelY(int velY);
 
-public:
     bool isLookingRight() const;
 
     void setLookingRight(bool lookingRight);
 
-public:
     int getPosX() const;
 
     void setPosX(int posX);

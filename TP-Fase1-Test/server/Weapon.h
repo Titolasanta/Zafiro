@@ -14,7 +14,14 @@ class Weapon {
         int maxAmmo;
         int currentAmmo = maxAmmo;
         int fireRate = 5 * 12;
+        int id = -1;
 public:
+    int getId() const;
+
+    void setId(int id);
+
+public:
+    Weapon();
     int getFireRate() const;
 
     void setFireRate(int fireRate);

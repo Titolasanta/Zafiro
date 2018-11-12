@@ -123,6 +123,29 @@ void Enemy::shoot(std::list<Projectile>& list) {
             bx = posX;
             bv = -10;
     }
-    Projectile p(bx,by,bv,0);
+    Projectile p(bx,by,bv,0,-1);
     list.push_back(std::move(p));
+}
+
+void Enemy::move(int randm){
+    int velx = 5;
+    int largoEnemigo = 50;
+    int r = randm;
+    int x = this->getPosX();
+    int px = this->getCurrentPlatX();
+    int pw = this->getCurrentPlatW();
+    if(r < 90){
+        if(this->isLookingRight() ) {
+            if (px + pw > x + velx + largoEnemigo)
+                this->setPosX(x + velx);
+        }else if( px < x - velx )
+            this->setPosX(this->getPosX() - velx);
+    } else if(r < 95 ){
+        if(!this->isAirborne()) {
+            this->setVelY(this->getVelY() - 40);
+            this->setAirborne(true);
+        }
+    }else{
+        this->setLookingRight(!this->isLookingRight());
+    }
 }

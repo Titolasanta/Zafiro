@@ -51,18 +51,22 @@ void Model::rejoinCharacter(int id){
 void Model::createCharacter(int id){
     switch (currentPlayers) {
         case 0:
+            player1.setId(id);
             players[currentPlayers] = &player1;
             jugadorGrisado[currentPlayers] = false;
             break;
         case 1:
+            player2.setId(id);
             players[currentPlayers] = &player2;
             jugadorGrisado[currentPlayers] = false;
             break;
         case 2:
+            player3.setId(id);
             players[currentPlayers] = &player3;
             jugadorGrisado[currentPlayers] = false;
             break;
         case 3:
+            player4.setId(id);
             players[currentPlayers] = &player4;
             jugadorGrisado[currentPlayers] = false;
             break;
@@ -142,8 +146,6 @@ void Model::update(Scene &scene) {
 
     SDL_Rect* cam = scene.getCamera();
 
-    std::list<std::tuple<int,int>> lTemp;
-    
     for (int i = 0; i < currentPlayers; i++) {
         
         if (!players[i]->isDead()){
@@ -195,23 +197,11 @@ void Model::update(Scene &scene) {
     
     placeCamera(scene);
     
-    int velocidad = maxPlayers;
-    for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorGrisado[i];
-    for(auto it = lBullets.begin(); it != lBullets.end();)
-    {
-        it->move(velocidad);
-        if(!(it->inSight(scene.getCamera()))) {
-            it=lBullets.erase(it);
-        }
-        else {
-            lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
-            ++it;
-        }
-    }
+
+    handleBullet(scene);
+
     moveEnemies(scene);
 
-    scene.setBullets(std::move(lTemp));
 
     if(endOfLevel(scene)) changeLevel(level.next(),scene);
 }
@@ -426,22 +416,7 @@ void Model::moveEnemies(Scene &scene) {
     int largoEnemigo = 50;
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
         int r = distribution(generator);
-        int x = it->getPosX();
-        int px = it->getCurrentPlatX();
-        int pw = it->getCurrentPlatW();
-        if(r < 90){
-            if(it->isLookingRight() ) {
-                if (px + pw > x + velx + largoEnemigo)
-                    it->setPosX(x + velx);
-            }else if( px < x - velx )
-                it->setPosX(it->getPosX() - velx);
-        } else if(r < 95 ){
-            if(it->isAirborne()) continue;
-            it->setVelY(it->getVelY() - 40);
-            it->setAirborne(true);
-        }else{
-            it->setLookingRight(!it->isLookingRight());
-        }
+        it->move(r);
         this->enemyCollision(*it,scene);
     }
 }
@@ -454,3 +429,22 @@ void Model::enemyCollision(Enemy &enemy,Scene& scene) {
     }
 }
 
+void Model::handleBullet(Scene &scene) {
+
+    std::list<std::tuple<int,int>> lTemp;
+    int velocidad = maxPlayers;
+    for(int i = 0; i < maxPlayers; i++)
+        velocidad -= jugadorGrisado[i];
+    for(auto it = lBullets.begin(); it != lBullets.end();)
+    {
+        it->move(velocidad);
+        if(!(it->inSight(scene.getCamera()))) {
+            it=lBullets.erase(it);
+        }
+        else {
+            lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
+            ++it;
+        }
+    }
+    scene.setBullets(std::move(lTemp));
+}

@@ -13,6 +13,7 @@ class Projectile {
     private:
         int positionX;
         int positionY;
+        int dueno;
 public:
     int getVelocityX() const;
 
@@ -39,7 +40,7 @@ private:
         int damage;
 
     public:
-        Projectile(int, int, int, int);
+        Projectile(int px, int py, int vx, int vy, int dueno);
         ~Projectile() = default;
         void move(int);
         bool inSight(SDL_Rect *cam);

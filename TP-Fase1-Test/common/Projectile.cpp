@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Projectile.h"
 
-Projectile::Projectile(int posX, int posY, int velX, int velY) {
+Projectile::Projectile(int posX, int posY, int velX, int velY,int duenoId) {
 
     positionX = posX;
     positionY = posY;
@@ -13,6 +13,8 @@ Projectile::Projectile(int posX, int posY, int velX, int velY) {
     velocityX = velX;
     velocityY = velY;
 
+    dueno = duenoId;
+    
     accelerationX = 0;
     accelerationY = 0;
 

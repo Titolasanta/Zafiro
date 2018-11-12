@@ -32,6 +32,7 @@ Character::Character() : weapon(Pistol()) {
     
     immortal = false;
 
+    weapon.setId(id);
     gplogger->log(2, "Se creó el personaje");
 }
 void Character::land(int x, int y,int w,bool hard) {
@@ -133,6 +134,7 @@ Projectile Character::shoot() {
         return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
     } catch(...){
         changeWeapon(Pistol());
+        weapon.setId(id);
     }
     return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
 }
@@ -213,4 +215,12 @@ void Character::spawn(int x, int y) {
     lookingRight = true;
     dead = false;
     aimDirection = 0;
+}
+
+int Character::getId() const {
+    return id;
+}
+
+void Character::setId(int id) {
+    Character::id = id;
 }

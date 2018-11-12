@@ -40,7 +40,12 @@ private:
 
     
     float timeTillNextShoot = 0;
-    
+    int id;
+public:
+    int getId() const;
+
+    void setId(int id);
+
 public:
 
     int level = 1; //?????
