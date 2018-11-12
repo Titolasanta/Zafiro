@@ -19,6 +19,7 @@
 #include "commonTextTexture.h"
 #include "commonSdlTtfInit.h"
 #include "MovingEnemyImg.h"
+#include "Sound.h"
 
 class View {
 
@@ -40,6 +41,7 @@ public:
     void endOfGameScreen();
     int isInLevelSummary();
     int getLevel();
+    Sound& getSound();
 private:
     int id;
     int currentImage = 0;
@@ -63,6 +65,7 @@ private:
     TextTexture usr;
     TextTexture pass;
     ImgTexture loginImages[4];
+    Sound sound;
     MovingEnemyImg staticEnemyImg;
 
     int level=1;

@@ -72,6 +72,7 @@ void View::render(Scene& scene) {
         inLevelSummary--;
         return;
     }
+
     if(level != scene.getLevel())
         changeLevel(scene);
 
@@ -89,12 +90,9 @@ void View::render(Scene& scene) {
     //background.render(scene);
 
 
-
     background.render(scene,*camera, background.getScrollingOffset(),level);
 
-
-    if(level == 1)
-        piedra.render(scene,camera);
+    if(level == 1) piedra.render(scene,camera);
 
     hielo.render(scene,camera);
 
@@ -107,16 +105,33 @@ void View::render(Scene& scene) {
         immortal.render(100,100);
     }
     window.updateRenderer();
-
-    //Center the camera over the player
-
-
+    
+    for (int i = 0; i < scene.getCurrentPlayers(); i++){
+        if (scene.isDead(i+1)){
+            if (!scene.isJustDead(i+1)){
+                Mix_PlayChannel(-1, sound.getDeathSFX(), 0);
+                scene.setJustDead(1,i+1);
+            }
+        }
+    }
 
 }
 
 void View::changeLevel(Scene& scene) {
+
     inLevelSummary = 100;
     ++level;
+
+    Mix_HaltMusic();
+
+    if (level == 2) {
+        Mix_PlayMusic(sound.getLevelTwoMusic(), -1);
+    }
+
+    if (level == 3) {
+        Mix_PlayMusic(sound.getLevelThreeMusic(), -1);
+    }
+
     if (level < 4) {
         background.changeLevel(level);
         scene.clearPlatform();
@@ -125,6 +140,8 @@ void View::changeLevel(Scene& scene) {
         if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, level, lh, lw);
         else cargar_plataformas(*gXML_doc[1], scene, level, lh, lw);
     }else{
+
+        Mix_PlayChannel(-1, sound.getVictorySFX(), 0);
         endOfGameScreen();
     }
 }
@@ -291,4 +308,6 @@ void View::endOfGameScreen() {
     }
 }
 
-int View::getLevel(){ return level; }
+int View::getLevel() { return level; }
+
+Sound& View::getSound() { return sound; }
