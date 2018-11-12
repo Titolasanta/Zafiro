@@ -2,10 +2,16 @@
 // Created by tito on 07/11/18.
 //
 
+#include <random>
 #include "Enemy.h"
 #include "../server/CollisionSoft.h"
 
 Enemy::Enemy(int x,int y,int px, int pw) : currentPlatX(px),currentPlatW(pw) {
+
+    std::random_device rand_dev;
+    std::default_random_engine generator(rand_dev());
+    std::uniform_int_distribution<int> distribution(0,100);
+    currentFrame = distribution(generator);
     posX = x;
     posY = y;
 }
@@ -84,7 +90,8 @@ void Enemy::land(int x, int y, int w) {
 
 
 void Enemy::incrementCurrentFrame(){
-    currentFrame++;
+    currentFrame = currentFrame++;
+    currentFrame = currentFrame%6;
 }
 
 void Enemy::setCurrentFrame(int frame){
@@ -128,6 +135,7 @@ void Enemy::shoot(std::list<Projectile>& list) {
 }
 
 void Enemy::move(int randm){
+    currentFrame = (currentFrame + 1) % MOBILEENEMYFRAME;
     int velx = 5;
     int largoEnemigo = 50;
     int r = randm;

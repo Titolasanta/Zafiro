@@ -8,11 +8,13 @@
 #include "Viewable.h"
 
 
-class StaticEnemyImg : public Viewable {
+class MovingEnemyImg {
 public:
-    StaticEnemyImg(Window* window);
+    MovingEnemyImg(Window* window);
     void render(Scene& scene,SDL_Rect *cam);
 private:
+    ImgTexture texture;
+    SDL_Rect mobileRect[7];
     
 };
 

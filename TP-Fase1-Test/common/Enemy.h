@@ -4,7 +4,7 @@
 
 #ifndef TP_FASE1_TEST_ENEMY_H
 #define TP_FASE1_TEST_ENEMY_H
-
+#define MOBILEENEMYFRAME 6
 
 #include <list>
 #include "Projectile.h"

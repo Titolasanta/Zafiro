@@ -64,7 +64,7 @@ private:
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
-    std::list<Enemy> Enemies;
+    std::list<Enemy> enemies;
 public:
     void setEnemies(const std::list<Enemy> &Enemies);
 

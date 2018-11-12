@@ -75,14 +75,14 @@ void Scene::setAllPlayersConnected(bool allPlayersConnected) {
 }
 
 void Scene::addEnemy(Enemy &&enemy) {
-    Enemies.push_back(enemy);
+    enemies.push_back(enemy);
 }
 
 std::list<Enemy> &Scene::getEnemies() {
-    return Enemies;
+    return enemies;
 }
 
 void Scene::setEnemies(const std::list<Enemy> &Enemies) {
-    Scene::Enemies = std::move(Enemies);
+    Scene::enemies = std::move(Enemies);
 }
 

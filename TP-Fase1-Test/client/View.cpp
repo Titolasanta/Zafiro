@@ -11,7 +11,7 @@
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "../common/Logger.h"
-#include "StaticEnemyImg.h"
+#include "MovingEnemyImg.h"
 #include <iostream>
 extern Logger* gplogger;
 extern pugi::xml_document *gXML_doc[2];
