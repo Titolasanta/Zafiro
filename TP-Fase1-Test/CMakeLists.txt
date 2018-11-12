@@ -7,10 +7,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${TP-Fase1-Test_SOURCE_DIR}/cmake")
 
 
+INCLUDE(FindPkgConfig)
 
-find_package(SDL2 REQUIRED)
-find_package(SDL2_image REQUIRED)
-find_package(SDL2_ttf REQUIRED)
+PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
+PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
+PKG_SEARCH_MODULE(SDL2MIXER REQUIRED SDL2_mixer>=2.0.0)
+PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
 
 include_directories(
         ${CMAKE_BINARY_DIR}
@@ -41,13 +43,7 @@ add_executable(tClient ${tSOURCE_FILES_C})
 
 
 target_link_libraries(tClient
-        ${SDL2_LIBRARY}
-        ${SDL2_IMAGE_LIBRARIES}
-        ${pthread}
-        ${SDL2_TTF_LIBRARIES})
+        SDL2 SDL2_image SDL2_mixer SDL2_ttf pthread)
 
 target_link_libraries(tServer
-        ${SDL2_LIBRARY}
-        ${SDL2_IMAGE_LIBRARIES}
-        ${pthread}
-        ${SDL2_TTF_LIBRARIES})
+        SDL2 SDL2_image SDL2_mixer SDL2_ttf pthread)
