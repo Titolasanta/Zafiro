@@ -5,7 +5,7 @@
 		<Option title="TP-Fase1-Test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake-build-debug"/>
@@ -184,6 +184,12 @@
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/InvalidLogin.h">
 			<Option target="tClient"/>
 		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/MovingEnemyImg.cpp">
+			<Option target="tClient"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/MovingEnemyImg.h">
+			<Option target="tClient"/>
+		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Piedra.cpp">
 			<Option target="tClient"/>
 		</Unit>
@@ -310,6 +316,14 @@
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/todolist">
 			<Option target="tClient"/>
 		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Enemy.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Enemy.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Exception.cpp">
 			<Option target="tClient"/>
 			<Option target="tServer"/>
@@ -331,6 +345,14 @@
 			<Option target="tServer"/>
 		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Logger.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Projectile.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/Projectile.h">
 			<Option target="tClient"/>
 			<Option target="tServer"/>
 		</Unit>
@@ -432,12 +454,6 @@
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Pistol.h">
 			<Option target="tServer"/>
 		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Projectile.cpp">
-			<Option target="tServer"/>
-		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Projectile.h">
-			<Option target="tServer"/>
-		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Sender.cpp">
 			<Option target="tServer"/>
 		</Unit>
@@ -473,15 +489,6 @@
 		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2_image.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/cmake/FindSDL2_ttf.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

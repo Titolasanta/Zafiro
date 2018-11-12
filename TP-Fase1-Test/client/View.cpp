@@ -20,7 +20,7 @@ extern pugi::xml_parse_result *gXML_parse_result;
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
 personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
-pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),
+pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),immortal(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
 ,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)),
@@ -51,6 +51,9 @@ loginImages{std::move(window.createImgTexture()),
 
     std::string windowName("Contra");
     gplogger->log(3,"Se crea un View");
+
+    std::string immortaal("i");
+    immortal.loadFromRenderedText(immortaal);
 
 }
 
@@ -100,9 +103,10 @@ void View::render(Scene& scene) {
     bullet.render(scene,camera);
     staticEnemyImg.render(scene,camera);
     personajes.render(scene, id, camera->x, camera->y);
-    
+    if(scene.getImmortal(id)) {
+        immortal.render(100,100);
+    }
     window.updateRenderer();
-    
 
     //Center the camera over the player
 

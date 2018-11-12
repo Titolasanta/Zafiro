@@ -30,7 +30,13 @@ private:
     bool dead;
     bool shooting;
     bool immortal;
-    
+public:
+    bool isImmortal() const;
+
+    void setImmortal(bool immortal);
+
+private:
+
     Weapon weapon;
     
     int currentPlatX;
@@ -61,6 +67,7 @@ public:
     void crouch();
     void takeDamage();
     void time(int);
+    void changeImmortal();
     void land(int,int,int,bool);
     void goThroughPlatform();
     void changeWeapon(Weapon);

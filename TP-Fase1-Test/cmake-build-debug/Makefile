@@ -325,6 +325,33 @@ client/InvalidLogin.cpp.s:
 	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/InvalidLogin.cpp.s
 .PHONY : client/InvalidLogin.cpp.s
 
+client/MovingEnemyImg.o: client/MovingEnemyImg.cpp.o
+
+.PHONY : client/MovingEnemyImg.o
+
+# target to build an object file
+client/MovingEnemyImg.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/MovingEnemyImg.cpp.o
+.PHONY : client/MovingEnemyImg.cpp.o
+
+client/MovingEnemyImg.i: client/MovingEnemyImg.cpp.i
+
+.PHONY : client/MovingEnemyImg.i
+
+# target to preprocess a source file
+client/MovingEnemyImg.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/MovingEnemyImg.cpp.i
+.PHONY : client/MovingEnemyImg.cpp.i
+
+client/MovingEnemyImg.s: client/MovingEnemyImg.cpp.s
+
+.PHONY : client/MovingEnemyImg.s
+
+# target to generate assembly for a file
+client/MovingEnemyImg.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/MovingEnemyImg.cpp.s
+.PHONY : client/MovingEnemyImg.cpp.s
+
 client/Piedra.o: client/Piedra.cpp.o
 
 .PHONY : client/Piedra.o
@@ -892,6 +919,36 @@ client/main.cpp.s:
 	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/main.cpp.s
 .PHONY : client/main.cpp.s
 
+common/Enemy.o: common/Enemy.cpp.o
+
+.PHONY : common/Enemy.o
+
+# target to build an object file
+common/Enemy.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Enemy.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Enemy.cpp.o
+.PHONY : common/Enemy.cpp.o
+
+common/Enemy.i: common/Enemy.cpp.i
+
+.PHONY : common/Enemy.i
+
+# target to preprocess a source file
+common/Enemy.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Enemy.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Enemy.cpp.i
+.PHONY : common/Enemy.cpp.i
+
+common/Enemy.s: common/Enemy.cpp.s
+
+.PHONY : common/Enemy.s
+
+# target to generate assembly for a file
+common/Enemy.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Enemy.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Enemy.cpp.s
+.PHONY : common/Enemy.cpp.s
+
 common/Exception.o: common/Exception.cpp.o
 
 .PHONY : common/Exception.o
@@ -981,6 +1038,36 @@ common/Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Logger.cpp.s
 	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Logger.cpp.s
 .PHONY : common/Logger.cpp.s
+
+common/Projectile.o: common/Projectile.cpp.o
+
+.PHONY : common/Projectile.o
+
+# target to build an object file
+common/Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Projectile.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Projectile.cpp.o
+.PHONY : common/Projectile.cpp.o
+
+common/Projectile.i: common/Projectile.cpp.i
+
+.PHONY : common/Projectile.i
+
+# target to preprocess a source file
+common/Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Projectile.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Projectile.cpp.i
+.PHONY : common/Projectile.cpp.i
+
+common/Projectile.s: common/Projectile.cpp.s
+
+.PHONY : common/Projectile.s
+
+# target to generate assembly for a file
+common/Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/common/Projectile.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/Projectile.cpp.s
+.PHONY : common/Projectile.cpp.s
 
 common/Scene.o: common/Scene.cpp.o
 
@@ -1375,33 +1462,6 @@ server/Pistol.cpp.s:
 	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Pistol.cpp.s
 .PHONY : server/Pistol.cpp.s
 
-server/Projectile.o: server/Projectile.cpp.o
-
-.PHONY : server/Projectile.o
-
-# target to build an object file
-server/Projectile.cpp.o:
-	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.o
-.PHONY : server/Projectile.cpp.o
-
-server/Projectile.i: server/Projectile.cpp.i
-
-.PHONY : server/Projectile.i
-
-# target to preprocess a source file
-server/Projectile.cpp.i:
-	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.i
-.PHONY : server/Projectile.cpp.i
-
-server/Projectile.s: server/Projectile.cpp.s
-
-.PHONY : server/Projectile.s
-
-# target to generate assembly for a file
-server/Projectile.cpp.s:
-	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Projectile.cpp.s
-.PHONY : server/Projectile.cpp.s
-
 server/Sender.o: server/Sender.cpp.o
 
 .PHONY : server/Sender.o
@@ -1595,6 +1655,9 @@ help:
 	@echo "... client/InvalidLogin.o"
 	@echo "... client/InvalidLogin.i"
 	@echo "... client/InvalidLogin.s"
+	@echo "... client/MovingEnemyImg.o"
+	@echo "... client/MovingEnemyImg.i"
+	@echo "... client/MovingEnemyImg.s"
 	@echo "... client/Piedra.o"
 	@echo "... client/Piedra.i"
 	@echo "... client/Piedra.s"
@@ -1658,6 +1721,9 @@ help:
 	@echo "... client/main.o"
 	@echo "... client/main.i"
 	@echo "... client/main.s"
+	@echo "... common/Enemy.o"
+	@echo "... common/Enemy.i"
+	@echo "... common/Enemy.s"
 	@echo "... common/Exception.o"
 	@echo "... common/Exception.i"
 	@echo "... common/Exception.s"
@@ -1667,6 +1733,9 @@ help:
 	@echo "... common/Logger.o"
 	@echo "... common/Logger.i"
 	@echo "... common/Logger.s"
+	@echo "... common/Projectile.o"
+	@echo "... common/Projectile.i"
+	@echo "... common/Projectile.s"
 	@echo "... common/Scene.o"
 	@echo "... common/Scene.i"
 	@echo "... common/Scene.s"
@@ -1709,9 +1778,6 @@ help:
 	@echo "... server/Pistol.o"
 	@echo "... server/Pistol.i"
 	@echo "... server/Pistol.s"
-	@echo "... server/Projectile.o"
-	@echo "... server/Projectile.i"
-	@echo "... server/Projectile.s"
 	@echo "... server/Sender.o"
 	@echo "... server/Sender.i"
 	@echo "... server/Sender.s"

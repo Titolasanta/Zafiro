@@ -25,6 +25,7 @@ public:
     void aimStraight();
     void stand();
     void stopShooting();
+    void immortal();
 private:
     Socket& socket;
 

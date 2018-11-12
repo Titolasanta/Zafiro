@@ -65,6 +65,7 @@ public:
     int YMasGrande(Scene&);
     void setEnemies(Scene&);
     void moveEnemies(Scene&);
+    void inmortalize(int id);
     void enemyCollision(Enemy&,Scene&);
     //const Level &getLevel() const;
     void respawn(int,SDL_Rect*);

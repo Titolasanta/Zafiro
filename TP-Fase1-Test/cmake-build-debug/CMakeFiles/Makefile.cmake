@@ -17,16 +17,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CheckIncludeFile.cmake"
-  "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CheckLibraryExists.cmake"
-  "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CheckSymbolExists.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-C.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-CXX.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/FindPackageMessage.cmake"
-  "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/FindThreads.cmake"
+  "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/FindPkgConfig.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-C.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/tito/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU.cmake"
@@ -37,9 +34,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.12.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.0/CMakeSystem.cmake"
-  "../cmake/FindSDL2.cmake"
-  "../cmake/FindSDL2_image.cmake"
-  "../cmake/FindSDL2_ttf.cmake"
   )
 
 # The corresponding makefile is:

@@ -73,7 +73,8 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt,it->isLookingRight());
     }
     sendValue(skt, -1);
-    for (int i = 0; i < p; i++) {
+    for (int i = 0; i < p; i++){
+        sendValue(skt, scene.getImmortal(i + 1));
         sendValue(skt, scene.getPositionX(i + 1));
         sendValue(skt, scene.getPositionY(i + 1));
         sendValue(skt, scene.getVelocityX(i + 1));

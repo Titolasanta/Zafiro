@@ -173,6 +173,11 @@ void Model::update(Scene &scene) {
                     players[i]->setVelocityX(0);
                 }
             }
+            scene.setImmortal(players[i]->isImmortal(), i + 1);
+            scene.setPositionX(players[i]->getPositionX(), i + 1);
+            scene.setVelocityX(players[i]->getVelocityX(), i + 1);
+            scene.setVelocityY(players[i]->getVelocityY(), i + 1);
+            scene.setPositionY(players[i]->getPositionY(), i + 1);
             scene.setAirborne(players[i]->isAirborne(), i + 1);
             scene.setAimDirection(players[i]->getAimDirection(), i + 1);
             scene.setDead(players[i]->isDead(), i + 1);
@@ -300,6 +305,8 @@ void Model::changeLevel(Level level,Scene& scene) {
             players[i]->spawn(*scene.getCamera());
             players[i]->nextLevel();
         }
+
+        //setEnemies(scene);
         gplogger->log(2, "Se cambió de nivel");
     }
 }
@@ -464,4 +471,8 @@ void Model::handleBullet(Scene &scene) {
         }
     }
     scene.setBullets(std::move(lTemp));
+}
+
+void Model::inmortalize(int id) {
+    players[id-1]->changeImmortal();
 }

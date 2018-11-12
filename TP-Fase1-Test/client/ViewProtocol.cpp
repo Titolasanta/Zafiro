@@ -64,6 +64,10 @@ void ViewProtocol::stand() {
     char msg[3] = "sd";
     socket.send_all(msg,2);
 }
+void ViewProtocol::immortal() {
+    char msg[3] = "mi";
+    socket.send_all(msg,2);
+}
 
 void ViewProtocol::stopShooting() {
     char msg[3] = "ss";
@@ -111,7 +115,8 @@ void ViewProtocol::update(Scene& scene){
     int p = scene.getMaxPlayers();
     for (int i = 0; i < p; i++) {
        //scene.setBullets(std::move(lTemp));
-       scene.setPositionX(receiveNumber(socket), i + 1);
+        scene.setImmortal(receiveNumber(socket), i + 1);
+        scene.setPositionX(receiveNumber(socket), i + 1);
        scene.setPositionY(receiveNumber(socket), i + 1);
        scene.setVelocityX(receiveNumber(socket), i + 1);
        scene.setVelocityY(receiveNumber(socket), i + 1);

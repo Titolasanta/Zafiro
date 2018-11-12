@@ -56,6 +56,7 @@ private:
     Bullet bullet;
     Ice hielo;
     TextTexture txt;
+    TextTexture immortal;
     TextTexture insert1;
     TextTexture insert2;
     TextTexture insert2bis;

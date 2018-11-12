@@ -59,6 +59,7 @@ private:
     int walking[4];
     int airborne[4];
     int crouching[4];
+    int immortal[4];
     int lookingRight[4];
     int dead[4];
     int shooting[4];
@@ -117,6 +118,9 @@ public:
 
     int getAimDirection(int p) const { return aimDirection[p-1]; }
     void setAimDirection(int ad, int p) { aimDirection[p-1] = ad; }
+    
+    int getImmortal(int p) const { return immortal[p-1]; }
+    void setImmortal(int ad, int p) { immortal[p-1] = ad; }
 
     int isShooting(int p) const { return shooting[p-1]; }
     void setShooting(int s, int p) { shooting[p-1] = s; }
@@ -128,8 +132,7 @@ public:
     
     bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
-
-
+    
     void addEnemy(Enemy &&enemy);
 };
 

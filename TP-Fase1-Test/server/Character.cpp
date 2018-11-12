@@ -234,3 +234,15 @@ int Character::getId() const {
 void Character::setId(int id) {
     Character::id = id;
 }
+
+void Character::changeImmortal() {
+    immortal = !immortal;
+}
+
+bool Character::isImmortal() const {
+    return immortal;
+}
+
+void Character::setImmortal(bool immortal) {
+    Character::immortal = immortal;
+}
