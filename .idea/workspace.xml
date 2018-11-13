@@ -12,27 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/View.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/View.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/View.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/client/ViewProtocol.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/TP-Fase1-Test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/common/Scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/common/Scene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Interpreter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Interpreter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/Model.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP-Fase1-Test/server/ModelProtocol.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="6b7091ab-f4d0-4f2f-9453-c87a55eca9d6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/TP-Fase1-Test/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -314,8 +294,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/server/Model.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="314" lean-forward="true" selection-start-line="314" selection-end-line="314" />
+            <state relative-caret-position="178">
+              <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
               </folding>
@@ -1042,11 +1022,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542053476608</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo">
+      <created>1542057759194</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1542057759194</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289376000" />
+    <option name="totallyTimeSpent" value="290432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="-4" width="1305" height="772" extended-state="6" />
@@ -1099,9 +1086,9 @@
     <MESSAGE value="boludez arreglada" />
     <MESSAGE value="sprite grisado" />
     <MESSAGE value="7/11" />
-    <MESSAGE value="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo" />
     <MESSAGE value="not de piedra, pasto y hielo" />
-    <option name="LAST_COMMIT_MESSAGE" value="not de piedra, pasto y hielo" />
+    <MESSAGE value="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweak a xml.h, mejoradas las imagenes de piedra, pasto y hielo" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1452,8 +1439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP-Fase1-Test/server/Model.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="314" lean-forward="true" selection-start-line="314" selection-end-line="314" />
+        <state relative-caret-position="178">
+          <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
           </folding>
