@@ -33,6 +33,9 @@ private:
     bool onPass = false;
     std::string UvalidationData;
     std::string PvalidationData;
+    
+    int endOfMainMenu = 0;
+    int timeTillNextShoot = 5 * 12;
 };
 
 

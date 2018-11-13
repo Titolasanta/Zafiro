@@ -68,11 +68,12 @@ void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int 
         if (scene.isShooting(i + 1) && !scene.isCrouching(i + 1)) currentClip = spritePositionHandler.move(3, currentFrame[i+1]%3);
     }
     if (scene.isCrouching(i + 1))currentClip = spritePositionHandler.getFaceDown();
-    if (scene.isAirborne(i + 1)) currentClip = spritePositionHandler.move(2, currentFrame[i + 1] % 4);
     if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
-    if (scene.isDead(i + 1)) currentClip = spritePositionHandler.getMuerto();
+    std::cout << "airborne: " << scene.isAirborne(i + 1) << "|dead: " << scene.isDead(i + 1) << std::endl;
+    if (scene.isAirborne(i + 1) && !scene.isDead(i + 1)) currentClip = spritePositionHandler.move(2, currentFrame[i + 1] % 4);
+    if (scene.isAirborne(i + 1) && scene.isDead(i + 1)) currentClip = spritePositionHandler.move(4, currentFrame[i + 1] % 4);
+    if (!scene.isAirborne(i + 1) && scene.isDead(i + 1)) currentClip = spritePositionHandler.getMuerto();
 
-    // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
     spriteTexture[i]->render(scene.getPositionX(i + 1) - cameraX - characterWidth / 2,
                              scene.getPositionY(i + 1) - cameraY,
                              currentClip, angle);

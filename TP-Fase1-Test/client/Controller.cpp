@@ -2,6 +2,7 @@
 // Created by tito on 13/09/18.
 //
 #include <iostream>
+#include <SDL_mixer.h>
 #include "Controller.h"
 #include "../common/Logger.h"
 #include "../common/pugixml.hpp"
@@ -30,9 +31,10 @@ void Controller::startGame(){
     while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
             if (e.type == SDL_QUIT) { quit = true; }
-            if(!view.isInLevelSummary()) processEvent(e);
+            if(!view.isInLevelSummary() && scene.isAllPlayersConnected()) processEvent(e);
         }
         show();
+        if (timeTillNextShoot > 0) timeTillNextShoot -= 12;
     }
 }
 
@@ -40,21 +42,28 @@ void Controller::processEvent(SDL_Event e) {
 
     if (e.type == SDL_KEYDOWN) {
         if (e.key.keysym.sym == SDLK_SPACE) protocol.jump();
-        if (e.key.keysym.sym == SDLK_RIGHT) protocol.moveRight();
-        if (e.key.keysym.sym == SDLK_LEFT) protocol.moveLeft();
-        if (e.key.keysym.sym == SDLK_DOWN) protocol.aimDown();
-        if (e.key.keysym.sym == SDLK_UP) protocol.aimUp();
-        if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
-        if (e.key.keysym.sym == SDLK_x) protocol.shoot();
-        if (e.key.keysym.sym == SDLK_i) protocol.immortal();
+        else if (e.key.keysym.sym == SDLK_RIGHT) protocol.moveRight();
+        else if (e.key.keysym.sym == SDLK_LEFT) protocol.moveLeft();
+        else if (e.key.keysym.sym == SDLK_DOWN) protocol.aimDown();
+        else if (e.key.keysym.sym == SDLK_UP) protocol.aimUp();
+        else if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
+        else if (e.key.keysym.sym == SDLK_x) {
+            if (timeTillNextShoot == 0){
+                Mix_PlayChannel(-1, view.getSound().getShootSFX(), 0);
+                protocol.shoot();
+                timeTillNextShoot = 5 * 12;
+            }
+        }
+        else if (e.key.keysym.sym == SDLK_i) protocol.immortal();
+
         //if (e.key.keysym.sym == SDLK_l){ protocol.changeLevel(protocol.getLevel().next(),scene); }
     }
 
     if (e.type == SDL_KEYUP) {
         if (e.key.keysym.sym == SDLK_RIGHT || e.key.keysym.sym == SDLK_LEFT) protocol.stop();
-        if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP) protocol.aimStraight();
-        if (e.key.keysym.sym == SDLK_LCTRL) protocol.stand();
-        if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
+        else if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP) protocol.aimStraight();
+        else if (e.key.keysym.sym == SDLK_LCTRL) protocol.stand();
+        else if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
     }
 }
 
@@ -66,7 +75,12 @@ void Controller::show() {
     //lobby, espera del resto de los jugadores
     if (!scene.isAllPlayersConnected()) {
         view.waiting_for_players();
-    } else{
+    } else {
+        if (endOfMainMenu == 0){
+            endOfMainMenu++;
+            Mix_HaltMusic();
+            Mix_PlayMusic(view.getSound().getLevelOneMusic(), -1);
+        }
         view.render(scene);
     }
 }

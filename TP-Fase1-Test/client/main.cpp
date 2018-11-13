@@ -23,6 +23,7 @@
 #include "InvalidLogin.h"
 #include "Quit.h"
 #include "lifeSupport.h"
+#include "Sound.h"
 
 #define PATH_XML_ORIGINAL "../Archivos/configuracion.xml"
 #define PATH_XML_DEFAULT "../Archivos/default.xml"
@@ -68,9 +69,13 @@ int main( int argc, char* argv[] )
     gXML_doc[1] = &doc_default;
     gXML_parse_result = &result;
 
+
     char id = 0;
     const char* port = get_port(doc, doc_default, result);
     View view(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+    Mix_PlayMusic(view.getSound().getMenuMusic(), -1);
+
     bool cutedConnection = false;
     lifeSupport ls(cutedConnection);
     try {
@@ -100,7 +105,6 @@ int main( int argc, char* argv[] )
             sktLatido.send_all("1",1);
             verifier.show();
         }
-
 
 
         skt.receive_all(&id, 1);

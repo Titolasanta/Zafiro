@@ -169,8 +169,7 @@ void Character::takeDamage() {
     if (!immortal && !dead){
         hitPoints--;
         if (hitPoints <= 0) {
-            positionY-=10;
-            airborne = true;
+            positionY+=45;
             dead = true;
         }
         //RIP Destruirlo o algo
@@ -198,7 +197,7 @@ void Character::spawn(SDL_Rect cam) {
     
     velocityY = 0;
     velocityX = 0;
-    airborne = false;
+    airborne = true;
     walking = false;
     currentPlatW = 0;
     currentPlatX = 0;
@@ -216,7 +215,7 @@ void Character::spawn(int x, int y) {
     
     velocityY = 0;
     velocityX = 0;
-    airborne = false;
+    airborne = true;
     walking = false;
     currentPlatW = 0;
     currentPlatX = 0;

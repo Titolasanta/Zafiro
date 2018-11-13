@@ -34,7 +34,7 @@ file(GLOB tclient_SRC
         )
 
 set(tSOURCE_FILES_S ${tserver_SRC} )
-set(tSOURCE_FILES_C ${tclient_SRC} )
+set(tSOURCE_FILES_C ${tclient_SRC} client/Sound.cpp client/Sound.h)
 
 
 add_executable(tServer ${tSOURCE_FILES_S})

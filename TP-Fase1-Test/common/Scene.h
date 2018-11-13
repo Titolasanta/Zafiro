@@ -62,6 +62,7 @@ private:
     int immortal[4];
     int lookingRight[4];
     int dead[4];
+    int justDead[4] = {0,0,0,0};
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
@@ -115,6 +116,9 @@ public:
 
     int isDead(int p) const { return dead[p-1]; }
     void setDead(int d, int p) { dead[p-1] = d; }
+
+    int isJustDead(int p) const { return justDead[p-1]; }
+    void setJustDead(int d, int p) { justDead[p-1] = d; }
 
     int getAimDirection(int p) const { return aimDirection[p-1]; }
     void setAimDirection(int ad, int p) { aimDirection[p-1] = ad; }
