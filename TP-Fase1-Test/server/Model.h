@@ -29,6 +29,7 @@ private:
     bool jugadorGrisado[4] = {true,true,true,true};
     bool jugadorReconectado[4] = {false, false, false, false};
     bool maxPlayersReached = false;
+    bool shootSound = false;
     
 public:
     explicit Model(int initialLevel);

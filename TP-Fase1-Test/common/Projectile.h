@@ -36,7 +36,7 @@ public:
     Projectile(int px, int py, int vx, int vy, int ownerId);
 
     ~Projectile() = default;
-    void move(int);
+    void move();
 
     bool inSight(SDL_Rect *cam);
 };

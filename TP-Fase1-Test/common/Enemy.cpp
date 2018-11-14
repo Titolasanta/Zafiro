@@ -62,8 +62,8 @@ void Enemy::setAirborne(bool airborne) {
     Enemy::airborne = airborne;
 }
 
-void Enemy::time(int max, std::list<Projectile>& lBullets) {
-    timeTillNextShoot-=(12/max);
+void Enemy::time( std::list<Projectile>& lBullets) {
+    timeTillNextShoot-=(12);
     
     if(timeTillNextShoot < 0){
         timeTillNextShoot = 360;
@@ -74,9 +74,9 @@ void Enemy::time(int max, std::list<Projectile>& lBullets) {
         airborne = true;
     }
 
-    if(airborne) velY += 4/max;
+    if(airborne) velY += 4;
 
-    posY += velY/max;
+    posY += velY;
 
 }
 

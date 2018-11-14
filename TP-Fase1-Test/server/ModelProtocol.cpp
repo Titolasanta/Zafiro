@@ -94,6 +94,9 @@ void ModelProtocol::send(Scene& scene){
     sendValue(skt, scene.getLevel());
     sendValue(skt,scene.getCurrentPlayers());
     sendValue(skt,scene.isVictory());
+    sendValue(skt,scene.isShootSound());
+    if(scene.isShootSound())
+        printf("\nasd");
 
 }
 

@@ -92,12 +92,9 @@ int Model::getCurrentPlayers(){
 
 void Model::time(){
     
-    int velocidad = maxPlayers;
-    for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorGrisado[i];
-    
+
     for (int i = 0; i < currentPlayers; i++) {
-        players[i]->time(velocidad);
+        players[i]->time();
         CollisionHard(*players[i], lPlataformsHard);
         CollisionSoft(*players[i], lPlataformsSoft);
     }
@@ -186,7 +183,6 @@ void Model::update(Scene &scene) {
             scene.setShooting(players[i]->isShooting(), i + 1);
             scene.setCurrentPlayers(currentPlayers);
             scene.setJugadorGrisado(jugadorGrisado[i], i + 1);
-    
             if (getCurrentPlayers() == getMaxPlayers()) {
                 scene.setAllPlayersConnected(true);
             }
@@ -198,7 +194,9 @@ void Model::update(Scene &scene) {
         scene.setVelocityY(players[i]->getVelocityY(), i + 1);
         scene.setPositionY(players[i]->getPositionY(), i + 1);
     }
-    
+
+    scene.setShootSound(shootSound);
+    shootSound = false;
     placeCamera(scene);
     
 
@@ -321,6 +319,7 @@ void Model::shoot(int p){
     try {
 
         lBullets.push_back(std::move(players[p-1]->shoot()));
+        shootSound = true;
     } catch(int e) { //no recargo el arma
     }
 }
@@ -426,7 +425,7 @@ void Model::moveEnemies(Scene &scene) {
 }
 
 void Model::enemyCollision(Enemy &enemy,Scene& scene) {
-    enemy.time(scene.getCurrentPlayers(),lBullets);
+    enemy.time(lBullets);
     if (enemy.isAirborne()) {
         CollisionSoft c(enemy, lPlataformsSoft);
         CollisionSoft h(enemy, lPlataformsHard);
@@ -440,11 +439,8 @@ bool Model::isBetween(int bulletX, int bulletY, int posX, int posY, int width, i
 void Model::handleBullet(Scene &scene) {
 
     std::list<std::tuple<int,int>> lTemp;
-    int velocidad = maxPlayers;
-    for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorGrisado[i];
     for(auto it = lBullets.begin(); it != lBullets.end();){
-        it->move(velocidad);
+        it->move();
         if(!(it->inSight(scene.getCamera()))) {
             it=lBullets.erase(it);
         }

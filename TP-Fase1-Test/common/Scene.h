@@ -51,8 +51,9 @@ private:
     int velocityY[4];
     bool victory = false;
     bool allPlayersConnected = false;
+    bool shootSound = false;
 
-private:
+
 //  int accelerationX[4];
 //  int accelerationY[4];
     int hitPoints[4];
@@ -86,6 +87,8 @@ public:
     int getLevel() const { return level; }
     void setLevel(int l) { level = l; }
 
+    bool isShootSound() const;
+    void setShootSound(bool shootSound);
 
     int getPositionX(int p) const { return positionX[p-1]; }
     void setPositionX(int posX, int p) { positionX[p-1] = posX; }

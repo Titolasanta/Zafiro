@@ -89,6 +89,8 @@ void View::render(Scene& scene) {
 
     //background.render(scene);
 
+    if(scene.isShootSound())
+        Mix_PlayChannel(-1, this->getSound().getShootSFX(), 0);
 
     background.render(scene,*camera, background.getScrollingOffset(),level);
 

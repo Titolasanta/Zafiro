@@ -66,7 +66,7 @@ public:
     void stand();
     void crouch();
     void takeDamage();
-    void time(int);
+    void time();
     void changeImmortal();
     void land(int,int,int,bool);
     void goThroughPlatform();

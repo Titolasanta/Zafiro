@@ -86,3 +86,11 @@ void Scene::setEnemies(const std::list<Enemy> &Enemies) {
     Scene::enemies = std::move(Enemies);
 }
 
+bool Scene::isShootSound() const {
+    return shootSound;
+}
+
+void Scene::setShootSound(bool shootSound) {
+    Scene::shootSound = shootSound;
+}
+
