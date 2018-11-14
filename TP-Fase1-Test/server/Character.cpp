@@ -38,7 +38,6 @@ Character::Character() : weapon(Pistol()) {
 void Character::land(int x, int y,int w,bool hard) {
 
     airborne = false;
-    
     if(velocityX != 0) walking = true;
     velocityY = 0;
     

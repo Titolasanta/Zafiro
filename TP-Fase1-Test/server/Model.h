@@ -65,10 +65,10 @@ public:
     int YMasGrande(Scene&);
     void setEnemies(Scene&);
     void moveEnemies(Scene&);
-    void inmortalize(int id);
+    void immortalize(int id);
     void enemyCollision(Enemy&,Scene&);
     //const Level &getLevel() const;
-    void respawn(int,SDL_Rect*);
+    void respawn(int,SDL_Rect*, bool);
     const bool *getJugadorGrisado() const;
     void handleBullet(Scene& scene);
     bool isBetween(int bulletX, int bulletY, int posX, int posY, int width, int height);

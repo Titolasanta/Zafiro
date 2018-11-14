@@ -125,17 +125,17 @@ int Model::YMasGrande(Scene &scene){
     return min;
 }
 
-void Model::respawn(int toRespawn,SDL_Rect* cam){
+void Model::respawn(int toRespawn,SDL_Rect* cam, bool damage){
     //if (players[toRespawn]->isDead()) return;
     for(int i = 0; i < currentPlayers; i++){
         if(i != toRespawn && !players[i]->isAirborne() && !jugadorGrisado[i]){
             players[toRespawn]->spawn(players[i]->getPositionX(),players[i]->getPositionY() - 50);
-            players[toRespawn]->takeDamage();
+            if (damage) players[toRespawn]->takeDamage();
             return;
         }
     }
     players[toRespawn]->spawn(*cam);
-    players[toRespawn]->takeDamage();
+    if (damage) players[toRespawn]->takeDamage();
 }
 
 void Model::update(Scene &scene) {
@@ -151,7 +151,7 @@ void Model::update(Scene &scene) {
             
             if (jugadorReconectado[i]){
                 jugadorReconectado[i] = false;
-                respawn(i, cam);
+                respawn(i, cam, false);
             }
             if (players[i]->getPositionX() < 5 + cam->x) {
                 players[i]->setPositionX( 20 + cam->x);
@@ -159,7 +159,7 @@ void Model::update(Scene &scene) {
             }
     
             if(players[i]->getPositionY() > 600 + cam->y) {
-                respawn(i,cam);
+                respawn(i,cam, true);
             }
     
             if(level.getLevel() != 2){
@@ -178,7 +178,6 @@ void Model::update(Scene &scene) {
             scene.setVelocityX(players[i]->getVelocityX(), i + 1);
             scene.setVelocityY(players[i]->getVelocityY(), i + 1);
             scene.setPositionY(players[i]->getPositionY(), i + 1);
-            scene.setAirborne(players[i]->isAirborne(), i + 1);
             scene.setAimDirection(players[i]->getAimDirection(), i + 1);
             scene.setDead(players[i]->isDead(), i + 1);
             scene.setCrouching(players[i]->isCrouching(), i + 1);
@@ -193,6 +192,7 @@ void Model::update(Scene &scene) {
             }
         }
         else scene.setDead(players[i]->isDead(), i + 1);
+        scene.setAirborne(players[i]->isAirborne(), i + 1);
         scene.setPositionX(players[i]->getPositionX(), i + 1);
         scene.setVelocityX(players[i]->getVelocityX(), i + 1);
         scene.setVelocityY(players[i]->getVelocityY(), i + 1);
@@ -376,7 +376,7 @@ void Model::placeCamera(Scene &scene){
                 }
             }else{
                 if (playerPosY > cam->y + 550) {
-                    respawn(i,cam);
+                    respawn(i,cam, true);
                 }
             }
         }
@@ -387,7 +387,7 @@ void Model::setEnemies(Scene& scene) {
     std::random_device                  rand_dev;
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
-    int enemiesToPlaceInSoft = get_cant_enemigos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
+    int enemiesToPlaceInSoft = get_cant_enemigos_moviles(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
         int random = distribution(generator);
         auto it = lPlataformsSoft.begin();
@@ -473,6 +473,6 @@ void Model::handleBullet(Scene &scene) {
     scene.setBullets(std::move(lTemp));
 }
 
-void Model::inmortalize(int id) {
+void Model::immortalize(int id) {
     players[id-1]->changeImmortal();
 }

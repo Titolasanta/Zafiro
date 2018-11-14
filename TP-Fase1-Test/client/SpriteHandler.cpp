@@ -69,7 +69,6 @@ void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int 
     }
     if (scene.isCrouching(i + 1))currentClip = spritePositionHandler.getFaceDown();
     if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
-    std::cout << "airborne: " << scene.isAirborne(i + 1) << "|dead: " << scene.isDead(i + 1) << std::endl;
     if (scene.isAirborne(i + 1) && !scene.isDead(i + 1)) currentClip = spritePositionHandler.move(2, currentFrame[i + 1] % 4);
     if (scene.isAirborne(i + 1) && scene.isDead(i + 1)) currentClip = spritePositionHandler.move(4, currentFrame[i + 1] % 4);
     if (!scene.isAirborne(i + 1) && scene.isDead(i + 1)) currentClip = spritePositionHandler.getMuerto();

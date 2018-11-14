@@ -39,7 +39,7 @@ void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset,int l
             scrollingCatarata = -2900;
         scrollingCatarata += 10;
         img1.renderBackground(0, scrollingCatarata);
-        img2.renderBackground(0, scrollingOffset*5 );
+        img2.renderBackground(0, scrollingOffset*10  );
         //img3.renderBackground(0, scrollingOffset *10);
 
     } if(level == 3) {
