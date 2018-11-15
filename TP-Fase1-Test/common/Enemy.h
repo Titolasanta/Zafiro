@@ -33,7 +33,7 @@ public:
     Enemy(int x,int y,int px, int pw, bool);
     Enemy(int x,int y, bool);
     void land(int x, int y, int w);
-    void move(int random);
+    void move(int random, int x, int y);
     void incrementCurrentFrame();
 
     void shoot(std::list<Projectile> &list);

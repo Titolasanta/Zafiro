@@ -19,13 +19,13 @@ public:
     std::list<std::tuple<int,int,int>>& getLPlatformGrass();
     std::list<std::tuple<int,int,int>>& getLPlatformMetal();
     std::list<std::tuple<int,int,int>>& getLPlatformIce();
-    std::list<std::tuple<int,int>>& getLBullets();
+    std::list<std::tuple<int,int,int>>& getLBullets();
 
     void addPlatformGrass(int x, int y, int width);
     void addPlatformMetal(int x, int y, int width);
     void addPlatformIce(int x, int y, int width);
 
-    void setBullets(std::list<std::tuple<int,int>>);
+    void setBullets(std::list<std::tuple<int,int,int>>);
 
     void clearPlatform();
     bool isAllPlayersConnected() const;
@@ -39,7 +39,7 @@ private:
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
     std::list<std::tuple<int,int,int>> lPlataformsHard;
     std::list<std::tuple<int,int,int>> lPlataformsHielo;
-    std::list<std::tuple<int,int>> lBullets;
+    std::list<std::tuple<int,int,int>> lBullets;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
     int players = 0;
@@ -88,7 +88,7 @@ public:
 
     std::list<Enemy> &getEnemies();
 
-    void setLBullets(const std::list<std::tuple<int, int>> &lb) { lBullets = lb; }
+    void setLBullets(const std::list<std::tuple<int, int, int>> &lb) { lBullets = lb; }
 
     SDL_Rect *getCamera();
 

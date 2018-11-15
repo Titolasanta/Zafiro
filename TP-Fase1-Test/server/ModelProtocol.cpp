@@ -64,6 +64,7 @@ void ModelProtocol::send(Scene& scene){
     for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
         sendValue(skt, std::get<0>(*it));
         sendValue(skt, std::get<1>(*it));
+        sendValue(skt, std::get<2>(*it));
     }
     sendValue(skt, -1);
     
@@ -72,6 +73,7 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, it->getPosY());
         sendValue(skt, it->isStatic());
         sendValue(skt, it->isLookingRight());
+        sendValue(skt, it->getCurrentFrame());
     }
     sendValue(skt, -1);
     for (int i = 0; i < p; i++){

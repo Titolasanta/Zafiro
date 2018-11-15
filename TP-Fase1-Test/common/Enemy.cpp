@@ -5,6 +5,8 @@
 #include <random>
 #include "Enemy.h"
 #include "../server/CollisionSoft.h"
+#include <math.h>
+#include <iostream>
 
 Enemy::Enemy(int x,int y,int px, int pw, bool isStatic) : currentPlatX(px),currentPlatW(pw) {
 
@@ -77,8 +79,26 @@ void Enemy::shoot(std::list<Projectile>& list) {
     list.push_back(std::move(p));
 }
 
-void Enemy::move(int randm){
-    if (staticEnemy) return;
+void Enemy::move(int randm, int chx, int chy){
+    if (staticEnemy){
+        float distX = posX - chx;
+        float distY = posY - chy + 61;
+        float angle = atan(distY/distX);
+        std::cout << "dx: "<< distX << "|dy: "<< distY<< "|angle: "<<angle<<std::endl;
+        if ((angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12)) && distX < 0) currentFrame = 0;
+        else if (angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12) && distX > 0) currentFrame = 6;
+        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX < 0) currentFrame = 5;
+        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX > 0) currentFrame = 11;
+        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX < 0) currentFrame = 4;
+        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX > 0) currentFrame = 10;
+        else if (angle > (5*M_1_PIf64/12) && distX < 0) currentFrame = 3;
+        else if (angle > (5*M_1_PIf64/12) && distX > 0) currentFrame = 9;
+        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX > 0) currentFrame = 1;
+        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX < 0) currentFrame = 7;
+        else if (angle > -(5*M_1_PIf64/12) && angle < -(M_1_PIf64/4) && distX > 0) currentFrame = 2;
+        else currentFrame = 8;
+        return;
+    }
     int velx = 5;
     int largoEnemigo = 50;
     int r = randm;

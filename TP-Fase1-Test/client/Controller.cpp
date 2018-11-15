@@ -73,7 +73,7 @@ void Controller::show() {
         if (endOfMainMenu == 0){
             endOfMainMenu++;
             Mix_HaltMusic();
-            //Mix_PlayMusic(view.getSound().getLevelOneMusic(), -1);
+            Mix_PlayMusic(view.getSound().getLevelOneMusic(), -1);
         }
         view.render(scene);
     }

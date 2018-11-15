@@ -88,12 +88,13 @@ int receiveNumber(Socket& skt){
 void ViewProtocol::update(Scene& scene){
 
     //scene.setBullets(std::move(lTemp));
-    std::list<std::tuple<int,int>> lb;
-    int recvy;
+    std::list<std::tuple<int,int,int>> lb;
+    int recvy, recvId;
     int recvx = receiveNumber(socket);
     while(recvx != -1){
         recvy = receiveNumber(socket);
-        lb.push_back(std::tuple<int,int>(recvx,recvy));
+        recvId = receiveNumber(socket);
+        lb.push_back(std::tuple<int,int,int>(recvx,recvy,recvId));
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
@@ -107,9 +108,8 @@ void ViewProtocol::update(Scene& scene){
         Enemy enemy(recvx,recvy,(bool)stat);
         int lr = receiveNumber(socket);
         enemy.setLookingRight((bool)lr);
-        int frame;
+        int frame = receiveNumber(socket);
         if (!enemy.isStatic()) frame = (it->getCurrentFrame() + 1) % 6;
-        else frame = (it->getCurrentFrame() + 1) % 12;
         enemy.setCurrentFrame(frame);
         it++;
         le.push_back(std::move(enemy));

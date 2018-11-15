@@ -18,10 +18,10 @@
 
 #define MARGENX (800/2)
 #define MARGENY 400
-#define CHARACTERHEIGHT 60
-#define CHARACTERWIDTH 25
-#define ENEMYHEIGHT 55
-#define ENEMYWIDTH 25
+#define CHARACTERHEIGHT 70
+#define CHARACTERWIDTH 40
+#define ENEMYHEIGHT 60
+#define ENEMYWIDTH 50
 #define BOSSHEIGHT1 400
 #define BOSSWIDTH1 250
 #define BOSSHEIGHT2 850
@@ -411,6 +411,28 @@ void Model::setEnemies(Scene& scene) {
     std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
     int enemiesToPlaceInSoft = get_cant_enemigos_moviles(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     int staticEnemies = get_cant_enemigos_estaticos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
+    for(int i = 0;i < staticEnemies ;i++) {
+        int random = distribution(generator);
+        auto it = lPlataformsSoft.begin();
+        for (;random > 0 ; random-- ){
+            it++;
+        };
+        if(scene.getLevel() != 2) {
+            if (std::get<0>(*it) < 600) {
+                i--;
+                continue;
+            }
+        }else{
+            if (std::get<1>(*it) > 600) {
+                i--;
+                continue;
+            }
+        }
+        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
+        int x = distribution(generator) + std::get<0>(*it);
+        Enemy enemy(x, std::get<1>(*it) - 61 ,std::get<0>(*it),std::get<2>(*it), true);
+        scene.addEnemy(std::move(enemy));
+    }
     for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
         int random = distribution(generator);
         auto it = lPlataformsSoft.begin();
@@ -433,39 +455,19 @@ void Model::setEnemies(Scene& scene) {
         Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it), false);
         scene.addEnemy(std::move(enemy));
     }
-    for(int i = 0;i < staticEnemies ;i++) {
-        int random = distribution(generator);
-        auto it = lPlataformsSoft.begin();
-        for (;random > 0 ; random-- ){
-            it++;
-        };
-        if(scene.getLevel() != 2) {
-            if (std::get<0>(*it) < 600) {
-                i--;
-                continue;
-            }
-        }else{
-            if (std::get<1>(*it) > 600) {
-                i--;
-                continue;
-            }
-        }
-        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
-        int x = distribution(generator) + std::get<0>(*it);
-        Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it), true);
-        scene.addEnemy(std::move(enemy));
-    }
 }
 
 void Model::moveEnemies(Scene &scene) {
     std::random_device rand_dev;
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,100);
-    int velx = 5;
-    int largoEnemigo = 50;
+    std::uniform_int_distribution<int> player(0,currentPlayers - 1);
+    int character = player(generator);
+    int x = players[character]->getPositionX();
+    int y = players[character]->getPositionY();
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
         int r = distribution(generator);
-        it->move(r);
+        it->move(r, x, y);
         this->enemyCollision(*it,scene);
     }
 }
@@ -484,7 +486,7 @@ bool Model::isBetween(int bulletX, int bulletY, int posX, int posY, int width, i
 
 void Model::handleBullet(Scene &scene) {
 
-    std::list<std::tuple<int,int>> lTemp;
+    std::list<std::tuple<int,int,int>> lTemp;
     for(auto it = lBullets.begin(); it != lBullets.end();){
         it->move();
         if(!(it->inSight(scene.getCamera()))) {
@@ -519,7 +521,7 @@ void Model::handleBullet(Scene &scene) {
                         it = lBullets.erase(it);
                     }
             }
-            lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
+            lTemp.push_back(std::tuple<int,int,int>(it->getPositionX(),it->getPositionY(), it->getOwnerId()));
             ++it;
         }
     }

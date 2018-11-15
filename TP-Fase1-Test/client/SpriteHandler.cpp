@@ -50,11 +50,7 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 }
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
-    for (int i = 0; i-1 <  scene.getCurrentPlayers(); i++) {
-        if (i == id - 1) continue;
-        renderCharacterSprite(scene, i, cameraX, cameraY);
-    }
-    renderCharacterSprite(scene, id - 1, cameraX, cameraY);
+
     renderHp(scene, id, cameraX, cameraY);
 
     std::list<Enemy> le = scene.getEnemies();
@@ -64,6 +60,12 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     }
 
     renderBossSprite(scene,cameraX, cameraY);
+
+    for (int i = 0; i-1 <  scene.getCurrentPlayers(); i++) {
+        if (i == id - 1) continue;
+        renderCharacterSprite(scene, i, cameraX, cameraY);
+    }
+    renderCharacterSprite(scene, id - 1, cameraX, cameraY);
 }
 
 void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int cameraY) {
