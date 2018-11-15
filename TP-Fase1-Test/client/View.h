@@ -20,6 +20,7 @@
 #include "commonSdlTtfInit.h"
 #include "MovingEnemyImg.h"
 #include "Sound.h"
+#include "BossSprite.h"
 
 class View {
 
@@ -43,6 +44,7 @@ public:
     int getLevel();
     Sound& getSound();
 private:
+    //BossSprite bossSprite;
     int id;
     int currentImage = 0;
     SdlImgInit z;

@@ -67,15 +67,26 @@ private:
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
+    int bossX;
+    int bossY;
+    int bossHP;
+
+private:
     std::list<Enemy> enemies;
+    
 public:
+    
+    int getBossHP() const {
+        return bossHP;
+    }
+
+    void setBossHP(int bossHP) {
+        Scene::bossHP = bossHP;
+    }
+
     void setEnemies(const std::list<Enemy> &Enemies);
 
-public:
     std::list<Enemy> &getEnemies();
-
-
-public:
 
     void setLBullets(const std::list<std::tuple<int, int>> &lb) { lBullets = lb; }
 
@@ -141,6 +152,23 @@ public:
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
     
     void addEnemy(Enemy &&enemy);
+    
+    int getBossX() const {
+        return bossX;
+    }
+
+    void setBossX(int bossX) {
+        Scene::bossX = bossX;
+    }
+
+    int getBossY() const {
+        return bossY;
+    }
+
+    void setBossY(int bossY) {
+        Scene::bossY = bossY;
+    }
+
 };
 
 

@@ -21,7 +21,7 @@ private:
     //int accelerationX;
     //int accelerationY;
     
-    int hitPoints;
+    int hitPoints = 3;
     bool walking;
     bool airborne;
     bool crouching;

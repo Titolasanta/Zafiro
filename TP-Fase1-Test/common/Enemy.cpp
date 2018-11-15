@@ -131,7 +131,7 @@ void Enemy::shoot(std::list<Projectile>& list) {
             bv = -10;
     }
     Projectile p(bx,by,bv,0,-1);
-    list.push_back(std::move(p));
+    //list.push_back(std::move(p));
 }
 
 void Enemy::move(int randm){

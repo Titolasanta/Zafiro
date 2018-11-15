@@ -10,7 +10,7 @@ Sender::Sender(std::list<ModelProtocol> &l,Scene &scene,Model& model) : pList(l)
 
 void Sender::run(){
     while(!quit){
-        usleep(45000);
+        usleep(54000);
         if(!pList.empty())
             model.update(scene);
         for (auto it = pList.begin(); it != pList.end(); it++) {

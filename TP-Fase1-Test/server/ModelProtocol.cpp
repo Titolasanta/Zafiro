@@ -91,12 +91,13 @@ void ModelProtocol::send(Scene& scene){
     }
     sendValue(skt, scene.getCamera()->x);
     sendValue(skt, scene.getCamera()->y);
+    sendValue(skt, scene.getBossX());
+    sendValue(skt, scene.getBossY());
+    sendValue(skt, scene.getBossHP());
     sendValue(skt, scene.getLevel());
     sendValue(skt,scene.getCurrentPlayers());
     sendValue(skt,scene.isVictory());
     sendValue(skt,scene.isShootSound());
-    if(scene.isShootSound())
-        printf("\nasd");
 
 }
 

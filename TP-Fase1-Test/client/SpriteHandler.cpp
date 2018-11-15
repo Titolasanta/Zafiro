@@ -22,6 +22,9 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
                                                spriteTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTexture3(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               bossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               bossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               bossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                enemySpriteTexture(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 {
     spriteTexture[0] = &spriteTexture0;
@@ -32,6 +35,12 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     spriteTexture1.loadFromFile(SPRITE_PATH_ROJO);
     spriteTexture2.loadFromFile(SPRITE_PATH_VERDE);
     spriteTexture3.loadFromFile(SPRITE_PATH_AMARILLO);
+    bossTexture[0] = &bossTexture0;
+    bossTexture[1] = &bossTexture1;
+    bossTexture[2] = &bossTexture2;
+    bossTexture0.loadFromFile(SPRITE_PATH_AZUL);
+    bossTexture1.loadFromFile(SPRITE_PATH_AZUL);
+    bossTexture2.loadFromFile(SPRITE_PATH_AZUL);
     //enemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);
     gplogger->log(3,"Se crea SpriteHandler de la vista");
 }
@@ -42,6 +51,7 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
         renderCharacterSprite(scene, i, cameraX, cameraY);
     }
     renderCharacterSprite(scene, id - 1, cameraX, cameraY);
+    renderHp(scene, id, cameraX, cameraY);
 
     std::list<Enemy> le = scene.getEnemies();
     for (auto it = le.begin(); it != le.end(); it++)
@@ -78,6 +88,12 @@ void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int 
                              currentClip, angle);
 }
 
+void SpriteHandler::renderHp(Scene& scene,int  id,int cameraX,int cameraY){
+    SDL_Rect lifeClip = {386,0,16,32};
+    if(!scene.isDead(id))
+        for(int j = scene.getHitPoints(id) - 1; j >= 0; j--)
+            spriteTexture[id-1]->render(j * 20, 1,&lifeClip );
+}
 void SpriteHandler::renderEnemySprite(Enemy e, int cameraX, int cameraY){
 
     if (e.isAirborne()) e.incrementCurrentFrame();
@@ -107,4 +123,10 @@ void SpriteHandler::renderEnemySprite(Enemy e, int cameraX, int cameraY){
     // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
     enemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY,
                               currentClip, angle);
+}
+
+void SpriteHandler::renderBossSprite(Scene &scene, int cameraX, int cameraY) {
+    if(scene.getBossHP())
+        bossTexture[scene.getLevel()-1]->render(scene.getBossX() - cameraX ,
+                             scene.getBossY() - cameraY );
 }

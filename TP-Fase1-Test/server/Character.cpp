@@ -21,7 +21,7 @@ Character::Character() : weapon(Pistol()) {
     //accelerationX = 0;
     //accelerationY = 0;
     
-    hitPoints = 3;
+    hitPoints = 10;
     walking = false;
     lookingRight = true;
     crouching = false;

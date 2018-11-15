@@ -12,13 +12,18 @@
 #include "../common/Projectile.h"
 #include "../common/Level.h"
 #include "../common/Scene.h"
+#include "Boss.h"
 
 class Model {
     
 private:
     Level level;
     Character *players[4];
+    Boss *boss[3];
     std::list<Projectile> lBullets;
+    Boss boss1;
+    Boss boss2;
+    Boss boss3;
     Character player1;
     Character player2;
     Character player3;
@@ -30,10 +35,11 @@ private:
     bool jugadorReconectado[4] = {false, false, false, false};
     bool maxPlayersReached = false;
     bool shootSound = false;
-    
 public:
+    
     explicit Model(int initialLevel);
     ~Model() = default;
+    void collisionEyP(Scene&);
     void createCharacter(int);
     int getMaxPlayers();
     int getCurrentPlayers();
