@@ -97,15 +97,19 @@ void ViewProtocol::update(Scene& scene){
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
+
     std::list<Enemy> le;
     recvx = receiveNumber(socket);
     while(recvx != -1){
         auto it = scene.getEnemies().begin();
         recvy = receiveNumber(socket);
+        int stat = receiveNumber(socket);
+        Enemy enemy(recvx,recvy,(bool)stat);
         int lr = receiveNumber(socket);
-        Enemy enemy(recvx,recvy);
-        enemy.setLookingRight(lr);
-        int frame = (it->getCurrentFrame() + 1) % 6;
+        enemy.setLookingRight((bool)lr);
+        int frame;
+        if (!enemy.isStatic()) frame = (it->getCurrentFrame() + 1) % 6;
+        else frame = (it->getCurrentFrame() + 1) % 12;
         enemy.setCurrentFrame(frame);
         it++;
         le.push_back(std::move(enemy));

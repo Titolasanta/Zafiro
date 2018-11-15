@@ -71,6 +71,7 @@ public:
     void land(int,int,int,bool);
     void goThroughPlatform();
     void changeWeapon(Weapon);
+    void gainHealth(int);
     //void respawn(Scene&,SDL_Rect,Character*[]);
 
     void spawn(SDL_Rect);

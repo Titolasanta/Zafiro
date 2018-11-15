@@ -30,7 +30,7 @@ Character::Character() : weapon(Pistol()) {
     aimDirection = 0;
     shooting = false;
     
-    immortal = false;
+    immortal = true;
 
     weapon.setId(id);
     gplogger->log(2, "Se creó el personaje");
@@ -203,7 +203,6 @@ void Character::spawn(SDL_Rect cam) {
     currentPlatY = 0;
     crouching = false;
     lookingRight = true;
-    dead = false;
     aimDirection = 0;
 }
 
@@ -243,4 +242,9 @@ bool Character::isImmortal() const {
 
 void Character::setImmortal(bool immortal) {
     Character::immortal = immortal;
+}
+
+void Character::gainHealth(int h){
+    hitPoints += h;
+    if (hitPoints >= 0) dead = false;
 }

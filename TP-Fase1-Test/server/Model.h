@@ -34,9 +34,11 @@ private:
     bool jugadorGrisado[4] = {true,true,true,true};
     bool jugadorReconectado[4] = {false, false, false, false};
     bool maxPlayersReached = false;
+    bool fixBugPls[4] = {true,true,true,true};
     bool shootSound = false;
+
 public:
-    
+
     explicit Model(int initialLevel);
     ~Model() = default;
     void collisionEyP(Scene&);
@@ -75,7 +77,7 @@ public:
     void immortalize(int id);
     void enemyCollision(Enemy&,Scene&);
     //const Level &getLevel() const;
-    void respawn(int,SDL_Rect*, bool);
+    void respawn(int,SDL_Rect*);
     const bool *getJugadorGrisado() const;
     void handleBullet(Scene& scene);
     bool isBetween(int bulletX, int bulletY, int posX, int posY, int width, int height);

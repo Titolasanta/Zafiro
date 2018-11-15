@@ -51,7 +51,7 @@ private:
     SdlInit x;
     SdlTtfInit y;
     Window window;
-    SpriteHandler personajes;
+    SpriteHandler sprites;
     Background background;
 //Scene& scene;
     Piedra piedra;

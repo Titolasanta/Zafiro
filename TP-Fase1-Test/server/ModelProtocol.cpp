@@ -70,7 +70,8 @@ void ModelProtocol::send(Scene& scene){
     for (auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
         sendValue(skt, it->getPosX());
         sendValue(skt, it->getPosY());
-        sendValue(skt,it->isLookingRight());
+        sendValue(skt, it->isStatic());
+        sendValue(skt, it->isLookingRight());
     }
     sendValue(skt, -1);
     for (int i = 0; i < p; i++){

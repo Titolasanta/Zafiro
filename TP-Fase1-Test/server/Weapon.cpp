@@ -6,8 +6,8 @@
 #include "../common/Projectile.h"
 
 
-Weapon::Weapon(){
-}
+Weapon::Weapon() = default;
+
 Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int direction) {
 
     if(id == -1){

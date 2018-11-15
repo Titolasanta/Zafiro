@@ -5,8 +5,8 @@
 #include <iostream>
 #include "Sprite.h"
 
-SDL_Rect* Sprite::move(int dirreccion, int frame) {
-    return &frameMoviemiento[dirreccion][frame];
+SDL_Rect* Sprite::move(int direccion, int frame) {
+    return &frameMoviemiento[direccion][frame];
 }
 
 SDL_Rect* Sprite::quieto() {
@@ -23,6 +23,14 @@ SDL_Rect* Sprite::getGrisado(){
 
 SDL_Rect* Sprite::getMuerto() {
     return &muerto;
+}
+
+SDL_Rect* Sprite::getMovingEnemySprite(int direccion) {
+    return &movingEnemies[direccion];
+}
+
+SDL_Rect* Sprite::getStaticEnemySprite(int direccion) {
+    return &staticEnemies[direccion];
 }
 
 Sprite::Sprite()
@@ -63,5 +71,28 @@ Sprite::Sprite()
 parado{0*2,8*2,23*2,34*2},
 faceDown{79*2,25*2,32*2,16*2},
 grisado{2, 592, 46, 68},
-muerto{336, 206, 64, 20}
+muerto{336, 206, 64, 20},
+movingEnemies{
+        {0,2,32,62}, //Corriendo hacia adelante
+        {38,0,32,64}, //(segunda linea sprite sheet)
+        {74,0,30,64},
+        {108,2,32,64},
+        {144,0,32,64},
+        {180,0,32,64}
+},
+staticEnemies{
+    {0, 152, 64, 64},
+    {136, 152, 64, 64},
+    {272, 152, 64, 64},
+    {0, 220, 64, 64},
+    {136, 220, 64, 64},
+    {272, 220, 64, 64},
+    {0, 288, 64, 64},
+    {136, 288, 64, 64},
+    {272, 288, 64, 64},
+    {0, 356, 64, 64},
+    {136, 356, 64, 64},
+    {272, 356, 64, 64}
+}
+
                  {}
