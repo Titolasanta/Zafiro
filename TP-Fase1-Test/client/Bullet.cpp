@@ -7,11 +7,11 @@
 
 
 extern Logger *gplogger;
-Bullet::Bullet(Window *window) : Viewable(window,"../spirites/Bullet.png",34,18,10,10) {
+Bullet::Bullet(Window *window) : Viewable(window,"../spirites/Bullet.png") {
 
     gplogger->log(3,"Se crea Bullet de vista");
 }
 
 void Bullet::render(Scene &scene,SDL_Rect* camera) {
-    this->renderList(scene.getLBullets(),camera);
+    this->renderBulletList(scene.getLBullets(),camera);
 }

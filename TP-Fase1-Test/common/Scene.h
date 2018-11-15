@@ -19,13 +19,13 @@ public:
     std::list<std::tuple<int,int,int>>& getLPlatformGrass();
     std::list<std::tuple<int,int,int>>& getLPlatformMetal();
     std::list<std::tuple<int,int,int>>& getLPlatformIce();
-    std::list<std::tuple<int,int>>& getLBullets();
+    std::list<std::tuple<int,int,int>>& getLBullets();
 
     void addPlatformGrass(int x, int y, int width);
     void addPlatformMetal(int x, int y, int width);
     void addPlatformIce(int x, int y, int width);
 
-    void setBullets(std::list<std::tuple<int,int>>);
+    void setBullets(std::list<std::tuple<int,int,int>>);
 
     void clearPlatform();
     bool isAllPlayersConnected() const;
@@ -39,7 +39,7 @@ private:
     std::list<std::tuple<int,int,int>> lPlataformsSoft;
     std::list<std::tuple<int,int,int>> lPlataformsHard;
     std::list<std::tuple<int,int,int>> lPlataformsHielo;
-    std::list<std::tuple<int,int>> lBullets;
+    std::list<std::tuple<int,int,int>> lBullets;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
     int players = 0;
@@ -51,8 +51,9 @@ private:
     int velocityY[4];
     bool victory = false;
     bool allPlayersConnected = false;
+    bool shootSound = false;
 
-private:
+
 //  int accelerationX[4];
 //  int accelerationY[4];
     int hitPoints[4];
@@ -66,17 +67,28 @@ private:
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
+    int bossX;
+    int bossY;
+    int bossHP;
+
+private:
     std::list<Enemy> enemies;
+    
 public:
+    
+    int getBossHP() const {
+        return bossHP;
+    }
+
+    void setBossHP(int bossHP) {
+        Scene::bossHP = bossHP;
+    }
+
     void setEnemies(const std::list<Enemy> &Enemies);
 
-public:
     std::list<Enemy> &getEnemies();
 
-
-public:
-
-    void setLBullets(const std::list<std::tuple<int, int>> &lb) { lBullets = lb; }
+    void setLBullets(const std::list<std::tuple<int, int, int>> &lb) { lBullets = lb; }
 
     SDL_Rect *getCamera();
 
@@ -86,6 +98,8 @@ public:
     int getLevel() const { return level; }
     void setLevel(int l) { level = l; }
 
+    bool isShootSound() const;
+    void setShootSound(bool shootSound);
 
     int getPositionX(int p) const { return positionX[p-1]; }
     void setPositionX(int posX, int p) { positionX[p-1] = posX; }
@@ -138,6 +152,23 @@ public:
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
     
     void addEnemy(Enemy &&enemy);
+    
+    int getBossX() const {
+        return bossX;
+    }
+
+    void setBossX(int bossX) {
+        Scene::bossX = bossX;
+    }
+
+    int getBossY() const {
+        return bossY;
+    }
+
+    void setBossY(int bossY) {
+        Scene::bossY = bossY;
+    }
+
 };
 
 

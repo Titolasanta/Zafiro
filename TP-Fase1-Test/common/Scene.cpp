@@ -22,7 +22,7 @@ void Scene::clearPlatform(){
     lPlataformsHard.clear();
 }
 
-void Scene::setBullets(std::list<std::tuple<int,int>> l){
+void Scene::setBullets(std::list<std::tuple<int,int,int>> l){
     lBullets = std::move(l);
 }
 
@@ -42,7 +42,7 @@ std::list<std::tuple<int,int,int>>& Scene::getLPlatformMetal() {
     return lPlataformsHard;
 }
 
-std::list<std::tuple<int,int>>& Scene::getLBullets() {
+std::list<std::tuple<int,int,int>>& Scene::getLBullets() {
     return lBullets;
 }
 
@@ -84,5 +84,13 @@ std::list<Enemy> &Scene::getEnemies() {
 
 void Scene::setEnemies(const std::list<Enemy> &Enemies) {
     Scene::enemies = std::move(Enemies);
+}
+
+bool Scene::isShootSound() const {
+    return shootSound;
+}
+
+void Scene::setShootSound(bool shootSound) {
+    Scene::shootSound = shootSound;
 }
 

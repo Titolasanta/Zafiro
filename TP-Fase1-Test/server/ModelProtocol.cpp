@@ -64,13 +64,16 @@ void ModelProtocol::send(Scene& scene){
     for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
         sendValue(skt, std::get<0>(*it));
         sendValue(skt, std::get<1>(*it));
+        sendValue(skt, std::get<2>(*it));
     }
     sendValue(skt, -1);
     
     for (auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
         sendValue(skt, it->getPosX());
         sendValue(skt, it->getPosY());
-        sendValue(skt,it->isLookingRight());
+        sendValue(skt, it->isStatic());
+        sendValue(skt, it->isLookingRight());
+        sendValue(skt, it->getCurrentFrame());
     }
     sendValue(skt, -1);
     for (int i = 0; i < p; i++){
@@ -91,9 +94,13 @@ void ModelProtocol::send(Scene& scene){
     }
     sendValue(skt, scene.getCamera()->x);
     sendValue(skt, scene.getCamera()->y);
+    sendValue(skt, scene.getBossX());
+    sendValue(skt, scene.getBossY());
+    sendValue(skt, scene.getBossHP());
     sendValue(skt, scene.getLevel());
     sendValue(skt,scene.getCurrentPlayers());
     sendValue(skt,scene.isVictory());
+    sendValue(skt,scene.isShootSound());
 
 }
 

@@ -22,9 +22,9 @@ bool Projectile::inSight(SDL_Rect *cam) {
     return ((0 + camX < positionX )&&(positionX  < 800 + camX )&&(0 + camY < positionY)&&(positionY < 600+ camY));
 }
 
-void Projectile::move(int vel) {   //No se si anda
-    positionX += velocityX/vel;
-    positionY += velocityY/vel;
+void Projectile::move() {   //No se si anda
+    positionX += velocityX;
+    positionY += velocityY;
 }
 
 

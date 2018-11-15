@@ -10,7 +10,10 @@
         <nivel1>
             <height>600</height>
             <width>8500</width>
-            <cantidad_enemigos>20</cantidad_enemigos>
+            <cantidad_enemigos>
+                <estaticos>10</estaticos>
+                <moviles>20</moviles>
+            </cantidad_enemigos>
             <fondo1>../escenario/fondo1.png</fondo1>
             <fondo2>../escenario/mountains1.png</fondo2>
             <fondo3>../escenario/arbolitos1.2.png</fondo3>
@@ -156,9 +159,12 @@
         <nivel2>
             <height>4000</height>
             <width>800</width>
-            <cantidad_enemigos>20</cantidad_enemigos>
-            <fondo1>../escenario/level2-background1.png</fondo1>
-            <fondo2>../escenario/arbolitos2.png</fondo2>
+            <cantidad_enemigos>
+                <estaticos>10</estaticos>
+                <moviles>20</moviles>
+            </cantidad_enemigos>
+            <fondo1>../escenario/catarata.png</fondo1>
+            <fondo2>../escenario/arbolitosl2.png</fondo2>
             <fondo3>../escenario/nubes2.png</fondo3>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -398,7 +404,10 @@
         <nivel3>
             <height>600</height>
             <width>8500</width>
-            <cantidad_enemigos>20</cantidad_enemigos>
+            <cantidad_enemigos>
+                <estaticos>10</estaticos>
+                <moviles>20</moviles>
+            </cantidad_enemigos>
             <fondo1>../escenario/fondo3.png</fondo1>
             <fondo2>../escenario/mountains3.png</fondo2>
             <fondo3>../escenario/arbolitos3.png</fondo3>

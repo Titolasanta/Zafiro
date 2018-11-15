@@ -16,7 +16,10 @@ public:
     explicit SpriteHandler(Window* window);
     void render(Scene &scene, int id, int cameraX, int cameraY);
     void renderCharacterSprite(Scene &scene, int i, int cameraX, int cameraY);
-    void renderEnemySprite(Enemy e, int cameraX, int cameraY);
+    void renderMovingEnemySprite(Enemy e, int cameraX, int cameraY);
+    void renderStaticEnemySprite(Enemy e, int cameraX, int cameraY);
+    void renderBossSprite(Scene &scene, int cameraX, int cameraY);
+    void renderHp(Scene&, int, int, int);
 
 private:
     ImgTexture *spriteTexture[4];
@@ -24,7 +27,12 @@ private:
     ImgTexture spriteTexture1;
     ImgTexture spriteTexture2;
     ImgTexture spriteTexture3;
-    ImgTexture  enemySpriteTexture;
+    ImgTexture movingEnemySpriteTexture;
+    ImgTexture staticEnemySpriteTexture;
+    ImgTexture *bossTexture[3];
+    ImgTexture bossTexture0;
+    ImgTexture bossTexture1;
+    ImgTexture bossTexture2;
 
     Sprite spritePositionHandler;
     int currentFrame[5] = {0, 0, 0, 0, 0};

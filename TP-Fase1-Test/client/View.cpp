@@ -19,11 +19,11 @@ extern pugi::xml_parse_result *gXML_parse_result;
 
 View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
-personajes(&window),piedra(&window),plataformaDura(&window),hielo(&window),
+sprites(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),immortal(std::move(window.createTextTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
-,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)),
+,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)), //bossSprite(&window),
 loginImages{std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
@@ -89,6 +89,8 @@ void View::render(Scene& scene) {
 
     //background.render(scene);
 
+    if(scene.isShootSound())
+        Mix_PlayChannel(-1, this->getSound().getShootSFX(), 0);
 
     background.render(scene,*camera, background.getScrollingOffset(),level);
 
@@ -99,8 +101,9 @@ void View::render(Scene& scene) {
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
     bullet.render(scene,camera);
-    staticEnemyImg.render(scene,camera);
-    personajes.render(scene, id, camera->x, camera->y);
+    //staticEnemyImg.render(scene,camera);
+    sprites.render(scene, id, camera->x, camera->y);
+    //bossSprite.render(scene);
     if(scene.getImmortal(id)) {
         immortal.render(100,100);
     }

@@ -14,7 +14,8 @@ void cargar_plataformas(pugi::xml_document &doc, Scene& scene, Model &modelo, in
 
 void cargar_users(pugi::xml_document &doc, std::list<std::string>&);
 
-int get_cant_enemigos(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result);
+int get_cant_enemigos_moviles(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result);
 
+int get_cant_enemigos_estaticos(pugi::xml_document &doc, pugi::xml_document &doc_default, int level, pugi::xml_parse_result result);
 
 #endif //TP_FASE1_TEST_XMLSERVER_H

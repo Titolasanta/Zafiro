@@ -2,7 +2,7 @@ mapa
 saltar?
 loger
 parser xml pugixml
-personajes, escenarios/niveles, disparos
+sprites, escenarios/niveles, disparos
 leer eventos de cola
 
 FONDOS (PARALLAX)

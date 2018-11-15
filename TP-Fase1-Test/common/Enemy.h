@@ -5,67 +5,65 @@
 #ifndef TP_FASE1_TEST_ENEMY_H
 #define TP_FASE1_TEST_ENEMY_H
 #define MOBILEENEMYFRAME 6
+#define STATICENEMYFRAME 12
 
 #include <list>
 #include "Projectile.h"
 
 class Enemy {
-public:
-    Enemy(int x,int y,int px, int pw);
-    Enemy(int x,int y);
+
 private:
     int posX;
     int posY;
     int currentFrame = 0;
     bool dead = false;
-    bool lookingRight = true;
+    bool lookingRight;
     int velY = 0;
     int currentPlatX = 0;
-public:
-    int getCurrentPlatX() const;
-
-    void setCurrentPlatX(int currentPlatX);
-
-    int getCurrentPlatW() const;
-
-    void setCurrentPlatW(int currentPlatW);
-
-    void time(int max, std::list<Projectile> &lBullets);
-    void land(int x, int y, int w);
-    void move(int randm);
-private:
+    bool staticEnemy;
     int currentPlatW = 0;
     int timeTillNextShoot = 0;
     bool airborne = false;
     int aimDirrection = 0;
 
 public:
-    bool isAirborne() const;
 
-    void setAirborne(bool airborne);
+    void time( std::list<Projectile> &lBullets);
 
-    int getVelY() const;
-
-    void setVelY(int velY);
-
-    bool isLookingRight() const;
-
-    void setLookingRight(bool lookingRight);
-
-    int getPosX() const;
-
-    void setPosX(int posX);
-
-    int getCurrentFrame() const;
-
-    int getPosY() const;
-
-    void setPosY(int posY);
-
+    Enemy(int x,int y,int px, int pw, bool);
+    Enemy(int x,int y, bool);
+    void land(int x, int y, int w);
+    void move(int random, int x, int y);
     void incrementCurrentFrame();
-    void setCurrentFrame(int);
 
     void shoot(std::list<Projectile> &list);
+
+    int getCurrentFrame() const { return currentFrame; }
+    void setCurrentFrame(int frame){ currentFrame = frame; }
+
+    int getCurrentPlatX() const { return currentPlatX; }
+    void setCurrentPlatX(int cpx) { currentPlatX = cpx; }
+
+    int getCurrentPlatW() const { return currentPlatW; }
+    void setCurrentPlatW(int cpw) { currentPlatW = cpw; }
+
+    int getPosX() const { return posX; }
+    void setPosX(int x) { posX = x; }
+
+    int getPosY() const { return posY; }
+    void setPosY(int y) { posY = y; }
+
+    bool isLookingRight() const { return lookingRight; }
+    void setLookingRight(bool lr) { lookingRight = lr; }
+
+    int getVelY() const { return velY; }
+    void setVelY(int y) { velY = y; }
+
+    bool isAirborne() const { return airborne; }
+    void setAirborne(bool a) { airborne = a; }
+
+    bool isStatic() const { return staticEnemy; }
+    void setStatic(bool s) { staticEnemy = s; }
 };
 
 

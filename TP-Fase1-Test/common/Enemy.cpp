@@ -5,8 +5,10 @@
 #include <random>
 #include "Enemy.h"
 #include "../server/CollisionSoft.h"
+#include <math.h>
+#include <iostream>
 
-Enemy::Enemy(int x,int y,int px, int pw) : currentPlatX(px),currentPlatW(pw) {
+Enemy::Enemy(int x,int y,int px, int pw, bool isStatic) : currentPlatX(px),currentPlatW(pw) {
 
     std::random_device rand_dev;
     std::default_random_engine generator(rand_dev());
@@ -14,56 +16,24 @@ Enemy::Enemy(int x,int y,int px, int pw) : currentPlatX(px),currentPlatW(pw) {
     currentFrame = distribution(generator);
     posX = x;
     posY = y;
+    staticEnemy = isStatic;
+    lookingRight = (bool) (distribution(generator) % 2);
 }
 
-Enemy::Enemy(int x,int y) {
+Enemy::Enemy(int x,int y, bool isStatic) {
+
+    std::random_device rand_dev;
+    std::default_random_engine generator(rand_dev());
+    std::uniform_int_distribution<int> distribution(0,100);
     posX = x;
     posY = y;
+    staticEnemy = isStatic;
+    lookingRight = (bool) (distribution(generator) % 2);
+
 }
 
-
-int Enemy::getPosX() const {
-    return posX;
-}
-
-void Enemy::setPosX(int posX) {
-    Enemy::posX = posX;
-}
-
-int Enemy::getPosY() const {
-    return posY;
-}
-
-void Enemy::setPosY(int posY) {
-    Enemy::posY = posY;
-}
-
-bool Enemy::isLookingRight() const {
-    return lookingRight;
-}
-
-void Enemy::setLookingRight(bool lookingRight) {
-    Enemy::lookingRight = lookingRight;
-}
-
-int Enemy::getVelY() const {
-    return velY;
-}
-
-void Enemy::setVelY(int velY) {
-    Enemy::velY = velY;
-}
-
-bool Enemy::isAirborne() const {
-    return airborne;
-}
-
-void Enemy::setAirborne(bool airborne) {
-    Enemy::airborne = airborne;
-}
-
-void Enemy::time(int max, std::list<Projectile>& lBullets) {
-    timeTillNextShoot-=(12/max);
+void Enemy::time( std::list<Projectile>& lBullets) {
+    timeTillNextShoot-=(12);
     
     if(timeTillNextShoot < 0){
         timeTillNextShoot = 360;
@@ -74,9 +44,9 @@ void Enemy::time(int max, std::list<Projectile>& lBullets) {
         airborne = true;
     }
 
-    if(airborne) velY += 4/max;
+    if(airborne) velY += 4;
 
-    posY += velY/max;
+    posY += velY;
 
 }
 
@@ -88,34 +58,9 @@ void Enemy::land(int x, int y, int w) {
     currentPlatW = w;
 }
 
-
 void Enemy::incrementCurrentFrame(){
-    currentFrame = currentFrame++;
-    currentFrame = currentFrame%6;
-}
-
-void Enemy::setCurrentFrame(int frame){
-    currentFrame = frame;
-}
-
-int Enemy::getCurrentFrame() const {
-    return currentFrame;
-}
-
-int Enemy::getCurrentPlatX() const {
-    return currentPlatX;
-}
-
-void Enemy::setCurrentPlatX(int currentPlatX) {
-    Enemy::currentPlatX = currentPlatX;
-}
-
-int Enemy::getCurrentPlatW() const {
-    return currentPlatW;
-}
-
-void Enemy::setCurrentPlatW(int currentPlatW) {
-    Enemy::currentPlatW = currentPlatW;
+    currentFrame++;
+    currentFrame %= 6;
 }
 
 void Enemy::shoot(std::list<Projectile>& list) {
@@ -134,8 +79,26 @@ void Enemy::shoot(std::list<Projectile>& list) {
     list.push_back(std::move(p));
 }
 
-void Enemy::move(int randm){
-    currentFrame = (currentFrame + 1) % MOBILEENEMYFRAME;
+void Enemy::move(int randm, int chx, int chy){
+    if (staticEnemy){
+        float distX = posX - chx;
+        float distY = posY - chy + 61;
+        float angle = atan(distY/distX);
+        std::cout << "dx: "<< distX << "|dy: "<< distY<< "|angle: "<<angle<<std::endl;
+        if ((angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12)) && distX < 0) currentFrame = 0;
+        else if (angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12) && distX > 0) currentFrame = 6;
+        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX < 0) currentFrame = 5;
+        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX > 0) currentFrame = 11;
+        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX < 0) currentFrame = 4;
+        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX > 0) currentFrame = 10;
+        else if (angle > (5*M_1_PIf64/12) && distX < 0) currentFrame = 3;
+        else if (angle > (5*M_1_PIf64/12) && distX > 0) currentFrame = 9;
+        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX > 0) currentFrame = 1;
+        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX < 0) currentFrame = 7;
+        else if (angle > -(5*M_1_PIf64/12) && angle < -(M_1_PIf64/4) && distX > 0) currentFrame = 2;
+        else currentFrame = 8;
+        return;
+    }
     int velx = 5;
     int largoEnemigo = 50;
     int r = randm;

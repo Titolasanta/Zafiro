@@ -88,24 +88,28 @@ int receiveNumber(Socket& skt){
 void ViewProtocol::update(Scene& scene){
 
     //scene.setBullets(std::move(lTemp));
-    std::list<std::tuple<int,int>> lb;
-    int recvy;
+    std::list<std::tuple<int,int,int>> lb;
+    int recvy, recvId;
     int recvx = receiveNumber(socket);
     while(recvx != -1){
         recvy = receiveNumber(socket);
-        lb.push_back(std::tuple<int,int>(recvx,recvy));
+        recvId = receiveNumber(socket);
+        lb.push_back(std::tuple<int,int,int>(recvx,recvy,recvId));
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
+
     std::list<Enemy> le;
     recvx = receiveNumber(socket);
     while(recvx != -1){
         auto it = scene.getEnemies().begin();
         recvy = receiveNumber(socket);
+        int stat = receiveNumber(socket);
+        Enemy enemy(recvx,recvy,(bool)stat);
         int lr = receiveNumber(socket);
-        Enemy enemy(recvx,recvy);
-        enemy.setLookingRight(lr);
-        int frame = (it->getCurrentFrame() + 1) % 6;
+        enemy.setLookingRight((bool)lr);
+        int frame = receiveNumber(socket);
+        if (!enemy.isStatic()) frame = (it->getCurrentFrame() + 1) % 6;
         enemy.setCurrentFrame(frame);
         it++;
         le.push_back(std::move(enemy));
@@ -132,9 +136,13 @@ void ViewProtocol::update(Scene& scene){
    }
     scene.setCameraX(receiveNumber(socket));
     scene.setCameraY(receiveNumber(socket));
+    scene.setBossX(receiveNumber(socket));
+    scene.setBossY(receiveNumber(socket));
+    scene.setBossHP(receiveNumber(socket));
     scene.setLevel(receiveNumber(socket));
     scene.setCurrentPlayers(receiveNumber(socket));
     scene.setVictory((bool)receiveNumber(socket));
+    scene.setShootSound((bool)receiveNumber(socket));
     if (scene.getCurrentPlayers() == scene.getMaxPlayers()) {
         scene.setAllPlayersConnected(true);
     }

@@ -18,10 +18,14 @@
 
 #define MARGENX (800/2)
 #define MARGENY 400
-#define CHARACTERHEIGHT 60
-#define CHARACTERWIDTH 25
-#define ENEMYHEIGHT 55
-#define ENEMYWIDTH 25
+#define CHARACTERHEIGHT 70
+#define CHARACTERWIDTH 40
+#define ENEMYHEIGHT 60
+#define ENEMYWIDTH 50
+#define BOSSHEIGHT1 400
+#define BOSSWIDTH1 250
+#define BOSSHEIGHT2 850
+#define BOSSWIDTH2 900
 #define ENEMYID -1
 
 extern Logger *gplogger;
@@ -43,13 +47,18 @@ bool Model::endOfLevel(Scene& scene){
     return false;
 }
 
-Model::Model(int initialLevel) : level(initialLevel) {
+Model::Model(int initialLevel) : level(initialLevel),boss1(1),boss2(2),boss3(3) {
+    boss[0] = &boss1;
+    boss[1] = &boss2;
+    boss[2] = &boss3;
+
     maxPlayers = get_cantidad_jugadores(*gXML_doc[0],*gXML_doc[1],*gXML_parse_result);
     gplogger->log(3, "Se creó el server");
 }
 
 void Model::rejoinCharacter(int id){
     jugadorGrisado[id-1] = false;
+    players[id-1]->setImmortal(false);
     jugadorReconectado[id - 1] = true;
 }
 
@@ -79,7 +88,10 @@ void Model::createCharacter(int id){
             currentPlayers--;
     }
     currentPlayers++;
-    if (currentPlayers == maxPlayers) maxPlayersReached = true;
+    if (currentPlayers == maxPlayers){
+        maxPlayersReached = true;
+        for (int i = 0; i < currentPlayers; i++) players[i]->setImmortal(false);
+    }
 }
 
 int Model::getMaxPlayers(){
@@ -92,14 +104,13 @@ int Model::getCurrentPlayers(){
 
 void Model::time(){
     
-    int velocidad = maxPlayers;
-    for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorGrisado[i];
-    
+
     for (int i = 0; i < currentPlayers; i++) {
-        players[i]->time(velocidad);
-        CollisionHard(*players[i], lPlataformsHard);
-        CollisionSoft(*players[i], lPlataformsSoft);
+        if (!jugadorGrisado[i]) {
+            players[i]->time();
+            CollisionHard(*players[i], lPlataformsHard);
+            CollisionSoft(*players[i], lPlataformsSoft);
+        }
     }
 }
 
@@ -126,16 +137,13 @@ int Model::YMasGrande(Scene &scene){
 }
 
 void Model::respawn(int toRespawn,SDL_Rect* cam){
-    //if (players[toRespawn]->isDead()) return;
     for(int i = 0; i < currentPlayers; i++){
-        if(i != toRespawn && !players[i]->isAirborne() && !jugadorGrisado[i]){
+        if(i != toRespawn && !players[i]->isAirborne() && !jugadorGrisado[i] && !players[i]->isDead()){
             players[toRespawn]->spawn(players[i]->getPositionX(),players[i]->getPositionY() - 50);
-            players[toRespawn]->takeDamage();
             return;
         }
     }
     players[toRespawn]->spawn(*cam);
-    players[toRespawn]->takeDamage();
 }
 
 void Model::update(Scene &scene) {
@@ -143,6 +151,10 @@ void Model::update(Scene &scene) {
     std::lock_guard<std::mutex> mute(mutex);
     
     time();
+
+    collisionEyP(scene);
+
+
 
     SDL_Rect* cam = scene.getCamera();
 
@@ -158,11 +170,16 @@ void Model::update(Scene &scene) {
                 players[i]->setVelocityX(0);
             }
     
-            if(players[i]->getPositionY() > 600 + cam->y) {
+            if (players[i]->getPositionY() > 600 + cam->y) {
                 respawn(i,cam);
+                players[i]->takeDamage();
+                if ((level.getLevel() == 3) && (fixBugPls[i])){
+                    players[i]->gainHealth(1);
+                    fixBugPls[i] = false;
+                }
             }
     
-            if(level.getLevel() != 2){
+            if (level.getLevel() != 2){
                 if (players[i]->getPositionY() < -5 + cam->y) {
                     players[i]->setPositionY(-5 +  cam->y);
                     players[i]->setVelocityY(0);
@@ -174,31 +191,34 @@ void Model::update(Scene &scene) {
                 }
             }
             scene.setImmortal(players[i]->isImmortal(), i + 1);
+            scene.setHitPoints(players[i]->getHitPoints(), i + 1);
             scene.setPositionX(players[i]->getPositionX(), i + 1);
             scene.setVelocityX(players[i]->getVelocityX(), i + 1);
             scene.setVelocityY(players[i]->getVelocityY(), i + 1);
             scene.setPositionY(players[i]->getPositionY(), i + 1);
-            scene.setAirborne(players[i]->isAirborne(), i + 1);
             scene.setAimDirection(players[i]->getAimDirection(), i + 1);
-            scene.setDead(players[i]->isDead(), i + 1);
             scene.setCrouching(players[i]->isCrouching(), i + 1);
             scene.setLookingRight(players[i]->isLookingRight(), i + 1);
             scene.setWalking(players[i]->isWalking(), i + 1);
             scene.setShooting(players[i]->isShooting(), i + 1);
             scene.setCurrentPlayers(currentPlayers);
             scene.setJugadorGrisado(jugadorGrisado[i], i + 1);
-    
             if (getCurrentPlayers() == getMaxPlayers()) {
                 scene.setAllPlayersConnected(true);
             }
         }
-        else scene.setDead(players[i]->isDead(), i + 1);
+        scene.setDead(players[i]->isDead(), i + 1);
+        scene.setAirborne(players[i]->isAirborne(), i + 1);
         scene.setPositionX(players[i]->getPositionX(), i + 1);
         scene.setVelocityX(players[i]->getVelocityX(), i + 1);
         scene.setVelocityY(players[i]->getVelocityY(), i + 1);
         scene.setPositionY(players[i]->getPositionY(), i + 1);
     }
-    
+    scene.setBossHP(boss[level.getLevel() - 1]->getHP());
+    scene.setBossX(boss[level.getLevel() - 1]->getPosX());
+    scene.setBossY(boss[level.getLevel() - 1]->getPosY());
+    scene.setShootSound(shootSound);
+    shootSound = false;
     placeCamera(scene);
     
 
@@ -207,7 +227,7 @@ void Model::update(Scene &scene) {
     moveEnemies(scene);
 
 
-    if(endOfLevel(scene)) changeLevel(level.next(),scene);
+    if(endOfLevel(scene) && boss[level.getLevel()-1]->getHP() == 0) changeLevel(level.next(),scene);
 }
 
 void Model::stopShooting(int p){
@@ -279,6 +299,7 @@ void Model::stand(int p) {
 }
 
 void Model::changeLevel(Level level,Scene& scene) {
+
     scene.getEnemies().clear();
     if(level.getLevel() > 3){
         scene.setVictory(true);
@@ -295,8 +316,6 @@ void Model::changeLevel(Level level,Scene& scene) {
             cargar_plataformas(*gXML_doc[1], scene, *this, level.getLevel(), this->getLevelHeight(),
                                this->getLevelWidth()); //chequeo de otra manera
 
-
-        //update(scene);
         scene.setLevel(level.getLevel());
         scene.getCamera()->x = 0;
         scene.getCamera()->y = 0;
@@ -306,7 +325,7 @@ void Model::changeLevel(Level level,Scene& scene) {
             players[i]->nextLevel();
         }
 
-        //setEnemies(scene);
+        setEnemies(scene);
         gplogger->log(2, "Se cambió de nivel");
     }
 }
@@ -321,6 +340,7 @@ void Model::shoot(int p){
     try {
 
         lBullets.push_back(std::move(players[p-1]->shoot()));
+        shootSound = true;
     } catch(int e) { //no recargo el arma
     }
 }
@@ -328,6 +348,7 @@ void Model::shoot(int p){
 void Model::bajaJugador(int p) {
     //currentPlayers--;
     jugadorGrisado[p-1] = true;
+    players[p-1]->setImmortal(true);
 }
 /*
 const Level &Model::getLevel() const {
@@ -353,7 +374,7 @@ void Model::placeCamera(Scene &scene){
 
         if (scene.getLevel() != 2) {
             int playerPosX = players[i]->getPositionX();
-            if (playerPosX > cam->x + MARGENX) {
+            if (playerPosX > cam->x + MARGENX && cam->x < 8400 - 600) {
                 if (minX > cam->x + 50 && currentPlayers == maxPlayers) {
                     scene.setCameraX(cam->x + 21);
                 } else {
@@ -377,6 +398,7 @@ void Model::placeCamera(Scene &scene){
             }else{
                 if (playerPosY > cam->y + 550) {
                     respawn(i,cam);
+                    players[i]->takeDamage();
                 }
             }
         }
@@ -384,10 +406,33 @@ void Model::placeCamera(Scene &scene){
 }
 
 void Model::setEnemies(Scene& scene) {
-    std::random_device                  rand_dev;
+    std::random_device rand_dev;
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
-    int enemiesToPlaceInSoft = get_cant_enemigos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
+    int enemiesToPlaceInSoft = get_cant_enemigos_moviles(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
+    int staticEnemies = get_cant_enemigos_estaticos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
+    for(int i = 0;i < staticEnemies ;i++) {
+        int random = distribution(generator);
+        auto it = lPlataformsSoft.begin();
+        for (;random > 0 ; random-- ){
+            it++;
+        };
+        if(scene.getLevel() != 2) {
+            if (std::get<0>(*it) < 600) {
+                i--;
+                continue;
+            }
+        }else{
+            if (std::get<1>(*it) > 600) {
+                i--;
+                continue;
+            }
+        }
+        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
+        int x = distribution(generator) + std::get<0>(*it);
+        Enemy enemy(x, std::get<1>(*it) - 61 ,std::get<0>(*it),std::get<2>(*it), true);
+        scene.addEnemy(std::move(enemy));
+    }
     for(int i = 0;i < enemiesToPlaceInSoft ;i++) {
         int random = distribution(generator);
         auto it = lPlataformsSoft.begin();
@@ -400,14 +445,14 @@ void Model::setEnemies(Scene& scene) {
                 continue;
             }
         }else{
-            if (std::get<1>(*it) < 600) {
+            if (std::get<1>(*it) > 600) {
                 i--;
                 continue;
             }
         }
         std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
         int x = distribution(generator) + std::get<0>(*it);
-        Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it));
+        Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it), false);
         scene.addEnemy(std::move(enemy));
     }
 }
@@ -416,17 +461,19 @@ void Model::moveEnemies(Scene &scene) {
     std::random_device rand_dev;
     std::default_random_engine generator(rand_dev());
     std::uniform_int_distribution<int> distribution(0,100);
-    int velx = 5;
-    int largoEnemigo = 50;
+    std::uniform_int_distribution<int> player(0,currentPlayers - 1);
+    int character = player(generator);
+    int x = players[character]->getPositionX();
+    int y = players[character]->getPositionY();
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
         int r = distribution(generator);
-        it->move(r);
+        it->move(r, x, y);
         this->enemyCollision(*it,scene);
     }
 }
 
 void Model::enemyCollision(Enemy &enemy,Scene& scene) {
-    enemy.time(scene.getCurrentPlayers(),lBullets);
+    enemy.time(lBullets);
     if (enemy.isAirborne()) {
         CollisionSoft c(enemy, lPlataformsSoft);
         CollisionSoft h(enemy, lPlataformsHard);
@@ -439,12 +486,9 @@ bool Model::isBetween(int bulletX, int bulletY, int posX, int posY, int width, i
 
 void Model::handleBullet(Scene &scene) {
 
-    std::list<std::tuple<int,int>> lTemp;
-    int velocidad = maxPlayers;
-    for(int i = 0; i < maxPlayers; i++)
-        velocidad -= jugadorGrisado[i];
+    std::list<std::tuple<int,int,int>> lTemp;
     for(auto it = lBullets.begin(); it != lBullets.end();){
-        it->move(velocidad);
+        it->move();
         if(!(it->inSight(scene.getCamera()))) {
             it=lBullets.erase(it);
         }
@@ -457,22 +501,47 @@ void Model::handleBullet(Scene &scene) {
                         it = lBullets.erase(it);
                     }
                 }
-            }
-            else{
+            } else{
                 for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
                     if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), ENEMYWIDTH, ENEMYHEIGHT)){
                         enemyIt = scene.getEnemies().erase(enemyIt);
                         it = lBullets.erase(it);
                     }
                 }
+                Boss* bosstemp = boss[level.getLevel()-1];
+                if(level.getLevel()!=2) {
+                    if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
+                            BOSSWIDTH1, BOSSHEIGHT1)) {
+                        bosstemp->takeDamage();
+                        it = lBullets.erase(it);
+                    }
+                } else if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
+                                         bosstemp->getPosY(), BOSSWIDTH1, BOSSHEIGHT1)) {
+                        bosstemp->takeDamage();
+                        it = lBullets.erase(it);
+                    }
             }
-            lTemp.push_back(std::tuple<int,int>(it->getPositionX(),it->getPositionY()));
+            lTemp.push_back(std::tuple<int,int,int>(it->getPositionX(),it->getPositionY(), it->getOwnerId()));
             ++it;
         }
     }
     scene.setBullets(std::move(lTemp));
 }
 
-void Model::inmortalize(int id) {
+
+void Model::immortalize(int id) {
     players[id-1]->changeImmortal();
+}
+void Model::collisionEyP(Scene& scene) {
+    for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
+        for (int i = 0; i < currentPlayers; i++) {
+            if(!getJugadorGrisado()[i]){
+                if(isBetween(enemyIt->getPosX(),enemyIt->getPosY(),players[i]->getPositionX(),
+                        players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
+                        isBetween(enemyIt->getPosX() + ENEMYWIDTH,enemyIt->getPosY() + ENEMYHEIGHT,
+                                players[i]->getPositionX(), players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT))
+                    players[i]->takeDamage();
+            }
+        }
+    }
 }

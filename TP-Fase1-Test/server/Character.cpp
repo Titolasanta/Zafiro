@@ -21,7 +21,7 @@ Character::Character() : weapon(Pistol()) {
     //accelerationX = 0;
     //accelerationY = 0;
     
-    hitPoints = 3;
+    hitPoints = 10;
     walking = false;
     lookingRight = true;
     crouching = false;
@@ -30,7 +30,7 @@ Character::Character() : weapon(Pistol()) {
     aimDirection = 0;
     shooting = false;
     
-    immortal = false;
+    immortal = true;
 
     weapon.setId(id);
     gplogger->log(2, "Se creó el personaje");
@@ -38,7 +38,6 @@ Character::Character() : weapon(Pistol()) {
 void Character::land(int x, int y,int w,bool hard) {
 
     airborne = false;
-    
     if(velocityX != 0) walking = true;
     velocityY = 0;
     
@@ -50,9 +49,9 @@ void Character::land(int x, int y,int w,bool hard) {
     gplogger->log(3, "El personaje aterriza");
 }
 
-void Character::time(int currentPlayers) {
+void Character::time() {
 
-    timeTillNextShoot-=(12/currentPlayers);
+    timeTillNextShoot-=(12);
     if(timeTillNextShoot < 0){
         timeTillNextShoot = 0;
         setShooting(false);
@@ -62,13 +61,13 @@ void Character::time(int currentPlayers) {
         airborne = true;
     }
 
-    if(airborne) velocityY += 4/currentPlayers;
+    if(airborne) velocityY += 4;
     if(dead) velocityX = 0;
     //velocityY += accelerationY;
     //velocityX += accelerationX;
 
-    positionX += velocityX/currentPlayers;
-    positionY += velocityY/currentPlayers;
+    positionX += velocityX;
+    positionY += velocityY;
     
     if (crouching) aimDirection = 0;
 }
@@ -169,8 +168,7 @@ void Character::takeDamage() {
     if (!immortal && !dead){
         hitPoints--;
         if (hitPoints <= 0) {
-            positionY-=10;
-            airborne = true;
+            positionY+=45;
             dead = true;
         }
         //RIP Destruirlo o algo
@@ -198,14 +196,13 @@ void Character::spawn(SDL_Rect cam) {
     
     velocityY = 0;
     velocityX = 0;
-    airborne = false;
+    airborne = true;
     walking = false;
     currentPlatW = 0;
     currentPlatX = 0;
     currentPlatY = 0;
     crouching = false;
     lookingRight = true;
-    dead = false;
     aimDirection = 0;
 }
 
@@ -216,7 +213,7 @@ void Character::spawn(int x, int y) {
     
     velocityY = 0;
     velocityX = 0;
-    airborne = false;
+    airborne = true;
     walking = false;
     currentPlatW = 0;
     currentPlatX = 0;
@@ -245,4 +242,9 @@ bool Character::isImmortal() const {
 
 void Character::setImmortal(bool immortal) {
     Character::immortal = immortal;
+}
+
+void Character::gainHealth(int h){
+    hitPoints += h;
+    if (hitPoints >= 0) dead = false;
 }

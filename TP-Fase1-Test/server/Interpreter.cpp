@@ -33,7 +33,7 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "as")) model.aimStraight(msg[0]);
            else if (!strcmp(&msg[1], "sd")) model.stand(msg[0]);
            else if (!strcmp(&msg[1], "ss")) model.stopShooting(msg[0]);
-           else if (!strcmp(&msg[1], "mi")) model.inmortalize(msg[0]);
+           else if (!strcmp(&msg[1], "mi")) model.immortalize(msg[0]);
            else if (!strcmp(&msg[1], "fc")){
                model.bajaJugador(msg[0]);
                for (auto it = protocolList.begin(); it != protocolList.end(); it++) {

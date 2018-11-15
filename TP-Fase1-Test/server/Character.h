@@ -21,7 +21,7 @@ private:
     //int accelerationX;
     //int accelerationY;
     
-    int hitPoints;
+    int hitPoints = 3;
     bool walking;
     bool airborne;
     bool crouching;
@@ -66,11 +66,12 @@ public:
     void stand();
     void crouch();
     void takeDamage();
-    void time(int);
+    void time();
     void changeImmortal();
     void land(int,int,int,bool);
     void goThroughPlatform();
     void changeWeapon(Weapon);
+    void gainHealth(int);
     //void respawn(Scene&,SDL_Rect,Character*[]);
 
     void spawn(SDL_Rect);
