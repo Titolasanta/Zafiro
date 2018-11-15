@@ -47,13 +47,7 @@ void Controller::processEvent(SDL_Event e) {
         else if (e.key.keysym.sym == SDLK_DOWN) protocol.aimDown();
         else if (e.key.keysym.sym == SDLK_UP) protocol.aimUp();
         else if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
-        else if (e.key.keysym.sym == SDLK_x) {
-            if (timeTillNextShoot == 0){
-                Mix_PlayChannel(-1, view.getSound().getShootSFX(), 0);
-                protocol.shoot();
-                timeTillNextShoot = 5 * 12;
-            }
-        }
+        else if (e.key.keysym.sym == SDLK_x) protocol.shoot();
         else if (e.key.keysym.sym == SDLK_i) protocol.immortal();
 
         //if (e.key.keysym.sym == SDLK_l){ protocol.changeLevel(protocol.getLevel().next(),scene); }
@@ -79,7 +73,7 @@ void Controller::show() {
         if (endOfMainMenu == 0){
             endOfMainMenu++;
             Mix_HaltMusic();
-            Mix_PlayMusic(view.getSound().getLevelOneMusic(), -1);
+            //Mix_PlayMusic(view.getSound().getLevelOneMusic(), -1);
         }
         view.render(scene);
     }

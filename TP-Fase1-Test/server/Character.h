@@ -21,7 +21,7 @@ private:
     //int accelerationX;
     //int accelerationY;
     
-    int hitPoints;
+    int hitPoints = 3;
     bool walking;
     bool airborne;
     bool crouching;
@@ -66,7 +66,7 @@ public:
     void stand();
     void crouch();
     void takeDamage();
-    void time(int);
+    void time();
     void changeImmortal();
     void land(int,int,int,bool);
     void goThroughPlatform();

@@ -21,7 +21,7 @@ Character::Character() : weapon(Pistol()) {
     //accelerationX = 0;
     //accelerationY = 0;
     
-    hitPoints = 3;
+    hitPoints = 10;
     walking = false;
     lookingRight = true;
     crouching = false;
@@ -49,9 +49,9 @@ void Character::land(int x, int y,int w,bool hard) {
     gplogger->log(3, "El personaje aterriza");
 }
 
-void Character::time(int currentPlayers) {
+void Character::time() {
 
-    timeTillNextShoot-=(12/currentPlayers);
+    timeTillNextShoot-=(12);
     if(timeTillNextShoot < 0){
         timeTillNextShoot = 0;
         setShooting(false);
@@ -61,13 +61,13 @@ void Character::time(int currentPlayers) {
         airborne = true;
     }
 
-    if(airborne) velocityY += 4/currentPlayers;
+    if(airborne) velocityY += 4;
     if(dead) velocityX = 0;
     //velocityY += accelerationY;
     //velocityX += accelerationX;
 
-    positionX += velocityX/currentPlayers;
-    positionY += velocityY/currentPlayers;
+    positionX += velocityX;
+    positionY += velocityY;
     
     if (crouching) aimDirection = 0;
 }

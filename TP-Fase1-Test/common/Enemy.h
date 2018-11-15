@@ -30,7 +30,7 @@ public:
 
     void setCurrentPlatW(int currentPlatW);
 
-    void time(int max, std::list<Projectile> &lBullets);
+    void time( std::list<Projectile> &lBullets);
     void land(int x, int y, int w);
     void move(int randm);
 private:
