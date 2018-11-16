@@ -81,22 +81,24 @@ void Enemy::shoot(std::list<Projectile>& list) {
 
 void Enemy::move(int randm, int chx, int chy){
     if (staticEnemy){
-        float distX = posX - chx;
-        float distY = posY - chy + 61;
-        float angle = atan(distY/distX);
-        std::cout << "dx: "<< distX << "|dy: "<< distY<< "|angle: "<<angle<<std::endl;
-        if ((angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12)) && distX < 0) currentFrame = 0;
-        else if (angle > -(M_1_PIf64/12) && angle < (M_1_PIf64/12) && distX > 0) currentFrame = 6;
-        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX < 0) currentFrame = 5;
-        else if ((angle > (M_1_PIf64/12) && angle < (M_1_PIf64/4)) && distX > 0) currentFrame = 11;
-        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX < 0) currentFrame = 4;
-        else if ((angle > (M_1_PIf64/4) && angle < (5*M_1_PIf64/12)) && distX > 0) currentFrame = 10;
-        else if (angle > (5*M_1_PIf64/12) && distX < 0) currentFrame = 3;
-        else if (angle > (5*M_1_PIf64/12) && distX > 0) currentFrame = 9;
-        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX > 0) currentFrame = 1;
-        else if ((angle > -(M_1_PIf64/4) && angle < -(M_1_PIf64/12)) && distX < 0) currentFrame = 7;
-        else if (angle > -(5*M_1_PIf64/12) && angle < -(M_1_PIf64/4) && distX > 0) currentFrame = 2;
-        else currentFrame = 8;
+        float distX = chx - posX;
+        float distY = chy - 1 - posY;
+        float tang = distY/distX;
+        if (distY == 0 && distX > 0) currentFrame = 0;
+        else if (tang > tan((M_PI/18)) && tang <= tan((M_PI/4))) currentFrame = 1;
+        else if (tang > tan((M_PI/4)) && tang <= tan((4*M_PI/9))) currentFrame = 2;
+        else if (distX < 10 && distX > -10 && distY >= 0) currentFrame = 3;
+        else if (tang > tan((5*M_PI/9)) && tang <= tan((9*M_PI/12))) currentFrame = 4;
+        else if (tang > tan((9*M_PI/4)) && tang <= tan((17*M_PI/18))) currentFrame = 5;
+        else if (distY == 0 && distX <= 0) currentFrame = 6;
+        else if (tang > tan((19*M_PI/18)) && tang <= tan((5*M_PI/4))) currentFrame = 7;
+        else if (tang > tan((5*M_PI/4)) && tang <= tan((13*M_PI/9))) currentFrame = 8;
+        else if (distX < 10 && distX > -10 && distY < 0) currentFrame = 9;
+        else if (tang > tan((14*M_PI/9)) && tang <= tan((7*M_PI/4))) currentFrame = 10;
+        else if (tang > tan(7*M_PI/4) && tang <= tan(35*M_PI/36)) currentFrame = 11;
+        if (distX < 500){
+            std::cout << "chx: " << chx << "  ex: "<< posX << " chy: " << chy << "  ey: " << posY << "  dx: " << distX << " dy: " << distY  << "   entre en: " << currentFrame << std::endl;
+        }
         return;
     }
     int velx = 5;
