@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_MODEL_H
 
 
-#include <SDL_events.h>
+#include <SDL2/SDL_events.h>
 #include <mutex>
 #include "Character.h"
 #include "../common/Projectile.h"

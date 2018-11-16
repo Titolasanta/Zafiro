@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_HIELO_H
 
 
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
 #include "Viewable.h"
 
 class Ice : public Viewable {

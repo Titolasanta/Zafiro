@@ -2,15 +2,14 @@
 // Created by tito on 13/09/18.
 //
 #include <iostream>
-#include <SDL_mixer.h>
+#include <SDL2/SDL_mixer.h>
 #include "Controller.h"
 #include "../common/Logger.h"
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
 #include "../server/Model.h"
-
-#include "../server/Model.h"
 #include "../client/View.h"
+
 extern Logger *gplogger;
 extern pugi::xml_document*gXML_doc[2];
 extern pugi::xml_parse_result *gXML_parse_result;

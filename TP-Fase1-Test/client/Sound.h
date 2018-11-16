@@ -6,7 +6,7 @@
 #define TP_FASE1_TEST_SOUND_H
 
 
-#include <SDL_mixer.h>
+#include <SDL2/SDL_mixer.h>
 
 class Sound {
 
@@ -17,7 +17,7 @@ private:
     Mix_Music* levelOneMusic = nullptr;
     Mix_Music* levelTwoMusic = nullptr;
     Mix_Music* levelThreeMusic = nullptr;
-
+    Mix_Music* stageClearMusic = nullptr;
     //The sound effects that will be used
     Mix_Chunk* victorySFX = nullptr;
     Mix_Chunk* deathSFX = nullptr;
@@ -34,6 +34,7 @@ public:
     Mix_Music* getLevelOneMusic() { return levelOneMusic; }
     Mix_Music* getLevelTwoMusic() { return levelTwoMusic; }
     Mix_Music* getLevelThreeMusic() { return levelThreeMusic; }
+    Mix_Music* getStageClearMusic() { return stageClearMusic; }
 
     Mix_Chunk* getVictorySFX() { return victorySFX; }
     Mix_Chunk* getDeathSFX() { return deathSFX; }

@@ -4,22 +4,16 @@
 
 #include "Sound.h"
 #include "../common/Logger.h"
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "../common/Exception.h"
 
 
 #define MENU_MUSIC "../sounds/Menu.wav"
 #define LEVEL_ONE_MUSIC "../sounds/LevelOne.wav"
-
-#define LEVEL_TWO_MUSIC "../sounds/Menu.wav"
-//#define LEVEL_TWO_MUSIC "../sounds/LevelTwo.wav"
-
-#define LEVEL_THREE_MUSIC "../sounds/LevelOne.wav"
-//#define LEVEL_THREE_MUSIC "../sounds/LevelThree.wav"
-
-#define VICTORY_SFX "../sounds/Menu.wav"
-//#define VICTORY_SFX "../sounds/Victory.wav"
-
+#define LEVEL_TWO_MUSIC "../sounds/LevelTwo.wav"
+#define LEVEL_THREE_MUSIC "../sounds/LevelThree.wav"
+#define STAGE_CLEAR_MUSIC "../sounds/StageClear.wav"
+#define VICTORY_SFX "../sounds/Victory.wav"
 #define DEATH_SFX "../sounds/Death.wav"
 #define SHOOT_SFX "../sounds/Shoot.wav"
 
@@ -36,6 +30,7 @@ Sound::~Sound() {
     Mix_FreeMusic(levelOneMusic);
     Mix_FreeMusic(levelTwoMusic);
     Mix_FreeMusic(levelThreeMusic);
+    Mix_FreeMusic(stageClearMusic);
     
     Mix_FreeChunk(victorySFX);
     Mix_FreeChunk(deathSFX);
@@ -49,6 +44,7 @@ Sound::~Sound() {
     victorySFX = nullptr;
     deathSFX = nullptr;
     shootSFX = nullptr;
+    stageClearMusic = nullptr;
 
     Mix_Quit();
 }
@@ -97,6 +93,12 @@ bool Sound::loadSounds() {
         success = false;
     }
 
+    //Load stage clear effects
+    if(!(stageClearMusic = Mix_LoadMUS(STAGE_CLEAR_MUSIC))) {
+        gplogger->log(1,"Failed to load stage clear music!");
+        success = false;
+    }
+
     //Load death effect
     if(!(deathSFX = Mix_LoadWAV(DEATH_SFX))) {
         gplogger->log(1,"Failed to load death sound effect!");
@@ -114,6 +116,7 @@ bool Sound::loadSounds() {
         gplogger->log(1,"Failed to load shoot sound effect!");
         success = false;
     }
+
 
     return success;
 }

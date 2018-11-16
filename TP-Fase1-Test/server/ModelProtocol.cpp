@@ -5,7 +5,7 @@
 #include <tuple>
 #include <queue>
 #include <list>
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
 #include <netinet/in.h>
 #include "ModelProtocol.h"
 #include "../common/Exception.h"

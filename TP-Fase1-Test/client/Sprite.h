@@ -10,7 +10,7 @@
 #define DER 0
 
 
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
 
 class Sprite {
 

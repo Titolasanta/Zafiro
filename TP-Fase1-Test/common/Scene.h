@@ -6,9 +6,10 @@
 #define TP_FASE1_TEST_SCENE_H
 
 #include <tuple>
-
 #include <list>
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
+
+
 #include "Enemy.h"
 
 

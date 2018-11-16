@@ -123,6 +123,10 @@ void View::render(Scene& scene) {
 void View::changeLevel(Scene& scene) {
 
     inLevelSummary = 100;
+    if(inLevelSummary == 100){
+        Mix_HaltMusic();
+        Mix_PlayMusic(sound.getStageClearMusic(), -1);
+    }
     ++level;
 
     Mix_HaltMusic();
