@@ -112,6 +112,7 @@ void Enemy::move(int randm, int chx, int chy){
     int x = this->getPosX();
     int px = this->getCurrentPlatX();
     int pw = this->getCurrentPlatW();
+    currentFrame = (1+currentFrame)%6;
     if(r < 90){
         if(this->isLookingRight() ) {
             if (px + pw > x + velx + largoEnemigo)
