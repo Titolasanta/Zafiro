@@ -148,6 +148,12 @@
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Background.h">
 			<Option target="tClient"/>
 		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/BossSprite.cpp">
+			<Option target="tClient"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/BossSprite.h">
+			<Option target="tClient"/>
+		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Bullet.cpp">
 			<Option target="tClient"/>
 		</Unit>
@@ -236,6 +242,12 @@
 			<Option target="tClient"/>
 		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/SdlInit.h">
+			<Option target="tClient"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Sound.cpp">
+			<Option target="tClient"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Sound.h">
 			<Option target="tClient"/>
 		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/client/Sprite.cpp">
@@ -397,6 +409,14 @@
 			<Option target="tServer"/>
 		</Unit>
 		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/common/xml.h">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Boss.cpp">
+			<Option target="tClient"/>
+			<Option target="tServer"/>
+		</Unit>
+		<Unit filename="/home/tito/Desktop/Tallar/github/TP-Fase1-Test/server/Boss.h">
 			<Option target="tClient"/>
 			<Option target="tServer"/>
 		</Unit>

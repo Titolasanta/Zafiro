@@ -163,6 +163,33 @@ client/Background.cpp.s:
 	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Background.cpp.s
 .PHONY : client/Background.cpp.s
 
+client/BossSprite.o: client/BossSprite.cpp.o
+
+.PHONY : client/BossSprite.o
+
+# target to build an object file
+client/BossSprite.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/BossSprite.cpp.o
+.PHONY : client/BossSprite.cpp.o
+
+client/BossSprite.i: client/BossSprite.cpp.i
+
+.PHONY : client/BossSprite.i
+
+# target to preprocess a source file
+client/BossSprite.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/BossSprite.cpp.i
+.PHONY : client/BossSprite.cpp.i
+
+client/BossSprite.s: client/BossSprite.cpp.s
+
+.PHONY : client/BossSprite.s
+
+# target to generate assembly for a file
+client/BossSprite.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/BossSprite.cpp.s
+.PHONY : client/BossSprite.cpp.s
+
 client/Bullet.o: client/Bullet.cpp.o
 
 .PHONY : client/Bullet.o
@@ -567,6 +594,33 @@ client/SdlInit.s: client/SdlInit.cpp.s
 client/SdlInit.cpp.s:
 	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/SdlInit.cpp.s
 .PHONY : client/SdlInit.cpp.s
+
+client/Sound.o: client/Sound.cpp.o
+
+.PHONY : client/Sound.o
+
+# target to build an object file
+client/Sound.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sound.cpp.o
+.PHONY : client/Sound.cpp.o
+
+client/Sound.i: client/Sound.cpp.i
+
+.PHONY : client/Sound.i
+
+# target to preprocess a source file
+client/Sound.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sound.cpp.i
+.PHONY : client/Sound.cpp.i
+
+client/Sound.s: client/Sound.cpp.s
+
+.PHONY : client/Sound.s
+
+# target to generate assembly for a file
+client/Sound.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/client/Sound.cpp.s
+.PHONY : client/Sound.cpp.s
 
 client/Sprite.o: client/Sprite.cpp.o
 
@@ -1219,6 +1273,36 @@ common/xml.cpp.s:
 	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/common/xml.cpp.s
 .PHONY : common/xml.cpp.s
 
+server/Boss.o: server/Boss.cpp.o
+
+.PHONY : server/Boss.o
+
+# target to build an object file
+server/Boss.cpp.o:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/server/Boss.cpp.o
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Boss.cpp.o
+.PHONY : server/Boss.cpp.o
+
+server/Boss.i: server/Boss.cpp.i
+
+.PHONY : server/Boss.i
+
+# target to preprocess a source file
+server/Boss.cpp.i:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/server/Boss.cpp.i
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Boss.cpp.i
+.PHONY : server/Boss.cpp.i
+
+server/Boss.s: server/Boss.cpp.s
+
+.PHONY : server/Boss.s
+
+# target to generate assembly for a file
+server/Boss.cpp.s:
+	$(MAKE) -f CMakeFiles/tClient.dir/build.make CMakeFiles/tClient.dir/server/Boss.cpp.s
+	$(MAKE) -f CMakeFiles/tServer.dir/build.make CMakeFiles/tServer.dir/server/Boss.cpp.s
+.PHONY : server/Boss.cpp.s
+
 server/Character.o: server/Character.cpp.o
 
 .PHONY : server/Character.o
@@ -1637,6 +1721,9 @@ help:
 	@echo "... client/Background.o"
 	@echo "... client/Background.i"
 	@echo "... client/Background.s"
+	@echo "... client/BossSprite.o"
+	@echo "... client/BossSprite.i"
+	@echo "... client/BossSprite.s"
 	@echo "... client/Bullet.o"
 	@echo "... client/Bullet.i"
 	@echo "... client/Bullet.s"
@@ -1682,6 +1769,9 @@ help:
 	@echo "... client/SdlInit.o"
 	@echo "... client/SdlInit.i"
 	@echo "... client/SdlInit.s"
+	@echo "... client/Sound.o"
+	@echo "... client/Sound.i"
+	@echo "... client/Sound.s"
 	@echo "... client/Sprite.o"
 	@echo "... client/Sprite.i"
 	@echo "... client/Sprite.s"
@@ -1751,6 +1841,9 @@ help:
 	@echo "... common/xml.o"
 	@echo "... common/xml.i"
 	@echo "... common/xml.s"
+	@echo "... server/Boss.o"
+	@echo "... server/Boss.i"
+	@echo "... server/Boss.s"
 	@echo "... server/Character.o"
 	@echo "... server/Character.i"
 	@echo "... server/Character.s"
