@@ -30,7 +30,7 @@ void Controller::startGame(){
     while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
             if (e.type == SDL_QUIT) { quit = true; }
-            if(!view.isInLevelSummary() && scene.isAllPlayersConnected()) processEvent(e);
+            if(scene.isAllPlayersConnected()) processEvent(e);
         }
         show();
         if (timeTillNextShoot > 0) timeTillNextShoot -= 12;
@@ -38,26 +38,28 @@ void Controller::startGame(){
 }
 
 void Controller::processEvent(SDL_Event e) {
+    if(!view.isInLevelSummary()) {
+        if (e.type == SDL_KEYDOWN) {
+            if (e.key.keysym.sym == SDLK_SPACE) protocol.jump();
+            else if (e.key.keysym.sym == SDLK_RIGHT) protocol.moveRight();
+            else if (e.key.keysym.sym == SDLK_LEFT) protocol.moveLeft();
+            else if (e.key.keysym.sym == SDLK_DOWN) protocol.aimDown();
+            else if (e.key.keysym.sym == SDLK_UP) protocol.aimUp();
+            else if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
+            else if (e.key.keysym.sym == SDLK_x) protocol.shoot();
+            else if (e.key.keysym.sym == SDLK_i) protocol.immortal();
 
-    if (e.type == SDL_KEYDOWN) {
-        if (e.key.keysym.sym == SDLK_SPACE) protocol.jump();
-        else if (e.key.keysym.sym == SDLK_RIGHT) protocol.moveRight();
-        else if (e.key.keysym.sym == SDLK_LEFT) protocol.moveLeft();
-        else if (e.key.keysym.sym == SDLK_DOWN) protocol.aimDown();
-        else if (e.key.keysym.sym == SDLK_UP) protocol.aimUp();
-        else if (e.key.keysym.sym == SDLK_LCTRL) protocol.crouch();
-        else if (e.key.keysym.sym == SDLK_x) protocol.shoot();
-        else if (e.key.keysym.sym == SDLK_i) protocol.immortal();
+            //if (e.key.keysym.sym == SDLK_l){ protocol.changeLevel(protocol.getLevel().next(),scene); }
+        }
 
-        //if (e.key.keysym.sym == SDLK_l){ protocol.changeLevel(protocol.getLevel().next(),scene); }
-    }
-
-    if (e.type == SDL_KEYUP) {
-        if (e.key.keysym.sym == SDLK_RIGHT || e.key.keysym.sym == SDLK_LEFT) protocol.stop();
-        else if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP) protocol.aimStraight();
-        else if (e.key.keysym.sym == SDLK_LCTRL) protocol.stand();
-        else if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
-    }
+        if (e.type == SDL_KEYUP) {
+            if (e.key.keysym.sym == SDLK_RIGHT || e.key.keysym.sym == SDLK_LEFT) protocol.stop();
+            else if (e.key.keysym.sym == SDLK_DOWN || e.key.keysym.sym == SDLK_UP) protocol.aimStraight();
+            else if (e.key.keysym.sym == SDLK_LCTRL) protocol.stand();
+            else if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
+        }
+    }else if(e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_n)
+        view.setInLevelSummary(0);
 }
 
 void Controller::show() {

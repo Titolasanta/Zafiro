@@ -19,9 +19,13 @@ public:
         return posX;
     }
 
-    void takeDamage(){
+    bool takeDamage(){ //return true if death
         if(HP != 0)
             HP -= 1;
+        return !HP;
+    }
+    bool alive(){
+        return HP;
     }
 
     void setPosX(int posX) {

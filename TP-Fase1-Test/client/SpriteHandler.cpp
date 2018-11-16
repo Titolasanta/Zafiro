@@ -26,7 +26,8 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
                                                staticEnemySpriteTexture(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                bossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                bossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
-                                               bossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
+                                               bossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               spriteTextureGrace(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 
 {
     spriteTexture[0] = &spriteTexture0;
@@ -34,6 +35,7 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     spriteTexture[2] = &spriteTexture2;
     spriteTexture[3] = &spriteTexture3;
     spriteTexture0.loadFromFile(SPRITE_PATH_AZUL);
+    spriteTextureGrace.loadFromFile(SPRITE_PATH_ROJO);
     spriteTexture1.loadFromFile(SPRITE_PATH_ROJO);
     spriteTexture2.loadFromFile(SPRITE_PATH_VERDE);
     spriteTexture3.loadFromFile(SPRITE_PATH_AMARILLO);
@@ -50,7 +52,9 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 }
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
-
+    dibujarTitilantes--;
+    if(!dibujarTitilantes)
+        dibujarTitilantes = 6;
     renderHp(scene, id, cameraX, cameraY);
 
     std::list<Enemy> le = scene.getEnemies();
@@ -93,9 +97,15 @@ void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int 
     if (!scene.isAirborne(i + 1) && scene.isDead(i + 1)) currentClip = spritePositionHandler.getMuerto();
     if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
 
-    spriteTexture[i]->render(scene.getPositionX(i + 1) - cameraX - characterWidth / 2,
-                             scene.getPositionY(i + 1) - cameraY,
-                             currentClip, angle);
+    if(scene.isInGracePeriod(i+1)) {
+        if ((dibujarTitilantes % 3))
+            spriteTexture[i]->render(scene.getPositionX(i + 1) - cameraX - characterWidth / 2,
+                                     scene.getPositionY(i + 1) - cameraY,
+                                     currentClip, angle);
+    } else
+        spriteTexture[i]->render(scene.getPositionX(i + 1) - cameraX - characterWidth / 2,
+                                               scene.getPositionY(i + 1) - cameraY,
+                                               currentClip, angle);
 }
 
 void SpriteHandler::renderHp(Scene& scene,int  id,int cameraX,int cameraY){

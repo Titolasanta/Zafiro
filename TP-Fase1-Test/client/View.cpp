@@ -68,7 +68,7 @@ int View::isInLevelSummary(){
 void View::render(Scene& scene) {
 
     if(inLevelSummary){
-        levelSummary();
+        levelSummary(scene);
         inLevelSummary--;
         return;
     }
@@ -290,13 +290,45 @@ void View::waiting_for_players() {
     window.updateRenderer();
 }
 
-void View::levelSummary() {
-    window.createRectangle(0,1000,0,800);
+void View::levelSummary(Scene& scene) {
     currentImage++;
     loginImages[currentImage%4].render(0, 0);
+
     std::string msg("Fin del nivel");
     txt.loadFromRenderedText(msg);
-    txt.render(100, 250);
+    txt.render(100, 500);
+
+    msg = "n para continuar";
+    txt.loadFromRenderedText(msg);
+    txt.render(100, 550);
+
+    char buffer[10];
+    for(int i = scene.getCurrentPlayers(); i > 0; i--) {
+        memset(&buffer, 0, 10);
+        sprintf(buffer, "J%d", i);
+        msg = buffer;
+        txt.loadFromRenderedText(msg);
+        txt.render(100, 210 + 50 * i);
+    }
+    for(int i = 3; i > 0; i--) {
+        memset(&buffer, 0, 10);
+        sprintf(buffer, "L%d", i);
+        msg = buffer;
+        txt.loadFromRenderedText(msg);
+        txt.render(150 +100 * i, 200 );
+    }
+    for(int i = scene.getCurrentPlayers(); i > 0; i--) {
+        for(int j = 2; j >= 0; j--) {
+            int score = scene.getScore(i,j+1);
+            if(!score)
+                continue;
+            memset(&buffer, 0, 10);
+            sprintf(buffer, "%d", score);
+            msg = buffer;
+            txt.loadFromRenderedText(msg);
+            txt.render(150 + 100 * j, 210 + i * 50 );
+        }
+    }
     window.updateRenderer();
 
 }

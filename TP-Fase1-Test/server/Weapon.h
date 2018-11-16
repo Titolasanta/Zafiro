@@ -13,7 +13,13 @@ class Weapon {
     protected:
         int maxAmmo;
         int currentAmmo = maxAmmo;
-        int fireRate = 5 * 12;
+public:
+    int getCurrentAmmo() const;
+
+    void setCurrentAmmo(int currentAmmo);
+
+protected:
+    int fireRate = 5 * 12;
         int id = -1;
 public:
     int getId() const;

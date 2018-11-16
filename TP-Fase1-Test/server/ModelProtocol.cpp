@@ -76,6 +76,7 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, it->getCurrentFrame());
     }
     sendValue(skt, -1);
+    sendValue(skt, scene.getLevel());
     for (int i = 0; i < p; i++){
         sendValue(skt, scene.getImmortal(i + 1));
         sendValue(skt, scene.getPositionX(i + 1));
@@ -91,13 +92,17 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, scene.isShooting(i + 1));
         sendValue(skt, scene.getAimDirection(i + 1));
         sendValue(skt, scene.isJugadorGrisado(i + 1));
+        sendValue(skt,scene.isInGracePeriod(i+1));
+        for(int j = 0; j < 3; j++)
+            sendValue(skt,scene.getScore(i+1,j+1));
+
+        //printf("%d\n",scene.getScore(i+1));
     }
     sendValue(skt, scene.getCamera()->x);
     sendValue(skt, scene.getCamera()->y);
     sendValue(skt, scene.getBossX());
     sendValue(skt, scene.getBossY());
     sendValue(skt, scene.getBossHP());
-    sendValue(skt, scene.getLevel());
     sendValue(skt,scene.getCurrentPlayers());
     sendValue(skt,scene.isVictory());
     sendValue(skt,scene.isShootSound());

@@ -30,6 +30,7 @@ private:
     bool dead;
     bool shooting;
     bool immortal;
+    int gracePeriod = 0;
 public:
     bool isImmortal() const;
 
@@ -72,6 +73,8 @@ public:
     void goThroughPlatform();
     void changeWeapon(Weapon);
     void gainHealth(int);
+    void startGracePeriod();
+    bool isInGracePeriod();
     //void respawn(Scene&,SDL_Rect,Character*[]);
 
     void spawn(SDL_Rect);
@@ -98,7 +101,7 @@ public:
 
     void nextLevel() { level += 1; }
     bool canGoThrough() { return !currentPlatHard; }
-
+    
     bool isShooting() const { return shooting; }
     void setShooting(bool s) { shooting = s; }
     

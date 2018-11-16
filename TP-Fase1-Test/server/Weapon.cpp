@@ -9,10 +9,7 @@
 Weapon::Weapon() = default;
 
 Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int direction) {
-
-    if(id == -1){
-        throw "no tengo dueño";
-    }
+    
     if (currentAmmo > 0){
 
         int velX;
@@ -48,6 +45,14 @@ int Weapon::getId() const {
 
 void Weapon::setId(int id) {
     Weapon::id = id;
+}
+
+int Weapon::getCurrentAmmo() const {
+    return currentAmmo;
+}
+
+void Weapon::setCurrentAmmo(int currentAmmo) {
+    Weapon::currentAmmo = currentAmmo;
 }
 
 Weapon::~Weapon() = default;

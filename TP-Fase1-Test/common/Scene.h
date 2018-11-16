@@ -68,14 +68,34 @@ private:
     int shooting[4];
     int aimDirection[4];
     bool jugadorGrisado[4];
+    bool gracePeriod[4];
     int bossX;
     int bossY;
     int bossHP;
-
-private:
     std::list<Enemy> enemies;
-    
+    int score[4][3];
 public:
+
+    void scoreAdd(int player,int toAdd){
+        score[player-1][level-1] += toAdd;
+        printf("%d\n",score[player-1][level-1]);
+    };
+
+
+    int getScore(int player){
+        return score[player-1][level-1];
+    };
+
+    int getScore(int player,int level){
+        return score[player-1][level-1];
+    };
+
+    void setScore(int set, int player){
+        score[player-1][level-1] = set;
+    }    
+    void setScore(int set, int player,int level){
+        score[player-1][level-1] = set;
+    }
     
     int getBossHP() const {
         return bossHP;
@@ -148,9 +168,12 @@ public:
     void setCurrentPlayers(int p){ players = p;}
     
     int getMaxPlayers(){ return MaxPlayers;}
-    
+
     bool isJugadorGrisado(int p) const { return jugadorGrisado[p-1]; }
     void setJugadorGrisado(bool b, int p) { jugadorGrisado[p-1] = b; }
+
+    bool isInGracePeriod(int p) const { return gracePeriod[p-1]; }
+    void setGracePeriod(bool b, int p) { gracePeriod[p-1] = b; }
     
     void addEnemy(Enemy &&enemy);
     

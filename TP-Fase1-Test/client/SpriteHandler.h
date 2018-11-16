@@ -22,18 +22,19 @@ public:
     void renderHp(Scene&, int, int, int);
 
 private:
-    ImgTexture *spriteTexture[4];
+    ImgTexture *spriteTexture[5];
     ImgTexture spriteTexture0;
     ImgTexture spriteTexture1;
     ImgTexture spriteTexture2;
     ImgTexture spriteTexture3;
+    ImgTexture spriteTextureGrace;
     ImgTexture movingEnemySpriteTexture;
     ImgTexture staticEnemySpriteTexture;
     ImgTexture *bossTexture[3];
     ImgTexture bossTexture0;
     ImgTexture bossTexture1;
     ImgTexture bossTexture2;
-
+    int dibujarTitilantes = 10;
     Sprite spritePositionHandler;
     int currentFrame[5] = {0, 0, 0, 0, 0};
 };

@@ -32,7 +32,7 @@ Character::Character() : weapon(Pistol()) {
     
     immortal = true;
 
-    weapon.setId(id);
+    weapon.setCurrentAmmo(0);
     gplogger->log(2, "Se creó el personaje");
 }
 void Character::land(int x, int y,int w,bool hard) {
@@ -50,6 +50,8 @@ void Character::land(int x, int y,int w,bool hard) {
 }
 
 void Character::time() {
+    if(gracePeriod>0)
+        gracePeriod--;
 
     timeTillNextShoot-=(12);
     if(timeTillNextShoot < 0){
@@ -165,12 +167,13 @@ void Character::crouch() {
 }
 
 void Character::takeDamage() {
-    if (!immortal && !dead){
+    if (!immortal && !dead && !gracePeriod){
         hitPoints--;
         if (hitPoints <= 0) {
             positionY+=45;
             dead = true;
         }
+        startGracePeriod();
         //RIP Destruirlo o algo
     }
 }
@@ -188,7 +191,7 @@ void Character::spawn(SDL_Rect cam) {
     
     if(level == 2){
         positionX = cam.x + 400;
-        positionY = cam.y + 250;
+        positionY = cam.y + 200;
     } else {
         positionX = cam.x + 150;
         positionY = cam.y + 100;
@@ -247,4 +250,11 @@ void Character::setImmortal(bool immortal) {
 void Character::gainHealth(int h){
     hitPoints += h;
     if (hitPoints >= 0) dead = false;
+}
+
+void Character::startGracePeriod() {
+    gracePeriod = 20;
+}
+bool Character::isInGracePeriod(){
+    return gracePeriod;
 }

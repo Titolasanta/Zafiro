@@ -38,7 +38,7 @@ public:
     void conexionDown();
     void waiting();
     void waiting_for_players();
-    void levelSummary();
+    void levelSummary(Scene& scene);
     void endOfGameScreen();
     int isInLevelSummary();
     int getLevel();
@@ -73,6 +73,16 @@ private:
     int level=1;
     SDL_Rect * camera = NULL;
     int inLevelSummary = 0;
+    
+    
+public:
+    int getInLevelSummary() const {
+        return inLevelSummary;
+    }
+
+    void setInLevelSummary(int inLevelSummary) {
+        View::inLevelSummary = inLevelSummary;
+    }
 
 };
 

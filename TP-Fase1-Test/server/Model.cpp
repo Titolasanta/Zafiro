@@ -57,6 +57,7 @@ Model::Model(int initialLevel) : level(initialLevel),boss1(1),boss2(2),boss3(3) 
 }
 
 void Model::rejoinCharacter(int id){
+    players[id-1]->startGracePeriod();
     jugadorGrisado[id-1] = false;
     players[id-1]->setImmortal(false);
     jugadorReconectado[id - 1] = true;
@@ -149,7 +150,7 @@ void Model::respawn(int toRespawn,SDL_Rect* cam){
 void Model::update(Scene &scene) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    
+
     time();
 
     collisionEyP(scene);
@@ -172,7 +173,8 @@ void Model::update(Scene &scene) {
     
             if (players[i]->getPositionY() > 600 + cam->y) {
                 respawn(i,cam);
-                players[i]->takeDamage();
+                if(!jugadorGrisado[i])
+                    players[i]->takeDamage();
                 if ((level.getLevel() == 3) && (fixBugPls[i])){
                     players[i]->gainHealth(1);
                     fixBugPls[i] = false;
@@ -203,6 +205,8 @@ void Model::update(Scene &scene) {
             scene.setShooting(players[i]->isShooting(), i + 1);
             scene.setCurrentPlayers(currentPlayers);
             scene.setJugadorGrisado(jugadorGrisado[i], i + 1);
+            scene.setGracePeriod(players[i]->isInGracePeriod(), i + 1);
+            //scene.setScore(players[i+1]->getScore(),i+1);
             if (getCurrentPlayers() == getMaxPlayers()) {
                 scene.setAllPlayersConnected(true);
             }
@@ -398,7 +402,8 @@ void Model::placeCamera(Scene &scene){
             }else{
                 if (playerPosY > cam->y + 550) {
                     respawn(i,cam);
-                    players[i]->takeDamage();
+                    if(!jugadorGrisado[i])
+                        players[i]->takeDamage();
                 }
             }
         }
@@ -497,14 +502,17 @@ void Model::handleBullet(Scene &scene) {
                 for (int i = 0; i < currentPlayers; i++) {
                     if (isBetween(it->getPositionX(), it->getPositionY(), players[i]->getPositionX(),
                             players[i]->getPositionY(), CHARACTERWIDTH, CHARACTERHEIGHT)){
-                        players[i]->takeDamage();
-                        it = lBullets.erase(it);
+                        if(!jugadorGrisado[i]) {
+                            players[i]->takeDamage();
+                            it = lBullets.erase(it);
+                        }
                     }
                 }
             } else{
                 for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
                     if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), ENEMYWIDTH, ENEMYHEIGHT)){
                         enemyIt = scene.getEnemies().erase(enemyIt);
+                        scene.scoreAdd(it->getOwnerId(),50);
                         it = lBullets.erase(it);
                     }
                 }
@@ -512,14 +520,22 @@ void Model::handleBullet(Scene &scene) {
                 if(level.getLevel()!=2) {
                     if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
                             BOSSWIDTH1, BOSSHEIGHT1)) {
-                        bosstemp->takeDamage();
-                        it = lBullets.erase(it);
+                        if(bosstemp.alive()) {
+                            scene.scoreAdd(it->getOwnerId(), 10);
+                            if (bosstemp->takeDamage())
+                                scene.scoreAdd(it->getOwnerId(), 500);
+                            it = lBullets.erase(it);
+                        }
                     }
                 } else if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
                                          bosstemp->getPosY(), BOSSWIDTH1, BOSSHEIGHT1)) {
-                        bosstemp->takeDamage();
+                    if(bosstemp.alive()) {
+                        scene.scoreAdd(it->getOwnerId(), 10);
+                        if (bosstemp->takeDamage())
+                            scene.scoreAdd(it->getOwnerId(), 500);
                         it = lBullets.erase(it);
                     }
+                }
             }
             lTemp.push_back(std::tuple<int,int,int>(it->getPositionX(),it->getPositionY(), it->getOwnerId()));
             ++it;
@@ -540,7 +556,8 @@ void Model::collisionEyP(Scene& scene) {
                         players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
                         isBetween(enemyIt->getPosX() + ENEMYWIDTH,enemyIt->getPosY() + ENEMYHEIGHT,
                                 players[i]->getPositionX(), players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT))
-                    players[i]->takeDamage();
+                    if(!jugadorGrisado[i])
+                        players[i]->takeDamage();
             }
         }
     }

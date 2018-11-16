@@ -116,6 +116,7 @@ void ViewProtocol::update(Scene& scene){
     }
     scene.setEnemies(le);
     int p = scene.getMaxPlayers();
+    scene.setLevel(receiveNumber(socket));
     for (int i = 0; i < p; i++) {
        //scene.setBullets(std::move(lTemp));
         scene.setImmortal(receiveNumber(socket), i + 1);
@@ -132,13 +133,15 @@ void ViewProtocol::update(Scene& scene){
        scene.setShooting(receiveNumber(socket), i + 1);
        scene.setAimDirection(receiveNumber(socket), i + 1);
        scene.setJugadorGrisado((bool) receiveNumber(socket), i + 1);
-   }
+       scene.setGracePeriod((bool) receiveNumber(socket), i + 1);
+       for(int j = 0; j < 3; j++)
+           scene.setScore(receiveNumber(socket),i+1,j+1);
+    }
     scene.setCameraX(receiveNumber(socket));
     scene.setCameraY(receiveNumber(socket));
     scene.setBossX(receiveNumber(socket));
     scene.setBossY(receiveNumber(socket));
     scene.setBossHP(receiveNumber(socket));
-    scene.setLevel(receiveNumber(socket));
     scene.setCurrentPlayers(receiveNumber(socket));
     scene.setVictory((bool)receiveNumber(socket));
     scene.setShootSound((bool)receiveNumber(socket));
