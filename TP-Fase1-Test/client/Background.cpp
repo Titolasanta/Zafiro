@@ -35,12 +35,12 @@ void Background::render(Scene& scene,SDL_Rect& camera, int scrollingOffset,int l
         img3.renderBackground(scrollingOffset * 10, 0);
 
     } if(level == 2){
-        if(scrollingCatarata >= -100)
-            scrollingCatarata = -2900;
+        if (scrollingOffset < -390) scrollingOffset = -390;
+        if(scrollingCatarata >= -100) scrollingCatarata = -2900;
         scrollingCatarata += 10;
         img1.renderBackground(0, scrollingCatarata);
         img2.renderBackground(0, scrollingOffset*10  );
-        //img3.renderBackground(0, scrollingOffset *10);
+        img3.renderBackground(0, scrollingOffset *5);
 
     } if(level == 3) {
         img1.renderBackground(scrollingOffset, 0);
@@ -66,7 +66,8 @@ void Background::changeLevel(int level) {
     img1.loadFromFile(get_level_background_path(*gXML_doc[0],*gXML_doc[1], level, 1,*gXML_parse_result));
     img2.loadFromFile(get_level_background_path(*gXML_doc[0],*gXML_doc[1],level, 2,*gXML_parse_result));
     img3.loadFromFile(get_level_background_path(*gXML_doc[0],*gXML_doc[1],level, 3,*gXML_parse_result));
-
+    if (level == 2) scrollingOffset = -390;
+    else scrollingOffset = 0;
 }
 
 

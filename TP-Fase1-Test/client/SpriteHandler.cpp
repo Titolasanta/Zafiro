@@ -19,7 +19,8 @@
 #define BOSS_PATH_LVL3 "../spirites/bossl3.png"
 #define DEAD_BOSS_PATH_LVL1 "../spirites/bossl1dead.png"
 #define DEAD_BOSS_PATH_LVL3 "../spirites/bossl3dead.png"
-
+#define DEAD_BOSS_FRONT_PATH_LVL1 "../spirites/bossl1deadfront.png"
+#define DEAD_BOSS_FRONT_PATH_LVL3 "../spirites/bossl3deadfront.png"
 
 #define characterWidth 20
 
@@ -35,8 +36,10 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
                                                bossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                bossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                deadBossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
-                                               deadBossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                deadBossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossFrontTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossFrontTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossFrontTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTextureGrace(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                destroyedEnemySpriteTexture(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 
@@ -55,19 +58,18 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     bossTexture[0] = &bossTexture0;
     bossTexture[1] = &bossTexture1;
     bossTexture[2] = &bossTexture2;
-    bossTexture0.loadFromFile(SPRITE_PATH_AZUL);
-    bossTexture1.loadFromFile(SPRITE_PATH_AZUL);
-    bossTexture2.loadFromFile(SPRITE_PATH_AZUL);
-    destroyedEnemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);;
+    destroyedEnemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);
     deadBossTexture[0] = &deadBossTexture0;
-    deadBossTexture[1] = &deadBossTexture1;
     deadBossTexture[2] = &deadBossTexture2;
+    deadBossFrontTexture[0] = &deadBossFrontTexture0;
+    deadBossFrontTexture[2] = &deadBossFrontTexture2;
     bossTexture0.loadFromFile(BOSS_PATH_LVL1);
     bossTexture1.loadFromFile(BOSS_PATH_LVL2);
     bossTexture2.loadFromFile(BOSS_PATH_LVL3);
     deadBossTexture0.loadFromFile(DEAD_BOSS_PATH_LVL1);
-    deadBossTexture1.loadFromFile(BOSS_PATH_LVL2);
     deadBossTexture2.loadFromFile(DEAD_BOSS_PATH_LVL3);
+    deadBossFrontTexture0.loadFromFile(DEAD_BOSS_FRONT_PATH_LVL1);
+    deadBossFrontTexture2.loadFromFile(DEAD_BOSS_FRONT_PATH_LVL3);
     //enemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);
     gplogger->log(3,"Se crea SpriteHandler de la vista");
 }
@@ -94,6 +96,7 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     renderCharacterSprite(scene, id - 1, cameraX, cameraY);
     if(!dibujarTitilantes)
         dibujarTitilantes = 6;
+    renderDeadBossSprite(scene, cameraX, cameraY);
     renderHp(scene, id, cameraX, cameraY);
 }
 
@@ -227,4 +230,8 @@ void SpriteHandler::renderEnemyDestroyedSprites(Enemy e, int cameraX, int camera
     destroyedEnemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY, currentClip, 0);
 
 
+}
+
+void SpriteHandler::renderDeadBossSprite(Scene &scene, int cameraX, int cameraY) {
+    if (scene.getLevel() != 2 && (!scene.getBossHP())) deadBossFrontTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY);
 }
