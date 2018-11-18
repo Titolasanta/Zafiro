@@ -20,6 +20,7 @@ public:
     void renderStaticEnemySprite(Enemy e, int cameraX, int cameraY);
     void renderBossSprite(Scene &scene, int cameraX, int cameraY);
     void renderHp(Scene&, int, int, int);
+    void renderEnemyDestroyedSprites(Enemy e, int cameraX, int cameraY, int i);
 
 private:
     ImgTexture *spriteTexture[5];
@@ -35,6 +36,7 @@ private:
     ImgTexture bossTexture0;
     ImgTexture bossTexture1;
     ImgTexture bossTexture2;
+    ImgTexture destroyedEnemySpriteTexture;
     ImgTexture deadBossTexture0;
     ImgTexture deadBossTexture1;
     ImgTexture deadBossTexture2;

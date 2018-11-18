@@ -37,7 +37,8 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
                                                deadBossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                deadBossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                deadBossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
-                                               spriteTextureGrace(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
+                                               spriteTextureGrace(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               destroyedEnemySpriteTexture(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 
 {
     spriteTexture[0] = &spriteTexture0;
@@ -54,6 +55,10 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     bossTexture[0] = &bossTexture0;
     bossTexture[1] = &bossTexture1;
     bossTexture[2] = &bossTexture2;
+    bossTexture0.loadFromFile(SPRITE_PATH_AZUL);
+    bossTexture1.loadFromFile(SPRITE_PATH_AZUL);
+    bossTexture2.loadFromFile(SPRITE_PATH_AZUL);
+    destroyedEnemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);;
     deadBossTexture[0] = &deadBossTexture0;
     deadBossTexture[1] = &deadBossTexture1;
     deadBossTexture[2] = &deadBossTexture2;
@@ -69,11 +74,15 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     dibujarTitilantes--;
-
     std::list<Enemy> le = scene.getEnemies();
     for (auto it = le.begin(); it != le.end(); it++){
-        if (it->isStatic()) renderStaticEnemySprite(*it, cameraX, cameraY);
-        else renderMovingEnemySprite(*it, cameraX, cameraY);
+        if(it->isDead()){
+            renderEnemyDestroyedSprites(*it, cameraX, cameraY, 1);
+            it = scene.getEnemies().erase(it);
+        } else {
+            if (it->isStatic()) renderStaticEnemySprite(*it, cameraX, cameraY);
+            else renderMovingEnemySprite(*it, cameraX, cameraY);
+        }
     }
 
     renderBossSprite(scene,cameraX, cameraY);
@@ -210,4 +219,12 @@ void SpriteHandler::renderBossSprite(Scene &scene, int cameraX, int cameraY) {
         if (scene.getBossHP()) bossTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY);
         else deadBossTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY);
     }
+}
+
+void SpriteHandler::renderEnemyDestroyedSprites(Enemy e, int cameraX, int cameraY, int i){
+    SDL_Rect *currentClip;
+    currentClip = spritePositionHandler.getDestroyedEnemySprite(i);
+    destroyedEnemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY, currentClip, 0);
+
+
 }

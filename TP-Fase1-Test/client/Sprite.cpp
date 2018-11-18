@@ -37,6 +37,10 @@ SDL_Rect* Sprite::getStaticEnemySprite(int direccion) {
     return &staticEnemies[direccion];
 }
 
+SDL_Rect* Sprite::getDestroyedEnemySprite(int i) {
+    return &destroyedEnemies[i];
+}
+
 Sprite::Sprite()
 : frameMoviemiento { {{2,86,32,70}, //Corriendo hacia adelante
                       {36,86,38,35*2}, //(segunda linea sprite sheet)
@@ -98,6 +102,11 @@ staticEnemies{
     {0, 356, 64, 64},
     {136, 356, 64, 64},
     {272, 356, 64, 64}
-}
+},
+  destroyedEnemies{
+          {0, 438, 48, 48},
+          {52, 434, 56, 56},
+          {112, 430, 64, 64},
+  }
 
                  {}

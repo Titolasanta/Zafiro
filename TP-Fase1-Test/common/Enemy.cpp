@@ -128,3 +128,11 @@ void Enemy::move(int randm, int chx, int chy){
         this->setLookingRight(!this->isLookingRight());
     }
 }
+
+bool Enemy::isDead() const {
+    return dead;
+}
+
+void Enemy::setDead(bool dead) {
+    Enemy::dead = dead;
+}

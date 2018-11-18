@@ -519,7 +519,8 @@ void Model::handleBullet(Scene &scene) {
                         width = STATICENEMYWIDTH;
                     }
                     if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), width, height)){
-                        enemyIt = scene.getEnemies().erase(enemyIt);
+                        enemyIt->setDead(true);
+                        //enemyIt = scene.getEnemies().erase(enemyIt);
                         scene.scoreAdd(it->getOwnerId(),50);
                         it = lBullets.erase(it);
                     }
