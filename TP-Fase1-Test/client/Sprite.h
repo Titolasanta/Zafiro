@@ -23,6 +23,7 @@ public:
     SDL_Rect* getMuerto();
     SDL_Rect* getMovingEnemySprite(int);
     SDL_Rect* getStaticEnemySprite(int);
+    SDL_Rect* getMovingEnemyShootingSprite();
 
 
 private:
@@ -32,6 +33,7 @@ private:
     SDL_Rect grisado;
     SDL_Rect muerto;
     SDL_Rect movingEnemies[7];
+    SDL_Rect movingEnemyShooting;
     SDL_Rect staticEnemies[12];
 
 };

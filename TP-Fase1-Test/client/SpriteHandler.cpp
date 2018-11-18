@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <zconf.h>
+#include <random>
 #include "SpriteHandler.h"
 #include "Sprite.h"
 #include "../common/Logger.h"
@@ -13,6 +14,12 @@
 #define SPRITE_PATH_VERDE "../spirites/spriteverde.png"
 #define SPRITE_PATH_AMARILLO "../spirites/spriteamarillo.png"
 #define SPRITE_PATH_ENEMY "../spirites/enemies.png"
+#define BOSS_PATH_LVL1 "../spirites/bossl1.png"
+#define BOSS_PATH_LVL2 "../spirites/bossl2.png"
+#define BOSS_PATH_LVL3 "../spirites/bossl3.png"
+#define DEAD_BOSS_PATH_LVL1 "../spirites/bossl1dead.png"
+#define DEAD_BOSS_PATH_LVL3 "../spirites/bossl3dead.png"
+
 
 #define characterWidth 20
 
@@ -27,6 +34,9 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
                                                bossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                bossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                bossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossTexture0(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossTexture1(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
+                                               deadBossTexture2(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF)))),
                                                spriteTextureGrace(  (std::move(window->createImgTexture(0xFF, 0xFF, 0xFF))))
 
 {
@@ -44,18 +54,21 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
     bossTexture[0] = &bossTexture0;
     bossTexture[1] = &bossTexture1;
     bossTexture[2] = &bossTexture2;
-    bossTexture0.loadFromFile(SPRITE_PATH_AZUL);
-    bossTexture1.loadFromFile(SPRITE_PATH_AZUL);
-    bossTexture2.loadFromFile(SPRITE_PATH_AZUL);
+    deadBossTexture[0] = &deadBossTexture0;
+    deadBossTexture[1] = &deadBossTexture1;
+    deadBossTexture[2] = &deadBossTexture2;
+    bossTexture0.loadFromFile(BOSS_PATH_LVL1);
+    bossTexture1.loadFromFile(BOSS_PATH_LVL2);
+    bossTexture2.loadFromFile(BOSS_PATH_LVL3);
+    deadBossTexture0.loadFromFile(DEAD_BOSS_PATH_LVL1);
+    deadBossTexture1.loadFromFile(BOSS_PATH_LVL2);
+    deadBossTexture2.loadFromFile(DEAD_BOSS_PATH_LVL3);
     //enemySpriteTexture.loadFromFile(SPRITE_PATH_ENEMY);
     gplogger->log(3,"Se crea SpriteHandler de la vista");
 }
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     dibujarTitilantes--;
-    if(!dibujarTitilantes)
-        dibujarTitilantes = 6;
-    renderHp(scene, id, cameraX, cameraY);
 
     std::list<Enemy> le = scene.getEnemies();
     for (auto it = le.begin(); it != le.end(); it++){
@@ -70,6 +83,9 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
         renderCharacterSprite(scene, i, cameraX, cameraY);
     }
     renderCharacterSprite(scene, id - 1, cameraX, cameraY);
+    if(!dibujarTitilantes)
+        dibujarTitilantes = 6;
+    renderHp(scene, id, cameraX, cameraY);
 }
 
 void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int cameraY) {
@@ -174,7 +190,24 @@ void SpriteHandler::renderStaticEnemySprite(Enemy e, int cameraX, int cameraY){
 }
 
 void SpriteHandler::renderBossSprite(Scene &scene, int cameraX, int cameraY) {
-    if(scene.getBossHP())
-        bossTexture[scene.getLevel()-1]->render(scene.getBossX() - cameraX ,
-                             scene.getBossY() - cameraY );
+    if (scene.getLevel() == 2) {
+
+        std::random_device rand_dev;
+        std::default_random_engine generator(rand_dev());
+        std::uniform_int_distribution<int> player(0,scene.getCurrentPlayers() - 1);
+        int character = player(generator);
+        int pos = scene.getPositionX(character + 1);
+        SDL_Rect clip;
+        if(!scene.getBossHP()) clip = {22, 1013, 762, 312};
+        else if (pos < 370 && pos > 230) clip = {22, 0, 762, 312};
+        else if (pos <= 230) clip = {22, 339, 762, 312};
+        else clip = {22, 675, 762, 312};
+
+        bossTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY,
+                                                  &clip, 0);
+    }
+    else {
+        if (scene.getBossHP()) bossTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY);
+        else deadBossTexture[scene.getLevel() - 1]->render(scene.getBossX() - cameraX, scene.getBossY() - cameraY);
+    }
 }

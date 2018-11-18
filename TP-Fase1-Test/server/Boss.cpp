@@ -6,15 +6,15 @@
 
 Boss::Boss(int level) {
     if(level == 1){
-        posX = 8300;
-        posY = 200;
+        posX = 8400;
+        posY = 90;
     }
     if(level == 2){
-        posX = 100;
-        posY = -3200;
+        posX = 19;
+        posY = -3680;
     }
     if(level == 3){
-        posX = 8300;
-        posY = 200;
+        posX = 8200;
+        posY = -50;
     }
 }

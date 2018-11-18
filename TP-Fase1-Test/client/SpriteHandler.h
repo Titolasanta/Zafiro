@@ -31,9 +31,13 @@ private:
     ImgTexture movingEnemySpriteTexture;
     ImgTexture staticEnemySpriteTexture;
     ImgTexture *bossTexture[3];
+    ImgTexture *deadBossTexture[3];
     ImgTexture bossTexture0;
     ImgTexture bossTexture1;
     ImgTexture bossTexture2;
+    ImgTexture deadBossTexture0;
+    ImgTexture deadBossTexture1;
+    ImgTexture deadBossTexture2;
     int dibujarTitilantes = 10;
     Sprite spritePositionHandler;
     int currentFrame[5] = {0, 0, 0, 0, 0};

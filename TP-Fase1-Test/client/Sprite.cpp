@@ -25,6 +25,10 @@ SDL_Rect* Sprite::getMuerto() {
     return &muerto;
 }
 
+SDL_Rect* Sprite::getMovingEnemyShootingSprite() {
+    return &movingEnemyShooting;
+}
+
 SDL_Rect* Sprite::getMovingEnemySprite(int direccion) {
     return &movingEnemies[direccion];
 }
@@ -72,6 +76,7 @@ parado{0*2,8*2,23*2,34*2},
 faceDown{79*2,25*2,32*2,16*2},
 grisado{2, 592, 46, 68},
 muerto{336, 206, 64, 20},
+movingEnemyShooting{252, 0, 48, 64},
 movingEnemies{
         {0,2,32,62}, //Corriendo hacia adelante
         {38,0,32,64}, //(segunda linea sprite sheet)

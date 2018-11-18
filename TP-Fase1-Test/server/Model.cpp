@@ -20,8 +20,10 @@
 #define MARGENY 400
 #define CHARACTERHEIGHT 70
 #define CHARACTERWIDTH 40
-#define ENEMYHEIGHT 60
-#define ENEMYWIDTH 50
+#define MOVINGENEMYHEIGHT 60
+#define MOVINGENEMYWIDTH 50
+#define STATICENEMYHEIGHT 64
+#define STATICENEMYWIDTH 64
 #define BOSSHEIGHT1 400
 #define BOSSWIDTH1 250
 #define BOSSHEIGHT2 850
@@ -470,7 +472,7 @@ void Model::moveEnemies(Scene &scene) {
     int character = player(generator);
     int x = players[character]->getPositionX();
     int y = players[character]->getPositionY();
-    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); it++){
+    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it){
         int r = distribution(generator);
         it->move(r, x, y);
         this->enemyCollision(*it,scene);
@@ -491,6 +493,8 @@ bool Model::isBetween(int bulletX, int bulletY, int posX, int posY, int width, i
 
 void Model::handleBullet(Scene &scene) {
 
+    int height = MOVINGENEMYHEIGHT;
+    int width = MOVINGENEMYWIDTH;
     std::list<std::tuple<int,int,int>> lTemp;
     for(auto it = lBullets.begin(); it != lBullets.end();){
         it->move();
@@ -510,7 +514,11 @@ void Model::handleBullet(Scene &scene) {
                 }
             } else{
                 for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
-                    if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), ENEMYWIDTH, ENEMYHEIGHT)){
+                    if (enemyIt->isStatic()) {
+                        height = STATICENEMYHEIGHT;
+                        width = STATICENEMYWIDTH;
+                    }
+                    if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), width, height)){
                         enemyIt = scene.getEnemies().erase(enemyIt);
                         scene.scoreAdd(it->getOwnerId(),50);
                         it = lBullets.erase(it);
@@ -520,7 +528,7 @@ void Model::handleBullet(Scene &scene) {
                 if(level.getLevel()!=2) {
                     if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
                             BOSSWIDTH1, BOSSHEIGHT1)) {
-                        if(bosstemp.alive()) {
+                        if(bosstemp->alive()) {
                             scene.scoreAdd(it->getOwnerId(), 10);
                             if (bosstemp->takeDamage())
                                 scene.scoreAdd(it->getOwnerId(), 500);
@@ -529,7 +537,7 @@ void Model::handleBullet(Scene &scene) {
                     }
                 } else if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
                                          bosstemp->getPosY(), BOSSWIDTH1, BOSSHEIGHT1)) {
-                    if(bosstemp.alive()) {
+                    if(bosstemp->alive()) {
                         scene.scoreAdd(it->getOwnerId(), 10);
                         if (bosstemp->takeDamage())
                             scene.scoreAdd(it->getOwnerId(), 500);
@@ -549,12 +557,18 @@ void Model::immortalize(int id) {
     players[id-1]->changeImmortal();
 }
 void Model::collisionEyP(Scene& scene) {
+    int height = MOVINGENEMYHEIGHT;
+    int width = MOVINGENEMYWIDTH;
     for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
+        if (enemyIt->isStatic()){
+            height = STATICENEMYHEIGHT;
+            width = STATICENEMYWIDTH;
+        }
         for (int i = 0; i < currentPlayers; i++) {
             if(!getJugadorGrisado()[i]){
                 if(isBetween(enemyIt->getPosX(),enemyIt->getPosY(),players[i]->getPositionX(),
                         players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
-                        isBetween(enemyIt->getPosX() + ENEMYWIDTH,enemyIt->getPosY() + ENEMYHEIGHT,
+                        isBetween(enemyIt->getPosX() + width,enemyIt->getPosY() + height,
                                 players[i]->getPositionX(), players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT))
                     if(!jugadorGrisado[i])
                         players[i]->takeDamage();
