@@ -705,11 +705,11 @@ void Model::bossBullets(Scene &scene) {
             }
         } else if(level.getLevel()== 2){
             for(int i = 0; i<5;i++) {
-                lBullets.push_back(Projectile(bossact->getPosX() + i * 80, bossact->getPosY() + 50,0,10,-1));
+                lBullets.push_back(Projectile(bossact->getPosX() + i * 160, bossact->getPosY() + 200,0,10,-1));
             }
         } else if(level.getLevel()== 1){
             for(int i = 0; i<5;i++) {
-                lBullets.push_back(Projectile(bossact->getPosX() , bossact->getPosY() + i * 80,-10,0,-1));
+                lBullets.push_back(Projectile(bossact->getPosX() , bossact->getPosY() + i * 200,-10,0,-1));
             }
         }
     } else{
@@ -719,10 +719,12 @@ void Model::bossBullets(Scene &scene) {
             }
         } else if(level.getLevel()== 2){
             for(int i = 0; i<5;i++) {
-                lBullets.push_back(Projectile(bossact->getPosX() + i * 80 + 50, bossact->getPosY() + 50,0,10,-1));
+                lBullets.push_back(Projectile(bossact->getPosX() + i * 160 + 100, bossact->getPosY() + 200,0,10,-1));
             }
         } else if(level.getLevel()== 1){
-
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() , bossact->getPosY() + i * 200 + 110,-10,0,-1));
+            }
         }
     }
     bossact->bulletTipe = !bossact->bulletTipe;

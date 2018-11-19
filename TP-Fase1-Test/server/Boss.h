@@ -13,7 +13,7 @@ private:
     int HP = 10;
 public:
 
-    int fireRate = 7;
+    int fireRate = 20;
     bool bulletTipe = false;
 
     Boss(int level);
