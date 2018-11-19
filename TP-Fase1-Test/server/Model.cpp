@@ -28,6 +28,8 @@
 #define BOSSWIDTH1 250
 #define BOSSHEIGHT2 850
 #define BOSSWIDTH2 900
+#define BOSSHEIGHT3 400
+#define BOSSWIDTH3 200
 #define ENEMYID -1
 
 extern Logger *gplogger;
@@ -159,7 +161,7 @@ void Model::update(Scene &scene) {
 
     collisionWyP(scene);
 
-
+    bossBullets(scene);
 
     SDL_Rect* cam = scene.getCamera();
 
@@ -572,10 +574,49 @@ void Model::handleBullet(Scene &scene) {
                         if(!jugadorGrisado[i]) {
                             players[i]->takeDamage();
                             it = lBullets.erase(it);
+                            break;
                         }
                     }
                 }
             } else{
+                Boss* bosstemp = boss[level.getLevel()-1];
+                if(level.getLevel()== 1) {
+                    if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
+                                  BOSSWIDTH1, BOSSHEIGHT1)) {
+                        if(bosstemp->alive()) {
+                            scene.scoreAdd(it->getOwnerId(), 10);
+                            if (bosstemp->takeDamage())
+                                scene.scoreAdd(it->getOwnerId(), 500);
+                            it = lBullets.erase(it);
+                            it--;
+                            continue;
+                        }
+                    }
+                } else if(level.getLevel()== 2) {
+                    if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
+                                  bosstemp->getPosY(), BOSSWIDTH2, BOSSHEIGHT2)) {
+                        if (bosstemp->alive()) {
+                            scene.scoreAdd(it->getOwnerId(), 10);
+                            if (bosstemp->takeDamage())
+                                scene.scoreAdd(it->getOwnerId(), 500);
+                            it = lBullets.erase(it);
+                            it--;
+                            continue;
+                        }
+                    }
+                }else if(level.getLevel()== 3) {
+                        if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
+                                      BOSSWIDTH3, BOSSHEIGHT3)) {
+                            if(bosstemp->alive()) {
+                                scene.scoreAdd(it->getOwnerId(), 10);
+                                if (bosstemp->takeDamage())
+                                    scene.scoreAdd(it->getOwnerId(), 500);
+                                it = lBullets.erase(it);
+                                it--;
+                                continue;
+                            }
+                        }
+                    }
                 for (auto enemyIt = scene.getEnemies()->begin(); enemyIt != scene.getEnemies()->end(); enemyIt++){
                     if (enemyIt->isStatic()) {
                         height = STATICENEMYHEIGHT;
@@ -586,27 +627,8 @@ void Model::handleBullet(Scene &scene) {
                         //enemyIt = scene.getEnemies().erase(enemyIt);
                         scene.scoreAdd(it->getOwnerId(),50);
                         it = lBullets.erase(it);
+                        it--;
                         break;
-                    }
-                }
-                Boss* bosstemp = boss[level.getLevel()-1];
-                if(level.getLevel()!=2) {
-                    if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(), bosstemp->getPosY(),
-                            BOSSWIDTH1, BOSSHEIGHT1)) {
-                        if(bosstemp->alive()) {
-                            scene.scoreAdd(it->getOwnerId(), 10);
-                            if (bosstemp->takeDamage())
-                                scene.scoreAdd(it->getOwnerId(), 500);
-                            it = lBullets.erase(it);
-                        }
-                    }
-                } else if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
-                                         bosstemp->getPosY(), BOSSWIDTH2, BOSSHEIGHT2)) {
-                    if(bosstemp->alive()) {
-                        scene.scoreAdd(it->getOwnerId(), 10);
-                        if (bosstemp->takeDamage())
-                            scene.scoreAdd(it->getOwnerId(), 500);
-                        it = lBullets.erase(it);
                     }
                 }
             }
@@ -668,4 +690,40 @@ void Model::equipMachinegun(int id) {
 
 void Model::equipTrigonometricgun(int id) {
     players[id-1]->changeWeapon(2);
+}
+void Model::bossBullets(Scene &scene) {
+    if(shootBoss != 0) {
+        shootBoss--;
+        return;
+    }
+    Boss *bossact = boss[scene.getLevel() - 1];
+    shootBoss = bossact->fireRate;
+    if(bossact->bulletTipe){
+        if(level.getLevel()== 3){
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() - i * 100, bossact->getPosY() + 50,0,10,-1));
+            }
+        } else if(level.getLevel()== 2){
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() + i * 80, bossact->getPosY() + 50,0,10,-1));
+            }
+        } else if(level.getLevel()== 1){
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() , bossact->getPosY() + i * 80,-10,0,-1));
+            }
+        }
+    } else{
+        if(level.getLevel()== 3){
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() - i * 100 + 50, bossact->getPosY() + 50,0,10,-1));
+            }
+        } else if(level.getLevel()== 2){
+            for(int i = 0; i<5;i++) {
+                lBullets.push_back(Projectile(bossact->getPosX() + i * 80 + 50, bossact->getPosY() + 50,0,10,-1));
+            }
+        } else if(level.getLevel()== 1){
+
+        }
+    }
+    bossact->bulletTipe = !bossact->bulletTipe;
 }

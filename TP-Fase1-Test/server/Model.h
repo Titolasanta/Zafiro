@@ -17,6 +17,7 @@
 class Model {
     
 private:
+    int shootBoss=0;
     Level level;
     Character *players[4];
     Boss *boss[3];
@@ -83,6 +84,7 @@ public:
     const bool *getJugadorGrisado() const;
     void handleBullet(Scene& scene);
     bool isBetween(int bulletX, int bulletY, int posX, int posY, int width, int height);
+    void bossBullets(Scene& scene);
     void equipTrigonometricgun(int id);
     void equipMachinegun(int id);
 };

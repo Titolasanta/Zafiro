@@ -83,7 +83,6 @@ private:
     int bossHP;
     std::list<Enemy> enemies;
     int score[4][3];
-    int temp = 0;
 public:
 
     void scoreAdd(int player,int toAdd){

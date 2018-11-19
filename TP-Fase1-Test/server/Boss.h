@@ -13,6 +13,9 @@ private:
     int HP = 10;
 public:
 
+    int fireRate = 7;
+    bool bulletTipe = false;
+
     Boss(int level);
 
     int getPosX() const {
