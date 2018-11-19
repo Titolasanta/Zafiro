@@ -82,6 +82,7 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt, it->isLookingRight());
         sendValue(skt, it->getCurrentFrame());
         sendValue(skt, it->isDead());
+        sendValue(skt, it->getContador());
     }
     sendValue(skt, -1);
     sendValue(skt, scene.getLevel());

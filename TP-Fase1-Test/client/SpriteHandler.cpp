@@ -76,11 +76,14 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     dibujarTitilantes--;
+    int offset = 0;
     std::list<Enemy> le = scene.getEnemies();
     for (auto it = le.begin(); it != le.end(); it++){
         if(it->isDead()){
-            renderEnemyDestroyedSprites(*it, cameraX, cameraY, 1);
-            //it = scene.getEnemies().erase(it);
+            if (it->getContador() == 1) offset = 4;
+            else if (it->getContador() == 0) offset = 8;
+            renderEnemyDestroyedSprites(*it, cameraX + offset, cameraY + offset, 2 - it->getContador());
+            it = scene.getEnemies().erase(it);
         } else {
             if (it->isStatic()) renderStaticEnemySprite(*it, cameraX, cameraY);
             else renderMovingEnemySprite(*it, cameraX, cameraY);
@@ -228,8 +231,7 @@ void SpriteHandler::renderEnemyDestroyedSprites(Enemy e, int cameraX, int camera
     SDL_Rect *currentClip;
     currentClip = spritePositionHandler.getDestroyedEnemySprite(i);
     destroyedEnemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY, currentClip, 0);
-
-
+    usleep(5500);
 }
 
 void SpriteHandler::renderDeadBossSprite(Scene &scene, int cameraX, int cameraY) {

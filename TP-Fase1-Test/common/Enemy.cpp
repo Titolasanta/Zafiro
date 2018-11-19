@@ -33,6 +33,7 @@ Enemy::Enemy(int x,int y, bool isStatic) {
 }
 
 void Enemy::time( std::list<Projectile>& lBullets) {
+    if (dead) return;
     timeTillNextShoot-=(12);
     
     if(timeTillNextShoot < 0){
@@ -51,7 +52,7 @@ void Enemy::time( std::list<Projectile>& lBullets) {
 }
 
 void Enemy::land(int x, int y, int w) {
-
+    if(dead) return;
     airborne = false;
     velY = 0;
     currentPlatX = x;
@@ -64,6 +65,7 @@ void Enemy::incrementCurrentFrame(){
 }
 
 void Enemy::shoot(std::list<Projectile>& list) {
+    if(dead) return;
     int EnemyHight = 45;
     int EnemyWidth = 50;
     int bx, by, bvx, bvy = 0;
@@ -72,9 +74,9 @@ void Enemy::shoot(std::list<Projectile>& list) {
     if (staticEnemy) {
         by = posY + EnemyHight / 2;
         bx = posX + EnemyWidth / 2;
-        angulo = 2 * M_PI - currentFrame * M_PI / 6;
-        bvx = modV * cos(angulo);
-        bvy = modV * -sin(angulo);
+        angulo = (float)(2 * M_PI - currentFrame * M_PI / 6);
+        bvx = (int) (modV * cos(angulo));
+        bvy = (int) (modV * -sin(angulo));
     } else {
         by = posY + EnemyHight / 2;
         bx = posX + EnemyWidth / 4;
@@ -85,6 +87,7 @@ void Enemy::shoot(std::list<Projectile>& list) {
 }
 
 void Enemy::move(int randm, int chx, int chy){
+    if (dead) return;
     if (staticEnemy){
         float distX = chx - posX;
         float distY = chy - 1 - posY;

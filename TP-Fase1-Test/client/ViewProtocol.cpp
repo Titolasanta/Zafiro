@@ -121,7 +121,8 @@ void ViewProtocol::update(Scene& scene){
         enemy.setLookingRight((bool)lr);
         int frame = receiveNumber(socket);
         enemy.setCurrentFrame(frame);
-        enemy.setDead(receiveNumber(socket));
+        enemy.setDead((bool)receiveNumber(socket));
+        enemy.setContador(receiveNumber(socket));
         it++;
         le.push_back(std::move(enemy));
         recvx = receiveNumber(socket);

@@ -25,6 +25,7 @@ private:
     int timeTillNextShoot = 0;
     bool airborne = false;
     int aimDirrection = 0;
+    int contador = 3;
 
 public:
 
@@ -67,7 +68,8 @@ public:
     bool isDead() const;
     void setDead(bool dead);
 
-    int contador = 5;
+    int getContador(){ return contador; }
+    void setContador(int c){ contador = c;}
 };
 
 

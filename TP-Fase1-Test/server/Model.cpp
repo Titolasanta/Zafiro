@@ -508,8 +508,8 @@ void Model::setWeapons(Scene& scene) {
                 continue;
             }
         }
-        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
-        int x = distribution(generator) + std::get<0>(*it);
+        std::uniform_int_distribution<int> distribution2(0,std::get<2>(*it));
+        int x = distribution2(generator) + std::get<0>(*it);
         lw.push_back(std::tuple<int,int,int>(x,std::get<1>(*it) - 50,1));
     }
     scene.setLWeapons(std::move(lw));
@@ -525,10 +525,10 @@ void Model::moveEnemies(Scene &scene) {
     int y = players[character]->getPositionY();
     for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
         if (it->isDead()){
-            if (it->contador == 0)
+            if (it->getContador() == 0)
                 it = scene.getEnemies().erase(it);
             else
-                it->contador--;
+                it->setContador(it->getContador()-1);
         }else {
             int r = distribution(generator);
             it->move(r, x, y);
