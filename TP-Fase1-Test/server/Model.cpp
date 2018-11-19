@@ -179,7 +179,7 @@ void Model::update(Scene &scene) {
                 respawn(i,cam);
                 if(!jugadorGrisado[i])
                     players[i]->takeDamage();
-                if ((level.getLevel() == 3) && (fixBugPls[i])){
+                if ((level.getLevel() == 3) && (fixBugPls[i]) && !players[i]->isImmortal()){
                     players[i]->gainHealth(1);
                     fixBugPls[i] = false;
                 }
