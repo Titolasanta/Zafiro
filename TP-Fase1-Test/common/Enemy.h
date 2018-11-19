@@ -64,6 +64,9 @@ public:
 
     bool isStatic() const { return staticEnemy; }
     void setStatic(bool s) { staticEnemy = s; }
+    bool isDead() const;
+    void setDead(bool dead);
+
 };
 
 

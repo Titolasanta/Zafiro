@@ -19,7 +19,9 @@ public:
     void renderMovingEnemySprite(Enemy e, int cameraX, int cameraY);
     void renderStaticEnemySprite(Enemy e, int cameraX, int cameraY);
     void renderBossSprite(Scene &scene, int cameraX, int cameraY);
+    void renderDeadBossSprite(Scene &scene, int cameraX, int cameraY);
     void renderHp(Scene&, int, int, int);
+    void renderEnemyDestroyedSprites(Enemy e, int cameraX, int cameraY, int i);
 
 private:
     ImgTexture *spriteTexture[5];
@@ -31,9 +33,17 @@ private:
     ImgTexture movingEnemySpriteTexture;
     ImgTexture staticEnemySpriteTexture;
     ImgTexture *bossTexture[3];
+    ImgTexture *deadBossTexture[3];
+    ImgTexture *deadBossFrontTexture[3];
     ImgTexture bossTexture0;
     ImgTexture bossTexture1;
     ImgTexture bossTexture2;
+    ImgTexture destroyedEnemySpriteTexture;
+    ImgTexture deadBossTexture0;
+    ImgTexture deadBossTexture2;
+    ImgTexture deadBossFrontTexture0;
+    ImgTexture deadBossFrontTexture1;
+    ImgTexture deadBossFrontTexture2;
     int dibujarTitilantes = 10;
     Sprite spritePositionHandler;
     int currentFrame[5] = {0, 0, 0, 0, 0};

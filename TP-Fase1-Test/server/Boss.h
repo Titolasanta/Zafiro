@@ -10,7 +10,7 @@ class Boss {
 private:
     int posX;
     int posY;
-    int HP = 3;
+    int HP = 10;
 public:
 
     Boss(int level);

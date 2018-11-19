@@ -78,7 +78,7 @@ void View::render(Scene& scene) {
 
     if(level == 2) {
         moveBackground(scene.getVelocityY(id));
-        if (scene.getPositionY(id) == 200 && scene.getPositionX(id) == 200) background.setScrollingOffset(-200);
+        if (scene.getPositionY(id) == 200 && scene.getPositionX(id) == 200) background.setScrollingOffset(-390);
     }else {
         moveBackground(scene.getVelocityX(id));
         if (scene.getPositionY(id) == 200 && scene.getPositionX(id) == 200) background.setScrollingOffset(0);
@@ -100,13 +100,13 @@ void View::render(Scene& scene) {
 
     pasto.render(scene,camera);
     plataformaDura.render(scene,camera);
-    bullet.render(scene,camera);
     //staticEnemyImg.render(scene,camera);
     sprites.render(scene, id, camera->x, camera->y);
     //bossSprite.render(scene);
     if(scene.getImmortal(id)) {
         immortal.render(100,100);
     }
+    bullet.render(scene,camera);
     window.updateRenderer();
     
     for (int i = 0; i < scene.getCurrentPlayers(); i++){
@@ -154,6 +154,7 @@ void View::changeLevel(Scene& scene) {
 }
 void View::moveBackground(int dir) {
     int newOffset= background.getScrollingOffset();
+    if (level == 2 && newOffset == -232) return;
     if(dir > 0) --newOffset;
     if(dir < 0) ++newOffset;
 

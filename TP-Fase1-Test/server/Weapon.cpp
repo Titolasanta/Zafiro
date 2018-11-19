@@ -15,8 +15,14 @@ Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int di
         int velX;
         int velY;
 
-        if(lookingRight) velX = 35;
-        else velX = -35;
+        if(lookingRight) {
+            velX = 35;
+            positionX -= 25;
+        }
+        else {
+            velX = -35;
+            positionX += 40;
+        }
 
         velY = (direction*35);
 
@@ -26,7 +32,7 @@ Projectile Weapon::shoot(int positionX, int positionY, bool lookingRight, int di
         currentAmmo--;
 
         //el +10 en y es para matchear la altura del arma
-        return Projectile(positionX, positionY + 20, velX,  velY,id);
+        return Projectile(positionX, positionY + 17, velX,  velY,id);
     }
     throw Projectile(0,0,0,0,id);
 }
