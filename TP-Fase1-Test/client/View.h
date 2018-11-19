@@ -21,6 +21,7 @@
 #include "MovingEnemyImg.h"
 #include "Sound.h"
 #include "BossSprite.h"
+#include "Weapons.h"
 
 class View {
 
@@ -69,6 +70,7 @@ private:
     ImgTexture loginImages[4];
     Sound sound;
     MovingEnemyImg staticEnemyImg;
+    Weapons weapons;
 
     int level=1;
     SDL_Rect * camera = NULL;

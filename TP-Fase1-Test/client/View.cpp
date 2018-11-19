@@ -21,7 +21,7 @@ View::View(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 : window("juego",SCREEN_WIDTH,SCREEN_HEIGHT),
 sprites(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),immortal(std::move(window.createTextTexture())),
-pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture()))
+pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture())),weapons(&window)
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
 ,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)), //bossSprite(&window),
 loginImages{std::move(window.createImgTexture()),
@@ -69,7 +69,6 @@ void View::render(Scene& scene) {
 
     if(inLevelSummary){
         levelSummary(scene);
-        inLevelSummary--;
         return;
     }
 
@@ -99,6 +98,7 @@ void View::render(Scene& scene) {
     hielo.render(scene,camera);
 
     pasto.render(scene,camera);
+    weapons.render(scene,camera);
     plataformaDura.render(scene,camera);
     //staticEnemyImg.render(scene,camera);
     sprites.render(scene, id, camera->x, camera->y);
@@ -147,9 +147,7 @@ void View::changeLevel(Scene& scene) {
         if (*gXML_parse_result) cargar_plataformas(*gXML_doc[0], scene, level, lh, lw);
         else cargar_plataformas(*gXML_doc[1], scene, level, lh, lw);
     }else{
-
         Mix_PlayChannel(-1, sound.getVictorySFX(), 0);
-        endOfGameScreen();
     }
 }
 void View::moveBackground(int dir) {
@@ -327,7 +325,7 @@ void View::levelSummary(Scene& scene) {
             sprintf(buffer, "%d", score);
             msg = buffer;
             txt.loadFromRenderedText(msg);
-            txt.render(150 + 100 * j, 210 + i * 50 );
+            txt.render(250 + 100 * j, 210 + i * 50 );
         }
     }
     window.updateRenderer();
@@ -337,7 +335,7 @@ void View::levelSummary(Scene& scene) {
 void View::endOfGameScreen() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 60; i++) {
+    for(int i = 0; i < 100; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("Fin del juego");

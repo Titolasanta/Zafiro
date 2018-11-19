@@ -157,6 +157,7 @@ void Model::update(Scene &scene) {
 
     collisionEyP(scene);
 
+    collisionWyP(scene);
 
 
     SDL_Rect* cam = scene.getCamera();
@@ -307,33 +308,31 @@ void Model::stand(int p) {
 void Model::changeLevel(Level level,Scene& scene) {
 
     scene.getEnemies().clear();
-    if(level.getLevel() > 3){
-        scene.setVictory(true);
-    }else{
-        this->level = level;
-        this->lPlataformsSoft.clear();
-        this->lPlataformsHard.clear();
-        scene.clearPlatform();
+    scene.setVictory(true);
+    this->level = level;
+    this->lPlataformsSoft.clear();
+    this->lPlataformsHard.clear();
+    scene.clearPlatform();
 
-        if (*gXML_parse_result)
-            cargar_plataformas(*gXML_doc[0], scene, *this, level.getLevel(), this->getLevelHeight(),
-                               this->getLevelWidth());     //No tenia idea de como hacer este
-        else
-            cargar_plataformas(*gXML_doc[1], scene, *this, level.getLevel(), this->getLevelHeight(),
-                               this->getLevelWidth()); //chequeo de otra manera
+    if (*gXML_parse_result)
+        cargar_plataformas(*gXML_doc[0], scene, *this, level.getLevel(), this->getLevelHeight(),
+                           this->getLevelWidth());     //No tenia idea de como hacer este
+    else
+        cargar_plataformas(*gXML_doc[1], scene, *this, level.getLevel(), this->getLevelHeight(),
+                           this->getLevelWidth()); //chequeo de otra manera
 
-        scene.setLevel(level.getLevel());
-        scene.getCamera()->x = 0;
-        scene.getCamera()->y = 0;
+    scene.setLevel(level.getLevel());
+    scene.getCamera()->x = 0;
+    scene.getCamera()->y = 0;
 
-        for (int i = 0; i < currentPlayers; i++) {
-            players[i]->spawn(*scene.getCamera());
-            players[i]->nextLevel();
-        }
-
-        setEnemies(scene);
-        gplogger->log(2, "Se cambió de nivel");
+    for (int i = 0; i < currentPlayers; i++) {
+        players[i]->spawn(*scene.getCamera());
+        players[i]->nextLevel();
     }
+
+    setEnemies(scene);
+    setWeapons(scene);
+    gplogger->log(2, "Se cambió de nivel");
 }
 
 int Model::getLevelWidth() { return level.getWidth(); }
@@ -430,7 +429,7 @@ void Model::setEnemies(Scene& scene) {
                 continue;
             }
         }else{
-            if (std::get<1>(*it) > 600) {
+            if (std::get<1>(*it) > -300) {
                 i--;
                 continue;
             }
@@ -447,21 +446,72 @@ void Model::setEnemies(Scene& scene) {
             it++;
         };
         if(scene.getLevel() != 2) {
-            if (std::get<0>(*it) < 600) {
+            if (std::get<0>(*it) < 1000) {
                 i--;
                 continue;
             }
         }else{
-            if (std::get<1>(*it) > 600) {
+            if (std::get<1>(*it) > -600) {
                 i--;
                 continue;
             }
         }
         std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
         int x = distribution(generator) + std::get<0>(*it);
-        Enemy enemy(x, std::get<1>(*it),std::get<0>(*it),std::get<2>(*it), false);
+        Enemy enemy(x, std::get<1>(*it) - 55,std::get<0>(*it),std::get<2>(*it), false);
         scene.addEnemy(std::move(enemy));
     }
+}
+void Model::setWeapons(Scene& scene) {
+    std::random_device rand_dev;
+    std::default_random_engine generator(rand_dev());
+    std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
+    int machineGunsToPlace = 1* scene.getMaxPlayers();
+    int trigoGunsToPlace = 1* scene.getMaxPlayers();
+    std::list<std::tuple<int,int,int>> lw;
+    for(int i = 0;i < trigoGunsToPlace ;i++) {
+        int random = distribution(generator);
+        auto it = lPlataformsSoft.begin();
+        for (;random > 0 ; random-- ){
+            it++;
+        };
+        if(scene.getLevel() != 2) {
+            if (std::get<0>(*it) < 600) {
+                i--;
+                continue;
+            }
+        }else{
+            if (std::get<1>(*it) > -300) {
+                i--;
+                continue;
+            }
+        }
+        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
+        int x = distribution(generator) + std::get<0>(*it);
+        lw.push_back(std::tuple<int,int,int>(x,std::get<1>(*it) - 50 ,2));
+    }
+    for(int i = 0;i < machineGunsToPlace ;i++) {
+        int random = distribution(generator);
+        auto it = lPlataformsSoft.begin();
+        for (;random > 0 ; random-- ){
+            it++;
+        };
+        if(scene.getLevel() != 2) {
+            if (std::get<0>(*it) < 1000) {
+                i--;
+                continue;
+            }
+        }else{
+            if (std::get<1>(*it) > -300) {
+                i--;
+                continue;
+            }
+        }
+        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
+        int x = distribution(generator) + std::get<0>(*it);
+        lw.push_back(std::tuple<int,int,int>(x,std::get<1>(*it) - 50,1));
+    }
+    scene.setLWeapons(std::move(lw));
 }
 
 void Model::moveEnemies(Scene &scene) {
@@ -576,4 +626,30 @@ void Model::collisionEyP(Scene& scene) {
             }
         }
     }
+}
+void Model::collisionWyP(Scene& scene) {
+    for (auto weaponIt = scene.getLWeapons()->begin(); weaponIt != scene.getLWeapons()->end(); weaponIt++){
+        for (int i = 0; i < currentPlayers; i++) {
+            if(!getJugadorGrisado()[i]){
+                if(isBetween(std::get<0>(*weaponIt),std::get<1>(*weaponIt),players[i]->getPositionX(),
+                             players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
+                   isBetween(std::get<0>(*weaponIt) ,std::get<1>(*weaponIt) + 50,players[i]->getPositionX(),
+                             players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
+                   isBetween(std::get<0>(*weaponIt) + 50 ,std::get<1>(*weaponIt) + 50,players[i]->getPositionX(),
+                             players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT))
+                    if(!jugadorGrisado[i]) {
+                        players[i]->changeWeapon(std::get<2>(*weaponIt));
+                        weaponIt = scene.getLWeapons()->erase(weaponIt);
+                    }
+            }
+        }
+    }
+}
+
+void Model::equipMachinegun(int id) {
+    players[id-1]->changeWeapon(1);
+}
+
+void Model::equipTrigonometricgun(int id) {
+    players[id-1]->changeWeapon(2);
 }

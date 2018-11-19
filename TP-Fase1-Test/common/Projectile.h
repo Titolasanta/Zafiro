@@ -17,8 +17,16 @@ private:
     int velocityX;
     int velocityY;
     int damage;
-
+    float angle = 0;
 public:
+    float getAngle() const {
+        return angle;
+    }
+
+    void setAngle(float angle) {
+        Projectile::angle = angle;
+    }
+
     int getVelocityX() const;
     void setVelocityX(int velocityX);
 

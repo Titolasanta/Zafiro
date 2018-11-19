@@ -33,7 +33,7 @@ public:
     void setFireRate(int fireRate);
 
     ~Weapon();
-    Projectile shoot(int, int, bool, int);
+    virtual Projectile shoot(int, int, bool, int);
 };
 
 

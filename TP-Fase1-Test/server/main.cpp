@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 		else cargar_plataformas(*gXML_doc[1],scene, model, 1, model.getLevelHeight(), model.getLevelWidth());
 		
 		model.setEnemies(scene);
-		
+		model.setWeapons(scene);
         std::queue<char> queue;
         std::mutex mutex;
 

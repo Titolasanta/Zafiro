@@ -9,6 +9,9 @@
 #define characterHeight 60
 #include "Weapon.h"
 #include "../common/Projectile.h"
+#include "Machinegun.h"
+#include "Pistol.h"
+#include "Trigonometricgun.h"
 
 class Character {
     
@@ -20,7 +23,6 @@ private:
     int velocityY;
     //int accelerationX;
     //int accelerationY;
-    
     int hitPoints = 3;
     bool walking;
     bool airborne;
@@ -31,6 +33,10 @@ private:
     bool shooting;
     bool immortal;
     int gracePeriod = 0;
+    Weapon *weapon;
+    Machinegun mg;
+    Trigonometricgun tg;
+    Pistol ps;
 public:
     bool isImmortal() const;
 
@@ -38,8 +44,6 @@ public:
 
 private:
 
-    Weapon weapon;
-    
     int currentPlatX;
     int currentPlatY;
     int currentPlatW;
@@ -71,7 +75,7 @@ public:
     void changeImmortal();
     void land(int,int,int,bool);
     void goThroughPlatform();
-    void changeWeapon(Weapon);
+    void changeWeapon(int); //0 pistol, 1 machinegun ,2 trigogun
     void gainHealth(int);
     void startGracePeriod();
     bool isInGracePeriod();

@@ -33,7 +33,12 @@ public:
     void setAllPlayersConnected(bool allPlayersConnected);
     bool isVictory() const;
     void setVictory(bool victory);
-
+    std::list<std::tuple<int,int,int>> *getLWeapons(){
+        return &lWeapons;
+    }
+    void setLWeapons(std::list<std::tuple<int,int,int>> lWeapon){
+        lWeapons = std::move(lWeapon);
+    }
 
 
 private:
@@ -41,6 +46,7 @@ private:
     std::list<std::tuple<int,int,int>> lPlataformsHard;
     std::list<std::tuple<int,int,int>> lPlataformsHielo;
     std::list<std::tuple<int,int,int>> lBullets;
+    std::list<std::tuple<int,int,int>> lWeapons;
     SDL_Rect camera = { 0, 0, 800, 600 };
     int level = 1;
     int players = 0;

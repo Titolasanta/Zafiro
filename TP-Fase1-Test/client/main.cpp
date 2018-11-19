@@ -114,7 +114,7 @@ int main( int argc, char* argv[] )
 
     }catch(Finalizo_conexion) {
         if (!cutedConnection){
-            if(view.getLevel() == 3) view.endOfGameScreen();
+            if(view.getLevel() == 4) ;//view.endOfGameScreen();
             else view.conexionFail();
             logger.log(2, "Se cayo la coneccion");
             return 0;
@@ -131,10 +131,12 @@ int main( int argc, char* argv[] )
         logger.log(2, "Error al loggear al juego");
     }catch(Quit){
         logger.log(2, "Usuario cerro el juego");
-    }/*catch(...){
-        view.conexionDown();
-        logger.log(2, "Server no encontrado.");
-    }*/
+    }catch(OSError e){
+        if(strcmp(e.what(),"problema inesperado al enviar mensage:\nerrno: Broken pipe")) {
+            view.conexionDown();
+            logger.log(2, "Server no encontrado.");
+        }else;
+    }
     ls.end();
     ls.join();
     logger.log(2, "Se cerró el juego");

@@ -91,6 +91,7 @@ void ViewProtocol::update(Scene& scene){
     std::list<std::tuple<int,int,int>> lb;
     int recvy, recvId;
     int recvx = receiveNumber(socket);
+
     while(recvx != -1){
         recvy = receiveNumber(socket);
         recvId = receiveNumber(socket);
@@ -98,6 +99,16 @@ void ViewProtocol::update(Scene& scene){
         recvx = receiveNumber(socket);
     }
     scene.setBullets(lb);
+    lb.clear();
+    recvx = receiveNumber(socket);
+
+    while(recvx != -1){
+        recvy = receiveNumber(socket);
+        recvId = receiveNumber(socket);
+        lb.push_back(std::tuple<int,int,int>(recvx,recvy,recvId));
+        recvx = receiveNumber(socket);
+    }
+    scene.setLWeapons(lb);
 
     std::list<Enemy> le;
     recvx = receiveNumber(socket);

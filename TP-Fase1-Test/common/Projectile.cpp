@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Projectile.h"
 
+#define AMPLITUD 40
+#define FRECUENCIA 2
 Projectile::Projectile(int posX, int posY, int velX, int velY,int duenoId) {
 
     positionX = posX;
@@ -23,8 +25,16 @@ bool Projectile::inSight(SDL_Rect *cam) {
 }
 
 void Projectile::move() {   //No se si anda
-    positionX += velocityX;
-    positionY += velocityY;
+    if(angle != 0) {
+        float tmep = velocityY  + AMPLITUD * sin(angle);
+        angle = (angle - M_PI/FRECUENCIA);
+        positionY += tmep;
+        if(angle == 0)
+            angle = 2 * M_PI;
+    } else
+
+        positionY += velocityY;
+        positionX += velocityX;
 }
 
 

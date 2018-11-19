@@ -9,10 +9,11 @@
 #include "Pistol.h"
 #include "CollisionHard.h"
 #include "../common/Logger.h"
+#include "Trigonometricgun.h"
 
 extern Logger *gplogger;
 
-Character::Character() : weapon(Pistol()) {
+Character::Character() : weapon(&tg) { // esta inicialiacion no importa, pero evado un bug
     
     positionX = 100;
     positionY = 0;
@@ -21,7 +22,7 @@ Character::Character() : weapon(Pistol()) {
     //accelerationX = 0;
     //accelerationY = 0;
     
-    hitPoints = 10;
+    hitPoints = 3;
     walking = false;
     lookingRight = true;
     crouching = false;
@@ -32,7 +33,7 @@ Character::Character() : weapon(Pistol()) {
     
     immortal = true;
 
-    weapon.setCurrentAmmo(0);
+    weapon->setCurrentAmmo(0);
     gplogger->log(2, "Se creó el personaje");
 }
 void Character::land(int x, int y,int w,bool hard) {
@@ -132,19 +133,31 @@ Projectile Character::shoot() {
         throw 1; //no recargo el arma
     }
     setShooting(true);
-    timeTillNextShoot = weapon.getFireRate();
+    timeTillNextShoot = weapon->getFireRate();
 
     try {
-        return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
+        return weapon->shoot(positionX, positionY, lookingRight, aimDirection);
     } catch(...){
-        changeWeapon(Pistol());
-        weapon.setId(id);
+        changeWeapon(0);
+        weapon->setId(id);
     }
-    return weapon.shoot(positionX, positionY, lookingRight, aimDirection);
+    return weapon->shoot(positionX, positionY, lookingRight, aimDirection);
 }
-void Character::changeWeapon(Weapon w){
+void Character::changeWeapon(int i){
     if (dead) return;
-    weapon = w;
+    if(i == 0){
+        ps = Pistol();
+        weapon = &ps;
+    }
+    if(i == 1){
+        mg = Machinegun();
+        weapon = &mg;
+    }
+    if(i == 2){
+        tg = Trigonometricgun();
+        weapon = &tg;
+    }
+    weapon->setId(id);
     gplogger->log(3, "El personaje cambia de arma");
 }
 

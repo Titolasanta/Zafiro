@@ -39,7 +39,7 @@ void Controller::startGame(){
 
 void Controller::processEvent(SDL_Event e) {
     if(!view.isInLevelSummary()) {
-        if (e.type == SDL_KEYDOWN) {
+        if (e.type == SDL_KEYDOWN && scene.getLevel() != 4) {
             if (e.key.keysym.sym == SDLK_SPACE) protocol.jump();
             else if (e.key.keysym.sym == SDLK_RIGHT) protocol.moveRight();
             else if (e.key.keysym.sym == SDLK_LEFT) protocol.moveLeft();
@@ -59,13 +59,17 @@ void Controller::processEvent(SDL_Event e) {
             else if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
         }
     }else if(e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_n)
-        view.setInLevelSummary(0);
+        if(scene.getLevel() != 4)
+            view.setInLevelSummary(0);
+        else 
+            view.endOfGameScreen();
 }
 
 void Controller::show() {
     sktLatido.send_all("1",1);
-
-    protocol.update(scene);
+    if(scene.getLevel() != 4 )
+        //if(!view.isInLevelSummary())
+           protocol.update(scene);
     ls.report();
     //lobby, espera del resto de los jugadores
     if (!scene.isAllPlayersConnected()) {

@@ -42,6 +42,7 @@ public:
     explicit Model(int initialLevel);
     ~Model() = default;
     void collisionEyP(Scene&);
+    void collisionWyP(Scene&);
     void createCharacter(int);
     int getMaxPlayers();
     int getCurrentPlayers();
@@ -73,6 +74,7 @@ public:
     int XMasChico(Scene&);
     int YMasGrande(Scene&);
     void setEnemies(Scene&);
+    void setWeapons(Scene&);
     void moveEnemies(Scene&);
     void immortalize(int id);
     void enemyCollision(Enemy&,Scene&);
@@ -81,6 +83,8 @@ public:
     const bool *getJugadorGrisado() const;
     void handleBullet(Scene& scene);
     bool isBetween(int bulletX, int bulletY, int posX, int posY, int width, int height);
+    void equipTrigonometricgun(int id);
+    void equipMachinegun(int id);
 };
 
 

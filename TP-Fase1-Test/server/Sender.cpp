@@ -13,8 +13,9 @@ void Sender::run(){
         usleep(54000);
         if(!pList.empty())
             model.update(scene);
+        else if(scene.getLevel() == 4)
+                throw 1;
         for (auto it = pList.begin(); it != pList.end(); it++) {
-
             try {
                 it->send(scene);
             } catch (...) {
