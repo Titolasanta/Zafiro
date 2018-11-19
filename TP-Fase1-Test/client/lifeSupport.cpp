@@ -25,7 +25,7 @@ void lifeSupport::run() {
         usleep(3000000); //3 seg
         std::lock_guard<std::mutex> lock(mutex);
         if(!this->onCheck){
-            skt->manual_close();
+            //skt->manual_close();
             quit = true;
             cutedConnection = true;
         }else{

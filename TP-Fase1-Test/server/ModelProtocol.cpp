@@ -75,7 +75,7 @@ void ModelProtocol::send(Scene& scene){
     }
     sendValue(skt, -1);
     
-    for (auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
+    for (auto it = scene.getEnemies()->begin(); it != scene.getEnemies()->end(); ++it) {
         sendValue(skt, it->getPosX());
         sendValue(skt, it->getPosY());
         sendValue(skt, it->isStatic());

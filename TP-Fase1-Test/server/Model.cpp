@@ -308,7 +308,7 @@ void Model::stand(int p) {
 
 void Model::changeLevel(Level level,Scene& scene) {
 
-    scene.getEnemies().clear();
+    scene.getEnemies()->clear();
     scene.setVictory(true);
     this->level = level;
     this->lPlataformsSoft.clear();
@@ -353,6 +353,8 @@ void Model::shoot(int p){
 
 void Model::bajaJugador(int p) {
     //currentPlayers--;
+
+    std::lock_guard<std::mutex> mute(mutex);
     jugadorGrisado[p-1] = true;
     players[p-1]->setImmortal(true);
 }
@@ -523,11 +525,14 @@ void Model::moveEnemies(Scene &scene) {
     int character = player(generator);
     int x = players[character]->getPositionX();
     int y = players[character]->getPositionY();
-    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
+    for(auto it = scene.getEnemies()->begin(); it != scene.getEnemies()->end(); ++it) {
         if (it->isDead()){
-            if (it->getContador() == 0)
-                it = scene.getEnemies().erase(it);
-            else
+            if (it->getContador() == 0) {
+                printf("%d\n",scene.getEnemies()->size());
+                it = scene.getEnemies()->erase(it);
+               /// if(scene.getEnemies()->end() == it)
+                  //  return;
+            }else
                 it->setContador(it->getContador()-1);
         }else {
             int r = distribution(generator);
@@ -571,16 +576,17 @@ void Model::handleBullet(Scene &scene) {
                     }
                 }
             } else{
-                for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
+                for (auto enemyIt = scene.getEnemies()->begin(); enemyIt != scene.getEnemies()->end(); enemyIt++){
                     if (enemyIt->isStatic()) {
                         height = STATICENEMYHEIGHT;
                         width = STATICENEMYWIDTH;
                     }
-                    if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), width, height)){
+                    if (isBetween(it->getPositionX(), it->getPositionY(), enemyIt->getPosX(), enemyIt->getPosY(), width, height) && !enemyIt->isDead()){
                         enemyIt->setDead(true);
                         //enemyIt = scene.getEnemies().erase(enemyIt);
                         scene.scoreAdd(it->getOwnerId(),50);
                         it = lBullets.erase(it);
+                        break;
                     }
                 }
                 Boss* bosstemp = boss[level.getLevel()-1];
@@ -613,12 +619,14 @@ void Model::handleBullet(Scene &scene) {
 
 
 void Model::immortalize(int id) {
+
+    std::lock_guard<std::mutex> mute(mutex);
     players[id-1]->changeImmortal();
 }
 void Model::collisionEyP(Scene& scene) {
     int height = MOVINGENEMYHEIGHT;
     int width = MOVINGENEMYWIDTH;
-    for (auto enemyIt = scene.getEnemies().begin(); enemyIt != scene.getEnemies().end(); enemyIt++){
+    for (auto enemyIt = scene.getEnemies()->begin(); enemyIt != scene.getEnemies()->end(); enemyIt++){
         if (enemyIt->isStatic()){
             height = STATICENEMYHEIGHT;
             width = STATICENEMYWIDTH;

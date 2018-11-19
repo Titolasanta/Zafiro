@@ -113,7 +113,7 @@ void ViewProtocol::update(Scene& scene){
     std::list<Enemy> le;
     recvx = receiveNumber(socket);
     while(recvx != -1){
-        auto it = scene.getEnemies().begin();
+        auto it = scene.getEnemies()->begin();
         recvy = receiveNumber(socket);
         int stat = receiveNumber(socket);
         Enemy enemy(recvx,recvy,(bool)stat);

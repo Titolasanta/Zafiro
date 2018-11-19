@@ -77,13 +77,13 @@ SpriteHandler::SpriteHandler(Window* window) : spriteTexture0(  (std::move(windo
 void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     dibujarTitilantes--;
     int offset = 0;
-    std::list<Enemy> le = scene.getEnemies();
-    for (auto it = le.begin(); it != le.end(); it++){
+    std::list<Enemy>* le = scene.getEnemies();
+    for (auto it = le->begin(); it != le->end(); it++){
         if(it->isDead()){
             if (it->getContador() == 1) offset = 4;
             else if (it->getContador() == 0) offset = 8;
             renderEnemyDestroyedSprites(*it, cameraX + offset, cameraY + offset, 2 - it->getContador());
-            it = scene.getEnemies().erase(it);
+            it = scene.getEnemies()->erase(it);
         } else {
             if (it->isStatic()) renderStaticEnemySprite(*it, cameraX, cameraY);
             else renderMovingEnemySprite(*it, cameraX, cameraY);

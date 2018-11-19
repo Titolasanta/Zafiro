@@ -83,8 +83,9 @@ void Scene::addEnemy(Enemy &&enemy) {
     enemies.push_back(enemy);
 }
 
-std::list<Enemy> &Scene::getEnemies() {
-    return enemies;
+std::list<Enemy> *Scene::getEnemies() {
+
+    return &enemies;
 }
 
 void Scene::setEnemies(const std::list<Enemy> &Enemies) {

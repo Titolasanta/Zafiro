@@ -17,6 +17,9 @@ class Scene {
 
 public:
     Scene(int);
+    ~Scene(){
+        int i;
+    }
     std::list<std::tuple<int,int,int>>& getLPlatformGrass();
     std::list<std::tuple<int,int,int>>& getLPlatformMetal();
     std::list<std::tuple<int,int,int>>& getLPlatformIce();
@@ -80,11 +83,11 @@ private:
     int bossHP;
     std::list<Enemy> enemies;
     int score[4][3];
+    int temp = 0;
 public:
 
     void scoreAdd(int player,int toAdd){
         score[player-1][level-1] += toAdd;
-        printf("%d\n",score[player-1][level-1]);
     };
 
 
@@ -113,7 +116,7 @@ public:
 
     void setEnemies(const std::list<Enemy> &Enemies);
 
-    std::list<Enemy> &getEnemies();
+    std::list<Enemy> *getEnemies();
 
     void setLBullets(const std::list<std::tuple<int, int, int>> &lb) { lBullets = lb; }
 

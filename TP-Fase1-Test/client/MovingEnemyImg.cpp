@@ -17,7 +17,7 @@ MovingEnemyImg::MovingEnemyImg(Window *window) : texture(std::move(window->creat
 
 void MovingEnemyImg::render(Scene &scene,SDL_Rect* camera) {
     auto lista = scene.getEnemies();
-    for (auto it = lista.begin(); it != lista.end(); it++) {
+    for (auto it = lista->begin(); it != lista->end(); it++) {
         texture.render(it->getPosX() - camera->x, it->getPosY() - camera->y, &mobileRect[it->getCurrentFrame()],180 * it->isLookingRight());
     }
 }
