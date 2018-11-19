@@ -67,6 +67,7 @@ public:
     bool isDead() const;
     void setDead(bool dead);
 
+    int contador = 5;
 };
 
 

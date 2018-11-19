@@ -80,7 +80,7 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     for (auto it = le.begin(); it != le.end(); it++){
         if(it->isDead()){
             renderEnemyDestroyedSprites(*it, cameraX, cameraY, 1);
-            it = scene.getEnemies().erase(it);
+            //it = scene.getEnemies().erase(it);
         } else {
             if (it->isStatic()) renderStaticEnemySprite(*it, cameraX, cameraY);
             else renderMovingEnemySprite(*it, cameraX, cameraY);

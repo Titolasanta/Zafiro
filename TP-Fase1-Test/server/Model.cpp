@@ -160,6 +160,7 @@ void Model::update(Scene &scene) {
     collisionWyP(scene);
 
 
+
     SDL_Rect* cam = scene.getCamera();
 
     for (int i = 0; i < currentPlayers; i++) {
@@ -522,10 +523,17 @@ void Model::moveEnemies(Scene &scene) {
     int character = player(generator);
     int x = players[character]->getPositionX();
     int y = players[character]->getPositionY();
-    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it){
-        int r = distribution(generator);
-        it->move(r, x, y);
-        this->enemyCollision(*it,scene);
+    for(auto it = scene.getEnemies().begin(); it != scene.getEnemies().end(); ++it) {
+        if (it->isDead()){
+            if (it->contador == 0)
+                it = scene.getEnemies().erase(it);
+            else
+                it->contador--;
+        }else {
+            int r = distribution(generator);
+            it->move(r, x, y);
+            this->enemyCollision(*it, scene);
+        }
     }
 }
 
