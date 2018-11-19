@@ -161,7 +161,8 @@ void Model::update(Scene &scene) {
 
     collisionWyP(scene);
 
-    bossBullets(scene);
+    if(boss[scene.getLevel()-1]->getHP() != 0)
+        bossBullets(scene);
 
     SDL_Rect* cam = scene.getCamera();
 
