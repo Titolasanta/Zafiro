@@ -18,10 +18,40 @@
             <fondo2>../escenario/mountains1.png</fondo2>
             <fondo3>../escenario/arbolitos1.2.png</fondo3>
             <plataforma>
+                <tipo>pasto</tipo>
+                <xi>0</xi>
+                <xf>700</xf>
+                <y>250</y>
+            </plataforma>
+            <plataforma>
                 <tipo>hierro</tipo>
                 <xi>100</xi>
                 <xf>300</xf>
                 <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>650</xi>
+                <xf>1000</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>910</xi>
+                <xf>1325</xf>
+                <y>290</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>1200</xi>
+                <xf>2000</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>pasto</tipo>
+                <xi>1900</xi>
+                <xf>3000</xf>
+                <y>300</y>
             </plataforma>
             <plataforma>
                 <tipo>pasto</tipo>
@@ -124,36 +154,6 @@
                 <xi>7700</xi>
                 <xf>8500</xf>
                 <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
-                <xi>0</xi>
-                <xf>700</xf>
-                <y>250</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
-                <xi>650</xi>
-                <xf>1000</xf>
-                <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
-                <xi>910</xi>
-                <xf>1325</xf>
-                <y>290</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
-                <xi>1200</xi>
-                <xf>2000</xf>
-                <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>pasto</tipo>
-                <xi>1900</xi>
-                <xf>3000</xf>
-                <y>300</y>
             </plataforma>
         </nivel1>
         <nivel2>
@@ -413,9 +413,39 @@
             <fondo3>../escenario/arbolitos3.png</fondo3>
             <plataforma>
                 <tipo>hielo</tipo>
+                <xi>0</xi>
+                <xf>700</xf>
+                <y>250</y>
+            </plataforma>
+            <plataforma>
+                <tipo>hielo</tipo>
                 <xi>100</xi>
                 <xf>300</xf>
                 <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>hielo</tipo>
+                <xi>650</xi>
+                <xf>1000</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>hielo</tipo>
+                <xi>910</xi>
+                <xf>1325</xf>
+                <y>290</y>
+            </plataforma>
+            <plataforma>
+                <tipo>hielo</tipo>
+                <xi>1200</xi>
+                <xf>2000</xf>
+                <y>400</y>
+            </plataforma>
+            <plataforma>
+                <tipo>hielo</tipo>
+                <xi>1900</xi>
+                <xf>3000</xf>
+                <y>300</y>
             </plataforma>
             <plataforma>
                 <tipo>hielo</tipo>
@@ -518,36 +548,6 @@
                 <xi>7700</xi>
                 <xf>8500</xf>
                 <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>hielo</tipo>
-                <xi>0</xi>
-                <xf>700</xf>
-                <y>250</y>
-            </plataforma>
-            <plataforma>
-                <tipo>hielo</tipo>
-                <xi>650</xi>
-                <xf>1000</xf>
-                <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>hielo</tipo>
-                <xi>910</xi>
-                <xf>1325</xf>
-                <y>290</y>
-            </plataforma>
-            <plataforma>
-                <tipo>hielo</tipo>
-                <xi>1200</xi>
-                <xf>2000</xf>
-                <y>400</y>
-            </plataforma>
-            <plataforma>
-                <tipo>hielo</tipo>
-                <xi>1900</xi>
-                <xf>3000</xf>
-                <y>300</y>
             </plataforma>
         </nivel3>
     </escenarios>

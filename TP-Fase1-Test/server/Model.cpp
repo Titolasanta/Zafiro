@@ -415,7 +415,7 @@ void Model::placeCamera(Scene &scene){
 void Model::setEnemies(Scene& scene) {
     std::random_device rand_dev;
     std::default_random_engine generator(rand_dev());
-    std::uniform_int_distribution<int> distribution(0,lPlataformsSoft.size());
+    std::uniform_int_distribution<int> distribution(1,(int)lPlataformsSoft.size() - 2);
     int enemiesToPlaceInSoft = get_cant_enemigos_moviles(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     int staticEnemies = get_cant_enemigos_estaticos(*gXML_doc[0],*gXML_doc[1],scene.getLevel(),*gXML_parse_result);
     for(int i = 0;i < staticEnemies ;i++) {
@@ -595,7 +595,7 @@ void Model::handleBullet(Scene &scene) {
                         }
                     }
                 } else if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
-                                         bosstemp->getPosY(), BOSSWIDTH1, BOSSHEIGHT1)) {
+                                         bosstemp->getPosY(), BOSSWIDTH2, BOSSHEIGHT2)) {
                     if(bosstemp->alive()) {
                         scene.scoreAdd(it->getOwnerId(), 10);
                         if (bosstemp->takeDamage())
