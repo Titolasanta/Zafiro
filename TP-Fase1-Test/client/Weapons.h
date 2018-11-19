@@ -10,7 +10,7 @@
 
 class Weapons : public Viewable {
 public:
-    Weapons(Window *window);
+    explicit Weapons(Window *window);
     void render(Scene &scene,SDL_Rect* camera);
 private:
     SDL_Rect rect1;

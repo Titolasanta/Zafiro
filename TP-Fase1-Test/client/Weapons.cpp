@@ -6,8 +6,8 @@
 #include "../common/Logger.h"
 
 extern Logger *gplogger;
-Weapons::Weapons(Window *window) : Viewable(window,"../spirites/NES_contra_enemies2.png"),
-rect1{411,153,66,66},rect2{207,153,66,66}
+Weapons::Weapons(Window *window) : Viewable(window,"../spirites/ContraSheet4.png"),
+rect1{175, 4, 32, 32},rect2{141, 4, 32, 32}
 {
 
     gplogger->log(3,"Se crea Bullet de vista");
