@@ -333,9 +333,10 @@ void Model::changeLevel(Level level,Scene& scene) {
         players[i]->spawn(*scene.getCamera());
         players[i]->nextLevel();
     }
-
-    setEnemies(scene);
-    setWeapons(scene);
+    if(level.getLevel() != 4) {
+        setEnemies(scene);
+        setWeapons(scene);
+    }
     gplogger->log(2, "Se cambió de nivel");
 }
 
@@ -430,7 +431,7 @@ void Model::setEnemies(Scene& scene) {
             it++;
         };
         if(scene.getLevel() != 2) {
-            if (std::get<0>(*it) < 600) {
+            if (std::get<0>(*it) < 1000) {
                 i--;
                 continue;
             }
@@ -531,7 +532,6 @@ void Model::moveEnemies(Scene &scene) {
     for(auto it = scene.getEnemies()->begin(); it != scene.getEnemies()->end(); ++it) {
         if (it->isDead()){
             if (it->getContador() == 0) {
-                printf("%d\n",scene.getEnemies()->size());
                 it = scene.getEnemies()->erase(it);
                /// if(scene.getEnemies()->end() == it)
                   //  return;

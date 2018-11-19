@@ -334,7 +334,7 @@ void View::levelSummary(Scene& scene) {
 void View::endOfGameScreen() {
     window.createRectangle(0,1000,0,800);
     int img;
-    for(int i = 0; i < 100; i++) {
+    for(int i = 0; i < 120; i++) {
         img = i % 4;
         loginImages[img].render(0, 0);
         std::string msg("Fin del juego");
