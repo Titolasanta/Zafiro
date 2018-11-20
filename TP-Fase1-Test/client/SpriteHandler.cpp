@@ -92,7 +92,7 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
 
     renderBossSprite(scene,cameraX, cameraY);
 
-    for (int i = 0; i-1 <  scene.getCurrentPlayers(); i++) {
+    for (int i = 0; i <  scene.getCurrentPlayers(); i++) {
         if (i == id - 1) continue;
         renderCharacterSprite(scene, i, cameraX, cameraY);
     }
