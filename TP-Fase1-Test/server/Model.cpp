@@ -179,12 +179,14 @@ void Model::update(Scene &scene) {
             }
     
             if (players[i]->getPositionY() > 600 + cam->y) {
-                respawn(i,cam);
-                if(!jugadorGrisado[i])
-                    players[i]->takeDamage();
-                if ((level.getLevel() == 3) && (fixBugPls[i]) && !players[i]->isImmortal()){
-                    players[i]->gainHealth(1);
-                    fixBugPls[i] = false;
+                if (!players[i]->isDead()) {
+                    respawn(i, cam);
+                    if (!jugadorGrisado[i])
+                        players[i]->takeDamage();
+                    if ((level.getLevel() == 3) && (fixBugPls[i]) && !players[i]->isImmortal()) {
+                        players[i]->gainHealth(1);
+                        fixBugPls[i] = false;
+                    }
                 }
             }
     
@@ -409,7 +411,7 @@ void Model::placeCamera(Scene &scene){
                 }
             }else{
                 if (playerPosY > cam->y + 550) {
-                    respawn(i,cam);
+                    if (!players[i]->isDead()) respawn(i,cam);
                     if(!jugadorGrisado[i])
                         players[i]->takeDamage();
                 }
