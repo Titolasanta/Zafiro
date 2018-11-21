@@ -14,7 +14,7 @@ Boss::Boss(int level) {
         posY = -3680;
     }
     if(level == 3){
-        posX = 8200;
+        posX = 8050;
         posY = -50;
     }
 }

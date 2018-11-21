@@ -73,7 +73,7 @@ private:
     Weapons weapons;
 
     int level=1;
-    SDL_Rect * camera = NULL;
+    SDL_Rect * camera = nullptr;
     int inLevelSummary = 0;
     
     

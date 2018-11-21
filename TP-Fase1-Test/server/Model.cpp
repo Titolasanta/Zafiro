@@ -443,8 +443,8 @@ void Model::setEnemies(Scene& scene) {
                 continue;
             }
         }
-        std::uniform_int_distribution<int> distribution(0,std::get<2>(*it));
-        int x = distribution(generator) + std::get<0>(*it);
+        std::uniform_int_distribution<int> distribution2(0,std::get<2>(*it));
+        int x = distribution2(generator) + std::get<0>(*it);
         Enemy enemy(x, std::get<1>(*it) - 61 ,std::get<0>(*it),std::get<2>(*it), true);
         scene.addEnemy(std::move(enemy));
     }
@@ -651,16 +651,16 @@ void Model::immortalize(int id) {
 void Model::collisionEyP(Scene& scene) {
     int height = MOVINGENEMYHEIGHT;
     int width = MOVINGENEMYWIDTH;
-    for (auto enemyIt = scene.getEnemies()->begin(); enemyIt != scene.getEnemies()->end(); enemyIt++){
-        if (enemyIt->isStatic()){
+    for (auto& enemyIt : *scene.getEnemies()){
+        if (enemyIt.isStatic()){
             height = STATICENEMYHEIGHT;
             width = STATICENEMYWIDTH;
         }
         for (int i = 0; i < currentPlayers; i++) {
             if(!getJugadorGrisado()[i]){
-                if(isBetween(enemyIt->getPosX(),enemyIt->getPosY(),players[i]->getPositionX(),
+                if(isBetween(enemyIt.getPosX(),enemyIt.getPosY(),players[i]->getPositionX(),
                         players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT) ||
-                        isBetween(enemyIt->getPosX() + width,enemyIt->getPosY() + height,
+                        isBetween(enemyIt.getPosX() + width,enemyIt.getPosY() + height,
                                 players[i]->getPositionX(), players[i]->getPositionY(),CHARACTERWIDTH,CHARACTERHEIGHT))
                     if(!jugadorGrisado[i])
                         players[i]->takeDamage();
