@@ -3,8 +3,6 @@
 //
 
 #include <zconf.h>
-#include <bits/signum.h>
-#include <csignal>
 #include "Sender.h"
 #include "../common/Exception.h"
 
@@ -25,7 +23,6 @@ void Sender::run() {
             try {
                 it->send(scene);
             } catch (...) {
-                signal(SIGPIPE,SIG_IGN);
                 int i = it->getId();
                 it = pList.erase(it);//falta un mutex, pero meh(seria convertir la lista en una clase con una lista y un mutex)
                 model.bajaJugador(i);

@@ -3,8 +3,6 @@
 #include <list>
 #include "../common/Thread.h"
 #include <iostream>
-#include <bits/signum.h>
-#include <csignal>
 #include "Collector.h"
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
