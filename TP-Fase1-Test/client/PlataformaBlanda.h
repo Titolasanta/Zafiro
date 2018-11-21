@@ -9,12 +9,11 @@
 #include "Viewable.h"
 
 class Pasto : public Viewable{
+
 public:
-    //dibuja la lista de plataformas
     void render(Scene& scene,SDL_Rect* camera);
-    Pasto(Window* window);
+    explicit Pasto(Window* window);
 
 };
-
 
 #endif //TP_FASE1_TEST_PASTO_H

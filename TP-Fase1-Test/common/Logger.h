@@ -21,5 +21,4 @@ public:
 
 };
 
-
 #endif //TP_FASE1_TEST_LOGGER_H

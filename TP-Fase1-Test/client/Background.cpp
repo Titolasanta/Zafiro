@@ -57,10 +57,6 @@ void Background::setScrollingOffset(int scrollingOffset) {
     Background::scrollingOffset = scrollingOffset;
 }
 
-//ImgTexture &Background::getImg1() {
- //   return img1;
-//}
-
 void Background::changeLevel(int level) {
     scrollVertical = !scrollVertical;
     img1.loadFromFile(get_level_background_path(*gXML_doc[0],*gXML_doc[1],level, 1,*gXML_parse_result));

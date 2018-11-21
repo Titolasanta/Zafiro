@@ -7,14 +7,15 @@
 #include <stdarg.h>
 
 class SDLTTFError : public std::exception {
-	private:
+
+private:
 	char msg_error[BUF_LEN];
 
-	public:
+public:
 	explicit SDLTTFError(const char* fmt, ...) noexcept;
-	const char *what() const noexcept;
-	virtual ~SDLTTFError() noexcept;
-};
+	const char *what() const noexcept override;
+	~SDLTTFError() override = default;
 
+};
 
 #endif

@@ -100,7 +100,7 @@ void SpriteHandler::render(Scene &scene, int id, int cameraX, int cameraY) {
     if(!dibujarTitilantes)
         dibujarTitilantes = 6;
     renderDeadBossSprite(scene, cameraX, cameraY);
-    renderHp(scene, id, cameraX, cameraY);
+    renderHp(scene, id);
 }
 
 void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int cameraY) {
@@ -139,7 +139,7 @@ void SpriteHandler::renderCharacterSprite(Scene &scene, int i, int cameraX, int 
                                                currentClip, angle);
 }
 
-void SpriteHandler::renderHp(Scene& scene,int  id,int cameraX,int cameraY){
+void SpriteHandler::renderHp(Scene& scene,int  id){
     SDL_Rect lifeClip = {386,0,16,32};
     if(!scene.isDead(id))
         for(int j = scene.getHitPoints(id) - 1; j >= 0; j--)
@@ -148,59 +148,18 @@ void SpriteHandler::renderHp(Scene& scene,int  id,int cameraX,int cameraY){
 
 void SpriteHandler::renderMovingEnemySprite(Enemy e, int cameraX, int cameraY){
 
-    //if (!e.isAirborne()) e.setCurrentFrame(0);
-
     SDL_Rect *currentClip;
     int angle;
-
     if (!e.isLookingRight()) angle = 0;
     else angle = 180;
-
-    //if (scene.getAimDirection(i+1) == -1) currentClip = spritePositionHandler.move(1, currentFrame[i+1] % 3);
-    //else if (scene.getAimDirection(i+1) == 1) currentClip = spritePositionHandler.move(1, currentFrame[i+1] % 3 + 3);
-    //else {
-    //if (!scene.isWalking(i+1)) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
-    /*else*/
     currentClip = spritePositionHandler.getMovingEnemySprite(e.getCurrentFrame());
-
-    //if (e.isShooting() ) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
-    //}
-    //if (scene.isCrouching(i+1))currentClip = spritePositionHandler.getFaceDown();
-    //if (e.isAirborne()) currentClip = spritePositionHandler.move(2, e.getCurrentFrame()% 4);
-    //if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
-
-    // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
     movingEnemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY, currentClip, angle);
 }
 
 void SpriteHandler::renderStaticEnemySprite(Enemy e, int cameraX, int cameraY){
 
-    //if (e.isAirborne()) e.incrementCurrentFrame();
-    //else e.setCurrentFrame(0);
-
     SDL_Rect *currentClip;
-    /*int angle;
-
-    if (e.isLookingRight()) angle = 0;
-    else angle = 180;*/
-
-    //if (scene.getAimDirection(i+1) == -1) currentClip = spritePositionHandler.move(1, currentFrame[i+1] % 3);
-    //else if (scene.getAimDirection(i+1) == 1) currentClip = spritePositionHandler.move(1, currentFrame[i+1] % 3 + 3);
-    //else {
-    //if (!scene.isWalking(i+1)) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
-    /*else*/
     currentClip = spritePositionHandler.getStaticEnemySprite(e.getCurrentFrame());
-
-    //if (e.isShooting() ) currentClip = spritePositionHandler.move(3, currentFrame[i+1] % 3);
-    //}
-    //if (scene.isCrouching(i+1))currentClip = spritePositionHandler.getFaceDown();
-    /*if (e.isAirborne() ){
-        e.incrementCurrentFrame();
-        currentClip = spritePositionHandler.move(2, e.getCurrentFrame()% 4);
-    }*/
-    //if (scene.isJugadorGrisado(i + 1)) currentClip = spritePositionHandler.getGrisado();
-
-    // printf("%d,%d\n",scene.getPositionX(i+1),scene.getPositionY(i+1));
     staticEnemySpriteTexture.render(e.getPosX() - cameraX - characterWidth / 2, e.getPosY() - cameraY, currentClip, 0);
 }
 

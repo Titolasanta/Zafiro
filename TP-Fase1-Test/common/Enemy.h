@@ -4,8 +4,6 @@
 
 #ifndef TP_FASE1_TEST_ENEMY_H
 #define TP_FASE1_TEST_ENEMY_H
-#define MOBILEENEMYFRAME 6
-#define STATICENEMYFRAME 12
 
 #include <list>
 #include "Projectile.h"
@@ -24,7 +22,6 @@ private:
     int currentPlatW = 0;
     int timeTillNextShoot = 0;
     bool airborne = false;
-    int aimDirrection = 0;
     int contador = 3;
 
 public:
@@ -33,9 +30,8 @@ public:
 
     Enemy(int x,int y,int px, int pw, bool);
     Enemy(int x,int y, bool);
-    void land(int x, int y, int w);
+    void land(int x, int w);
     void move(int random, int x, int y);
-    void incrementCurrentFrame();
 
     void shoot(std::list<Projectile> &list);
 
@@ -43,10 +39,8 @@ public:
     void setCurrentFrame(int frame){ currentFrame = frame; }
 
     int getCurrentPlatX() const { return currentPlatX; }
-    void setCurrentPlatX(int cpx) { currentPlatX = cpx; }
 
     int getCurrentPlatW() const { return currentPlatW; }
-    void setCurrentPlatW(int cpw) { currentPlatW = cpw; }
 
     int getPosX() const { return posX; }
     void setPosX(int x) { posX = x; }
@@ -64,13 +58,12 @@ public:
     void setAirborne(bool a) { airborne = a; }
 
     bool isStatic() const { return staticEnemy; }
-    void setStatic(bool s) { staticEnemy = s; }
+
     bool isDead() const;
     void setDead(bool dead);
 
     int getContador(){ return contador; }
     void setContador(int c){ contador = c;}
 };
-
 
 #endif //TP_FASE1_TEST_ENEMY_H

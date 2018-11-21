@@ -15,13 +15,9 @@ Verifier::Verifier(View &view, Socket &skt, lifeSupport& ls) : view(view),socket
     gplogger->log(3, "Se crea el Verificador");
 }
 
-void Verifier::unsuccessfulValidation() {
-    throw 1;
-}
-
 void Verifier::verify() {
     char msg[255];
-    char c = 1 + UvalidationData.length() + PvalidationData.length();
+    char c = (char) (1 + UvalidationData.length() + PvalidationData.length());
     strcpy(msg,UvalidationData.c_str());
     msg[UvalidationData.length()] = '\n';
     strcpy(&(msg[UvalidationData.length() + 1]),PvalidationData.c_str());

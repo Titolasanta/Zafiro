@@ -6,7 +6,6 @@
 #include <zconf.h>
 #include "View.h"
 #include "SdlInit.h"
-#include "SdlImgInit.h"
 #include "SpriteHandler.h"
 #include "../common/pugixml.hpp"
 #include "../common/xml.h"
@@ -23,7 +22,7 @@ sprites(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),immortal(std::move(window.createImgTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture())),weapons(&window)
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
-,insert2bis(std::move(window.createTextTexture())),score(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)), //bossSprite(&window),
+,insert2bis(std::move(window.createTextTexture())), staticEnemyImg((&window)), //bossSprite(&window),
 loginImages{std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),

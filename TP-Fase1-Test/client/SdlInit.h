@@ -5,15 +5,13 @@
 #include "SDLException.h"
 #include "Window.h"
 
-
-
 class SdlInit {
+
 public:
+
 	SdlInit();
-	void delay(size_t milisec);
-
 	~SdlInit();
-};
 
+};
 
 #endif

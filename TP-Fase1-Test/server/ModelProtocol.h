@@ -11,29 +11,27 @@
 #include "../common/Scene.h"
 
 class ModelProtocol : public Thread {
-public:
-    ModelProtocol(Socket&  ,std::queue<char>& ,char id, std::mutex& mutex,Socket&);
-    void run() override;
-    bool end();
-    void send(Scene& scene);
-    void sendGo();
-    void receiveLatency();
-    ModelProtocol(ModelProtocol&& other);
-    
-    ModelProtocol& operator=(ModelProtocol&& other) = delete;
-    ~ModelProtocol();
+
 private:
     Socket skt;
     Socket sktSignal;
     char id;
-public:
-    char getId() const;
-
-private:
     bool quit = false;
     bool valid = true;
     std::queue<char>& queue;
     std::mutex& mutex;
+
+public:
+    ModelProtocol(Socket&  ,std::queue<char>& ,char id, std::mutex& mutex,Socket&);
+    ModelProtocol(ModelProtocol&& other) noexcept;
+    void run() override;
+    void end();
+    void send(Scene& scene);
+    void receiveLatency();
+    char getId() const;
+    ModelProtocol& operator=(ModelProtocol&& other) = delete;
+    ~ModelProtocol() override;
+
 };
 
 

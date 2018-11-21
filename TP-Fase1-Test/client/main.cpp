@@ -9,7 +9,6 @@
 #include <zconf.h>
 #include "Window.h"
 #include "SdlInit.h"
-#include "SdlImgInit.h"
 #include "Sprite.h"
 #include "SpriteHandler.h"
 #include "View.h"
@@ -52,10 +51,10 @@ int main( int argc, char* argv[] )
     Logger logger(modo,get_log_level(doc_default, result_default));
 
     if (!(result)) {
-        std::string mensaje = get_error_message("Error al cargar el archivo XML: ", PATH_XML_ORIGINAL, result.offset, result.description());
+        std::string mensaje = get_error_message("Error al cargar el archivo XML: ", PATH_XML_ORIGINAL, (int) result.offset, result.description());
         logger.log(1, mensaje.c_str());
         if (!result_default) {
-            mensaje = get_error_message("Error al cargar el archivo XML por defecto: ", PATH_XML_DEFAULT, result_default.offset, result_default.description());
+            mensaje = get_error_message("Error al cargar el archivo XML por defecto: ", PATH_XML_DEFAULT, (int) result_default.offset, result_default.description());
             logger.log(1, mensaje.c_str());
             return 0;
         }
@@ -112,7 +111,7 @@ int main( int argc, char* argv[] )
         Controller controller(view, skt,ls,sktLatido);
         controller.startGame();
 
-    }catch(Finalizo_conexion) {
+    }catch(Finalizo_conexion &fc) {
         if (!cutedConnection){
             if(view.getLevel() == 4) ;//view.endOfGameScreen();
             else view.conexionFail();
@@ -123,16 +122,16 @@ int main( int argc, char* argv[] )
             logger.log(2, "Se cayo la coneccion");
             return 0;
         }
-    }catch(FullHouse){
+    }catch(FullHouse &fh){
         view.fullHouseMesage();
         logger.log(2, "Cliente leyo que esta lleno el server");
-    }catch(InvalidLogin){
+    }catch(InvalidLogin &il){
         view.invalidLoginMesage();
         logger.log(2, "Error al loggear al juego");
-    }catch(Quit){
+    }catch(Quit &q){
         logger.log(2, "Usuario cerro el juego");
-    }catch(OSError e){
-        if(strcmp(e.what(),"problema inesperado al enviar mensage:\nerrno: Broken pipe")) {
+    }catch(OSError &e){
+        if(strcmp(e.what(),"problema inesperado al enviar mensage:\nerrno: Broken pipe") != 0) {
             view.conexionDown();
             logger.log(2, "Server no encontrado.");
         }else;

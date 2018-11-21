@@ -1,4 +1,3 @@
-#define _POSIX_C_SOURCE 200112L
 #include "Exception.h"
 #include <cstring>
 #include <stdio.h>
@@ -11,35 +10,15 @@
 #include <unistd.h>
 #include <string>
 #include "Socket.h"
-#define MAX_LISTEN 10
 #include <utility>
 #include <iostream>
-#define SIZE_ARBITRARIO 255
 #include <netinet/tcp.h>
 #include <fcntl.h>
 
+#define MAX_LISTEN 10
+#define SIZE_ARBITRARIO 255
 
 using std::string;
-
-bool isclosed (int sock) {
-    char x;
-    interrupted:
-    ssize_t r = ::recv(sock, &x, 1, MSG_DONTWAIT|MSG_PEEK);
-    if (r < 0) {
-        switch (errno) {
-            case EINTR:     goto interrupted;
-            case EAGAIN:    break; /* empty rx queue */
-            case ETIMEDOUT: break; /* recv timeout */
-            case ENOTCONN:  break; /* not connected yet */
-            default:        break; throw(errno);
-        }
-    }
-    return r == 0;
-}
-
-
-
-
 
 static int connect_socket(int skt, struct addrinfo* ptr) {
 	int error;
@@ -87,7 +66,7 @@ Socket::Socket(const char* port, const char* ip) {
    
 
 	
-	for(ptr = received; ptr != NULL && !in_connection; ptr = ptr->ai_next){
+	for(ptr = received; ptr != nullptr && !in_connection; ptr = ptr->ai_next){
 		skt = socket(ptr->ai_family,ptr->ai_socktype,ptr->ai_protocol);
 		if (skt == -1) {
 			throw OSError("Error al intentar crear el socket:");
@@ -123,7 +102,6 @@ Socket::Socket(const char* port, const char* ip) {
 void Socket::manual_close() {
 	if(is_valid) {
 		shutdown(skt_id, SHUT_RDWR);
-		usleep(3000000);
 		close(skt_id);
 	}
 	is_valid = false;
@@ -144,12 +122,12 @@ int Socket::start_to_listen() {
 	return 0;
 }	
 	
-Socket::Socket(Socket&& other) {
+Socket::Socket(Socket&& other) noexcept {
 	other.is_valid = false;
 	this->skt_id = other.skt_id;
 }
 
-Socket& Socket::operator=(Socket&& other) {
+Socket& Socket::operator=(Socket&& other) noexcept{
 	other.is_valid = false;	
 	this->skt_id = other.skt_id;
 	return *this;	
@@ -157,7 +135,7 @@ Socket& Socket::operator=(Socket&& other) {
 
 
 Socket Socket::accept_connection() {
-	int skt_id_nuevo = accept(skt_id, 0, 0);
+	int skt_id_nuevo = accept(skt_id, nullptr, nullptr);
 	if (skt_id_nuevo == -1) {
 		throw accept_fail();
 	}	
@@ -171,7 +149,7 @@ ssize_t Socket::receive_all(char* msg, int len) {
 	ssize_t temp = 1;
 	ssize_t amount_received = 0;
 	while (valid_socket && amount_received < len) {
-	    temp = recv(skt_id, &msg[amount_received], len-amount_received, 0);
+	    temp = recv(skt_id, &msg[amount_received], (size_t) len-amount_received, 0);
 		if (temp <= 0)
 			valid_socket = false;
 		else
@@ -192,7 +170,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 
 	bool valid_socket = true;	
 	while (size_sent < len && valid_socket && is_valid) {
-		temp = send(skt_id, &msg[size_sent], len - size_sent, 0);
+		temp = send(skt_id, &msg[size_sent], (size_t) (len - size_sent), 0);
 		if (temp <= 0)
 			valid_socket = false;		
 		else
@@ -208,7 +186,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 
 
 const Socket& Socket::operator<<(const string& str) {
-	this->send_all(str.c_str(), str.length());
+	this->send_all(str.c_str(), (int) str.length());
 	return *this;
 }
 
@@ -220,22 +198,15 @@ ssize_t Socket::receive_all(string& str, size_t len){
 	str.clear();
 	while(len > leidoTotal) {
 		if( len-leidoTotal > SIZE_ARBITRARIO )
-			leido = this->receive_all(temp_s, SIZE_ARBITRARIO);
+			leido = (unsigned int) this->receive_all(temp_s, SIZE_ARBITRARIO);
 		else
-			leido = this->receive_all(temp_s, len-leidoTotal);
-		str = str+temp_s;
+			leido = (unsigned int) this->receive_all(temp_s, (int) len-leidoTotal);
+		str.append(temp_s);
 		leidoTotal += leido;
 	}
 	return leidoTotal;
 }
 
-void Socket::makeNonBlocking() {
-
-    struct timeval tv;
-    tv.tv_sec = 1;
-    tv.tv_usec = 0;
-    setsockopt(skt_id, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
-}
 
 
 

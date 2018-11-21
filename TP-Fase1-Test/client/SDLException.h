@@ -7,14 +7,14 @@
 #include <stdarg.h>
 
 class SDLError : public std::exception {
-	private:
+
+private:
 	char msg_error[BUF_LEN];
 
-	public:
+public:
 	explicit SDLError(const char* fmt, ...) noexcept;
-	const char *what() const noexcept;
-	virtual ~SDLError() noexcept;
+	const char *what() const noexcept override;
+	~SDLError() override = default;
 };
-
 
 #endif

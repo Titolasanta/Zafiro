@@ -51,17 +51,12 @@ void Enemy::time( std::list<Projectile>& lBullets) {
 
 }
 
-void Enemy::land(int x, int y, int w) {
+void Enemy::land(int x, int w) {
     if(dead) return;
     airborne = false;
     velY = 0;
     currentPlatX = x;
     currentPlatW = w;
-}
-
-void Enemy::incrementCurrentFrame(){
-    currentFrame++;
-    currentFrame %= 6;
 }
 
 void Enemy::shoot(std::list<Projectile>& list) {
@@ -83,7 +78,7 @@ void Enemy::shoot(std::list<Projectile>& list) {
         bvx = modV * lookingRight - modV * !lookingRight;
     }
     Projectile p(bx, by, bvx, bvy, -1);
-    list.push_back(std::move(p));
+    list.push_back(p);
 }
 
 void Enemy::move(int randm, int chx, int chy){

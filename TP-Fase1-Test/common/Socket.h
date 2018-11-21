@@ -13,10 +13,10 @@ class Socket {
 	//ip=0 --> server
 	Socket(const char* port,const char* ip);
 	~Socket();
-	Socket(Socket&& other);	
+	Socket(Socket&& other) noexcept;
 	Socket(const Socket &other) = delete;
 	Socket& operator=(const Socket&) = delete;
-	Socket& operator=(Socket&&);
+	Socket& operator=(Socket&&) noexcept;
 	//send all pero en formato string
 	const Socket& operator<<(const std::string& to_send);
 	int start_to_listen();	
@@ -26,9 +26,6 @@ class Socket {
 	ssize_t receive_all(std::string&, size_t);
 	ssize_t send_all(const char* msg, int len);
 	ssize_t receive_all(char* msg, int len);
-	void makeNonBlocking();
-	bool isValid();
-	void flush();
 };
 
 

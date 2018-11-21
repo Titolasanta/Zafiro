@@ -7,10 +7,6 @@
 
 SignalReceiver::SignalReceiver(std::list<ModelProtocol> &protocolList) : protocolList(protocolList) {}
 
-void SignalReceiver::addSocket(Socket& skt){
-    socketList.push_back(std::move(skt));
-}
-
 void SignalReceiver::run(){
     while(!quit){
         for (auto it = protocolList.begin(); it != protocolList.end(); it++) {
@@ -20,7 +16,7 @@ void SignalReceiver::run(){
             mutex.unlock();
             try{
                 it->receiveLatency();
-            }catch(Finalizo_conexion){
+            }catch(Finalizo_conexion &f){
                 it = protocolList.begin();
             }
         }

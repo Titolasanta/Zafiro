@@ -12,30 +12,21 @@
 
 class Controller {
 
-public:
-    void show();
-    void processEvent(SDL_Event);
-    Controller(View& view, Socket& skt,lifeSupport&,Socket& sktLatido);
-    void startGame();
-
-    void readChar(SDL_Event);
-    void nextValidation();
-    void unsuccesfullValidation();
-
-
 private:
     lifeSupport& ls;
     Socket& sktLatido;
     View& view;
     ViewProtocol protocol;
     Scene scene;
-    bool validated = false;
-    bool onPass = false;
-    std::string UvalidationData;
-    std::string PvalidationData;
-    
     int endOfMainMenu = 0;
     int timeTillNextShoot = 5 * 12;
+
+public:
+    void show();
+    void processEvent(SDL_Event);
+    Controller(View& view, Socket& skt,lifeSupport&,Socket& sktLatido);
+    void startGame();
+
 };
 
 

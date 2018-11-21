@@ -4,6 +4,17 @@
 #include <string>
 
 class Texture {
+
+protected:
+	//textura a dibujar
+	SDL_Texture* mTexture;
+	//donde dibujar
+	SDL_Renderer* renderer;
+
+	//Image dimensions
+	int mWidth;
+	int mHeight;
+
 public:
 	//Initializes variables
 	explicit Texture( SDL_Renderer* renderer);
@@ -15,20 +26,8 @@ public:
 	virtual void free() = 0;
 
 	//Gets image dimensions
-	int getWidth();
-	int getHeight();
 	Texture(Texture&& other) noexcept;
 
-
-protected:
-	//textura a dibujar
-	SDL_Texture* mTexture;
-	//donde dibujar 
-	SDL_Renderer* renderer;
-
-	//Image dimensions
-	int mWidth;
-	int mHeight;
 };
 
 #endif 

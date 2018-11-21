@@ -8,7 +8,6 @@
 
 #include "Window.h"
 #include "SpriteHandler.h"
-#include "SdlImgInit.h"
 #include "SdlInit.h"
 #include "PlataformaBlanda.h"
 #include "Piedra.h"
@@ -20,10 +19,39 @@
 #include "commonSdlTtfInit.h"
 #include "MovingEnemyImg.h"
 #include "Sound.h"
-#include "BossSprite.h"
 #include "Weapons.h"
 
 class View {
+
+private:
+
+    int id;
+    int currentImage = 0;
+    SdlInit x;
+    SdlTtfInit y;
+    Window window;
+    SpriteHandler sprites;
+    Background background;
+    Piedra piedra;
+    Pasto pasto;
+    PlataformaDura plataformaDura;
+    Bullet bullet;
+    Ice hielo;
+    TextTexture txt;
+    ImgTexture immortal;
+    TextTexture insert1;
+    TextTexture insert2;
+    TextTexture insert2bis;
+    TextTexture usr;
+    TextTexture pass;
+    ImgTexture loginImages[4];
+    TextTexture score;
+    Sound sound;
+    MovingEnemyImg staticEnemyImg;
+    Weapons weapons;
+    int level=1;
+    SDL_Rect * camera = nullptr;
+    int inLevelSummary = 0;
 
 public:
     View(int SCREEN_WIDTH, int SCREEN_HEIGHT);
@@ -44,51 +72,8 @@ public:
     int isInLevelSummary();
     int getLevel();
     Sound& getSound();
-private:
-    //BossSprite bossSprite;
-    int id;
-    int currentImage = 0;
-    SdlImgInit z;
-    SdlInit x;
-    SdlTtfInit y;
-    Window window;
-    SpriteHandler sprites;
-    Background background;
-//Scene& scene;
-    Piedra piedra;
-    Pasto pasto;
-    PlataformaDura plataformaDura;
-    Bullet bullet;
-    Ice hielo;
-    TextTexture txt;
-    ImgTexture immortal;
-    TextTexture insert1;
-    TextTexture insert2;
-    TextTexture insert2bis;
-    TextTexture usr;
-    TextTexture pass;
-    ImgTexture loginImages[4];
-    TextTexture score;
-    Sound sound;
-    MovingEnemyImg staticEnemyImg;
-    Weapons weapons;
-
-    int level=1;
-    SDL_Rect * camera = nullptr;
-    int inLevelSummary = 0;
-    
-    
-public:
-    int getInLevelSummary() const {
-        return inLevelSummary;
-    }
-
-    void setInLevelSummary(int inLevelSummary) {
-        View::inLevelSummary = inLevelSummary;
-    }
+    void setInLevelSummary(int ils) { inLevelSummary = ils; }
 
 };
-
-
 
 #endif //TP_FASE1_TEST_VIEW_H

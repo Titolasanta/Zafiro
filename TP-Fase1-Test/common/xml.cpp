@@ -99,7 +99,7 @@ std::string get_error_message(const char* message, const char* path, int pos, co
     int lineNumber = 0;
     char c;
     for (int i = 0; i < pos; ++i){
-        c = archivo.get();
+        c = (char) archivo.get();
         if (c == '\n') lineNumber++;
     }
     archivo.seekg(0);

@@ -5,39 +5,29 @@
 #include <string>
 
 class ImgTexture : public Texture {
+
+protected:
+    Uint8 transColor[3];
+    bool trans;
+    int mWidth;
+    int mHeight;
+
 public:
-	//Initializes variables, el color introducido se vuele transparete
 	ImgTexture(SDL_Renderer* renderer, Uint8, Uint8, Uint8);
-	ImgTexture(SDL_Renderer* renderer);
-	//Loads image at specified path
+	explicit ImgTexture(SDL_Renderer* renderer);
 	void loadFromFile( std::string path);
-	void free();
-	//Renders texture at given point
+	void free() override;
 	void render( int x, int y );
 	void render( int x, int y ,double ang);
-
 	void render(int x, int y, int xi,int xf,int yi,int yf);
-
 	void render(int x, int y, const SDL_Rect* rect);
-
     void render( int x, int y,SDL_Rect *rect, double angle);
-
-
-	//To render camera section
-	void renderBackground( int x, int y, SDL_Rect* clip = NULL, double angle = 0.0, SDL_Point* center = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
-
-	ImgTexture(ImgTexture&& other);
+	void renderBackground( int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr , SDL_RendererFlip flip = SDL_FLIP_NONE);
+	ImgTexture(ImgTexture&& other) noexcept;
 	//si pide un giro mayor o menor a 90,-90 rota la img horizontalmente(sirve pa gusano)
 	void render( int x, int y, int xInicial, int xFinal, int yInicial, int yFinal, double angle);
 	//Gets image dimensions
 
-protected:
-	Uint8 transColor[3];
-	bool trans;
-	//Image dimensions
-	int mWidth;
-	int mHeight;
-	//SDL_Texture* mTexture;
 };
 
 #endif 

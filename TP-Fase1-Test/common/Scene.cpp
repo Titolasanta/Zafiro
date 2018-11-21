@@ -89,7 +89,7 @@ std::list<Enemy> *Scene::getEnemies() {
 }
 
 void Scene::setEnemies(const std::list<Enemy> &Enemies) {
-    Scene::enemies = std::move(Enemies);
+    Scene::enemies = Enemies;
 }
 
 bool Scene::isShootSound() const {

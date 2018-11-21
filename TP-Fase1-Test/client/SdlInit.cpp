@@ -12,10 +12,6 @@ SdlInit::~SdlInit(){
 	SDL_Quit();
 }
 
-void SdlInit::delay(size_t milisec){
-	SDL_Delay(milisec);
-}
-
 SdlInit::SdlInit(){
 	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
 	{

@@ -15,7 +15,7 @@ Logger::Logger(const char* log_level, const char* level_default) : archivo(std::
     std::ofstream archivo_nuevo;
     archivo_nuevo.open(LOG_PATH, std::ofstream::app);
     archivo = std::move(archivo_nuevo);
-    time_t now = time(NULL);
+    time_t now = time(nullptr);
     char temporal[255];
     char* fecha = temporal;
     strcpy(fecha, ctime(&now));
@@ -46,12 +46,12 @@ void Logger::cerrar_archivo(){
 }
 
 void Logger::log(int level, const char* mensaje) {
-    char* nivel_log;
+    std::string nivel_log;
     if (level == 1) nivel_log =  "<ERROR> ";
     if (level == 2) nivel_log = "<INFO> ";
-    if (level == 3) nivel_log = "<DEBUG> ";
+    else nivel_log = "<DEBUG>";
     if (level <= nivel){
-        time_t now = time(NULL);
+        time_t now = time(nullptr);
         struct tm* info;
         info = localtime(&now);
         archivo << "[" << info->tm_hour << ":" << info->tm_min << ":" << info->tm_sec << "] ";

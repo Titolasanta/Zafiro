@@ -9,10 +9,6 @@ SDL_Rect* Sprite::move(int direccion, int frame) {
     return &frameMoviemiento[direccion][frame];
 }
 
-SDL_Rect* Sprite::quieto() {
-    return &parado;
-}
-
 SDL_Rect* Sprite::getFaceDown() {
     return &faceDown;
 }
@@ -23,10 +19,6 @@ SDL_Rect* Sprite::getGrisado(){
 
 SDL_Rect* Sprite::getMuerto() {
     return &muerto;
-}
-
-SDL_Rect* Sprite::getMovingEnemyShootingSprite() {
-    return &movingEnemyShooting;
 }
 
 SDL_Rect* Sprite::getMovingEnemySprite(int direccion) {

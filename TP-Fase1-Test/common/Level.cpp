@@ -32,5 +32,5 @@ int Level::getLevel() {
 }
 
 Level Level::next() const {
-    return std::move(Level(level+1));
+    return Level(level+1);
 }

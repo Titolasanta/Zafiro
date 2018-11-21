@@ -20,7 +20,7 @@ public:
     void renderStaticEnemySprite(Enemy e, int cameraX, int cameraY);
     void renderBossSprite(Scene &scene, int cameraX, int cameraY);
     void renderDeadBossSprite(Scene &scene, int cameraX, int cameraY);
-    void renderHp(Scene&, int, int, int);
+    void renderHp(Scene&, int);
     void renderEnemyDestroyedSprites(Enemy e, int cameraX, int cameraY, int i);
 
 private:

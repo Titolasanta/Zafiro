@@ -16,7 +16,7 @@
 class Scene {
 
 public:
-    Scene(int);
+    explicit Scene(int);
     ~Scene(){
         int i;
     }
@@ -62,10 +62,6 @@ private:
     bool victory = false;
     bool allPlayersConnected = false;
     bool shootSound = false;
-
-
-//  int accelerationX[4];
-//  int accelerationY[4];
     int hitPoints[4];
     int walking[4];
     int airborne[4];
@@ -89,18 +85,10 @@ public:
         score[player-1][level-1] += toAdd;
     };
 
-
-    int getScore(int player){
-        return score[player-1][level-1];
-    };
-
     int getScore(int player,int level){
         return score[player-1][level-1];
     };
 
-    void setScore(int set, int player){
-        score[player-1][level-1] = set;
-    }    
     void setScore(int set, int player,int level){
         score[player-1][level-1] = set;
     }
@@ -116,8 +104,6 @@ public:
     void setEnemies(const std::list<Enemy> &Enemies);
 
     std::list<Enemy> *getEnemies();
-
-    void setLBullets(const std::list<std::tuple<int, int, int>> &lb) { lBullets = lb; }
 
     SDL_Rect *getCamera();
 

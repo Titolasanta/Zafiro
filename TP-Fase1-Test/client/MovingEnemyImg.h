@@ -7,16 +7,16 @@
 #include "Window.h"
 #include "Viewable.h"
 
-
 class MovingEnemyImg {
-public:
-    MovingEnemyImg(Window* window);
-    void render(Scene& scene,SDL_Rect *cam);
+
 private:
     ImgTexture texture;
     SDL_Rect mobileRect[7];
-    
-};
 
+public:
+    explicit MovingEnemyImg(Window* window);
+    void render(Scene& scene,SDL_Rect *cam);
+
+};
 
 #endif //TP_FASE1_TEST_STATICENEMYIMG_H

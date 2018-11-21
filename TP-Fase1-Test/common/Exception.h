@@ -12,8 +12,8 @@ class OSError : public std::exception {
 
 	public:
 	explicit OSError(const char* fmt, ...) noexcept;
-	const char *what() const noexcept;
-	virtual ~OSError() noexcept;
+	const char *what() const noexcept override;
+	~OSError() noexcept override = default;
 };
 
 class Finalizo_conexion : public std::exception {

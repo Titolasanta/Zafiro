@@ -5,14 +5,18 @@
 #ifndef TP_FASE1_TEST_VIEWPROTOCOL_H
 #define TP_FASE1_TEST_VIEWPROTOCOL_H
 
-
 #include "../common/Socket.h"
 #include "../common/Scene.h"
 
 class ViewProtocol {
+
+private:
+
+    Socket& socket;
+
 public:
+
     explicit ViewProtocol(Socket &skt);
-    bool validate(std::string toVal);
     void update(Scene& scene);
     void jump();
     void moveRight();
@@ -26,10 +30,7 @@ public:
     void stand();
     void stopShooting();
     void immortal();
-private:
-    Socket& socket;
 
 };
-
 
 #endif //TP_FASE1_TEST_VIEWPROTOCOL_H

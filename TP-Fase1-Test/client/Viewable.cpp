@@ -29,34 +29,28 @@ Viewable::Viewable(Window* window,std::string imgpath) : imgPath(std::move(imgpa
         throw OSError("no se setea el imgPath de Viewable");
 
     texture.loadFromFile(this->imgPath);
-
 }
 
 void Viewable::renderBulletList(std::list<std::tuple<int,int,int>> lista,SDL_Rect* camera) {
-    for (auto it = lista.begin(); it != lista.end(); it++) {
-        int id = std::get<2>(*it);
+    for (auto &it : lista) {
+        int id = std::get<2>(it);
         if (id == ENEMYID) setXYWH(14, 21, 10, 10);
         else setXYWH(14, 2,10,10);
-        texture.render(std::get<0>(*it)-camera->x, std::get<1>(*it)-camera->y,&clip);
+        texture.render(std::get<0>(it)-camera->x, std::get<1>(it)-camera->y,&clip);
     }
 }
 
 void Viewable::renderList(std::list<std::tuple<int,int,int>> lista,SDL_Rect* camera) {
 
-    for (auto it = lista.begin(); it != lista.end(); it++) {
+    for (auto &it : lista) {
         int i = 0;
-        while(std::get<2>(*it) - i * clip.w  > clip.w){
-            texture.render(std::get<0>(*it) + clip.w * i-camera->x, std::get<1>(*it)-camera->y,&clip);
+        while(std::get<2>(it) - i * clip.w  > clip.w){
+            texture.render(std::get<0>(it) + clip.w * i-camera->x, std::get<1>(it)-camera->y,&clip);
             i++;
         }
         SDL_Rect clipTemp = clip;
-        clipTemp.w = std::get<2>(*it) - i * clip.w;
-        texture.render(std::get<0>(*it)+ clip.w * i-camera->x, std::get<1>(*it)-camera->y,&clipTemp);
-    }
-}
-void Viewable::renderList(std::list<Enemy> lista,SDL_Rect* camera) {
-    for (auto it = lista.begin(); it != lista.end(); it++) {
-        texture.render(it->getPosX() - camera->x, it->getPosY() - camera->y, &clip);
+        clipTemp.w = std::get<2>(it) - i * clip.w;
+        texture.render(std::get<0>(it)+ clip.w * i-camera->x, std::get<1>(it)-camera->y,&clipTemp);
     }
 }
 

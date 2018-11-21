@@ -7,17 +7,11 @@
 #include "Viewable.h"
 
 class Piedra : public Viewable{
-public:
-    Piedra(Window* window);
 
-    void renderHalf(int,int);
-    //dibuja desde la lista de plataformas hasta el piso
+public:
+    explicit Piedra(Window* window);
     void render(Scene& scene,SDL_Rect* camera);
     
 };
-
-
-
-
 
 #endif

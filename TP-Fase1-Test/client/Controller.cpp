@@ -58,11 +58,11 @@ void Controller::processEvent(SDL_Event e) {
             else if (e.key.keysym.sym == SDLK_LCTRL) protocol.stand();
             else if (e.key.keysym.sym == SDLK_x) protocol.stopShooting();
         }
-    }else if(e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_n)
-        if(scene.getLevel() != 4)
+    }else if(e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_n) {
+        if (scene.getLevel() != 4)
             view.setInLevelSummary(0);
-        else 
-            view.endOfGameScreen();
+        else view.endOfGameScreen();
+    }
 }
 
 void Controller::show() {

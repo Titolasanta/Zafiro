@@ -14,11 +14,11 @@ rect1{175, 4, 32, 32},rect2{141, 4, 32, 32}
 }
 
 void Weapons::render(Scene &scene,SDL_Rect* camera) {
-    for (auto it = scene.getLWeapons()->begin(); it != scene.getLWeapons()->end(); it++) {
-        int tipo = std::get<2>(*it);
+    for (auto &it : *scene.getLWeapons()) {
+        int tipo = std::get<2>(it);
         if(tipo == 1)
-            texture.render(std::get<0>(*it)-camera->x, std::get<1>(*it)-camera->y,&rect1);
+            texture.render(std::get<0>(it)-camera->x, std::get<1>(it)-camera->y,&rect1);
         else
-            texture.render(std::get<0>(*it)-camera->x, std::get<1>(*it)-camera->y,&rect2);
+            texture.render(std::get<0>(it)-camera->x, std::get<1>(it)-camera->y,&rect2);
     }
 }

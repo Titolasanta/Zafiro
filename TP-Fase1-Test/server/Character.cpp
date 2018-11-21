@@ -223,6 +223,7 @@ void Character::spawn(SDL_Rect cam) {
     }else
         positionX= 10000;
 }
+
 void Character::spawn(int x, int y) {
     if(!dead) {
         positionX = x;
@@ -241,10 +242,6 @@ void Character::spawn(int x, int y) {
         aimDirection = 0;
     }else
         positionX= 10000;
-}
-
-int Character::getId() const {
-    return id;
 }
 
 void Character::setId(int id) {
@@ -272,5 +269,5 @@ void Character::startGracePeriod() {
     gracePeriod = 20;
 }
 bool Character::isInGracePeriod(){
-    return gracePeriod;
+    return (bool) gracePeriod;
 }

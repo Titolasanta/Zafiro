@@ -14,7 +14,7 @@ ModelProtocol::ModelProtocol(Socket &skt, std::queue<char>& queue,char id,std::m
 :skt(std::move(skt)),queue(queue),id(id),mutex(mutex),sktSignal(std::move(sktAux)){}
 
 void sendValue(Socket& skt, int value){
-    unsigned int to_send = value;
+    auto to_send = (unsigned int) value;
     unsigned int temp = htonl(to_send);
     char msgNumero[4];
     memcpy(msgNumero,&temp,4);
@@ -27,7 +27,7 @@ void ModelProtocol::run() {
         msg[0] = id;
         try {
             skt.receive_all(&(msg[1]), 2);
-        }catch(Finalizo_conexion){
+        }catch(Finalizo_conexion &f){
             msg[1] = 'f';
             msg[2] = 'c';
             quit = true;
@@ -52,7 +52,7 @@ bool ModelProtocol::end(){
 }
 
 
-ModelProtocol::ModelProtocol(ModelProtocol&& other)
+ModelProtocol::ModelProtocol(ModelProtocol&& other) noexcept
 : skt(std::move(other.skt)),mutex(other.mutex),queue(other.queue),sktSignal(std::move(other.sktSignal)) {
     this->thread = std::move(other.thread);
     this->id = other.id;
@@ -64,28 +64,28 @@ void ModelProtocol::send(Scene& scene){
     int p = scene.getMaxPlayers();
     std::lock_guard<std::mutex> lg(mutex);
 
-    for (auto it = scene.getLBullets().begin(); it != scene.getLBullets().end(); ++it) {
-        sendValue(skt, std::get<0>(*it));
-        sendValue(skt, std::get<1>(*it));
-        sendValue(skt, std::get<2>(*it));
+    for (auto& it : scene.getLBullets()) {
+        sendValue(skt, std::get<0>(it));
+        sendValue(skt, std::get<1>(it));
+        sendValue(skt, std::get<2>(it));
     }
     sendValue(skt, -1);
 
-    for (auto it = scene.getLWeapons()->begin(); it != scene.getLWeapons()->end(); ++it) {
-        sendValue(skt, std::get<0>(*it));
-        sendValue(skt, std::get<1>(*it));
-        sendValue(skt, std::get<2>(*it));
+    for (auto& it : *scene.getLWeapons()) {
+        sendValue(skt, std::get<0>(it));
+        sendValue(skt, std::get<1>(it));
+        sendValue(skt, std::get<2>(it));
     }
     sendValue(skt, -1);
-
-    for (auto it = scene.getEnemies()->begin(); it != scene.getEnemies()->end(); ++it) {
-        sendValue(skt, it->getPosX());
-        sendValue(skt, it->getPosY());
-        sendValue(skt, it->isStatic());
-        sendValue(skt, it->isLookingRight());
-        sendValue(skt, it->getCurrentFrame());
-        sendValue(skt, it->isDead());
-        sendValue(skt, it->getContador());
+    
+    for (auto& it : *scene.getEnemies()) {
+        sendValue(skt, it.getPosX());
+        sendValue(skt, it.getPosY());
+        sendValue(skt, it.isStatic());
+        sendValue(skt, it.isLookingRight());
+        sendValue(skt, it.getCurrentFrame());
+        sendValue(skt, it.isDead());
+        sendValue(skt, it.getContador());
     }
     sendValue(skt, -1);
     sendValue(skt, scene.getLevel());
@@ -107,8 +107,6 @@ void ModelProtocol::send(Scene& scene){
         sendValue(skt,scene.isInGracePeriod(i+1));
         for(int j = 0; j < 3; j++)
             sendValue(skt,scene.getScore(i+1,j+1));
-
-        //printf("%d\n",scene.getScore(i+1));
     }
     sendValue(skt, scene.getCamera()->x);
     sendValue(skt, scene.getCamera()->y);
@@ -119,10 +117,6 @@ void ModelProtocol::send(Scene& scene){
     sendValue(skt,scene.isVictory());
     sendValue(skt,scene.isShootSound());
 
-}
-
-void ModelProtocol::sendGo(){
-    skt.send_all("1",1); 
 }
 
 ModelProtocol::~ModelProtocol(){

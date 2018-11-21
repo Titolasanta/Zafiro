@@ -9,15 +9,6 @@
 #include "../common/Scene.h"
 
 class Background  {
-public:
-    Background(Window&,int);
-    void render(Scene&,SDL_Rect&,int scrollingOffset,int);
-
-    SDL_Rect *getCamera();
-
-    void setCamera(SDL_Rect *camera);
-
-    void changeLevel(int);
 
 private:
     ImgTexture img1;
@@ -26,14 +17,15 @@ private:
     int scrollingOffset=0;
     bool scrollVertical = false;
     int scrollingCatarata = -2900;
+    SDL_Rect camera = { 0, 0, 800, 600 };
+
 public:
-    ImgTexture &getImg1();
+    Background(Window&,int);
+    void render(Scene&,SDL_Rect&,int scrollingOffset,int);
+    void changeLevel(int);
     int getScrollingOffset();
     void setScrollingOffset(int scrollingOffset);
 
-private:
-    //The camera area, area to be rendered
-    SDL_Rect camera = { 0, 0, 800, 600 };
 };
 
 

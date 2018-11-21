@@ -29,7 +29,7 @@ ImgTexture::ImgTexture(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b)
 
 }
 
-ImgTexture::ImgTexture(ImgTexture&& other) : Texture(std::move(other)) {
+ImgTexture::ImgTexture(ImgTexture&& other) noexcept : Texture(std::move(other)) {
 
 	gplogger->log(3,"Se crea una ImgTexture por movimiento");
 	for(int i = 0; i < 3; i++ )
@@ -38,14 +38,14 @@ ImgTexture::ImgTexture(ImgTexture&& other) : Texture(std::move(other)) {
 	//Image dimensions
 	mWidth = other.mWidth;
 	mHeight = other.mHeight;
-	other.mTexture == NULL;
+	other.mTexture = nullptr;
 	other.free();
 }
 
 void ImgTexture::render( int x, int y ){
 	//Set rendering space and render to screen
 	SDL_Rect renderQuad = { x, y, mWidth, mHeight };
-	SDL_RenderCopy( renderer, mTexture, NULL, &renderQuad );
+	SDL_RenderCopy( renderer, mTexture, nullptr, &renderQuad );
 }
 
 
@@ -63,8 +63,7 @@ void ImgTexture::renderBackground( int x, int y, SDL_Rect* clip, double angle, S
 	SDL_Rect renderQuad = { x, y, mWidth, mHeight };
 
 	//Set clip rendering dimensions
-	if( clip != NULL )
-	{
+	if( clip != nullptr ) {
 		renderQuad.w = clip->w;
 		renderQuad.h = clip->h;
 	}
@@ -84,22 +83,22 @@ void ImgTexture::render( int x, int y, int xInicial, int xFinal, int yInicial, i
 	SDL_Rect renderQuad = { x, y, xFinal - xInicial, yFinal - yInicial };
 	SDL_Rect segment = {xInicial,  yInicial, xFinal - xInicial, yFinal - yInicial };
 	if(angle >= 90)
-		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle-180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle-180, nullptr, SDL_FLIP_HORIZONTAL );
 	else if(angle <= -90)
-		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle+180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle+180, nullptr, SDL_FLIP_HORIZONTAL );
 	else
-		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle, NULL, SDL_FLIP_NONE );
+		SDL_RenderCopyEx( renderer, mTexture, &segment, &renderQuad, angle, nullptr, SDL_FLIP_NONE );
 }
 
 void ImgTexture::render( int x, int y,SDL_Rect *rect, double angle) {
 
 	SDL_Rect renderQuad = { x, y, rect->w, rect->h };
 	if(angle >= 90)
-		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad , angle-180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad , angle-180, nullptr, SDL_FLIP_HORIZONTAL );
 	else if(angle <= -90)
-		SDL_RenderCopyEx( renderer, mTexture,  rect, &renderQuad,  angle+180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture,  rect, &renderQuad,  angle+180, nullptr, SDL_FLIP_HORIZONTAL );
 	else
-		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad, angle, NULL, SDL_FLIP_NONE );
+		SDL_RenderCopyEx( renderer, mTexture, rect, &renderQuad, angle, nullptr, SDL_FLIP_NONE );
 }
 
 
@@ -108,11 +107,11 @@ void ImgTexture::render( int x, int y, double angle) {
 
 	SDL_Rect renderQuad = { x, y, mWidth, mHeight };
 	if(angle >= 90)
-		SDL_RenderCopyEx( renderer, mTexture, NULL, &renderQuad, angle-180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture, nullptr, &renderQuad, angle-180, nullptr, SDL_FLIP_HORIZONTAL );
 	else if(angle <= -90)
-		SDL_RenderCopyEx( renderer, mTexture, NULL, &renderQuad, angle+180, NULL, SDL_FLIP_HORIZONTAL );
+		SDL_RenderCopyEx( renderer, mTexture, nullptr, &renderQuad, angle+180, nullptr, SDL_FLIP_HORIZONTAL );
 	else
-		SDL_RenderCopyEx( renderer, mTexture, NULL, &renderQuad, angle, NULL, SDL_FLIP_NONE );
+		SDL_RenderCopyEx( renderer, mTexture, nullptr, &renderQuad, angle, nullptr, SDL_FLIP_NONE );
 }
 
 
@@ -122,7 +121,7 @@ void ImgTexture::loadFromFile( std::string path ){
 
 	//Load image at specified path
 	SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
-	if( loadedSurface == NULL ){
+	if( loadedSurface == nullptr ){
 		loadedSurface = IMG_Load( "../escenario/negro.png" );
 		std::string mensaje("No se encontro la imagen: ");
 		mensaje.append(path);
@@ -136,7 +135,7 @@ void ImgTexture::loadFromFile( std::string path ){
 	}
 	//Create texture from surface pixels
     mTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
-	if( mTexture == NULL ){
+	if( mTexture == nullptr ){
 		gplogger->log(1,"No se abrió una textura");
 		throw SDLError("Fallo crear textura apartir de %s",path.c_str());
 	}
@@ -152,9 +151,9 @@ void ImgTexture::loadFromFile( std::string path ){
 
 void ImgTexture::free(){
 	//Free texture if it exists
-	if( mTexture != NULL ){
+	if( mTexture != nullptr ){
 		SDL_DestroyTexture( mTexture );
-		mTexture = NULL;
+		mTexture = nullptr;
 		mWidth = 0;
 		mHeight = 0;
 		gplogger->log(3,"Se libero una ImgTexture");

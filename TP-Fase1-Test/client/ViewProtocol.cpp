@@ -9,10 +9,6 @@
 
 ViewProtocol::ViewProtocol(Socket &skt) : socket(skt) {}
 
-bool ViewProtocol::validate(std::string toVal) {
-    return true;
-}
-
 void ViewProtocol::jump() {
     char msg[3] = "jp";
     socket.send_all(msg,2);
