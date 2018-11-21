@@ -201,43 +201,47 @@ void Character::goThroughPlatform(){
 }
 
 void Character::spawn(SDL_Rect cam) {
-    
-    if(level == 2){
-        positionX = cam.x + 400;
-        positionY = cam.y + 200;
-    } else {
-        positionX = cam.x + 150;
-        positionY = cam.y + 100;
-    }
-    
-    velocityY = 0;
-    velocityX = 0;
-    airborne = true;
-    walking = false;
-    currentPlatW = 0;
-    currentPlatX = 0;
-    currentPlatY = 0;
-    crouching = false;
-    lookingRight = true;
-    aimDirection = 0;
+    if (!dead) {
+        if (level == 2) {
+            positionX = cam.x + 400;
+            positionY = cam.y + 200;
+        } else {
+            positionX = cam.x + 150;
+            positionY = cam.y + 100;
+        }
+
+        velocityY = 0;
+        velocityX = 0;
+        airborne = true;
+        walking = false;
+        currentPlatW = 0;
+        currentPlatX = 0;
+        currentPlatY = 0;
+        crouching = false;
+        lookingRight = true;
+        aimDirection = 0;
+    }else
+        positionX= -100;
 }
 
 void Character::spawn(int x, int y) {
-    
-    positionX = x;
-    positionY = y;
-    
-    velocityY = 0;
-    velocityX = 0;
-    airborne = true;
-    walking = false;
-    currentPlatW = 0;
-    currentPlatX = 0;
-    currentPlatY = 0;
-    crouching = false;
-    lookingRight = true;
-    dead = false;
-    aimDirection = 0;
+    if(!dead) {
+        positionX = x;
+        positionY = y;
+
+        velocityY = 0;
+        velocityX = 0;
+        airborne = true;
+        walking = false;
+        currentPlatW = 0;
+        currentPlatX = 0;
+        currentPlatY = 0;
+        crouching = false;
+        lookingRight = true;
+        dead = false;
+        aimDirection = 0;
+    }else
+        positionX= -100;
 }
 
 int Character::getId() const {
