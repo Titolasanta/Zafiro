@@ -346,17 +346,18 @@ int Model::getLevelWidth() { return level.getWidth(); }
 
 int Model::getLevelHeight() { return level.getHeight(); }
 
-void Model::shoot(int p){
+void Model::shoot(int p) {
 
     std::lock_guard<std::mutex> mute(mutex);
-    try {
+    if (!players[p - 1]->isDead()) {
+        try {
 
-        lBullets.push_back(std::move(players[p-1]->shoot()));
-        shootSound = true;
-    } catch(int e) { //no recargo el arma
+            lBullets.push_back(std::move(players[p - 1]->shoot()));
+            shootSound = true;
+        } catch (int e) { //no recargo el arma
+        }
     }
 }
-
 void Model::bajaJugador(int p) {
     //currentPlayers--;
 
@@ -455,7 +456,7 @@ void Model::setEnemies(Scene& scene) {
             it++;
         };
         if(scene.getLevel() != 2) {
-            if (std::get<0>(*it) < 1000) {
+            if (std::get<0>(*it) < 1000 || std::get<0>(*it) > 6000 ) {
                 i--;
                 continue;
             }

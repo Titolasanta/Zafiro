@@ -17,6 +17,8 @@
 #define SIZE_ARBITRARIO 255
 #include <netinet/tcp.h>
 #include <fcntl.h>
+#include <bits/signum.h>
+#include <signal.h>
 
 using std::string;
 
@@ -107,7 +109,8 @@ Socket::Socket(const char* port, const char* ip) {
 				in_connection = (error != -1);
 			}
 		}
-	}	
+	}
+
 	freeaddrinfo(received);
 	if (in_connection) {
 		skt_id = skt;		
@@ -188,7 +191,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 	ssize_t temp = 1;
 
 	bool valid_socket = true;	
-	while (size_sent < len && valid_socket) {
+	while (size_sent < len && valid_socket && is_valid) {
 		temp = send(skt_id, &msg[size_sent], len - size_sent, 0);
 		if (temp <= 0)
 			valid_socket = false;		
@@ -196,7 +199,7 @@ ssize_t Socket::send_all(const char* msg, int len) {
 			size_sent += temp; 
 	}
 	
-	if (temp == 0)
+	if (temp == 0|| !is_valid)
 		throw Finalizo_conexion();
 	else if (temp < 0 )
 		throw OSError("problema inesperado al enviar mensage:");

@@ -3,6 +3,8 @@
 #include <list>
 #include "../common/Thread.h"
 #include <iostream>
+#include <bits/signum.h>
+#include <csignal>
 #include "Collector.h"
 #include "../common/Socket.h"
 #include "ModelProtocol.h"
@@ -25,12 +27,12 @@ using std::string;
 using std::cout;
 using std::list;
 
+std::mutex mutexG;
 pugi::xml_document* gXML_doc[2];
 Logger *gplogger;
 pugi::xml_parse_result *gXML_parse_result;
 
 int main(int argc, char *argv[]) {
-
 
 	pugi::xml_document doc;
 	pugi::xml_document doc_default;

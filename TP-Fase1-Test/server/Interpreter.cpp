@@ -4,12 +4,14 @@
 
 #include "Interpreter.h"
 
+extern std::mutex mutexG;
 Interpreter::Interpreter(std::list<ModelProtocol> &protocolList, std::queue<char> &queue, std::mutex &mutex, Model &model, Scene &scene)
     : protocolList(protocolList),queue(queue),mutex(mutex),model(model),scene(scene){
 
 }
 void Interpreter::run(){
     while(!quit) {
+        std::lock_guard<std::mutex> x(mutexG);
        if(!queue.empty()) {
            char msg[4];
            mutex.lock();
@@ -37,7 +39,7 @@ void Interpreter::run(){
            else if (!strcmp(&msg[1], "fc")){
                model.bajaJugador(msg[0]);
                for (auto it = protocolList.begin(); it != protocolList.end(); it++) {
-                   if (msg[0] == it->getId())
+                   if (msg[0] == it->getId()-1)
                        it = protocolList.erase(it); //falta un mutex, pero meh
                }
            } 

@@ -221,9 +221,8 @@ void Character::spawn(SDL_Rect cam) {
         lookingRight = true;
         aimDirection = 0;
     }else
-        positionX= -100;
+        positionX= 10000;
 }
-
 void Character::spawn(int x, int y) {
     if(!dead) {
         positionX = x;
@@ -241,7 +240,7 @@ void Character::spawn(int x, int y) {
         dead = false;
         aimDirection = 0;
     }else
-        positionX= -100;
+        positionX= 10000;
 }
 
 int Character::getId() const {

@@ -29,7 +29,7 @@ void SignalReceiver::run(){
 
 void SignalReceiver::closeCurrent() {
     for (auto it = protocolList.begin(); it != protocolList.end(); it++){
-        if ( current_id == it->getId()) {
+        if ( current_id  == it->getId()) {
             it->end();
             protocolList.erase(it);
             break;
