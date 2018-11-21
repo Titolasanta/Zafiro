@@ -124,6 +124,7 @@ Socket::Socket(const char* port, const char* ip) {
 void Socket::manual_close() {
 	if(is_valid) {
 		shutdown(skt_id, SHUT_RDWR);
+		usleep(3000000);
 		close(skt_id);
 	}
 	is_valid = false;

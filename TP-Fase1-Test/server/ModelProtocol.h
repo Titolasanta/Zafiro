@@ -14,7 +14,7 @@ class ModelProtocol : public Thread {
 public:
     ModelProtocol(Socket&  ,std::queue<char>& ,char id, std::mutex& mutex,Socket&);
     void run() override;
-    void end();
+    bool end();
     void send(Scene& scene);
     void sendGo();
     void receiveLatency();

@@ -13,9 +13,9 @@ void SignalReceiver::addSocket(Socket& skt){
 
 void SignalReceiver::run(){
     while(!quit){
-        running = true;
         for (auto it = protocolList.begin(); it != protocolList.end(); it++) {
             mutex.lock();
+            running = true;
             current_id = it->getId();
             mutex.unlock();
             try{
@@ -31,7 +31,7 @@ void SignalReceiver::closeCurrent() {
     for (auto it = protocolList.begin(); it != protocolList.end(); it++){
         if ( current_id  == it->getId()) {
             it->end();
-            protocolList.erase(it);
+            //protocolList.erase(it);
             break;
         }
     }

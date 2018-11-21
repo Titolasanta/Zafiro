@@ -5,6 +5,7 @@
 #include <zconf.h>
 #include "SignalChecker.h"
 
+extern std::mutex mutexG;
 SignalChecker::SignalChecker(SignalReceiver& sr) : signalReceiver(sr){}
 void SignalChecker::run(){
     while(!quit){
@@ -14,6 +15,7 @@ void SignalChecker::run(){
             signalReceiver.mutex.unlock();
             usleep(400000);
         }else{
+            //std::lock_guard<std::mutex> x(mutexG);
             signalReceiver.closeCurrent();
             signalReceiver.mutex.unlock();
         }

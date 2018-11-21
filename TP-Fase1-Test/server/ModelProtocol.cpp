@@ -42,10 +42,13 @@ void ModelProtocol::run() {
     }
 }
 
-void ModelProtocol::end(){
+bool ModelProtocol::end(){
+    if(quit)
+        return  false;
     skt.manual_close();
     sktSignal.manual_close();
     quit = true;
+    return true;
 }
 
 
