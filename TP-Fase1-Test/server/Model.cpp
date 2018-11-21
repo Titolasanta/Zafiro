@@ -26,7 +26,7 @@
 #define STATICENEMYWIDTH 64
 #define BOSSHEIGHT1 400
 #define BOSSWIDTH1 250
-#define BOSSHEIGHT2 850
+#define BOSSHEIGHT2 300
 #define BOSSWIDTH2 900
 #define BOSSHEIGHT3 400
 #define BOSSWIDTH3 200
@@ -598,7 +598,7 @@ void Model::handleBullet(Scene &scene) {
                     }
                 } else if(level.getLevel()== 2) {
                     if (isBetween(it->getPositionX(), it->getPositionY(), bosstemp->getPosX(),
-                                  bosstemp->getPosY(), BOSSWIDTH2, BOSSHEIGHT2)) {
+                                  bosstemp->getPosY(), BOSSWIDTH2 , BOSSHEIGHT2 )) {
                         if (bosstemp->alive()) {
                             scene.scoreAdd(it->getOwnerId(), 10);
                             if (bosstemp->takeDamage())

@@ -68,6 +68,7 @@ private:
     TextTexture usr;
     TextTexture pass;
     ImgTexture loginImages[4];
+    TextTexture score;
     Sound sound;
     MovingEnemyImg staticEnemyImg;
     Weapons weapons;

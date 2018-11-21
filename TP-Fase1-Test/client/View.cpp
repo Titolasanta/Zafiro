@@ -23,7 +23,7 @@ sprites(&window),piedra(&window),plataformaDura(&window),hielo(&window),
 pasto(&window),bullet(&window),background(window,1),txt(std::move(window.createTextTexture())),immortal(std::move(window.createImgTexture())),
 pass(std::move(window.createTextTexture())),usr(std::move(window.createTextTexture())),weapons(&window)
 ,insert1(std::move(window.createTextTexture())),insert2(std::move(window.createTextTexture()))
-,insert2bis(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)), //bossSprite(&window),
+,insert2bis(std::move(window.createTextTexture())),score(std::move(window.createTextTexture())), staticEnemyImg(std::move(&window)), //bossSprite(&window),
 loginImages{std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
             std::move(window.createImgTexture()),
@@ -106,6 +106,9 @@ void View::render(Scene& scene) {
         immortal.render(60,1);
     }
     bullet.render(scene,camera);
+    score.render(0,575);
+    std::string s = std::to_string(scene.getScore(id));
+    score.loadFromRenderedText(s);
     window.updateRenderer();
     
     for (int i = 0; i < scene.getCurrentPlayers(); i++){
@@ -303,10 +306,10 @@ void View::levelSummary(Scene& scene) {
     char buffer[10];
     for(int i = scene.getCurrentPlayers(); i > 0; i--) {
         memset(&buffer, 0, 10);
-        sprintf(buffer, "J%d", i);
+        sprintf(buffer, "Jugador %d", i);
         msg = buffer;
         txt.loadFromRenderedText(msg);
-        txt.render(100, 210 + 50 * i);
+        txt.render(20, 210 + 50 * i);
     }
     for(int i = 3; i > 0; i--) {
         memset(&buffer, 0, 10);

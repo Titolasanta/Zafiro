@@ -17,8 +17,7 @@
 #define SIZE_ARBITRARIO 255
 #include <netinet/tcp.h>
 #include <fcntl.h>
-#include <bits/signum.h>
-#include <signal.h>
+
 
 using std::string;
 
